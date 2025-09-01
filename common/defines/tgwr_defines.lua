@@ -6,8 +6,6 @@ NDefines.NGame.START_DATE = "1910.5.1.12"
 NDefines.NGame.END_DATE = "1935.1.1.1"
 NDefines.NGame.HANDS_OFF_START_TAG = "BHU"
 NDefines.NGame.DECISION_ALERT_TIMEOUT_DAYS = 60	
-NDefines.NGame.LAG_DAYS_FOR_LOWER_SPEED = 30								-- Vanilla is 10
-NDefines.NGame.LAG_DAYS_FOR_PAUSE = 60			
 NDefines.NCountry.BASE_STABILITY_WAR_FACTOR = -0.1
 NDefines.NCountry.WAR_SUPPORT_OFFNSIVE_WAR = -0.1							-- Vanilla is 25
 
@@ -144,3 +142,41 @@ NDefines.NCountry.FEMALE_UNIT_LEADER_BASE_CHANCE = {
     0.3, -- operatives
     0.1, -- scientists
 }
+
+
+-- NEW SHIT
+
+NDefines.NCountry.SPECIAL_FORCES_CAP_BASE = 0.0 -- prevent special forces exploit 
+NDefines.NCountry.SPECIAL_FORCES_CAP_MIN = 1000 -- 20 forty-width special forces divisions, plenty  
+NDefines.NMilitary.CORPS_COMMANDER_DIVISIONS_CAP = 50
+NDefines.NMilitary.FIELD_MARSHAL_DIVISIONS_CAP = 50
+NDefines.NMilitary.FIELD_MARSHAL_ARMIES_CAP = 10
+NDefines.NMilitary.MAX_ARMY_EXPERIENCE = 5000
+NDefines.NMilitary.MAX_NAVY_EXPERIENCE = 5000
+NDefines.NMilitary.MAX_AIR_EXPERIENCE = 5000
+NDefines.NMilitary.UNIT_LEADER_USE_NONLINEAR_XP_GAIN = false
+
+NDefines.NBuildings.MAX_SHARED_SLOTS = 35
+
+NDefines.NMilitary.COMBAT_OVER_WIDTH_PENALTY = -2
+
+NDefines.NCountry.BASE_RESEARCH_SLOTS = 3
+
+NDefines.NPolitics.BASE_POLITICAL_POWER_INCREASE = 2.5 -- base pp
+
+NDefines.NMilitary.BASE_DIVISION_BRIGADE_GROUP_COST = 0 -- Base cost to unlock a regiment slot
+NDefines.NMilitary.BASE_DIVISION_BRIGADE_CHANGE_COST = 0 -- Base cost to change a regiment column.
+NDefines.NMilitary.BASE_DIVISION_SUPPORT_SLOT_COST = 0
+NDefines.NMilitary. LAND_EQUIPMENT_RAMP_COST = 0
+
+NDefines.NMilitary.EXPERIENCE_COMBAT_FACTOR = 0.10
+
+--LICENSE
+NDefines.NProduction.LICENSE_EQUIPMENT_SPEED_NOT_FACTION = 0
+NDefines.NProduction.LICENSE_EQUIPMENT_TECH_SPEED_PER_YEAR = 0
+NDefines.NProduction.LICENSE_EQUIPMENT_BASE_SPEED = -0.1
+NDefines.NProduction.BASE_LICENSE_IC_COST = 0	
+NDefines.NProduction.LICENSE_IC_COST_YEAR_INCREASE = 0		
+
+-- FUEL CONVOY REQUIREMENT
+NDefines.NCountry.FUEL_LEASE_CONVOY_RATIO = 0.00007

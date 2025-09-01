@@ -52,7 +52,7 @@ GRE_eleftherios_venizelos = {
 
 
 1910.1.1 = {
-	load_focus_tree = empty_focus
+	#load_focus_tree = empty_focus
 	set_cosmetic_tag = CRE_GRE
 	
 	set_technology = {

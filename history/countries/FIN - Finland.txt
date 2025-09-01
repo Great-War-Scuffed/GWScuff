@@ -107,7 +107,7 @@ set_technology = {
 
 }
 1910.1.1 = {
-	#load_focus_tree = empty_focus
+	##load_focus_tree = empty_focus
 	#country_lock_all_division_template = yes
 	set_politics = {
 		ruling_party = neutrality

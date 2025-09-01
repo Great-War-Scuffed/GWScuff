@@ -169,7 +169,7 @@ create_dynamic_country = {
 	reserve_dynamic_country = yes
 
 	set_country_flag = empty_focus
-	load_focus_tree = empty_focus
+	#load_focus_tree = empty_focus
 
 	recruit_character = MOR_mohammed_mehedi_uld_ben_ismael
 	promote_character = MOR_mohammed_mehedi_uld_ben_ismael

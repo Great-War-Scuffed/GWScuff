@@ -254,9 +254,6 @@ shared_focus = {
 shared_focus = {
 	id = give_seats_to_socialists
 	icon = GFX_goal_support_socialism
-	available = {
-		has_government = democratic
-	}
 	completion_reward = { 
 		add_political_power = 50
 		add_popularity = {

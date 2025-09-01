@@ -1,6 +1,6 @@
 ﻿capital = 602
 
-set_research_slots = 2
+set_research_slots = 3
 
 # Yuan loyalist
 recruit_character = HNC_tang_xiangming

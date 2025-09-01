@@ -1,6 +1,6 @@
 ﻿capital = 267
 oob = "AFG_1910"
-set_research_slots = 2
+set_research_slots = 3
 set_stability = 0.65
 set_convoys = 0
 
@@ -29,8 +29,8 @@ recruit_character = AFG_habibullah_kalakani
 		tech_recon = 1
 	}
 	add_ideas = {
-		AFG_treaty_of_gandamak
-		AFG_limited_central_authority
+		#AFG_treaty_of_gandamak
+		#AFG_limited_central_authority
 		idea_crossroad_of_empires
 	}
 	set_politics = {

@@ -1,6 +1,6 @@
 ﻿capital = 596
 
-set_research_slots = 2
+set_research_slots = 3
 
 recruit_character = ZHE_tang_shouqian
 

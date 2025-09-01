@@ -1,6 +1,6 @@
 ﻿capital = 277
 
-set_research_slots = 2
+set_research_slots = 3
 set_stability = 0.80
 set_war_support = 0.36
 set_convoys = 62
@@ -124,9 +124,9 @@ recruit_character = MEX_agustin_iii
 	
 	add_ideas = { 
 		MEX_idea_porfiriato 
-		MEX_idea_haciendas 
-		MEX_idea_caudillo_loyalty 
-		MEX_idea_incompetent_army 
+		#MEX_idea_haciendas 
+		#MEX_idea_caudillo_loyalty 
+		#MEX_idea_incompetent_army 
 		free_trade
 		MEX_resource_satellite
 	}

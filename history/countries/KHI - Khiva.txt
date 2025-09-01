@@ -1,5 +1,5 @@
 ﻿capital = 406
-set_research_slots = 2
+set_research_slots = 3
 set_stability = 0.32
 
 recruit_character = KHI_muhammad_rahim_khan_ii 

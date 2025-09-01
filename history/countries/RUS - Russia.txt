@@ -2191,7 +2191,7 @@ if = {
 	    original_tag = RUS
 	    set_country_flag = RUS_northwestern_army_tag
 		set_capital = { state = 209 }
-		set_research_slots = 2
+		set_research_slots = 3
 		set_stability = 0.5
 		set_war_support = 0.5
 		add_equipment_to_stockpile = {
@@ -2259,7 +2259,7 @@ if = {
 	    original_tag = RUS
 	    set_country_flag = RUS_priamurye_tag
 		set_capital = { state = 408 }
-		set_research_slots = 2
+		set_research_slots = 3
 		set_stability = 0.5
 		set_war_support = 0.5
 		add_equipment_to_stockpile = {

@@ -1,6 +1,6 @@
 capital = 190
 
-set_research_slots = 2
+set_research_slots = 3
 set_stability = 0.56
 set_convoys = 20
 

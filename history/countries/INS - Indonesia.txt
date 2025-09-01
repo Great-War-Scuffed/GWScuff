@@ -4,7 +4,7 @@ recruit_character = INS_a_w_frederik_idenburg
 recruit_character = INS_frits_van_daalen
 recruit_character = INS_volksraad
 
-set_research_slots = 2
+set_research_slots = 3
 
 RIA = { set_country_flag = protectorate }
 set_autonomy = {

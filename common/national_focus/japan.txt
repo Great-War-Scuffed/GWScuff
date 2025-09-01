@@ -335,6 +335,7 @@ focus_tree = {
 				ruling_party = fascism
 				elections_allowed = no
 			}
+			add_ideas = japanese_war_economy
 		}
 		ai_will_do = {
 			factor = 0

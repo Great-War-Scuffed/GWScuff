@@ -11,7 +11,7 @@ set_popularities = {
     communism = 6
     neutrality = 15
 }
-set_research_slots = 2
+set_research_slots = 3
 set_stability = 0.58
 set_war_support = 0.23
 set_convoys = 5

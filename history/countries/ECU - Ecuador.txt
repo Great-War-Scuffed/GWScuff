@@ -16,7 +16,7 @@ recruit_character = ECU_alfredo_baquerizo
 recruit_character = ECU_pedro_jacinto_montero
 
 1910.1.1 = {
-	set_research_slots = 2
+	set_research_slots = 3
 
 	set_technology = {
 		#infantry

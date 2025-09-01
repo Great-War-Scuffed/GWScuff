@@ -57,7 +57,7 @@ shared_focus = {
 			days = 1
 		}
 	}
-	cost = 10
+	cost = 5
 	x = 8
 	y = 0
 	ai_will_do = { 
@@ -87,7 +87,7 @@ shared_focus = {
 	prerequisite = {
 		focus = open_the_political_sphere
 	}
-	cost = 10
+	cost = 5
 	x = 0
 	y = 1
 	ai_will_do = { 
@@ -130,7 +130,7 @@ shared_focus = {
 	prerequisite = {
 		focus = open_the_political_sphere
 	}
-	cost = 10
+	cost = 5
 	x = -5
 	y = 1
 	ai_will_do = { 
@@ -184,7 +184,7 @@ shared_focus = {
 		focus = conserve_political_stance
 		focus = socialist_reforms
 	}
-	cost = 10
+	cost = 5
 	x = -2
 	y = 1
 	ai_will_do = { 
@@ -206,7 +206,7 @@ shared_focus = {
 	mutually_exclusive = {
 		focus = statism
 	}
-	cost = 10
+	cost = 5
 	x = 0
 	y = 1
 	completion_reward = { 	
@@ -226,7 +226,7 @@ shared_focus = {
 		focus = statism
 		focus = liberalism
 	}
-	cost = 10
+	cost = 5
 	x = 1
 	y = 1
 	ai_will_do = { factor = 15 }
@@ -245,7 +245,7 @@ shared_focus = {
 	prerequisite = {
 		focus = liberalism
 	}
-	cost = 10
+	cost = 5
 	x = -1
 	y = 1
 	ai_will_do = { factor = 15 }
@@ -265,7 +265,7 @@ shared_focus = {
 	prerequisite = {
 		focus = socialist_reforms
 	}
-	cost = 10
+	cost = 5
 	x = 1
 	y = 1
 	ai_will_do = { factor = 15 }
@@ -281,7 +281,7 @@ shared_focus = {
 	prerequisite = {
 		focus = socialist_reforms
 	}
-	cost = 10
+	cost = 5
 	x = -1
 	y = 1
 	ai_will_do = { factor = 15 }
@@ -303,7 +303,7 @@ shared_focus = {
 	prerequisite = {
 		focus = empower_trade_unions
 	}
-	cost = 10
+	cost = 5
 	x = -1
 	y = 1
 	ai_will_do = { factor = 15 }
@@ -331,7 +331,7 @@ shared_focus = {
 	prerequisite = {
 		focus = give_seats_to_socialists
 	}
-	cost = 10
+	cost = 5
 	x = 0
 	y = 1
 	ai_will_do = { factor = 15 }
@@ -350,7 +350,7 @@ shared_focus = {
 	prerequisite = {
 		focus = support_international
 	}
-	cost = 10
+	cost = 5
 	x = -1
 	y = 1
 	ai_will_do = { factor = 10 }
@@ -372,7 +372,7 @@ shared_focus = {
 	prerequisite = {
 		focus = support_international
 	}
-	cost = 10
+	cost = 5
 	x = 1
 	y = 1
 	ai_will_do = { factor = 15 }
@@ -397,7 +397,7 @@ shared_focus = {
 	prerequisite = {
 		focus = open_the_political_sphere
 	}
-	cost = 10
+	cost = 5
 	x = 5
 	y = 1
 
@@ -422,7 +422,7 @@ shared_focus = {
 	prerequisite = {
 		focus = nationalist_regeneration
 	}
-	cost = 10
+	cost = 5
 	x = -1
 	y = 1
 	ai_will_do = { factor = 15 }
@@ -547,7 +547,7 @@ shared_focus = {
 	prerequisite = {
 		focus = nationalist_regeneration
 	}
-	cost = 10
+	cost = 5
 	x = 3
 	y = 1
 	ai_will_do = { factor = 0 }
@@ -598,7 +598,7 @@ shared_focus = {
 	prerequisite = {
 		focus = ressort_old_claims
 	}
-	cost = 10
+	cost = 5
 	x = 0
 	y = 1
 	ai_will_do = { factor = 0 }
@@ -617,7 +617,7 @@ shared_focus = {
 	prerequisite = {
 		focus = nationalist_regeneration
 	}
-	cost = 10
+	cost = 5
 	x = 1
 	y = 1
 	ai_will_do = { factor = 15 }
@@ -647,7 +647,7 @@ shared_focus = {
 	prerequisite = {
 		focus = national_militarism
 	}
-	cost = 10
+	cost = 5
 	x = -1
 	y = 1
 	ai_will_do = { factor = 15 }
@@ -658,7 +658,7 @@ shared_focus = {
 	prerequisite = { focus = military_youth }
 	relative_position_id = military_youth
 	icon = GFX_goal_demand_sudetenland	
-	cost = 10
+	cost = 5
 	x = 0
 	y = 1
 	available = { has_government = fascism }
@@ -680,7 +680,7 @@ shared_focus = {
 	mutually_exclusive = {
 		focus = constitutional_guarantees		
 	}
-	cost = 10
+	cost = 5
 	x = 2
 	y = 1
 	ai_will_do = { factor = 0 }
@@ -699,7 +699,7 @@ shared_focus = {
 	mutually_exclusive = {
 		focus = liberalism
 	}
-	cost = 10
+	cost = 5
 	x = 0
 	y = 1
 	ai_will_do = { 
@@ -718,7 +718,7 @@ shared_focus = {
 		focus = statism
 		focus = liberalism
 	}
-	cost = 10
+	cost = 5
 	x = -1
 	y = 1
 	ai_will_do = { 
@@ -733,7 +733,7 @@ shared_focus = {
 	icon = GFX_focus_generic_diplomatic_treaty
 	x = 1
 	y = 1
-	cost = 10
+	cost = 5
 	ai_will_do = { factor = 10 }	
 	available = {
 		has_idea = idea_statism
@@ -768,7 +768,7 @@ shared_focus = {
 		focus = support_international
 		focus = chauvinism
 	}
-	cost = 10
+	cost = 5
 	x = 0
 	y = 4
 	ai_will_do = { 
@@ -793,10 +793,7 @@ shared_focus = {
 	}
 	relative_position_id = open_the_political_sphere
 	available = {
-		is_subject = no
-		NOT = {
-			has_idea = standing_alone
-		}
+		is_ai = NO
 	}
 	ai_will_do = {
 		factor = 1
@@ -823,7 +820,7 @@ shared_focus = {
 			factor = 150
 		}
 	}
-	cost = 10
+	cost = 5
 	x = 17
 	y = 0
 }
@@ -833,7 +830,7 @@ shared_focus = {
 	x = 0
 	y = 1
 	relative_position_id = take_position
-	cost = 10
+	cost = 5
 	search_filters = {}
 	prerequisite = {
 		focus = take_position
@@ -891,7 +888,7 @@ shared_focus = {
 	x = -1
 	y = 1
 	relative_position_id = maintain_neutrality
-	cost = 10
+	cost = 5
 	available = {
 		is_subject = no
 	}
@@ -911,7 +908,7 @@ shared_focus = {
 	x = 1
 	y = 1
 	relative_position_id = maintain_neutrality
-	cost = 10
+	cost = 5
 	prerequisite = {
 		focus = maintain_neutrality
 	}
@@ -948,7 +945,7 @@ shared_focus = {
 	x = 0
 	y = 2
 	relative_position_id = maintain_neutrality
-	cost = 10
+	cost = 5
 	prerequisite = {
 		focus = defensive_measures
 	}
@@ -979,7 +976,7 @@ shared_focus = {
 	x = 1
 	y = 3
 	relative_position_id = maintain_neutrality
-	cost = 10
+	cost = 5
 	prerequisite = {
 		focus = capital_arms_workshops
 	}
@@ -1002,7 +999,7 @@ shared_focus = {
 	x = -1
 	y = 3
 	relative_position_id = maintain_neutrality
-	cost = 10
+	cost = 5
 	prerequisite = {
 		focus = capital_arms_workshops
 	}
@@ -1040,7 +1037,7 @@ shared_focus = {
 	x = -4
 	y = 1
 	relative_position_id = take_position
-	cost = 10
+	cost = 5
 	prerequisite = {
 		focus = take_position
 	}
@@ -1151,7 +1148,7 @@ shared_focus = {
 	x = -1
 	y = 1
 	relative_position_id = secure_entente_support
-	cost = 10
+	cost = 5
 	prerequisite = {
 		focus = secure_entente_support
 	}
@@ -1183,7 +1180,7 @@ shared_focus = {
 	x = -2
 	y = 2
 	relative_position_id = secure_entente_support
-	cost = 10
+	cost = 5
 	prerequisite = {
 		focus = request_entente_cannons
 	}
@@ -1216,7 +1213,7 @@ shared_focus = {
 	x = 1
 	y = 1
 	relative_position_id = secure_entente_support
-	cost = 10
+	cost = 5
 	prerequisite = {
 		focus = secure_entente_support
 	}
@@ -1241,7 +1238,7 @@ shared_focus = {
 	x = 0
 	y = 2
 	relative_position_id = secure_entente_support
-	cost = 10
+	cost = 5
 	prerequisite = {
 		focus = request_entente_cannons
 	}
@@ -1266,7 +1263,7 @@ shared_focus = {
 	x = 0
 	y = 3
 	relative_position_id = secure_entente_support
-	cost = 10
+	cost = 5
 	prerequisite = {
 		focus = entente_advisors
 	}
@@ -1311,7 +1308,7 @@ shared_focus = {
 	x = 1
 	y = 4
 	relative_position_id = secure_entente_support
-	cost = 10
+	cost = 5
 	search_filters = {}
 	prerequisite = {
 		focus = join_entente
@@ -1343,7 +1340,7 @@ shared_focus = {
 	x = 4
 	y = 1
 	relative_position_id = take_position
-	cost = 10
+	cost = 5
 	prerequisite = {
 		focus = take_position
 	}
@@ -1463,7 +1460,7 @@ shared_focus = {
 	x = 1
 	y = 1
 	relative_position_id = secure_german_support
-	cost = 10
+	cost = 5
 	prerequisite = {
 		focus = secure_german_support
 	}
@@ -1490,7 +1487,7 @@ shared_focus = {
 	x = 2
 	y = 2
 	relative_position_id = secure_german_support
-	cost = 10
+	cost = 5
 	prerequisite = {
 		focus = german_smallarms
 	}
@@ -1534,7 +1531,7 @@ shared_focus = {
 	x = -1
 	y = 1
 	relative_position_id = secure_german_support
-	cost = 10
+	cost = 5
 	prerequisite = {
 		focus = secure_german_support
 	}
@@ -1559,7 +1556,7 @@ shared_focus = {
 	x = 0
 	y = 2
 	relative_position_id = secure_german_support
-	cost = 10
+	cost = 5
 	prerequisite = {
 		focus = german_smallarms
 	}
@@ -1584,7 +1581,7 @@ shared_focus = {
 	x = 0
 	y = 3
 	relative_position_id = secure_german_support
-	cost = 10
+	cost = 5
 	prerequisite = {
 		focus = german_military_mission
 	}
@@ -1620,7 +1617,7 @@ shared_focus = {
 	x = -1
 	y = 4
 	relative_position_id = secure_german_support
-	cost = 10
+	cost = 5
 	prerequisite = {
 		focus = join_central_powers
 	}
@@ -1644,7 +1641,7 @@ shared_focus = {
 	x = 0
 	y = 4
 	relative_position_id = maintain_neutrality
-	cost = 10
+	cost = 5
 	prerequisite = {
 		focus = join_central_powers
 		focus = join_entente
@@ -1693,7 +1690,7 @@ shared_focus = {
 	ai_will_do = { 
 		factor = 15
 	}
-	cost = 10
+	cost = 5
 	x = 13
 	y = 6
 	offset = {
@@ -1760,7 +1757,7 @@ shared_focus = {
 	ai_will_do = { 
 		factor = 15
 	}
-	cost = 10
+	cost = 5
 	x = 0
 	y = 1
 }
@@ -1784,7 +1781,7 @@ shared_focus = {
 	ai_will_do = { 
 		factor = 15
 	}
-	cost = 10
+	cost = 5
 	x = 2
 	y = 1
 }
@@ -1808,7 +1805,7 @@ shared_focus = {
 	ai_will_do = { 
 		factor = 15
 	}
-	cost = 10
+	cost = 5
 	x = -1
 	y = 1
 }
@@ -1862,7 +1859,7 @@ shared_focus = {
 	ai_will_do = { 
 		factor = 15
 	}
-	cost = 10
+	cost = 5
 	x = 0
 	y = 1
 }
@@ -1906,7 +1903,7 @@ shared_focus = {
 	ai_will_do = { 
 		factor = 15
 	}
-	cost = 10
+	cost = 5
 	x = 18
 	y = 7
 	offset = {
@@ -1980,7 +1977,7 @@ shared_focus = {
 	ai_will_do = { 
 		factor = 15
 	}
-	cost = 10
+	cost = 5
 	x = -2
 	y = 1
 	offset = {
@@ -2037,7 +2034,7 @@ shared_focus = {
 	ai_will_do = { 
 		factor = 15
 	}
-	cost = 10
+	cost = 5
 	x = 0
 	y = 1
 	offset = {
@@ -2074,7 +2071,7 @@ shared_focus = {
 	ai_will_do = { 
 		factor = 15
 	}
-	cost = 10
+	cost = 5
 	x = 2
 	y = 1
 	offset = {
@@ -2107,7 +2104,7 @@ shared_focus = {
 	ai_will_do = { 
 		factor = 15
 	}
-	cost = 10
+	cost = 5
 	x = -1
 	y = 1
 }
@@ -2133,7 +2130,7 @@ shared_focus = {
 	ai_will_do = { 
 		factor = 15
 	}
-	cost = 10
+	cost = 5
 	x = -1
 	y = 1
 }
@@ -2159,7 +2156,7 @@ shared_focus = {
 	ai_will_do = { 
 		factor = 15
 	}
-	cost = 10
+	cost = 5
 	x = 23
 	y = 6
 	offset = {
@@ -2231,7 +2228,7 @@ shared_focus = {
 	ai_will_do = { 
 		factor = 15
 	}
-	cost = 10
+	cost = 5
 	x = -2
 	y = 1
 }
@@ -2254,7 +2251,7 @@ shared_focus = {
 	ai_will_do = { 
 		factor = 15
 	}
-	cost = 10
+	cost = 5
 	x = 0
 	y = 1
 }
@@ -2283,7 +2280,7 @@ shared_focus = {
 	ai_will_do = { 
 		factor = 15
 	}
-	cost = 10
+	cost = 5
 	x = 2
 	y = 1
 }
@@ -2333,7 +2330,7 @@ shared_focus = {
 	ai_will_do = { 
 		factor = 15
 	}
-	cost = 10
+	cost = 5
 	x = -1
 	y = 1
 	offset = {
@@ -2361,7 +2358,7 @@ shared_focus = {
 	ai_will_do = { 
 		factor = 15
 	}
-	cost = 10
+	cost = 5
 	offset = {
 		x = 1
 		y = 0
@@ -2395,7 +2392,7 @@ shared_focus = {
 	ai_will_do = { 
 		factor = 15
 	}
-	cost = 10
+	cost = 5
 	x = 0
 	y = 1
 }
@@ -2416,7 +2413,7 @@ shared_focus = {
 	ai_will_do = { 
 		factor = 15
 	}
-	cost = 10
+	cost = 5
 	x = 0
 	y = 1
 }
@@ -2442,7 +2439,7 @@ shared_focus = {
 	prerequisite = {
 		focus = state_of_the_country_army
 	}
-	cost = 10
+	cost = 5
 	x = 4
 	y = 1
 	ai_will_do = { factor = 2 }
@@ -2463,7 +2460,7 @@ shared_focus = {
 	prerequisite = {
 		focus = fund_the_intel_services
 	}
-	cost = 10
+	cost = 5
 	x = 0
 	y = 1
 	ai_will_do = { factor = 15 }
@@ -2489,23 +2486,61 @@ shared_focus = {
 			uses = 2
 			bonus = 0.5
 		}
-		if = {
-			limit = {
-				is_a_very_weak_country = no
-			}
-			random_owned_controlled_state = {
-				limit = {
-					is_core_of = ROOT
-					impassable = no
-				}
-				add_extra_state_shared_building_slots = 1
-			}
-		}
-		
 		random_owned_controlled_state = {
 			limit = {
-				is_core_of = ROOT
-				impassable = no
+				impassable = no	
+				free_building_slots = {
+					building = infrastructure
+					size > 0
+				}
+				OR = {
+					is_in_home_area = yes
+					NOT = {
+						owner = {
+							any_owned_state = {
+								free_building_slots = {
+									building = infrastructure
+									size > 0
+								}
+								is_in_home_area = yes
+							}
+						}
+					}
+				}
+			}
+			add_building_construction = {
+				type = infrastructure
+				level = 1
+				instant_build = yes
+			}
+			add_extra_state_shared_building_slots = 1
+		}
+				random_owned_controlled_state = {
+			limit = {
+				impassable = no	
+				free_building_slots = {
+					building = infrastructure
+					size > 0
+				}
+				OR = {
+					is_in_home_area = yes
+					NOT = {
+						owner = {
+							any_owned_state = {
+								free_building_slots = {
+									building = infrastructure
+									size > 0
+								}
+								is_in_home_area = yes
+							}
+						}
+					}
+				}
+			}
+			add_building_construction = {
+				type = infrastructure
+				level = 1
+				instant_build = yes
 			}
 			add_extra_state_shared_building_slots = 1
 		}
@@ -2513,7 +2548,7 @@ shared_focus = {
 	ai_will_do = { 
 		factor = 15
 	}
-	cost = 10
+	cost = 5
 	x = -7
 	y = 0
 }
@@ -2580,10 +2615,10 @@ shared_focus = {
 			}
 			add_building_construction = {
 				type = infrastructure
-				level = 1
+				level = 2
 				instant_build = yes
 			}
-			add_extra_state_shared_building_slots = 1
+			add_extra_state_shared_building_slots = 2
 		}
 		add_tech_bonus = {
 			name = rural_reform
@@ -2596,7 +2631,7 @@ shared_focus = {
 	ai_will_do = { 
 		factor = 15
 	}
-	cost = 10
+	cost = 5
 	x = -4
 	y = 1
 }
@@ -2656,10 +2691,10 @@ shared_focus = {
 			}
 			add_building_construction = {
 				type = infrastructure
-				level = 1
+				level = 2
 				instant_build = yes
 			}
-			add_extra_state_shared_building_slots = 1
+			add_extra_state_shared_building_slots = 2
 		}
 		random_owned_controlled_state = {
 			limit = {
@@ -2685,16 +2720,16 @@ shared_focus = {
 			}
 			add_building_construction = {
 				type = infrastructure
-				level = 1
+				level = 2
 				instant_build = yes
 			}
-			add_extra_state_shared_building_slots = 1
+			add_extra_state_shared_building_slots = 2
 		}
 	}
 	ai_will_do = { 
 		factor = 15
 	}
-	cost = 10
+	cost = 5
 	x = -2
 	y = 1
 }
@@ -2724,7 +2759,7 @@ shared_focus = {
 	ai_will_do = { 
 		factor = 15
 	}
-	cost = 10
+	cost = 5
 	x = 1
 	y = 1
 }
@@ -2784,7 +2819,7 @@ shared_focus = {
 	ai_will_do = { 
 		factor = 15
 	}
-	cost = 10
+	cost = 5
 	x = 0
 	y = 1
 }
@@ -2813,10 +2848,10 @@ shared_focus = {
 					is_core_of = ROOT
 					impassable = no
 				}	
-				add_extra_state_shared_building_slots = 1
+				add_extra_state_shared_building_slots = 2
 				add_building_construction = {
 					type = industrial_complex
-					level = 1
+					level = 2
 					instant_build = yes
 				}				
 			}
@@ -2826,7 +2861,7 @@ shared_focus = {
 						is_core_of = ROOT
 						impassable = no
 					}
-					add_extra_state_shared_building_slots = 1
+					add_extra_state_shared_building_slots = 2
 				}
 			}
 		}
@@ -2834,7 +2869,7 @@ shared_focus = {
 	ai_will_do = { 
 		factor = 15
 	}
-	cost = 10
+	cost = 5
 	x = 0
 	y = 1
 }
@@ -2853,10 +2888,10 @@ shared_focus = {
 	}
 	completion_reward = {
 		capital_scope = {
-			add_extra_state_shared_building_slots = 1
+			add_extra_state_shared_building_slots = 2
 			add_building_construction = {
 				type = industrial_complex
-				level = 1
+				level = 2
 				instant_build = yes
 			}	
 		}
@@ -2864,7 +2899,7 @@ shared_focus = {
 	ai_will_do = { 
 		factor = 15
 	}
-	cost = 10
+	cost = 5
 	x = 0
 	y = 1
 }
@@ -2914,7 +2949,7 @@ shared_focus = {
 	ai_will_do = { 
 		factor = 15
 	}
-	cost = 10
+	cost = 5
 	x = -1
 	y = 1
 }
@@ -2937,7 +2972,7 @@ shared_focus = {
 	ai_will_do = { 
 		factor = 15
 	}
-	cost = 10
+	cost = 5
 	x = 1
 	y = 1
 }
@@ -2973,7 +3008,7 @@ shared_focus = {
 	ai_will_do = { 
 		factor = 15
 	}
-	cost = 10
+	cost = 5
 	x = -1
 	y = 1
 }
@@ -3021,21 +3056,16 @@ shared_focus = {
 		focus = mechanical_innovation
 	}
 	available = {
-		is_subject = no
-		OR = {
-			has_war = yes
-			threat > 0.5
-		}
 		capital_scope = {
 			is_fully_controlled_by = ROOT
 		}
 	}
 	completion_reward = {
 		capital_scope = {
-			add_extra_state_shared_building_slots = 1
+			add_extra_state_shared_building_slots = 2
 			add_building_construction = {
 				type = arms_factory
-				level = 1
+				level = 2
 				instant_build = yes
 			}		
 			if = {
@@ -3056,7 +3086,7 @@ shared_focus = {
 	ai_will_do = { 
 		factor = 15
 	}
-	cost = 10
+	cost = 5
 	x = 1
 	y = 1
 }
@@ -3097,8 +3127,34 @@ shared_focus = {
 					instant_build = yes
 				}				
 			}
+			random_owned_controlled_state = {
+				limit = {
+					is_coastal = yes
+					is_core_of = ROOT
+					naval_base > 0
+				}
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = industrial_complex
+					level = 2
+					instant_build = yes
+				}				
+			}
 			else = {
 				random_owned_controlled_state = {
+					limit = {
+						is_coastal = yes
+						is_core_of = ROOT
+						naval_base > 0
+					}
+					add_extra_state_shared_building_slots = 1
+					add_building_construction = {
+						type = industrial_complex
+						level = 1
+						instant_build = yes
+					}					
+				}
+								random_owned_controlled_state = {
 					limit = {
 						is_coastal = yes
 						is_core_of = ROOT
@@ -3161,7 +3217,33 @@ shared_focus = {
 					instant_build = yes
 				}		
 			}
+			random_owned_controlled_state = {
+				limit = {
+					is_coastal = yes
+					is_core_of = ROOT
+					naval_base > 0
+				}
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = dockyard
+					level = 2
+					instant_build = yes
+				}		
+			}
 			else = {
+				random_owned_controlled_state = {
+					limit = {
+						is_coastal = yes
+						is_core_of = ROOT
+						naval_base > 0
+					}
+					add_extra_state_shared_building_slots = 1
+					add_building_construction = {
+						type = dockyard
+						level = 1
+						instant_build = yes
+					}	
+				}
 				random_owned_controlled_state = {
 					limit = {
 						is_coastal = yes
@@ -3247,7 +3329,7 @@ shared_focus = {
 	ai_will_do = { 
 		factor = 15
 	}
-	cost = 10
+	cost = 5
 	x = -1
 	y = 1
 }
@@ -3269,7 +3351,7 @@ shared_focus = {
 	ai_will_do = { 
 		factor = 15
 	}
-	cost = 10
+	cost = 5
 	x = 1
 	y = 1
 }
@@ -3334,7 +3416,7 @@ shared_focus = {
 	mutually_exclusive = {
 		focus = wolf_pack
 	}
-	cost = 10
+	cost = 5
 	x = 0
 	y = 1
 }
@@ -3378,7 +3460,7 @@ shared_focus = {
 	ai_will_do = { 
 		factor = 15
 	}
-	cost = 10
+	cost = 5
 	x = 2
 	y = 1
 }

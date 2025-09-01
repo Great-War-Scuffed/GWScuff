@@ -54,7 +54,7 @@ technologies = {
 		doctrine = yes	
 		research_cost = 3
 		xp_research_type = army
-		xp=unlock_cost = 100
+	    xp_unlock_cost = 100
 		xp_research_bonus = 1.00
 		
 		categories = { land_doctrine }
@@ -87,7 +87,7 @@ technologies = {
 		doctrine = yes	
 		research_cost = 3
 		xp_research_type = army
-		xp=unlock_cost = 100
+		xp_unlock_cost = 100
 		xp_research_bonus = 1.00
 		
 		categories = { land_doctrine }
@@ -118,7 +118,7 @@ technologies = {
 		doctrine = yes	
 		research_cost = 3
 		xp_research_type = army
-		xp=unlock_cost = 100
+		xp_unlock_cost = 100
 		xp_research_bonus = 1.00
 		
 		categories = { land_doctrine }
@@ -156,7 +156,7 @@ technologies = {
 		doctrine = yes	
 		research_cost = 3
 		xp_research_type = army
-		xp=unlock_cost = 100
+		xp_unlock_cost = 100
 		xp_research_bonus = 1.00
 		
 		categories = { land_doctrine }
@@ -187,7 +187,7 @@ technologies = {
 		doctrine = yes	
 		research_cost = 3
 		xp_research_type = army
-		xp=unlock_cost = 100
+		xp_unlock_cost = 100
 		xp_research_bonus = 1.00
 		
 		categories = { land_doctrine }
@@ -233,7 +233,7 @@ technologies = {
 		doctrine = yes	
 		research_cost = 3
 		xp_research_type = army
-		xp=unlock_cost = 100
+		xp_unlock_cost = 100
 		xp_research_bonus = 1.00
 		
 		categories = { land_doctrine }
@@ -267,7 +267,7 @@ technologies = {
 		doctrine = yes	
 		research_cost = 3
 		xp_research_type = army
-		xp=unlock_cost = 100
+		xp_unlock_cost = 100
 		xp_research_bonus = 1.00
 		
 		categories = { land_doctrine }
@@ -307,7 +307,7 @@ technologies = {
 		doctrine = yes	
 		research_cost = 3
 		xp_research_type = army
-		xp=unlock_cost = 100
+		xp_unlock_cost = 100
 		xp_research_bonus = 1.00
 		
 		categories = { land_doctrine }
@@ -337,7 +337,7 @@ technologies = {
 		doctrine = yes	
 		research_cost = 3
 		xp_research_type = army
-		xp=unlock_cost = 100
+		xp_unlock_cost = 100
 		xp_research_bonus = 1.00
 		
 		categories = { land_doctrine }
@@ -381,7 +381,7 @@ technologies = {
 		doctrine = yes	
 		research_cost = 3
 		xp_research_type = army
-		xp=unlock_cost = 100
+		xp_unlock_cost = 100
 		xp_research_bonus = 1.00
 		
 		categories = { land_doctrine }
@@ -423,7 +423,7 @@ technologies = {
 		doctrine = yes	
 		research_cost = 3
 		xp_research_type = army
-		xp=unlock_cost = 100
+		xp_unlock_cost = 100
 		xp_research_bonus = 1.00
 		
 		categories = { land_doctrine }
@@ -451,6 +451,7 @@ technologies = {
 		doctrine = yes	
 		research_cost = 2
 		xp_research_type = army
+		xp_unlock_cost = 100
 		xp=unlock_cost = 100
 		xp_research_bonus = 1.00
 		
@@ -1409,7 +1410,7 @@ technologies = {
 		doctrine_name = "SUPERIOR_FIREPOWER_DOCTRINE"
 		
 		xp_research_type = army
-		xp_unlock_cost = 100
+		xp_unlock_cost = 1
 		
 		xor = { ww1_landdoctrine mobile_warfare trench_warfare mass_assault } 
 
@@ -2290,7 +2291,7 @@ technologies = {
 		doctrine_name = "GRAND_BATTLEPLAN_DOCTRINE"
 
 		xp_research_type = army
-		xp_unlock_cost = 100
+		xp_unlock_cost = 1
 		
 		xor = { ww1_landdoctrine mobile_warfare superior_firepower mass_assault } 
 	
@@ -3167,7 +3168,7 @@ technologies = {
 		doctrine_name = "MASS_ASSAULT_DOCTRINE"
 		
 		xp_research_type = army
-		xp_unlock_cost = 100
+		xp_unlock_cost = 1
 		xor = { ww1_landdoctrine mobile_warfare superior_firepower trench_warfare } 
 
 		path = {

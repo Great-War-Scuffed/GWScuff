@@ -1,7 +1,7 @@
 ﻿capital = 597
 oob = CHI_warlord
 
-set_research_slots = 2
+set_research_slots = 3
 
 give_military_access = GER #Qingdao–Jinan Railway
 

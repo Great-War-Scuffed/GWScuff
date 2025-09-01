@@ -4,7 +4,7 @@ oob = "AST_1910"
 #-------------------------------------------------------
 #					GENERIC VALUES
 #-------------------------------------------------------
-set_research_slots = 2
+set_research_slots = 3
 add_to_tech_sharing_group = commonwealth_research
 set_stability = 0.75
 set_war_support = 0.30

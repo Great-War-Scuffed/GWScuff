@@ -1,6 +1,6 @@
 ﻿capital = 56 #Oldenburg
 
-set_research_slots = 2
+set_research_slots = 3
 
 recruit_character = OLD_friedrich_august_von_oldenburg
 recruit_character = OLD_bernhard_kuhnt

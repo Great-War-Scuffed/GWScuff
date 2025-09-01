@@ -1,5 +1,5 @@
 ﻿capital = 100
-set_research_slots = 2
+set_research_slots = 3
 
 recruit_character = ICE_frederick_viii
 recruit_character = ICE_christian_x

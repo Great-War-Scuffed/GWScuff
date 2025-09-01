@@ -3,7 +3,7 @@ oob="RAJ_1910"
 
 set_stability=0.31
 set_convoys=20
-set_research_slots = 2
+set_research_slots = 3
 add_to_tech_sharing_group = commonwealth_research
 
 set_cosmetic_tag = RAJ_UK

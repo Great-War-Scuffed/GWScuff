@@ -1,6 +1,6 @@
 ﻿capital = 603
 
-set_research_slots = 2
+set_research_slots = 3
 
 recruit_character = GZC_yang_jincheng
 

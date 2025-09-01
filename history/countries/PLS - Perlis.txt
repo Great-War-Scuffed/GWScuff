@@ -1,6 +1,6 @@
 ﻿capital = 933 #Kangar
 
-set_research_slots = 2
+set_research_slots = 3
 
 recruit_character = PLS_syed_alwi_jamalullali
 

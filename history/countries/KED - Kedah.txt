@@ -1,6 +1,6 @@
 ﻿capital = 934 #Alor Setar
 
-set_research_slots = 2
+set_research_slots = 3
 
 recruit_character = KED_abdul_hamid_halim_shah 
 

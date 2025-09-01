@@ -1,7 +1,7 @@
 ﻿capital = 598
 # oob = "QIN_1910"
 
-set_research_slots = 2
+set_research_slots = 3
 set_stability = 0.70
 set_war_support = 0.55
 set_convoys = 13

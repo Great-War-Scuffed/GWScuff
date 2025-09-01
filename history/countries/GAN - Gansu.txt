@@ -1,6 +1,6 @@
 ﻿capital = 283
 
-set_research_slots = 2
+set_research_slots = 3
 
 recruit_character = XSM_ma_hongbin
 recruit_character = XSM_ma_hongkui

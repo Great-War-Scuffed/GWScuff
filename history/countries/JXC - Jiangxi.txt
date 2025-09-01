@@ -1,7 +1,7 @@
 ﻿capital = 600
 oob = CHI_warlord
 
-set_research_slots = 2
+set_research_slots = 3
 
 # recruit_character = CHI_li_liejun
 

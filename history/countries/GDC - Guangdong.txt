@@ -1,7 +1,7 @@
 ﻿capital = 592
 set_convoys = 30
 
-set_research_slots = 2
+set_research_slots = 3
 set_politics = {
 	ruling_party = neutrality
 	last_election = "1910.1.1"

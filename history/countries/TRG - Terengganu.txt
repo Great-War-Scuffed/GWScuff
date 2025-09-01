@@ -1,6 +1,6 @@
 ﻿capital = 936 #Kuala Terengganu
 
-set_research_slots = 2
+set_research_slots = 3
 
 recruit_character = TRG_zainal_abidin_iii
 

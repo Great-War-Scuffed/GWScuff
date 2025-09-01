@@ -115,7 +115,7 @@ recruit_character = POR_antonio_de_oliveira_salazar
 		neutrality = 55
 	}
 	add_ideas = {
-		POR_unstable_monarchy
+		#POR_unstable_monarchy
 		
 		limited_conscription
 	}

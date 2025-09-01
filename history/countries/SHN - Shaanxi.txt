@@ -1,6 +1,6 @@
 ﻿capital = 890
 
-set_research_slots = 2
+set_research_slots = 3
 
 recruit_character = SHN_zhang_fenghui
 recruit_character = SHN_chen_shufan

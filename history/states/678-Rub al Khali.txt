@@ -9,7 +9,7 @@ state={
 	history={
 		#owner = ALM
 		#add_core_of = ALM
-		owner = SAU
+		owner = TUR
 		buildings = {
 			infrastructure = 0
 

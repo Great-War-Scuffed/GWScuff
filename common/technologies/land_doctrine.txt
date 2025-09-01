@@ -7,15 +7,6 @@ technologies = {
 
 		xor = { mobile_warfare superior_firepower trench_warfare mass_assault } 
 		
-		allow = {
-			NOT = {
-				has_tech = mobile_warfare
-				has_tech = trench_warfare
-				has_tech = superior_firepower
-				has_tech = mass_assault
-		    }
-	    }
-		
 		path = {
 			leads_to_tech = ww1_lead_by_order 
 			research_cost_coeff = 1
@@ -33,7 +24,7 @@ technologies = {
 		doctrine = yes	
 		research_cost = 3
 		xp_research_type = army
-		xp_unlock_cost = 250
+		xp_unlock_cost = 1
 		xp_research_bonus = 1.00
 		folder = {
 			name = land_doctrine_folder
@@ -63,7 +54,7 @@ technologies = {
 		doctrine = yes	
 		research_cost = 3
 		xp_research_type = army
-		xp_unlock_cost = 250
+		xp=unlock_cost = 100
 		xp_research_bonus = 1.00
 		
 		categories = { land_doctrine }
@@ -96,7 +87,7 @@ technologies = {
 		doctrine = yes	
 		research_cost = 3
 		xp_research_type = army
-		xp_unlock_cost = 250
+		xp=unlock_cost = 100
 		xp_research_bonus = 1.00
 		
 		categories = { land_doctrine }
@@ -127,7 +118,7 @@ technologies = {
 		doctrine = yes	
 		research_cost = 3
 		xp_research_type = army
-		xp_unlock_cost = 250
+		xp=unlock_cost = 100
 		xp_research_bonus = 1.00
 		
 		categories = { land_doctrine }
@@ -165,7 +156,7 @@ technologies = {
 		doctrine = yes	
 		research_cost = 3
 		xp_research_type = army
-		xp_unlock_cost = 250
+		xp=unlock_cost = 100
 		xp_research_bonus = 1.00
 		
 		categories = { land_doctrine }
@@ -196,7 +187,7 @@ technologies = {
 		doctrine = yes	
 		research_cost = 3
 		xp_research_type = army
-		xp_unlock_cost = 250
+		xp=unlock_cost = 100
 		xp_research_bonus = 1.00
 		
 		categories = { land_doctrine }
@@ -242,7 +233,7 @@ technologies = {
 		doctrine = yes	
 		research_cost = 3
 		xp_research_type = army
-		xp_unlock_cost = 250
+		xp=unlock_cost = 100
 		xp_research_bonus = 1.00
 		
 		categories = { land_doctrine }
@@ -276,7 +267,7 @@ technologies = {
 		doctrine = yes	
 		research_cost = 3
 		xp_research_type = army
-		xp_unlock_cost = 250
+		xp=unlock_cost = 100
 		xp_research_bonus = 1.00
 		
 		categories = { land_doctrine }
@@ -316,7 +307,7 @@ technologies = {
 		doctrine = yes	
 		research_cost = 3
 		xp_research_type = army
-		xp_unlock_cost = 250
+		xp=unlock_cost = 100
 		xp_research_bonus = 1.00
 		
 		categories = { land_doctrine }
@@ -346,7 +337,7 @@ technologies = {
 		doctrine = yes	
 		research_cost = 3
 		xp_research_type = army
-		xp_unlock_cost = 250
+		xp=unlock_cost = 100
 		xp_research_bonus = 1.00
 		
 		categories = { land_doctrine }
@@ -390,7 +381,7 @@ technologies = {
 		doctrine = yes	
 		research_cost = 3
 		xp_research_type = army
-		xp_unlock_cost = 250
+		xp=unlock_cost = 100
 		xp_research_bonus = 1.00
 		
 		categories = { land_doctrine }
@@ -432,7 +423,7 @@ technologies = {
 		doctrine = yes	
 		research_cost = 3
 		xp_research_type = army
-		xp_unlock_cost = 250
+		xp=unlock_cost = 100
 		xp_research_bonus = 1.00
 		
 		categories = { land_doctrine }
@@ -460,7 +451,7 @@ technologies = {
 		doctrine = yes	
 		research_cost = 2
 		xp_research_type = army
-		xp_unlock_cost = 250
+		xp=unlock_cost = 100
 		xp_research_bonus = 1.00
 		
 		categories = { land_doctrine }
@@ -487,24 +478,10 @@ technologies = {
 		doctrine_name = "MOBILE_WARFARE_DOCTRINE"
 		
 		xp_research_type = army
-		xp_unlock_cost = 100
+		xp_unlock_cost = 1
 		
 		xor = { ww1_landdoctrine superior_firepower trench_warfare mass_assault } 
 
-		#-----------------------------------------
-		# With this dependencies we can lock WW2 Doctrines; you need to complete WW1 Doctrines first
-		allow = {
-			OR = {
-				has_tech = ww1_combined_arms
-				has_tech = trench_warfare
-				has_tech = superior_firepower
-				has_tech = mass_assault
-		   }
-	    }
-		# dependencies = {
-		# 	ww1_combined_arms = 1
-		# }
-		#-----------------------------------------
 
 		path = {
 			leads_to_tech = delay 
@@ -1436,20 +1413,6 @@ technologies = {
 		
 		xor = { ww1_landdoctrine mobile_warfare trench_warfare mass_assault } 
 
-		#-----------------------------------------
-		# With this dependencies we can lock WW2 Doctrines; you need to complete WW1 Doctrines first
-		allow = {
-			OR = {
-				has_tech = ww1_combined_arms
-				has_tech = mobile_warfare
-				has_tech = trench_warfare
-				has_tech = mass_assault
-		    }
-	    }
-		# dependencies = {
-		# 	ww1_combined_arms = 1
-		# }
-		#-----------------------------------------
 
 		path = {
 			leads_to_tech = sup_delay 
@@ -2330,21 +2293,6 @@ technologies = {
 		xp_unlock_cost = 100
 		
 		xor = { ww1_landdoctrine mobile_warfare superior_firepower mass_assault } 
-
-		#-----------------------------------------
-		# With this dependencies we can lock WW2 Doctrines; you need to complete WW1 Doctrines first
-		allow = {
-			OR = {
-				has_tech = ww1_combined_arms
-				has_tech = mobile_warfare
-				has_tech = superior_firepower
-				has_tech = mass_assault
-		    }
-	    }
-		# dependencies = {
-		# 	ww1_combined_arms = 1
-		# }
-		#-----------------------------------------
 	
 		max_dig_in = 10
 		dig_in_speed_factor = 0.25 #25% bonus
@@ -3221,21 +3169,6 @@ technologies = {
 		xp_research_type = army
 		xp_unlock_cost = 100
 		xor = { ww1_landdoctrine mobile_warfare superior_firepower trench_warfare } 
-
-		#-----------------------------------------
-		# With this dependencies we can lock WW2 Doctrines; you need to complete WW1 Doctrines first
-		allow = {
-			OR = {
-				has_tech = ww1_combined_arms
-				has_tech = mobile_warfare
-				has_tech = superior_firepower
-				has_tech = trench_warfare
-		    }
-	    }
-		# dependencies = {
-		# 	ww1_combined_arms = 1
-		# }
-		#-----------------------------------------
 
 		path = {
 			leads_to_tech = pocket_defence 

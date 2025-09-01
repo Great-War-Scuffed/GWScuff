@@ -5,9 +5,8 @@ state={
 	state_category=wasteland
 	provinces= { 10564 12879 }
 	history={
-		owner = JBS
-		add_core_of = JBS
-		add_core_of = AMR
+				owner = TUR
+		add_core_of = TUR
 		buildings={
 			infrastructure = 0
 		}

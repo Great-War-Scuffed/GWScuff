@@ -19,7 +19,7 @@ state={
 		victory_points = {
 			4396 1 
 		}
-		owner = SRW
+		owner = ENG
 		add_core_of = SRW
 		add_core_of = BRN
 		buildings = {

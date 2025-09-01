@@ -208,7 +208,7 @@ focus_tree = {
 	focus = {
 		id = ENG_free_saf
 		icon = GFX_focus_union_south_africa
-		cost = 4.4
+		cost = 5
 		x = 3
 		y = 0
 		available = {
@@ -238,97 +238,7 @@ focus_tree = {
 				exists = yes
 			}
 		}
-		completion_reward = {
-			hidden_effect = {
-				every_subject_country = {
-					limit = {
-						OR = {
-							original_tag = ORA
-							original_tag = NAT
-							original_tag = CAP
-						}				
-					}
-					if = {
-						limit = {
-							original_tag = ORA
-						}
-						every_character = {
-							limit = {
-								OR = {
-									is_character = SAF_abraham_fischer
-									is_character = SAF_j_b_m_hertzog
-									is_character = SAF_christiaan_de_wet
-								}
-							}
-							set_nationality = SAF
-						}
-					}
-					else_if = {
-						limit = {
-							original_tag = CAP
-						}
-						every_character = {
-							limit = {
-								OR = {
-									is_character = SAF_henry_lukin
-									is_character = SAF_daniel_malan
-									is_character = SAF_andries_brink
-									is_character = SAF_christoffel_venter
-								}
-							}
-							set_nationality = SAF
-						}
-					}
-					else_if = {
-						limit = {
-							has_character = ENG_paul_methuen
-						}
-						set_nationality = {
-							target_country = ROOT
-							character = ENG_paul_methuen
-						}
-					}
-					SAF = {
-						annex_country = {
-							target = PREV
-							transfer_troops = yes
-						}
-					}
-					if = {
-						limit = { 
-							NOT = {
-								has_cosmetic_tag = CAP_ENG
-							}
-						}
-						drop_cosmetic_tag = yes			
-					}
-					if = {
-						limit = { 
-							is_ai = no 
-							SAF = { is_ai = yes }
-						}
-						SAF = {
-							change_tag_from = PREV
-						}				
-					}
-				}
-			}		
-			every_state = {
-				limit = {		
-					OR = {
-						state = 681
-						state = 789
-						state = 275
-						state = 719
-						state = 1049
-						state = 1050
-						state = 541
-					}
-					is_owned_or_subject_trigger = yes
-				}		
-				add_core_of = SAF
-				transfer_state_to = SAF
-			}			
+		completion_reward = {		
 			ENG = {
 				set_autonomy = {
 					target = SAF
@@ -339,6 +249,32 @@ focus_tree = {
 			SAF = {
 				set_country_flag = SAF_ENG
 				set_cosmetic_tag = SAF_ENG
+			}
+			681 = {
+				add_building_construction = {
+					type = infrastructure
+					level = 2
+					instant_build = yes
+				}
+				add_building_construction = {
+					type = industrial_complex
+					level = 1
+					instant_build = yes
+				}
+				add_extra_state_shared_building_slots = 4
+			}
+			275 = {
+				add_building_construction = {
+					type = infrastructure
+					level = 2
+					instant_build = yes
+				}
+				add_building_construction = {
+					type = industrial_complex
+					level = 1
+					instant_build = yes
+				}
+				add_extra_state_shared_building_slots = 4
 			}
 			hidden_effect = {
 				SAF = {
@@ -1922,7 +1858,7 @@ focus_tree = {
 	focus = {
 		id = ENG_Dominion_Investment
 		icon = GFX_focus_ENG_british_empire
-		cost = 10
+		cost = 5
 		prerequisite = {
 			focus = ENG_Pax_Britannica
 		}
@@ -1948,7 +1884,7 @@ focus_tree = {
 	focus = {
 		id = ENG_Investment_Aus
 		icon = GFX_focus_generic_self_management
-		cost = 10
+		cost = 5
 		prerequisite = {
 			focus = ENG_Dominion_Investment
 		}
@@ -2009,7 +1945,7 @@ focus_tree = {
 	focus = {
 		id = ENG_Invest_NZL
 		icon = GFX_focus_generic_self_management
-		cost = 10
+		cost = 5
 		prerequisite = {
 			focus = ENG_Investment_Aus
 		}
@@ -2027,10 +1963,10 @@ focus_tree = {
 		}
 		completion_reward = {
 			284 = {
-				add_extra_state_shared_building_slots = 1
+				add_extra_state_shared_building_slots = 2
 				add_building_construction = {
 					type = industrial_complex
-					level = 1
+					level = 2
 					instant_build = yes
 				}
 				if = {
@@ -2054,7 +1990,7 @@ focus_tree = {
 	focus = {
 		id = ENG_invest_CAN
 		icon = GFX_focus_ENG_canada_focus
-		cost = 10
+		cost = 5
 		prerequisite = {
 			focus = ENG_Dominion_Investment
 		}
@@ -2130,7 +2066,7 @@ focus_tree = {
 	focus = {
 		id = ENG_quebec_federalization
 		icon = GFX_goal_tfv_can_compromise_with_quebec
-		cost = 10
+		cost = 5
 		prerequisite = {
 			focus = ENG_invest_CAN
 		}
@@ -2153,7 +2089,7 @@ focus_tree = {
 	focus = {
 		id = ENG_dev_saf
 		icon = GFX_focus_generic_africa_production
-		cost = 10
+		cost = 5
 		prerequisite = {
 			focus = ENG_Dominion_Investment
 		}
@@ -2199,7 +2135,7 @@ focus_tree = {
 	focus = {
 		id = ENG_campaign_for_Qualified_Franchise
 		icon = GFX_focus_usa_voter_registration_act
-		cost = 10
+		cost = 5
 		prerequisite = {
 			focus = ENG_dev_saf
 		}
@@ -2276,12 +2212,30 @@ focus_tree = {
 					}
 				}
 			}
+			429 = {
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = industrial_complex
+					level = 2
+					instant_build = yes
+				}
+
+			}
+			430 = {
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = industrial_complex
+					level = 1
+					instant_build = yes
+				}
+
+			}
 		}
 	}
 	focus = {
 		id = ENG_Principality_Integration
 		icon = GFX_focus_ENG_increase_indian_trade
-		cost = 10
+		cost = 5
 		prerequisite = {
 			focus = ENG_dev_raj
 		}
@@ -2346,7 +2300,7 @@ focus_tree = {
 	focus = {
 		id = ENG_Imperial_Federation
 		icon = GFX_focus_eng_unite_the_anglosphere
-		cost = 30
+		cost = 15
 		prerequisite = {
 			focus = ENG_quebec_federalization
 		}
@@ -2535,44 +2489,6 @@ focus_tree = {
 					level = 1
 					instant_build = yes
 				}
-			}
-		}
-	}
-	focus = {
-		id = ENG_Focus_Somalian_Forces
-		icon = GFX_focus_secret_rearmament
-		cost = 10
-		prerequisite = {
-			focus = ENG_Support_Nigerian_Christ
-		}
-		x = 26
-		y = 4
-		available = {
-			any_owned_state = {
-				is_core_of = SOM
-			}
-			NOT = {
-				has_war_with = SOM
-			}
-			NOT = {
-				has_idea = idea_army_restrictions
-				has_idea = idea_armistice
-			}
-		}
-		bypass = {
-			OR = {
-				has_war_with = SOM
-				NOT = {
-					country_exists = SOM
-				}
-				has_global_flag = somaliland_campaign
-			}	
-		}
-		completion_reward = {
-			set_global_flag = somaliland_campaign
-			declare_war_on = {
-				target = SOM
-				type = annex_everything
 			}
 		}
 	}

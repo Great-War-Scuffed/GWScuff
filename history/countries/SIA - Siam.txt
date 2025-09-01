@@ -76,8 +76,8 @@ recruit_character = SIA_phraya_phahon
 		neutrality = 90
 	}
 	add_ideas = {
-		SIA_bamboo_diplomacy
-		idea_overseas_chinese_community
+		#SIA_bamboo_diplomacy
+		#idea_overseas_chinese_community
 	}
 }
 1914.1.1 = { 

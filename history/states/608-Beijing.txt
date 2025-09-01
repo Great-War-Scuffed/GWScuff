@@ -13,9 +13,9 @@ state={
 		owner=QIN
 		add_core_of=QIN
 		buildings={
-			infrastructure = 3
-			industrial_complex=1
-			arms_factory=1
+			infrastructure = 5
+			industrial_complex=3
+			arms_factory=2
 			10068={ naval_base=2 }
 			9843 = { bunker = 2 }
 			4140 = { bunker = 2 }

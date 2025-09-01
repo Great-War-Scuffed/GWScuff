@@ -26,7 +26,7 @@ technologies = {
 			leads_to_tech = basic_howitzer
 			research_cost_coeff = 1
 		}
-		research_cost = 1.5
+		research_cost = 0.01
 		
 		folder = {
 			name = artillery_folder

@@ -1,0 +1,90 @@
+foreign_politics = {
+	WUK_join_ukraine = {
+		icon = GFX_decision_generic_nationalism
+		allowed = {
+			tag = WUK
+		}
+		target_trigger = {
+			FROM = {
+				original_tag = UKR
+			}
+		}	
+		visible = {
+			is_subject = no
+			has_civil_war = no
+			NOT = {
+				has_war_with = FROM
+				FROM = { has_country_flag = rejected_west_ukraine }
+			}
+		}
+		available = {
+			OR = {
+				has_war = no
+				has_war_with = POL
+			}
+			FROM = {
+				OR = {
+					is_subject = no
+					has_country_flag = great_war_winner
+				}
+				if = {
+					limit = {
+						ROOT = {
+							OR = {
+								has_government = neutrality
+								has_government = democratic
+							}
+						}					
+					}
+					OR = {
+						has_government = neutrality
+						has_government = democratic
+					}
+					else = {
+						has_government = ROOT
+					}	
+				}
+			}
+		}
+		cancel_trigger = {
+			OR = {
+				FROM = {
+					OR = {
+						AND = {
+							is_subject = yes
+							NOT = { has_country_flag = great_war_winner }
+						}
+						has_war_with = PREV
+						exists = no
+						NOT = { has_government = ROOT }
+						has_capitulated = yes
+					}
+				}
+				is_subject = yes
+				AND = {
+					has_war = yes
+					NOT = { has_war_with = POL }
+				}
+				has_capitulated = yes
+			}
+		}
+		ai_will_do = {
+			factor = 50
+			modifier = {
+				factor = 0
+				FROM = {
+					has_cosmetic_tag = UKR_GETMAN
+					NOT = { has_country_flag = great_war_winner }
+				}
+			}			
+		}
+		fire_only_once = no
+		days_remove = 180
+		days_re_enable = 200
+		remove_effect = {
+			FROM = {
+				country_event = { id = ww1_ukraine.5 }
+			}
+		}
+	}
+}

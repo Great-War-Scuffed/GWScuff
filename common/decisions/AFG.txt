@@ -1,0 +1,391 @@
+AFG_attack_entente = {
+	AFG_entente_war = {
+		icon = generic_operation
+		cost = 150
+		fire_only_once = yes
+		allowed = {
+			tag = AFG
+		}
+		visible = {
+			is_great_war_ongoing = yes
+			NOT = {
+				is_in_faction_with = GER
+				has_war_with = GER
+			}
+			ENG = {
+				has_war_with = GER
+			}
+			TUR = {
+				is_in_faction_with = GER
+			}
+		}
+		available = {
+			is_great_war_ongoing = yes
+			has_army_manpower = {
+				size > 10000
+			}
+			has_country_flag = AFG_cp
+			ENG = {
+				has_war_with = GER
+			}
+			TUR = {
+				is_in_faction_with = GER
+			}
+		}
+		complete_effect = {
+			hidden_effect = {
+				set_global_flag = cp_afghan
+			}
+			if = {
+				limit = {
+					is_subject = yes
+				}
+				OVERLORD = {
+					end_puppet = AFG
+				}
+			}
+			if = {
+				limit = {
+					is_in_faction = yes
+					NOT = {
+						is_in_faction_with = GER
+					}
+				}
+				leave_faction = yes
+				GER = {
+					add_to_faction = AFG
+				}
+			}
+			add_political_power = 300
+			add_equipment_to_stockpile = {
+				type = infantry_equipment
+				amount = 3000
+				producer = GER
+			}
+			add_manpower = 15000
+			add_offsite_building = {
+				type = arms_factory
+				level = 1
+			}
+		}
+		ai_will_do = {
+			base = 10
+			modifier = {
+				FRA = {
+					surrender_progress > 0.15
+				}
+				add = 50
+			}
+			modifier = {
+				factor = 0
+				is_historical_focus_on = yes
+				GER = {
+					is_ai = yes
+				}
+			}
+		}
+	}
+	AFG_border_invasion_ind = {
+		icon = GFX_decision_generic_ignite_civil_war
+		cost = 100
+		days_remove = 30
+		fire_only_once = yes
+		war_with_on_remove = PAK
+		available = {
+			PAK = {
+				has_war_with = RAJ
+			}
+		}
+		visible = {
+			tag = AFG
+			PAK = {
+				has_war_with = RAJ
+			}
+		}
+		target_trigger = {
+			FROM = {
+				tag = PAK
+			}
+		}
+		remove_effect = {
+			create_wargoal = {
+				type = puppet_wargoal_focus
+				target = PAK
+			}
+			add_state_claim = 442
+			add_state_claim = 444
+			add_state_claim = 445
+			hidden_effect = {
+				set_country_flag = AFG_punjab_war
+			}
+		}
+		cancel_trigger = {
+			OR = {
+				NOT = {
+					PAK = {
+						has_war_with = RAJ
+					}
+				}
+				PAK = {
+					exists = no
+				}
+			}
+		}
+		ai_will_do = {
+			base = 0
+			modifier = {
+				add = 10
+				strength_ratio = {
+					tag = PAK
+					ratio > 0.7
+				}
+			}
+		}
+	}
+	AFG_seize_Samarkand = {
+		icon = GFX_decision_generic_ignite_civil_war
+		cost = 40
+		days_remove = 30
+		fire_only_once = yes
+		war_with_on_remove = BUK
+		available = {
+			BUK = {
+				exists = yes
+				is_subject = no
+			}
+			is_in_faction = no
+		}
+		visible = {
+			tag = AFG
+			is_subject = no
+			has_russian_civil_war = yes
+			has_global_flag = russian_civil_war
+		}
+		remove_effect = {
+			create_wargoal = {
+				type = puppet_wargoal_focus
+				target = BUK
+			}
+			add_state_claim = 732
+			add_state_claim = 742
+			add_state_claim = 586
+		}
+		cancel_trigger = {
+			OR = {
+				BUK = {
+					is_subject = yes
+				}
+				NOT = {
+					country_exists = BUK
+				}
+				is_in_faction = yes
+				NOT = {
+					RUS = {
+						has_war_with = SOV
+					}
+				}
+			}
+		}
+		ai_will_do = {
+			base = 0
+		}
+	}
+	AFG_tribal_mobilization = {
+		icon = generic_operation
+		cost = 150
+		fire_only_once = yes
+		allowed = {
+			tag = AFG
+		}
+		visible = {
+			is_great_war_ongoing = yes
+			ENG = {
+				has_war_with = GER
+			}
+			TUR = {
+				is_in_faction_with = GER
+			}
+			is_in_faction_with = GER
+		}
+		available = {
+			is_great_war_ongoing = yes
+			has_country_flag = AFG_cp
+			ENG = {
+				has_war_with = GER
+			}
+			TUR = {
+				is_in_faction_with = GER
+			}
+			is_in_faction_with = GER
+		}
+		complete_effect = {
+			add_equipment_to_stockpile = {
+				type = infantry_equipment
+				amount = 3000
+				producer = AFG
+			}
+			add_manpower = 15000
+		}
+		ai_will_do = {
+			base = 10
+			modifier = {
+				FRA = {
+					surrender_progress > 0.15
+				}
+				PER = {
+					is_in_faction_with = GER
+				}
+				add = 100
+			}
+		}
+	}
+	AFG_victory_Samarkand = {
+		icon = GFX_decision_generic_ignite_civil_war
+		cost = 0
+		fire_only_once = yes
+		available = {
+			BUK = {
+				owns_state = 742
+			}
+			has_full_control_of_state = 742
+		}
+		visible = {
+			tag = AFG
+			has_war_with = BUK
+			has_russian_civil_war = yes
+			has_global_flag = russian_civil_war
+			is_in_faction = no
+		}
+		complete_effect = {
+			transfer_state = 742
+		}
+		ai_will_do = {
+			base = 100
+		}
+	}
+	AFG_victory_Punjab = {
+		icon = GFX_decision_generic_ignite_civil_war
+		cost = 15
+		fire_only_once = yes
+		available = {
+			PAK = {
+				has_capitulated = yes
+				owns_state = 445
+				owns_state = 442
+				owns_state = 444
+			}
+			has_army_manpower = {
+				size > 10000
+			}
+			has_country_flag = AFG_punjab_war
+			divisions_in_state = {
+				type = infantry
+				size > 3
+				state = 267
+			}
+		}
+		visible = {
+			tag = AFG
+			PAK = {
+				has_capitulated = yes
+				owns_state = 445
+				owns_state = 442
+				owns_state = 444
+			}
+		}
+		complete_effect = {
+			PAK = {
+				transfer_state = 445
+				transfer_state = 442
+				transfer_state = 444
+			}
+		}
+		ai_will_do = {
+			base = 100
+		}
+	}
+}
+
+operations = {
+	AFG_claim_territories = {
+		icon = GFX_decision_generic_operation
+		allowed = {
+			original_tag = AFG
+		}
+		state_target = yes
+		targets = {
+			442 444 445
+		}
+		on_map_mode = map_and_decisions_view
+		days_remove = 30
+		available = {
+			controls_state = FROM
+		}
+		visible = {
+			FROM = {
+				NOT = { is_core_of = ROOT }
+			}
+		}
+		cancel_if_not_visible = yes
+		cancel_trigger = {
+			NOT = { controls_state = FROM }
+		}
+		cost = 25
+		remove_effect = {
+			add_state_core = FROM
+		}
+		ai_will_do = {
+			base = 100
+		}
+	}
+}
+peace_deals = {
+	AFG_sue_for_peace_ENG = {
+		name = sue_for_peace_FROM
+		icon = GFX_decision_eng_trade_unions_support
+		allowed = {
+			original_tag = AFG
+		}
+		available = {
+			surrender_progress > 0.05
+		}
+		visible = {
+			is_subject = no
+			is_in_faction = no
+			has_war_with = FROM
+			OR = {
+				has_subject = RAJ
+				is_neighbor_of = FROM
+			}
+		}
+		# target_root_trigger = {
+		# 	has_war_with = FROM
+		# }
+		target_trigger = {
+			FROM = {
+				tag = ENG
+			}
+		}
+		fire_only_once = yes
+		ai_will_do = {
+			factor = 500
+			modifier = {
+				factor = 0
+				surrender_progress < 0.30
+			}
+		}
+		complete_effect = {
+			white_peace = FROM
+			set_country_flag = protectorate
+			get_current_government_type = yes
+			FROM = {
+				set_autonomy = {
+					target = AFG
+					autonomy_state = autonomy_tgwr_informal_protectorate
+					freedom_level = 0.2
+				}
+			}
+			restore_previous_government_type = yes
+		}
+	}
+}

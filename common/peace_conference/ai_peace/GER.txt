@@ -1,0 +1,62 @@
+# Scripted AI desire for peace actions.
+# See documentation.info file for more detailed scripting information.
+
+peace_ai_desires = {
+	germany_puppet_possible_subjects = {
+		peace_action_type = puppet
+		enable = {
+			FROM.FROM.FROM = {
+				OR = {
+					is_core_of = POL
+					is_core_of = UBD
+					is_core_of = COU
+					is_core_of = LIT
+					is_core_of = LAT
+					is_core_of = EST
+					is_core_of = FIN
+					is_core_of = GEO
+					is_core_of = ARM
+					is_core_of = AZR
+					is_core_of = UKR
+					is_core_of = BLR
+					is_core_of = DEN
+					is_core_of = SWE
+					is_core_of = NOR
+					is_core_of = SWI
+					is_core_of = BEL
+					is_core_of = HOL
+					is_core_of = FRA
+				}
+			}
+			ROOT = {
+				original_tag = GER
+			}
+		}
+		ai_desire = 75
+	}
+	germany_annex_deutschland = {
+		peace_action_type = take_states
+		enable = {
+			FROM.FROM.FROM = {
+				is_german_core = yes
+			}
+			ROOT = {
+				original_tag = GER
+			}
+		}
+		ai_desire = 75
+	}
+	holy_roman_empire_with_the_papal_states = {
+		peace_action_type = puppet
+		enable = {
+			FROM.FROM.FROM = {
+				is_core_of = PAP
+			}
+			ROOT = {
+				original_tag = GER
+				has_cosmetic_tag = HRE
+			}
+		}
+		ai_desire = 75
+	}
+}

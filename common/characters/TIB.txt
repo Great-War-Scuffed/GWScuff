@@ -1,0 +1,159 @@
+characters={
+	TIB_dalai_lama_thubten_gyatso={
+		name=TIB_dalai_lama_thubten_gyatso
+		portraits={
+			civilian={
+				large="gfx/leaders/TIB/TIB_dalai_lama_thubten_gyatso.png"
+			}
+		}
+		country_leader={
+			ideology=theocracy_ideology
+			traits = {
+				thirteenth_dalai_lama
+			}
+		}
+	}
+	TIB_jamphel_yeshe_gyaltsen={
+		name=TIB_jamphel_yeshe_gyaltsen
+		portraits={
+			civilian={
+				large=GFX_portrait_Jamphel_Yeshe_Gyaltsen
+			}
+		}
+		country_leader={
+			ideology=theocracy_ideology
+			traits = {
+				ICE_the_strict_regent
+			}
+		}
+	}
+	TIB_tsarong_dasang_dramdul={
+		name=TIB_tsarong_dasang_dramdul
+		portraits={
+			army={
+				large="gfx/leaders/TIB/TIB_Tsarong_Dasang_Dramdul.png"
+				small="gfx/interface/ideas/TIB/idea_TIB_Tsarong_Dasang_Dramdul.png"
+			}
+			civilian = {
+				small="gfx/interface/ideas/TIB/idea_TIB_Tsarong_Dasang_Dramdul_civil.png"
+			}
+		}
+		advisor = {
+			slot = political_advisor
+			idea_token = TIB_tsarong_dasang_dramdul
+			allowed = {
+				original_tag = TIB
+			}
+			available = {
+				has_country_leader = {
+					character = TIB_dalai_lama_thubten_gyatso
+				}
+			}
+			traits = { silent_workhorse }
+		}
+		advisor = {
+			slot = army_chief
+			idea_token = TIB_tsarong_dasang_dramdul_army_chief
+			allowed = {
+				original_tag = TIB
+			}
+			traits = { army_chief_organizational_1 }
+			cost = 50
+		}
+		country_leader={
+			ideology=conservatism
+		}
+		country_leader={
+			ideology=stratocracy
+		}
+		field_marshal = {
+			traits = { inspirational_leader }
+			skill = 2
+			attack_skill = 1
+			defense_skill = 3
+			planning_skill = 1
+			logistics_skill = 2
+		}
+	}
+	TIB_dingja_dorje_gyaltsen={
+		name=TIB_dingja_dorje_gyaltsen
+		portraits={
+			civilian = {
+				large="gfx/leaders/Asia/portrait_asia_generic_land_6.dds"
+				small="gfx/interface/ideas/idea_asia_generic_land_6.dds"
+			}
+		}
+		advisor = {
+			slot = political_advisor
+			idea_token = TIB_tsarong_dasang_dramdul
+			allowed = {
+				original_tag = TIB
+			}
+			traits = { compassionate_gentleman }
+		}
+	}
+	TIB_kalon_lama={
+		name=TIB_kalon_lama
+		portraits={
+			army={
+				large="gfx/leaders/Asia/portrait_asia_generic_land_7.dds"
+				small="gfx/interface/ideas/idea_asia_generic_land_7.dds"
+			}
+		}
+		corps_commander={
+			skill=1
+			attack_skill=1
+			defense_skill=1
+			planning_skill=1
+			logistics_skill=1
+		}
+	}
+	TIB_khyungram_theji={
+		name=TIB_khyungram_theji
+		portraits={
+			army={
+				large="gfx/leaders/Asia/portrait_asia_generic_land_10.dds"
+				small="gfx/interface/ideas/idea_asia_generic_land_10.dds"
+			}
+		}
+		corps_commander={
+			skill=1
+			attack_skill=1
+			defense_skill=1
+			planning_skill=1
+			logistics_skill=1
+		}
+	}
+	TIB_miru_gyalwa={
+		name=TIB_miru_gyalwa
+		portraits={
+			army={
+				large="gfx/leaders/Asia/portrait_asia_generic_land_13.dds"
+				small="gfx/interface/ideas/idea_asia_generic_land_13.dds"
+			}
+		}
+		corps_commander={
+			skill=1
+			attack_skill=1
+			defense_skill=1
+			planning_skill=1
+			logistics_skill=1
+		}
+	}
+	TIB_tsewang_namse={
+		name=TIB_tsewang_namse
+		portraits={
+			army={
+				large="gfx/leaders/Asia/Portrait_Asia_Generic_land_2.dds"
+				small="gfx/interface/ideas/idea_asia_generic_land_2.dds"
+			}
+		}
+		corps_commander={
+			skill=1
+			attack_skill=1
+			defense_skill=1
+			planning_skill=1
+			logistics_skill=1
+		}
+	}
+}

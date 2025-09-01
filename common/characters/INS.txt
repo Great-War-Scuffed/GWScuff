@@ -1,0 +1,59 @@
+characters={
+	INS_a_w_frederik_idenburg={
+		name="INS_a_w_frederik_idenburg"
+		portraits={
+			civilian={
+				large="gfx/leaders/INS/INS_frederik_idenburg.png"
+			}
+			army={
+				small="GFX_idea_generic_army_chief_off_western_european_2d"
+				large="gfx/leaders/INS/INS_frederik_idenburg.png"
+			}
+		}
+		country_leader={
+			ideology=colonial_government
+			traits = {
+				INS_committed_christian
+			}
+		}
+		field_marshal={
+			traits={ trait_cautious politically_connected logistics_wizard }
+			skill=2
+			attack_skill=1
+			defense_skill=2
+			planning_skill=1
+			logistics_skill=2
+		}
+	}
+	INS_frits_van_daalen={
+		name="INS_frits_van_daalen"
+		portraits={
+			army={
+				small="gfx/interface/ideas/idea_europe_generic_land_1.dds"
+			}
+			army={
+				large="gfx/leaders/INS/INS_Frits_van_Daleen.png"
+			}
+		}
+		corps_commander={
+			traits={ trait_reckless harsh_leader logistics_wizard }
+			skill=3
+			attack_skill=3
+			defense_skill=1
+			planning_skill=3
+			logistics_skill=2
+			
+		}
+	}
+	INS_volksraad = {
+		name = INS_volksraad
+		portraits = {
+			civilian = {
+				large = "gfx/leaders/INS/INS_volksraad.png"
+			}
+		}
+		country_leader = {
+			ideology = conservatism
+		}
+	}
+}

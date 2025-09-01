@@ -1,0 +1,17 @@
+# Scripted AI desire for peace actions.
+# See documentation.info file for more detailed scripting information.
+
+peace_ai_desires = {
+	nejd_annex_arabia = {
+		peace_action_type = take_states
+		enable = {
+			FROM.FROM.FROM = {
+				is_arabian_peninsula_core = yes
+			}
+			ROOT = {
+				original_tag = SAU
+			}
+		}
+		ai_desire = 75
+	}
+}

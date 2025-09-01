@@ -1,0 +1,31 @@
+
+characters={
+	MLI_ag_mohammed_kaocen={
+		name=MLI_ag_mohammed_kaocen
+		portraits={
+			civilian={
+				large="gfx/leaders/Africa/Portrait_Africa_Generic_land_1.dds"
+			}
+		}
+		country_leader={
+			ideology=theocracy_ideology
+		}
+		country_leader={
+			ideology=fundamentalism
+		}
+	}
+	MLI_dasa_marka={
+		name=MLI_dasa_marka
+		portraits={
+			civilian={
+				large="gfx/leaders/Africa/Portrait_Africa_Generic_land_1.dds"
+			}
+		}
+		country_leader={
+			ideology=theocracy_ideology
+		}
+		country_leader={
+			ideology=fundamentalism
+		}
+	}
+}

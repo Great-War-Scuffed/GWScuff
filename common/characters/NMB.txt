@@ -1,0 +1,26 @@
+characters={
+	NMB_theodor_seitz={
+		name=RNA_theodor_seitz
+		portraits={
+			civilian={
+				large = GFX_portrait_GER_theodor_seitz
+				small = GFX_portrait_GER_theodor_seitz_small
+			}
+		}
+		country_leader={
+			ideology=colonial_government
+			traits={ german_agent foreign_leader }
+		}
+	}
+	NMB_samuel_maharero={
+		name=NMB_samuel_maharero
+		portraits={
+			civilian={
+				large="gfx/leaders/NMB/NMB_Samuel_Maharero.png"
+			}
+		}
+		country_leader={
+			ideology=agrarianism
+		}
+	}
+}

@@ -1,0 +1,960 @@
+﻿# Division template historical names system. Is a new method of naming the divisions based on the names-group assigned to it's template.
+# If we run out of all historical names, the names will be assigned in the old way.
+#
+# Each group has a made up tag. Use it if you want to append more, or replace existing names with the extra txt files (modding).
+#
+# for_countries - lists all countries that can use it. If empty, or entire tag is missing, all countries in the world can use it.
+#
+# can_use - is a trigger that locks/unlocks the group under specific circumstances. The trigger is in a country scope.
+#
+# division_types - is a list of tokens to corresponding unit types. A player can in fact use any group of names for a div.template
+#                  however this tag is a helper for an automated choice (for AI, or if the group must switch on it's own, because
+#                  for example the current one is no longer available due to the can_use trigger saying so).
+#                  In automated choice, the division template must have at least 1 of the following types for it to be chosen.
+#
+# fallback_name - Is going to be used if we run out of the scripted historical names. If you want to use the old division naming
+#                 mechanics to be used for fallbacks, then just skip this option.
+#
+# unordered - It's a list of historical division names that did not have a number. Regardless if such names happened in history or not
+#             this option is available here mainly for a mods.
+#
+# ordered - Is a list of all historical names. 
+#           Numbers must start from 1 and up. 
+#           Numbers can't repeat in one scope.
+#           If you script the name for this group, at the same number (for example in a mod in another file), the name will be override.
+#           All arguments between the brackets must be separated by spaces. Each argument is wrapped in "quotas".
+#           1st argument = The name. It must contain either: 
+#                          %d (for decimal number placement)
+#                          %s (for string number placement - ROMAN numbers like XIV).
+#           2nd argument is optional = A localizable text describing this historical division. The text will be visible in the tooltip
+#                                      where you choose the historical division name.
+#           3rd argument is optional = An URL preferably pointing to the WIKI. It's a future feature that is not currently working in
+#                                      the current game version.
+SOV_INF_01 = 
+{
+	name = "Rifle Division"
+
+	for_countries = { RUS }
+
+	can_use = { OR = { has_country_leader_ideology = revolutionary_socialism has_country_leader_ideology = vanguardism } }
+
+	division_types = { "infantry" }
+
+	# Number reservation system will tie to another group.
+	#link_numbering_with = { SOV_INF_01 }
+
+	fallback_name = "%d-ya Strelkovaya Diviziya"
+
+	# Names with numbers (only one number per entry). 
+	# It's okay to have gaps in numbering.
+	ordered =
+	{
+		5 = { "%d-ya 'Vitebskaya' Strelk. Div." }
+		6 = { "%d-ya 'Orlovskaya' Strelk. Div." }
+		7 = { "%d-ya 'Chernigovskaya' Strelk. Div." }
+		8 = { "%d-ya 'Minskaya' Strelk. Div." }
+		16 = { "%d-ya 'Ul'yanovskaya' Strelk. Div." }
+		18 = { "%d-ya Strelkovaya Diviziya" }
+		21 = { "%d-ya 'Permskaya' Strelk. Div." }
+		22 = { "%d-ya 'Krasnodarskaya' Strelk. Div." }
+		23 = { "%d-ya 'Har'kovskaya' Strelk. Div." }
+		24 = { "%d-ya 'Samaro-Ul'yanov.' Strelk. Div." }
+		38 = { "%d-ya Strelkovaya Diviziya" }
+		49 = { "%d-ya Strelkovaya Diviziya" }
+		51 = { "%d-ya 'Perekopskaya' Strelk. Div." }
+		2 = { "%d-ya 'Belorusskaya' Strelk. Div." }
+		15 = { "%d-ya 'Sivashskaya' Strelk. Div." }
+		31 = { "%d-ya 'Stalingradskaya' Strelk. Div." }
+		37 = { "%d-ya Strelkovaya Diviziya" }
+		56 = { "%d-ya 'Moskva' Strelk. Div." }
+		57 = { "%d-ya 'Ural'skaya' Strelk. Div." }
+		17 = { "%d-ya 'Gor'kovskaya' Strelk. Div." }
+		27 = { "%d-ya 'Omskaya' Strelk. Div." }
+		29 = { "%d-ya 'Sibirskaya' Strelk. Div." }
+		33 = { "%d-ya 'Belorusskaya' Strelk. Div." }
+		48 = { "%d-ya ''Kashino-Tverskaya' Strelk. Div." }
+		3 = { "%d-ya 'Tihookeanskaya' Strelk. Div." }
+		4 = { "%d-ya 'Smolenskaya' Strelk. Div." }
+		74 = { "%d-ya 'Tamanskaya' Strelk. Div." }
+		10 = { "%d-ya 'Severnogo Kraya' Strelk. Div." }
+		13 = { "%d-ya 'Dagestanskaya' Strelk. Div." }
+		14 = { "%d-ya 'Krivorozhskaya' Strelk. Div." }
+		19 = { "%d-ya 'Voronezhskaya' Strelk. Div." }
+		39 = { "%d-ya 'Tihookeanskaya' Strelk. Div." }
+		12 = { "%d-ya 'Amur' Strelk. Div." }
+		46 = { "%d-ya 'Dnepropetrovskaya' Strelk. Div." }
+		80 = { "%d-ya 'Donbassa' Strelk. Div." }
+		81 = { "%d-ya Strelkovaya Diviziya" }
+		84 = { "%d-ya 'Tul'skogo' Strelk. Div." }
+		95 = { "%d-ya 'Moldavskaya' Strelk. Div." }
+		1 = { "%d-ya 'Moskva Proletarskaya' Motostrelk. Div." }
+		43 = { "%d-ya Strelkovaya Diviziya" }
+		99 = { "%d-ya Strelkovaya Diviziya" }
+		100 = { "%d-ya Strelkovaya Diviziya" }
+		25 = { "%d-ya 'Chapaevskaya' Strelk. Div." }
+		40 = { "%d-ya 'Bogucharskaya' Strelk. Div." }
+		41 = { "%d-ya Strelkovaya Diviziya" }
+		55 = { "%d-ya 'Kurskaya' Strelk. Div." }
+		62 = { "%d-ya 'Turkestanskaya' Strelk. Div." }
+		75 = { "%d-ya Strelkovaya Diviziya" }
+		53 = { "%d-ya Strelkovaya Diviziya" }
+		65 = { "%d-ya Strelkovaya Diviziya" }
+		85 = { "%d-ya Strelkovaya Diviziya" }
+		59 = { "%d-ya Strelkovaya Diviziya" }
+		66 = { "%d-ya Strelkovaya Diviziya" }
+		69 = { "%d-ya Strelkovaya Diviziya" }
+		78 = { "%d-ya Strelkovaya Diviziya" }
+		82 = { "%d-ya Motostrelkovaya Diviziya" }
+		94 = { "%d-ya Strelkovaya Diviziya" }
+		61 = { "%d-ya 'Turkestanskaya' Strelk. Div." }
+		32 = { "%d-ya 'Saratovskaya' Strelk. Div." }
+		34 = { "%d-ya 'Srednevolzhskaya' Strelk. Div." }
+		35 = { "%d-ya 'Sibirskaya' Strelk. Div." }
+		36 = { "%d-ya 'Zabajkal'skaya'Strelk. Div." }
+		70 = { "%d-ya Strelkovaya Diviziya" }
+		71 = { "%d-ya Strelkovaya Diviziya" }
+		54 = { "%d-ya Strelkovaya Diviziya" }
+		64 = { "%d-ya Strelkovaya Diviziya" }
+		73 = { "%d-ya Strelkovaya Diviziya" }
+		26 = { "%d-ya 'Zlatoustovskaya' Strelk. Div." }
+		52 = { "%d-ya Strelkovaya Diviziya" }
+		87 = { "%d-ya Strelkovaya Diviziya" }
+		11 = { "%d-ya Strelkovaya Diviziya" }
+		45 = { "%d-ya 'Volynskaya' Strelk. Div." }
+		97 = { "%d-ya Strelkovaya Diviziya" }
+		98 = { "%d-ya Strelkovaya Diviziya" }
+		108 = { "%d-ya Strelkovaya Diviziya" }
+		116 = { "%d-ya Strelkovaya Diviziya" }
+		111 = { "%d-ya Strelkovaya Diviziya" }
+		67 = { "%d-ya Strelkovaya Diviziya" }
+		93 = { "%d-ya 'Vostochno-Sibir.' Strelk. Div." }
+		92 = { "%d-ya Strelkovaya Diviziya" }
+		50 = { "%d-ya 'Tamanskaya' Strelk. Div." }
+		105 = { "%d-ya Strelkovaya Diviziya" }
+		86 = { "%d-ya 'Kazanskaya' Strelk. Div." }
+		90 = { "%d-ya Strelkovaya Diviziya" }
+		104 = { "%d-ya Strelkovaya Diviziya" }
+		118 = { "%d-ya Strelkovaya Diviziya" }
+		126 = { "%d-ya Strelkovaya Diviziya" }
+		127 = { "%d-ya Strelkovaya Diviziya" }
+		129 = { "%d-ya Strelkovaya Diviziya" }
+		130 = { "%d-ya Strelkovaya Diviziya" }
+		132 = { "%d-ya Strelkovaya Diviziya" }
+		133 = { "%d-ya Strelkovaya Diviziya" }
+		134 = { "%d-ya Strelkovaya Diviziya" }
+		135 = { "%d-ya Strelkovaya Diviziya" }
+		136 = { "%d-ya Strelkovaya Diviziya" }
+		137 = { "%d-ya Strelkovaya Diviziya" }
+		139 = { "%d-ya Strelkovaya Diviziya" }
+		140 = { "%d-ya Strelkovaya Diviziya" }
+		141 = { "%d-ya Strelkovaya Diviziya" }
+		142 = { "%d-ya Strelkovaya Diviziya" }
+		143 = { "%d-ya Strelkovaya Diviziya" }
+		144 = { "%d-ya Strelkovaya Diviziya" }
+		145 = { "%d-ya Strelkovaya Diviziya" }
+		146 = { "%d-ya Strelkovaya Diviziya" }
+		148 = { "%d-ya Strelkovaya Diviziya" }
+		149 = { "%d-ya Strelkovaya Diviziya" }
+		150 = { "%d-ya Strelkovaya Diviziya" }
+		151 = { "%d-ya Strelkovaya Diviziya" }
+		152 = { "%d-ya Strelkovaya Diviziya" }
+		155 = { "%d-ya Strelkovaya Diviziya" }
+		156 = { "%d-ya Strelkovaya Diviziya" }
+		157 = { "%d-ya Strelkovaya Diviziya" }
+		158 = { "%d-ya Strelkovaya Diviziya" }
+		159 = { "%d-ya Strelkovaya Diviziya" }
+		160 = { "%d-ya Strelkovaya Diviziya" }
+		162 = { "%d-ya Strelkovaya Diviziya" }
+		164 = { "%d-ya Strelkovaya Diviziya" }
+		166 = { "%d-ya Strelkovaya Diviziya" }
+		168 = { "%d-ya Strelkovaya Diviziya" }
+		169 = { "%d-ya Strelkovaya Diviziya" }
+		170 = { "%d-ya Strelkovaya Diviziya" }
+		171 = { "%d-ya Strelkovaya Diviziya" }
+		172 = { "%d-ya Strelkovaya Diviziya" }
+		173 = { "%d-ya Strelkovaya Diviziya" }
+		176 = { "%d-ya Strelkovaya Diviziya" }
+		178 = { "%d-ya Strelkovaya Diviziya" }
+		180 = { "%d-ya Strelkovaya Diviziya" }
+		182 = { "%d-ya Strelkovaya Diviziya" }
+		186 = { "%d-ya Strelkovaya Diviziya" }
+		187 = { "%d-ya Strelkovaya Diviziya" }
+		114 = { "%d-ya Strelkovaya Diviziya" }
+		120 = { "%d-ya Strelkovaya Diviziya" }
+		91 = { "%d-ya Strelkovaya Diviziya" }
+		102 = { "%d-ya Strelkovaya Diviziya" }
+		107 = { "%d-ya Strelkovaya Diviziya" }
+		115 = { "%d-ya Strelkovaya Diviziya" }
+		117 = { "%d-ya Strelkovaya Diviziya" }
+		119 = { "%d-ya Strelkovaya Diviziya" }
+		121 = { "%d-ya Strelkovaya Diviziya" }
+		123 = { "%d-ya Strelkovaya Diviziya" }
+		124 = { "%d-ya Strelkovaya Diviziya" }
+		125 = { "%d-ya Strelkovaya Diviziya" }
+		88 = { "%d-ya Strelkovaya Diviziya" }
+		89 = { "%d-ya Strelkovaya Diviziya" }
+		110 = { "%d-ya Strelkovaya Diviziya" }
+		112 = { "%d-ya Strelkovaya Diviziya" }
+		113 = { "%d-ya Strelkovaya Diviziya" }
+		122 = { "%d-ya Strelkovaya Diviziya" }
+		42 = { "%d-ya Strelkovaya Diviziya" }
+		106 = { "%d-ya Strelkovaya Diviziya" }
+		128 = { "%d-ya Strelkovaya Diviziya" }
+		153 = { "%d-ya Strelkovaya Diviziya" }
+		154 = { "%d-ya Strelkovaya Diviziya" }
+		161 = { "%d-ya Strelkovaya Diviziya" }
+		165 = { "%d-ya Strelkovaya Diviziya" }
+		167 = { "%d-ya Strelkovaya Diviziya" }
+		174 = { "%d-ya Strelkovaya Diviziya" }
+		175 = { "%d-ya Strelkovaya Diviziya" }
+		177 = { "%d-ya Strelkovaya Diviziya" }
+		179 = { "%d-ya Strelkovaya Diviziya" }
+		181 = { "%d-ya Strelkovaya Diviziya" }
+		183 = { "%d-ya Strelkovaya Diviziya" }
+		184 = { "%d-ya Strelkovaya Diviziya" }
+		188 = { "%d-ya Strelkovaya Diviziya" }
+		189 = { "%d-ya Strelkovaya Diviziya" }
+		190 = { "%d-ya Strelkovaya Diviziya" }
+		191 = { "%d-ya Strelkovaya Diviziya" }
+		193 = { "%d-ya Strelkovaya Diviziya" }
+		195 = { "%d-ya Strelkovaya Diviziya" }
+		196 = { "%d-ya 'Dnepropetrov.' Strelk. Div." }
+		197 = { "%d-ya 'Kievskaya' Strelk. Div." }
+		199 = { "%d-ya Strelkovaya Diviziya" }
+		200 = { "%d-ya Strelkovaya Diviziya" }
+		206 = { "%d-ya Strelkovaya Diviziya" }
+		214 = { "%d-ya Strelkovaya Diviziya" }
+		217 = { "%d-ya Strelkovaya Diviziya" }
+		222 = { "%d-ya Strelkovaya Diviziya" }
+		227 = { "%d-ya Strelkovaya Diviziya" }
+		228 = { "%d-ya Strelkovaya Diviziya" }
+		229 = { "%d-ya Strelkovaya Diviziya" }
+		232 = { "%d-ya Strelkovaya Diviziya" }
+		233 = { "%d-ya Strelkovaya Diviziya" }
+		235 = { "%d-ya Strelkovaya Diviziya" }
+		237 = { "%d-ya Strelkovaya Diviziya" }
+		238 = { "%d-ya Strelkovaya Diviziya" }
+		201 = { "%d-ya Strelkovaya Diviziya" }
+		203 = { "%d-ya Strelkovaya Diviziya" }
+		207 = { "%d-ya Strelkovaya Diviziya" }
+		211 = { "%d-ya Strelkovaya Diviziya" }
+		223 = { "%d-ya Strelkovaya Diviziya" }
+		224 = { "%d-ya Strelkovaya Diviziya" }
+		225 = { "%d-ya Strelkovaya Diviziya" }
+		226 = { "%d-ya Strelkovaya Diviziya" }
+		230 = { "%d-ya Strelkovaya Diviziya" }
+		231 = { "%d-ya Strelkovaya Diviziya" }
+		234 = { "%d-ya Strelkovaya Diviziya" }
+		241 = { "%d-ya Strelkovaya Diviziya" }
+		243 = { "%d-ya Strelkovaya Diviziya" }
+		244 = { "%d-ya Strelkovaya Diviziya" }
+		245 = { "%d-ya Strelkovaya Diviziya" }
+		246 = { "%d-ya Strelkovaya Diviziya" }
+		247 = { "%d-ya Strelkovaya Diviziya" }
+		248 = { "%d-ya Strelkovaya Diviziya" }
+		249 = { "%d-ya Strelkovaya Diviziya" }
+		250 = { "%d-ya Strelkovaya Diviziya" }
+		251 = { "%d-ya Strelkovaya Diviziya" }
+		252 = { "%d-ya Strelkovaya Diviziya" }
+		253 = { "%d-ya Strelkovaya Diviziya" }
+		254 = { "%d-ya Strelkovaya Diviziya" }
+		255 = { "%d-ya Strelkovaya Diviziya" }
+		256 = { "%d-ya Strelkovaya Diviziya" }
+		257 = { "%d-ya Strelkovaya Diviziya" }
+		258 = { "%d-ya Strelkovaya Diviziya" }
+		259 = { "%d-ya Strelkovaya Diviziya" }
+		260 = { "%d-ya Strelkovaya Diviziya" }
+		261 = { "%d-ya Strelkovaya Diviziya" }
+		262 = { "%d-ya Strelkovaya Diviziya" }
+		263 = { "%d-ya Strelkovaya Diviziya" }
+		264 = { "%d-ya Strelkovaya Diviziya" }
+		265 = { "%d-ya Strelkovaya Diviziya" }
+		266 = { "%d-ya Strelkovaya Diviziya" }
+		267 = { "%d-ya Strelkovaya Diviziya" }
+		268 = { "%d-ya Strelkovaya Diviziya" }
+		269 = { "%d-ya Strelkovaya Diviziya" }
+		270 = { "%d-ya Strelkovaya Diviziya" }
+		271 = { "%d-ya Strelkovaya Diviziya" }
+		272 = { "%d-ya Strelkovaya Diviziya" }
+		273 = { "%d-ya Strelkovaya Diviziya" }
+		274 = { "%d-ya Strelkovaya Diviziya" }
+		275 = { "%d-ya Strelkovaya Diviziya" }
+		276 = { "%d-ya Strelkovaya Diviziya" }
+		277 = { "%d-ya Strelkovaya Diviziya" }
+		278 = { "%d-ya Strelkovaya Diviziya" }
+		279 = { "%d-ya Strelkovaya Diviziya" }
+		280 = { "%d-ya Strelkovaya Diviziya" }
+		281 = { "%d-ya Strelkovaya Diviziya" }
+		282 = { "%d-ya Strelkovaya Diviziya" }
+		283 = { "%d-ya Strelkovaya Diviziya" }
+		284 = { "%d-ya Strelkovaya Diviziya" }
+		285 = { "%d-ya Strelkovaya Diviziya" }
+		286 = { "%d-ya Strelkovaya Diviziya" }
+		287 = { "%d-ya Strelkovaya Diviziya" }
+		288 = { "%d-ya Strelkovaya Diviziya" }
+		289 = { "%d-ya Strelkovaya Diviziya" }
+		290 = { "%d-ya Strelkovaya Diviziya" }
+		291 = { "%d-ya Strelkovaya Diviziya" }
+		292 = { "%d-ya Strelkovaya Diviziya" }
+		293 = { "%d-ya Strelkovaya Diviziya" }
+		294 = { "%d-ya Strelkovaya Diviziya" }
+		295 = { "%d-ya Strelkovaya Diviziya" }
+		296 = { "%d-ya Strelkovaya Diviziya" }
+		297 = { "%d-ya Strelkovaya Diviziya" }
+		298 = { "%d-ya Strelkovaya Diviziya" }
+		299 = { "%d-ya Strelkovaya Diviziya" }
+		300 = { "%d-ya Strelkovaya Diviziya" }
+		301 = { "%d-ya Strelkovaya Diviziya" }
+		303 = { "%d-ya Strelkovaya Diviziya" }
+		304 = { "%d-ya Strelkovaya Diviziya" }
+		305 = { "%d-ya Strelkovaya Diviziya" }
+		306 = { "%d-ya Strelkovaya Diviziya" }
+		307 = { "%d-ya Strelkovaya Diviziya" }
+		308 = { "%d-ya Strelkovaya Diviziya" }
+		310 = { "%d-ya Strelkovaya Diviziya" }
+		311 = { "%d-ya Strelkovaya Diviziya" }
+		312 = { "%d-ya Strelkovaya Diviziya" }
+		313 = { "%d-ya Strelkovaya Diviziya" }
+		314 = { "%d-ya Strelkovaya Diviziya" }
+		315 = { "%d-ya Strelkovaya Diviziya" }
+		316 = { "%d-ya Strelkovaya Diviziya" }
+		317 = { "%d-ya Strelkovaya Diviziya" }
+		318 = { "%d-ya Strelkovaya Diviziya" }
+		319 = { "%d-ya Strelkovaya Diviziya" }
+		320 = { "%d-ya Strelkovaya Diviziya" }
+		321 = { "%d-ya Strelkovaya Diviziya" }
+		322 = { "%d-ya Strelkovaya Diviziya" }
+		323 = { "%d-ya Strelkovaya Diviziya" }
+		324 = { "%d-ya Strelkovaya Diviziya" }
+		325 = { "%d-ya Strelkovaya Diviziya" }
+		326 = { "%d-ya Strelkovaya Diviziya" }
+		327 = { "%d-ya Strelkovaya Diviziya" }
+		328 = { "%d-ya Strelkovaya Diviziya" }
+		329 = { "%d-ya Strelkovaya Diviziya" }
+		330 = { "%d-ya Strelkovaya Diviziya" }
+		332 = { "%d-ya Strelkovaya Diviziya" }
+		333 = { "%d-ya Strelkovaya Diviziya" }
+		334 = { "%d-ya Strelkovaya Diviziya" }
+		335 = { "%d-ya Strelkovaya Diviziya" }
+		336 = { "%d-ya Strelkovaya Diviziya" }
+		337 = { "%d-ya Strelkovaya Diviziya" }
+		339 = { "%d-ya Strelkovaya Diviziya" }
+		340 = { "%d-ya Strelkovaya Diviziya" }
+		341 = { "%d-ya Strelkovaya Diviziya" }
+		342 = { "%d-ya Strelkovaya Diviziya" }
+		343 = { "%d-ya Strelkovaya Diviziya" }
+		344 = { "%d-ya Strelkovaya Diviziya" }
+		345 = { "%d-ya Strelkovaya Diviziya" }
+		346 = { "%d-ya Strelkovaya Diviziya" }
+		348 = { "%d-ya Strelkovaya Diviziya" }
+		349 = { "%d-ya Strelkovaya Diviziya" }
+		350 = { "%d-ya Strelkovaya Diviziya" }
+		351 = { "%d-ya Strelkovaya Diviziya" }
+		352 = { "%d-ya Strelkovaya Diviziya" }
+		353 = { "%d-ya Strelkovaya Diviziya" }
+		354 = { "%d-ya Strelkovaya Diviziya" }
+		355 = { "%d-ya Strelkovaya Diviziya" }
+		356 = { "%d-ya Strelkovaya Diviziya" }
+		357 = { "%d-ya Strelkovaya Diviziya" }
+		358 = { "%d-ya Strelkovaya Diviziya" }
+		359 = { "%d-ya Strelkovaya Diviziya" }
+		360 = { "%d-ya Strelkovaya Diviziya" }
+		361 = { "%d-ya Strelkovaya Diviziya" }
+		362 = { "%d-ya Strelkovaya Diviziya" }
+		364 = { "%d-ya Strelkovaya Diviziya" }
+		365 = { "%d-ya Strelkovaya Diviziya" }
+		366 = { "%d-ya Strelkovaya Diviziya" }
+		367 = { "%d-ya Strelkovaya Diviziya" }
+		368 = { "%d-ya Strelkovaya Diviziya" }
+		369 = { "%d-ya Strelkovaya Diviziya" }
+		370 = { "%d-ya Strelkovaya Diviziya" }
+		371 = { "%d-ya Strelkovaya Diviziya" }
+		372 = { "%d-ya Strelkovaya Diviziya" }
+		373 = { "%d-ya Strelkovaya Diviziya" }
+		374 = { "%d-ya Strelkovaya Diviziya" }
+		375 = { "%d-ya Strelkovaya Diviziya" }
+		376 = { "%d-ya Strelkovaya Diviziya" }
+		377 = { "%d-ya Strelkovaya Diviziya" }
+		378 = { "%d-ya Strelkovaya Diviziya" }
+		379 = { "%d-ya Strelkovaya Diviziya" }
+		380 = { "%d-ya Strelkovaya Diviziya" }
+		381 = { "%d-ya Strelkovaya Diviziya" }
+		382 = { "%d-ya Strelkovaya Diviziya" }
+		383 = { "%d-ya Strelkovaya Diviziya" }
+		384 = { "%d-ya Strelkovaya Diviziya" }
+		386 = { "%d-ya Strelkovaya Diviziya" }
+		387 = { "%d-ya Strelkovaya Diviziya" }
+		388 = { "%d-ya Strelkovaya Diviziya" }
+		389 = { "%d-ya Strelkovaya Diviziya" }
+		390 = { "%d-ya Strelkovaya Diviziya" }
+		391 = { "%d-ya Strelkovaya Diviziya" }
+		393 = { "%d-ya Strelkovaya Diviziya" }
+		395 = { "%d-ya Strelkovaya Diviziya" }
+		396 = { "%d-ya Strelkovaya Diviziya" }
+		397 = { "%d-ya Strelkovaya Diviziya" }
+		399 = { "%d-ya Strelkovaya Diviziya" }
+		400 = { "%d-ya Strelkovaya Diviziya" }
+		402 = { "%d-ya Strelkovaya Diviziya" }
+		404 = { "%d-ya Strelkovaya Diviziya" }
+		405 = { "%d-ya Strelkovaya Diviziya" }
+		406 = { "%d-ya Strelkovaya Diviziya" }
+		407 = { "%d-ya Strelkovaya Diviziya" }
+		408 = { "%d-ya Strelkovaya Diviziya" }
+		409 = { "%d-ya Strelkovaya Diviziya" }
+		411 = { "%d-ya Strelkovaya Diviziya" }
+		412 = { "%d-ya Strelkovaya Diviziya" }
+		413 = { "%d-ya Strelkovaya Diviziya" }
+		414 = { "%d-ya Strelkovaya Diviziya" }
+		415 = { "%d-ya Strelkovaya Diviziya" }
+		416 = { "%d-ya Strelkovaya Diviziya" }
+		417 = { "%d-ya Strelkovaya Diviziya" }
+		422 = { "%d-ya Strelkovaya Diviziya" }
+		445 = { "%d-ya Strelkovaya Diviziya" }
+		410 = { "%d-ya Strelkovaya Diviziya" }
+		418 = { "%d-ya Strelkovaya Diviziya" }
+		419 = { "%d-ya Strelkovaya Diviziya" }
+		420 = { "%d-ya Strelkovaya Diviziya" }
+		421 = { "%d-ya Strelkovaya Diviziya" }
+		423 = { "%d-ya Strelkovaya Diviziya" }
+		424 = { "%d-ya Strelkovaya Diviziya" }
+		425 = { "%d-ya Strelkovaya Diviziya" }
+		426 = { "%d-ya Strelkovaya Diviziya" }
+		427 = { "%d-ya Strelkovaya Diviziya" }
+		428 = { "%d-ya Strelkovaya Diviziya" }
+		429 = { "%d-ya Strelkovaya Diviziya" }
+		430 = { "%d-ya Strelkovaya Diviziya" }
+		432 = { "%d-ya Strelkovaya Diviziya" }
+		433 = { "%d-ya Strelkovaya Diviziya" }
+		434 = { "%d-ya Strelkovaya Diviziya" }
+		435 = { "%d-ya Strelkovaya Diviziya" }
+		436 = { "%d-ya Strelkovaya Diviziya" }
+		437 = { "%d-ya Strelkovaya Diviziya" }
+		439 = { "%d-ya Strelkovaya Diviziya" }
+		440 = { "%d-ya Strelkovaya Diviziya" }
+		441 = { "%d-ya Strelkovaya Diviziya" }
+		442 = { "%d-ya Strelkovaya Diviziya" }
+		443 = { "%d-ya Strelkovaya Diviziya" }
+		444 = { "%d-ya Strelkovaya Diviziya" }
+		446 = { "%d-ya Strelkovaya Diviziya" }
+		448 = { "%d-ya Strelkovaya Diviziya" }
+		449 = { "%d-ya Strelkovaya Diviziya" }
+		450 = { "%d-ya Strelkovaya Diviziya" }
+		451 = { "%d-ya Strelkovaya Diviziya" }
+		452 = { "%d-ya Strelkovaya Diviziya" }
+		453 = { "%d-ya Strelkovaya Diviziya" }
+		454 = { "%d-ya Strelkovaya Diviziya" }
+		455 = { "%d-ya Strelkovaya Diviziya" }
+		456 = { "%d-ya Strelkovaya Diviziya" }
+		457 = { "%d-ya Strelkovaya Diviziya" }
+		458 = { "%d-ya Strelkovaya Diviziya" }
+		459 = { "%d-ya Strelkovaya Diviziya" }
+		460 = { "%d-ya Strelkovaya Diviziya" }
+		461 = { "%d-ya Strelkovaya Diviziya" }
+		462 = { "%d-ya Strelkovaya Diviziya" }
+		464 = { "%d-ya Strelkovaya Diviziya" }
+		465 = { "%d-ya Strelkovaya Diviziya" }
+		466 = { "%d-ya Strelkovaya Diviziya" }
+		467 = { "%d-ya Strelkovaya Diviziya" }
+		468 = { "%d-ya Strelkovaya Diviziya" }
+		469 = { "%d-ya Strelkovaya Diviziya" }
+		470 = { "%d-ya Strelkovaya Diviziya" }
+		471 = { "%d-ya Strelkovaya Diviziya" }
+		472 = { "%d-ya Strelkovaya Diviziya" }
+		473 = { "%d-ya Strelkovaya Diviziya" }
+		474 = { "%d-ya Strelkovaya Diviziya" }
+	}
+}
+
+SOV_CAV_01 = 
+{
+	name = "Cavalry Division"
+
+	for_countries = { RUS }
+
+	can_use = { OR = { has_country_leader_ideology = revolutionary_socialism has_country_leader_ideology = vanguardism } }
+
+	division_types = { "cavalry" }
+
+	# Number reservation system will tie to another group.
+	#link_numbering_with = { SOV_INF_01 }
+
+	fallback_name = "%d-ya Kavaleriyskaya Diviziya"
+
+	# Names with numbers (only one number per entry). 
+	# It's okay to have gaps in numbering.
+	ordered =
+	{
+		1 = { "%d-ya 'Chernigov' Kav. Div." }
+		3 = { "%d-ya 'Bessarabskaya' Kav. Div." }
+		4 = { "%d-ya Kavaleriyskaya Diviziya" }
+		5 = { "%d-ya 'Bleanov' Kav. Div." }
+		6 = { "%d-ya 'Chongarskaya' Kav. Div." }
+		7 = { "%d-ya Kavaleriyskaya Diviziya" }
+		8 = { "%d-ya 'Dal'nevostochnaya' Kav. Div." }
+		9 = { "%d-ya 'Krymskaya' Kav. Div." }
+		10 = { "%d-ya Kavaleriyskaya Diviziya" }
+		11 = { "%d-ya Kavaleriyskaya Diviziya" }
+		12 = { "%d-ya 'Kubanskaya' Kav. Div." }
+		13 = { "%d-ya 'Kubanskaya' Kav. Div." }
+		14 = { "%d-ya 'Bessarabskaya' Kav. Div." }
+		15 = { "%d-ya 'Donskaya' Kav. Div." }
+		16 = { "%d-ya Kavaleriyskaya Diviziya" }
+		17 = { "%d-ya Gorno-Kavaleriyskaya Diviziya" }
+		18 = { "%d-ya 'Turkestanskaya' Gorno-Kav. Div." }
+		19 = { "%d-ya Gorno-Kavaleriyskaya Diviziya" }
+		20 = { "%d-ya 'Tadzhikskaya' Gorno-Kav. Div." }
+		21 = { "%d-ya 'Ferganskaya' Gorno-Kav. Div." }
+		22 = { "%d-ya 'Krasnoznamennaya' Kav. Div." }
+		23 = { "%d-ya Kavaleriyskaya Diviziya" }
+		24 = { "%d-ya Kavaleriyskaya Diviziya" }
+		25 = { "%d-ya Kavaleriyskaya Diviziya" }
+		26 = { "%d-ya Kavaleriyskaya Diviziya" }
+		29 = { "%d-ya Kavaleriyskaya Diviziya" }
+		30 = { "%d-ya Legko-Kavaleriyskaya Diviziya" }
+		31 = { "%d-ya Kavaleriyskaya Diviziya" }
+		32 = { "%d-ya Kavaleriyskaya Diviziya" }
+		33 = { "%d-ya Gorno-Kavaleriyskaya Diviziya" }
+		34 = { "%d-ya Kavaleriyskaya Diviziya" }
+		36 = { "%d-ya 'Chongarskaya' Kav. Div." }
+		48 = { "%d-ya Kavaleriyskaya Diviziya" }
+		67 = { "%d-ya Kavaleriyskaya Diviziya" }
+		301 = { "1ya Gvds. Kavaleriyskaya Diviziya" }
+		302 = { "2ya Gvds. Kavaleriyskaya Diviziya" }
+		303 = { "3ya Gvds. Kavaleriyskaya Diviziya" }
+		304 = { "4ya Gvds. Kavaleriyskaya Diviziya" }
+		305 = { "5ya Gvds. Kavaleriyskaya Diviziya" }
+		306 = { "6ya Gvds. Kavaleriyskaya Diviziya" }
+		27 = { "%d-ya Kavaleriyskaya Diviziya" }
+		28 = { "%d-ya Kavaleriyskaya Diviziya" }
+		35 = { "%d-ya Kavaleriyskaya Diviziya" }
+		38 = { "%d-ya Kavaleriyskaya Diviziya" }
+		40 = { "%d-ya Kavaleriyskaya Diviziya" }
+		41 = { "%d-ya Legko-Kavaleriyskaya Diviziya" }
+		43 = { "%d-ya Kavaleriyskaya Diviziya" }
+		44 = { "%d-ya Kavaleriyskaya Diviziya" }
+		46 = { "%d-ya Kavaleriyskaya Diviziya" }
+		47 = { "%d-ya Kavaleriyskaya Diviziya" }
+		49 = { "%d-ya Kavaleriyskaya Diviziya" }
+		50 = { "%d-ya Kavaleriyskaya Diviziya" }
+		51 = { "%d-ya Kavaleriyskaya Diviziya" }
+		52 = { "%d-ya Kavaleriyskaya Diviziya" }
+		53 = { "%d-ya Kavaleriyskaya Diviziya" }
+		54 = { "%d-ya Kavaleriyskaya Diviziya" }
+		55 = { "%d-ya Kavaleriyskaya Diviziya" }
+		56 = { "%d-ya Kavaleriyskaya Diviziya" }
+		57 = { "%d-ya Legko-Kavaleriyskaya Diviziya" }
+		60 = { "%d-ya Kavaleriyskaya Diviziya" }
+		61 = { "%d-ya Kavaleriyskaya Diviziya" }
+		62 = { "%d-ya Kavaleriyskaya Diviziya" }
+		63 = { "%d-ya Kavaleriyskaya Diviziya" }
+		64 = { "%d-ya Kavaleriyskaya Diviziya" }
+		66 = { "%d-ya Kavaleriyskaya Diviziya" }
+		68 = { "%d-ya Kavaleriyskaya Diviziya" }
+		70 = { "%d-ya Kavaleriyskaya Diviziya" }
+		72 = { "%d-ya Kavaleriyskaya Diviziya" }
+		73 = { "%d-ya Kavaleriyskaya Diviziya" }
+		74 = { "%d-ya Kavaleriyskaya Diviziya" }
+		75 = { "%d-ya Legko-Kavaleriyskaya Diviziya" }
+		76 = { "%d-ya Kavaleriyskaya Diviziya" }
+		77 = { "%d-ya Kavaleriyskaya Diviziya" }
+		78 = { "%d-ya Kavaleriyskaya Diviziya" }
+		79 = { "%d-ya Kavaleriyskaya Diviziya" }
+		80 = { "%d-ya Kavaleriyskaya Diviziya" }
+		81 = { "%d-ya Kavaleriyskaya Diviziya" }
+		82 = { "%d-ya Kavaleriyskaya Diviziya" }
+		83 = { "%d-ya Gorno-Kavaleriyskaya Diviziya" }
+		87 = { "%d-ya Kavaleriyskaya Diviziya" }
+		91 = { "%d-ya Kavaleriyskaya Diviziya" }
+		94 = { "%d-ya Kavaleriyskaya Diviziya" }
+		97 = { "%d-ya Kavaleriyskaya Diviziya" }
+		98 = { "%d-ya Kavaleriyskaya Diviziya" }
+		99 = { "%d-ya Kavaleriyskaya Diviziya" }
+		100 = { "%d-ya Kavaleriyskaya Diviziya" }
+		101 = { "%d-ya Kavaleriyskaya Diviziya" }
+		102 = { "%d-ya Kavaleriyskaya Diviziya" }
+		103 = { "%d-ya Kavaleriyskaya Diviziya" }
+		104 = { "%d-ya Kavaleriyskaya Diviziya" }
+		105 = { "%d-ya Kavaleriyskaya Diviziya" }
+		106 = { "%d-ya Kavaleriyskaya Diviziya" }
+		107 = { "%d-ya Kavaleriyskaya Diviziya" }
+		108 = { "%d-ya Kavaleriyskaya Diviziya" }
+		109 = { "%d-ya Kavaleriyskaya Diviziya" }
+		110 = { "%d-ya Kavaleriyskaya Diviziya" }
+		111 = { "%d-ya Kavaleriyskaya Diviziya" }
+		112 = { "%d-ya Kavaleriyskaya Diviziya" }
+		113 = { "%d-ya Kavaleriyskaya Diviziya" }
+		114 = { "%d-ya Kavaleriyskaya Diviziya" }
+		115 = { "%d-ya Kavaleriyskaya Diviziya" }
+		116 = { "%d-ya Kavaleriyskaya Diviziya" }
+		307 = { "7ya Gvds. Kavaleriyskaya Diviziya" }
+		308 = { "8ya Gvds. Kavaleriyskaya Diviziya" }
+		309 = { "9ya Gvds. Kavaleriyskaya Diviziya" }
+		310 = { "10ya Gvds. Kavaleriyskaya Diviziya" }
+		311 = { "11ya Gvds. Kavaleriyskaya Diviziya" }
+		312 = { "12ya Gvds. Kavaleriyskaya Diviziya" }
+		313 = { "13ya Gvds. 'Rovenskaya' Kav. Div." }
+		314 = { "14ya Gvds. Kavaleriyskaya Diviziya" }
+		315 = { "15ya Gvds. Kavaleriyskaya Diviziya" }
+		316 = { "16ya Gvds. Kavaleriyskaya Diviziya" }
+		317 = { "17ya Gvds. 'Mozyr' Kavaleriyskaya Div." }
+		59 = { "%d-ya Kavaleriyskaya Diviziya" }
+		84 = { "%d-ya Kavaleriyskaya Diviziya" }
+	}
+}
+
+SOV_MOT_01 = 
+{
+	name = "Motor Rifle Division"
+
+	for_countries = { RUS }
+
+	can_use = { OR = { has_country_leader_ideology = revolutionary_socialism has_country_leader_ideology = vanguardism } }
+
+	division_types = { "motorized" }
+
+	# Number reservation system will tie to another group.
+	link_numbering_with = { SOV_INF_01 }
+
+	fallback_name = "%d-ya Motostrelkovaya Diviziya"
+
+	# Names with numbers (only one number per entry). 
+	# It's okay to have gaps in numbering.
+	ordered =
+	{
+		1 = { "%d-ya 'Moskva Proletarskaya' Motostrelk. Div." }
+		36 = { "%d-ya 'Zabajkal'skaya'Motostrelk. Div." }
+		57 = { "%d-ya 'Ural'skaya' Motostrelk. Div." }
+		15 = { "%d-ya 'Sivashskaya' Motostrelk. Div." }
+		81 = { "%d-ya Motostrelkovaya Diviziya" }
+		82 = { "%d-ya Motostrelkovaya Diviziya" }
+		84 = { "%d-ya Motostrelkovaya Diviziya" }
+		7 = { "%d-ya 'Chernigovskaya' Motostrelk. Div." }
+		29 = { "%d-ya 'Sibirskaya' Motostrelk. Div." }
+		69 = { "%d-ya Motostrelkovaya Diviziya" }
+		103 = { "%d-ya Motostrelkovaya Diviziya" }
+		109 = { "%d-ya Motostrelkovaya Diviziya" }
+		131 = { "%d-ya Motostrelkovaya Diviziya" }
+		163 = { "%d-ya Motostrelkovaya Diviziya" }
+		185 = { "%d-ya Motostrelkovaya Diviziya" }
+		198 = { "%d-ya Motostrelkovaya Diviziya" }
+		202 = { "%d-ya Motostrelkovaya Diviziya" }
+		204 = { "%d-ya Motostrelkovaya Diviziya" }
+		205 = { "%d-ya Motostrelkovaya Diviziya" }
+		208 = { "%d-ya Motostrelkovaya Diviziya" }
+		209 = { "%d-ya Motostrelkovaya Diviziya" }
+		210 = { "%d-ya Motostrelkovaya Diviziya" }
+		212 = { "%d-ya Motostrelkovaya Diviziya" }
+		213 = { "%d-ya Motostrelkovaya Diviziya" }
+		215 = { "%d-ya Motostrelkovaya Diviziya" }
+		216 = { "%d-ya Motostrelkovaya Diviziya" }
+		218 = { "%d-ya Motostrelkovaya Diviziya" }
+		219 = { "%d-ya Motostrelkovaya Diviziya" }
+		220 = { "%d-ya Motostrelkovaya Diviziya" }
+		221 = { "%d-ya Motostrelkovaya Diviziya" }
+		236 = { "%d-ya Motostrelkovaya Diviziya" }
+		239 = { "%d-ya Motostrelkovaya Diviziya" }
+		801 = { "%OMSDON 'Dzerzhinskiy' Diviziya" }
+		821 = { "21ya NKVD Motostrelkovaya Diviziya" }
+		822 = { "22ya NKVD Motostrelkovaya Diviziya" }
+		823 = { "23ya NKVD Motostrelkovaya Diviziya" }
+		802 = { "2ya NKVD Motostrelkovaya Diviziya" }
+		806 = { "6ya NKVD Motostrelkovaya Diviziya" }
+		803 = { "3ya NKVD Motostrelkovaya Diviziya" }
+		804 = { "4ya NKVD Motostrelkovaya Diviziya" }
+		808 = { "8ya NKVD Motostrelkovaya Diviziya" }
+		807 = { "7ya NKVD Motostrelkovaya Diviziya" }
+		809 = { "9ya NKVD Motostrelkovaya Diviziya" }
+	}
+}
+
+SOV_MAR_01 = 
+{
+	name = "Marine Division"
+
+	for_countries = { RUS }
+
+	can_use = { OR = { has_country_leader_ideology = revolutionary_socialism has_country_leader_ideology = vanguardism } }
+
+	division_types = { "marine" }
+
+	# Number reservation system will tie to another group.
+	#link_numbering_with = { SOV_INF_01 }
+
+	fallback_name = "%d-ya Diviziya Morskoi Pekhoty"
+
+	# Names with numbers (only one number per entry). 
+	# It's okay to have gaps in numbering.
+	ordered =
+	{
+		1 = { "%d-ya Diviziya Morskoi Pekhoty" }
+		2 = { "%d-ya Diviziya Morskoi Pekhoty" }
+		3 = { "%d-ya Diviziya Morskoi Pekhoty" }
+		4 = { "%d-ya Diviziya Morskoi Pekhoty" }
+		5 = { "%d-ya Diviziya Morskoi Pekhoty" }
+		6 = { "%d-ya Diviziya Morskoi Pekhoty" }
+		7 = { "%d-ya Diviziya Morskoi Pekhoty" }
+		8 = { "%d-ya Diviziya Morskoi Pekhoty" }
+		9 = { "%d-ya Diviziya Morskoi Pekhoty" }
+		10 = { "%d-ya Diviziya Morskoi Pekhoty" }
+	}
+}
+
+SOV_MNT_01 = 
+{
+	name = "Mountain Rifle Division"
+
+	for_countries = { RUS }
+
+	can_use = { OR = { has_country_leader_ideology = revolutionary_socialism has_country_leader_ideology = vanguardism } }
+
+	division_types = { "mountaineers" }
+
+	# Number reservation system will tie to another group.
+	link_numbering_with = { SOV_INF_01 }
+
+	fallback_name = "%d-ya Gornostrelkovaya Diviziya"
+
+	# Names with numbers (only one number per entry). 
+	# It's okay to have gaps in numbering.
+	ordered =
+	{
+		9 = { "%d-ya 'Kavkazskaya' Gornostrelk.Div." }
+		20 = { "%d-ya 'Proletar. Donb.' Gornostrelk. Div." }
+		30 = { "%d-ya 'Irkutskaya' Gornostrelk. Div." }
+		44 = { "%d-ya 'Kievskaya' Gornostrelk. Div." }
+		47 = { "%d-ya 'Gruzinskaya' Gornostrelk. Diviziya" }
+		60 = { "%d-ya 'Kavkazskaya' Gornostrelk. Diviziya" }
+		76 = { "%d-ya 'Armyanskaya' Gornostrelk. Div." }
+		96 = { "%d-ya 'Vinnitskaya' Gornostrelk. Div." }
+		63 = { "%d-ya 'Gruzinskaya' Gornostrelk. Div." }
+		77 = { "%d-ya 'Azerbajdzhansk.' Gornostrelk. Div." }
+		83 = { "%d-ya 'Turkestanskaya' Gornostrelk. Div." }
+		58 = { "%d-ya Gornostrelkovaya Diviziya" }
+		72 = { "%d-ya 'Turkestanskaya' Gornostrelk. Div." }
+		68 = { "%d-ya 'Turkestanskaya' Gornostrelk. Div." }
+		28 = { "%d-ya 'Gorskaya' Gornostrelk. Div." }
+		79 = { "%d-ya Gornostrelkovaya Diviziya" }
+		101 = { "%d-ya Gornostrelkovaya Diviziya" }
+		138 = { "%d-ya Gornostrelkovaya Diviziya" }
+		192 = { "%d-ya Gornostrelkovaya Diviziya" }
+		194 = { "%d-ya Gornostrelkovaya Diviziya" }
+		232 = { "%d-ya Gornostrelkovaya Diviziya" }
+		302 = { "%d-ya Gornostrelkovaya Diviziya" }
+	}
+}
+
+SOV_GRD_01 = 
+{
+	name = "Guards Rifles"
+
+	for_countries = { RUS }
+
+	can_use = { OR = { has_country_leader_ideology = revolutionary_socialism has_country_leader_ideology = vanguardism } }
+
+	division_types = { "infantry" }
+
+	# Number reservation system will tie to another group.
+	#link_numbering_with = { SOV_INF_01 }
+
+	fallback_name = "%d-ya Gvardyeiskaya Strelk. Div."
+
+	# Names with numbers (only one number per entry). 
+	# It's okay to have gaps in numbering.
+	ordered =
+	{
+		1 = { "%d-ya 'Moskva' Gvds. Strelk. Div." }
+		2 = { "%d-ya 'Tamanskaya' Gvds. Strelk. Div." }
+		3 = { "%d-ya 'Volnovakhskaya' Gvds. Strelk. Div." }
+		4 = { "%d-ya 'Apostolov' Gvds. Strelk. Div." }
+		5 = { "%d-ya Gvardyeiskaya Strelk. Div." }
+		6 = { "%d-ya Gvardyeiskaya Strelk. Div." }
+		7 = { "%d-ya Gvardyeiskaya Strelk. Div." }
+		8 = { "%d-ya Gvardyeiskaya Strelk. Div." }
+		9 = { "%d-ya Gvardyeiskaya Strelk. Div." }
+		10 = { "%d-ya Gvardyeiskaya Strelk. Div." }
+		11 = { "%d-ya Gvardyeiskaya Strelk. Div." }
+		12 = { "%d-ya Gvardyeiskaya Strelk. Div." }
+		13 = { "%d-ya Gvardyeiskaya Strelk. Div." }
+		14 = { "%d-ya Gvardyeiskaya Strelk. Div." }
+		15 = { "%d-ya Gvardyeiskaya Strelk. Div." }
+		16 = { "%d-ya Gvardyeiskaya Strelk. Div." }
+		17 = { "%d-ya Gvardyeiskaya Strelk. Div." }
+		18 = { "%d-ya Gvardyeiskaya Strelk. Div." }
+		19 = { "%d-ya Gvardyeiskaya Strelk. Div." }
+		20 = { "%d-ya Gvardyeiskaya Strelk. Div." }
+		21 = { "%d-ya Gvardyeiskaya Strelk. Div." }
+		22 = { "%d-ya Gvardyeiskaya Strelk. Div." }
+		23 = { "%d-ya Gvardyeiskaya Strelk. Div." }
+		24 = { "%d-ya Gvardyeiskaya Strelk. Div." }
+		25 = { "%d-ya Gvardyeiskaya Strelk. Div." }
+		26 = { "%d-ya Gvardyeiskaya Strelk. Div." }
+		27 = { "%d-ya Gvardyeiskaya Strelk. Div." }
+		28 = { "%d-ya Gvardyeiskaya Strelk. Div." }
+		29 = { "%d-ya Gvardyeiskaya Strelk. Div." }
+		30 = { "%d-ya Gvardyeiskaya Strelk. Div." }
+		31 = { "%d-ya Gvardyeiskaya Strelk. Div." }
+		32 = { "%d-ya Gvardyeiskaya Strelk. Div." }
+		33 = { "%d-ya Gvardyeiskaya Strelk. Div." }
+		34 = { "%d-ya Gvardyeiskaya Strelk. Div." }
+		35 = { "%d-ya Gvardyeiskaya Strelk. Div." }
+		36 = { "%d-ya Gvardyeiskaya Strelk. Div." }
+		37 = { "%d-ya Gvardyeiskaya Strelk. Div." }
+		38 = { "%d-ya Gvardyeiskaya Strelk. Div." }
+		39 = { "%d-ya Gvardyeiskaya Strelk. Div." }
+		40 = { "%d-ya Gvardyeiskaya Strelk. Div." }
+		41 = { "%d-ya Gvardyeiskaya Strelk. Div." }
+		42 = { "%d-ya Gvardyeiskaya Strelk. Div." }
+		43 = { "%d-ya Gvardyeiskaya Strelk. Div." }
+		44 = { "%d-ya Gvardyeiskaya Strelk. Div." }
+		45 = { "%d-ya Gvardyeiskaya Strelk. Div." }
+		46 = { "%d-ya Gvardyeiskaya Strelk. Div." }
+		47 = { "%d-ya Gvardyeiskaya Strelk. Div." }
+		48 = { "%d-ya Gvardyeiskaya Strelk. Div." }
+		49 = { "%d-ya Gvardyeiskaya Strelk. Div." }
+		50 = { "%d-ya Gvardyeiskaya Strelk. Div." }
+		51 = { "%d-ya Gvardyeiskaya Strelk. Div." }
+		52 = { "%d-ya Gvardyeiskaya Strelk. Div." }
+		53 = { "%d-ya Gvardyeiskaya Strelk. Div." }
+		54 = { "%d-ya Gvardyeiskaya Strelk. Div." }
+		55 = { "%d-ya Gvardyeiskaya Strelk. Div." }
+		56 = { "%d-ya Gvardyeiskaya Strelk. Div." }
+		57 = { "%d-ya Gvardyeiskaya Strelk. Div." }
+		58 = { "%d-ya Gvardyeiskaya Strelk. Div." }
+		59 = { "%d-ya Gvardyeiskaya Strelk. Div." }
+		60 = { "%d-ya Gvardyeiskaya Strelk. Div." }
+		61 = { "%d-ya Gvardyeiskaya Strelk. Div." }
+		62 = { "%d-ya Gvardyeiskaya Strelk. Div." }
+		63 = { "%d-ya Gvardyeiskaya Strelk. Div." }
+		64 = { "%d-ya Gvardyeiskaya Strelk. Div." }
+		65 = { "%d-ya Gvardyeiskaya Strelk. Div." }
+		66 = { "%d-ya Gvardyeiskaya Strelk. Div." }
+		67 = { "%d-ya Gvardyeiskaya Strelk. Div." }
+		68 = { "%d-ya Gvardyeiskaya Strelk. Div." }
+		69 = { "%d-ya Gvardyeiskaya Strelk. Div." }
+		70 = { "%d-ya Gvardyeiskaya Strelk. Div." }
+		71 = { "%d-ya Gvardyeiskaya Strelk. Div." }
+		72 = { "%d-ya Gvardyeiskaya Strelk. Div." }
+		73 = { "%d-ya Gvardyeiskaya Strelk. Div." }
+		74 = { "%d-ya Gvardyeiskaya Strelk. Div." }
+		75 = { "%d-ya Gvardyeiskaya Strelk. Div." }
+		76 = { "%d-ya Gvardyeiskaya Strelk. Div." }
+		77 = { "%d-ya Gvardyeiskaya Strelk. Div." }
+		78 = { "%d-ya Gvardyeiskaya Strelk. Div." }
+		79 = { "%d-ya Gvardyeiskaya Strelk. Div." }
+		80 = { "%d-ya Gvardyeiskaya Strelk. Div." }
+		81 = { "%d-ya Gvardyeiskaya Strelk. Div." }
+		82 = { "%d-ya Gvardyeiskaya Strelk. Div." }
+		83 = { "%d-ya Gvardyeiskaya Strelk. Div." }
+		84 = { "%d-ya Gvardyeiskaya Strelk. Div." }
+		85 = { "%d-ya Gvardyeiskaya Strelk. Div." }
+		86 = { "%d-ya Gvardyeiskaya Strelk. Div." }
+		87 = { "%d-ya Gvardyeiskaya Strelk. Div." }
+		88 = { "%d-ya Gvardyeiskaya Strelk. Div." }
+		89 = { "%d-ya Gvardyeiskaya Strelk. Div." }
+		90 = { "%d-ya Gvardyeiskaya Strelk. Div." }
+		91 = { "%d-ya Gvardyeiskaya Strelk. Div." }
+		92 = { "%d-ya Gvardyeiskaya Strelk. Div." }
+		93 = { "%d-ya Gvardyeiskaya Strelk. Div." }
+		94 = { "%d-ya Gvardyeiskaya Strelk. Div." }
+		95 = { "%d-ya Gvardyeiskaya Strelk. Div." }
+		96 = { "%d-ya Gvardyeiskaya Strelk. Div." }
+		97 = { "%d-ya Gvardyeiskaya Strelk. Div." }
+		98 = { "%d-ya Gvardyeiskaya Strelk. Div." }
+		99 = { "%d-ya Gvardyeiskaya Strelk. Div." }
+		100 = { "%d-ya Gvardyeiskaya Strelk. Div." }
+		101 = { "%d-ya Gvardyeiskaya Strelk. Div." }
+		102 = { "%d-ya Gvardyeiskaya Strelk. Div." }
+		103 = { "%d-ya Gvardyeiskaya Strelk. Div." }
+		104 = { "%d-ya Gvardyeiskaya Strelk. Div." }
+		105 = { "%d-ya Gvardyeiskaya Strelk. Div." }
+		106 = { "%d-ya Gvardyeiskaya Strelk. Div." }
+		107 = { "%d-ya Gvardyeiskaya Strelk. Div." }
+		108 = { "%d-ya Gvardyeiskaya Strelk. Div." }
+		109 = { "%d-ya Gvardyeiskaya Strelk. Div." }
+		110 = { "%d-ya Gvardyeiskaya Strelk. Div." }
+		111 = { "%d-ya Gvardyeiskaya Strelk. Div." }
+		112 = { "%d-ya Gvardyeiskaya Strelk. Div." }
+		113 = { "%d-ya Gvardyeiskaya Strelk. Div." }
+		114 = { "%d-ya Gvardyeiskaya Strelk. Div." }
+		115 = { "%d-ya Gvardyeiskaya Strelk. Div." }
+		116 = { "%d-ya Gvardyeiskaya Strelk. Div." }
+		117 = { "%d-ya Gvardyeiskaya Strelk. Div." }
+		118 = { "%d-ya Gvardyeiskaya Strelk. Div." }
+		119 = { "%d-ya Gvardyeiskaya Strelk. Div." }
+		120 = { "%d-ya Gvardyeiskaya Strelk. Div." }
+		121 = { "%d-ya Gvardyeiskaya Strelk. Div." }
+		122 = { "%d-ya Gvardyeiskaya Strelk. Div." }
+		123 = { "%d-ya Gvardyeiskaya Strelk. Div." }
+		124 = { "%d-ya Gvardyeiskaya Strelk. Div." }
+		125 = { "%d-ya Gvardyeiskaya Strelk. Div." }
+		126 = { "%d-ya Gvardyeiskaya Strelk. Div." }
+		127 = { "%d-ya Gvardyeiskaya Strelk. Div." }
+		128 = { "%d-ya Gvardyeiskaya Strelk. Div." }
+		129 = { "%d-ya Gvardyeiskaya Strelk. Div." }
+	}
+}
+
+SOV_GMC_01 = 
+{
+	name = "Guards Mechanized"
+
+	for_countries = { RUS }
+
+	can_use = { OR = { has_country_leader_ideology = revolutionary_socialism has_country_leader_ideology = vanguardism } }
+
+	division_types = { "motorized" }
+
+	# Number reservation system will tie to another group.
+	#link_numbering_with = { SOV_INF_01 }
+
+	fallback_name = "%d-ya Gvds. Mekhanizirovanaya Korpus"
+
+	# Names with numbers (only one number per entry). 
+	# It's okay to have gaps in numbering.
+	ordered =
+	{
+		1 = { "%d-ya 'Vienna' Gvds. Mekh. Korpus" }
+		2 = { "%d-ya Gvds. Mekhanizirovanaya Korpus" }
+		3 = { "%d-ya Gvds. Mekhanizirovanaya Korpus" }
+		4 = { "%d-ya Gvds. Mekhanizirovanaya Korpus" }
+		5 = { "%d-ya 'Zimovnikovskaya' Gvds. Mekh. Korpus" }
+		6 = { "%d-ya Gvds. Mekhanizirovanaya Korpus" }
+		7 = { "%d-ya Gvds. Mekhanizirovanaya Korpus" }
+		8 = { "%d-ya Gvds. Mekhanizirovanaya Korpus" }
+		9 = { "%d-ya Gvds. Mekhanizirovanaya Korpus" }
+	}
+}
+
+SOV_GTC_01 = 
+{
+	name = "Guards Tanks"
+
+	for_countries = { RUS }
+
+	can_use = { OR = { has_country_leader_ideology = revolutionary_socialism has_country_leader_ideology = vanguardism } }
+
+	division_types = { "light_armor" "medium_armor" "heavy_armor" }
+
+	# Number reservation system will tie to another group.
+	#link_numbering_with = { SOV_INF_01 }
+
+	fallback_name = "%d-ya Gvds. Tankovaya Korpus"
+
+	# Names with numbers (only one number per entry). 
+	# It's okay to have gaps in numbering.
+	ordered =
+	{
+		1 = { "%d-ya Gvds. Tankovaya Korpus" }
+		2 = { "%d-ya 'Tatsinskaya' Gvds. Tank. Korpus" }
+		3 = { "%d-ya Gvds. Tankovaya Korpus" }
+		4 = { "%d-ya 'Kantemirovskaya' Gvds. Tank. Korpus" }
+		5 = { "%d-ya Gvds. Tankovaya Korpus" }
+		6 = { "%d-ya Gvds. Tankovaya Korpus" }
+		7 = { "%d-ya Gvds. Tankovaya Korpus" }
+		8 = { "%d-ya Gvds. Tankovaya Korpus" }
+		9 = { "%d-ya Gvds. Tankovaya Korpus" }
+		10 = { "%d-ya 'Uralsko-Lvovskaya' Gvds. Tank. Korpus" }
+		11 = { "%d-ya Gvds. Tankovaya Korpus" }
+		12 = { "%d-ya Gvds. Tankovaya Korpus" }
+	}
+}

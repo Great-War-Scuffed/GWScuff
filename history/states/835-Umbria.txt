@@ -1,0 +1,24 @@
+
+state = {
+	id = 835
+	name = "STATE_835"
+	resources = {
+		steel = 3
+	}
+	history = {
+		victory_points = { 3885 4 } #perugia - 66,277
+		victory_points = { 11790 3 } #terni - 45,941
+		owner = ITA
+		add_core_of = ITA
+		add_claim_by = PAP
+		buildings = {
+			infrastructure = 3
+		}
+	}
+	provinces = {
+		3885 4229 6926 11790
+	}
+	manpower = 613695
+	buildings_max_level_factor = 1.000
+	state_category = town
+}

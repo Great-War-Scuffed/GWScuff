@@ -1,0 +1,63 @@
+characters={
+	CRO_dr_ante_pavelic={
+		name="CRO_dr_ante_pavelic"
+		portraits={
+			civilian={
+				large="gfx/leaders/CRO/CRO_Ante_Pavelic.png"
+			}
+		}
+		country_leader={
+			ideology=authoritarian_democracy
+			traits = {
+				CRO_yugophile
+			}
+		}
+	}
+	CRO_stjepan_radic={
+		name="CRO_stjepan_radic"
+		portraits={
+			civilian={
+				large="gfx/leaders/CRO/CRO_Stjepan_Radic.png"
+			}
+		}
+		country_leader={
+			ideology=social_liberalism
+			traits = {
+				CRO_stalwart_nationalist
+			}
+		}
+	}
+	CRO_ivo_pilar={
+		name = CRO_ivo_pilar
+		portraits={
+			civilian={
+				large="gfx/leaders/CRO/CRO_Ivo_Pilar.png"
+			}
+		}
+		country_leader={
+			ideology=ultranationalism
+		}
+	}
+	CRO_ivan_skerlecz = {
+		name = "CRO_ivan_skerlecz"
+		portraits = {
+			civilian = {
+				large = "gfx/leaders/CRO/CRO_Ivan_Skerlecz.png"
+			}
+		}
+		#country_leader = {
+			#ideology=authoritarian_democracy
+			#traits = {
+			#	CRO_transleithanian_alligned
+			#}
+		#}
+	}
+	CRO_autun_mihalovic = {
+		name = "CRO_autun_mihalovic"
+		portraits = {
+			civilian = {
+				large = "gfx/leaders/Europe/portrait_europe_generic_9.dds"
+			}
+		}
+	}
+}

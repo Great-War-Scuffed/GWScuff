@@ -1,0 +1,24 @@
+characters={
+	ARB_sheikh_khazal = {
+		name = ARB_sheikh_khazal 
+		portraits = {
+			civilian = {
+				large="gfx/leaders/ARB/ARB_sheikh_khazal.png"
+			}
+		}
+		country_leader = {
+			ideology = absolute_monarchy
+			traits = {
+				ARB_dedicated_sheikh
+				ARB_british_loyalist
+			}
+		}
+		country_leader = {
+			ideology = reactionism
+			traits = {
+				ARB_oil_profiteer
+				ARB_british_loyalist
+			}
+		}
+	}
+}

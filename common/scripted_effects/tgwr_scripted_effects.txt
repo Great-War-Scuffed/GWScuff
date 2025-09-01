@@ -1,0 +1,3755 @@
+abandon_puppet_tag = { #in testing
+	if = {
+		limit = {
+			is_subject = no
+			OR = {
+				# British
+				has_cosmetic_tag = USA_UK
+				has_cosmetic_tag = PER_ENG
+				has_cosmetic_tag = CYP_UK
+
+				# German
+				has_cosmetic_tag = CRI_GER
+				has_cosmetic_tag = ALS_GER
+
+				# French
+				has_cosmetic_tag = FRA_classic_blue
+				has_cosmetic_tag = FRA_socialist_red_alone
+				has_cosmetic_tag = ALG_FRA
+				has_cosmetic_tag = TUN_FRA
+				has_cosmetic_tag = FUJ_FRA
+
+				# Turkish
+				has_cosmetic_tag = SER_TUR
+				has_cosmetic_tag = BUL_TUR
+				has_cosmetic_tag = GRE_TUR
+				has_cosmetic_tag = CRE_TUR
+				has_cosmetic_tag = LBA_TUR
+				has_cosmetic_tag = AZR_TUR
+
+				# Russian
+				has_cosmetic_tag = GEO_RUS
+				has_cosmetic_tag = ARM_RUS
+				has_cosmetic_tag = AZR_RUS
+				has_cosmetic_tag = TRK_RUS
+				has_cosmetic_tag = EST_RUS
+				has_cosmetic_tag = LAT_RUS
+				has_cosmetic_tag = LIT_RUS
+				has_cosmetic_tag = TUR_RUS
+				has_cosmetic_tag = PER_RUS
+				has_cosmetic_tag = POL_RUS
+				has_cosmetic_tag = FIN_RUS
+
+				# Soviet
+				has_cosmetic_tag = SOV_puppet
+
+				#American
+				has_cosmetic_tag = CAN_USA
+				has_cosmetic_tag = ENG_USA
+
+				AND = {
+					has_cosmetic_tag = RAJ_UK
+					NOT = {
+						has_country_leader_ideology = colonial_government
+						has_country_flag = RAJ_british_remnants_flag
+					}
+				}
+				has_cosmetic_tag = RAJ_OTT
+
+				has_cosmetic_tag = MAL_UK
+
+				has_cosmetic_tag = INS_HOL
+
+				has_cosmetic_tag = IND_FRA
+				has_cosmetic_tag = IND_GER
+				has_cosmetic_tag = IND_KOR
+
+				has_cosmetic_tag = MEX_USA
+				has_cosmetic_tag = MEX_ENG
+				has_cosmetic_tag = MEX_SPR
+				has_cosmetic_tag = MEX_SPA
+
+				has_cosmetic_tag = USA_CAN
+				has_cosmetic_tag = USA_FRA
+				has_cosmetic_tag = USA_UK
+				has_cosmetic_tag = USA_CSA
+				has_cosmetic_tag = USA_RUS
+				has_cosmetic_tag = USA_GER
+
+				has_cosmetic_tag = CHI_KOR
+				has_cosmetic_tag = CHI_RUS
+				has_cosmetic_tag = CHI_ENG
+				has_cosmetic_tag = CHI_GER
+				has_cosmetic_tag = CHI_JAP
+				
+				has_cosmetic_tag = SRL_ENG
+
+				has_cosmetic_tag = LBA_TUR
+				has_cosmetic_tag = AZR_TUR
+				has_cosmetic_tag = HJZ_sharifate
+
+				has_cosmetic_tag = SER_AUH
+
+				has_cosmetic_tag = ORA_ENG
+				has_cosmetic_tag = NAT_ENG
+				has_cosmetic_tag = SAF_TRN
+			}
+			NOT = {
+				has_country_flag = RAJ_british_remnants_flag
+			}
+		}
+		drop_cosmetic_tag = yes
+	}
+}
+
+#Important to put HIGHEST first
+RUS_rasputin_influence_level_up = {
+	if = {
+		limit = { has_global_flag = rasputin_influence8 }
+		clr_global_flag = rasputin_influence8
+		set_global_flag = rasputin_influence9
+	}
+	if = {
+		limit = { has_global_flag = rasputin_influence7 }
+		clr_global_flag = rasputin_influence7
+		set_global_flag = rasputin_influence8
+	}
+	if = {
+		limit = { has_global_flag = rasputin_influence6 }
+		clr_global_flag = rasputin_influence6
+		set_global_flag = rasputin_influence7
+	}
+	else_if = {
+		limit = { has_global_flag = rasputin_influence5 }
+		clr_global_flag = rasputin_influence5
+		set_global_flag = rasputin_influence6
+	}
+	else_if = {
+		limit = { has_global_flag = rasputin_influence4 }
+		clr_global_flag = rasputin_influence4
+		set_global_flag = rasputin_influence5
+	}
+	else_if = {
+		limit = { has_global_flag = rasputin_influence3 }
+		clr_global_flag = rasputin_influence3
+		set_global_flag = rasputin_influence4
+	}
+	else_if = {
+		limit = { has_global_flag = rasputin_influence2 }
+		clr_global_flag = rasputin_influence2
+		set_global_flag = rasputin_influence1
+	}
+	else_if = {
+		limit = { 
+			NOT = {
+				has_global_flag = rasputin_influence2
+				has_global_flag = rasputin_influence3
+				has_global_flag = rasputin_influence4
+				has_global_flag = rasputin_influence5
+				has_global_flag = rasputin_influence6
+				has_global_flag = rasputin_influence7
+				has_global_flag = rasputin_influence8
+				has_global_flag = rasputin_influence9
+			}
+		}
+		set_global_flag = rasputin_influence1
+	}
+}
+#ITA_industrialisation_level_up = {
+#	if = {
+#		limit = { has_idea = ITA_lackluster_industrialisation }
+#		swap_ideas = {
+#			remove_idea = ITA_lackluster_industrialisation
+#			add_idea = ITA_lackluster_industrialisation_1
+#		}
+#	}
+#	else_if = {
+#		limit = { has_idea = ITA_lackluster_industrialisation_1 }
+#		swap_ideas = {
+#			remove_idea = ITA_lackluster_industrialisation_1
+#			add_idea = ITA_lackluster_industrialisation_2
+#		}
+#	}
+#	else_if = {
+#		limit = { has_idea = ITA_lackluster_industrialisation_2 }
+#		swap_ideas = {
+#			remove_idea = ITA_lackluster_industrialisation_2
+#			add_idea = ITA_lackluster_industrialisation_3
+#		}
+#	}
+#	else_if = {
+#		limit = { has_idea = ITA_lackluster_industrialisation_3 }
+#		remove_ideas = ITA_lackluster_industrialisation_3
+#	}
+#}
+AUH_HUN_create_habsburg = {
+	if = {
+		limit = { 
+			NOT = {
+				has_global_flag = emperor_franz_dead
+			}
+		}
+		HUN = { add_ideas = HUN_franz_joseph_i }
+	}
+	else_if = {
+		limit = { 
+			NOT = {
+				has_global_flag = kis_franzferdinand_murdered 
+			} 
+		}
+		HUN = { add_ideas = HUN_franz_ferdinand_i }
+	}
+	else_if = {
+		limit = {
+			has_country_leader = {
+				character = AUH_karl_i
+				ruling_only = no
+			}
+		}
+		HUN = { add_ideas = HUN_karl_i }
+	}
+	HUN = {
+		add_ideas = AUH_ww1_House_Habsburg_Lorraine
+	}
+}
+##BREST-LITOVSK
+
+# Warning: this will make Poland a German Puppet in any case
+GER_release_POL = {
+	custom_effect_tooltip = GER_establish_poland_tt
+	hidden_effect = {
+		# Step 1: Transfer eligible RUS/SOV states to POL
+		# Excludes states where Germany has a core or claim.
+		every_state = {
+			limit = {
+				OWNER = {
+					OR = {
+						is_russian_tag = yes
+						AND = {
+							original_tag = UKR
+							OR = {
+								is_subject_of = PREV.PREV
+								is_subject_of = RUS
+							}
+						}
+					}
+				}
+				is_polish_criteria_state = yes
+				NOT = {
+					is_core_of = PREV
+					is_claimed_by = PREV
+				}
+			}
+			if = {
+				limit = { 
+					NOT = { 
+						is_owned_by = POL 
+					} 
+				} 
+				transfer_state_to = POL # This will create Poland if it doesn't exist already
+			}
+		}
+
+		# Step 2: Transfer Polish criteria states with GER cores/claims to GER
+		every_state = {
+			limit = {
+				OWNER = {
+					is_russian_tag = yes
+				}
+				is_polish_criteria_state = yes
+				OR = {
+					is_core_of = PREV
+					is_claimed_by = PREV
+				}
+			}
+			transfer_state_to = PREV 
+		}
+
+		# Step 3: Puppet Poland
+		if = {
+			limit = { 
+				country_exists = POL 
+			}
+
+			puppet = POL
+
+			hidden_effect = {
+				POL = {			
+					drop_cosmetic_tag = yes
+					inherit_technology = ROOT
+					delete_obsolete_russian_templates = yes
+					# load_oob = "POL_divisions"	
+
+					# If either Kaiser or OHL in charge, setup Polands Politics
+					if = {
+						limit = { 
+							ROOT = { 
+								is_GER_a_monarchy = yes
+							}
+						}
+						set_country_flag = released_by_germany
+						set_politics = { 
+							ruling_party = neutrality
+							elections_allowed = no
+						}
+						set_popularities = { 
+							democratic = 45
+							fascism = 0
+							communism = 35
+							neutrality = 20
+						}
+						promote_character = POL_regency_council
+						# Original effect promoted POL_gabriel_narutowicz if Poland was a Russian puppet before, but I don't really understand why
+						# (Would also unnecessarily complicate logic)
+					}
+				}
+			}
+
+			# Transfer armistice idea if GER has it
+			if = {
+				limit = {
+					ROOT = { 
+						has_idea = RUS_idea_armistice_cp 
+					} 
+				}
+				POL = { 
+					add_ideas = RUS_idea_armistice_cp 
+				}
+			}
+			set_global_flag = poland_released
+
+			# Remove Russian cores from final POL cores
+			every_state = {
+				limit = {
+					is_polish_criteria_state = yes
+					OR = {
+						is_owned_by = ROOT
+						is_owned_by = POL
+					}
+				}
+				remove_russian_cores = yes	
+			}
+
+			# Poland Established Follow Up event
+			country_event = ww1_poland.12
+		}
+	}
+}
+
+GER_release_LIT = {
+	if = {
+		limit = {
+			NOT = {
+				country_exists = LIT
+			}
+		}
+		every_state = {
+			limit = {
+				OR = {
+					is_owned_by = RUS
+					is_owned_by = SOV
+					AND = {
+						is_owned_by = GER
+						NOT = {
+							is_core_of = GER
+							is_claimed_by = GER
+						}
+					}
+				}
+				OR = {
+					state = 11
+					state = 189
+					state = 784
+					state = 97
+					state = 1015
+					state = 773
+					state = 1017
+					# state = 946
+				}
+			}
+			remove_russian_cores = yes
+			transfer_state_to = LIT
+		}
+		puppet = LIT
+		hidden_effect = {
+			LIT = {
+				set_country_flag = released_by_germany
+				set_cosmetic_tag = LIT_GER
+				inherit_technology = GER
+				delete_obsolete_russian_templates = yes
+				if = {
+					limit = {
+						GER = {
+							is_GER_a_monarchy = yes
+						}
+					}
+					if = {
+						limit = {
+							date < 1928.3.24
+						}
+						GER = {
+							GER_wilhelm_karl_von_urach = {
+								set_character_name = LIT_mindaugas_ii
+								promote_leader = yes
+								set_nationality = LIT
+								if = {
+									limit = { has_ideology = semi_constitutional_monarchy }
+									promote_character = semi_constitutional_monarchy
+								}
+								else = {
+									add_country_leader_role = {
+										country_leader = {
+											ideology = semi_constitutional_monarchy
+											traits = { german_agent  }
+										}
+										promote_leader = yes
+									}
+								}
+							}
+						}
+						else = {
+							LIT_vytautas_ii = {
+								set_character_name = LIT_vytautas_ii
+								if = {
+									limit = { has_ideology = semi_constitutional_monarchy }
+									promote_character = semi_constitutional_monarchy
+								}
+								else = {
+									add_country_leader_role = {
+										country_leader = {
+											ideology = semi_constitutional_monarchy
+											traits = { german_agent }
+										}
+										promote_leader = yes
+									}
+								}
+							}
+						}
+					}
+					set_party_name = {
+						ideology = neutrality 
+						long_name = LIT_kingdom_party 
+						name = LIT_kingdom_party
+					}
+					set_politics = {
+						ruling_party = neutrality
+						elections_allowed = no
+					}
+					set_popularities = {
+						democratic = 4
+						 fascism = 0
+						communism = 16
+						neutrality = 80
+					}
+				}
+			}
+		}
+	}
+	else_if = {
+		limit = {
+			LIT = {
+				is_subject_of = RUS
+			}
+		}
+		every_state = {
+			limit = {
+				OR = {
+					is_owned_by = RUS
+					is_owned_by = SOV
+				}
+				OR = {
+					state = 11
+					state = 189
+					state = 784
+					state = 97
+					state = 773
+					state = 1015
+					state = 1017
+				}
+			}
+			transfer_state_to = LIT
+		}
+		every_state = {
+			limit = {
+				is_owned_by = LIT
+				OR = {
+					is_core_of = GER
+					is_claimed_by = GER
+				}
+			}
+			transfer_state_to = GER
+		}
+		puppet = LIT
+		hidden_effect = {
+			LIT = {
+				set_country_flag = released_by_germany
+				set_cosmetic_tag = LIT_GER
+				inherit_technology = GER
+				delete_obsolete_russian_templates = yes
+				if = {
+					limit = {
+						GER = {
+							is_GER_a_monarchy = yes
+						}
+					}
+					if = {
+						limit = {
+							date < 1928.3.24
+						}
+						GER = {
+							GER_wilhelm_karl_von_urach = {
+								set_character_name = LIT_mindaugas_ii
+								promote_leader = yes
+								set_nationality = LIT
+								if = {
+									limit = { has_ideology = semi_constitutional_monarchy }
+									promote_character = semi_constitutional_monarchy
+								}
+								else = {
+									add_country_leader_role = {
+										country_leader = {
+											ideology = semi_constitutional_monarchy
+											traits = { german_agent  }
+										}
+										promote_leader = yes
+									}
+								}
+							}
+						}
+						else = {
+							LIT_vytautas_ii = {
+								set_character_name = LIT_vytautas_ii
+								if = {
+									limit = { has_ideology = semi_constitutional_monarchy }
+									promote_character = semi_constitutional_monarchy
+								}
+								else = {
+									add_country_leader_role = {
+										country_leader = {
+											ideology = semi_constitutional_monarchy
+											traits = { german_agent }
+										}
+										promote_leader = yes
+									}
+								}
+							}
+						}
+					}
+					set_party_name = {
+						ideology = neutrality 
+						long_name = LIT_kingdom_party 
+						name = LIT_kingdom_party
+					}
+					set_politics = {
+						ruling_party = neutrality
+						elections_allowed = no
+					}
+					set_popularities = {
+						democratic = 4
+						fascism = 0
+						communism = 16
+						neutrality = 80
+					}
+				}
+			}
+		}
+	}
+	else = {
+		every_state = {
+			limit = {
+				OR = {
+					is_owned_by = RUS
+					is_owned_by = SOV
+				}
+				NOT = {
+					is_core_of = GER
+					is_claimed_by = GER
+				}
+				OR = {
+					state = 11
+					state = 189
+					state = 784
+					state = 97
+					state = 773
+					state = 1015
+					state = 1017
+				}
+			}
+			transfer_state_to = LIT
+		}
+	}
+	hidden_effect = {
+		if = {
+			limit = {
+				GER = { has_idea = RUS_idea_armistice_cp }
+			}
+			LIT = { add_ideas = RUS_idea_armistice_cp }
+		}
+		set_global_flag = litva_released
+		every_state = {
+			limit = {
+				is_core_of = LIT
+			}
+			remove_russian_cores = yes
+		}
+	}
+}
+GER_release_UBD = {
+	every_state = {
+		limit = {
+			OR = {
+				is_owned_by = RUS
+				is_owned_by = SOV
+				is_owned_by = GER
+			}
+			OR = {
+				is_core_of = EST
+				is_core_of = LAT
+			}
+			NOT = {
+				is_core_of = COU
+				state = 96
+				state = 945
+				state = 947
+				state = 944
+			}
+		}
+		transfer_state_to = UBD
+	}
+	if = {
+		limit = {
+			EST = {
+				OR = {
+					is_subject_of = RUS
+					is_subject_of = SOV
+					is_subject_of = GER
+				}
+			}
+		}
+		UBD = {
+			annex_country = {
+				target = EST
+			}
+		}
+	}
+	if = {
+		limit = {
+			LAT = {
+				OR = {
+					is_subject_of = RUS
+					is_subject_of = SOV
+					is_subject_of = GER
+				}
+			}
+		}
+		UBD = {
+			annex_country = {
+				target = LAT
+			}
+		}
+	}
+	puppet = UBD
+	hidden_effect = {
+		UBD = {
+			if = {
+				limit = {
+					GER = {
+						is_GER_a_monarchy = yes
+					}
+				}
+				set_politics = {
+					ruling_party = neutrality
+  					elections_allowed = no
+				}
+				set_popularities = {
+   					democratic = 25
+   					fascism = 12
+   					communism = 10
+   					neutrality = 53
+				}
+			}
+			set_country_flag = released_by_germany
+			inherit_technology = GER
+			delete_obsolete_russian_templates = yes
+		}
+		every_state = {
+			limit = {
+				OR = {
+					is_core_of = LAT
+					is_core_of = EST
+					is_core_of = COU
+				}
+			}
+			add_core_of = UBD
+			if = {
+				limit = { region = 37 }
+				remove_russian_cores = yes
+			}
+		}
+		if = {
+			limit = {
+				GER = { has_idea = RUS_idea_armistice_cp }
+			}
+			UBD = { add_ideas = RUS_idea_armistice_cp }
+		}
+	}
+}
+GER_release_COU = {
+	every_state = {
+		limit = {
+			OR = {
+				is_owned_by = RUS
+				is_owned_by = SOV
+				is_owned_by = GER
+			}
+			is_core_of = COU
+		}
+		transfer_state_to = COU
+		remove_russian_claims = yes
+		remove_russian_cores = yes
+	}
+	puppet = COU
+	hidden_effect = {
+		set_global_flag = COU_released
+		COU = {
+			if = {
+				limit = {
+					GER = {
+						is_GER_a_monarchy = yes
+					}
+				}
+				set_politics = {
+					ruling_party = neutrality
+					elections_allowed = no
+				}
+				set_popularities = {
+					democratic = 25
+					communism = 22
+					neutrality = 53
+				}
+			}
+			set_country_flag = released_by_germany
+			inherit_technology = GER
+			delete_obsolete_russian_templates = yes
+		}
+		if = {
+			limit = {
+				GER = { has_idea = RUS_idea_armistice_cp }
+			}
+			COU = { add_ideas = RUS_idea_armistice_cp }
+		}
+	}
+}
+
+change_ruling_party_popularity = {
+	if = {
+		limit = {
+			OR = {
+				check_variable = { ideology_change_var > 1 }
+				check_variable = { ideology_change_var < -1 }
+			}
+		}
+		multiply_temp_variable = { ideology_change_var = 0.01 }
+	}
+	add_popularity = {
+		ideology = var:current_party_ideology_group
+		popularity = ideology_change_var
+	}
+}
+
+# it's needed when you change your government by civil war
+check_ruling_party_civil_war_popularity = {
+	if = {
+		limit = {
+			has_government = democratic
+		}
+		set_variable = {
+			var = civil_war_size_var
+			value = party_popularity@democratic
+		}
+	}
+	if = {
+		limit = {
+			has_government = communism
+		}
+		set_variable = {
+			var = civil_war_size_var
+			value = party_popularity@communism
+		}
+	}
+	if = {
+		limit = {
+			has_government = neutrality
+		}
+		set_variable = {
+			var = civil_war_size_var
+			value = party_popularity@neutrality
+		}
+	}
+	if = {
+		limit = {
+			has_government = fascism
+		}
+		set_variable = {
+			var = civil_war_size_var
+			value = party_popularity@fascism
+		}
+	}
+	if = {
+		limit = {
+			check_variable = {
+				var = civil_war_size_var
+				value = 0.3
+				compare = less_than
+			}
+		}
+		set_variable = {
+			var = civil_war_size_var
+			value = 0.3
+		}
+	}
+}
+
+check_fascism_civil_war_popularity = {
+	set_variable = {
+		var = civil_war_size_var
+		value = party_popularity@fascism
+	}
+	if = {
+		limit = {
+			check_variable = {
+				var = civil_war_size_var
+				value = 0.3
+				compare = less_than
+			}
+		}
+		set_variable = {
+			var = civil_war_size_var
+			value = 0.3
+		}
+	}
+}
+
+check_neutrality_civil_war_popularity = {
+	set_variable = {
+		var = civil_war_size_var
+		value = party_popularity@neutrality
+	}
+	if = {
+		limit = {
+			check_variable = {
+				var = civil_war_size_var
+				value = 0.3
+				compare = less_than
+			}
+		}
+		set_variable = {
+			var = civil_war_size_var
+			value = 0.3
+		}
+	}
+}
+
+check_democratic_civil_war_popularity = {
+	set_variable = {
+		var = civil_war_size_var
+		value = party_popularity@democratic
+	}
+	if = {
+		limit = {
+			check_variable = {
+				var = civil_war_size_var
+				value = 0.3
+				compare = less_than
+			}
+		}
+		set_variable = {
+			var = civil_war_size_var
+			value = 0.3
+		}
+	}
+}
+
+check_communism_civil_war_popularity = {
+	set_variable = {
+		var = civil_war_size_var
+		value = party_popularity@communism
+	}
+	if = {
+		limit = {
+			check_variable = {
+				var = civil_war_size_var
+				value = 0.3
+				compare = less_than
+			}
+		}
+		set_variable = {
+			var = civil_war_size_var
+			value = 0.3
+		}
+	}
+}
+
+# NOTE: "save_event_target_as = white_peace_receiver" needs to be performed first
+# Then you use "TAG = { white_peace_with_TARGET = yes }"
+# TAG is the country you want the event target to completely be at peace with
+# meaning it will ensure peace with all faction members and puppets on either side
+# remember: if you don't use TAG and just use "white_peace_with_TARGET = yes" then the event target is making peace with ROOT
+
+white_peace_with_TARGET = {
+	effect_tooltip = {
+		if = {
+			limit = { NOT = { civilwar_target = event_target:white_peace_receiver } }
+			white_peace = event_target:white_peace_receiver
+		}
+	}
+	hidden_effect = {
+		if = {
+			limit = {
+				has_war_with = event_target:white_peace_receiver
+				NOT = { civilwar_target = event_target:white_peace_receiver }
+			}
+			if = {
+				limit = {
+					is_in_faction = yes
+					is_faction_leader = no
+					faction_leader = { has_war_with = event_target:white_peace_receiver }
+				}
+				set_temp_variable = { peace_target1 = faction_leader }
+			}
+			else_if = {
+				limit = {
+					is_subject = yes
+					overlord = { has_war_with = event_target:white_peace_receiver }
+				}
+				set_temp_variable = { peace_target1 = overlord }
+			}
+			else = {
+				set_temp_variable = { peace_target1 = THIS }
+			}
+			event_target:white_peace_receiver = {
+				if = {
+					limit = {
+						is_in_faction = yes
+						is_faction_leader = no
+						faction_leader = { has_war_with = PREV.PREV }
+					}
+					set_temp_variable = { peace_target2 = faction_leader }
+				}
+				else_if = {
+					limit = {
+						is_subject = yes
+						overlord = { has_war_with = PREV.PREV }
+					}
+					set_temp_variable = { peace_target2 = overlord }
+				}
+				else = {
+					set_temp_variable = { peace_target2 = THIS }
+				}
+			}
+			var:peace_target1 = { white_peace = var:peace_target2 }
+
+			#cleanup in case of war merge bugs
+			var:peace_target1 = {
+				every_enemy_country = {
+					limit = { is_ally_with = var:peace_target2 }
+					white_peace = var:peace_target1
+				}
+			}
+			var:peace_target2 = {
+				every_enemy_country = {
+					limit = { is_ally_with = var:peace_target1 }
+					white_peace = var:peace_target2
+				}
+			}
+		}
+	}
+}
+
+# removes the country in scope from all wars (separately - it won't end the wars)
+separate_peace_all_wars = {
+	if = {
+		limit = { has_war = yes }
+		effect_tooltip = {
+			every_enemy_country = {
+				limit = { NOT = { civilwar_target = PREV } }
+				white_peace = PREV
+			}
+		}
+		hidden_effect = {
+			# first peace out with faction leaders
+			every_enemy_country = {
+				limit = {
+					is_faction_leader = yes
+					NOT = { civilwar_target = PREV }
+				}
+				PREV = { white_peace = PREV }
+			}
+
+			# then all non-puppets whose faction leaders aren't in the war
+			every_enemy_country = {
+				limit = {
+					is_subject = no
+					is_in_faction = yes
+					faction_leader = { NOT = { has_war_with = PREV.PREV } }
+					NOT = { civilwar_target = PREV }
+				}
+				PREV = { white_peace = PREV }
+			}
+
+			# then all non-puppets who aren't in factions
+			every_enemy_country = {
+				limit = {
+					is_subject = no
+					is_in_faction = no
+					NOT = { civilwar_target = PREV }
+				}
+				PREV = { white_peace = PREV }
+			}
+
+			# then all puppets whose overlords aren't in the war
+			every_enemy_country = {
+				limit = {
+					is_subject = yes
+					overlord = { NOT = { has_war_with = PREV.PREV } }
+					NOT = { civilwar_target = PREV }
+				}
+				PREV = { white_peace = PREV }
+			}
+		}
+	}
+}
+
+# ends puppet status, removes from faction and all current wars (used for rebellions)
+clear_all_relations = {
+	if = {
+		limit = { is_subject = yes }
+		overlord = {
+			set_autonomy = {
+				target = PREV
+				autonomy_state = autonomy_free
+			}
+		}
+	}
+	clr_country_flag = protectorate
+	if = {
+		limit = { is_in_faction = yes }
+		leave_faction = yes
+	}
+	separate_peace_all_wars = yes
+	every_other_country = {
+		limit = { is_guaranteed_by = PREV }
+		PREV = {
+			diplomatic_relation = {
+				country = PREV
+				relation = guarantee
+				active = no
+			}
+		}
+	}
+	every_other_country = {
+		limit = { has_guaranteed = PREV }
+		diplomatic_relation = {
+			country = PREV
+			relation = guarantee
+			active = no
+		}
+	}
+	every_other_country = {
+		limit = { has_non_aggression_pact_with = PREV }
+		diplomatic_relation = {
+			country = PREV
+			relation = military_access
+			active = no
+		}
+	}
+	every_other_country = {
+		limit = { has_military_access_to = PREV }
+		diplomatic_relation = {
+			country = PREV
+			relation = military_access
+			active = no
+		}
+	}
+	every_other_country = {
+		limit = { gives_military_access_to = PREV }
+		PREV = {
+			diplomatic_relation = {
+				country = PREV
+				relation = military_access
+				active = no
+			}
+		}
+	}
+	if = {
+		limit = { is_in_tech_sharing_group = german_research }
+		remove_from_tech_sharing_group = german_research
+	}
+	if = {
+		limit = { is_in_tech_sharing_group = russian_research }
+		remove_from_tech_sharing_group = russian_research
+	}
+	if = {
+		limit = { is_in_tech_sharing_group = comintern_research }
+		remove_from_tech_sharing_group = comintern_research
+	}
+	if = {
+		limit = { is_in_tech_sharing_group = brazilian_french_research }
+		remove_from_tech_sharing_group = brazilian_french_research
+	}
+	if = {
+		limit = { is_in_tech_sharing_group = brazilian_german_research }
+		remove_from_tech_sharing_group = brazilian_german_research
+	}
+}
+
+# clears all relations with a specific country and its allies, does not end wars
+# requires temp variable target = TAG
+clear_all_relations_with_TARGET = {
+	if = {
+		limit = { is_in_tech_sharing_group = german_research }
+		remove_from_tech_sharing_group = german_research
+	}
+	if = {
+		limit = { is_in_tech_sharing_group = russian_research }
+		remove_from_tech_sharing_group = russian_research
+	}
+	if = {
+		limit = { is_in_tech_sharing_group = comintern_research }
+		remove_from_tech_sharing_group = comintern_research
+	}
+	if = {
+		limit = { is_in_tech_sharing_group = brazilian_french_research }
+		remove_from_tech_sharing_group = brazilian_french_research
+	}
+	if = {
+		limit = { is_in_tech_sharing_group = brazilian_german_research }
+		remove_from_tech_sharing_group = brazilian_german_research
+	}
+	if = {
+		limit = { has_subject = var:target }
+		set_autonomy = {
+			target = PREV
+			autonomy_state = autonomy_free
+		}
+	}
+	else_if = {
+		limit = { is_subject_of = var:target }
+		overlord = {
+			set_autonomy = {
+				target = PREV
+				autonomy_state = autonomy_free
+			}
+		}
+	}
+	clr_country_flag = protectorate
+	if = {
+		limit = { is_in_faction_with = var:target }
+		leave_faction = yes
+	}
+	every_other_country = {
+		limit = {
+			has_guaranteed = PREV
+			is_ally_with = var:target
+		}
+		diplomatic_relation = {
+			country = PREV
+			relation = guarantee
+			active = no
+		}
+	}
+	every_other_country = {
+		limit = {
+			has_non_aggression_pact_with = PREV
+			is_ally_with = var:target
+		}
+		diplomatic_relation = {
+			country = PREV
+			relation = military_access
+			active = no
+		}
+	}
+	every_other_country = {
+		limit = {
+			has_military_access_to = PREV
+			is_ally_with = var:target
+		}
+		diplomatic_relation = {
+			country = PREV
+			relation = military_access
+			active = no
+		}
+	}
+	every_other_country = {
+		limit = {
+			gives_military_access_to = PREV
+			is_ally_with = var:target
+		}
+		PREV = {
+			diplomatic_relation = {
+				country = PREV
+				relation = military_access
+				active = no
+			}
+		}
+	}
+}
+
+# ends puppet status, removes from faction and clears all relations except wars (used for rebellions)
+clear_all_relations_except_wars = {
+	if = {
+		limit = { is_subject = yes }
+		overlord = {
+			set_autonomy = {
+				target = PREV
+				autonomy_state = autonomy_free
+			}
+		}
+	}
+	if = {
+		limit = { is_in_faction = yes }
+		leave_faction = yes
+	}
+	every_other_country = {
+		limit = { is_guaranteed_by = PREV }
+		PREV = {
+			diplomatic_relation = {
+				country = PREV
+				relation = guarantee
+				active = no
+			}
+		}
+	}
+	every_other_country = {
+		limit = { has_guaranteed = PREV }
+		diplomatic_relation = {
+			country = PREV
+			relation = guarantee
+			active = no
+		}
+	}
+	every_other_country = {
+		limit = { has_non_aggression_pact_with = PREV }
+		diplomatic_relation = {
+			country = PREV
+			relation = military_access
+			active = no
+		}
+	}
+	every_other_country = {
+		limit = { has_military_access_to = PREV }
+		PREV = {
+			diplomatic_relation = {
+				country = PREV
+				relation = military_access
+				active = no
+			}
+		}
+	}
+	every_other_country = {
+		limit = { gives_military_access_to = PREV }
+		diplomatic_relation = {
+			country = PREV
+			relation = military_access
+			active = no
+		}
+	}
+	if = {
+		limit = { is_in_tech_sharing_group = german_research }
+		remove_from_tech_sharing_group = german_research
+	}
+	if = {
+		limit = { is_in_tech_sharing_group = russian_research }
+		remove_from_tech_sharing_group = russian_research
+	}
+	if = {
+		limit = { is_in_tech_sharing_group = comintern_research }
+		remove_from_tech_sharing_group = comintern_research
+	}
+	if = {
+		limit = { is_in_tech_sharing_group = brazilian_french_research }
+		remove_from_tech_sharing_group = brazilian_french_research
+	}
+	if = {
+		limit = { is_in_tech_sharing_group = brazilian_german_research }
+		remove_from_tech_sharing_group = brazilian_german_research
+	}
+}
+
+# clears all relations with PREV (won't remove from faction if not a faction leader, nor stop wars if not a valid target)
+clear_relations_with_PREV = {
+	if = {
+		limit = { has_subject = PREV }
+		set_autonomy = {
+			target = PREV
+			autonomy_state = autonomy_free
+		}
+	}
+	else_if = {
+		limit = { is_subject_of = PREV }
+		PREV = {
+			set_autonomy = {
+				target = PREV
+				autonomy_state = autonomy_free
+			}
+		}
+	}
+	if = {
+		limit = {
+			is_in_faction_with = PREV
+			OR = {
+				is_faction_leader = yes
+				PREV = { is_faction_leader = yes }
+			}
+		}
+		leave_faction = yes
+	}
+	if = {
+		limit = {
+			has_war_with = PREV
+			is_valid_peace_target = yes
+			PREV = { is_valid_peace_target = yes }
+		}
+		PREV = { save_event_target_as = white_peace_receiver }
+		white_peace_with_TARGET = yes
+	}
+	if = {
+		limit = { has_guaranteed = PREV }
+		diplomatic_relation = {
+			country = PREV
+			relation = guarantee
+			active = no
+		}
+	}
+	else_if = {
+		limit = { is_guaranteed_by = PREV }
+		PREV = {
+			diplomatic_relation = {
+				country = PREV
+				relation = guarantee
+				active = no
+			}
+		}
+	}
+	if = {
+		limit = { has_non_aggression_pact_with = PREV }
+		diplomatic_relation = {
+			country = PREV
+			relation = military_access
+			active = no
+		}
+	}
+	if = {
+		limit = { has_military_access_to = PREV }
+		PREV = {
+			diplomatic_relation = {
+				country = PREV
+				relation = military_access
+				active = no
+			}
+		}
+	}
+	if = {
+		limit = { gives_military_access_to = PREV }
+		diplomatic_relation = {
+			country = PREV
+			relation = military_access
+			active = no
+		}
+	}
+}
+
+# forces a country to surrender (mechanically by lowering their surrender limit to 0%)
+force_capitulate = {
+	hidden_effect = {
+		add_timed_idea = {
+			idea = ready_to_surrender
+			days = 15
+		}
+	}
+}
+
+# changes the government of the country in scope to that of ROOT (the country running the event)
+copy_government_of_ROOT = {
+	set_politics = { ruling_party = var:ROOT.current_party_ideology_group }
+	hidden_effect = {
+		set_popularities = {
+			neutrality = ROOT.party_popularity_100@neutrality
+			democratic = ROOT.party_popularity_100@democratic
+			fascism = ROOT.party_popularity_100@fascism
+			communism = ROOT.party_popularity_100@communism
+		}
+	}
+}
+
+# changes the government of the country in scope to that of PREV
+copy_government_of_PREV = {
+	set_politics = { ruling_party = var:PREV.current_party_ideology_group }
+	hidden_effect = {
+		set_popularities = {
+			neutrality = PREV.party_popularity_100@neutrality
+			democratic = PREV.party_popularity_100@democratic
+			fascism = PREV.party_popularity_100@fascism
+			communism = PREV.party_popularity_100@communism
+		}
+	}
+}
+
+# changes the popularites of the country in scope to that of ROOT (the country running the event)
+copy_popularities_of_ROOT = {
+	hidden_effect = {
+		set_popularities = {
+			neutrality = ROOT.party_popularity_100@neutrality
+			democratic = ROOT.party_popularity_100@democratic
+			fascism = ROOT.party_popularity_100@fascism
+			communism = ROOT.party_popularity_100@communism
+		}
+	}
+}
+
+# changes the popularites of the country in scope to that of PREV (the country running the event)
+copy_popularities_of_PREV = {
+	hidden_effect = {
+		set_popularities = {
+			neutrality = PREV.party_popularity_100@neutrality
+			democratic = PREV.party_popularity_100@democratic
+			fascism = PREV.party_popularity_100@fascism
+			communism = PREV.party_popularity_100@communism
+		}
+	}
+}
+
+# changes the laws of the country in scope to that of PREV (the country running the event)
+copy_laws_of_PREV = {
+	hidden_effect = {
+		### Economy ###
+		if = {
+			limit = { PREV = { has_idea = undisturbed_isolation } }
+			add_ideas = undisturbed_isolation
+		}
+		else_if = {
+			limit = { PREV = { has_idea = isolation } }
+			add_ideas = isolation
+		}
+		else_if = {
+			limit = { PREV = { has_idea = civilian_economy } }
+			add_ideas = civilian_economy
+		}
+		else_if = {
+			limit = { PREV = { has_idea = low_economic_mobilisation } }
+			add_ideas = low_economic_mobilisation
+		}
+		else_if = {
+			limit = { PREV = { has_idea = partial_economic_mobilisation } }
+			add_ideas = partial_economic_mobilisation
+		}
+		else_if = {
+			limit = { PREV = { has_idea = war_economy } }
+			add_ideas = war_economy
+		}
+		else_if = {
+			limit = { PREV = { has_idea = tot_economic_mobilisation } }
+			add_ideas = tot_economic_mobilisation
+		}
+		else_if = {
+			limit = { PREV = { has_idea = interwar_recovery } }
+			add_ideas = interwar_recovery
+		}
+		else_if = {
+			limit = { PREV = { has_idea = roaring_twenties } }
+			add_ideas = roaring_twenties
+		}
+		else_if = {
+			limit = { PREV = { has_idea = statism_economy } }
+			add_ideas = statism_economy
+		}
+		else_if = {
+			limit = { PREV = { has_idea = USA_collectivized_society } }
+			add_ideas = USA_collectivized_society
+		}
+
+		### Trade ###
+		if = {
+			limit = { PREV = { has_idea = free_trade } }
+			add_ideas = free_trade
+		}
+		else_if = {
+			limit = { PREV = { has_idea = export_focus } }
+			add_ideas = export_focus
+		}
+		else_if = {
+			limit = { PREV = { has_idea = limited_exports } }
+			add_ideas = limited_exports
+		}
+		else_if = {
+			limit = { PREV = { has_idea = closed_economy } }
+			add_ideas = closed_economy
+		}
+
+		### Mobilisation ###
+		if = {
+			limit = { PREV = { has_idea = disarmed_nation } }
+			add_ideas = disarmed_nation
+		}
+		else_if = {
+			limit = { PREV = { has_idea = volunteer_only } }
+			add_ideas = volunteer_only
+		}
+		else_if = {
+			limit = { PREV = { has_idea = limited_conscription } }
+			add_ideas = limited_conscription
+		}
+		else_if = {
+			limit = { PREV = { has_idea = extensive_conscription } }
+			add_ideas = extensive_conscription
+		}
+		else_if = {
+			limit = { PREV = { has_idea = service_by_requirement } }
+			add_ideas = service_by_requirement
+		}
+		else_if = {
+			limit = { PREV = { has_idea = all_adults_serve } }
+			add_ideas = all_adults_serve
+		}
+		else_if = {
+			limit = { PREV = { has_idea = scraping_the_barrel } }
+			add_ideas = scraping_the_barrel
+		}
+		else_if = {
+			limit = { PREV = { has_idea = ETH_chitet_law } }
+			add_ideas = ETH_chitet_law
+		}
+		else_if = {
+			limit = { PREV = { has_idea = ETH_chitet_law_peace_time } }
+			add_ideas = ETH_chitet_law_peace_time
+		}
+	}
+}
+
+# the following effects are excellent for preserving a puppet's government so it doesn't change to the overlord
+# use the first command in the scope of the about-to-be-puppeted country right before the puppet command is executed
+# and then the second, also in the scope of the puppet, right after
+get_current_government_type = {
+	clear_variable = original_government_type
+	set_variable = { original_government_type = current_party_ideology_group }
+
+	if = {
+		limit = { has_elections = yes }
+		set_country_flag = original_government_type_had_elections
+	}
+
+	clear_array = original_popularities
+	add_to_array = { original_popularities = party_popularity_100@neutrality }
+	add_to_array = { original_popularities = party_popularity_100@democratic }
+	add_to_array = { original_popularities = party_popularity_100@fascism }
+	add_to_array = { original_popularities = party_popularity_100@communism }
+
+	set_temp_variable = { sum = 100 }
+	for_each_loop = {
+		array = original_popularities
+		subtract_from_temp_variable = { sum = v }
+	}
+	add_to_array = { original_popularities = sum } #last value (natpop), calculated directly to avoid rounding errors
+}
+
+restore_previous_government_type = {
+	hidden_effect = {
+		if = {
+			limit = { has_variable = original_government_type } #needed to avoid a CTD
+			if = {
+				limit = { has_country_flag = original_government_type_had_elections }
+				clr_country_flag = original_government_type_had_elections
+				set_politics = {
+					ruling_party = var:original_government_type
+					elections_allowed = yes
+				}
+			}
+			else = {
+				set_politics = {
+					ruling_party = var:original_government_type
+					elections_allowed = no
+				}
+			}
+		}
+		clear_variable = original_government_type
+
+		if = {
+			limit = { check_variable = { original_popularities^num > 0 } }
+			set_popularities = {
+				neutrality = original_popularities^0
+				democratic = original_popularities^1
+				fascism = original_popularities^2
+				communism = original_popularities^3
+			}
+			clear_array = original_popularities
+		}
+	}
+}
+
+destroy_all_ships = {
+	destroy_ships = {
+		type = ship_hull_light
+		count = all
+	}
+	destroy_ships = {
+		type = ship_hull_cruiser
+		count = all
+	}
+	destroy_ships = {
+		type = ship_hull_cruiser_panzerschiff
+		count = all
+	}
+	destroy_ships = {
+		type = ship_hull_cruiser_coastal_defense_ship
+		count = all
+	}
+	destroy_ships = {
+		type = ship_hull_pre_dreadnought
+		count = all
+	}
+	destroy_ships = {
+		type = ship_hull_heavy
+		count = all
+	}
+	destroy_ships = {
+		type = ship_hull_super_heavy_1
+		count = all
+	}
+	destroy_ships = {
+		type = ship_hull_submarine
+		count = all
+	}
+	destroy_ships = {
+		type = ship_hull_cruiser_submarine
+		count = all
+	}
+	destroy_ships = {
+		type = ship_hull_carrier
+		count = all
+	}
+	destroy_ships = {
+		type = ship_hull_carrier_conversion_bb
+		count = all
+	}
+	destroy_ships = {
+		type = ship_hull_carrier_conversion_ca
+		count = all
+	}
+}
+
+# scope is the country being freed
+remove_puppet_and_leave_faction = {
+	if = {
+		limit = { is_in_faction = yes }
+		leave_faction = yes
+	}
+	if = {
+		limit = { is_subject = yes }
+		overlord = {
+			set_autonomy = {
+				target = PREV
+				autonomy_state = autonomy_free
+			}
+		}
+	}
+}
+
+calculate_days_since_game_start = {
+	add_to_temp_variable = { days_to_event = 706640 }
+	subtract_from_temp_variable = { days_to_event = global.num_days }
+}
+
+suspend_elections = {
+	set_politics = {
+		ruling_party = var:ROOT.current_party_ideology_group
+		elections_allowed = no
+	}
+}
+
+allow_elections = {
+	set_politics = {
+		ruling_party = var:ROOT.current_party_ideology_group
+		elections_allowed = yes
+	}
+}
+
+new_term_elections = {
+	meta_effect = {
+		text = {
+			set_politics = {
+				ruling_party = var:ROOT.current_party_ideology_group
+				last_election = "[CURRENT_DATE]"
+				elections_allowed = yes
+			}
+		}
+		CURRENT_DATE = "[?global.date.GetDateStringNoHour]"
+	}
+}
+
+remove_russian_claims = {
+	every_possible_country = {
+		limit = {
+			is_russian_tag = yes
+			PREV = { is_claimed_by = PREV }
+		}
+		PREV = { remove_claim_by = PREV }
+	}
+}
+
+remove_russian_cores = {
+	every_possible_country = {
+		limit = {
+			is_russian_tag = yes
+			PREV = { is_core_of = PREV }
+		}
+		PREV = { remove_core_of = PREV }
+	}
+}
+clear_iskolata = {
+	if = {
+		limit = {
+			LAT = {
+				exists = no
+				OR = {
+					has_country_flag = LAT_iskolata
+					has_cosmetic_tag = LAT_iskolata
+				}
+			}
+		}
+		LAT = {
+			clear_all_relations = yes
+			clr_country_flag = LAT_iskolata
+			drop_cosmetic_tag = yes
+			retire_character = LAT_fricis_rozins
+			set_politics = {
+				ruling_party = democratic
+				elections_allowed = yes
+			}
+			set_rule = {
+				can_join_factions = yes
+			}
+			set_popularities = {
+				democratic = 50
+				neutrality = 30
+				fascism = 0
+				communism = 20
+			}
+			remove_ideas = standing_alone
+		}
+	}
+}
+
+join_the_league_of_nations = {
+	custom_effect_tooltip = join_the_league_of_nations_tt
+	hidden_effect = {
+		if = {
+			limit = {
+				NOT = {
+					is_in_array = {
+						array = global.league_of_nations
+						value = THIS
+					}
+				}
+			}
+			add_to_array = {
+				array = global.league_of_nations
+				value = THIS
+			}
+		}
+		if = {
+			limit = {
+				NOT = {
+					has_idea = league_of_nations_member_idea
+				}
+			}
+			add_ideas = league_of_nations_member_idea
+		}
+	}
+}
+
+leave_the_league_of_nations = {
+	custom_effect_tooltip = leave_the_league_of_nations_tt
+	hidden_effect = {
+		if = {
+			limit = {
+				is_in_array = {
+					array = global.league_of_nations
+					value = THIS
+				}
+			}
+			remove_from_array = {
+				array = global.league_of_nations
+				value = THIS
+			}
+		}
+		if = {
+			limit = {
+				has_idea = league_of_nations_member_idea
+			}
+			remove_ideas = league_of_nations_member_idea
+		}
+		set_country_flag = {
+			flag = left_from_league_of_nations
+		}
+	}
+}
+
+take_all_subjects_FROM = {
+	every_country = {
+		limit = {
+			is_subject_of = FROM
+		}
+		if = {
+			limit = {
+				has_autonomy_state = autonomy_dominion
+			}
+			FROM = { end_puppet = PREV }
+			get_current_government_type = yes
+			ROOT = {
+				set_autonomy = {
+					target = PREV
+					autonomous_state = autonomy_dominion
+				}
+			}
+			restore_previous_government_type = yes
+		}
+		else_if = {
+			limit = {
+				has_autonomy_state = autonomy_colony
+			}
+			FROM = { end_puppet = PREV }
+			get_current_government_type = yes
+			ROOT = {
+				set_autonomy = {
+					target = PREV
+					autonomous_state = autonomy_colony
+				}
+			}
+			restore_previous_government_type = yes
+		}
+		else_if = {
+			limit = {
+				has_autonomy_state = autonomy_puppet
+			}
+			FROM = { end_puppet = PREV }
+			get_current_government_type = yes
+			ROOT = {
+				set_autonomy = {
+					target = PREV
+					autonomous_state = autonomy_puppet
+				}
+			}
+			restore_previous_government_type = yes
+		}
+		else_if = {
+			limit = {
+				has_autonomy_state = autonomy_integrated_puppet
+			}
+			FROM = { end_puppet = PREV }
+			get_current_government_type = yes
+			ROOT = {
+				set_autonomy = {
+					target = PREV
+					autonomous_state = autonomy_integrated_puppet
+				}
+			}
+			restore_previous_government_type = yes
+		}
+		# DEATH OR DISHONOUR
+		else_if = {
+			limit = {
+				has_autonomy_state = autonomy_satellite
+			}
+			FROM = { end_puppet = PREV }
+			get_current_government_type = yes
+			ROOT = {
+				set_autonomy = {
+					target = PREV
+					autonomous_state = autonomy_satellite
+				}
+			}
+			restore_previous_government_type = yes
+		}
+		# else_if = {
+		# 	limit = {
+		# 		has_autonomy_state = autonomy_reichsprotectorate
+		# 	}
+		# 	FROM = { end_puppet = PREV }
+		# 	get_current_government_type = yes
+		# 	ROOT = {
+		# 		set_autonomy = {
+		# 			target = PREV
+		# 			autonomous_state = autonomy_reichsprotectorate
+		# 		}
+		# 	}
+		# 	restore_previous_government_type = yes
+		# }
+		# else_if = {
+		# 	limit = {
+		# 		has_autonomy_state = autonomy_reichskommissariat
+		# 	}
+		# 	FROM = { end_puppet = PREV }
+		# 	get_current_government_type = yes
+		# 	ROOT = {
+		# 		set_autonomy = {
+		# 			target = PREV
+		# 			autonomous_state = autonomy_reichskommissariat
+		# 		}
+		# 	}
+		# 	restore_previous_government_type = yes
+		# }
+		# WAKING THE TIGER
+		else_if = {
+			limit = {
+				has_autonomy_state = autonomy_wtt_imperial_subject
+			}
+			FROM = { end_puppet = PREV }
+			get_current_government_type = yes
+			ROOT = {
+				set_autonomy = {
+					target = PREV
+					autonomous_state = autonomy_wtt_imperial_subject
+				}
+			}
+			restore_previous_government_type = yes
+		}
+		else_if = {
+			limit = {
+				has_autonomy_state = autonomy_wtt_imperial_associate
+			}
+			FROM = { end_puppet = PREV }
+			get_current_government_type = yes
+			ROOT = {
+				set_autonomy = {
+					target = PREV
+					autonomous_state = autonomy_wtt_imperial_associate
+				}
+			}
+			restore_previous_government_type = yes
+		}
+		else_if = {
+			limit = {
+				has_autonomy_state = autonomy_wtt_imperial_protectorate
+			}
+			FROM = { end_puppet = PREV }
+			get_current_government_type = yes
+			ROOT = {
+				set_autonomy = {
+					target = PREV
+					autonomous_state = autonomy_wtt_imperial_protectorate
+				}
+			}
+			restore_previous_government_type = yes
+		}
+		# MAN THE GUNS
+		else_if = {
+			limit = {
+				has_autonomy_state = autonomy_supervised_state
+			}
+			FROM = { end_puppet = PREV }
+			get_current_government_type = yes
+			ROOT = {
+				set_autonomy = {
+					target = PREV
+					autonomous_state = autonomy_supervised_state
+				}
+			}
+			restore_previous_government_type = yes
+		}
+		# LA RESISTANCE
+		else_if = {
+			limit = {
+				has_autonomy_state = autonomy_collaboration_government
+			}
+			FROM = { end_puppet = PREV }
+			get_current_government_type = yes
+			ROOT = {
+				set_autonomy = {
+					target = PREV
+					autonomous_state = autonomy_collaboration_government
+				}
+			}
+			restore_previous_government_type = yes
+		}
+		# NO STEP BACK
+		# else_if = {
+		# 	limit = {
+		# 		has_autonomy_state = autonomy_personal_union
+		# 	}
+		# 	FROM = { end_puppet = PREV }
+		# 	get_current_government_type = yes
+		# 	ROOT = {
+		# 		set_autonomy = {
+		# 			target = PREV
+		# 			autonomous_state = autonomy_personal_union
+		# 		}
+		# 	}
+		# 	restore_previous_government_type = yes
+		# }
+		# TGWR AUTONOMIES
+		else_if = {
+			limit = {
+				has_autonomy_state = autonomy_tgwr_protectorate
+			}
+			FROM = { end_puppet = PREV }
+			get_current_government_type = yes
+			ROOT = {
+				PREV = { set_country_flag = protectorate }
+				set_autonomy = {
+					target = PREV
+					autonomous_state = autonomy_tgwr_protectorate
+				}
+			}
+			restore_previous_government_type = yes
+		}
+		else_if = {
+			limit = {
+				has_autonomy_state = autonomy_tgwr_informal_protectorate
+			}
+			FROM = { end_puppet = PREV }
+			get_current_government_type = yes
+			ROOT = {
+				PREV = { set_country_flag = protectorate }
+				set_autonomy = {
+					target = PREV
+					autonomous_state = autonomy_tgwr_informal_protectorate
+				}
+			}
+			restore_previous_government_type = yes
+		}
+		else_if = {
+			limit = {
+				has_autonomy_state = autonomy_tgwr_integrated_protectorate
+			}
+			FROM = { end_puppet = PREV }
+			get_current_government_type = yes
+			ROOT = {
+				PREV = { set_country_flag = protectorate }
+				set_autonomy = {
+					target = PREV
+					autonomous_state = autonomy_tgwr_integrated_protectorate
+				}
+			}
+			restore_previous_government_type = yes
+		}
+		else_if = {
+			limit = {
+				has_autonomy_state = autonomy_tgwr_concession
+			}
+			FROM = { end_puppet = PREV }
+			get_current_government_type = yes
+			ROOT = {
+				set_autonomy = {
+					target = PREV
+					autonomous_state = autonomy_tgwr_concession
+				}
+			}
+			restore_previous_government_type = yes
+		}
+		else_if = {
+			limit = {
+				has_autonomy_state = autonomy_tgwr_balkan_federal_subject
+			}
+			FROM = { end_puppet = PREV }
+			get_current_government_type = yes
+			ROOT = {
+				set_autonomy = {
+					target = PREV
+					autonomous_state = autonomy_tgwr_balkan_federal_subject
+				}
+			}
+			restore_previous_government_type = yes
+		}
+		else_if = {
+			limit = {
+				has_autonomy_state = autonomy_tgwr_ottoman_emirate
+			}
+			FROM = { end_puppet = PREV }
+			get_current_government_type = yes
+			ROOT = {
+				set_autonomy = {
+					target = PREV
+					autonomous_state = autonomy_tgwr_ottoman_emirate
+				}
+			}
+			restore_previous_government_type = yes
+		}
+		else_if = {
+			limit = {
+				has_autonomy_state = autonomy_tgwr_unilateral_union
+			}
+			FROM = { end_puppet = PREV }
+			get_current_government_type = yes
+			ROOT = {
+				set_autonomy = {
+					target = PREV
+					autonomous_state = autonomy_tgwr_unilateral_union
+				}
+			}
+			restore_previous_government_type = yes
+		}
+		else_if = {
+			limit = {
+				has_autonomy_state = autonomy_tgwr_regional_government
+			}
+			FROM = { end_puppet = PREV }
+			get_current_government_type = yes
+			ROOT = {
+				set_autonomy = {
+					target = PREV
+					autonomous_state = autonomy_tgwr_regional_government
+				}
+			}
+			restore_previous_government_type = yes
+		}
+		else_if = {
+			limit = {
+				has_autonomy_state = autonomy_tgwr_governorate_general
+			}
+			FROM = { end_puppet = PREV }
+			get_current_government_type = yes
+			ROOT = {
+				set_autonomy = {
+					target = PREV
+					autonomous_state = autonomy_tgwr_governorate_general
+				}
+			}
+			restore_previous_government_type = yes
+		}
+		else_if = {
+			limit = {
+				has_autonomy_state = autonomy_tgwr_real_union
+			}
+			FROM = { end_puppet = PREV }
+			get_current_government_type = yes
+			ROOT = {
+				set_autonomy = {
+					target = PREV
+					autonomous_state = autonomy_tgwr_real_union
+				}
+			}
+			restore_previous_government_type = yes
+		}
+		else_if = {
+			limit = {
+				has_autonomy_state = autonomy_tgwr_personal_union
+			}
+			FROM = { end_puppet = PREV }
+			get_current_government_type = yes
+			ROOT = {
+				set_autonomy = {
+					target = PREV
+					autonomous_state = autonomy_tgwr_personal_union
+				}
+			}
+			restore_previous_government_type = yes
+		}
+		else = {
+			FROM = { end_puppet = PREV }
+			get_current_government_type = yes
+			ROOT = { puppet = PREV }
+			restore_previous_government_type = yes
+		}
+	}
+}
+
+take_all_subjects_ROOT = {
+	every_country = {
+		limit = {
+			is_subject_of = ROOT
+		}
+		if = {
+			limit = {
+				has_autonomy_state = autonomy_dominion
+			}
+			ROOT = { end_puppet = PREV }
+			get_current_government_type = yes
+			PREV = {
+				set_autonomy = {
+					target = PREV
+					autonomous_state = autonomy_dominion
+				}
+			}
+			restore_previous_government_type = yes
+		}
+		else_if = {
+			limit = {
+				has_autonomy_state = autonomy_colony
+			}
+			ROOT = { end_puppet = PREV }
+			get_current_government_type = yes
+			PREV = {
+				set_autonomy = {
+					target = PREV
+					autonomous_state = autonomy_colony
+				}
+			}
+			restore_previous_government_type = yes
+		}
+		else_if = {
+			limit = {
+				has_autonomy_state = autonomy_puppet
+			}
+			ROOT = { end_puppet = PREV }
+			get_current_government_type = yes
+			PREV = {
+				set_autonomy = {
+					target = PREV
+					autonomous_state = autonomy_puppet
+				}
+			}
+			restore_previous_government_type = yes
+		}
+		else_if = {
+			limit = {
+				has_autonomy_state = autonomy_integrated_puppet
+			}
+			ROOT = { end_puppet = PREV }
+			get_current_government_type = yes
+			PREV = {
+				set_autonomy = {
+					target = PREV
+					autonomous_state = autonomy_integrated_puppet
+				}
+			}
+			restore_previous_government_type = yes
+		}
+		# DEATH OR DISHONOUR
+		else_if = {
+			limit = {
+				has_autonomy_state = autonomy_satellite
+			}
+			ROOT = { end_puppet = PREV }
+			get_current_government_type = yes
+			PREV = {
+				set_autonomy = {
+					target = PREV
+					autonomous_state = autonomy_satellite
+				}
+			}
+			restore_previous_government_type = yes
+		}
+		# else_if = {
+		# 	limit = {
+		# 		has_autonomy_state = autonomy_reichsprotectorate
+		# 	}
+		# 	ROOT = { end_puppet = PREV }
+		# 	get_current_government_type = yes
+		# 	PREV = {
+		# 		set_autonomy = {
+		# 			target = PREV
+		# 			autonomous_state = autonomy_reichsprotectorate
+		# 		}
+		# 	}
+		# 	restore_previous_government_type = yes
+		# }
+		# else_if = {
+		# 	limit = {
+		# 		has_autonomy_state = autonomy_reichskommissariat
+		# 	}
+		# 	ROOT = { end_puppet = PREV }
+		# 	get_current_government_type = yes
+		# 	PREV = {
+		# 		set_autonomy = {
+		# 			target = PREV
+		# 			autonomous_state = autonomy_reichskommissariat
+		# 		}
+		# 	}
+		# 	restore_previous_government_type = yes
+		# }
+		# WAKING THE TIGER
+		else_if = {
+			limit = {
+				has_autonomy_state = autonomy_wtt_imperial_subject
+			}
+			ROOT = { end_puppet = PREV }
+			get_current_government_type = yes
+			PREV = {
+				set_autonomy = {
+					target = PREV
+					autonomous_state = autonomy_wtt_imperial_subject
+				}
+			}
+			restore_previous_government_type = yes
+		}
+		else_if = {
+			limit = {
+				has_autonomy_state = autonomy_wtt_imperial_associate
+			}
+			ROOT = { end_puppet = PREV }
+			get_current_government_type = yes
+			PREV = {
+				set_autonomy = {
+					target = PREV
+					autonomous_state = autonomy_wtt_imperial_associate
+				}
+			}
+			restore_previous_government_type = yes
+		}
+		else_if = {
+			limit = {
+				has_autonomy_state = autonomy_wtt_imperial_protectorate
+			}
+			ROOT = { end_puppet = PREV }
+			get_current_government_type = yes
+			PREV = {
+				set_autonomy = {
+					target = PREV
+					autonomous_state = autonomy_wtt_imperial_protectorate
+				}
+			}
+			restore_previous_government_type = yes
+		}
+		# MAN THE GUNS
+		else_if = {
+			limit = {
+				has_autonomy_state = autonomy_supervised_state
+			}
+			ROOT = { end_puppet = PREV }
+			get_current_government_type = yes
+			PREV = {
+				set_autonomy = {
+					target = PREV
+					autonomous_state = autonomy_supervised_state
+				}
+			}
+			restore_previous_government_type = yes
+		}
+		# LA RESISTANCE
+		else_if = {
+			limit = {
+				has_autonomy_state = autonomy_collaboration_government
+			}
+			ROOT = { end_puppet = PREV }
+			get_current_government_type = yes
+			PREV = {
+				set_autonomy = {
+					target = PREV
+					autonomous_state = autonomy_collaboration_government
+				}
+			}
+			restore_previous_government_type = yes
+		}
+		# NO STEP BACK
+		# else_if = {
+		# 	limit = {
+		# 		has_autonomy_state = autonomy_personal_union
+		# 	}
+		# 	ROOT = { end_puppet = PREV }
+		# 	get_current_government_type = yes
+		# 	PREV = {
+		# 		set_autonomy = {
+		# 			target = PREV
+		# 			autonomous_state = autonomy_personal_union
+		# 		}
+		# 	}
+		# 	restore_previous_government_type = yes
+		# }
+		# TGWR AUTONOMIES
+		else_if = {
+			limit = {
+				has_autonomy_state = autonomy_tgwr_protectorate
+			}
+			ROOT = { end_puppet = PREV }
+			get_current_government_type = yes
+			PREV = {
+				PREV = { set_country_flag = protectorate }
+				set_autonomy = {
+					target = PREV
+					autonomous_state = autonomy_tgwr_protectorate
+				}
+			}
+			restore_previous_government_type = yes
+		}
+		else_if = {
+			limit = {
+				has_autonomy_state = autonomy_tgwr_informal_protectorate
+			}
+			ROOT = { end_puppet = PREV }
+			get_current_government_type = yes
+			PREV = {
+				PREV = { set_country_flag = protectorate }
+				set_autonomy = {
+					target = PREV
+					autonomous_state = autonomy_tgwr_informal_protectorate
+				}
+			}
+			restore_previous_government_type = yes
+		}
+		else_if = {
+			limit = {
+				has_autonomy_state = autonomy_tgwr_integrated_protectorate
+			}
+			ROOT = { end_puppet = PREV }
+			get_current_government_type = yes
+			PREV = {
+				PREV = { set_country_flag = protectorate }
+				set_autonomy = {
+					target = PREV
+					autonomous_state = autonomy_tgwr_integrated_protectorate
+				}
+			}
+			restore_previous_government_type = yes
+		}
+		else_if = {
+			limit = {
+				has_autonomy_state = autonomy_tgwr_concession
+			}
+			ROOT = { end_puppet = PREV }
+			get_current_government_type = yes
+			PREV = {
+				set_autonomy = {
+					target = PREV
+					autonomous_state = autonomy_tgwr_concession
+				}
+			}
+			restore_previous_government_type = yes
+		}
+		else_if = {
+			limit = {
+				has_autonomy_state = autonomy_tgwr_balkan_federal_subject
+			}
+			ROOT = { end_puppet = PREV }
+			get_current_government_type = yes
+			PREV = {
+				set_autonomy = {
+					target = PREV
+					autonomous_state = autonomy_tgwr_balkan_federal_subject
+				}
+			}
+			restore_previous_government_type = yes
+		}
+		else_if = {
+			limit = {
+				has_autonomy_state = autonomy_tgwr_ottoman_emirate
+			}
+			ROOT = { end_puppet = PREV }
+			get_current_government_type = yes
+			PREV = {
+				set_autonomy = {
+					target = PREV
+					autonomous_state = autonomy_tgwr_ottoman_emirate
+				}
+			}
+			restore_previous_government_type = yes
+		}
+		else_if = {
+			limit = {
+				has_autonomy_state = autonomy_tgwr_unilateral_union
+			}
+			ROOT = { end_puppet = PREV }
+			get_current_government_type = yes
+			PREV = {
+				set_autonomy = {
+					target = PREV
+					autonomous_state = autonomy_tgwr_unilateral_union
+				}
+			}
+			restore_previous_government_type = yes
+		}
+		else_if = {
+			limit = {
+				has_autonomy_state = autonomy_tgwr_regional_government
+			}
+			ROOT = { end_puppet = PREV }
+			get_current_government_type = yes
+			PREV = {
+				set_autonomy = {
+					target = PREV
+					autonomous_state = autonomy_tgwr_regional_government
+				}
+			}
+			restore_previous_government_type = yes
+		}
+		else_if = {
+			limit = {
+				has_autonomy_state = autonomy_tgwr_governorate_general
+			}
+			ROOT = { end_puppet = PREV }
+			get_current_government_type = yes
+			PREV = {
+				set_autonomy = {
+					target = PREV
+					autonomous_state = autonomy_tgwr_governorate_general
+				}
+			}
+			restore_previous_government_type = yes
+		}
+		else_if = {
+			limit = {
+				has_autonomy_state = autonomy_tgwr_real_union
+			}
+			ROOT = { end_puppet = PREV }
+			get_current_government_type = yes
+			PREV = {
+				set_autonomy = {
+					target = PREV
+					autonomous_state = autonomy_tgwr_real_union
+				}
+			}
+			restore_previous_government_type = yes
+		}
+		else_if = {
+			limit = {
+				has_autonomy_state = autonomy_tgwr_personal_union
+			}
+			ROOT = { end_puppet = PREV }
+			get_current_government_type = yes
+			PREV = {
+				set_autonomy = {
+					target = PREV
+					autonomous_state = autonomy_tgwr_personal_union
+				}
+			}
+			restore_previous_government_type = yes
+		}
+		else = {
+			ROOT = { end_puppet = PREV }
+			get_current_government_type = yes
+			PREV = { puppet = PREV }
+			restore_previous_government_type = yes
+		}
+	}
+}
+
+copy_autonomy_from_ROOT = {
+	ROOT = {
+		if = {
+			limit = {
+				has_autonomy_state = autonomy_dominion
+			}
+			OVERLORD = {
+				end_puppet = PREV
+				set_autonomy = {
+					target = PREV.PREV
+					autonomous_state = autonomy_dominion
+				}
+			}
+		}
+		else_if = {
+			limit = {
+				has_autonomy_state = autonomy_colony
+			}
+			OVERLORD = {
+				end_puppet = PREV
+				set_autonomy = {
+					target = PREV.PREV
+					autonomous_state = autonomy_colony
+				}
+			}
+		}
+		else_if = {
+			limit = {
+				has_autonomy_state = autonomy_puppet
+			}
+			OVERLORD = {
+				end_puppet = PREV
+				set_autonomy = {
+					target = PREV.PREV
+					autonomous_state = autonomy_puppet
+				}
+			}
+		}
+		else_if = {
+			limit = {
+				has_autonomy_state = autonomy_integrated_puppet
+			}
+			OVERLORD = {
+				end_puppet = PREV
+				set_autonomy = {
+					target = PREV.PREV
+					autonomous_state = autonomy_integrated_puppet
+				}
+			}
+		}
+		# DEATH OR DISHONOUR
+		else_if = {
+			limit = {
+				has_autonomy_state = autonomy_satellite
+			}
+			OVERLORD = {
+				end_puppet = PREV
+				set_autonomy = {
+					target = PREV.PREV
+					autonomous_state = autonomy_satellite
+				}
+			}
+		}
+		# else_if = {
+		# 	limit = {
+		# 		has_autonomy_state = autonomy_reichsprotectorate
+		# 	}
+		# 	OVERLORD = {
+		# 		end_puppet = PREV
+		# 		set_autonomy = {
+		# 			target = PREV.PREV
+		# 			autonomous_state = autonomy_reichsprotectorate
+		# 		}
+		# 	}
+		# }
+		# else_if = {
+		# 	limit = {
+		# 		has_autonomy_state = autonomy_reichskommissariat
+		# 	}
+		# 	OVERLORD = {
+		# 		end_puppet = PREV
+		# 		set_autonomy = {
+		# 			target = PREV.PREV
+		# 			autonomous_state = autonomy_reichskommissariat
+		# 		}
+		# 	}
+		# }
+		# WAKING THE TIGER
+		else_if = {
+			limit = {
+				has_autonomy_state = autonomy_wtt_imperial_subject
+			}
+			OVERLORD = {
+				end_puppet = PREV
+				set_autonomy = {
+					target = PREV.PREV
+					autonomous_state = autonomy_wtt_imperial_subject
+				}
+			}
+		}
+		else_if = {
+			limit = {
+				has_autonomy_state = autonomy_wtt_imperial_associate
+			}
+			OVERLORD = {
+				end_puppet = PREV
+				set_autonomy = {
+					target = PREV.PREV
+					autonomous_state = autonomy_wtt_imperial_associate
+				}
+			}
+		}
+		else_if = {
+			limit = {
+				has_autonomy_state = autonomy_wtt_imperial_protectorate
+			}
+			OVERLORD = {
+				end_puppet = PREV
+				set_autonomy = {
+					target = PREV.PREV
+					autonomous_state = autonomy_wtt_imperial_protectorate
+				}
+			}
+		}
+		# MAN THE GUNS
+		else_if = {
+			limit = {
+				has_autonomy_state = autonomy_supervised_state
+			}
+			OVERLORD = {
+				end_puppet = PREV
+				set_autonomy = {
+					target = PREV.PREV
+					autonomous_state = autonomy_supervised_state
+				}
+			}
+		}
+		# LA RESISTANCE
+		else_if = {
+			limit = {
+				has_autonomy_state = autonomy_collaboration_government
+			}
+			OVERLORD = {
+				end_puppet = PREV
+				set_autonomy = {
+					target = PREV.PREV
+					autonomous_state = autonomy_collaboration_government
+				}
+			}
+		}
+		# NO STEP BACK
+		# else_if = {
+		# 	limit = {
+		# 		has_autonomy_state = autonomy_personal_union
+		# 	}
+		# 	OVERLORD = {
+		# 		end_puppet = PREV
+		# 		set_autonomy = {
+		# 			target = PREV.PREV
+		# 			autonomous_state = autonomy_personal_union
+		# 		}
+		# 	}
+		# }
+		# TGWR AUTONOMIES
+		else_if = {
+			limit = {
+				has_autonomy_state = autonomy_tgwr_protectorate
+			}
+			OVERLORD = {
+				end_puppet = PREV
+				PREV = { set_country_flag = protectorate }
+				set_autonomy = {
+					target = PREV.PREV
+					autonomous_state = autonomy_tgwr_protectorate
+				}
+			}
+		}
+		else_if = {
+			limit = {
+				has_autonomy_state = autonomy_tgwr_informal_protectorate
+			}
+			OVERLORD = {
+				end_puppet = PREV
+				PREV = { set_country_flag = protectorate }
+				set_autonomy = {
+					target = PREV.PREV
+					autonomous_state = autonomy_tgwr_informal_protectorate
+				}
+			}
+		}
+		else_if = {
+			limit = {
+				has_autonomy_state = autonomy_tgwr_integrated_protectorate
+			}
+			OVERLORD = {
+				end_puppet = PREV
+				PREV = { set_country_flag = protectorate }
+				set_autonomy = {
+					target = PREV.PREV
+					autonomous_state = autonomy_tgwr_integrated_protectorate
+				}
+			}
+		}
+		else_if = {
+			limit = {
+				has_autonomy_state = autonomy_tgwr_concession
+			}
+			OVERLORD = {
+				end_puppet = PREV
+				set_autonomy = {
+					target = PREV.PREV
+					autonomous_state = autonomy_tgwr_concession
+				}
+			}
+		}
+		else_if = {
+			limit = {
+				has_autonomy_state = autonomy_tgwr_balkan_federal_subject
+			}
+			OVERLORD = {
+				end_puppet = PREV
+				set_autonomy = {
+					target = PREV.PREV
+					autonomous_state = autonomy_tgwr_balkan_federal_subject
+				}
+			}
+		}
+		else_if = {
+			limit = {
+				has_autonomy_state = autonomy_tgwr_ottoman_emirate
+			}
+			OVERLORD = {
+				end_puppet = PREV
+				set_autonomy = {
+					target = PREV.PREV
+					autonomous_state = autonomy_tgwr_ottoman_emirate
+				}
+			}
+		}
+		else_if = {
+			limit = {
+				has_autonomy_state = autonomy_tgwr_unilateral_union
+			}
+			OVERLORD = {
+				end_puppet = PREV
+				set_autonomy = {
+					target = PREV.PREV
+					autonomous_state = autonomy_tgwr_unilateral_union
+				}
+			}
+		}
+		else_if = {
+			limit = {
+				has_autonomy_state = autonomy_tgwr_regional_government
+			}
+			OVERLORD = {
+				end_puppet = PREV
+				set_autonomy = {
+					target = PREV.PREV
+					autonomous_state = autonomy_tgwr_regional_government
+				}
+			}
+		}
+		else_if = {
+			limit = {
+				has_autonomy_state = autonomy_tgwr_governorate_general
+			}
+			OVERLORD = {
+				end_puppet = PREV
+				set_autonomy = {
+					target = PREV.PREV
+					autonomous_state = autonomy_tgwr_governorate_general
+				}
+			}
+		}
+		else_if = {
+			limit = {
+				has_autonomy_state = autonomy_tgwr_real_union
+			}
+			OVERLORD = {
+				end_puppet = PREV
+				set_autonomy = {
+					target = PREV.PREV
+					autonomous_state = autonomy_tgwr_real_union
+				}
+			}
+		}
+		else_if = {
+			limit = {
+				has_autonomy_state = autonomy_tgwr_personal_union
+			}
+			OVERLORD = {
+				end_puppet = PREV
+				set_autonomy = {
+					target = PREV.PREV
+					autonomous_state = autonomy_tgwr_personal_union
+				}
+			}
+		}
+		else = {
+			OVERLORD = {
+				end_puppet = PREV
+				puppet = PREV.PREV
+			}
+		}
+	}
+}
+
+set_up_sykes_picot_anizah_border = {
+	set_global_flag = set_up_sykes_picot_anizah_border
+	every_other_country = {
+		limit = {
+			owns_state = 554
+			NOT = {
+				is_subject_of = PREV
+				has_war_with = PREV
+			}
+		}
+		transfer_state = 831
+		831 = { remove_core_of = JBS add_core_of = SYR }
+	}
+	every_other_country = {
+		limit = {
+			owns_state = 455
+			NOT = {
+				is_subject_of = PREV
+				has_war_with = PREV
+			}
+		}
+		transfer_state = 832
+		832 = { remove_core_of = JBS add_core_of = SYR }
+	}
+	every_other_country = {
+		limit = {
+			owns_state = 291
+			NOT = {
+				is_subject_of = PREV
+				has_war_with = PREV
+			}
+		}
+		transfer_state = 675
+		675 = { remove_core_of = JBS add_core_of = IRQ }
+		transfer_state = 916
+		916 = { remove_core_of = JBS add_core_of = IRQ }
+		transfer_state = 917
+		917 = { remove_core_of = JBS add_core_of = IRQ }
+	}
+}
+
+delete_obsolete_russian_templates = {
+	delete_unit_template_and_units = {
+		division_template = "Pekhotnaya Diviziya"
+		disband = yes
+	}
+	delete_unit_template_and_units = {
+		division_template = "Gvardeyskaya Pekhotnaya Diviziya"
+		disband = yes
+	}
+	delete_unit_template_and_units = {
+		division_template = "Grenaderskaya Diviziya"
+		disband = yes
+	}
+	delete_unit_template_and_units = {
+		division_template = "Strelkovaya Diviziya"
+		disband = yes
+	}
+	delete_unit_template_and_units = {
+		division_template = "Strelkovaya Brigada"
+		disband = yes
+	}
+	delete_unit_template_and_units = {
+		division_template = "Kavaleriyskaya Diviziya"
+		disband = yes
+	}
+	delete_unit_template_and_units = {
+		division_template = "Gvardeyskaya Kavaleriyskaya Diviziya"
+		disband = yes
+	}
+	delete_unit_template_and_units = {
+		division_template = "Kavaleriyskaya Brigada"
+		disband = yes
+	}
+	delete_unit_template_and_units = {
+		division_template = "Morskoy Batal'on"
+		disband = yes
+	}
+}
+
+GEO_withdraw_from_persia = {
+	# Withdraw from Persia
+	hidden_effect = {
+		if = {
+			limit = {
+				any_owned_state = { is_core_of = ASY }
+				NOT = {
+					country_exists = ASY
+					ASY = { has_country_flag = ASY_volunteers }
+				}
+				has_war_with = TUR
+			}
+			every_owned_state = {
+				limit = { is_core_of = ASY }
+				transfer_state_to = ASY
+				add_claim_by = TUR
+			}
+			ASY = {
+				set_country_flag = ASY_volunteers
+				set_cosmetic_tag = ASY_volunteers
+				add_to_war = {
+					targeted_alliance = ROOT
+					enemy = TUR
+				}
+				division_template = {
+					name = "Assyrian Volunteers"
+					regiments = {
+						irregular_infantry = { x = 0 y = 0 }
+						irregular_infantry = { x = 0 y = 1 }
+						irregular_infantry = { x = 0 y = 2 }
+					}
+				}
+				every_owned_state = {
+					create_unit = {
+						division = "name = \"Militia\" division_template = \"Assyrian Volunteers\" start_experience_factor = 0.8"
+						owner = PREV
+						allow_spawning_on_enemy_provs = yes
+					}
+				}
+				set_party_name = {
+					ideology = neutrality
+					long_name = ASY_volunteers
+					name = ASY_volunteers
+				}
+				give_military_access = ENG
+			}
+		}
+		# if = {
+		# 	limit = {
+		# 		ENG = {
+		# 			has_war_with = TUR
+		# 			any_owned_state = { is_core_of = PER }
+		# 		}
+		# 	}
+		# 	every_owned_state = {
+		# 		limit = {
+		# 			is_core_of = PER
+		# 			NOT = { region = 155 }
+		# 		}
+		# 		transfer_state_to = ENG
+		# 	}
+		# }
+		every_owned_state = {
+			limit = {
+				region = 116
+			}
+			if = {
+				limit = {
+					OR = {
+						state = 419
+						state = 877
+						state = 1212
+					}
+				}
+				if = {
+					limit = {
+						828 = {
+							owner = {
+								OR = {
+									has_war_with = ROOT
+									has_war_with = PER
+								}
+							}
+						}
+					}
+					828 = {
+						owner = {
+							set_state_owner = PREV.PREV
+						}
+					}
+				}
+				else = {
+					transfer_state_to = PER
+				}
+			}
+			else = {
+				transfer_state_to = PER
+			}
+		}
+	}
+}
+
+create_AOF = {
+	if = {
+		limit = {
+			NOT = {
+				has_global_flag = AOF
+			}
+		}
+		set_global_flag = AOF
+		create_dynamic_country = {
+			original_tag = FRA
+			set_country_flag = AOF
+			set_cosmetic_tag = AOF
+			PREV = {
+				set_autonomy = {
+					target = PREV
+					autonomous_state = autonomy_integrated_puppet
+				}
+			}
+			set_country_flag = empty_focus
+			load_focus_tree = empty_focus		
+			set_capital = { state = 272 }
+			hidden_effect = {
+				every_state = {
+					limit = {
+						is_claimed_by = PREV
+					}
+					remove_claim_by = PREV
+				}
+				every_state = {
+					limit = {
+						is_core_of = PREV
+					}
+					remove_core_of = PREV
+				}
+				set_politics = {
+					ruling_party = neutrality
+					long_name = FRA_administration_coloniale
+					name = FRA_administration_coloniale
+					elections_allowed = no 
+				}
+				set_popularities = {
+					neutrality = 100
+				}
+				set_party_name = {
+					ideology = fascism
+					long_name = FRA_administration_coloniale
+					name = FRA_administration_coloniale
+				}
+				set_party_name = {
+					ideology = communism
+					long_name = FRA_african_union_council
+					name = FRA_african_union_council
+				}
+				create_country_leader = {
+					name = FRA_african_union_council
+					picture = "gfx/leaders/GER/GER_workers_councils.png"
+					ideology = reformist_socialism
+				}
+				set_research_slots = 2
+				add_to_tech_sharing_group = french_tech_share
+				add_ideas = {
+					disarmed_nation
+					isolation
+					free_trade
+				}
+			}
+			reserve_dynamic_country = yes
+		}
+		FRA = {
+			FRA_william_merlaud_ponty = {
+				set_nationality = AOF
+				add_country_leader_role = {
+					promote_leader = yes
+					country_leader = {
+						ideology = colonial_government
+						traits = { foreign_leader }
+					}
+				}
+				add_country_leader_role = {
+					promote_leader = yes
+					country_leader = {
+						ideology = stratocracy
+						traits = { foreign_leader }
+					}
+				}
+			}
+		}
+	}
+	every_subject_country = {
+		limit = {
+			has_civil_war = no
+			NOT = {
+				has_country_flag = protectorate
+			}
+			OR = {
+				original_tag = SEN
+				original_tag = MRT
+				original_tag = MLI
+				original_tag = VOL
+				original_tag = NGR
+				original_tag = GNA
+				original_tag = IVO
+				original_tag = DAH
+				original_tag = TOG
+				original_tag = FUJ
+				original_tag = GAM
+				original_tag = GNB
+				original_tag = SIE
+				original_tag = LIB
+				original_tag = GHA
+				original_tag = NGA
+			}
+		}
+		AOF = {
+			annex_country = {
+				target = PREV
+				transfer_troops = yes
+			}
+		}
+	}
+	every_state = {
+		limit = {
+			OWNER = {
+				OR = {
+					tag = ROOT
+					is_subject_of = ROOT
+				}
+				has_civil_war = no				
+				NOT = { 
+					has_country_flag = AOF
+					has_country_flag = protectorate 
+				}
+			}
+			OR = {
+				region = 226
+				region = 140
+				is_core_of = SEN
+				is_core_of = MRT
+				is_core_of = MLI
+				is_core_of = VOL
+				is_core_of = NGR
+			}
+		}
+		set_state_owner_to = AOF
+	}
+	every_state = {
+		limit = {
+			CONTROLLER = { 	
+				OR = {
+					tag = ROOT
+					is_subject_of = ROOT
+				}
+				has_civil_war = no		
+				NOT = { 
+					has_country_flag = AOF
+					has_country_flag = protectorate 
+				}
+			}
+			OR = {
+				region = 226
+				region = 140
+				is_core_of = SEN
+				is_core_of = MRT
+				is_core_of = MLI
+				is_core_of = VOL
+				is_core_of = NGR
+			}
+		}
+		set_state_controller_to = AOF
+	}
+}
+
+create_AEF = {
+	if = {
+		limit = {
+			NOT = {
+				has_global_flag = AEF
+			}
+		}
+		set_global_flag = AEF
+		create_dynamic_country = {
+			original_tag = FRA
+			set_country_flag = AEF
+			set_cosmetic_tag = AEF
+			PREV = {
+				set_autonomy = {
+					target = PREV
+					autonomous_state = autonomy_integrated_puppet
+				}
+			}
+			set_country_flag = empty_focus
+			load_focus_tree = empty_focus
+			set_capital = { state = 772 }
+			hidden_effect = {
+				every_state = {
+					limit = {
+						is_claimed_by = PREV
+					}
+					remove_claim_by = PREV
+				}
+				every_state = {
+					limit = {
+						is_core_of = PREV
+					}
+					remove_core_of = PREV
+				}
+				set_politics = {
+					ruling_party = neutrality
+					long_name = FRA_administration_coloniale
+					name = FRA_administration_coloniale
+					elections_allowed = no 
+				}
+				set_popularities = {
+					neutrality = 100
+				}
+				set_party_name = {
+					ideology = fascism
+					long_name = FRA_administration_coloniale
+					name = FRA_administration_coloniale
+				}
+				set_party_name = {
+					ideology = communism
+					long_name = FRA_african_union_council
+					name = FRA_african_union_council
+				}
+				create_country_leader = {
+					name = FRA_african_union_council
+					picture = "gfx/leaders/GER/GER_workers_councils.png"
+					ideology = reformist_socialism
+				}
+				set_research_slots = 2
+				add_to_tech_sharing_group = french_tech_share
+				add_ideas = {
+					disarmed_nation
+					isolation
+					free_trade
+				}
+			}
+			reserve_dynamic_country = yes
+		}
+		FRA = {
+			FRA_martial_martin = {
+				set_nationality = AEF
+				add_country_leader_role = {
+					promote_leader = yes
+					country_leader = {
+						ideology = colonial_government
+						traits = { foreign_leader }
+					}
+				}
+				add_country_leader_role = {
+					promote_leader = yes
+					country_leader = {
+						ideology = stratocracy
+						traits = { foreign_leader }
+					}
+				}
+			}
+		}
+	}
+	every_subject_country = {
+		limit = {
+			has_civil_war = no
+			NOT = {
+				has_country_flag = protectorate
+			}
+			OR = {
+				original_tag = CHA
+				original_tag = CAR
+				original_tag = RCG
+				original_tag = GAB
+				original_tag = CMR
+				original_tag = KUT
+				original_tag = COG
+				original_tag = EQG
+				original_tag = KOG
+			}
+		}
+		AEF = {
+			annex_country = {
+				target = PREV
+				transfer_troops = yes
+			}
+		}
+	}
+	every_state = {
+		limit = {
+			OWNER = {
+				OR = {
+					tag = ROOT
+					is_subject_of = ROOT
+				}
+				has_civil_war = no		
+				NOT = { 
+					has_country_flag = AEF
+					has_country_flag = protectorate 
+				}
+			}
+			OR = {
+				region = 183
+				region = 184
+				region = 227
+				is_core_of = CHA
+				is_core_of = CAR
+				is_core_of = RCG
+			}
+		}
+		set_state_owner_to = AEF
+	}
+	every_state = {
+		limit = {
+			CONTROLLER = { 			
+				OR = {
+					tag = ROOT
+					is_subject_of = ROOT
+				}
+				has_civil_war = no	
+				NOT = { 
+					has_country_flag = AEF
+					has_country_flag = protectorate 
+				}
+			}
+			OR = {
+				region = 183
+				region = 184
+				region = 227
+				is_core_of = CHA
+				is_core_of = CAR
+				is_core_of = RCG
+			}
+		}
+		set_state_controller_to = AEF
+	}
+}
+#Makes sure locked advisors like prime ministers would not be fired
+fire_random_advisor_if_no_slots = {	
+	if = {
+		limit = { 
+			amount_taken_ideas = {
+				amount > 2
+				slots = {
+					political_advisor
+				}
+			}
+		}
+		custom_effect_tooltip = fire_random_advisor_tt
+		hidden_effect = {
+			random_character = {
+				limit = {
+					is_political_advisor = yes
+					advisor_can_be_fired = {
+						slot = political_advisor
+					}
+				}
+				set_nationality = XXA #couldn't find another way
+				set_nationality = PREV
+			}
+		}
+	}
+}
+
+join_great_war_against_GER = {
+	if = {
+		limit = {
+			ENT = {
+				is_faction_leader = yes
+				has_war_with = GER
+				NOT = { has_war_with = ROOT }
+			}
+		}
+		add_to_war = {
+			targeted_alliance = ENT
+			enemy = GER
+		}
+	}
+	else_if = {
+		limit = {
+			any_other_country = {
+				is_actual_major = yes
+				has_war_with = GER
+				NOT = { has_war_with = ROOT }
+			}
+		}
+		random_other_country = {
+			limit = {
+				is_actual_major = yes
+				has_war_with = GER
+				NOT = {
+					has_war_with = ROOT
+				}
+			}
+			ROOT = {
+				add_to_war = {
+					targeted_alliance = PREV
+					enemy = GER
+				}
+			}
+		}
+	}
+	else = {
+		declare_war_on = {
+			target = GER
+			type = topple_government
+		}
+	}
+}
+
+relinguish_entente_leadership_peace = {
+	if = {
+		limit = {
+			tag = ENT
+		}
+		every_country = {
+			limit = {
+				has_country_flag = entente_leader
+			}
+			clr_country_flag = entente_leader
+		}
+		if = {
+			limit = {
+				FRA = {
+					is_in_faction_with = ROOT
+					is_subject = no
+					has_capitulated = no
+					NOT = {
+						has_country_flag = RUS_surrender_alone
+						tag = ROOT
+					}
+				}
+			}
+			FRA = {
+				set_country_flag = entente_leader
+				set_faction_leader = yes
+			}
+		}
+		else_if = {
+			limit = {
+				RUS = {
+					is_in_faction_with = ROOT
+					is_subject = no
+					has_capitulated = no
+					tag = SOV
+					NOT = {
+						has_country_flag = has_capitulated_with_france_early
+						has_global_flag = RUS_surrender_alone
+						tag = SOV
+						tag = ROOT
+					}
+				}
+			}
+			RUS = {
+				set_country_flag = entente_leader
+				set_faction_leader = yes
+			}
+		}
+		else_if = {
+			limit = {
+				ENG = {
+					is_in_faction_with = ROOT
+					is_subject = no
+					has_capitulated = no
+					NOT = {
+						has_country_flag = has_capitulated_with_france_early
+						tag = ROOT
+					}
+				}
+			}
+			ENG = {
+				set_country_flag = entente_leader
+				set_faction_leader = yes
+			}
+		}
+		else_if = {
+			limit = {
+				any_allied_country = {
+					is_major = yes
+					is_subject = no
+					has_capitulated = no
+					capital_scope = {
+						is_on_continent = europe
+					}
+				}
+			}
+			random_allied_country = {
+				limit = {
+					is_major = yes
+					is_subject = no
+					has_capitulated = no
+					capital_scope = {
+						is_on_continent = europe
+					}
+				}
+				set_country_flag = entente_leader
+				set_faction_leader = yes
+			}
+		}
+		else_if = {
+			limit = {
+				any_allied_country = {
+					is_major = yes
+					is_subject = no
+					has_capitulated = no
+				}
+			}
+			random_allied_country = {
+				limit = {
+					is_major = yes
+					is_subject = no
+					has_capitulated = no
+				}
+				set_country_flag = entente_leader
+				set_faction_leader = yes
+			}
+		}
+		else_if = {
+			limit = {
+				any_allied_country = {
+					is_subject = no
+					has_capitulated = no
+					capital_scope = {
+						is_on_continent = europe
+					}
+				}
+			}
+			random_allied_country = {
+				limit = {
+					is_subject = no
+					has_capitulated = no
+					capital_scope = {
+						is_on_continent = europe
+					}
+				}
+				set_country_flag = entente_leader
+				set_faction_leader = yes
+			}
+		}
+		else_if = {
+			limit = {
+				any_allied_country = {
+					is_in_faction_with = ROOT
+					is_subject = no
+					has_capitulated = no
+				}
+			}
+			random_allied_country = {
+				limit = {
+					is_subject = no
+					has_capitulated = no
+				}
+				set_country_flag = entente_leader
+				set_faction_leader = yes
+			}
+		}
+		else = {
+			dismantle_faction = yes
+		}
+	}
+}
+
+relinguish_entente_leadership = {
+	if = {
+		limit = {
+			tag = ENT
+		}
+		every_country = {
+			limit = {
+				has_country_flag = entente_leader
+			}
+			clr_country_flag = entente_leader
+		}
+		if = {
+			limit = {
+				FRA = {
+					is_in_faction_with = ROOT
+					has_war_with = GER
+					is_subject = no
+					has_capitulated = no
+					NOT = {
+						has_country_flag = RUS_surrender_alone
+						tag = ROOT
+					}
+				}
+			}
+			FRA = {
+				set_country_flag = entente_leader
+				set_faction_leader = yes
+			}
+		}
+		else_if = {
+			limit = {
+				RUS = {
+					is_in_faction_with = ROOT
+					has_war_with = GER
+					is_subject = no
+					has_capitulated = no
+					NOT = {
+						has_country_flag = has_capitulated_with_france_early
+						has_global_flag = RUS_surrender_alone
+						tag = SOV
+						tag = ROOT
+					}
+				}
+			}
+			RUS = {
+				set_country_flag = entente_leader
+				set_faction_leader = yes
+			}
+		}
+		else_if = {
+			limit = {
+				ENG = {
+					is_in_faction_with = ROOT
+					has_war_with = GER
+					is_subject = no
+					has_capitulated = no
+					NOT = {
+						has_country_flag = has_capitulated_with_france_early
+						tag = ROOT
+					}
+				}
+			}
+			ENG = {
+				set_country_flag = entente_leader
+				set_faction_leader = yes
+			}
+		}
+		else_if = {
+			limit = {
+				any_allied_country = {
+					has_war_with = GER
+					is_major = yes
+					is_subject = no
+					has_capitulated = no
+					capital_scope = {
+						is_on_continent = europe
+					}
+				}
+			}
+			random_allied_country = {
+				limit = {
+					has_war_with = GER
+					is_major = yes
+					is_subject = no
+					has_capitulated = no
+					capital_scope = {
+						is_on_continent = europe
+					}
+				}
+				set_country_flag = entente_leader
+				set_faction_leader = yes
+			}
+		}
+		else_if = {
+			limit = {
+				any_allied_country = {
+					has_war_with = GER
+					is_major = yes
+					is_subject = no
+					has_capitulated = no
+				}
+			}
+			random_allied_country = {
+				limit = {
+					has_war_with = GER
+					is_major = yes
+					is_subject = no
+					has_capitulated = no
+				}
+				set_country_flag = entente_leader
+				set_faction_leader = yes
+			}
+		}
+		else_if = {
+			limit = {
+				any_allied_country = {
+					has_war_with = GER
+					is_subject = no
+					has_capitulated = no
+					capital_scope = {
+						is_on_continent = europe
+					}
+				}
+			}
+			random_allied_country = {
+				limit = {
+					has_war_with = GER
+					is_subject = no
+					has_capitulated = no
+					capital_scope = {
+						is_on_continent = europe
+					}
+				}
+				set_country_flag = entente_leader
+				set_faction_leader = yes
+			}
+		}
+		else_if = {
+			limit = {
+				any_allied_country = {
+					is_in_faction_with = ROOT
+					is_subject = no
+					has_capitulated = no
+					has_war_with = GER
+				}
+			}
+			random_allied_country = {
+				limit = {
+					is_subject = no
+					has_capitulated = no
+					has_war_with = GER
+				}
+				set_country_flag = entente_leader
+				set_faction_leader = yes
+			}
+		}
+		else = {
+			dismantle_faction = yes
+		}
+	}
+}
+
+# Transfers a state (PREV) to the current country (THIS).
+# A full transfer only occurs if the state's controller is friendly to EITHER the
+# original owner (ROOT) OR the new owner (THIS).
+#
+# USAGE: State = { Country = { safe_transfer_state_to = yes } }
+# SCOPE (THIS): The country receiving the state.
+# SCOPE (PREV): The state to be transferred.
+# SCOPE (ROOT): The country from which the state is being taken.
+safe_transfer_state_to = {
+	if = {
+		limit = {
+			PREV = {
+				CONTROLLER = {
+					OR = {
+						tag = ROOT
+						is_subject_of = ROOT
+						is_in_faction_with = ROOT
+						tag = PREV.PREV
+						is_in_faction_with = PREV.PREV
+						is_subject_of = PREV.PREV
+					}
+				}
+			}
+		}
+		transfer_state = PREV
+	}
+	else = {
+		set_state_owner = PREV
+	}
+}

@@ -1,0 +1,10 @@
+JAP_cat_siberian_intervention = {
+	icon = GFX_decision_category_border_conflicts
+	allowed = {
+		original_tag = JAP
+	}
+	visible = {
+		has_global_flag = JAP_start_siberian_intervention
+	}
+	priority = 10
+}

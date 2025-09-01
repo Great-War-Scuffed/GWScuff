@@ -1,0 +1,561 @@
+characters={
+	SAF_john_x_merriman={
+		name="SAF_john_x_merriman"
+		portraits={
+			civilian={
+				large="gfx/leaders/SAF/SAF_john_xavier_merriman.png"
+			}
+		}
+		country_leader={
+			ideology=classical_liberalism
+		}
+	}
+	SAF_louis_botha={
+		name="SAF_louis_botha"
+		portraits={
+			civilian={
+				large="gfx/leaders/SAF/SAF_louis_botha.png"
+			}
+		}
+		country_leader={
+			ideology=liberal_conservatism
+			traits = {
+				SAF_boer_veteran
+				SAF_conciliatory
+			}
+		}
+	}
+	SAF_abraham_fischer={
+		portraits={
+			civilian={
+				large = "gfx/leaders/SAF/SAF_abraham_fischer.png"
+				small ="gfx/interface/ideas/SAF/idea_SAF_abraham_fischer.png"
+			}
+		}
+		advisor={
+			slot = political_advisor
+			idea_token = SAF_abraham_fischer
+			allowed  = {
+				is_south_african_tag = yes
+			}
+			available = {
+				is_country_leader = no
+				custom_trigger_tooltip = {
+					tooltip = character_not_dead
+					date < 1913.11.16			
+				}
+			}
+			visible = {
+				is_country_leader = no
+				date < 1913.11.16
+			}
+			traits  = {
+				backroom_backstabber 
+			}
+			ai_will_do  = {
+				factor  = 1
+			}
+		}
+		country_leader={
+			ideology=liberal_conservatism
+		}
+	}
+	SAF_martinus_steyn={
+		portraits={
+			civilian={
+				large = "gfx/leaders/SAF/SAF_martinus_steyn.png"
+			}
+		}
+		country_leader={
+			ideology=liberal_conservatism
+		}
+	}
+	SAF_frederick_moor={
+		portraits={
+			civilian={
+				large="gfx/leaders/SAF/SAF_frederick_moor.png"
+			}
+		}
+		country_leader={
+			ideology=classical_liberalism
+		}
+	}
+	SAF_jan_smuts={
+		name="SAF_jan_smuts"
+		advisor={
+			slot = political_advisor
+			idea_token = SAF_jan_smuts
+			allowed  = {
+				is_south_african_tag = yes
+			}
+			traits  = {
+				quartermaster_general 
+			}
+			ai_will_do  = {
+				factor  = 1
+			}
+		}
+		advisor={
+			slot = theorist
+			idea_token = SAF_jan_smuts_theorist
+			ledger = army
+			allowed  = {
+				is_south_african_tag = yes
+			}
+			traits  = {
+				military_theorist 
+			}
+			ai_will_do  = {
+				factor  = 1
+			}
+		}
+		country_leader={
+			ideology=liberal_conservatism
+		}
+		portraits={
+			civilian = {
+				large="GFX_portrait_SAF_jan_smuts"
+			}
+			army={		
+				large="gfx/leaders/SAF/SAF_Jan_Smuts.png"
+				small="gfx/interface/ideas/idea_SAF_jan_smuts.dds"
+			}
+		}
+		field_marshal={
+			traits={ war_hero trait_royalist adaptable trickster ambusher politically_connected }
+			skill=4
+			attack_skill=2
+			defense_skill=2
+			planning_skill=3
+			logistics_skill=4
+		}
+	}
+	SAF_j_b_m_hertzog={
+		name=SAF_j_b_m_hertzog
+		portraits={
+			civilian={
+				large="GFX_SAF_james_hertzog"
+				small="gfx/interface/ideas/SAF/idea_SAF_james_hertzog.png"
+			}			
+		}
+		advisor={
+			slot = political_advisor
+			idea_token = SAF_j_b_m_hertzog
+			allowed  = {
+				is_south_african_tag = yes
+			}
+			available = {
+				is_country_leader = no
+			}
+			visible = {
+				is_country_leader = no
+			}
+			traits  = {
+				silent_workhorse 
+			}
+			ai_will_do  = {
+				factor  = 1
+			}
+		}
+		country_leader={
+			ideology=conservatism
+		}
+	}
+	SAF_david_ivon_jones={
+		name="SAF_david_ivon_jones"
+		portraits={
+			civilian={
+				large="gfx/leaders/SAF/SAF_david_ivon_jones.png"
+			}
+		}
+		country_leader={
+			ideology=syndicalism
+		}
+	}
+	SAF_william_palmer={
+		# portraits={
+		# 	civilian={
+		# 		large="gfx/leaders/SAF/SAF_william_palmer.png"
+		# 	}
+		# }
+		country_leader = {
+			ideology = colonial_government
+			traits = { british_agent }
+		}
+	}
+	SAF_herbert_gladstone={
+		name="SAF_herbert_gladstone"
+		portraits={
+			civilian={
+				large="gfx/leaders/SAF/SAF_herbert_gladstone.png"
+			}
+		}
+		country_leader = {
+			ideology = colonial_government
+			traits = { british_agent }
+		}
+	}
+	SAF_hamilton_goold_adams={
+		# portraits={
+		# 	civilian={
+		# 		large="gfx/leaders/SAF/SAF_hamilton_goold_adams.png"
+		# 	}
+		# }
+		country_leader = {
+			ideology = colonial_government
+			traits = { british_agent }
+		}
+	}
+	SAF_walter_hely_hutchinson={
+		portraits={
+			civilian={
+				large="gfx/leaders/SAF/SAF_walter_hely_hutchinson.png"
+			}
+		}
+		country_leader = {
+			ideology = colonial_government
+			traits = { british_agent }
+		}
+	}
+	SAF_christiaan_de_wet={
+		name="SAF_christiaan_de_wet"
+		portraits={
+			civilian={
+				large="gfx/leaders/SAF/SAF_christiaan_de_wet.png"
+			}
+		}
+		corps_commander={
+			traits={ trickster guerilla_fighter politically_connected }
+			skill=3
+			attack_skill=2
+			defense_skill=1
+			planning_skill=1
+			logistics_skill=2
+			visible = {
+				OR = {
+					NOT = { has_global_flag = boer_rebellion }
+					has_government = fascism
+				}
+			}
+		}
+		country_leader={
+			ideology=revolutionary_nationalism
+		}
+	}
+	SAF_jacob_van_deventer={
+		name="SAF_jacob_van_deventer"
+		portraits={
+			army={
+				small="gfx/interface/ideas/idea_ENG_generic_land_3.dds"
+			}
+			army={
+				large="gfx/leaders/ENG/Portrait_Britain_Generic_land_3.dds"
+			}
+		}
+		corps_commander={
+			traits={ trickster guerilla_fighter war_hero }
+			skill=2
+			attack_skill=1
+			defense_skill=2
+			planning_skill=3
+			logistics_skill=3
+			visible = {
+				date < 1922.8.17
+			}
+		}
+	}
+	SAF_koos_de_larey={
+		name="SAF_koos_de_larey" 
+		portraits={
+			army={
+				small="gfx/interface/ideas/idea_ENG_generic_land_5.dds"
+			}
+			army={
+				large="gfx/leaders/ENG/Portrait_Britain_Generic_land_5.dds"
+			}
+		}
+		corps_commander={
+			traits={ trickster brilliant_strategist guerilla_fighter }
+			skill=3
+			attack_skill=1
+			defense_skill=1
+			planning_skill=1
+			logistics_skill=1
+			visible = {
+				OR = {
+					NOT = { has_global_flag = boer_rebellion }
+					has_government = fascism
+				}
+				date > 1914.9.15
+			}
+		}
+	}
+	SAF_manie_maritz={
+		name="SAF_manie_maritz"
+		portraits={
+			army={
+				large="gfx/leaders/SAF/SAF_Manie_Maritz.png"
+				small="gfx/interface/ideas/idea_ENG_generic_land_6.dds"
+			}
+		}
+		corps_commander={
+			traits={ trickster militias_officer hidden_sympathies harsh_leader disgruntled }
+			skill=2
+			attack_skill=2
+			defense_skill=1
+			planning_skill=1
+			logistics_skill=1
+			visible = {
+				OR = {
+					NOT = { has_global_flag = boer_rebellion }
+					has_government = fascism
+				}
+				NOT = {
+					has_war_with = GER
+				}
+			}
+		}
+		country_leader={
+			ideology=revolutionary_nationalism
+		}
+	}
+	SAF_jopie_fourie={
+		name="SAF_jopie_fourie"
+		portraits={
+			army={
+				small="GFX_idea_generic_army_chief_off"
+			}
+			army={
+				large="gfx/leaders/ENG/Portrait_Britain_Generic_land_7.png"
+			}
+		}
+		corps_commander={
+			traits = { commando hidden_sympathies }
+			skill=2
+			attack_skill=1
+			defense_skill=1
+			planning_skill=1
+			logistics_skill=1
+			visible = {
+				OR = {
+					NOT = { has_global_flag = boer_rebellion }
+					has_government = fascism
+				}
+				date < 1914.12.20
+			}
+		}
+	}
+	SAF_henry_lukin={	
+		advisor={
+			slot = army_chief
+			allowed  = {
+				is_south_african_tag = yes
+			}
+			idea_token = SAF_henry_lukin
+			traits  = {
+				army_chief_defensive_2 
+			}
+			cost = 100
+			ai_will_do  = {
+				factor  = 1
+			}
+		}
+		name="SAF_henry_lukin"
+		portraits={
+			army={
+				small="gfx/interface/ideas/idea_ENG_generic_land_1.dds"
+			}
+			army={
+				large="gfx/leaders/ENG/Portrait_Britain_Generic_land_1.dds"
+			}
+		}
+		corps_commander={
+			traits={ trait_royalist career_officer }
+			skill=2
+			attack_skill=1
+			defense_skill=1
+			planning_skill=1
+			logistics_skill=1		
+		}
+	}
+	SAF_daniel_malan={
+		advisor={
+			slot = political_advisor
+			idea_token = SAF_daniel_malan
+			allowed  = {
+				is_south_african_tag = yes
+			}
+			traits  = {
+				fascist_demagogue 
+			}
+			do_effect  = {
+				not  = {
+					has_government  = fascism 
+				}
+			}
+			ai_will_do  = {
+				factor  = 0
+			}
+		}
+		name="SAF_d_f_malan"
+		portraits={
+			army={
+				large="GFX_SAF_daniel_malan"
+				small="GFX_portrait_SAF_d_f_malan_small"
+			}
+		}
+		country_leader={
+			ideology=revolutionary_nationalism
+		}
+	}
+	SAF_andries_brink={
+		advisor={
+			slot = high_command
+			idea_token = SAF_andries_brink
+			allowed  = {
+				is_south_african_tag = yes
+			}
+			ledger  = army 
+			traits  = {
+				army_entrenchment_1 
+			}
+			ai_will_do  = {
+				factor  = 1
+			}
+		}
+		name="SAF_andries_brink"
+		portraits={
+			army={
+				small="gfx/interface/ideas/idea_ENG_generic_land_4.dds"
+			}
+			army={
+				large="gfx/leaders/ENG/Portrait_Britain_Generic_land_4.dds"
+			}
+		}
+		corps_commander={
+			traits = {
+				
+			}
+			skill=2
+			attack_skill=1
+			defense_skill=1
+			planning_skill=1
+			logistics_skill=1		
+		}
+	}
+	SAF_cornelius_van_wyk={
+		portraits={
+			army={
+				large="gfx/leaders/Africa/Portrait_Africa_Generic_land_3.dds"
+				small="gfx/interface/ideas/idea_africa_generic_land_3.dds"
+			}
+		}
+		corps_commander={
+			skill=2
+			attack_skill=1
+			defense_skill=1
+			planning_skill=1
+			logistics_skill=2
+			traits = { politically_connected irregulars_officer trickster guerilla_fighter }
+			visible = {
+				OR = {
+					has_country_flag = saf_ger_basters_have_rebelled_bigly
+					original_tag = NMB
+				}
+			}
+		}
+	}
+	SAF_christoffel_venter={
+		advisor={
+			slot = high_command
+			idea_token = SAF_christoffel_venter
+			allowed  = {
+				is_south_african_tag = yes
+			}
+			ledger  = air 
+			traits  = {
+				air_air_superiority_1 
+			}
+			ai_will_do  = {
+				factor  = 1
+			}
+		}
+		name="SAF_christoffel_venter"
+		portraits={
+			army={
+				small="GFX_idea_generic_army_europe_2"
+			}
+		}
+	}
+	SAF_theodorus_truter={
+		advisor={
+			slot = political_advisor
+			idea_token = SAF_theodorus_truter
+			allowed  = {
+				is_south_african_tag = yes
+			}
+			traits  = {
+				compassionate_gentleman 
+			}
+			ai_will_do  = {
+				factor  = 1
+			}
+		}
+		name="SAF_theodorus_truter"
+		portraits={
+			army={
+				small="GFX_idea_generic_political_advisor_europe_5"
+			}
+		}
+	}
+	SAF_john_collyer={
+		advisor={
+			slot = army_chief
+			idea_token = SAF_john_collyer
+			allowed  = {
+				is_south_african_tag = yes
+			}
+			traits  = {
+				army_chief_drill_2 
+			}
+			cost = 100
+			ai_will_do  = {
+				factor  = 1
+			}
+		}
+		name="SAF_john_collyer"
+		portraits={
+			army={
+				small="GFX_idea_generic_army_europe_2"
+			}
+		}
+	}
+	SAF_christiaan_beyers={
+		advisor={
+			slot = army_chief
+			allowed  = {
+				is_south_african_tag = yes
+			}
+			idea_token = SAF_christiaan_beyers
+			traits  = {
+				army_chief_organizational_3 
+			}
+			cost = 200
+			ai_will_do  = {
+				factor  = 1
+			}
+			available = {
+				OR = {
+					NOT = { has_global_flag = boer_rebellion }
+					has_government = fascism
+				}
+			}
+		}
+		name="SAF_christiaan_beyers"
+		portraits={
+			army={
+				small="GFX_idea_generic_army_europe_5"
+			}
+		}
+	}
+}

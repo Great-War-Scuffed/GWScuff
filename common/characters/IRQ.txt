@@ -1,0 +1,48 @@
+characters={
+	IRQ_abdullah_i={
+		name=JOR_abdullah_bin_al_hussein
+		portraits={
+			civilian={
+				small="GFX_idea_generic_army_chief_off"
+				large="gfx/leaders/IRQ/IRQ_abdullah_i.png"
+			}
+		}
+		country_leader={
+			ideology=absolute_monarchy
+		}
+	}
+	IRQ_abduk_muhsin_al_sadoun = {
+		name=IRQ_abduk_muhsin_al_sadoun
+		portraits={
+			civilian={
+				large="gfx/leaders/IRQ/IRQ_abduk_muhsin_al_sadoun.png"
+			}
+		}
+		country_leader={
+			ideology=social_liberalism
+		}
+	}
+	IRQ_muhammad_al_jawad_al_jazairy = {
+		name=IRQ_muhammad_al_jawad_al_jazairy
+		portraits={
+			civilian={
+				large="gfx/leaders/IRQ/IRQ_muhammad_al_jawad_al_jazairy.png"
+			}
+		}
+		country_leader={
+			ideology=fundamentalism
+		}
+	}
+	IRQ_samir_nadir_mustafa = {
+		name=IRQ_samir_nadir_mustafa
+		portraits={
+			civilian={
+				large="gfx/leaders/IRQ/IRQ_samir_nadir_mustafa.png"
+			}
+		}
+		country_leader={
+			ideology=revolutionary_socialism
+		}
+	}
+}
+

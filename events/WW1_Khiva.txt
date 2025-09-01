@@ -1,0 +1,154 @@
+add_namespace = ww1_khiva
+
+#Khivan Revolution
+country_event = {
+	id = ww1_khiva.1
+	title = ww1_khiva.1.t
+	desc = ww1_khiva.1.d
+	picture = GFX_report_event_china_politicians_captured
+	fire_only_once = yes
+	trigger = {
+		tag = KHI
+		is_subject = no
+		has_government = neutrality
+		OR = {
+			has_global_flag = october_revolution
+			RUS = {
+				has_war = no
+				OR = {
+					has_government = communism
+					AND = {
+						has_government = democratic
+						OR = {
+							has_cosmetic_tag = RUS_republic
+							has_cosmetic_tag = RUS_prov
+						}
+					}
+				}
+			}
+		}
+	}
+	mean_time_to_happen = {
+		days = 100
+	}
+	option = {
+		name = ww1_khiva.1.a
+		set_politics = {
+			ruling_party = fascism
+			elections_allowed = no
+		}
+		add_popularity = {
+			ideology = fascism
+			popularity = 0.2
+		}
+		retire_character = KHI_isfandiyar_khan
+		promote_character = KHI_sayid_abdullah
+		ai_chance = {
+			base = 100
+		}
+	}
+	option = {
+		name = ww1_khiva.1.b
+		set_politics = {
+			ruling_party = democratic
+			elections_allowed = no
+		}
+		add_popularity = {
+			ideology = democratic
+			popularity = 0.2
+		}
+		add_popularity = {
+			ideology = communism
+			popularity = 0.1
+		}
+		ai_chance = {
+			base = 50
+			modifier = {
+				factor = 0
+				is_historical_focus_on = yes
+			}
+		}
+	}
+	option = {
+		name = ww1_khiva.1.c
+		add_political_power = -100
+		ai_chance = {
+			base = 40
+			modifier = {
+				factor = 0
+				is_historical_focus_on = yes
+			}
+		}
+	}
+}
+
+# Muhammad Rahim Khan II Dies!
+country_event = {
+	id = ww1_khiva.2
+	title = ww1_khiva.2.t
+	desc = ww1_khiva.2.d
+	
+	picture = GFX_report_event_royal_parade
+	
+	fire_only_once = yes
+	is_triggered_only = yes
+	trigger = {
+		has_character = KHI_muhammad_rahim_khan_ii
+	}
+	immediate = {
+		hidden_effect = {
+			retire_character = KHI_muhammad_rahim_khan_ii
+			promote_character = KHI_isfandiyar_khan
+		}
+	}
+	
+	option = {
+		name = ww1_khiva.2.a
+		KHI_isfandiyar_khan = {
+			effect_tooltip = {
+				promote_character = yes
+			}
+			if = {
+				limit = {
+					is_field_marshal = no
+				}
+				promote_leader = yes
+			}		
+		}
+	}
+}
+
+# Islam Khodja Killed!
+country_event = {
+	id = ww1_khiva.3
+	title = ww1_khiva.3.t
+	desc = ww1_khiva.3.d
+	
+	picture = GFX_report_event_royal_parade
+	
+	fire_only_once = yes
+	is_triggered_only = yes
+	trigger = {
+		has_character = KHI_islam_khodja
+		KHI_islam_khodja = {
+			is_hired_as_advisor = yes
+		}
+		has_country_leader = {
+			character = KHI_isfandiyar_khan
+		}
+	}
+	immediate = {
+		hidden_effect = {
+			deactivate_advisor = KHI_islam_khodja
+		}
+	}
+	
+	option = {
+		name = ww1_khiva.3.a
+		retire_character = KHI_islam_khodja
+		set_country_leader_ideology = absolute_monarchy
+		hidden_effect = {
+			promote_character = KHI_boboochun_salimov
+		}
+	}
+}

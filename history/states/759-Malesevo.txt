@@ -1,0 +1,25 @@
+state={
+	id=759
+	name="STATE_759"
+	manpower=50193
+	state_category=pastoral
+	provinces={ 6886 }
+	history = {
+		owner = TUR
+		add_core_of = BUL
+		add_core_of = TUR
+		add_claim_by = SER
+		buildings={
+			infrastructure = 2
+		}
+		1913.5.30 = {
+			owner = BUL
+			controller = BUL
+			remove_core_of = TUR
+		}
+		1913.8.10 = {
+			owner = SER
+			controller = SER
+		}
+	}
+}

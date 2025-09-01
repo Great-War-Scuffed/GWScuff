@@ -1,0 +1,118 @@
+characters={
+	ETH_menelik_ii={
+		name="ETH_menelik_ii"
+		portraits={
+			civilian={
+				large="gfx/leaders/ETH/ETH_menelik_ii.png"
+			}
+		}
+		field_marshal={
+			traits={ old_guard media_personality politically_connected trait_royal war_hero desert_fox trait_mountaineer }
+			skill=2
+			attack_skill=2
+			defense_skill=1
+			planning_skill=2
+			logistics_skill=2
+			visible = {
+				NOT = { has_government = communism }
+			}
+		}
+		country_leader={
+			ideology=absolute_monarchy
+			traits={ lion_of_judah }
+		}
+	}
+	ETH_lij_iyasu={
+		name="ETH_lij_iyasu"
+		portraits={
+			civilian={
+				large="gfx/leaders/ETH/ETH_Lij_Iyasu.png"
+			}
+		}
+		country_leader={
+			ideology=absolute_monarchy
+			traits = {
+				ETH_disliked_by_nobles
+				ETH_admirer_of_ottomans
+			}
+		}
+	}
+	ETH_zewditu={
+		name=ETH_askala_maryam
+		portraits={
+			civilian={
+				large="gfx/leaders/ETH/ETH_Zewditu.png"
+			}
+		}
+		country_leader={
+			ideology=absolute_monarchy
+			traits={ appeaser  }
+		}
+	}
+	ETH_tafari_makonnen={
+		name=ETH_tafari_makonnen
+		portraits={
+			civilian={
+				large="gfx/leaders/ETH/ETH_tafari_makonnen.png"
+				small = GFX_portrait_ETH_haile_selassie_small
+			}
+		}
+	}
+	ETH_balcha_safo={
+		name="ETH_balcha_safo"
+		portraits={
+			army={
+				small="gfx/interface/ideas/idea_africa_generic_land_1.dds"
+			}
+			army={
+				large="gfx/leaders/Africa/Portrait_Africa_Generic_land_1.dds"
+			}
+		}
+		corps_commander={
+			traits={ media_personality war_hero trickster guerilla_fighter }
+			skill=3
+			attack_skill=2
+			defense_skill=3
+			planning_skill=2
+			logistics_skill=3
+		}
+	}
+	ETH_habte_giyorgis_dinagde={
+		name=ETH_habte_giyorgis_dinagde
+		portraits={
+			army={
+				small="gfx/interface/ideas/idea_africa_generic_land_6.dds"
+				large="gfx/leaders/ETH/ETH_Habte_Giyorgis.png"
+			}
+		}
+		corps_commander={
+			traits={ trait_royal politically_connected guerilla_fighter }
+			visible = {
+				NOT = { has_government = communism }
+				date < 1926.12.12
+			}
+			skill=2
+			attack_skill=2
+			defense_skill=3
+			planning_skill=1
+			logistics_skill=1
+		}
+	}
+	ETH_hailu_tekle_haymanot={
+		name="ETH_hailu_tekle_haymanot"
+		portraits={
+			army={
+				large="gfx/leaders/ETH/ETH_Hailu_Tekle_Haymanot.png"
+				small="gfx/interface/ideas/idea_africa_generic_land_2.dds"
+			}
+		}
+		corps_commander={
+			traits={ harsh_leader politically_connected }
+			skill=1
+			attack_skill=1
+			defense_skill=1
+			planning_skill=1
+			logistics_skill=1
+		}
+	}	
+}

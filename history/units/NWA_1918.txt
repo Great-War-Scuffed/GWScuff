@@ -1,0 +1,98 @@
+﻿
+###################################################################
+
+division_template = {
+	name = "Pekhotnyy Polk"
+	division_names_group = RUS_INF_07
+	regiments = {
+		infantry = { x = 0 y = 0 }
+	}
+	support = {
+		recon = { x = 0 y = 0 }
+	}
+	is_locked = yes
+}
+division_template = {
+	name = "Artilleriyskiy Polk"
+	division_names_group = RUS_ART_01
+	regiments = {
+		field_gun_brigade = { x = 0 y = 0 }
+	}
+	support = {
+		recon = { x = 0 y = 0 }
+	}
+	is_locked = yes
+}
+division_template = {
+	name = "Kavaleriyskiy Polk"
+	division_names_group = RUS_CAV_04
+	regiments = {
+		cavalry = { x = 0 y = 0 }
+	}
+	support = {
+		recon = { x = 0 y = 0 }
+	}
+	is_locked = yes
+}
+###################################################################
+
+units = {
+	#Pskov 
+	division= { 
+		name = "1-y Pskovskiy strelkovyy dobrovol'cheskiy polk"
+		location = 11202 # Pskov
+		division_template = "Pekhotnyy Polk"
+		start_experience_factor = 0.1
+		start_equipment_factor = 1
+		start_manpower_factor = 0.3
+	}
+	division= { 
+		name = "53-y Volynskiy strelkovyy dobrovol'cheskiy polk"
+		location = 11202 # Pskov
+		division_template = "Pekhotnyy Polk"
+		start_experience_factor = 0.1
+		start_equipment_factor = 1
+		start_manpower_factor = 0.3
+	}
+	division= { 
+		name = "Pskovskiy artilleriyskiy polk"
+		location = 11202 # Pskov
+		division_template = "Artilleriyskiy Polk"
+		start_experience_factor = 0.1
+		start_equipment_factor = 1
+		start_manpower_factor = 0.3
+	}
+	division= { 
+		name = "Yaroslavskiy pekhotnyy polk"
+		location = 11202 # Pskov
+		division_template = "Pekhotnyy Polk"
+		start_experience_factor = 0.2
+		start_equipment_factor = 1
+		start_manpower_factor = 0.3
+	}
+	#Ostrov
+	division= { 
+		name = "2-y Ostrovskiy dobrovol'cheskiy polk"
+		location = 415 # Ostrov
+		division_template = "Pekhotnyy Polk"
+		start_experience_factor = 0.2
+		start_equipment_factor = 1
+		start_manpower_factor = 0.3
+	}
+	division= { 
+		name = "3-y Rezhetskiy dobrovol'cheskiy polk"
+		location = 415 # Ostrov
+		division_template = "Pekhotnyy Polk"
+		start_experience_factor = 0.2
+		start_equipment_factor = 1
+		start_manpower_factor = 0.3
+	}
+	division= { 
+		name = "Bułak-Bałachowicz's Detachment"
+		location = 11202 # Tallinna
+		division_template = "Kavaleriyskiy Polk"
+		start_experience_factor = 0.5
+		start_equipment_factor = 1
+		start_manpower_factor = 0.3
+	}
+}

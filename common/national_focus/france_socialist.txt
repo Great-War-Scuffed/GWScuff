@@ -1,0 +1,1226 @@
+focus_tree = {
+	id = france_socialist_focus
+	country = {
+		factor = 0
+		modifier = {
+			add = 100
+			original_tag = FRA
+			has_country_flag = FRA_socialist_france_flag
+		}
+	}
+	default = no
+	continuous_focus_position = {
+		x = 3500
+		y = 300
+	}
+	shared_focus = early_industrialization
+	shared_focus = naval_experience
+	shared_focus = state_of_the_country_army
+
+	focus = {
+		#id = FRC_vanguard_of_the_west
+		id = FRC_question_of_north_africa
+		icon = GFX_focus_ETH_african_wildfire
+		available = {
+			has_government = communism
+			has_war = no 
+			has_global_flag = FRA_three_side_civil_war
+			any_other_country = {
+				original_tag = FRA
+				NOT = {
+					has_government = communism
+				}
+				any_owned_state = {
+					OR = {
+						is_core_of = ALG
+						is_core_of = MOR
+						is_core_of = TUN
+					}
+				}
+			}
+		}
+		completion_reward = {
+			add_war_support = 0.05
+			country_event = {
+				id = ww1_france.612
+				days = 2
+			}
+		}
+		search_filters = {
+			FOCUS_FILTER_INTERNAL_AFFAIRS
+		}
+		ai_will_do = {
+			factor = 100
+		}
+		cost = 8
+		x = 18
+		y = 0
+	}
+
+	focus = {
+		id = FRC_pas_de_calais_occupation_pladoyer
+		icon = GFX_goal_FRA_monarchism3
+		relative_position_id = FRC_question_of_north_africa
+		prerequisite = {
+			focus = FRC_question_of_north_africa
+		}
+		available = {
+			has_government = communism
+			NOT = {
+				owns_state = 29
+			}
+		}
+		bypass_if_unavailable = yes
+		completion_reward = {
+			GER = {
+				country_event = {
+					id = ww1_france.617
+					days = 2
+				}
+			}
+			custom_effect_tooltip = if_they_accept.tt
+			effect_tooltip =  {
+				29 = {
+					transfer_state_to = FRC
+				}
+			}
+		}
+		search_filters = {
+			FOCUS_FILTER_INTERNAL_AFFAIRS
+		}
+		ai_will_do = {
+			factor = 100
+		}
+		cost = 8
+		x = 0
+		y = 2
+	}
+
+	focus = {
+		id = FRC_follow_the_swiss_system
+		icon = GFX_focus_SWI_continuous_support_active_militias
+		relative_position_id = FRC_question_of_north_africa
+		prerequisite = {
+			focus = FRC_question_of_north_africa
+		}
+		available = {
+			has_government = communism
+		}
+		completion_reward = {
+			FRC_adopt_swiss_militias = yes
+		}
+		search_filters = {
+			FOCUS_FILTER_INTERNAL_AFFAIRS
+		}
+		ai_will_do = {
+			factor = 100
+		}
+		cost = 8
+		x = -1
+		y = 1
+	}
+
+	focus = {
+		id = FRC_marine_de_liberation_du_peuple
+		icon = GFX_focus_ARG_study_the_battle_of_the_river_plate
+		relative_position_id = FRC_question_of_north_africa
+		prerequisite = {
+			focus = FRC_question_of_north_africa
+		}
+		available = {
+			has_government = communism
+		}
+		completion_reward = {
+			navy_experience = 25
+			random_owned_controlled_state = {
+				limit = {
+					is_core_of = ROOT
+					is_coastal = yes
+					is_on_continent = europe
+				}
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = dockyard
+					level = 1
+					instant_build = yes
+				}
+			}
+			random_owned_controlled_state = {
+				limit = {
+					is_core_of = ROOT
+					is_coastal = yes
+					is_on_continent = europe
+				}
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = dockyard
+					level = 1
+					instant_build = yes
+				}
+			}
+			random_owned_controlled_state = {
+				limit = {
+					is_core_of = ROOT
+					is_coastal = yes
+					is_on_continent = europe
+				}
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = dockyard
+					level = 1
+					instant_build = yes
+				}
+			}
+			country_event = {
+				id = ww1_france.616
+				days = 2
+			}
+		}
+		search_filters = {
+			FOCUS_FILTER_INTERNAL_AFFAIRS
+		}
+		ai_will_do = {
+			factor = 100
+		}
+		cost = 8
+		x = 1
+		y = 1
+	}
+
+	focus = {
+		id = FRC_socialist_provisional_government
+		icon = GFX_goal_FRA_mention_de_censure_focus
+		available = {
+			has_government = communism
+		}
+		completion_reward = {
+			add_political_power = 175
+			country_event = {
+				id = ww1_france.591
+				days = 2
+			}
+			hidden_effect = {
+				country_event = {
+					id = ww1_france.593
+					days = 37
+				}
+			}
+			set_country_flag = FRA_reformists_purged
+			set_country_flag = FRA_from_guesdes_to_combes
+			set_country_flag = FRA_ww1_attract_moderate_support
+			activate_advisor = FRA_alexandre_zevaes
+			activate_advisor = FRA_pierre_semard
+			activate_advisor = FRA_amedee_dunois
+		}
+		search_filters = {
+			FOCUS_FILTER_INTERNAL_AFFAIRS
+		}
+		ai_will_do = {
+			factor = 100
+		}
+		cost = 3
+		x = 4
+		y = 0
+	}
+
+	focus = {
+		id = FRC_confiscate_aristocratic_assets
+		icon = GFX_focus_generic_annex_country
+		available = {
+			has_government = communism
+		}
+		relative_position_id = FRC_socialist_provisional_government
+		prerequisite = {
+			focus = FRC_socialist_provisional_government
+		}
+		completion_reward = {
+			add_timed_idea = {
+				idea = FRA_idea_seized_aristocrat_assets
+				days = 720
+			}
+		}
+		search_filters = {
+			FOCUS_FILTER_INTERNAL_AFFAIRS
+		}
+		ai_will_do = {
+			factor = 100
+		}
+		cost = 5
+		x = -2
+		y = 1
+	}
+	
+	focus = {
+		id = FRC_moderate_revolutionnary_courts
+		icon = GFX_focus_generic_workers_and_farmers_rise
+		available = {
+			has_government = communism
+		}
+		relative_position_id = FRC_confiscate_aristocratic_assets
+		prerequisite = {
+			focus = FRC_confiscate_aristocratic_assets
+		}
+		completion_reward = {
+			add_stability = 0.02
+			country_event = {
+				id = ww1_france.592
+				days = 3
+			}
+			effect_tooltip = {
+				remove_ideas = FRA_uncontrolled_popular_courts
+			}
+		}
+		search_filters = {
+			FOCUS_FILTER_INTERNAL_AFFAIRS
+		}
+		ai_will_do = {
+			factor = 100
+		}
+		cost = 5
+		x = -1
+		y = 1
+	}
+
+	focus = {
+		id = FRC_limit_jacobins_influence
+		icon = GFX_focus_socialist_appeasement
+		available = {
+			has_government = communism
+		}
+		relative_position_id = FRC_confiscate_aristocratic_assets
+		prerequisite = {
+			focus = FRC_confiscate_aristocratic_assets
+		}
+		completion_reward = {
+			add_political_power = 25
+			remove_ideas = FRA_vindicative_left_wing
+		}
+		search_filters = {
+			FOCUS_FILTER_INTERNAL_AFFAIRS
+		}
+		ai_will_do = {
+			factor = 100
+		}
+		cost = 8
+		x = 1
+		y = 1
+	}
+
+	focus = {
+		id = FRC_dissolve_the_partliament
+		icon = GFX_focus_destroy_parliament
+		available = {
+			has_government = communism
+		}
+		relative_position_id = FRC_moderate_revolutionnary_courts
+		prerequisite = {
+			focus = FRC_limit_jacobins_influence
+		}
+		prerequisite = {
+			focus = FRC_moderate_revolutionnary_courts
+		}
+		completion_reward = {
+			add_political_power = 150
+			set_country_flag = FRA_parliament_dissolved
+			set_country_flag = FRA_parliament_invisible
+			country_event = {
+				id = ww1_france.601
+				days = 3
+			}
+		}
+		search_filters = {
+			FOCUS_FILTER_INTERNAL_AFFAIRS
+		}
+		ai_will_do = {
+			factor = 100
+		}
+		cost = 8
+		x = 1
+		y = 1
+	}
+
+	#soviet style path
+	focus = {
+		id = FRC_centralist_dictatorship
+		icon = GFX_focus_SOV_the_supreme_soviet
+		available = {
+			has_government = communism
+			has_country_flag = FRC_jacobin_favored
+		}
+		relative_position_id = FRC_dissolve_the_partliament
+		prerequisite = {
+			focus = FRC_dissolve_the_partliament
+		}
+		mutually_exclusive = {
+			focus = FRC_syndical_federalism
+		}
+		completion_reward = {
+			#appoint jules guesdes prime ministre
+			#marcel cachin minister
+			#henri barbusse
+			#fernand loriot
+			#paul vaillant
+			promote_character = FRA_jules_guesde
+			add_popularity = {
+				ideology = communism
+				popularity = 0.07
+			}
+			country_event = {
+				id = ww1_france.602
+				days = 2
+			}
+		}
+		search_filters = {
+			FOCUS_FILTER_INTERNAL_AFFAIRS
+		}
+		ai_will_do = {
+			factor = 100
+		}
+		cost = 5
+		x = -8
+		y = 1
+	}
+
+	focus = {
+		id = FRC_dissolve_workers_council_autonomy
+		icon = GFX_goal_generic_crush_unions
+		available = {
+			has_government = communism
+		}
+		relative_position_id = FRC_centralist_dictatorship
+		prerequisite = {
+			focus = FRC_centralist_dictatorship
+		}
+		completion_reward = {
+			#we will have one BIG beautiful idea
+			#the first step give some support to party + pp
+			add_ideas = FRA_central_comite_dictatorship
+		}
+		search_filters = {
+			FOCUS_FILTER_INTERNAL_AFFAIRS
+		}
+		ai_will_do = {
+			factor = 100
+		}
+		cost = 5
+		x = 1
+		y = 1
+	}
+
+	focus = {
+		id = FRC_comite_national_de_surveillance
+		icon = GFX_focus_SOV_penal_battalions
+		available = {
+			has_government = communism
+		}
+		relative_position_id = FRC_centralist_dictatorship
+		prerequisite = {
+			focus = FRC_centralist_dictatorship
+		}
+		completion_reward = {
+			#agency stuff
+			add_political_power = 50
+			if = {
+				limit = {
+					has_intelligence_agency = no
+				}
+				create_intelligence_agency = {
+					name = "Bureau de surveillance"
+				}
+			}
+			gain_random_agency_upgrade = yes
+			upgrade_intelligence_agency = upgrade_passive_defense
+		}
+		search_filters = {
+			FOCUS_FILTER_INTERNAL_AFFAIRS
+		}
+		ai_will_do = {
+			factor = 100
+		}
+		cost = 5
+		x = -1
+		y = 1
+	}
+
+	focus = {
+		id = FRC_exclusion_of_anarchist_elements
+		icon = GFX_focus_PER_communist_afghanistan_intervention
+		available = {
+			has_government = communism
+		}
+		relative_position_id = FRC_comite_national_de_surveillance
+		prerequisite = {
+			focus = FRC_comite_national_de_surveillance
+		}
+		prerequisite = {
+			focus = FRC_dissolve_workers_council_autonomy
+		}
+		completion_reward = {
+			#remove advisors, can stability and party pop
+			deactivate_advisor = FRA_amedee_dunois
+			deactivate_advisor = FRA_jean_charles_fortune_henry
+			deactivate_advisor = FRA_georges_sorel
+			hidden_effect = {
+				FRA_amedee_dunois = {
+					remove_any_country_role_from_character = yes
+				}
+				FRA_jean_charles_fortune_henry = {
+					remove_any_country_role_from_character = yes
+				}
+				FRA_georges_sorel = {
+					remove_any_country_role_from_character = yes
+				}
+			}
+			FRA_georges_sorel = {
+				set_nationality = FRA
+			}
+			country_event = {
+				id = ww1_france.604
+				days = 2
+			}
+			hidden_effect = {
+				country_event = {
+					id = ww1_france.605
+					days = 124
+				}
+			}
+		}
+		search_filters = {
+			FOCUS_FILTER_INTERNAL_AFFAIRS
+		}
+		ai_will_do = {
+			factor = 100
+		}
+		cost = 5
+		x = 1
+		y = 1
+	}
+
+	focus = {
+		id = FRC_parti_revolutionnaire
+		icon = GFX_focus_generic_soviet_politics
+		available = {
+			has_government = communism
+		}
+		relative_position_id = FRC_exclusion_of_anarchist_elements
+		prerequisite = {
+			focus = FRC_exclusion_of_anarchist_elements
+		}
+		completion_reward = {
+			#change party name to Parti révolutionnaire
+			add_stability = 0.05
+			country_event = {
+				id = ww1_france.606
+				days = 2
+			}
+		}
+		search_filters = {
+			FOCUS_FILTER_INTERNAL_AFFAIRS
+		}
+		ai_will_do = {
+			factor = 100
+		}
+		cost = 5
+		x = 0
+		y = 1
+	}
+
+	focus = {
+		id = FRC_syndical_federalism
+		icon = GFX_goal_ideology_syndicalist
+		available = {
+			has_government = communism
+		}
+		relative_position_id = FRC_dissolve_the_partliament
+		prerequisite = {
+			focus = FRC_dissolve_the_partliament
+		}
+		mutually_exclusive = {
+			focus = FRC_centralist_dictatorship
+		}
+		completion_reward = {
+			#emile pouget president
+			#hubert lagardelle
+			#georges sorel
+			#pierre monatte stays
+			set_country_flag = FRC_syndical_federalism
+			custom_effect_tooltip = available_political_advisor
+			show_ideas_tooltip = FRA_georges_valois
+			custom_effect_tooltip = available_political_advisor
+			show_ideas_tooltip = FRA_hubert_lagardelle
+			if = {
+				limit = {
+					NOT = {
+						FRA_pierre_monatte = {
+							is_country_leader = no
+						}
+					}
+				}
+				promote_character = FRA_pierre_monatte
+			}
+			add_popularity = {
+				ideology = communism
+				popularity = 0.03
+			}
+			add_popularity = {
+				ideology = fascism
+				popularity = 0.02
+			}
+			country_event = {
+				id = ww1_france.603
+				days = 2
+			}
+		}
+		search_filters = {
+			FOCUS_FILTER_INTERNAL_AFFAIRS
+		}
+		ai_will_do = {
+			factor = 100
+		}
+		cost = 5
+		x = 0
+		y = 1
+	}
+
+	focus = {
+		id = FRC_charte_federale_du_travail
+		icon = GFX_focus_generic_treaty
+		available = {
+			has_government = communism
+		}
+		relative_position_id = FRC_syndical_federalism
+		prerequisite = {
+			focus = FRC_syndical_federalism
+		}
+		completion_reward = {
+			add_ideas = FRA_charte_federale_du_travail
+		}
+		search_filters = {
+			FOCUS_FILTER_INTERNAL_AFFAIRS
+		}
+		ai_will_do = {
+			factor = 100
+		}
+		cost = 5
+		x = 1
+		y = 1
+	}
+
+	focus = {
+		id = FRC_multiparty_state
+		icon = GFX_goal_support_socialism
+		available = {
+			has_government = communism
+		}
+		relative_position_id = FRC_syndical_federalism
+		prerequisite = {
+			focus = FRC_syndical_federalism
+		}
+		completion_reward = {
+			#idea with ideology drift defence, stability at war
+			#also advisor cost reduction
+			add_ideas = FRA_union_in_socialism
+		}
+		search_filters = {
+			FOCUS_FILTER_INTERNAL_AFFAIRS
+		}
+		ai_will_do = {
+			factor = 100
+		}
+		cost = 5
+		x = -2
+		y = 1
+	}
+
+	focus = {
+		id = FRC_wealth_reforms
+		icon = GFX_focus_social_welfare
+		available = {
+			has_government = communism
+		}
+		relative_position_id = FRC_multiparty_state
+		prerequisite = {
+			focus = FRC_multiparty_state
+		}
+		completion_reward = {
+			add_political_power = 75
+			#unlock following decisions : 
+			# 40h per week time work
+			# paid vacations
+			# direct democracy in towns
+			unlock_decision_tooltip = FRC_40_hours_worktime_week
+			unlock_decision_tooltip = FRC_paid_leave
+			unlock_decision_tooltip = FRC_direct_democracy_in_towns
+			set_country_flag = FRC_wealth_reforms
+		}
+		search_filters = {
+			FOCUS_FILTER_INTERNAL_AFFAIRS
+		}
+		ai_will_do = {
+			factor = 100
+		}
+		cost = 8
+		x = 1
+		y = 1
+	}
+
+	focus = {
+		id = FRC_socialist_education_decree
+		icon = GFX_focus_NOR_moscows_education_centers
+		available = {
+			has_government = communism
+			has_idea = FRA_scientists_exodus
+		}
+		relative_position_id = FRC_syndical_federalism
+		prerequisite = {
+			focus = FRC_syndical_federalism
+			focus = FRC_centralist_dictatorship
+		}
+		completion_reward = {
+			#add party pop, might give some research bonuses
+			#it could also provoke the brain run...
+			if = {
+				limit = {
+					has_idea = FRA_scientists_exodus
+				}
+				swap_ideas = {
+					add_idea = FRA_socialist_education
+					remove_idea = FRA_scientists_exodus
+				}
+				else = {
+					add_ideas = FRA_socialist_education
+				}
+			}
+		}
+		search_filters = {
+			FOCUS_FILTER_INTERNAL_AFFAIRS
+		}
+		ai_will_do = {
+			factor = 100
+		}
+		cost = 5
+		x = -4
+		y = 1
+	}
+
+	focus = {
+		id = FRC_proletarian_patriotism_act
+		icon = GFX_focus_FIN_socialist_welfare
+		available = {
+			has_government = communism
+		}
+		relative_position_id = FRC_socialist_education_decree
+		prerequisite = {
+			focus = FRC_socialist_education_decree
+		}
+		completion_reward = {
+			#get decisions: 
+			#anti religion law
+			#decree on proletarian art
+			unlock_decision_tooltip = FRC_anti_clerical_law
+			unlock_decision_tooltip = FRC_proletarian_art_subventions
+			set_country_flag = FRC_proletarian_patriotism_act
+			country_event = {
+				id = ww1_france.607
+				days = 2
+			}
+		}
+		search_filters = {
+			FOCUS_FILTER_INTERNAL_AFFAIRS
+		}
+		ai_will_do = {
+			factor = 100
+		}
+		cost = 5
+		x = -1
+		y = 1
+	}
+
+	focus = {
+		id = FRC_popular_labour_investment_law
+		icon = GFX_focus_agrarian_socialism
+		available = {
+			has_government = communism
+		}
+		relative_position_id = FRC_multiparty_state
+		prerequisite = {
+			focus = FRC_multiparty_state
+			focus = FRC_socialist_education_decree
+		}
+		completion_reward = {
+			#production boost
+			add_timed_idea = {
+				idea = FRA_popular_investment_act
+				days = 360
+			}
+		}
+		search_filters = {
+			FOCUS_FILTER_INTERNAL_AFFAIRS
+		}
+		ai_will_do = {
+			factor = 100
+		}
+		cost = 8
+		x = -1
+		y = 1
+	}
+
+	focus = {
+		id = FRC_workers_owned_factories
+		icon = GFX_focus_communist_urbanization
+		available = {
+			has_government = communism
+			has_idea = FRA_charte_federale_du_travail
+		}
+		relative_position_id = FRC_charte_federale_du_travail
+		prerequisite = {
+			focus = FRC_charte_federale_du_travail
+		}
+		completion_reward = {
+			#increase charte du travail effect
+			#gain some industry bonuses
+			swap_ideas = {
+				add_idea = FRA_charte_federale_du_travail2
+				remove_idea = FRA_charte_federale_du_travail
+			}
+		}
+		search_filters = {
+			FOCUS_FILTER_INTERNAL_AFFAIRS
+		}
+		ai_will_do = {
+			factor = 100
+		}
+		cost = 5
+		x = 0
+		y = 1
+	}
+
+	#industrial plan 
+	focus = {
+		id = FRC_first_five_year_plan
+		icon = GFX_focus_communist_urbanization #lenin icon
+		available = {
+			has_government = communism
+			has_war = no
+		}
+		relative_position_id = FRC_popular_labour_investment_law
+		prerequisite = {
+			focus = FRC_popular_labour_investment_law
+		}
+		mutually_exclusive = {
+			focus = FRC_regional_production_program
+		}
+		completion_reward = {
+			#big industrial construction bonuses and mission to complete a specific target goal of factories
+			FRC_setup_moderate_five_year_plan = yes
+			effect_tooltip = {
+				activate_mission = FRC_first_five_year_plan_mission
+			}
+			
+			country_event = {
+				id = ww1_france.608
+				days = 2
+			}
+			add_timed_idea = {
+				idea = FRA_first_five_year_plan
+				days = 1800
+			}
+		}
+		search_filters = {
+			FOCUS_FILTER_INTERNAL_AFFAIRS
+		}
+		ai_will_do = {
+			factor = 100
+		}
+		cost = 7
+		x = -2
+		y = 1
+	}
+
+	focus = {
+		id = FRC_regional_production_program
+		icon = GFX_focus_communist_urbanization
+		available = {
+			has_government = communism
+			has_war = no
+		}
+		relative_position_id = FRC_popular_labour_investment_law
+		prerequisite = {
+			focus = FRC_popular_labour_investment_law
+		}
+		mutually_exclusive = {
+			focus = FRC_first_five_year_plan
+		}
+		completion_reward = {
+			#trigger a repetable mission making a random investment in a random state
+			#it can be pretty much anything
+			unlock_decision_tooltip = FRC_random_investment
+			set_country_flag = {
+				flag = FRC_syndicalist_council_initiatives
+				days = 1800
+			}
+			activate_mission = FRC_random_investment
+		}
+		search_filters = {
+			FOCUS_FILTER_INTERNAL_AFFAIRS
+		}
+		ai_will_do = {
+			factor = 100
+		}
+		cost = 7
+		x = 2
+		y = 1
+	}
+
+	focus = {
+		id = FRC_war_in_france
+		icon = GFX_focus_attack_france
+		available = {
+			has_government = communism
+			any_enemy_country = {
+				original_tag = FRA
+			}
+		}
+		relative_position_id = FRC_socialist_provisional_government
+		prerequisite = {
+			focus = FRC_socialist_provisional_government	
+		}
+		completion_reward = {
+			add_war_support = 0.05
+			custom_effect_tooltip = FRC_spawn_behind_enemy_lines
+			unlock_decision_tooltip = FRC_deploy_partisans_in_state
+			set_country_flag = FRC_war_in_france
+		}
+		search_filters = {
+			FOCUS_FILTER_INTERNAL_AFFAIRS
+		}
+		ai_will_do = {
+			factor = 1000
+		}
+		cost = 5
+		x = 2
+		y = 1
+	}
+
+	focus = {
+		id = FRC_all_french_campaign
+		icon = GFX_focus_focus_fra_revolution_utmost
+		available = {
+			
+		}
+		relative_position_id = FRC_war_in_france
+		prerequisite = {
+			focus = FRC_war_in_france	
+		}
+		mutually_exclusive = {
+			focus = FRC_negotiate_separatist_support
+		}
+		completion_reward = {
+			add_stability = 0.05
+			add_ideas = FRC_communard_propaganda_press
+		}
+		search_filters = {
+			FOCUS_FILTER_INTERNAL_AFFAIRS
+		}
+		ai_will_do = {
+			factor = 1000
+		}
+		cost = 5
+		x = 3
+		y = 1
+	}
+
+	focus = {
+		id = FRC_negotiate_separatist_support
+		icon = GFX_focus_GER_liberate_exploited_colonial_workers
+		available = {
+			has_war = yes
+		}
+		relative_position_id = FRC_war_in_france
+		prerequisite = {
+			focus = FRC_war_in_france	
+		}
+		mutually_exclusive = {
+			focus = FRC_all_french_campaign
+		}
+		completion_reward = {
+			custom_effect_tooltip = FRC_support_separatism_to_get_military_support
+			unlock_decision_tooltip = FRC_support_brittany_commune
+			unlock_decision_tooltip = FRC_support_basque_commune
+			unlock_decision_tooltip = FRC_support_corsican_commune
+			set_country_flag = FRC_negotiate_separatist_support
+		}
+		search_filters = {
+			FOCUS_FILTER_INTERNAL_AFFAIRS
+		}
+		ai_will_do = {
+			factor = 50
+		}
+		cost = 5
+		x = 5
+		y = 1
+	}
+
+	focus = {
+		id = FRC_popular_recruitement_comittes
+		icon = GFX_focus_SOV_builder_of_the_red_army
+		available = {
+			has_war = yes
+		}
+		relative_position_id = FRC_negotiate_separatist_support
+		prerequisite = {
+			focus = FRC_all_french_campaign
+			focus = FRC_negotiate_separatist_support
+		}
+		completion_reward = {
+			add_ideas = FRC_popular_recruitement_comittees
+		}
+		search_filters = {
+			FOCUS_FILTER_INTERNAL_AFFAIRS
+		}
+		ai_will_do = {
+			factor = 1000
+		}
+		cost = 5
+		x = -1
+		y = 1
+	}
+
+	focus = {
+		id = FRC_call_for_foreign_support
+		icon = GFX_focus_communist_officers
+		available = {
+			has_war = yes
+		}
+		relative_position_id = FRC_negotiate_separatist_support
+		prerequisite = {
+			focus = FRC_all_french_campaign
+			focus = FRC_negotiate_separatist_support
+		}
+		completion_reward = {
+			add_political_power = 25
+			custom_effect_tooltip = FRC_call_communist_nations
+			unlock_decision_tooltip = FRC_call_country_to_help
+			set_country_flag = FRC_call_for_foreign_support
+		}
+		search_filters = {
+			FOCUS_FILTER_INTERNAL_AFFAIRS
+		}
+		ai_will_do = {
+			factor = 100
+		}
+		cost = 5
+		x = 0
+		y = 2
+	}
+
+	focus = {
+		id = FRC_bandit_warfare
+		icon = GFX_focus_FIN_oy_alkoholiliike
+		available = {
+			has_war = yes
+		}
+		mutually_exclusive = {
+			focus = FRC_great_war_experience
+		}
+		relative_position_id = FRC_war_in_france
+		prerequisite = {
+			focus = FRC_war_in_france	
+		}
+		completion_reward = {
+			add_ideas = FRC_bandit_warfare
+		}
+		search_filters = {
+			FOCUS_FILTER_INTERNAL_AFFAIRS
+		}
+		ai_will_do = {
+			factor = 500
+		}
+		cost = 5
+		x = -1
+		y = 1
+	}
+
+	focus = {
+		id = FRC_great_war_experience
+		icon = GFX_focus_BEL_legacy_of_the_great_war
+		available = {
+			has_war = yes
+		}
+		mutually_exclusive = {
+			focus = FRC_bandit_warfare
+		}
+		relative_position_id = FRC_war_in_france
+		prerequisite = {
+			focus = FRC_war_in_france	
+		}
+		completion_reward = {
+			add_ideas = FRC_centralized_command
+		}
+		search_filters = {
+			FOCUS_FILTER_INTERNAL_AFFAIRS
+		}
+		ai_will_do = {
+			factor = 1000
+		}
+		cost = 5
+		x = 1
+		y = 1
+	}
+
+	focus = {
+		id = FRC_war_effort_donations
+		icon = GFX_goal_generic_air_fighter
+		available = {
+			has_war = yes
+			has_tech = fighter1
+		}
+		relative_position_id = FRC_great_war_experience
+		prerequisite = {
+			focus = FRC_great_war_experience
+			focus = FRC_bandit_warfare		
+		}
+		completion_reward = {
+			air_experience = 15
+			add_manpower = 12700
+			add_equipment_to_stockpile = {
+				type = fighter_equipment_1
+				amount = 75
+			}
+			add_equipment_to_stockpile = {
+				type = fighter_equipment_1
+				amount = 4
+				producer = ENG
+			}
+			add_equipment_to_stockpile = {
+				type = scout_plane_equipment_2
+				amount = 15
+			}
+			add_equipment_to_stockpile = {
+				type = scout_plane_equipment_1
+				amount = 5
+			}
+		}
+		search_filters = {
+			FOCUS_FILTER_INTERNAL_AFFAIRS
+		}
+		ai_will_do = {
+			factor = 300
+		}
+		cost = 5
+		x = -1
+		y = 1
+	}
+
+	focus = {
+		id = FRC_CGT_support
+		icon = GFX_focus_FRA_affiliation_with_CGT
+		available = {
+			NOT = {
+				has_idea = FRA_CGT_support
+			}
+		}
+		relative_position_id = FRC_great_war_experience
+		prerequisite = {
+			focus = FRC_great_war_experience
+			focus = FRC_bandit_warfare		
+		}
+		completion_reward = {
+			add_ideas = FRA_CGT_support
+		}
+		search_filters = {
+			FOCUS_FILTER_INTERNAL_AFFAIRS
+		}
+		ai_will_do = {
+			factor = 300
+		}
+		cost = 5
+		x = -2
+		y = 2
+	}
+
+	focus = {
+		id = FRC_emergency_mobilization
+		icon = GFX_focus_FRA_expand_factory_duty
+		available = {
+			NOT = {
+				has_idea = FRA_CGT_support
+			}
+		}
+		relative_position_id = FRC_great_war_experience
+		prerequisite = {
+			focus = FRC_great_war_experience
+			focus = FRC_bandit_warfare		
+		}
+		completion_reward = {
+			increase_mobilisation = yes
+			random_owned_controlled_state = {
+				limit = {
+					is_core_of = ROOT
+				}
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = arms_factory
+					level = 1
+				}
+			}
+			random_owned_controlled_state = {
+				limit = {
+					is_core_of = ROOT
+				}
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = arms_factory
+					level = 1
+				}
+			}
+		}
+		search_filters = {
+			FOCUS_FILTER_INTERNAL_AFFAIRS
+		}
+		ai_will_do = {
+			factor = 1000
+		}
+		cost = 5
+		x = 0
+		y = 2
+	}
+
+	focus = {
+		id = FRC_crackdown_military_reserves
+		icon = GFX_focus_AUS_raid_military_storages
+		available = {
+			any_enemy_country = {
+				original_tag = FRA
+			}
+		}
+		relative_position_id = FRC_war_in_france
+		prerequisite = {
+			focus = FRC_war_in_france	
+		}
+		completion_reward = {
+			add_equipment_to_stockpile = {
+				type = infantry_equipment_n1
+				amount = 3000
+			}
+			add_equipment_to_stockpile = {
+				type = infantry_equipment_0
+				amount = 8000
+			}
+			add_equipment_to_stockpile = {
+				type = infantry_equipment_1
+				amount = 7500
+			}
+		}
+		search_filters = {
+			FOCUS_FILTER_INTERNAL_AFFAIRS
+		}
+		ai_will_do = {
+			factor = 2500
+		}
+		cost = 5
+		x = 2
+		y = 2
+	}
+#End of focuses 
+}

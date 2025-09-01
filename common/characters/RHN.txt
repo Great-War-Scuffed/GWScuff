@@ -1,0 +1,39 @@
+characters={
+	RHN_french_military_government={
+		name = GER_french_military_government 
+		portraits={
+			civilian={
+				large="gfx/leaders/FRA/FRA_provisional_government.png"
+			}
+		}
+		country_leader={
+			ideology=stratocracy
+			traits={ foreign_leader }
+		}
+	}
+
+	#Josef Friedrich Matthes
+	RHN_josef_friedrich_matthes={
+		portraits={
+			civilian={
+				large="GFX_portrait_europe_generic_9"
+			}
+		}
+		country_leader={
+			ideology=social_democracy
+			traits={  }
+		}
+	}
+
+	GER_konrad_adenauer={
+		portraits={
+			civilian={
+				large="gfx/leaders/GER/GER_Konrad_Adenauer.png"
+			}
+		}
+		country_leader={
+			ideology=conservatism
+			traits={ financial_expert }
+		}
+	}
+}

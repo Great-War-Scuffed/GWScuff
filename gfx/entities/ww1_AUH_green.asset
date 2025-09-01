@@ -1,0 +1,28 @@
+##############################
+##          Infantry       ###
+##############################
+
+entity = {
+	name = "AUH_conrad_infantry_2_entity"
+	clone = "AUS_infantry_entity"	
+	pdxmesh = "AUH_GREEN_infantry_2_mesh"
+}
+
+entity = {
+	name = "AUS_USGA_infantry_2_entity"
+	clone = "AUS_infantry_entity"	
+	pdxmesh = "AUH_GREEN_infantry_2_mesh"
+}
+
+entity = {
+	name = "AUS_infantry_2_alt_0_entity"
+	clone = "AUS_infantry_entity"	
+	pdxmesh = "AUH_GREEN_infantry_2_mesh"
+}
+
+entity = {
+	name = "AUR_infantry_2_entity"
+	clone = "AUS_infantry_entity"	
+	pdxmesh = "AUH_GREEN_infantry_2_mesh"
+}
+

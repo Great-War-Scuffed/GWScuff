@@ -1,0 +1,35 @@
+characters={
+	BRN_council_of_regency={
+		name="BRN_council_of_regency"
+		portraits={
+			civilian={
+				large="gfx/leaders/BRN/BRN_Council_of_Regency.png"
+			}
+		}
+		country_leader={
+			ideology=absolute_monarchy		
+		}
+	}
+	BRN_jamalul_alam_ii={
+		name="BRN_jamalul_alam_ii"
+		portraits={
+			civilian={
+				large="gfx/leaders/BRN/BRN_Muhammad_Jamalul_Alam_II.png"
+			}
+		}
+		country_leader={
+			ideology=absolute_monarchy
+		}
+	}
+	BRN_ahmad_tajuddin={
+		name="BRN_ahmad_tajuddin"
+		portraits={
+			civilian={
+				large="gfx/leaders/BRN/BRN_ahmad_tajuddin.png"
+			}
+		}
+		country_leader={
+			ideology=absolute_monarchy
+		}
+	}
+}

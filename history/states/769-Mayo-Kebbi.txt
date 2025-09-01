@@ -1,0 +1,27 @@
+state={
+	id=769
+	name="STATE_769" 
+	state_category = wasteland
+	history={
+		owner = GER
+		add_core_of = CMR
+		buildings = {
+			infrastructure = 1
+		}
+		1912.3.30 = {
+			owner = FRA
+			controller = FRA
+			add_claim_by = GER
+			remove_core_of = CMR
+			add_core_of = CHA
+		}
+	}
+	resources={
+		rubber=1
+	}
+	provinces={
+		9152 6779 
+	}
+	manpower=131456
+	buildings_max_level_factor=1.000
+}

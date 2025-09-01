@@ -1,0 +1,411 @@
+defined_text = { # Country
+	name = GetRelevantNavalTreatyNation
+	text = {
+		trigger = {
+			ENG = {
+				has_naval_treaty_trigger = yes
+			}
+		}
+		localization_key = ENG_Naval_treaty_nation
+	}
+	text = {
+		trigger = {
+			ENG = {
+				not = { has_naval_treaty_trigger = yes }
+			}
+			USA = {
+				has_naval_treaty_trigger = yes
+			}
+		}
+		localization_key = USA_Naval_treaty_nation
+	}
+	text = {
+		trigger = {
+			ENG = {
+				not = { has_naval_treaty_trigger = yes }
+			}
+			USA = {
+				not = { has_naval_treaty_trigger = yes }
+			}
+			FRA = {
+				has_naval_treaty_trigger = yes
+			}
+		}
+		localization_key = FRA_Naval_treaty_nation
+	}
+	text = {
+		trigger = {
+			ENG = {
+				not = { has_naval_treaty_trigger = yes }
+			}
+			USA = {
+				not = { has_naval_treaty_trigger = yes }
+			}
+			FRA = {
+				not = { has_naval_treaty_trigger = yes }
+			}
+		}
+		localization_key = GEN_Naval_treaty_nation
+	}
+}
+
+
+
+defined_text = { # Country
+	name = GetStrengthRatioBritain
+	text = {
+		trigger = {
+			if = {
+				limit = { ENG = { has_naval_treaty_trigger = yes } }
+				naval_strength_comparison = {
+					other = ENG
+					ratio < 1
+					sub_unit_def_weights = {
+						carrier = 0.5
+						battleship = 1
+						battle_cruiser = 0.8
+						heavy_cruiser = 0.5
+					}
+				}
+				naval_strength_comparison = {
+					other = ENG
+					ratio > 0.9
+					sub_unit_def_weights = {
+						carrier = 0.5
+						battleship = 1
+						battle_cruiser = 0.8
+						heavy_cruiser = 0.5
+					}
+				}
+			}
+			else_if = {
+				limit = { USA = { has_naval_treaty_trigger = yes } }
+				naval_strength_comparison = {
+					other = USA
+					ratio < 1
+					sub_unit_def_weights = {
+						carrier = 0.5
+						battleship = 1
+						battle_cruiser = 0.8
+						heavy_cruiser = 0.5
+					}
+				}
+				naval_strength_comparison = {
+					other = USA
+					ratio > 0.9
+					sub_unit_def_weights = {
+						carrier = 0.5
+						battleship = 1
+						battle_cruiser = 0.8
+						heavy_cruiser = 0.5
+					}
+				}
+			}
+			else_if = {
+				limit = { FRA = { has_naval_treaty_trigger = yes } }
+				naval_strength_comparison = {
+					other = FRA
+					ratio < 1
+					sub_unit_def_weights = {
+						carrier = 0.5
+						battleship = 1
+						battle_cruiser = 0.8
+						heavy_cruiser = 0.5
+					}
+				}
+				naval_strength_comparison = {
+					other = FRA
+					ratio > 0.9
+					sub_unit_def_weights = {
+						carrier = 0.5
+						battleship = 1
+						battle_cruiser = 0.8
+						heavy_cruiser = 0.5
+					}
+				}
+			}
+		}
+		localization_key = Naval_treaty_90
+	}
+	text = {
+		trigger = {
+			if = {
+				limit = { ENG = { has_naval_treaty_trigger = yes } }
+				naval_strength_comparison = {
+					other = ENG
+					ratio < 0.9
+					sub_unit_def_weights = {
+						carrier = 0.5
+						battleship = 1
+						battle_cruiser = 0.8
+						heavy_cruiser = 0.5
+					}
+				}
+				naval_strength_comparison = {
+					other = ENG
+					ratio > 0.75
+					sub_unit_def_weights = {
+						carrier = 0.5
+						battleship = 1
+						battle_cruiser = 0.8
+						heavy_cruiser = 0.5
+					}
+				}
+			}
+			else_if = {
+				limit = { USA = { has_naval_treaty_trigger = yes } }
+				naval_strength_comparison = {
+					other = USA
+					ratio < 0.9
+					sub_unit_def_weights = {
+						carrier = 0.5
+						battleship = 1
+						battle_cruiser = 0.8
+						heavy_cruiser = 0.5
+					}
+				}
+				naval_strength_comparison = {
+					other = USA
+					ratio > 0.75
+					sub_unit_def_weights = {
+						carrier = 0.5
+						battleship = 1
+						battle_cruiser = 0.8
+						heavy_cruiser = 0.5
+					}
+				}
+			}
+			else_if = {
+				limit = { FRA = { has_naval_treaty_trigger = yes } }
+				naval_strength_comparison = {
+					other = FRA
+					ratio < 0.9
+					sub_unit_def_weights = {
+						carrier = 0.5
+						battleship = 1
+						battle_cruiser = 0.8
+						heavy_cruiser = 0.5
+					}
+				}
+				naval_strength_comparison = {
+					other = FRA
+					ratio > 0.75
+					sub_unit_def_weights = {
+						carrier = 0.5
+						battleship = 1
+						battle_cruiser = 0.8
+						heavy_cruiser = 0.5
+					}
+				}
+			}
+		}
+		localization_key = Naval_treaty_75
+	}
+	text = {
+		trigger = {
+			if = {
+				limit = { ENG = { has_naval_treaty_trigger = yes } }
+				naval_strength_comparison = {
+					other = ENG
+					ratio < 0.75
+					sub_unit_def_weights = {
+						carrier = 0.5
+						battleship = 1
+						battle_cruiser = 0.8
+						heavy_cruiser = 0.5
+					}
+				}
+				naval_strength_comparison = {
+					other = ENG
+					ratio > 0.5
+					sub_unit_def_weights = {
+						carrier = 0.5
+						battleship = 1
+						battle_cruiser = 0.8
+						heavy_cruiser = 0.5
+					}
+				}
+			}
+			else_if = {
+				limit = { USA = { has_naval_treaty_trigger = yes } }
+				naval_strength_comparison = {
+					other = USA
+					ratio < 0.75
+					sub_unit_def_weights = {
+						carrier = 0.5
+						battleship = 1
+						battle_cruiser = 0.8
+						heavy_cruiser = 0.5
+					}
+				}
+				naval_strength_comparison = {
+					other = USA
+					ratio > 0.5
+					sub_unit_def_weights = {
+						carrier = 0.5
+						battleship = 1
+						battle_cruiser = 0.8
+						heavy_cruiser = 0.5
+					}
+				}
+			}
+			else_if = {
+				limit = { FRA = { has_naval_treaty_trigger = yes } }
+				naval_strength_comparison = {
+					other = FRA
+					ratio < 0.75
+					sub_unit_def_weights = {
+						carrier = 0.5
+						battleship = 1
+						battle_cruiser = 0.8
+						heavy_cruiser = 0.5
+					}
+				}
+				naval_strength_comparison = {
+					other = FRA
+					ratio > 0.5
+					sub_unit_def_weights = {
+						carrier = 0.5
+						battleship = 1
+						battle_cruiser = 0.8
+						heavy_cruiser = 0.5
+					}
+				}
+			}
+		}
+		localization_key = Naval_treaty_50
+	}
+	text = {
+		trigger = {
+			if = {
+				limit = { ENG = { has_naval_treaty_trigger = yes } }
+				naval_strength_comparison = {
+					other = ENG
+					ratio < 0.5
+					sub_unit_def_weights = {
+						carrier = 0.5
+						battleship = 1
+						battle_cruiser = 0.8
+						heavy_cruiser = 0.5
+					}
+				}
+			}
+			else_if = {
+				limit = { USA = { has_naval_treaty_trigger = yes } }
+				naval_strength_comparison = {
+					other = USA
+					ratio < 0.5
+					sub_unit_def_weights = {
+						carrier = 0.5
+						battleship = 1
+						battle_cruiser = 0.8
+						heavy_cruiser = 0.5
+					}
+				}
+			}
+			else_if = {
+				limit = { FRA = { has_naval_treaty_trigger = yes } }
+				naval_strength_comparison = {
+					other = FRA
+					ratio < 0.5
+					sub_unit_def_weights = {
+						carrier = 0.5
+						battleship = 1
+						battle_cruiser = 0.8
+						heavy_cruiser = 0.5
+					}
+				}
+			}
+		}
+		localization_key = Naval_treaty_lower_than_50
+	}
+	text = {
+		trigger = {
+			if = {
+				limit = { ENG = { has_naval_treaty_trigger = yes } }
+				naval_strength_comparison = {
+					other = ENG
+					ratio > 1
+					sub_unit_def_weights = {
+						carrier = 0.5
+						battleship = 1
+						battle_cruiser = 0.8
+						heavy_cruiser = 0.5
+					}
+				}
+			}
+			else_if = {
+				limit = { USA = { has_naval_treaty_trigger = yes } }
+				naval_strength_comparison = {
+					other = USA
+					ratio > 1
+					sub_unit_def_weights = {
+						carrier = 0.5
+						battleship = 1
+						battle_cruiser = 0.8
+						heavy_cruiser = 0.5
+					}
+				}
+			}
+			else_if = {
+				limit = { FRA = { has_naval_treaty_trigger = yes } }
+				naval_strength_comparison = {
+					other = FRA
+					ratio > 1
+					sub_unit_def_weights = {
+						carrier = 0.5
+						battleship = 1
+						battle_cruiser = 0.8
+						heavy_cruiser = 0.5
+					}
+				}
+			}
+		}
+		localization_key = Naval_treaty_over_100
+	}
+}
+
+defined_text = {
+	name = MTG_washington_naval_treaty_adherent_sp
+	text = {
+		trigger = {
+			GER = {
+				has_country_flag = great_war_winner
+			}
+		}
+		localization_key = GER_berlin_naval_treaty
+	}
+	text = {
+		localization_key = USA_washington_naval_treaty
+	}
+}
+
+defined_text = {
+	name = MTG_washington_naval_treaty_adherent_sps
+	text = {
+		trigger = {
+			GER = {
+				has_country_flag = great_war_winner
+			}
+		}
+		localization_key = GER_berlin_naval_treaties
+	}
+	text = {
+		localization_key = USA_washington_naval_treaties
+	}
+}
+
+defined_text = {
+	name = MTG_washington_naval_treaty_naval_superpower_name
+	text = {
+		trigger = {
+			GER = {
+				has_country_flag = great_war_winner
+			}
+		}
+		localization_key = "[GER.getNameDef]"
+	}
+	text = {
+		localization_key = "[ENG.getNameDef]"
+	}
+}

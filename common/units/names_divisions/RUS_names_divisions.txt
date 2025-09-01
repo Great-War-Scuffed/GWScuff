@@ -1,0 +1,844 @@
+﻿# Division template historical names system. Is a new method of naming the divisions based on the names-group assigned to it's template.
+# If we run out of all historical names, the names will be assigned in the old way.
+#
+# Each group has a made up tag. Use it if you want to append more, or replace existing names with the extra txt files (modding).
+#
+# for_countries - lists all countries that can use it. If empty, or entire tag is missing, all countries in the world can use it.
+#
+# can_use - is a trigger that locks/unlocks the group under specific circumstances. The trigger is in a country scope.
+#
+# division_types - is a list of tokens to corresponding unit types. A player can in fact use any group of names for a div.template
+#                  however this tag is a helper for an automated choice (for AI, or if the group must switch on it's own, because
+#                  for example the current one is no longer available due to the can_use trigger saying so).
+#                  In automated choice, the division template must have at least 1 of the following types for it to be chosen.
+#
+# fallback_name - Is going to be used if we run out of the scripted historical names. If you want to use the old division naming
+#                 mechanics to be used for fallbacks, then just skip this option.
+#
+# unordered - It's a list of historical division names that did not have a number. Regardless if such names happened in history or not
+#             this option is available here mainly for a mods.
+#
+# ordered - Is a list of all historical names. 
+#           Numbers must start from 1 and up. 
+#           Numbers can't repeat in one scope.
+#           If you script the name for this group, at the same number (for example in a mod in another file), the name will be override.
+#           All arguments between the brackets must be separated by spaces. Each argument is wrapped in "quotas".
+#           1st argument = The name. It must contain either: 
+#                          %d (for decimal number placement)
+#                          %s (for string number placement - ROMAN numbers like XIV).
+#           2nd argument is optional = A localizable text describing this historical division. The text will be visible in the tooltip
+#                                      where you choose the historical division name.
+#           3rd argument is optional = An URL preferably pointing to the WIKI. It's a future feature that is not currently working in
+#                                      the current game version.
+RUS_INF_01 = 
+{
+	name = "Infantry Division"
+
+	for_countries = { RUS FER CER KUB DON ORE UCH TBK AMU TER USS }
+
+	can_use = { NOT = { has_country_leader_ideology = revolutionary_socialism has_country_leader_ideology = vanguardism } }
+
+	division_types = { "infantry" }
+
+	# Number reservation system will tie to another group.
+	#link_numbering_with = { RUS_INF_01 }
+
+	fallback_name = "%d-ya Pekhotnaya Diviziya"
+
+	# Names with numbers (only one number per entry). 
+	# It's okay to have gaps in numbering.
+	ordered =
+	{
+		1 = { "%d-ya Pekhotnaya Diviziya" }
+		2 = { "%d-ya Pekhotnaya Diviziya" }
+		3 = { "%d-ya Pekhotnaya Diviziya" }
+		4 = { "%d-ya Pekhotnaya Diviziya" }
+		5 = { "%d-ya Pekhotnaya Diviziya" }
+	}
+}
+
+RUS_INF_02 = 
+{
+	name = "Guard Infantry Division"
+
+	for_countries = { RUS }
+
+	can_use = { NOT = { has_country_leader_ideology = revolutionary_socialism has_country_leader_ideology = vanguardism } }
+
+	division_types = { "infantry" }
+
+	# Number reservation system will tie to another group.
+	#link_numbering_with = { RUS_INF_01 }
+
+	fallback_name = "%d-ya Gvardeyskaya Pekhotnaya Diviziya"
+
+	# Names with numbers (only one number per entry). 
+	# It's okay to have gaps in numbering.
+	ordered =
+	{
+		1 = { "%d-ya Gvardeyskaya Pekhotnaya Diviziya" }
+		2 = { "%d-ya Gvardeyskaya Pekhotnaya Diviziya" }
+		3 = { "%d-ya Gvardeyskaya Pekhotnaya Diviziya" }
+		4 = { "%d-ya Gvardeyskaya Pekhotnaya Diviziya" }
+		5 = { "%d-ya Gvardeyskaya Pekhotnaya Diviziya" }
+	}
+}
+
+RUS_INF_03 = 
+{
+	name = "Grenadier Division"
+
+	for_countries = { RUS }
+
+	can_use = { NOT = { has_country_leader_ideology = revolutionary_socialism has_country_leader_ideology = vanguardism } }
+
+	division_types = { "infantry" }
+
+	# Number reservation system will tie to another group.
+	#link_numbering_with = { RUS_INF_01 }
+
+	fallback_name = "%d-ya Grenaderskaya Diviziya"
+
+	# Names with numbers (only one number per entry). 
+	# It's okay to have gaps in numbering.
+	ordered =
+	{
+		1 = { "%d-ya Grenaderskaya Diviziya" }
+		2 = { "%d-ya Grenaderskaya Diviziya" }
+		3 = { "%d-ya Grenaderskaya Diviziya" }
+		4 = { "%d-ya Grenaderskaya Diviziya" }
+	}
+}
+
+RUS_INF_04 = 
+{
+	name = "Rifle Division"
+
+	for_countries = { RUS FER CER KUB DON ORE UCH TBK AMU TER USS }
+
+	division_types = { "infantry" }
+
+	can_use = {
+		if = {
+			limit = { original_tag = RUS }
+			NOT = { has_country_leader_ideology = revolutionary_socialism has_country_leader_ideology = vanguardism }
+		}
+	}
+
+	# Number reservation system will tie to another group.
+	#link_numbering_with = { RUS_INF_01 }
+
+	fallback_name = "%d-ya Strelkovaya Diviziya"
+
+	# Names with numbers (only one number per entry). 
+	# It's okay to have gaps in numbering.
+	ordered =
+	{
+		1 = { "%d-ya Strelkovaya Diviziya" }
+		2 = { "%d-ya Strelkovaya Diviziya" }
+		3 = { "%d-ya Strelkovaya Diviziya" }
+		4 = { "%d-ya Strelkovaya Diviziya" }
+		5 = { "%d-ya Strelkovaya Diviziya" }
+	}
+}
+
+RUS_INF_05 = 
+{
+	name = "Rifle Brigade"
+
+	for_countries = { RUS FER CER KUB DON ORE UCH TBK AMU TER USS }
+
+	division_types = { "infantry" }
+
+	# Number reservation system will tie to another group.
+	#link_numbering_with = { RUS_INF_01 }
+
+	fallback_name = "%d-ya Strelkovaya Brigada"
+
+	# Names with numbers (only one number per entry). 
+	# It's okay to have gaps in numbering.
+	ordered =
+	{
+		1 = { "%d-ya Strelkovaya Brigada" }
+		2 = { "%d-ya Strelkovaya Brigada" }
+		3 = { "%d-ya Strelkovaya Brigada" }
+		4 = { "%d-ya Strelkovaya Brigada" }
+		5 = { "%d-ya Strelkovaya Brigada" }
+	}
+}
+RUS_INF_06 = 
+{
+	name = "Infantry Brigade"
+
+	for_countries = { RUS FER CER KUB DON ORE UCH TBK AMU TER USS }
+
+	can_use = { NOT = { has_country_leader_ideology = revolutionary_socialism has_country_leader_ideology = vanguardism } }
+
+	division_types = { "infantry" }
+
+	# Number reservation system will tie to another group.
+	#link_numbering_with = { RUS_INF_01 }
+
+	fallback_name = "%d-ya Pekhotnaya Brigada"
+
+	# Names with numbers (only one number per entry). 
+	# It's okay to have gaps in numbering.
+	ordered =
+	{
+		1 = { "%d-ya Pekhotnaya Brigada" }
+		2 = { "%d-ya Pekhotnaya Brigada" }
+		3 = { "%d-ya Pekhotnaya Brigada" }
+		4 = { "%d-ya Pekhotnaya Brigada" }
+		5 = { "%d-ya Pekhotnaya Brigada" }
+	}
+}
+RUS_INF_07 = 
+{
+	name = "Infantry Regiment"
+
+	for_countries = { RUS FER CER KUB DON ORE UCH TBK AMU TER USS VLN }
+
+	can_use = { always = yes }
+
+	division_types = { "infantry" }
+
+	# Number reservation system will tie to another group.
+	#link_numbering_with = { RUS_INF_01 }
+
+	fallback_name = "%d-y Pekhotnyy Polk"
+
+	# Names with numbers (only one number per entry). 
+	# It's okay to have gaps in numbering.
+	ordered =
+	{
+		1 = { "%d-y Pekhotnyy Polk" }
+		2 = { "%d-y Pekhotnyy Polk" }
+		3 = { "%d-y Pekhotnyy Polk" }
+		4 = { "%d-y Pekhotnyy Polk" }
+		5 = { "%d-y Pekhotnyy Polk" }
+		6 = { "%d-y Pekhotnyy Polk" }
+		7 = { "%d-y Pekhotnyy Polk" }
+		8 = { "%d-y Pekhotnyy Polk" }
+		9 = { "%d-y Pekhotnyy Polk" }
+		10 = { "%d-y Pekhotnyy Polk" }
+	}
+}
+
+
+RUS_CAV_01 = {
+	name = "Cavalry Division"
+
+	for_countries = { RUS FER CER KUB DON ORE UCH TBK AMU TER USS }
+
+	can_use = {
+		if = {
+			limit = { original_tag = RUS }
+			NOT = { has_country_leader_ideology = revolutionary_socialism has_country_leader_ideology = vanguardism }
+		}
+	}
+
+	division_types = { "cavalry" }
+
+	# Number reservation system will tie to another group.
+	#link_numbering_with = { RUS_INF_01 }
+
+	fallback_name = "%d-ya Kavaleriyskaya Diviziya"
+
+	# Names with numbers (only one number per entry). 
+	# It's okay to have gaps in numbering.
+	ordered =
+	{
+		1 = { "%d-ya Kavaleriyskaya Diviziya" }
+		2 = { "%d-ya Kavaleriyskaya Diviziya" }
+		3 = { "%d-ya Kavaleriyskaya Diviziya" }
+		4 = { "%d-ya Kavaleriyskaya Diviziya" }
+		5 = { "%d-ya Kavaleriyskaya Diviziya" }
+		6 = { "%d-ya Kavaleriyskaya Diviziya" }
+		7 = { "%d-ya Kavaleriyskaya Diviziya" }
+		8 = { "%d-ya Kavaleriyskaya Diviziya" }
+		9 = { "%d-ya Kavaleriyskaya Diviziya" }
+		10 = { "%d-ya Kavaleriyskaya Diviziya" }
+	}
+}
+
+RUS_CAV_02 = {
+	name = "Guard Cavalry Division"
+
+	for_countries = { RUS FER CER KUB DON ORE UCH TBK AMU TER USS }
+
+	can_use = {
+		if = {
+			limit = { original_tag = RUS }
+			NOT = { has_country_leader_ideology = revolutionary_socialism has_country_leader_ideology = vanguardism }
+		}
+	}
+
+	division_types = { "cavalry" }
+
+	# Number reservation system will tie to another group.
+	#link_numbering_with = { RUS_INF_01 }
+
+	fallback_name = "%d-ya Gvardeyskaya Kavaleriyskaya Diviziya"
+
+	# Names with numbers (only one number per entry). 
+	# It's okay to have gaps in numbering.
+	ordered =
+	{
+		1 = { "%d-ya Gvardeyskaya Kavaleriyskaya Diviziya" }
+		2 = { "%d-ya Gvardeyskaya Kavaleriyskaya Diviziya" }
+		3 = { "%d-ya Gvardeyskaya Kavaleriyskaya Diviziya" }
+		4 = { "%d-ya Gvardeyskaya Kavaleriyskaya Diviziya" }
+		5 = { "%d-ya Gvardeyskaya Kavaleriyskaya Diviziya" }
+		6 = { "%d-ya Gvardeyskaya Kavaleriyskaya Diviziya" }
+		7 = { "%d-ya Gvardeyskaya Kavaleriyskaya Diviziya" }
+		8 = { "%d-ya Gvardeyskaya Kavaleriyskaya Diviziya" }
+		9 = { "%d-ya Gvardeyskaya Kavaleriyskaya Diviziya" }
+		10 = { "%d-ya Gvardeyskaya Kavaleriyskaya Diviziya" }
+	}
+}
+
+RUS_CAV_03 = {
+	name = "Cavalry Brigade"
+
+	for_countries = { RUS FER CER KUB DON ORE UCH TBK AMU TER USS }
+
+	can_use = { always = yes }
+
+	division_types = { "cavalry" }
+
+	# Number reservation system will tie to another group.
+	#link_numbering_with = { RUS_INF_01 }
+
+	fallback_name = "%d-ya Kavaleriyskaya Brigada"
+
+	# Names with numbers (only one number per entry). 
+	# It's okay to have gaps in numbering.
+	ordered =
+	{
+		1 = { "%d-ya Kavaleriyskaya Brigada" }
+		2 = { "%d-ya Kavaleriyskaya Brigada" }
+		3 = { "%d-ya Kavaleriyskaya Brigada" }
+		4 = { "%d-ya Kavaleriyskaya Brigada" }
+		5 = { "%d-ya Kavaleriyskaya Brigada" }
+		6 = { "%d-ya Kavaleriyskaya Brigada" }
+		7 = { "%d-ya Kavaleriyskaya Brigada" }
+		8 = { "%d-ya Kavaleriyskaya Brigada" }
+		9 = { "%d-ya Kavaleriyskaya Brigada" }
+		10 = { "%d-ya Kavaleriyskaya Brigada" }
+	}
+}
+
+RUS_CAV_04 = {
+	name = "Cavalry Regiment"
+
+	for_countries = { RUS FER CER KUB DON ORE UCH TBK AMU TER USS VLN }
+
+	can_use = { always = yes }
+
+	division_types = { "cavalry" }
+
+	# Number reservation system will tie to another group.
+	#link_numbering_with = { RUS_INF_01 }
+
+	fallback_name = "%d-y Kavaleriyskiy Polk"
+
+	# Names with numbers (only one number per entry). 
+	# It's okay to have gaps in numbering.
+	ordered =
+	{
+		1 = { "%d-y Kavaleriyskiy Polk" }
+		2 = { "%d-y Kavaleriyskiy Polk" }
+		3 = { "%d-y Kavaleriyskiy Polk" }
+		4 = { "%d-y Kavaleriyskiy Polk" }
+		5 = { "%d-y Kavaleriyskiy Polk" }
+		6 = { "%d-y Kavaleriyskiy Polk" }
+		7 = { "%d-y Kavaleriyskiy Polk" }
+		8 = { "%d-y Kavaleriyskiy Polk" }
+		9 = { "%d-y Kavaleriyskiy Polk" }
+		10 = { "%d-y Kavaleriyskiy Polk" }
+	}
+}
+
+RUS_COS_01 = {
+	name = "Cossack Division"
+
+	for_countries = { RUS KUB DON ORE UCH TBK AMU TER USS }
+
+	can_use = {
+		if = {
+			limit = { original_tag = RUS }
+			NOT = { has_country_leader_ideology = revolutionary_socialism has_country_leader_ideology = vanguardism }
+		}
+	}
+
+	division_types = { "infantry" "cavalry" "irregular_infantry" "irregular_cavalry" }
+
+	# Number reservation system will tie to another group.
+	#link_numbering_with = { RUS_INF_01 }
+
+	fallback_name = "%d-ya Kazach'ya Diviziya"
+
+	# Names with numbers (only one number per entry). 
+	# It's okay to have gaps in numbering.
+	ordered =
+	{
+		1 = { "%d-ya Kazach'ya Diviziya" }
+		2 = { "%d-ya Kazach'ya Diviziya" }
+		3 = { "%d-ya Kazach'ya Diviziya" }
+		4 = { "%d-ya Kazach'ya Diviziya" }
+		5 = { "%d-ya Kazach'ya Diviziya" }
+		6 = { "%d-ya Kazach'ya Diviziya" }
+		7 = { "%d-ya Kazach'ya Diviziya" }
+		8 = { "%d-ya Kazach'ya Diviziya" }
+		9 = { "%d-ya Kazach'ya Diviziya" }
+		10 = { "%d-ya Kazach'ya Diviziya" }
+	}
+}
+RUS_COS_02 = {
+	name = "Cossack Brigade"
+
+	for_countries = { RUS KUB DON ORE UCH TBK AMU TER USS }
+
+	can_use = {
+		if = {
+			limit = { original_tag = RUS }
+			NOT = { has_country_leader_ideology = revolutionary_socialism has_country_leader_ideology = vanguardism }
+		}
+	}
+
+	division_types = { "infantry" "cavalry" "irregular_infantry" "irregular_cavalry" }
+
+	# Number reservation system will tie to another group.
+	#link_numbering_with = { RUS_INF_01 }
+
+	fallback_name = "%d-ya Kazach'ya Diviziya"
+
+	# Names with numbers (only one number per entry). 
+	# It's okay to have gaps in numbering.
+	ordered =
+	{
+		1 = { "%d-ya Kazach'ya Brigada" }
+		2 = { "%d-ya Kazach'ya Brigada" }
+		3 = { "%d-ya Kazach'ya Brigada" }
+		4 = { "%d-ya Kazach'ya Brigada" }
+		5 = { "%d-ya Kazach'ya Brigada" }
+		6 = { "%d-ya Kazach'ya Brigada" }
+		7 = { "%d-ya Kazach'ya Brigada" }
+		8 = { "%d-ya Kazach'ya Brigada" }
+		9 = { "%d-ya Kazach'ya Brigada" }
+		10 = { "%d-ya Kazach'ya Brigada" }
+	}
+}
+
+
+
+RUS_BIC_01 = {
+	name = "Bicycle Regiment"
+
+	for_countries = { RUS FER CER KUB DON ORE UCH TBK AMU TER USS VLN }
+
+	can_use = { has_tech = bicycle_infantry }
+
+	division_types = { "bicycle_battalion" }
+
+	# Number reservation system will tie to another group.
+	#link_numbering_with = { RUS_CAV_2 }
+
+	fallback_name = "%d-y Samokatnyy Polk"
+
+	# Names with numbers (only one number per entry). 
+	# It's okay to have gaps in numbering.
+	ordered =
+	{
+		1 = { "%d-y Samokatnyy Polk" }
+		2 = { "%d-y Samokatnyy Polk" }
+		3 = { "%d-y Samokatnyy Polk" }
+		4 = { "%d-y Samokatnyy Polk" }
+		5 = { "%d-y Samokatnyy Polk" }
+		6 = { "%d-y Samokatnyy Polk" }
+		7 = { "%d-y Samokatnyy Polk" }
+		8 = { "%d-y Samokatnyy Polk" }
+		9 = { "%d-y Samokatnyy Polk" }
+		10 = { "%d-y Samokatnyy Polk" }
+	}
+}
+
+RUS_ART_01 = {
+	name = "Artillery Regiment"
+
+	for_countries = { RUS FER CER KUB DON ORE UCH TBK AMU TER USS VLN }
+
+	can_use = { always = yes }
+
+	division_types = { "field_gun" "field_gun_brigade" "howitzer" "howitzer_brigade" }
+
+	# Number reservation system will tie to another group.
+	#link_numbering_with = { RUS_CAV_2 }
+
+	fallback_name = "%d-y Artilleriyskiy Polk"
+
+	# Names with numbers (only one number per entry). 
+	# It's okay to have gaps in numbering.
+	ordered =
+	{
+		1 = { "%d-y Artilleriyskiy Polk" }
+		2 = { "%d-y Artilleriyskiy Polk" }
+		3 = { "%d-y Artilleriyskiy Polk" }
+		4 = { "%d-y Artilleriyskiy Polk" }
+		5 = { "%d-y Artilleriyskiy Polk" }
+		6 = { "%d-y Artilleriyskiy Polk" }
+		7 = { "%d-y Artilleriyskiy Polk" }
+		8 = { "%d-y Artilleriyskiy Polk" }
+		9 = { "%d-y Artilleriyskiy Polk" }
+		10 = { "%d-y Artilleriyskiy Polk" }
+	}
+}
+
+
+RUS_MOT_01 = 
+{
+	name = "Motor Rifle Division"
+
+	for_countries = { RUS FER CER KUB DON ORE UCH TBK AMU TER USS }
+
+	can_use = {
+		if = {
+			limit = { original_tag = RUS }
+			NOT = { has_country_leader_ideology = revolutionary_socialism has_country_leader_ideology = vanguardism }
+		}
+	}
+
+	division_types = { "motorized" }
+
+	# Number reservation system will tie to another group.
+	#link_numbering_with = { RUS_INF_01 }
+
+	fallback_name = "%d-ya Motostrelkovaya Diviziya"
+
+	# Names with numbers (only one number per entry). 
+	# It's okay to have gaps in numbering.
+	ordered =
+	{
+		1 = { "%d-ya Motostrelkovaya Diviziya" }
+		2 = { "%d-ya Motostrelkovaya Diviziya" }
+		3 = { "%d-ya Motostrelkovaya Diviziya" }
+		4 = { "%d-ya Motostrelkovaya Diviziya" }
+		5 = { "%d-ya Motostrelkovaya Diviziya" }
+	}
+}
+
+RUS_ARM_01 = 
+{
+	name = "Tank Division"
+
+	for_countries = { RUS FER CER KUB DON ORE UCH TBK AMU TER USS }
+
+	can_use = { has_tech = tank_design }
+
+	division_types = { "light_armor" "medium_armor" "heavy_armor" }
+
+	# Number reservation system will tie to another group.
+	#link_numbering_with = { RUS_INF_01 }
+
+	fallback_name = "%d-ya Tankovaya Diviziya"
+
+	# Names with numbers (only one number per entry). 
+	# It's okay to have gaps in numbering.
+	ordered =
+	{
+		1 = { "%d-ya Tankovaya Diviziya" }
+		2 = { "%d-ya Tankovaya Diviziya" }
+		3 = { "%d-ya Tankovaya Diviziya" }
+		4 = { "%d-ya Tankovaya Diviziya" }
+		5 = { "%d-ya Tankovaya Diviziya" }
+	}
+}
+
+RUS_ARM_02 = 
+{
+	name = "Tank Corps"
+
+	for_countries = { RUS FER CER KUB DON ORE UCH TBK AMU TER USS }
+
+	can_use = { has_tech = tank_design }
+
+	division_types = { "light_armor" "medium_armor" "heavy_armor" }
+
+	# Number reservation system will tie to another group.
+	#link_numbering_with = { RUS_INF_01 }
+
+	fallback_name = "%d-y Tankovyy Korpus"
+
+	# Names with numbers (only one number per entry). 
+	# It's okay to have gaps in numbering.
+	ordered =
+	{
+		1 = { "%d-y Tankovyy Korpus" }
+		2 = { "%d-y Tankovyy Korpus" }
+		3 = { "%d-y Tankovyy Korpus" }
+		4 = { "%d-y Tankovyy Korpus" }
+		5 = { "%d-y Tankovyy Korpus" }
+		6 = { "%d-y Tankovyy Korpus" }
+		7 = { "%d-y Tankovyy Korpus" }
+		8 = { "%d-y Tankovyy Korpus" }
+		9 = { "%d-y Tankovyy Korpus" }
+		10 = { "%d-y Tankovyy Korpus" }
+	}	
+}
+
+RUS_ARM_03 = 
+{
+	name = "Guard Tank Corps"
+
+	for_countries = { RUS FER CER KUB DON ORE UCH TBK AMU TER USS }
+
+	can_use = { has_tech = tank_design }
+
+	division_types = { "light_armor" "medium_armor" "heavy_armor" }
+
+	# Number reservation system will tie to another group.
+	#link_numbering_with = { RUS_ARM_02 }
+
+	fallback_name = "%d-y Gvardeiskiy Tankovyy Korpus"
+
+	# Names with numbers (only one number per entry). 
+	# It's okay to have gaps in numbering.
+	ordered =
+	{
+		1 = { "%d-y Gvardeiskiy Tankovyy Korpus" }
+		2 = { "%d-y Gvardeiskiy Tankovyy Korpus" }
+		3 = { "%d-y Gvardeiskiy Tankovyy Korpus" }
+		4 = { "%d-y Gvardeiskiy Tankovyy Korpus" }
+		5 = { "%d-y Gvardeiskiy Tankovyy Korpus" }
+		6 = { "%d-y Gvardeiskiy Tankovyy Korpus" }
+		7 = { "%d-y Gvardeiskiy Tankovyy Korpus" }
+		8 = { "%d-y Gvardeiskiy Tankovyy Korpus" }
+		9 = { "%d-y Gvardeiskiy Tankovyy Korpus" }
+		10 = { "%d-y Gvardeiskiy Tankovyy Korpus" }
+	}
+}
+
+RUS_ARM_04 = 
+{
+	name = "Tank Brigade"
+
+	for_countries = { RUS FER CER KUB DON ORE UCH TBK AMU TER USS }
+
+	can_use = { has_tech = tank_design }
+
+	division_types = { "light_armor" "medium_armor" "heavy_armor" }
+
+	# Number reservation system will tie to another group.
+	#link_numbering_with = { RUS_INF_01 }
+
+	fallback_name = "%d-ya Tankovaya Brigada"
+
+	# Names with numbers (only one number per entry). 
+	# It's okay to have gaps in numbering.
+	ordered =
+	{
+		1 = { "%d-ya Tankovaya Brigada" }
+		2 = { "%d-ya Tankovaya Brigada" }
+		3 = { "%d-ya Tankovaya Brigada" }
+		4 = { "%d-ya Tankovaya Brigada" }
+		5 = { "%d-ya Tankovaya Brigada" }
+	}
+}
+
+
+RUS_MAR_01 = 
+{
+	name = "Naval Division"
+
+	for_countries = { RUS FER CER KUB DON ORE UCH TBK AMU TER USS }
+
+	can_use = { 
+		has_tech = marines
+		NOT = { has_country_leader_ideology = revolutionary_socialism has_country_leader_ideology = vanguardism } 
+	}
+
+	division_types = { "marine" }
+
+	# Number reservation system will tie to another group.
+	#link_numbering_with = { RUS_INF_01 }
+
+	fallback_name = "%d-ya Morskaya Diviziya"
+
+	# Names with numbers (only one number per entry). 
+	# It's okay to have gaps in numbering.
+	ordered =
+	{
+		1 = { "Otdel'naya Baltiyskaya Morskaya Diviziya" }
+		2 = { "%d-ya Morskaya Diviziya" }
+		3 = { "%d-ya Morskaya Diviziya" }
+		4 = { "%d-ya Morskaya Diviziya" }
+		5 = { "%d-ya Morskaya Diviziya" }
+		6 = { "%d-ya Morskaya Diviziya" }
+		7 = { "%d-ya Morskaya Diviziya" }
+		8 = { "%d-ya Morskaya Diviziya" }
+		9 = { "%d-ya Morskaya Diviziya" }
+		10 = { "%d-ya Morskaya Diviziya" }
+	}
+}
+
+RUS_MAR_02 = 
+{
+	name = "Naval Brigade"
+
+	for_countries = { RUS FER CER KUB DON ORE UCH TBK AMU TER USS }
+
+	can_use = { 
+		has_tech = marines
+		NOT = { has_country_leader_ideology = revolutionary_socialism has_country_leader_ideology = vanguardism } 
+	}
+
+	division_types = { "marine" }
+
+	# Number reservation system will tie to another group.
+	#link_numbering_with = { RUS_INF_01 }
+
+	fallback_name = "%d-ya Morskaya Brigada"
+
+	# Names with numbers (only one number per entry). 
+	# It's okay to have gaps in numbering.
+	ordered =
+	{
+		1 = { "Otdel'naya Baltiyskaya Morskaya Brigada" }
+		2 = { "%d-ya Morskaya Brigada" }
+		3 = { "%d-ya Morskaya Brigada" }
+		4 = { "%d-ya Morskaya Brigada" }
+		5 = { "%d-ya Morskaya Brigada" }
+		6 = { "%d-ya Morskaya Brigada" }
+		7 = { "%d-ya Morskaya Brigada" }
+		8 = { "%d-ya Morskaya Brigada" }
+		9 = { "%d-ya Morskaya Brigada" }
+		10 = { "%d-ya Morskaya Brigada" }
+	}
+}
+
+RUS_MAR_03 = 
+{
+	name = "Naval Battalion"
+
+	for_countries = { RUS FER CER KUB DON ORE UCH TBK AMU TER USS }
+
+	can_use = { 
+		has_tech = marines
+		NOT = { has_country_leader_ideology = revolutionary_socialism has_country_leader_ideology = vanguardism } 
+	}
+
+	division_types = { "marine" }
+
+	# Number reservation system will tie to another group.
+	#link_numbering_with = { RUS_INF_01 }
+
+	fallback_name = "%d-y Morskoy Batal'on"
+
+	# Names with numbers (only one number per entry). 
+	# It's okay to have gaps in numbering.
+	ordered =
+	{
+		1 = { "Odesskiy Morskoy Batal'on" }
+		2 = { "%d-y Morskoy Batal'on" }
+		3 = { "%d-y Morskoy Batal'on" }
+		4 = { "%d-y Morskoy Batal'on" }
+		5 = { "%d-y Morskoy Batal'on" }
+		6 = { "%d-y Morskoy Batal'on" }
+		7 = { "%d-y Morskoy Batal'on" }
+		8 = { "%d-y Morskoy Batal'on" }
+		9 = { "%d-y Morskoy Batal'on" }
+		10 = { "%d-y Morskoy Batal'on" }
+	}
+}
+
+RUS_MNT_01 = 
+{
+	name = "Mountain Rifle Division"
+
+	for_countries = { RUS FER CER KUB DON ORE UCH TBK AMU TER USS }
+
+	can_use = { 
+		has_tech = tech_mountaineers 
+		if = {
+			limit = { original_tag = RUS }
+			NOT = { has_country_leader_ideology = revolutionary_socialism has_country_leader_ideology = vanguardism }
+		}
+	}
+
+	division_types = { "mountaineers" }
+
+	# Number reservation system will tie to another group.
+	#link_numbering_with = { RUS_INF_01 }
+
+	fallback_name = "%d-ya Gornostrelkovaya Diviziya"
+
+	# Names with numbers (only one number per entry). 
+	# It's okay to have gaps in numbering.
+	ordered =
+	{
+		1 = { "%d-ya Gornostrelkovaya Diviziya" }
+		2 = { "%d-ya Gornostrelkovaya Diviziya" }
+		3 = { "%d-ya Gornostrelkovaya Diviziya" }
+		4 = { "%d-ya Gornostrelkovaya Diviziya" }
+		5 = { "%d-ya Gornostrelkovaya Diviziya" }
+		6 = { "%d-ya Gornostrelkovaya Diviziya" }
+		7 = { "%d-ya Gornostrelkovaya Diviziya" }
+	}
+}
+
+RUS_GAR_01 = 
+{
+	name = "Garrison Division"
+
+	for_countries = { RUS FER CER KUB DON ORE UCH TBK AMU TER USS }
+
+	can_use = { always = yes }
+
+	division_types = { "infantry" }
+
+	# Number reservation system will tie to another group.
+	#link_numbering_with = { RUS_INF_01 }
+
+	fallback_name = "%d-ya Pogranichnaya Diviziya"
+
+	# Names with numbers (only one number per entry). 
+	# It's okay to have gaps in numbering.
+	ordered =
+	{
+		1 = { "%d-ya Pogranichnaya Diviziya" }
+		3 = { "%d-ya Pogranichnaya Diviziya" }
+		4 = { "%d-ya Pogranichnaya Diviziya" }
+		5 = { "%d-ya Pogranichnaya Diviziya" }
+		6 = { "%d-ya Pogranichnaya Diviziya" }
+		7 = { "%d-ya Pogranichnaya Diviziya" }
+		8 = { "%d-ya Pogranichnaya Diviziya" }
+		9 = { "%d-ya Pogranichnaya Diviziya" }
+	}
+}
+
+RUS_MIL_01 = 
+{
+	name = "Militia Brigade"
+
+	for_countries = { RUS FER CER KUB DON ORE UCH TBK AMU TER USS }
+
+	can_use = { always = yes }
+
+	division_types = { "militia" }
+
+	# Number reservation system will tie to another group.
+
+	fallback_name = "%d-ya Brigada Opolcheniya"
+
+	ordered =
+	{
+		1 = { "%d-ya Brigada Opolcheniya" }
+		3 = { "%d-ya Brigada Opolcheniya" }
+		4 = { "%d-ya Brigada Opolcheniya" }
+		5 = { "%d-ya Brigada Opolcheniya" }
+		6 = { "%d-ya Brigada Opolcheniya" }
+		7 = { "%d-ya Brigada Opolcheniya" }
+		8 = { "%d-ya Brigada Opolcheniya" }
+		9 = { "%d-ya Brigada Opolcheniya" }
+	}
+}

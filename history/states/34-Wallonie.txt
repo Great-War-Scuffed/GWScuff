@@ -1,0 +1,32 @@
+
+state={
+	id=34
+	name="STATE_34"
+	resources={
+		steel=16.000
+	}
+	history={
+		victory_points = { 11519 15 } #Liége 168,532 in 1905
+		victory_points = { 3516 5 } #Namur
+		victory_points = { 13081 5 } #Charleroi
+		victory_points = { 9536 1 } #Mons
+		owner = BEL
+		add_core_of = BEL
+		buildings = {
+			infrastructure = 3
+			industrial_complex = 3
+			#fortification decision will make them usable as renovated forts
+			# 11519 = { bunker = 1 }
+			# 3516 = { bunker = 1 }
+		}
+
+	}
+
+	provinces={
+		3516 9536 11519 13081 
+	}
+	manpower=2069729
+	buildings_max_level_factor=1.000
+	state_category=city
+	local_supplies=14.0 
+}

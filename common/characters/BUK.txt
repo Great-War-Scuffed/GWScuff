@@ -1,0 +1,160 @@
+characters={
+	BUK_abd_al_ahad_khan={
+		portraits={
+			civilian={
+				large="gfx/leaders/BUK/BUK_Abd_al_Ahad_Khan.png"
+			}
+		}
+		country_leader={
+			ideology=absolute_monarchy
+			traits = {
+				sayyid
+				russophile
+			}	
+		}
+		field_marshal = {
+			traits = { trait_royal cavalry_leader substance_abuser }
+			skill=2
+			attack_skill=2
+			defense_skill=1
+			planning_skill=2
+			logistics_skill=2
+			visible = {
+				is_country_leader = yes
+			}	
+		}
+	}
+	BUK_mohammed_alim_khan={
+		portraits={
+			civilian={
+				large="gfx/leaders/BUK/BUK_mohammed_alim_khan.png"
+			}
+			army = {
+				small="gfx/interface/ideas/BUK/idea_BUK_mohammed_alim_khan.png"
+			}
+		}
+		country_leader={
+			ideology=absolute_monarchy
+			traits = {
+				sayyid
+			}
+		}
+		advisor={
+			slot = theorist
+			cost = 100
+			idea_token = BUK_mohammed_alim_khan
+			ledger  = army 
+			allowed  = {
+				original_tag = BUK
+			}
+			available = {
+				has_government = neutrality
+			}	
+			visible = {
+				has_government = neutrality
+			}	
+			traits  = {
+				military_theorist # Alim Khan was sent by his father Emir Abdulahad Khan to Saint Petersburg for three years to study government and modern military techniques
+			}
+			ai_will_do  = {
+				factor  = 1.000
+			}
+		}
+		corps_commander={
+			traits = { trait_royal cavalry_leader }
+			skill=2
+			attack_skill=1
+			defense_skill=2
+			planning_skill=2
+			logistics_skill=2
+			visible = {
+				has_government = neutrality
+			}	
+		}
+	}
+	BUK_usman_khodzha={
+		portraits={
+			civilian={
+				large="gfx/leaders/BUK/BUK_usman_khodzha.png"
+			}
+		}
+		country_leader={
+			ideology=social_liberalism
+		}
+	}
+	BUK_fayzulla_khodzhayev={
+		name="BUK_fayzulla_khodzhayev"
+		portraits={
+			civilian={
+				large="gfx/leaders/BUK/BUK_fayzulla_khodzhayev.png"
+			}
+		}
+		country_leader={
+			ideology=religious_communism
+		}
+		corps_commander={
+			traits = { politically_connected }
+			skill=1
+			attack_skill=1
+			defense_skill=1
+			planning_skill=1
+			logistics_skill=1
+			visible = {
+				OR = {
+					has_government = communism
+					has_government = democratic
+				}	
+			}	
+		}
+	}
+	BUK_ibrahim_bek={
+		portraits={
+			civilian={
+				large="gfx/leaders/BUK/BUK_ibrahim_bek.png"
+			}
+		}
+		country_leader={
+			ideology=fundamentalism
+		}
+		corps_commander={
+			traits={ guerilla_fighter trait_reckless cavalry_leader old_guard }
+			skill=2
+			attack_skill=2
+			defense_skill=1
+			planning_skill=1
+			logistics_skill=2
+			visible = {
+				OR = {
+					has_global_flag = october_revolution
+					is_country_leader = yes
+				}	
+				NOT = {
+					has_government = communism
+					has_government = democratic
+				}			
+			}	
+		}
+	}
+	BUK_mir_haydar_mirbadalev={
+		portraits={
+			army = {
+				#large = "gfx/leaders/BUK/BUK_Mir_Haydar_Mirbadalev.png"
+				large = GFX_portrait_asia_generic_land_8
+				small = GFX_portrait_asia_generic_land_8_small
+			}
+		}
+		corps_commander={
+			traits = { career_officer politically_connected }
+			skill=1
+			attack_skill=1
+			defense_skill=1
+			planning_skill=1
+			logistics_skill=1
+			visible = {
+				NOT = {
+					has_government = communism
+				}			
+			}
+		}
+	}
+}

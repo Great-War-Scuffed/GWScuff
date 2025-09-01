@@ -1,0 +1,76 @@
+SCO_form_SCO_ENG_category = {
+	SCO_form_SCO_ENG = {
+		icon = GFX_decision_generic_nationalism
+		allowed = {
+			original_tag = SCO
+		}
+		available = {
+			has_capitulated = no
+			has_full_control_of_state = 120
+			has_full_control_of_state = 121
+			has_full_control_of_state = 122
+			has_full_control_of_state = 123
+			has_full_control_of_state = 125
+			has_full_control_of_state = 126
+			has_full_control_of_state = 127
+			has_full_control_of_state = 128
+			has_full_control_of_state = 129
+			has_full_control_of_state = 130
+			has_full_control_of_state = 131
+			has_full_control_of_state = 132
+			has_full_control_of_state = 133
+			has_full_control_of_state = 136
+			has_full_control_of_state = 338
+		}
+		visible = {
+		}
+		highlight_states = {
+			highlight_state_targets = {
+				state = 120
+				state = 121
+				state = 122
+				state = 123
+				state = 125
+				state = 126
+				state = 127
+				state = 128
+				state = 129
+				state = 130
+				state = 131
+				state = 132
+				state = 133
+				state = 136
+				state = 338
+			}
+		}
+		complete_effect = {
+			every_state = {
+				limit = {
+					OR = {
+						state = 120
+						state = 121
+						state = 122
+						state = 123
+						state = 125
+						state = 126
+						state = 127
+						state = 128
+						state = 129
+						state = 130
+						state = 131
+						state = 132
+						state = 133
+						state = 136
+						state = 338
+					}
+					NOT = {
+						is_core_of = ROOT
+					}
+				}
+				add_core_of = ROOT
+			}
+			set_cosmetic_tag = SCO_ENG
+		}
+		fire_only_once = yes
+	}
+}

@@ -1,0 +1,26 @@
+characters={
+	MAL_arthur_henderson_young={
+		name="ENG_arthur_henderson_young"
+		portraits={
+			civilian={
+				large="gfx/leaders/MAL/MAL_arthur_young.png"
+			}
+		}
+		country_leader={
+			ideology=colonial_government
+			traits = { british_agent }
+		}
+	}
+	MAL_reginald_george_watson = {
+		name = ENG_reginald_george_watson
+		portraits = {
+			civilian = {
+				large = "gfx/leaders/ENG/Portrait_Britain_Generic_land_12.png"
+			}
+		}
+		country_leader = {
+			ideology = colonial_government
+			traits = { british_agent }
+		}
+	}	
+}

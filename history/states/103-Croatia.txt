@@ -1,0 +1,19 @@
+state={
+	id=103
+	name="STATE_103" # Dalmatia
+	manpower = 335000
+	state_category=town
+	provinces={ 3924 11816 }
+	history={
+		victory_points={ 3924 3 }
+		owner=AUS
+		add_core_of=AUS
+		add_core_of=CRO
+		buildings={
+			infrastructure = 3
+			dockyard=1
+			3924={ naval_base=5 }
+		}
+	}
+	local_supplies=4.0 
+}

@@ -1,0 +1,213 @@
+characters={
+	LAT_janis_cakste={
+		name="LAT_janis_cakste"
+		portraits={
+			civilian={
+				large="gfx/leaders/LAT/LAT_janis_cakste.png"
+			}
+		}
+		country_leader={
+			ideology=agrarianism
+		}
+	}
+	LAT_andrevs_niedra={
+		name="LAT_andrevs_niedra"
+		portraits={
+			civilian={
+				large="gfx/leaders/LAT/LAT_Andrevs_Niedra.png"
+			}
+		}
+		country_leader={
+			ideology=civilian_dictatorship
+			traits = {
+				anti_communist
+			}
+		}
+	}
+	LAT_peteris_stucka={
+		name="LAT_peteris_stucka"
+		portraits={
+			civilian={
+				large="gfx/leaders/LAT/LAT_peteris_stucka.png"
+			}
+		}
+		country_leader={
+			ideology=vanguardism
+		}
+	}
+	LAT_fricis_rozins={
+		name="LAT_fricis_rozins"
+		portraits={
+			civilian={
+				large="gfx/leaders/LAT/LAT_fricis_rozins.png"
+			}
+		}
+		country_leader={
+			ideology=vanguardism
+		}
+	}
+	LAT_oskars_kalpaks={
+		name="LAT_oskars_kalpaks"
+		portraits={
+			army={
+				large = "gfx/leaders/LAT/LAT_Oskars_Kalpaks.png"
+				small = "gfx/interface/ideas/LAT/idea_LAT_Oskars_Kalpaks.png"
+			}
+		}
+		advisor={
+			slot = army_chief
+			idea_token = LAT_janis_balodis
+			allowed  = {
+				original_tag = LAT
+			}
+			traits  = {
+				army_chief_organizational_2
+			}
+			cost = 100
+			available = {
+				NOT = {
+					has_government = communism
+				}	
+				custom_trigger_tooltip = {
+					tooltip = character_not_dead
+				}
+			}
+			visible = {
+				NOT = {
+					has_character_flag = character_died
+					has_government = communism
+				}	
+			}
+			ai_will_do  = {
+				factor  = 1
+			}
+		}
+		field_marshal = {
+			traits = { trait_reckless inspirational_leader infantry_officer }
+			skill = 2 
+			attack_skill = 2 
+			defense_skill = 1 
+			planning_skill = 1 
+			logistics_skill = 2 
+			visible = {
+				NOT = {
+					has_character_flag = character_died
+					has_government = communism
+				}	
+			}
+		}
+	}
+	LAT_janis_balodis={
+		advisor={
+			slot = army_chief
+			idea_token = LAT_janis_balodis
+			allowed  = {
+				original_tag = LAT
+			}
+			traits  = {
+				army_chief_defensive_1 
+			}
+			available = {
+				NOT = {
+					has_government = communism
+				}	
+			}
+			visible = {
+				NOT = {
+					has_government = communism
+				}	
+			}
+			ai_will_do  = {
+				factor  = 1.000
+			}
+		}
+		name="LAT_janis_balodis"
+		portraits={
+			army={
+				large = "gfx/leaders/LAT/LAT_Janis_Balodis.png"
+				small = "gfx/interface/ideas/LAT/idea_LAT_Janis_Balodis.png"
+			}
+		}
+		corps_commander={
+			traits={ career_officer }
+			skill=2
+			attack_skill=1
+			defense_skill=2
+			planning_skill=2
+			logistics_skill=1
+			visible = {
+				NOT = {
+					has_government = communism
+				}	
+			}
+		}
+	}
+	LAT_martinsh_penikis={
+		name=LAT_martinsh_penikis
+		portraits={
+			army={
+				large = "gfx/leaders/LAT/LAT_Martins_Penikis.png"
+				small = "gfx/interface/ideas/LAT/idea_LAT_Martins_Penikis.png"
+			}
+		}
+		corps_commander={
+			traits={ skilled_staffer }
+			skill=2
+			attack_skill=3
+			defense_skill=1
+			planning_skill=2
+			logistics_skill=1
+			visible = {
+				NOT = {
+					has_government = communism
+				}	
+			}
+		}
+	}
+	LAT_jorgis_zemitans={
+		name="LAT_jorgis_zemitans"
+		portraits={
+			army={
+				large = "gfx/leaders/LAT/LAT_Jorgis_Zemitans.png"
+				small = "gfx/interface/ideas/LAT/idea_LAT_Jorgis_Zemitans.png"
+			}
+		}
+		advisor={
+			slot = theorist
+			ledger = army
+			idea_token = LAT_jorgis_zemitans
+			allowed  = {
+				original_tag = LAT
+			}
+			traits  = {
+				military_theorist 
+			}
+			available = {
+				NOT = {
+					has_government = communism
+				}	
+			}
+			visible = {
+				NOT = {
+					has_government = communism
+				}	
+			}
+			ai_will_do  = {
+				factor  = 1
+			}
+		}
+		corps_commander = {
+			traits = { organizer trickster } 
+			skill = 1 
+			attack_skill = 2 
+			defense_skill = 1 
+			planning_skill = 1 
+			logistics_skill = 1 
+			visible = {
+				NOT = {
+					has_government = communism
+				}	
+			}
+		}
+	}
+}

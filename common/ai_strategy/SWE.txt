@@ -1,0 +1,61 @@
+
+SWE_great_war_neutrality = {
+	allowed = {
+		tag = SWE
+	}
+	enable = {		
+		is_great_war_ongoing = yes
+		NOT = {
+			has_war_with = FRA
+			has_war_with = GER
+			is_in_faction_with = FRA
+			is_in_faction_with = GER
+			has_completed_focus = SWE_membership_in_cp
+			has_completed_focus = SWE_join_france
+		}
+	}
+	abort_when_not_enabled = yes
+	
+	ai_strategy = {
+		type = alliance
+		id = "GER"
+		value = -1000
+	}
+	ai_strategy = {
+		type = alliance
+		id = "FRA"
+		value = -1000
+	}
+}
+
+SWE_ignore_sweden = {
+	allowed = {
+		OR = {
+			tag = GER
+			tag = FRA
+		}
+	}
+	enable = {
+		is_great_war_ongoing = yes
+		SWE = {
+			has_completed_focus = SWE_on_second_thoughts
+			NOT = {
+				is_in_faction_with = ROOT
+				has_war_with = ROOT
+				is_subject_of = ROOT
+			}
+		}
+	}
+	abort_when_not_enabled = yes
+	
+	ai_strategy = {
+		type = alliance
+		id = "SWE"
+		value = -1000
+	}
+	ai_strategy = {
+		type = alliance
+		id = "SWE"
+		value = -1000
+	}
+}

@@ -1,0 +1,21 @@
+state={
+	id=152
+	name="STATE_152"
+	manpower = 853595
+	state_category=city
+	provinces={ 732 3684 3703 6708 9665 }
+	resources={
+		steel=6
+	}
+	history={
+		victory_points={ 9665 5 } #Linz 97,852
+		victory_points={ 3684 1 } #Steyr - 22,205
+		owner=AUS
+		add_core_of=AUS
+		buildings={
+			infrastructure = 3
+			industrial_complex = 1
+			arms_factory = 5
+		}
+	}
+}

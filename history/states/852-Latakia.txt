@@ -1,0 +1,21 @@
+state={
+	id=852
+	name="STATE_852"
+	history = {
+		owner = TUR
+		add_core_of = TUR
+		add_core_of = SYR
+		buildings = {
+			infrastructure = 2
+		}
+		victory_points = {
+			1088 1
+		}
+	}
+	provinces={
+		10087 1088
+	}
+	manpower=96000
+	state_category = pastoral
+	buildings_max_level_factor=1.000
+}

@@ -1,0 +1,552 @@
+## SOCIALIST LEAD OVER FRANCE
+French_socialism = {
+	name = "French socialist plan"
+	desc = ""
+
+	allowed = {
+		original_tag = FRA
+	}
+	enable = {
+		original_tag = FRA
+		or = {
+			has_country_flag = FRA_AI_RANDOM_SOCIALIST
+			has_country_flag = FRA_AI_RANDOM_SOCIALIST_REVOLUTIONNARY
+			has_game_rule = {
+				rule = FRA_ai_behavior
+				option = SOCIALIST
+			}
+			has_game_rule = {
+				rule = FRA_ai_behavior
+				option = SOCIALIST_REVOLUTIONNARY
+			}
+			has_government = communism
+		}
+	}
+	abort = {
+	}
+
+	ai_national_focuses = {
+		#very important
+		FRA_ww1_wadai_war_logistics
+		FRA_anarchists_dominant
+		FRA_reformists_dominant
+		FRA_ww1_mention_de_censure
+        #01/05/1910
+		FRA_ww1_dreyfus_exoneration
+		FRA_ww1_memories_of_the_commune
+		FRA_ww1_briand_law
+		FRA_ww1_support_the_bourse_du_travail
+		FRA_ww1_picardie_manoeuvers
+		FRA_ww1_support_the_suffragettes
+		FRA_ww1_ally_the_republican_alliance
+		FRA_ww1_affiliation_with_the_CGT
+		FRA_ww1_press_abolition_of_slavery_in_africa #important
+		FRA_ww1_ecole_normale_william_ponty
+		FRA_ww1_ban_far_right_leagues
+		#01/05/1911
+		# FRA_ww1_industrial_innovation
+		FRA_ww1_labor_reform
+		FRA_ww1_armee_nouvelle
+		#FRA_ww1_southern_industrialization
+		# FRA_ww1_revision_de_larmee_de_terre
+		FRA_ww1_fund_berthier
+		#01/05/1912
+		FRA_ww1_trust_joffre
+		FRA_ww1_plan_xvii
+		FRA_ww1_attract_moderate_support
+		FRA_ww1_socialist_mentality
+		FRA_ww1_support_for_universities
+		FRA_ww1_kick_caillaux
+		FRA_ww1_1911_congres_of_paris
+		FRA_national_defense_funds
+		FRA_kick_moderates
+
+	}
+
+	# Keep small, as it is used as a factor for some things (such as research needs)
+	# Recommended around 1.0. Useful for relation between plans
+	weight = {
+		factor = 1.0
+		modifier = {
+			factor = 1.0
+		}
+	}
+
+	focus_factors = {
+	}
+
+}
+
+## RIGHT PATH
+French_right = {
+	name = "French conservative plan"
+	desc = ""
+
+	allowed = {
+		original_tag = FRA
+	}
+	enable = {
+		original_tag = FRA
+		or = {
+			has_country_flag = FRA_AI_RANDOM_DEMOCRATIC_RIGHT
+			has_game_rule = {
+				rule = FRA_ai_behavior
+				option = DEMOCRATIC_RIGHT
+			}
+			has_game_rule = {
+				rule = FRA_ai_behavior
+				option = DEMOCRATIC_RIGHT_NAPOLEON
+			}
+		}
+		NOT = {
+			has_government = communism
+		}
+	}
+	abort = {
+	}
+
+	ai_national_focuses = {
+		#very important
+		FRA_ww1_wadai_war_logistics
+		FRA_ww1_picardie_manoeuvers
+		FRA_ww1_russian_bail
+		FRA_ww1_loi_trois_ans
+		FRA_ww1_press_abolition_of_slavery_in_africa
+        #01/05/1910
+		FRA_ww1_dreyfus_exoneration
+		FRA_ww1_rally_the_piou_piou
+		FRA_ww1_rally_the_piou_piou
+		FRA_ww1_meline_agricultural_reforms
+		FRA_ww1_ribot_piou_alliance
+		FRA_ww1_placate_independents_radicals
+		FRA_ww1_antagonize_sfio
+		FRA_ww1_sponsor_pla_af_fusion
+		FRA_ww1_cercles_catholiques_ouvriers
+		FRA_ww1_ecole_normale_william_ponty
+		FRA_ww1_support_the_UCIDS
+		FRA_ww1_amend_waldeck_rousseau_law
+		FRA_ww1_state_socialism
+		FRA_ww1_cartel_des_droites
+		FRA_ww1_second_case_of_cards
+		#non specifics
+		
+		FRA_ww1_bulgarian_alliance
+
+	}
+
+	# Keep small, as it is used as a factor for some things (such as research needs)
+	# Recommended around 1.0. Useful for relation between plans
+	weight = {
+		factor = 1.0
+		modifier = {
+			factor = 1.0
+		}
+	}
+
+	focus_factors = {
+	}
+
+}
+
+## Napoleon bonus
+French_right_napoleon = {
+	name = "French napoleon plan"
+	desc = ""
+
+	allowed = {
+		original_tag = FRA
+	}
+	enable = {
+		original_tag = FRA
+		has_game_rule = {
+			rule = FRA_ai_behavior
+			option = DEMOCRATIC_RIGHT_NAPOLEON
+		}
+		NOT = {
+			has_government = communism
+		}
+	}
+	abort = {
+	}
+
+	ai_national_focuses = {
+		FRA_ww1_daudet_takeover
+		FRA_prime_minister_napoleon
+		FRA_date_military_reform
+		FRA_rebuild_the_appel_du_peuple
+		FRA_interwar_spa_conference
+		FRA_interwar_vimy_ridge_concession
+		FRA_interwar_washington_treaty
+		FRA_bonaparte_social_reforms
+		FRA_regional_refondation
+		FRA_parliamentary_reform
+		FRA_instrumentalize_the_senate
+		FRA_reconnect_bonaparts_and_imperialists
+		FRA_anticipated_elections_bonaparte
+		FRA_bonapartiste_referundum	
+	}
+
+	# Keep small, as it is used as a factor for some things (such as research needs)
+	# Recommended around 1.0. Useful for relation between plans
+	weight = {
+		factor = 1.0
+		modifier = {
+			factor = 1.0
+		}
+	}
+
+	focus_factors = {
+	}
+
+}
+
+## Alternate democratic France
+French_alternate_democratic = {
+	name = "French alternate plan"
+	desc = ""
+
+	allowed = {
+		original_tag = FRA
+	}
+	enable = {
+		original_tag = FRA
+		or = {
+			has_country_flag = FRA_AI_RANDOM_DEMOCRATIC_ALTERNATE
+			has_game_rule = {
+				rule = FRA_ai_behavior
+				option = DEMOCRATIC_ALTERNATE
+			}
+		}
+	}
+	abort = {
+	}
+
+	ai_national_focuses = {
+		#very important
+		FRA_ww1_wadai_war_logistics
+		FRA_ww1_press_abolition_of_slavery_in_africa
+		FRA_ww1_ecole_normale_william_ponty
+        #01/05/1910
+		FRA_ww1_dreyfus_exoneration
+		FRA_ww1_the_social_democrat_compromise
+		FRA_ww1_briand_law
+		FRA_ww1_picardie_manoeuvers
+		FRA_ww1_french_interventionism
+		FRA_ww1_colonial_volunteers
+		#01/05/1911
+		FRA_ww1_ministerial_reform
+		FRA_ww1_government_reform
+		FRA_ww1_kick_caillaux
+		FRA_ww1_worker_cooperatives
+		FRA_ww1_extended_income_tax
+		#1912
+		FRA_ww1_political_coherence
+		FRA_ww1_ban_far_right_leagues
+		FRA_ww1_revision_de_larmee_de_terre
+		FRA_ww1_fund_peugeot
+		FRA_ww1_fund_berthier
+		
+
+	}
+
+	# Keep small, as it is used as a factor for some things (such as research needs)
+	# Recommended around 1.0. Useful for relation between plans
+	weight = {
+		factor = 1.0
+		modifier = {
+			factor = 1.0
+		}
+	}
+
+	focus_factors = {
+	}
+
+}
+
+# guarding the borders
+FRA_loser_plan_guard_border = {
+	name = "French idiot plan 2"
+	desc = ""
+
+	allowed = {
+		always = yes
+	}
+	enable = {
+		NOT = {
+			has_war_with = GER
+		}
+		OR = {
+			original_tag = FRA
+			is_subject_of = FRA
+		}
+		has_game_rule = {
+			rule = battle_of_france_outcome
+			option = FRENCH_EARLY_DEFEAT
+		}
+		NOT = {
+			has_global_flag = FRA_capitulation_alone
+		}
+	}
+	abort = {
+		OR = {
+			has_war_with = GER
+			has_global_flag = FRA_capitulation_alone
+			has_global_flag = great_war_ends
+			FRA = {
+				has_capitulated = yes
+			}
+		}
+		
+	}
+	ai_strategy = {
+		type = front_unit_request ## let some troops on german borders
+		tag = GER
+		value = 300
+	}
+}
+
+### when the player pick the "early french defeat" rule
+FRA_loser_plan = {
+	name = "French idiot plan"
+	desc = ""
+
+	allowed = {
+		always = yes
+	}
+	enable = {
+		OR = {
+			original_tag = FRA
+			is_subject_of = FRA
+		}
+		has_game_rule = {
+			rule = battle_of_france_outcome
+			option = FRENCH_EARLY_DEFEAT
+		}
+		NOT = {
+			has_global_flag = FRA_capitulation_alone
+		}
+	}
+	abort = {
+		OR = {
+			has_global_flag = FRA_capitulation_alone
+			has_global_flag = great_war_ends
+			FRA = {
+				has_capitulated = yes
+			}
+		}
+		
+	}
+
+	ai_strategy = {
+		type = garrison ## stupid commanders not placing units where they should
+		value = 400
+	}
+
+	ai_strategy = {
+		type = prepare_for_war ## always ready to lose
+		id = GER
+		value = 1
+	}
+
+	ai_strategy = {	#dont help to much
+		type = front_unit_request
+		tag = GER
+		value = -75
+	}
+
+	ai_strategy = {
+		type = front_unit_request
+		area = africa
+		value = 1200
+	}
+	ai_strategy = {
+		type = area_priority
+		id = africa
+		value = 1100
+	}
+
+	ai_strategy = {
+		type = front_unit_request
+		area = south_america
+		value = 1100
+	}
+	ai_strategy = {
+		type = area_priority
+		id = south_america
+		value = 1100
+	}
+
+	ai_strategy = {
+		type = front_unit_request
+		area = north_america
+		value = 1100
+	}
+	ai_strategy = {
+		type = area_priority
+		id = north_america
+		value = 1100
+	}
+
+	ai_strategy = {
+		type = front_unit_request
+		area = asia
+		value = 1100
+	}
+	ai_strategy = {
+		type = area_priority
+		id = asia
+		value = 1100
+	}
+
+	ai_strategy = {
+		type = front_unit_request
+		area = middle_east
+		value = 1100
+	}
+	ai_strategy = {
+		type = area_priority
+		id = middle_east
+		value = 1100
+	}
+
+	
+	ai_strategy = {
+		type = build_army
+		id = infantry
+		value = -1000
+	}
+
+	ai_strategy = {
+		type = force_build_armies
+		value = -1000
+	}
+}
+
+### when France capitulate, its good
+FRA_loser_plan_GER_afterward = {
+	name = "German war effort"
+	desc = ""
+
+	allowed = {
+		original_tag = GER
+	}
+	enable = {
+		original_tag = GER
+		has_game_rule = {
+			rule = battle_of_france_outcome
+			option = FRENCH_EARLY_DEFEAT
+		}
+		has_global_flag = FRA_capitulation_alone
+		NOT = {
+			has_war_with = FRA
+		}
+		has_war_with = RUS
+	}
+	abort = {
+		has_war_with = FRA
+		NOT = {
+			has_war_with = RUS
+		}
+	}
+	ai_strategy = {
+		type = front_unit_request
+		tag = RUS
+		value = 200
+	}
+}
+
+
+### when the player pick the "early french defeat" rule
+FRA_loser_plan_ENG = {
+	name = "Entente war effort"
+	desc = ""
+
+	allowed = {
+		NOT = {
+			tag = RUS
+			tag = FRA
+		}
+	}
+	enable = {
+		is_in_faction_with = FRA
+		NOT = {
+			tag = RUS
+			tag = FRA
+		}
+		has_game_rule = {
+			rule = battle_of_france_outcome
+			option = FRENCH_EARLY_DEFEAT
+		}
+		NOT = {
+			has_global_flag = FRA_capitulation_alone
+		}
+	}
+	abort = {
+		OR = {
+			has_global_flag = FRA_capitulation_alone
+			has_global_flag = great_war_ends
+			FRA = {
+				has_capitulated = yes
+			}
+		}
+		
+	}
+	ai_strategy = {	#dont help to much
+		type = front_unit_request
+		tag = GER
+		value = -300
+	}
+}
+
+GER_loser_plan_guard_border = {
+	name = "French idiot plan 3"
+	desc = ""
+
+	allowed = {
+		always = yes
+	}
+	enable = {
+		OR = {
+			has_war_with = FRA
+			has_war_with = BEL
+		}
+		OR = {
+			original_tag = GER
+		}
+		has_game_rule = {
+			rule = battle_of_france_outcome
+			option = FRENCH_EARLY_DEFEAT
+		}
+		NOT = {
+			has_global_flag = FRA_capitulation_alone
+		}
+	}
+	abort = {
+		OR = {
+			has_global_flag = FRA_capitulation_alone
+			has_global_flag = great_war_ends
+			FRA = {
+				has_capitulated = yes
+			}
+		}
+		
+	}
+	ai_strategy = {
+		type = front_control
+		state_trigger = {
+			OR = {
+				state = 865
+				state = 29
+				state = 785
+				state = 16
+				state = 18
+			}
+        }
+		priority = 9999
+		ratio = 0.7
+		ordertype = front
+		execution_type = rush
+		execute_order = yes
+		manual_attack = yes
+	}
+}

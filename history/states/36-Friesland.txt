@@ -1,0 +1,22 @@
+state={
+	id=36
+	name="STATE_36"
+	manpower = 592889
+	state_category=town
+	provinces={ 6336 9309 9335 }
+	history={
+		owner=HOL
+		add_core_of = HOL
+		
+		victory_points = { 9335 5 } #Groningen
+		victory_points = { 6336 2 } #Leeuwarden
+		victory_points = { 9309 1 } #Assen
+		
+		buildings={
+			infrastructure = 3
+			industrial_complex=1
+			9335={ naval_base=3 }			
+		}
+	}
+	local_supplies=7
+}

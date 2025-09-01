@@ -1,0 +1,27 @@
+
+state={
+	id=197
+	name="STATE_197"
+	history={
+		victory_points = { 3755 4 } #Kherson 72,000
+		victory_points = { 11561 1 } #Kryvyi Rih 25,488 in 1912
+		victory_points = { 11683 5 } #Nikolaev 105,000 in 1911
+		victory_points = { 3452 4 } #Elisavetgrad 76,000
+		victory_points = { 3468 1 } #Oleksandriia 14.007 in 1897
+		owner = RUS
+		add_core_of = RUS
+		add_core_of = UKR
+		buildings = {
+			infrastructure = 3
+			dockyard=2
+			3755={ naval_base=1 }
+			11683={ naval_base=1 }
+		}
+	}
+	provinces={
+		409 434 574 3403 3452 3468 3755 6451 6478 6597 9419 9573 11546 11561 11683 11715 
+	}
+	manpower=2326851
+	buildings_max_level_factor=1.000
+	state_category=town
+}

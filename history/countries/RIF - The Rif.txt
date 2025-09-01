@@ -1,0 +1,52 @@
+﻿capital = 290
+set_research_slots = 2
+set_stability = 0.40
+set_war_support = 0.7
+
+recruit_character = RIF_abd_el_krim
+
+# oob = "RIF_1910"
+set_technology = {
+	#infantry
+	obsolete_infantry_weapons = 1
+	infantry_weapons = 1
+	camelry = 1
+	#support
+	tech_engineers = 1
+	#artillery
+	early_artillery = 1
+	basic_field_gun = 1
+	#navy
+	transport = 1
+}
+
+set_politics = {
+	ruling_party = democratic
+	last_election = "1921.9.18"
+	election_frequency = 48
+	elections_allowed = no
+}
+
+set_popularities = {
+	democratic = 51
+	fascism = 3
+	communism = 14
+	neutrality = 32
+}
+
+add_ideas = {
+	isolation
+	limited_exports
+	RIF_idea_breeze_of_freedom
+	standing_alone
+}
+
+add_opinion_modifier = {
+	target = SPR
+	modifier = anti_colonialism_modifier
+}
+
+add_opinion_modifier = {
+	target = FRA
+	modifier = anti_colonialism_modifier
+}

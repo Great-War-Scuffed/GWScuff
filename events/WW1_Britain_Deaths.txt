@@ -1,0 +1,169 @@
+add_namespace = england_death
+
+#James Grierson the fat bastard (also can use this event as a template)
+country_event = {
+	id = england_death.1
+	title = england_death.1.t
+	desc = england_death.1.d
+	picture = GFX_report_event_generic_funeral
+	fire_only_once = yes
+	trigger = {
+		tag = ENG
+		has_character = ENG_james_grierson
+		date > 1914.08.17
+	}
+	hidden = yes
+	immediate = {
+		ENG_james_grierson = { unit_leader_event = { id = england_death.5 } }
+	}
+}
+#New Generals!
+country_event = {
+	id = england_death.3
+	title = england_death.3.t
+	desc = england_death.3.d
+	picture = GFX_report_event_british_inspect_troops
+	fire_only_once = yes
+	trigger = {
+		original_tag = ENG
+		date > 1920.01.01
+		has_war = no
+	}
+	mean_time_to_happen = { days = 100 }
+	option = {
+		name = england_death.3.a
+		custom_effect_tooltip = eng_new_generals_tt
+		hidden_effect = {
+			retire_character = ENG_john_french
+			retire_character = ENG_douglas_haig
+			retire_character = ENG_leslie_rundle 
+			retire_character = ENG_george_harper
+			retire_character = ENG_henry_horne
+			retire_character = ENG_herbert_plumer
+			retire_character = ENG_frederick_maude
+			retire_character = ENG_thomas_doyly_snow
+			retire_character = ENG_william_hickie
+			retire_character = ENG_oliver_nugent
+			retire_character = ENG_hubert_gough
+			retire_character = ENG_william_robertson
+			ENG_rudolph_lambart = {
+				if = {
+					limit = {
+						is_field_marshal = no									
+					}
+					promote_leader = yes
+				}
+			}
+			ENG_edmund_allenby = {
+				if = {
+					limit = {
+						is_field_marshal = no									
+					}
+					promote_leader = yes
+				}
+			}
+			if = {
+				limit = {
+					NOT = {
+						has_completed_focus = ENG_Never_Let_Old_Flag
+						has_government = fascism
+						has_country_leader = {
+							character = ENG_rotha_lintornorman
+							ruling_only = no
+						}
+						has_country_flag = great_war_loser
+					}
+				}
+				ENG_rudolph_lambart = {
+					add_country_leader_role = {
+						promote_leader = yes
+						country_leader = {
+							ideology = stratocracy
+						}
+					}
+				}
+			}
+		}
+	}
+}
+
+#Sir Hiram Maxim dies
+country_event = {
+	id = england_death.4
+	title = england_death.4.t
+	desc = england_death.4.d
+	picture = GFX_report_event_europe_funeral
+	trigger = {
+		original_tag = ENG
+		date > 1916.11.01
+		has_character = ENG_sir_hiram_maxim
+	}
+	mean_time_to_happen = { days = 24 }
+	
+	fire_only_once = yes
+	option = {
+		name = england_death.4.a
+		retire_character = ENG_sir_hiram_maxim
+	}
+}
+#part of my unit leader event changes
+unit_leader_event = {
+	id = england_death.5
+	title = england_death.1.t
+	desc = england_death.1.d
+	#picture = GFX_report_event_generic_funeral
+	fire_only_once = yes
+	is_triggered_only = yes
+	option = {
+		name = england_death.1.a
+		retire_character = ENG_james_grierson
+	}
+}
+#Paul Methuen retires
+country_event = {
+	id = england_death.6
+	fire_only_once = yes
+	trigger = {
+		tag = ENG
+		has_character = ENG_paul_methuen
+		date > 1915.02.01
+		OR = {
+			AND = {
+				NOT = {
+					country_exists = MLT
+				}
+				owns_state = 116
+			}
+			has_subject = MLT
+		}
+		NOT = {
+			AND = {
+				has_country_flag = ENG_socialist_britain_flag 
+				OR = {
+					has_government = communism
+					has_country_leader_ideology = national_syndicalism
+				}
+			}
+		}
+	}
+	hidden = yes
+	immediate = {
+		ENG_paul_methuen = { unit_leader_event = { id = england_death.7 } }
+	}
+}
+#unit leader event for above
+unit_leader_event = {
+	id = england_death.7
+	title = england_death.7.t
+	desc = england_death.7.d
+	#picture = GFX_report_event_british_inspect_troops
+	fire_only_once = yes
+	is_triggered_only = yes
+	option = {
+		name = england_death.7.a
+		ENG_paul_methuen = { 
+			set_nationality = MLT
+			promote_character = colonial_government
+		}
+	}
+}

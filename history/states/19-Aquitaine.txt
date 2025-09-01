@@ -1,0 +1,29 @@
+state={
+	id=19
+	name="STATE_19"
+	resources={
+		aluminium=7.000
+	}
+	history={
+		victory_points={ 9737 15 } #Bordeaux 275,468 in 1911
+		victory_points={ 11697 2 } #pau - 37,149
+		victory_points={ 6775 1 } #agen - 23,294
+		victory_points={ 11565 1 } #libourne - 20,085
+		owner=FRA
+		add_core_of=FRA
+		buildings={
+			infrastructure = 3
+			dockyard=2
+			arms_factory=2
+			industrial_complex = 1
+			9737={ naval_base=3 }
+		}
+	}	
+	provinces={
+		3740 6621 6759 6762 6775 6777 9710 9717 9737 11565 11697 11720 
+	}
+	manpower=1440400
+	buildings_max_level_factor=1.000
+	state_category=city
+	local_supplies=0.000
+}

@@ -1,0 +1,26 @@
+
+state={
+	id=231
+	name="STATE_231"
+	history={
+		victory_points = { 1599 10 } #Tbilisi 196,935 in 1913
+		victory_points = { 6436 1 } #Telavi 12,606 in 1913
+		victory_points = { 6671 1 } #Gori 12,275 in 1913
+		victory_points = { 4605 1 } #Signagi 11,031 in 1913
+		
+		owner = RUS
+		add_core_of = RUS
+		add_core_of = GEO
+		buildings = {
+			infrastructure = 2
+			industrial_complex = 1
+			arms_factory=1
+		}
+	}
+	provinces={
+		1530 1599 3667 4534 4605 4902 6436 6671 9702 11609 12309 
+	}
+	manpower=1299564
+	buildings_max_level_factor=1.000
+	state_category=large_town
+}

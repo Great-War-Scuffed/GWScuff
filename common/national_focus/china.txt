@@ -1,0 +1,4455 @@
+focus_tree = {
+	id = china_focus
+	country = {
+		base = 0
+		# modifier = {
+		# 	add = 10
+		# 	original_tag = QIN 
+		# }
+		modifier = {
+			add = 10
+			original_tag = CHI
+		}
+	}
+	default = no
+	#available_political_advisor
+	#available_chief_of_army
+	#available_chief_of_navy
+	#available_chief_of_airforce
+	#available_military_high_command
+	#available_theorist
+	#available_designer
+	#available_industrial_concern
+	continuous_focus_position = {
+		x = 100
+		y = 1800
+	}
+	initial_show_position = { focus = CHI_stand_with_tongmenghui }
+	shared_focus = CHI_nation_recovery
+	shared_focus = CHI_army_westernization
+	shared_focus = CHI_recovery_of_naval_infrastructure
+	shared_focus = CHI_restore_the_nation
+
+	focus = {
+		id = CHI_stand_with_tongmenghui
+		icon = GFX_focus_kmt_topple_qing
+		cost = 5
+		x = 0
+		y = 0
+		offset = {
+			trigger = {
+				has_completed_focus = CHI_kuomintang
+			}
+			x = 0
+		}
+		offset = {
+			trigger = {
+				has_completed_focus = CHI_ruling_of_yuan_shikai
+			}
+			x = -3
+		}
+		available = {
+			tag = CHI
+			has_global_flag = xinhai_revolution
+		}
+		cancelable = no
+		cancel_if_invalid = no
+		completion_reward = {
+			add_ideas = CHI_idea_support_for_revolution
+		}
+		search_filters = {
+			FOCUS_FILTER_POLITICAL
+			FOCUS_FILTER_HISTORICAL
+		}
+		ai_will_do = {
+			factor = 500
+		}
+	}
+	focus = {
+		id = CHI_establish_provisional_gov
+		icon = GFX_focus_chinese_revolutionaries
+		cost = 6
+		relative_position_id = CHI_stand_with_tongmenghui
+		prerequisite = {
+			focus = CHI_stand_with_tongmenghui
+		}
+		x = 0
+		y = 1
+		available = {
+			has_global_flag = xinhai_revolution
+			has_character = CHI_sun_yatsen
+		}
+		bypass = {
+			
+		}
+		cancelable = no
+		cancel_if_invalid = no
+		completion_reward = {
+			set_cosmetic_tag = CHI_provisional
+			CHI_sun_yatsen = {
+				if = {
+					limit = { has_ideology = tridemism }
+					promote_character = tridemism
+					add_country_leader_trait = father_of_the_republic
+				}
+				else = {
+					add_country_leader_role = {
+						promote_leader = yes
+						country_leader = {
+							ideology = tridemism
+							traits = { father_of_the_republic }
+							desc = CHI_sun_yatsen_desc
+						}
+					}
+				}
+			}
+			if = {
+				limit = {
+					has_country_flag = xinhai_yuan_presidency_suggest
+				}
+				hidden_effect = {
+					country_event = {
+						id = ww1_qing.16
+						hours = 10
+					}
+				}
+			}
+		}
+		ai_will_do = {
+			factor = 100
+		}
+		search_filters = {
+			FOCUS_FILTER_HISTORICAL
+			FOCUS_FILTER_POLITICAL
+		}
+	}
+	focus = {
+		id = CHI_hold_parliamentary_elections
+		icon = GFX_focus_beiyang_elections
+		cost = 10
+		relative_position_id = CHI_establish_provisional_gov
+		prerequisite = {
+			focus = CHI_establish_provisional_gov
+		}
+		x = 0
+		y = 1
+		available = {
+			has_war = no
+			NOT = {
+				has_government = fascism
+				has_government = communism
+			}
+		}
+		cancelable = no
+		cancel_if_invalid = no
+		select_effect = {
+			hidden_effect = {
+				if = {
+					limit = {
+						has_country_flag = yuan_shikai_presidency
+						has_country_leader = {
+							character = CHI_yuan_shikai
+							ruling_only = yes
+						}
+					}
+					country_event = {
+						id = ww1_xinhai.6
+						hours = 3
+					}
+				}
+				country_event = {
+					id = ww1_china.224
+					days = 1
+				}
+			}
+		}
+		completion_reward = {
+			add_political_power = 75
+			country_event = {
+				id = ww1_china.176
+				hours = 3
+			}
+			# political parties
+			set_party_name = {
+				ideology = democratic
+				long_name = CHI_kuomintang_party_long
+				name = CHI_kuomintang_party
+			}
+			set_party_name = {
+				ideology = neutrality
+				long_name = CHI_neutrality_republican_party
+				name = CHI_neutrality_republican_party
+			}
+		}
+		ai_will_do = {
+			factor = 500
+		}
+		search_filters = {
+			FOCUS_FILTER_HISTORICAL
+			FOCUS_FILTER_POLITICAL
+		}
+	}
+	focus = {
+		id = CHI_tongmenghui_cabinet
+		icon = GFX_focus_kmt_tutelage
+		cost = 10
+		relative_position_id = CHI_hold_parliamentary_elections
+		prerequisite = {
+			focus = CHI_hold_parliamentary_elections
+		}
+		x = 0
+		y = 1
+		available = {
+			NOT = { has_war_with = QIN }
+		}
+		cancelable = no
+		cancel_if_invalid = no
+		bypass = {
+
+		}
+		completion_reward = {
+			country_event = {
+				id = ww1_china.225
+				days = 3
+			}
+		}
+		ai_will_do = {
+			factor = 100
+		}
+		search_filters = {
+			FOCUS_FILTER_HISTORICAL
+			FOCUS_FILTER_POLITICAL
+		}
+	}
+	focus = {
+		id = CHI_ruling_of_yuan_shikai
+		icon = GFX_focus_beiyang_beijing
+		cost = 7
+		prerequisite = {
+			focus = CHI_tongmenghui_cabinet
+		}
+		mutually_exclusive = {
+			focus = CHI_kuomintang
+		}
+		relative_position_id = CHI_tongmenghui_cabinet
+		x = -3
+		y = 1
+		allow_branch = {
+			NOT = { has_completed_focus = CHI_kuomintang }
+		}
+		offset = {
+			trigger = {
+				has_completed_focus = CHI_ruling_of_yuan_shikai
+			}
+			x = 3
+		}
+		available = {
+			has_civil_war = no
+			has_global_flag = xinhai_revolution_ends
+			NOT = { has_global_flag = xinhai_compromise_fail }
+			has_character = CHI_yuan_shikai
+			has_country_leader = {
+				character = CHI_yuan_shikai
+				ruling_only = yes
+			}
+		}
+		cancelable = no
+		completion_reward = {
+			swap_ideas = {
+				remove_idea = CHI_idea_support_for_revolution
+				add_idea = CHI_idea_republican_plot
+			}
+			meta_effect = {
+				text = {
+					set_politics = {
+						ruling_party = neutrality
+						long_name = CHI_neutrality_republican_party
+						name = CHI_neutrality_republican_party
+						last_election = "[CURRENT_DATE]"
+						election_frequency = 60
+						elections_allowed = yes
+					}
+				}
+				CURRENT_DATE = "[?global.date.GetDateStringNoHour]"
+			}
+			if = {
+				limit = {
+					has_character = CHI_yuan_shikai
+				}
+				CHI_yuan_shikai = {
+					if = {
+						limit = {
+							has_ideology = authoritarian_democracy
+						}
+						promote_character = authoritarian_democracy
+					}
+					else = {
+						add_country_leader_role = {
+							promote_leader = yes
+							country_leader = {
+								ideology = authoritarian_democracy
+							}
+						}
+					}
+				}
+			}
+			set_capital = { state = 608 }
+			hidden_effect = {
+				drop_cosmetic_tag = yes
+				CHI_yuan_shikai = {
+					if = {
+						limit = {
+							has_ideology = stratocracy
+						}
+						promote_character = stratocracy
+					}
+					else = {
+						add_country_leader_role = {
+							promote_leader = yes
+							country_leader = {
+								ideology = stratocracy
+							}
+						}
+					}
+				}
+				if = {
+					limit = {
+						has_character = CHI_song_jiaoren
+					}
+					CHI_song_jiaoren = {
+						add_country_leader_role = {
+							promote_leader = yes
+							country_leader = {
+								ideology = tridemism
+								traits = { popular_figurehead liberal_democratic_paragon }
+							}
+						}
+					}
+				}
+				country_event = {
+					id = ww1_china.177
+					days = 20
+				}
+			}
+			mark_focus_tree_layout_dirty = yes
+		}
+		search_filters = {
+			FOCUS_FILTER_HISTORICAL
+			FOCUS_FILTER_POLITICAL
+		}
+	}
+	focus = {
+		id = CHI_replace_governors
+		icon = GFX_focus_beiyang_reform
+		cost = 5
+		relative_position_id = CHI_ruling_of_yuan_shikai
+		prerequisite = {
+			focus = CHI_ruling_of_yuan_shikai
+		}
+		x = -3
+		y = 1
+		available = {
+			has_government = neutrality
+		}
+		completion_reward = {
+			if = {
+				limit = {
+					has_active_mission = CHI_republican_plot
+				}
+				add_days_mission_timeout = {
+					mission = CHI_republican_plot
+					days = -20
+				}
+			}
+			add_political_power = 100
+			add_stability = 0.05
+			add_popularity = {
+				ideology = fascism
+				popularity = 0.04
+			}
+		}
+		search_filters = {
+			FOCUS_FILTER_HISTORICAL
+			FOCUS_FILTER_POLITICAL
+		}
+	}
+	focus = {
+		id = CHI_increase_army_influence
+		icon = GFX_focus_beiyang_conscription
+		cost = 5
+		relative_position_id = CHI_ruling_of_yuan_shikai
+		prerequisite = {
+			focus = CHI_ruling_of_yuan_shikai
+		}
+		x = 3
+		y = 1
+		available = {
+			OR = {
+				has_government = neutrality
+				has_government = fascism
+			}
+		}
+		completion_reward = {
+			if = {
+				limit = {
+					has_active_mission = CHI_republican_plot
+				}
+				add_days_mission_timeout = {
+					mission = CHI_republican_plot
+					days = -20
+				}
+			}
+			add_ideas = CHI_idea_beiyang_government
+			add_popularity = {
+				ideology = neutrality
+				popularity = 0.06
+			}
+			if = {
+				limit = {
+					has_character = CHI_duan_qirui
+				}
+				custom_effect_tooltip = available_political_advisor
+				show_ideas_tooltip = CHI_duan_qirui_political
+			}
+			hidden_effect = {
+				# Zhang Zhenwu Has Executed!
+				country_event = {
+					id = ww1_china.95
+					hours = 3
+				}
+			}
+		}
+		search_filters = {
+			FOCUS_FILTER_HISTORICAL
+			FOCUS_FILTER_POLITICAL
+		}
+	}
+	focus = {
+		id = CHI_presidential_loyalty
+		icon = GFX_focus_beiyang_arms
+		cost = 5
+		relative_position_id = CHI_ruling_of_yuan_shikai
+		prerequisite = {
+			focus = CHI_increase_army_influence
+		}
+		prerequisite = {
+			focus = CHI_yuan_president
+		}
+		x = 2
+		y = 2
+		available = {
+			has_government = neutrality
+			NOT = {
+				has_completed_focus = CHI_echoes_of_empires
+			}
+			has_country_leader = {
+				character = CHI_yuan_shikai
+				ruling_only = yes
+			}
+		}
+		completion_reward = {
+			add_political_power = 150
+			add_war_support = 0.05
+			custom_effect_tooltip = ww1_china_tooltip.1
+			add_country_leader_trait = CHI_trait_dictator
+			meta_effect = {
+				text = {
+					set_politics = {
+						ruling_party = neutrality
+						last_election = "[CURRENT_DATE]"
+						election_frequency = 120 #historical
+						elections_allowed = yes
+					}
+				}
+				CURRENT_DATE = "[?global.date.GetDateStringNoHour]"
+			}
+			hidden_effect = {
+				if = {
+					limit = {
+						has_country_leader_ideology = authoritarian_democracy
+					}
+					set_country_leader_ideology = personalistic_dictatorship
+					add_country_leader_trait = CHI_trait_dictator
+				}
+				set_global_flag = chinese_presidential_loyalty
+			}
+		}
+		search_filters = {
+			FOCUS_FILTER_HISTORICAL
+			FOCUS_FILTER_POLITICAL
+			FOCUS_FILTER_WAR_SUPPORT
+		}
+	}
+	focus = {
+		id = CHI_parliament_liquidation
+		icon = GFX_focus_beiyang_suppress_election
+		cost = 10
+		relative_position_id = CHI_ruling_of_yuan_shikai
+		prerequisite = {
+			focus = CHI_suppress_nationalists
+		}
+		prerequisite = {
+			focus = CHI_yuan_president
+		}
+		x = 0
+		y = 2
+		available = {
+			OR = {
+				has_government = neutrality
+				has_government = fascism
+			}
+		}
+		completion_reward = {
+			remove_ideas = CHI_idea_republican_plot
+			add_popularity = {
+				ideology = democratic
+				popularity = -0.05
+			}
+			if = {
+				limit = {
+					has_country_leader_ideology = authoritarian_democracy
+				}
+				CHI_yuan_shikai = {
+					promote_character = personalistic_dictatorship
+				}
+			}
+			country_event = ww1_china.97
+		}
+		search_filters = {
+			FOCUS_FILTER_HISTORICAL
+			FOCUS_FILTER_POLITICAL
+		}
+	}
+	focus = {
+		id = CHI_reorganization_loans
+		icon = GFX_focus_beiyang_japanese_cooperation
+		cost = 5
+		relative_position_id = CHI_ruling_of_yuan_shikai
+		prerequisite = {
+			focus = CHI_ruling_of_yuan_shikai
+		}
+		x = -5
+		y = 1
+		available = {
+			OR = {
+				has_government = neutrality
+				has_government = fascism
+			}
+		}
+		completion_reward = {
+			if = {
+				limit = {
+					has_active_mission = CHI_republican_plot
+				}
+				add_days_mission_timeout = {
+					mission = CHI_republican_plot
+					days = -20
+				}
+			}
+			add_timed_idea = {
+				idea = CHI_idea_reorganization_loans
+				days = 360
+			}
+			CHI_idea_inflation_worsen = yes
+			if = {
+				limit = {
+					NOT = {
+						has_completed_focus = CHI_parliament_liquidation
+					}
+				}
+				country_event = {
+					id = ww1_china.96
+					days = 2
+				}
+			}
+		}
+		search_filters = {
+			FOCUS_FILTER_HISTORICAL
+			FOCUS_FILTER_POLITICAL
+			FOCUS_FILTER_CHI_INFLATION
+		}
+	}
+	focus = {
+		id = CHI_accept_twenties_demand
+		icon = GFX_focus_beiyang_japanese_alliance
+		cost = 5
+		relative_position_id = CHI_reorganization_loans
+		prerequisite = {
+			focus = CHI_reorganization_loans
+		}
+		x = -1
+		y = 1
+		available = {
+			OR = {
+				has_government = neutrality
+				has_government = fascism
+			}
+			NOT = {
+				has_war_with = JAP
+			}
+			JAP = {
+				has_completed_focus = JAP_ww1_Twenty_One_Demands
+			}
+		}
+		completion_reward = {
+			effect_tooltip = {
+				add_timed_idea = {
+					idea = CHI_idea_reorganization_loans
+					days = 450
+				}
+			}
+			if = {
+				limit = {
+					JAP = { owns_state = 872 }
+				}
+				872 = {
+					add_dynamic_modifier = {
+						modifier = concessions_modifier
+					}
+				}
+			}
+			CHI_idea_inflation_worsen = yes
+			hidden_effect = {
+				if = {
+					limit = {
+						has_idea = CHI_idea_reorganization_loans
+					}
+					remove_ideas = CHI_idea_reorganization_loans
+				}
+				add_timed_idea = {
+					idea = CHI_idea_reorganization_loans
+					days = 450
+				}
+				every_country = {
+					limit = {
+						has_opinion_modifier = HOI4TGW_Opinion_JAP_china_21
+					}
+					remove_opinion_modifier = {
+						target = JAP
+						modifier = HOI4TGW_Opinion_JAP_china_21
+					}
+				}
+			}
+		}
+		search_filters = {
+			FOCUS_FILTER_HISTORICAL
+			FOCUS_FILTER_POLITICAL
+			FOCUS_FILTER_CHI_INFLATION
+		}
+	}
+	focus = {
+		id = CHI_expand_state_arsenals
+		icon = GFX_goal_generic_construct_mil_factory
+		cost = 5
+		relative_position_id = CHI_ruling_of_yuan_shikai
+		prerequisite = {
+			focus = CHI_replace_governors
+		}
+		prerequisite = {
+			focus = CHI_reorganization_loans
+		}
+		x = -4
+		y = 2
+		available = {
+			has_government = neutrality
+		}
+		completion_reward = {
+			random_owned_controlled_state = {
+				limit = {
+					is_core_of = ROOT
+					region = 143
+				}
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = arms_factory
+					level = 1
+					instant_build = yes
+				}
+			}
+			random_owned_controlled_state = {
+				limit = {
+					is_core_of = ROOT
+					region = 143
+				}
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = arms_factory
+					level = 1
+					instant_build = yes
+				}
+			}
+		}
+		search_filters = {
+			FOCUS_FILTER_HISTORICAL
+			FOCUS_FILTER_POLITICAL
+			FOCUS_FILTER_INDUSTRY
+		}
+	}
+	focus = {
+		id = CHI_suppress_nationalists
+		icon = GFX_focus_down_with_kmt
+		cost = 5
+		relative_position_id = CHI_ruling_of_yuan_shikai
+		prerequisite = {
+			focus = CHI_ruling_of_yuan_shikai
+		}
+		x = -1
+		y = 1
+		available = {
+			OR = {
+				has_government = neutrality
+				has_government = fascism
+			}
+		}
+		completion_reward = {
+			if = {
+				limit = {
+					has_active_mission = CHI_republican_plot
+				}
+				add_days_mission_timeout = {
+					mission = CHI_republican_plot
+					days = -20
+				}
+			}
+			effect_tooltip = {
+				retire_character = CHI_song_jiaoren
+			}
+			add_stability = -0.1
+			add_popularity = {
+				ideology = neutrality
+				popularity = 0.05
+			}
+			add_popularity = {
+				ideology = fascism
+				popularity = 0.02
+			}
+			hidden_effect = {
+				country_event = {
+					id = ww1_china.90
+					hours = 3
+				}
+			}
+		}
+		search_filters = {
+			FOCUS_FILTER_HISTORICAL
+			FOCUS_FILTER_POLITICAL
+		}
+	}
+	focus = {
+		id = CHI_yuan_president
+		icon = GFX_focus_generic_officers
+		cost = 5
+		relative_position_id = CHI_ruling_of_yuan_shikai
+		prerequisite = {
+			focus = CHI_ruling_of_yuan_shikai
+		}
+		x = 1
+		y = 1
+		available = {
+			has_country_leader = {
+				character = CHI_yuan_shikai
+				ruling_only = yes
+			}
+			has_civil_war = no
+		}
+		select_effect = {
+			if = {
+				limit = {
+					has_active_mission = CHI_republican_plot
+				}
+				add_days_mission_timeout = {
+					mission = CHI_republican_plot
+					days = -20
+				}
+			}
+		}
+		completion_reward = {
+			meta_effect = {
+				text = {
+					set_politics = {
+						ruling_party = neutrality
+						long_name = CHI_neutrality_republican_party
+						name = CHI_neutrality_republican_party
+						last_election = "[CURRENT_DATE]"
+						election_frequency = 60
+						elections_allowed = yes
+					}
+				}
+				CURRENT_DATE = "[?global.date.GetDateStringNoHour]"
+			}
+			country_event = {
+				id = ww1_china.259
+				hours = 10
+			}
+		}
+		search_filters = {
+			FOCUS_FILTER_HISTORICAL
+			FOCUS_FILTER_POLITICAL
+		}
+	}
+	focus = {
+		id = CHI_echoes_of_empires
+		icon = GFX_focus_beiyang_army_corruption
+		cost = 10
+		relative_position_id = CHI_ruling_of_yuan_shikai
+		prerequisite = {
+			focus = CHI_expand_state_arsenals
+			focus = CHI_presidential_loyalty
+		}
+		prerequisite = {
+			focus = CHI_parliament_liquidation
+		}
+		mutually_exclusive = {
+			focus = CHI_maintain_status_quo
+		}
+		x = -3
+		y = 3
+		available = {
+			has_civil_war = no
+			has_government = neutrality
+			NOT = {
+				has_global_flag = yuan_shikai_dead
+			}
+		}
+		bypass = {
+			has_government = fascism
+		}
+		completion_reward = {
+			country_event = ww1_china.173
+		}
+		search_filters = {
+			FOCUS_FILTER_HISTORICAL
+			FOCUS_FILTER_POLITICAL
+		}
+	}
+	focus = {
+		id = CHI_favor_civilian_government
+		icon = GFX_focus_AUH_demoratic_action
+		cost = 5
+		prerequisite = {
+			focus = CHI_echoes_of_empires
+		}
+		relative_position_id = CHI_echoes_of_empires
+		x = -3
+		y = 1
+		available = {
+			has_government = neutrality
+			NOT = {
+				has_completed_focus = CHI_second_empire
+				has_completed_focus = CHI_military_dictatorship
+				has_global_flag = hongxian_failed
+			}
+		}
+		completion_reward = {
+			CHI_popular_support_increase = yes
+			CHI_army_support_decrease = yes
+			if = {
+				limit = {
+					has_completed_focus = CHI_presidential_loyalty
+				}
+				add_stability = -0.2
+			}
+			else = {
+				add_stability = 0.1
+			}
+		}
+		search_filters = {
+			FOCUS_FILTER_POLITICAL
+		}
+	}
+	focus = {
+		id = CHI_concessions_to_army
+		icon = GFX_focus_generic_army_upgrade
+		cost = 5
+		prerequisite = {
+			focus = CHI_favor_civilian_government
+		}
+		prerequisite = {
+			focus = CHI_constitutional_debate
+		}
+		mutually_exclusive = {
+			focus = CHI_concessions_to_people
+		}
+		relative_position_id = CHI_echoes_of_empires
+		x = -1
+		y = 2
+		available = {
+			has_government = neutrality
+			NOT = {
+				has_completed_focus = CHI_second_empire
+				has_completed_focus = CHI_military_dictatorship
+				has_global_flag = hongxian_failed
+			}
+		}
+		completion_reward = {
+			add_timed_idea = {
+				idea = CHI_idea_army_concessions
+				days = 180
+			}
+		}
+		search_filters = {
+			FOCUS_FILTER_POLITICAL
+		}
+	}
+	focus = {
+		id = CHI_invest_in_public_works
+		icon = GFX_goal_generic_construction
+		cost = 5
+		prerequisite = {
+			focus = CHI_favor_civilian_government
+		}
+		relative_position_id = CHI_echoes_of_empires
+		x = -3
+		y = 2
+		available = {
+			has_government = neutrality
+			NOT = {
+				has_completed_focus = CHI_second_empire
+				has_completed_focus = CHI_military_dictatorship
+				has_global_flag = hongxian_failed
+			}
+		}
+		completion_reward = {
+			add_ideas = CHI_idea_expand_public_works
+			CHI_popular_support_increase = yes
+			#CHI_army_support_decrease = yes
+			if = {
+				limit = {
+					has_completed_focus = CHI_presidential_loyalty
+				}
+				add_stability = -0.2
+			}
+		}
+		search_filters = {
+			FOCUS_FILTER_POLITICAL
+		}
+	}
+	focus = {
+		id = CHI_propaganda_of_imperialism
+		icon = GFX_focus_beiyang_reformers
+		cost = 5
+		prerequisite = {
+			focus = CHI_invest_in_public_works
+		}
+		relative_position_id = CHI_echoes_of_empires
+		x = -3
+		y = 3
+		available = {
+			has_government = neutrality
+			NOT = {
+				has_completed_focus = CHI_second_empire
+				has_completed_focus = CHI_military_dictatorship
+				has_global_flag = hongxian_failed
+			}
+		}
+		completion_reward = {
+			add_war_support = 0.1
+			CHI_popular_support_increase = yes
+			#CHI_army_support_decrease = yes
+			if = {
+				limit = {
+					has_completed_focus = CHI_presidential_loyalty
+				}
+				add_stability = -0.2
+			}
+		}
+		search_filters = {
+			FOCUS_FILTER_POLITICAL
+			FOCUS_FILTER_WAR_SUPPORT
+		}
+	}
+	focus = {
+		id = CHI_maintain_status_quo
+		icon = GFX_focus_beiyang_purges
+		cost = 6
+		relative_position_id = CHI_ruling_of_yuan_shikai
+		prerequisite = {
+			focus = CHI_parliament_liquidation
+		}
+		mutually_exclusive = {
+			focus = CHI_echoes_of_empires
+		}
+		x = 4
+		y = 3
+		available = {
+			has_civil_war = no
+			has_government = neutrality
+		}
+		bypass = {
+			has_global_flag = yuan_shikai_dead
+		}
+		completion_reward = {
+			add_stability = 0.05
+			add_political_power = 100
+			swap_ideas = {
+				remove_idea = CHI_idea_unstable_republic
+				add_idea = CHI_idea_stable_republic
+			}
+			custom_effect_tooltip = CHI_maintain_status_quo_tt
+		}
+		search_filters = {
+			FOCUS_FILTER_POLITICAL
+		}
+	}
+	focus = {
+		id = CHI_constitutional_debate
+		icon = GFX_focus_chinese_centralization
+		cost = 10
+		prerequisite = {
+			focus = CHI_echoes_of_empires
+		}
+		relative_position_id = CHI_echoes_of_empires
+		x = 0
+		y = 1
+		available = {
+			has_government = neutrality
+			NOT = {
+				has_global_flag = yuan_shikai_dead
+			}
+		}
+		completion_reward = {
+			country_event = {
+				id = ww1_china.174
+			}
+		}
+		search_filters = {
+			FOCUS_FILTER_HISTORICAL
+			FOCUS_FILTER_POLITICAL
+		}
+	}
+	focus = {
+		id = CHI_question_of_provincial_governments
+		icon = GFX_focus_beiyang_government
+		cost = 10
+		prerequisite = {
+			focus = CHI_constitutional_debate
+		}
+		relative_position_id = CHI_constitutional_debate
+		x = 0
+		y = 2
+		available = {
+			has_government = neutrality
+			NOT = {
+				has_global_flag = yuan_shikai_dead
+			}
+		}
+		completion_reward = {
+			country_event = {
+				id = ww1_china.175
+			}
+		}
+		search_filters = {
+			FOCUS_FILTER_HISTORICAL
+			FOCUS_FILTER_POLITICAL
+		}
+	}
+	focus = {
+		id = CHI_favor_the_army
+		icon = GFX_focus_army_is_ready
+		cost = 5
+		prerequisite = {
+			focus = CHI_echoes_of_empires
+		}
+		relative_position_id = CHI_echoes_of_empires
+		x = 3
+		y = 1
+		available = {
+			has_government = neutrality
+			NOT = {
+				has_completed_focus = CHI_second_empire
+				has_completed_focus = CHI_true_constitutional_monarch
+				has_global_flag = hongxian_failed
+			}
+		}
+		completion_reward = {
+			CHI_popular_support_decrease = yes
+			CHI_army_support_increase = yes
+			add_war_support = 0.05
+		}
+		search_filters = {
+			FOCUS_FILTER_POLITICAL
+			FOCUS_FILTER_WAR_SUPPORT
+		}
+	}
+	focus = {
+		id = CHI_concessions_to_people
+		icon = GFX_focus_generic_self_management
+		cost = 5
+		prerequisite = {
+			focus = CHI_favor_the_army
+		}
+		prerequisite = {
+			focus = CHI_constitutional_debate
+		}
+		mutually_exclusive = {
+			focus = CHI_concessions_to_army
+		}
+		relative_position_id = CHI_echoes_of_empires
+		x = 1
+		y = 2
+		available = {
+			has_government = neutrality
+			NOT = {
+				has_completed_focus = CHI_second_empire
+				has_completed_focus = CHI_true_constitutional_monarch
+			}
+		}
+		completion_reward = {
+			add_timed_idea = {
+				idea = CHI_idea_civilian_concessions
+				days = 180
+			}
+		}
+		search_filters = {
+			FOCUS_FILTER_POLITICAL
+		}
+	}
+	focus = {
+		id = CHI_increase_military_spending
+		icon = GFX_focus_generic_fascist_troops
+		cost = 5
+		prerequisite = {
+			focus = CHI_favor_the_army
+		}
+		relative_position_id = CHI_echoes_of_empires
+		x = 3
+		y = 2
+		available = {
+			has_government = neutrality
+			NOT = {
+				has_completed_focus = CHI_second_empire
+				has_completed_focus = CHI_true_constitutional_monarch
+				has_global_flag = hongxian_failed
+			}
+		}
+		completion_reward = {
+			#CHI_popular_support_decrease = yes
+			CHI_army_support_increase = yes
+			add_ideas = CHI_idea_increased_military_budget
+		}
+		search_filters = {
+			FOCUS_FILTER_POLITICAL
+		}
+	}
+	focus = {
+		id = CHI_expand_arsenals_further
+		icon = GFX_goal_generic_construct_mil_factory
+		cost = 5
+		prerequisite = {
+			focus = CHI_increase_military_spending
+		}
+		relative_position_id = CHI_echoes_of_empires
+		x = 3
+		y = 3
+		available = {
+			has_government = neutrality
+			NOT = {
+				has_completed_focus = CHI_second_empire
+				has_completed_focus = CHI_true_constitutional_monarch
+				has_global_flag = hongxian_failed
+			}
+		}
+		completion_reward = {
+			#CHI_popular_support_decrease = yes
+			CHI_army_support_increase = yes
+			random_owned_controlled_state = {
+				limit = {
+					is_core_of = ROOT
+					region = 143
+				}
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = arms_factory
+					level = 2
+					instant_build = yes
+				}
+			}
+			random_owned_controlled_state = {
+				limit = {
+					is_core_of = ROOT
+					region = 143
+				}
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = arms_factory
+					level = 1
+					instant_build = yes
+				}
+			}
+		}
+		search_filters = {
+			FOCUS_FILTER_POLITICAL
+			FOCUS_FILTER_INDUSTRY
+		}
+	}
+	focus = {
+		id = CHI_second_empire
+		icon = GFX_focus_chi_beiyang_china
+		cost = 10
+		prerequisite = {
+			focus = CHI_question_of_provincial_governments
+		}
+		relative_position_id = CHI_constitutional_debate
+		x = 0
+		y = 4
+		available = {
+			NOT = {
+				has_global_flag = yuan_shikai_dead
+				has_idea = CHI_idea_civilian_concessions
+				has_idea = CHI_idea_army_concessions
+			}
+		}
+		bypass = {
+
+		}
+		# select_effect = {
+		# 	hidden_effect = {
+		# 		if = {
+		# 			limit = {
+		# 				NOT = { has_country_flag = CHI_chinese_revolutionary_party }
+		# 			}
+		# 			country_event = {
+		# 				id = ww1_china.132
+		# 				days = 14
+		# 			}
+		# 		}
+		# 	}
+		# }
+		cancelable = no
+		completion_reward = {
+			if = {
+				limit = {
+					has_idea = CHI_idea_republican_plot
+				}
+				remove_ideas = CHI_idea_republican_plot
+			}
+			if = {
+				limit = {
+					OR = {
+						AND = {
+							has_idea = CHI_idea_good_army_support
+							has_idea = CHI_idea_good_popular_support
+						}
+						AND = {
+							has_idea = CHI_idea_improved_army_support
+							has_idea = CHI_idea_improved_popular_support
+						}
+						AND = {
+							has_idea = CHI_idea_good_army_support
+							has_idea = CHI_idea_improved_popular_support
+						}
+						AND = {
+							has_idea = CHI_idea_improved_army_support
+							has_idea = CHI_idea_good_popular_support
+						}
+					}
+				}
+				add_popularity = {
+					ideology = fascism
+					popularity = 0.1
+				}
+			}
+			else = {
+				add_stability = -0.10
+				add_war_support = -0.20
+			}
+			set_politics = {
+				ruling_party = fascism
+				elections_allowed = no
+				long_name = CHI_hongxian_fascism_party
+				name = CHI_hongxian_fascism_party
+			}
+			set_cosmetic_tag = CHI_hongxian_empire
+			CHI_yuan_shikai = {
+				set_portraits = {
+					civilian = {
+						large = "gfx/leaders/CHI/CHI_Yuan_Shikai_Hongxian_Emperor.png"
+					}
+				}
+				set_character_name = CHI_hongxian_emperor
+				if = {
+					limit = { has_ideology = reactionism }
+					promote_character = reactionism
+				}
+				else = {
+					add_country_leader_role = {
+						country_leader = {
+							ideology = reactionism
+						}
+						promote_leader = yes
+					}
+				}
+			}
+			hidden_effect = {
+				set_capital = {
+					state = 608
+				}
+				country_event = {
+					id = ww1_china.1
+					hours = 2
+				}
+			}
+		}
+		ai_will_do = {
+			base = 0
+			modifier = {
+				add = 100
+				date > 1915.10.1
+			}
+		}
+		search_filters = {
+			FOCUS_FILTER_HISTORICAL
+			FOCUS_FILTER_POLITICAL
+		}
+	}
+	focus = {
+		id = CHI_continue_constitutional_reforms
+		icon = GFX_focus_chinese_reform
+		cost = 6
+		prerequisite = {
+			focus = CHI_second_empire
+		}
+		relative_position_id = CHI_second_empire
+		x = -3
+		y = 1
+		available = {
+			has_war = no
+			has_global_flag = CHI_empire_won_npw
+		}
+		completion_reward = {
+			if = {
+				limit = {
+					has_character = CHI_liang_qichao
+				}
+				custom_effect_tooltip = available_political_advisor
+				show_ideas_tooltip = CHI_liang_qichao
+			}
+			add_stability = 0.1
+			add_popularity = {
+				ideology = neutrality
+				popularity = 0.1
+			}
+			CHI_popular_support_increase = yes
+		}
+		search_filters = {
+			FOCUS_FILTER_POLITICAL
+		}
+	}
+	focus = {
+		id = CHI_a_traditional_empire
+		icon = GFX_focus_beiyang_forbidden_city
+		cost = 6
+		prerequisite = {
+			focus = CHI_second_empire
+		}
+		relative_position_id = CHI_second_empire
+		x = 0
+		y = 1
+		available = {
+			has_war = no
+			has_global_flag = CHI_empire_won_npw
+		}
+		completion_reward = {
+			add_political_power = 75
+			if = {
+				limit = {
+					has_country_leader_with_trait = unpopular_monarch
+				}
+				remove_country_leader_trait = unpopular_monarch
+				add_country_leader_trait = CHI_trait_accepted_monarch
+			}
+		}
+		search_filters = {
+			FOCUS_FILTER_POLITICAL
+		}
+	}
+	focus = {
+		id = CHI_our_glorious_army
+		icon = GFX_focus_beiyang_expeditions
+		cost = 6
+		prerequisite = {
+			focus = CHI_second_empire
+		}
+		relative_position_id = CHI_second_empire
+		x = 3
+		y = 1
+		available = {
+			has_war = no
+			has_global_flag = CHI_empire_won_npw
+		}
+		completion_reward = {
+			add_war_support = 0.10
+			add_popularity = {
+				ideology = fascism
+				popularity = 0.1
+			}
+		}
+		search_filters = {
+			FOCUS_FILTER_POLITICAL
+		}
+	}
+	focus = {
+		id = CHI_empower_ministers
+		icon = GFX_focus_patronize_chinese_elites
+		cost = 8
+		prerequisite = {
+			focus = CHI_propaganda_of_imperialism
+		}
+		prerequisite = {
+			focus = CHI_question_of_provincial_governments
+		}
+		mutually_exclusive = {
+			focus = CHI_guarantee_provincial_loyalty
+		}
+		relative_position_id = CHI_concessions_to_army
+		x = 0
+		y = 2
+		available = {
+			OR = {
+				has_government = neutrality
+				has_government = fascism
+			}
+			has_war = no
+			NOT = {
+				has_global_flag = yuan_shikai_dead
+			}
+		}
+		completion_reward = {
+			CHI_popular_support_increase = yes
+			CHI_army_support_decrease = yes
+			if = {
+				limit = {
+					has_completed_focus = CHI_presidential_loyalty
+				}
+				add_stability = -0.2
+			}
+			if = {
+				limit = {
+					has_character = CHI_lu_zhengxiang
+				}
+				custom_effect_tooltip = available_political_advisor
+				show_ideas_tooltip = CHI_lu_zhengxiang
+				hidden_effect = {
+					remove_trait = {
+						character = CHI_lu_zhengxiang
+						slot = political_advisor
+						trait = CHI_trait_foreign_minister
+					}
+				}
+				add_trait = {
+					character = CHI_lu_zhengxiang
+					slot = political_advisor
+					trait = CHI_trait_imperial_prime_minister
+				}
+			}
+		}
+		search_filters = {
+			FOCUS_FILTER_POLITICAL
+		}
+	}
+	focus = {
+		id = CHI_guarantee_provincial_loyalty
+		icon = GFX_focus_beiyang_loyalty
+		cost = 5
+		prerequisite = {
+			focus = CHI_expand_arsenals_further
+		}
+		prerequisite = {
+			focus = CHI_question_of_provincial_governments
+		}
+		mutually_exclusive = {
+			focus = CHI_empower_ministers
+		}
+		relative_position_id = CHI_concessions_to_people
+		x = 0
+		y = 2
+		available = {
+			has_war = no
+			has_government = fascism
+		}
+		completion_reward = {
+			CHI_popular_support_decrease = yes
+			CHI_army_support_increase = yes
+			if = {
+				limit = {
+					has_completed_focus = CHI_presidential_loyalty
+				}
+				add_stability = 0.20
+			}
+			else = {
+				add_stability = -0.05
+			}
+			if = {
+				limit = {
+					has_idea = CHI_idea_beiyang_government
+				}
+				swap_ideas = {
+					remove_idea = CHI_idea_beiyang_government
+					add_idea = CHI_idea_beiyang_government2
+				}
+			}
+			else = {
+				add_ideas = CHI_idea_beiyang_government2
+			}
+		}
+		search_filters = {
+			FOCUS_FILTER_POLITICAL
+			FOCUS_FILTER_WAR_SUPPORT
+		}
+	}
+	focus = {
+		id = CHI_true_constitutional_monarch
+		icon = GFX_focus_empower_monarchy
+		cost = 10
+		prerequisite = {
+			focus = CHI_continue_constitutional_reforms
+		}
+		mutually_exclusive = {
+			focus = CHI_military_dictatorship
+		}
+		relative_position_id = CHI_second_empire
+		x = -1
+		y = 2
+		available = {
+			OR = {
+				has_government = neutrality
+				has_government = fascism
+			}
+			OR = {
+				has_country_leader = {
+					character = CHI_beiyang_triumvirate
+					ruling_only = yes
+				}
+				has_idea = CHI_idea_monarchist_constitution
+			}
+		}
+		completion_reward = {
+			CHI_liang_shiyi = {
+				if = {
+					limit = { has_ideology = authoritarian_democracy }
+					promote_character = authoritarian_democracy
+				}
+				else = {
+					add_country_leader_role = {
+						country_leader = {
+							ideology = authoritarian_democracy
+						}
+						promote_leader = yes
+					}
+				}
+			}
+			meta_effect = {
+				text = {
+					set_politics = {
+						ruling_party = neutrality
+						long_name = CHI_hongxian_neutrality_party
+						name = CHI_hongxian_neutrality_party
+						last_election = "[CURRENT_DATE]"
+						election_frequency = 60
+						elections_allowed = yes
+					}
+				}
+				CURRENT_DATE = "[?global.date.GetDateStringNoHour]"
+			}
+			if = {
+				limit = {
+					NOT = {
+						has_global_flag = yuan_shikai_dead
+					}
+				}
+				add_ideas = CHI_idea_hongxian_emperor
+			}
+			remove_ideas = PRC_government_corruption
+			if = {
+				limit = { has_idea = CHI_idea_unstable_republic }
+				remove_ideas = CHI_idea_unstable_republic
+			}
+		}
+		search_filters = {
+			FOCUS_FILTER_POLITICAL
+		}
+	}
+	focus = {
+		id = CHI_military_dictatorship
+		icon = GFX_focus_generic_military_dictatorship
+		cost = 10
+		prerequisite = {
+			focus = CHI_our_glorious_army
+		}
+		mutually_exclusive = {
+			focus = CHI_true_constitutional_monarch
+		}
+		relative_position_id = CHI_second_empire
+		x = 1
+		y = 2
+		available = {
+			OR = {
+				has_government = neutrality
+				has_government = fascism
+			}
+			OR = {
+				has_country_leader = {
+					character = CHI_beiyang_triumvirate
+					ruling_only = yes
+				}
+				has_idea = CHI_idea_military_constitution
+			}
+		}
+		completion_reward = {
+			CHI_cao_kun = {
+				promote_leader = yes
+				if = {
+					limit = { has_ideology = personalistic_dictatorship }
+					promote_character = personalistic_dictatorship
+				}
+				else = {
+					add_country_leader_role = {
+						country_leader = {
+							ideology = personalistic_dictatorship
+						}
+						promote_leader = yes
+					}
+				}
+				if = {
+					limit = { has_ideology = stratocracy }
+					promote_character = stratocracy
+				}
+				else = {
+					add_country_leader_role = {
+						country_leader = {
+							ideology = stratocracy
+						}
+						promote_leader = yes
+					}
+				}
+			}
+			meta_effect = {
+				text = {
+					set_politics = {
+						ruling_party = fascism
+						long_name = CHI_hongxian_neutrality_party
+						name = CHI_hongxian_neutrality_party
+						last_election = "[CURRENT_DATE]"
+						election_frequency = 60
+						elections_allowed = no
+					}
+				}
+				CURRENT_DATE = "[?global.date.GetDateStringNoHour]"
+			}
+			if = {
+				limit = {
+					NOT = {
+						has_global_flag = yuan_shikai_dead
+					}
+				}
+				add_ideas = CHI_idea_hongxian_emperor
+			}
+			remove_ideas = CHI_idea_empire_of_warlords
+			remove_ideas = PRC_government_corruption
+			if = {
+				limit = { has_idea = CHI_idea_unstable_republic }
+				remove_ideas = CHI_idea_unstable_republic
+			}
+		}
+		search_filters = {
+			FOCUS_FILTER_POLITICAL
+		}
+	}
+	focus = {
+		id = CHI_kuomintang
+		icon = GFX_focus_kmt_support
+		cost = 10
+		prerequisite = {
+			focus = CHI_tongmenghui_cabinet
+		}
+		mutually_exclusive = {
+			focus = CHI_ruling_of_yuan_shikai
+		}
+		relative_position_id = CHI_tongmenghui_cabinet
+		x = 18
+		y = 1
+		allow_branch = {
+			NOT = { has_completed_focus = CHI_ruling_of_yuan_shikai }
+		}
+		offset = {
+			trigger = {
+				has_completed_focus = CHI_kuomintang
+			}
+			x = -18
+		}
+		available = {
+			has_civil_war = no
+			has_global_flag = xinhai_revolution_ends
+
+			has_country_leader = {
+				character = CHI_sun_yatsen
+				ruling_only = yes
+			}
+		}
+		cancelable = no
+		completion_reward = {
+			swap_ideas = {
+				remove_idea = CHI_idea_support_for_revolution
+				add_idea = CHI_idea_militarist_plot
+			}
+			set_politics = {
+				ruling_party = democratic
+				elections_allowed = yes
+			}
+			set_capital = {
+				state = 598
+			}
+			hidden_effect = {
+				set_cosmetic_tag = CHI_kmt
+				#set_popularities = {
+				#	fascism = 28
+				#	communism = 0
+				#	democratic = 47
+				#	neutrality = 25
+				#}
+			}
+			mark_focus_tree_layout_dirty = yes
+		}
+		search_filters = {
+			FOCUS_FILTER_POLITICAL
+		}
+	}
+	focus = {
+		id = CHI_three_principles
+		icon = GFX_focus_chi_kaiserreich_sun_yat_sen
+		cost = 5
+		prerequisite = {
+			focus = CHI_kuomintang
+		}
+		relative_position_id = CHI_kuomintang
+		x = 0
+		y = 1
+		available = {
+			has_government = democratic
+		}
+		completion_reward = {
+			add_ideas = CHI_idea_three_principles
+			add_stability = 0.1
+		}
+		search_filters = {
+			FOCUS_FILTER_POLITICAL
+		}
+	}
+	focus = {
+		id = CHI_party_expansion
+		icon = GFX_focus_kmt_ties
+		cost = 10
+		prerequisite = {
+			focus = CHI_three_principles
+		}
+		relative_position_id = CHI_three_principles
+		x = -3
+		y = 1
+		available = {
+			has_government = democratic
+			has_civil_war = no
+		}
+		completion_reward = {
+			if = {
+				limit = {
+					has_character = CHI_liang_ruhao
+				}
+				custom_effect_tooltip = available_political_advisor
+				show_ideas_tooltip = CHI_liang_ruhao
+			}
+			country_event = {
+				id = ww1_china.162
+				days = 3
+			}
+		}
+		search_filters = {
+			FOCUS_FILTER_POLITICAL
+		}
+	}
+	focus = {
+		id = CHI_unite_opposition
+		icon = GFX_focus_chi_people_defence
+		cost = 5
+		prerequisite = {
+			focus = CHI_three_principles
+		}
+		relative_position_id = CHI_three_principles
+		x = -1
+		y = 1
+		available = {
+			has_government = democratic
+			has_civil_war = no
+		}
+		bypass = {
+			
+		}
+		completion_reward = {
+			if = {
+				limit = {
+					has_character = CHI_liang_qichao
+				}
+				custom_effect_tooltip = available_political_advisor
+				show_ideas_tooltip = CHI_liang_qichao
+			}
+			add_stability = 0.1
+			hidden_effect = {
+				country_event = {
+					id = ww1_china.177
+					days = 5
+				}
+			}
+		}
+		search_filters = {
+			FOCUS_FILTER_POLITICAL
+		}
+	}
+	focus = {
+		id = CHI_focus_democratic_presidential_election
+		icon = GFX_focus_hold_elections
+		cost = 5
+		prerequisite = {
+			focus = CHI_three_principles
+		}
+		relative_position_id = CHI_three_principles
+		x = 0
+		y = 2
+		available = {
+			has_civil_war = no
+			has_government = democratic
+		}
+		completion_reward = {
+			if = {
+				limit = {
+					NOT = {
+						has_global_flag = national_protection_war
+						has_country_flag = chinese_second_revolution
+					}
+				}
+				country_event = {
+					id = ww1_china.179
+					days = 2
+				}
+			}
+			if = {
+				limit = {
+					has_character = CHI_sun_yatsen
+					CHI_sun_yatsen = {
+						NOT = {
+							has_character_flag = sun_yatsen_president
+						}
+					}
+				}
+				country_event = {
+					id = ww1_xinhai.7
+					days = 0
+				}
+			}
+			else = {
+				country_event = {
+					id = ww1_china.123
+					days = 0
+				}
+			}
+		}
+		search_filters = {
+			FOCUS_FILTER_POLITICAL
+			FOCUS_FILTER_WAR_SUPPORT
+		}
+	}
+	focus = {
+		id = CHI_kmt_state_reform
+		icon = GFX_focus_kuomintang_government
+		cost = 5
+		prerequisite = {
+			focus = CHI_focus_democratic_presidential_election
+		}
+		# mutually_exclusive = {
+		# 	focus = CHI_invite_foreign_investors
+		# }
+		relative_position_id = CHI_focus_democratic_presidential_election
+		x = -6
+		y = 1
+		available = {
+			has_government = democratic
+		}
+		completion_reward = {
+			add_stability = 0.05
+			add_popularity = {
+				ideology = democratic
+				popularity = 0.02
+			}
+		}
+		search_filters = {
+			FOCUS_FILTER_POLITICAL
+			FOCUS_FILTER_WAR_SUPPORT
+		}
+	}
+	focus = {
+		id = CHI_land_equality
+		icon = GFX_focus_SWE_form_rfsu
+		cost = 5
+		prerequisite = {
+			focus = CHI_kmt_state_reform
+		}
+		relative_position_id = CHI_kmt_state_reform
+		x = 1
+		y = 1
+		available = {
+			has_government = democratic
+		}
+		completion_reward = {
+			add_popularity = {
+				ideology = democratic
+				popularity = 0.05
+			}
+		}
+		search_filters = {
+			FOCUS_FILTER_POLITICAL
+		}
+	}
+	focus = {
+		id = CHI_kmt_provincial_autonomy
+		icon = GFX_focus_kmt_propaganda
+		cost = 5
+		prerequisite = {
+			focus = CHI_land_equality
+		}
+		relative_position_id = CHI_kmt_state_reform
+		x = 2
+		y = 2
+		available = {
+			
+		}
+		completion_reward = {
+			add_timed_idea = {
+				idea = CHI_kmt_provincial_autonomy
+				days = 365
+			}
+		}
+		search_filters = {
+			FOCUS_FILTER_POLITICAL
+		}
+	}
+	focus = {
+		id = CHI_rural_reform
+		icon = GFX_focus_generic_wheat
+		cost = 5
+		prerequisite = {
+			focus = CHI_land_equality
+			focus = CHI_focus_on_state_enterprises
+		}
+		relative_position_id = CHI_kmt_state_reform
+		x = 0
+		y = 2
+		available = {
+			
+		}
+		completion_reward = {
+			random_owned_controlled_state = {
+				limit = {
+					is_core_of = ROOT
+				}
+				add_building_construction = {
+					type = infrastructure
+					level = 1
+					instant_build = yes
+				}
+				add_extra_state_shared_building_slots = 1
+			}
+			add_tech_bonus = {
+				name = rural_reform
+				ahead_reduction = 0
+				category = industry
+				uses = 1
+				bonus = 0.5
+			}
+		}
+		search_filters = {
+			FOCUS_FILTER_POLITICAL
+		}
+	}
+	focus = {
+		id = CHI_provincial_reform
+		icon = GFX_focus_FRA_goverment_reform
+		cost = 5
+		prerequisite = {
+			focus = CHI_kmt_provincial_autonomy
+		}
+		relative_position_id = CHI_kmt_provincial_autonomy
+		x = 0
+		y = 1
+		available = {
+			
+		}
+		completion_reward = {
+			add_ideas = CHI_provincial_reform
+		}
+		search_filters = {
+			FOCUS_FILTER_POLITICAL
+		}
+	}
+	focus = {
+		id = CHI_deal_with_beiyang
+		icon = GFX_focus_SWE_revoke_militia_law
+		cost = 5
+		prerequisite = {
+			focus = CHI_focus_democratic_presidential_election
+		}
+		relative_position_id = CHI_focus_democratic_presidential_election
+		x = 0
+		y = 1
+		available = {
+			has_government = democratic
+		}
+		bypass = {
+			OR = {
+				has_country_flag = chinese_second_revolution
+				has_country_flag = CHI_national_protection_flag
+			}
+			NOT = {
+				has_idea = CHI_idea_militarist_plot
+			}
+		}
+		completion_reward = {
+			country_event = {
+				id = ww1_china.220
+				hours = 3
+			}
+		}
+		search_filters = {
+			FOCUS_FILTER_POLITICAL
+		}
+	}
+	focus = {
+		id = CHI_contact_yan_xishan
+		icon = GFX_focus_china_yan_xishan
+		cost = 5
+		prerequisite = {
+			focus = CHI_deal_with_beiyang
+		}
+		relative_position_id = CHI_deal_with_beiyang
+		x = 2
+		y = 1
+		available = {
+			is_kuomintang_state = yes
+			owns_state = 615
+			has_character = CHI_yan_xishan
+		}
+		completion_reward = {
+			if = {
+				limit = {
+					OR = {
+						has_country_flag = CHI_national_protection_flag
+						has_country_flag = chinese_second_revolution
+					}
+				}
+				division_template = {
+					name = "Shanxijun"
+					division_names_group = CHI_INF_02
+					regiments = {
+						infantry = { x = 0 y = 0 }
+						infantry = { x = 0 y = 1 }
+						infantry = { x = 0 y = 2 }
+						field_gun_brigade = { x = 0 y = 3 }
+						infantry = { x = 1 y = 0 }
+						infantry = { x = 1 y = 1 }
+						infantry = { x = 1 y = 2 }
+						field_gun_brigade = { x = 1 y = 3 }
+						infantry = { x = 2 y = 0 }
+						infantry = { x = 2 y = 1 }
+						infantry = { x = 2 y = 2 }
+						field_gun_brigade = { x = 2 y = 3 }
+						infantry = { x = 3 y = 0 }
+						infantry = { x = 3 y = 1 }
+						infantry = { x = 3 y = 2 }
+						cavalry = { x = 4 y = 0 }
+						cavalry = { x = 4 y = 1 }
+						cavalry = { x = 4 y = 2 }
+					}
+					support = {
+						engineer = { x = 0 y = 0 }
+					}
+				}
+				615 = {
+					create_unit = {
+						division = "division_template = \"Shanxijun\"	start_experience_factor = 0.7	start_equipment_factor = 1"
+						owner = PREV
+						allow_spawning_on_enemy_provs = yes
+						count = 4
+					}
+				}
+			}
+			else = {
+				custom_effect_tooltip = CHI_contact_yan_xishan_tt
+				set_country_flag = CHI_contact_yan_xishan
+			}
+		}
+		search_filters = {
+			FOCUS_FILTER_POLITICAL
+		}
+	}
+	focus = {
+		id = CHI_focus_on_state_enterprises
+		icon = GFX_focus_kmt_industry
+		cost = 5
+		prerequisite = {
+			focus = CHI_kmt_state_reform
+		}
+		relative_position_id = CHI_kmt_state_reform
+		x = -1
+		y = 1
+		available = {
+			
+		}
+		completion_reward = {
+			random_owned_controlled_state = {
+				limit = {
+					is_core_of = ROOT
+				}
+				add_building_construction = {
+					type = industrial_complex
+					level = 1
+					instant_build = yes
+				}
+				add_extra_state_shared_building_slots = 2
+			}
+			random_owned_controlled_state = {
+				limit = {
+					is_core_of = ROOT
+				}
+				add_building_construction = {
+					type = industrial_complex
+					level = 1
+					instant_build = yes
+				}
+				add_extra_state_shared_building_slots = 2
+			}
+		}
+		search_filters = {
+			FOCUS_FILTER_POLITICAL
+			FOCUS_FILTER_INDUSTRY
+		}
+	}
+	focus = {
+		id = CHI_improve_railways
+		icon = GFX_focus_generic_railroad
+		cost = 5
+		prerequisite = {
+			focus = CHI_focus_on_state_enterprises
+		}
+		relative_position_id = CHI_kmt_state_reform
+		x = -2
+		y = 2
+		available = {
+			
+		}
+		completion_reward = {
+			random_owned_controlled_state = {
+				limit = {
+					is_core_of = ROOT
+				}
+				add_building_construction = {
+					type = infrastructure
+					level = 1
+					instant_build = yes
+				}
+				add_extra_state_shared_building_slots = 1
+			}
+			random_owned_controlled_state = {
+				limit = {
+					is_core_of = ROOT
+				}
+				add_building_construction = {
+					type = infrastructure
+					level = 1
+					instant_build = yes
+				}
+				add_extra_state_shared_building_slots = 1
+			}
+		}
+		search_filters = {
+			FOCUS_FILTER_POLITICAL
+		}
+	}
+	focus = {
+		id = CHI_build_supply_depots
+		icon = GFX_focus_generic_supply_line
+		cost = 5
+		prerequisite = {
+			focus = CHI_improve_railways
+		}
+		relative_position_id = CHI_improve_railways
+		x = 0
+		y = 1
+		available = {
+			
+		}
+		completion_reward = {
+			add_ideas = CHI_build_supply_depots
+		}
+		search_filters = {
+			FOCUS_FILTER_POLITICAL
+		}
+	}
+	focus = {
+		id = CHI_develop_the_nation
+		icon = GFX_focus_industry_steel
+		cost = 5
+		prerequisite = {
+			focus = CHI_improve_railways
+			focus = CHI_kmt_provincial_autonomy
+		}
+		prerequisite = {
+			focus = CHI_rural_reform
+		}
+		relative_position_id = CHI_improve_railways
+		x = 2
+		y = 1
+		available = {
+			
+		}
+		completion_reward = {
+			CHI_idea_inflation_fix = yes
+			add_tech_bonus = {
+				name = early_industrialization
+				ahead_reduction = 0
+				category = industry
+				uses = 2
+				bonus = 0.5
+			}
+			random_owned_controlled_state = {
+				limit = {
+					is_core_of = ROOT
+				}
+				add_extra_state_shared_building_slots = 1
+			}
+			random_owned_controlled_state = {
+				limit = {
+					is_core_of = ROOT
+				}
+				add_extra_state_shared_building_slots = 1
+			}
+		}
+		search_filters = {
+			FOCUS_FILTER_POLITICAL
+			FOCUS_FILTER_INDUSTRY
+		}
+	}
+	focus = {
+		id = CHI_prosperity_and_constitution
+		icon = GFX_focus_kmt_domination
+		cost = 5
+		prerequisite = {
+			focus = CHI_build_supply_depots
+			focus = CHI_provincial_reform
+		}
+		prerequisite = {
+			focus = CHI_develop_the_nation
+		}
+		relative_position_id = CHI_develop_the_nation
+		x = 0
+		y = 1
+		available = {
+			has_government = democratic
+		}
+		completion_reward = {
+			CHI_idea_inflation_fix = yes
+			if = {
+				limit = {
+					has_idea = CHI_idea_provisional_constitution
+				}
+				swap_ideas = {
+					remove_idea = CHI_idea_provisional_constitution
+					add_idea = CHI_idea_democratic_constitution
+				}
+			}
+			else = {
+				add_ideas = CHI_idea_democratic_constitution
+			}
+		}
+		search_filters = {
+			FOCUS_FILTER_POLITICAL
+		}
+	}
+	focus = {
+		id = CHI_capital_is_nanking
+		icon = GFX_focus_chi_nanjing
+		cost = 5
+		prerequisite = {
+			focus = CHI_deal_with_beiyang
+		}
+		relative_position_id = CHI_deal_with_beiyang
+		x = -2
+		y = 1
+		available = {
+			owns_state = 598
+			controls_province = 11913
+		}
+		completion_reward = {
+			add_victory_points = {
+				province = 11913
+				value = 5
+			}
+			if = {
+				limit = {
+					598 = { is_capital = no }
+				}
+				set_capital = {
+					state = 598
+				}
+			}
+		}
+		search_filters = {
+			FOCUS_FILTER_POLITICAL
+		}
+	}
+	focus = {
+		id = CHI_national_representatives_conference
+		icon = GFX_focus_kmt_council
+		cost = 5
+		prerequisite = {
+			focus = CHI_deal_with_beiyang
+		}
+		relative_position_id = CHI_deal_with_beiyang
+		x = 0
+		y = 1
+		available = {
+			is_kuomintang_state = yes
+			has_civil_war = no
+		}
+		bypass = {
+			OR = {
+				has_country_flag = chinese_second_revolution
+				has_country_flag = CHI_national_protection_flag
+			}
+			NOT = {
+				has_idea = CHI_idea_militarist_plot
+			}
+		}
+		completion_reward = {
+			country_event = {
+				id = ww1_china.217
+				hours = 3
+			}
+			if = {
+				limit = {
+					has_character = CHI_lu_zhengxiang
+				}
+				custom_effect_tooltip = available_political_advisor
+				show_ideas_tooltip = CHI_lu_zhengxiang
+			}
+		}
+		search_filters = {
+			FOCUS_FILTER_POLITICAL
+		}
+	}
+	focus = {
+		id = CHI_national_revolution_army
+		icon = GFX_focus_CHI_form_2nd_NRA
+		cost = 5
+		prerequisite = {
+			focus = CHI_contact_yan_xishan
+		}
+		prerequisite = {
+			focus = CHI_capital_is_nanking
+		}
+		prerequisite = {
+			focus = CHI_national_representatives_conference
+		}
+		relative_position_id = CHI_national_representatives_conference
+		x = 0
+		y = 1
+		available = {
+			is_kuomintang_state = yes
+		}
+		completion_reward = {
+			add_ideas = CHI_national_revolution_army
+		}
+		search_filters = {
+			FOCUS_FILTER_POLITICAL
+		}
+	}
+	focus = {
+		id = CHI_split_warlords
+		icon = GFX_focus_split_helmet
+		cost = 5
+		prerequisite = {
+			focus = CHI_national_revolution_army
+		}
+		relative_position_id = CHI_national_revolution_army
+		x = 0
+		y = 1
+		available = {
+			is_kuomintang_state = yes
+			has_civil_war = no
+		}
+		bypass = {
+			NOT = { has_idea = CHI_idea_militarist_plot }
+		}
+		completion_reward = {
+			remove_ideas = CHI_idea_militarist_plot
+		}
+		search_filters = {
+			FOCUS_FILTER_POLITICAL
+		}
+	}
+	focus = {
+		id = CHI_suppress_monarchists
+		icon = GFX_focus_china_kmt_unite
+		cost = 10
+		prerequisite = {
+			focus = CHI_split_warlords
+		}
+		relative_position_id = CHI_split_warlords
+		x = 0
+		y = 1
+		available = {
+			has_stability > 0.35
+			has_war = no
+			has_government = democratic
+		}
+		cancelable = no
+		bypass = {
+			OR = {
+				has_global_flag = national_protection_war
+				has_country_flag = chinese_second_revolution
+			}
+		}
+		completion_reward = {
+			country_event = {
+				id = ww1_china.6
+			}
+			hidden_effect = {
+				if = {
+					limit = {
+						has_cosmetic_tag = CHI_uprising
+					}
+					drop_cosmetic_tag = yes
+				}
+			}
+		}
+		ai_will_do = {
+			base = 0
+			modifier = {
+				add = 100
+				date > 1915.10.1
+			}
+		}
+		search_filters = {
+			FOCUS_FILTER_POLITICAL
+		}
+	}
+	focus = {
+		id = CHI_focus_national_protection_war
+		icon = GFX_focus_anhui_unification
+		cost = 10
+		relative_position_id = CHI_stand_with_tongmenghui
+		x = 5
+		y = 13
+		offset = {
+			trigger = {
+				has_completed_focus = CHI_kuomintang
+			}
+			x = -8
+			y = 0
+		}
+		available = {
+			always = no
+		}
+		allow_branch = {
+			has_global_flag = national_protection_war
+		}
+		completion_reward = {
+			add_political_power = 150
+			add_command_power = 50
+		}
+		search_filters = {
+			FOCUS_FILTER_HISTORICAL
+		}
+	}
+	focus = {
+		id = CHI_focus_mobilise_troops
+		icon = GFX_focus_SOV_mobilization_plan
+		cost = 10
+		relative_position_id = CHI_focus_national_protection_war
+		prerequisite = {
+			focus = CHI_focus_national_protection_war
+		}
+		x = -3
+		y = 1
+		available = {
+			has_war = yes
+		}
+		completion_reward = {
+			add_timed_idea = {
+				idea = CHI_idea_mobilisation
+				days = 180
+			}
+		}
+	}
+	focus = {
+		id = CHI_focus_seize_factories
+		icon = GFX_goal_generic_construct_civ_factory
+		cost = 10
+		relative_position_id = CHI_focus_national_protection_war
+		prerequisite = {
+			focus = CHI_focus_national_protection_war
+		}
+		x = -1
+		y = 1
+		available = {
+			has_war = yes
+			any_state = {
+				is_fully_controlled_by = ROOT
+				impassable = no
+				is_core_of = ROOT
+			}
+		}
+		completion_reward = {
+			random_controlled_state = {
+				limit = {
+					is_core_of = ROOT
+					free_building_slots = {
+						building = industrial_complex
+						size > 0
+						include_locked = yes
+					}
+					impassable = no
+				}
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = industrial_complex
+					level = 1
+					instant_build = yes
+				}
+			}
+			random_controlled_state = {
+				limit = {
+					is_core_of = ROOT
+					free_building_slots = {
+						building = industrial_complex
+						size > 0
+						include_locked = yes
+					}
+					impassable = no
+				}
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = industrial_complex
+					level = 1
+					instant_build = yes
+				}
+			}
+			random_controlled_state = {
+				limit = {
+					is_core_of = ROOT
+					free_building_slots = {
+						building = industrial_complex
+						size > 0
+						include_locked = yes
+					}
+					impassable = no
+				}
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = industrial_complex
+					level = 1
+					instant_build = yes
+				}
+			}
+		}
+		search_filters = {
+			FOCUS_FILTER_INDUSTRY
+		}
+	}
+	focus = {
+		id = CHI_focus_seize_arsenals
+		icon = GFX_goal_generic_construct_mil_factory
+		cost = 10
+		relative_position_id = CHI_focus_national_protection_war
+		prerequisite = {
+			focus = CHI_focus_national_protection_war
+		}
+		x = 1
+		y = 1
+		available = {
+			has_war = yes
+			any_state = {
+				is_fully_controlled_by = ROOT
+				impassable = no
+				is_core_of = ROOT
+			}
+		}
+		completion_reward = {
+			random_controlled_state = {
+				limit = {
+					is_core_of = ROOT
+					free_building_slots = {
+						building = arms_factory
+						size > 0
+						include_locked = yes
+					}
+					impassable = no
+				}
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = arms_factory
+					level = 1
+					instant_build = yes
+				}
+			}
+			random_controlled_state = {
+				limit = {
+					is_core_of = ROOT
+					free_building_slots = {
+						building = arms_factory
+						size > 0
+						include_locked = yes
+					}
+					impassable = no
+				}
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = arms_factory
+					level = 1
+					instant_build = yes
+				}
+			}
+			random_controlled_state = {
+				limit = {
+					is_core_of = ROOT
+					free_building_slots = {
+						building = arms_factory
+						size > 0
+						include_locked = yes
+					}
+					impassable = no
+				}
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = arms_factory
+					level = 1
+					instant_build = yes
+				}
+			}
+		}
+		search_filters = {
+			FOCUS_FILTER_INDUSTRY
+		}
+	}
+	focus = {
+		id = CHI_focus_seize_railroads
+		icon = GFX_focus_generic_railroad
+		cost = 10
+		relative_position_id = CHI_focus_national_protection_war
+		prerequisite = {
+			focus = CHI_focus_national_protection_war
+		}
+		x = 3
+		y = 1
+		available = {
+			has_war = yes
+			any_state = {
+				is_fully_controlled_by = ROOT
+				impassable = no
+				is_core_of = ROOT
+			}
+		}
+		bypass = {
+			custom_trigger_tooltip = {
+				tooltip = infrastructure_effort_tt
+				all_owned_state = {			
+					free_building_slots = {
+						building = infrastructure
+						size < 1
+					}
+				}
+			}
+		}
+
+		complete_tooltip = {
+			add_building_construction = {
+				type = infrastructure
+				level = 1
+				instant_build = yes
+			}
+			add_building_construction = {
+				type = infrastructure
+				level = 1
+				instant_build = yes
+			}
+			add_building_construction = {
+				type = infrastructure
+				level = 1
+				instant_build = yes
+			}
+		}
+		completion_reward = {
+			random_owned_controlled_state = {
+				limit = {
+					free_building_slots = {
+						building = infrastructure
+						size > 0
+					}
+					impassable = no
+					OR = {
+						is_in_home_area = yes
+						NOT = {
+							owner = {
+								any_owned_state = {
+									free_building_slots = {
+										building = infrastructure
+										size > 0
+									}
+									is_in_home_area = yes
+								}
+							}
+						}
+					}
+				}
+				add_building_construction = {
+					type = infrastructure
+					level = 1
+					instant_build = yes
+				}
+			}
+			random_owned_controlled_state = {
+				limit = {
+					free_building_slots = {
+						building = infrastructure
+						size > 1
+					}
+					impassable = no
+					OR = {
+						is_in_home_area = yes
+						NOT = {
+							owner = {
+								any_owned_state = {
+									free_building_slots = {
+										building = infrastructure
+										size > 1
+									}
+									is_in_home_area = yes
+								}
+							}
+						}
+					}
+				}
+				add_building_construction = {
+					type = infrastructure
+					level = 2
+					instant_build = yes
+				}
+			}
+			random_owned_controlled_state = {
+				limit = {
+					free_building_slots = {
+						building = infrastructure
+						size > 1
+					}
+					impassable = no
+					OR = {
+						is_in_home_area = yes
+						NOT = {
+							owner = {
+								any_owned_state = {
+									free_building_slots = {
+										building = infrastructure
+										size > 1
+									}
+									is_in_home_area = yes
+								}
+							}
+						}
+					}
+				}
+				add_building_construction = {
+					type = infrastructure
+					level = 2
+					instant_build = yes
+				}
+			}
+		}
+	}
+	focus = {
+		id = CHI_restore_order
+		icon = GFX_focus_generic_provoke_border_clashes
+		cost = 5
+		relative_position_id = CHI_stand_with_tongmenghui
+		x = -18
+		y = 7
+		offset = {
+			trigger = {
+				has_completed_focus = CHI_ruling_of_yuan_shikai
+			}
+			x = 3
+			y = 1
+		}
+		allow_branch = {
+			
+		}
+		available = {
+			OR = {
+				country_exists = MON
+				country_exists = TIB
+				country_exists = TAN
+			}
+			is_subject = no
+			has_war = no
+			if = {
+				limit = {
+					has_cosmetic_tag = CHI_hongxian_empire
+				}
+				has_global_flag = CHI_empire_won_npw
+			}
+			if = {
+				limit = {
+					OR = {
+						has_global_flag = warlord_era
+						has_global_flag = chinese_warlord_crisis
+					}
+				}
+				has_global_flag = warlord_era_end
+			}
+			NOT = {
+				has_idea = idea_armistice
+				has_idea = idea_army_restrictions
+				has_idea = CHI_idea_government_divided
+				has_country_leader = { character = CHI_beiyang_triumvirate }
+				has_active_mission = CHI_government_split_mission
+				has_active_mission = CHI_warlord_era_mission
+				has_active_mission = CHI_constitutional_protection_war
+				has_idea = CHI_idea_unstable_republic
+				has_idea = QIN_idea_fractured_empire
+				# has_idea = CHI_idea_stable_republic
+			}
+		}
+		completion_reward = {
+			add_war_support = 0.05
+			add_political_power = 50
+		}
+		ai_will_do = {
+			factor = 10
+		}
+		search_filters = {
+			FOCUS_FILTER_WAR_SUPPORT
+		}
+	}
+	focus = {
+		id = CHI_northern_border
+		icon = GFX_focus_FIN_strengthen_military_administration
+		cost = 1
+		prerequisite = {
+			focus = CHI_restore_order
+		}
+		relative_position_id = CHI_restore_order
+		x = -3
+		y = 1
+		
+		available = {
+			OR = {
+				MON = { exists = yes NOT = { is_subject_of = ROOT } }
+				TAN = { exists = yes NOT = { is_subject_of = ROOT } }
+			}
+			is_subject = no
+			has_war = no
+			if = {
+				limit = {
+					OR = {
+						has_global_flag = warlord_era
+						has_global_flag = chinese_warlord_crisis
+					}
+				}
+				has_global_flag = warlord_era_end
+			}
+			NOT = {
+				has_idea = idea_armistice
+				has_idea = idea_army_restrictions
+				has_idea = CHI_idea_government_divided
+				has_country_leader = { character = CHI_beiyang_triumvirate }
+				has_active_mission = CHI_government_split_mission
+				has_active_mission = CHI_warlord_era_mission
+				has_active_mission = CHI_constitutional_protection_war
+				has_idea = CHI_idea_unstable_republic
+				has_idea = QIN_idea_fractured_empire
+				# has_idea = CHI_idea_stable_republic
+			}
+		}
+		bypass = {
+			329 = {
+				is_owned_or_subject_trigger = yes
+			}
+			330 = {
+				is_owned_or_subject_trigger = yes
+			}
+			982 = {
+				is_owned_or_subject_trigger = yes
+			}
+			983 = {
+				is_owned_or_subject_trigger = yes
+			}
+		}
+		completion_reward = {
+			add_political_power = 25
+		}
+		ai_will_do = {
+			factor = 10
+		}
+	}
+	focus = {
+		id = CHI_restore_outer_mongolia
+		icon = GFX_focus_generic_attack_mongolia
+		cost = 5
+		prerequisite = {
+			focus = CHI_northern_border
+		}
+		mutually_exclusive = {
+			focus = CHI_offer_mongolian_autonomy
+		}
+		relative_position_id = CHI_restore_order
+		x = -3
+		y = 2
+		
+		available = {
+			MON = {
+				exists = yes
+				NOT = {
+					is_subject_of = ROOT
+					is_in_faction_with = ROOT
+				}
+				is_neighbor_of_subject = yes
+			}
+			is_subject = no
+			has_war = no
+			if = {
+				limit = {
+					OR = {
+						has_global_flag = warlord_era
+						has_global_flag = chinese_warlord_crisis
+					}
+				}
+				has_global_flag = warlord_era_end
+			}
+			NOT = {
+				has_idea = idea_armistice
+				has_idea = idea_army_restrictions
+				has_idea = CHI_idea_government_divided
+				has_country_leader = { character = CHI_beiyang_triumvirate }
+				has_active_mission = CHI_government_split_mission
+				has_active_mission = CHI_warlord_era_mission
+				has_active_mission = CHI_constitutional_protection_war
+				has_idea = CHI_idea_unstable_republic
+				has_idea = QIN_idea_fractured_empire
+				# has_idea = CHI_idea_stable_republic
+			}
+		}
+		bypass = {
+			owns_state = 330
+		}
+		completion_reward = {
+			create_wargoal = {
+				target = MON
+				type = annex_everything
+			}
+		}
+		will_lead_to_war_with = MON
+		ai_will_do = {
+			factor = 10
+		}
+	}
+	focus = {
+		id = CHI_integration_campaign
+		icon = GFX_focus_mongolia
+		cost = 7
+		prerequisite = {
+			focus = CHI_restore_outer_mongolia
+		}
+		relative_position_id = CHI_restore_order
+		x = -3
+		y = 3
+		
+		available = {
+			OR = {
+				has_subject = MON
+				any_owned_state = {
+					is_core_of = MON
+				}
+			}
+		}
+		completion_reward = {
+			if = {
+				limit = {
+					has_subject = MON
+				}
+				add_relation_modifier = {
+					target = MON
+					modifier = CHI_breakaway_integration
+				}
+			}
+			else = {
+				every_owned_state = {
+					limit = {
+						is_core_of = MON
+						NOT = { is_core_of = ROOT }
+					}
+					add_compliance = 40
+				}
+			}
+		}
+		ai_will_do = {
+			factor = 10
+		}
+	}
+	focus = {
+		id = CHI_offer_mongolian_autonomy
+		icon = GFX_focus_mongolian_autonomy
+		cost = 5
+		prerequisite = {
+			focus = CHI_northern_border
+		}
+		mutually_exclusive = {
+			focus = CHI_restore_outer_mongolia
+		}
+		relative_position_id = CHI_restore_order
+		x = -5
+		y = 2
+		
+		available = {
+			MON = {
+				exists = yes
+				is_subject = no
+				NOT = {
+					is_subject_of = ROOT
+					is_in_faction_with = ROOT
+				}
+				is_neighbor_of_subject = yes
+			}
+			is_subject = no
+			has_war = no
+			if = {
+				limit = {
+					OR = {
+						has_global_flag = warlord_era
+						has_global_flag = chinese_warlord_crisis
+					}
+				}
+				has_global_flag = warlord_era_end
+			}
+			NOT = {
+				has_idea = idea_armistice
+				has_idea = idea_army_restrictions
+				has_idea = CHI_idea_government_divided
+				has_country_leader = { character = CHI_beiyang_triumvirate }
+				has_active_mission = CHI_government_split_mission
+				has_active_mission = CHI_warlord_era_mission
+				has_active_mission = CHI_constitutional_protection_war
+				has_idea = CHI_idea_unstable_republic
+				has_idea = QIN_idea_fractured_empire
+				# has_idea = CHI_idea_stable_republic
+			}
+		}
+		bypass = {
+			has_subject = MON
+		}
+		will_lead_to_war_with = MON
+		completion_reward = {
+			custom_effect_tooltip = agree_effect_tooltip
+			effect_tooltip = {
+				puppet = MON
+			}
+			custom_effect_tooltip = disagree_effect_tooltip
+			effect_tooltip = {
+				create_wargoal = {
+					target = MON
+					type = puppet_wargoal_focus
+				}
+			}
+			hidden_effect = {
+				MON = {
+					country_event = {
+						id = ww1_china.163
+						days = 2
+					}
+				}
+			}
+		}
+		ai_will_do = {
+			factor = 10
+		}
+	}
+	focus = {
+		id = CHI_appease_the_khanate
+		icon = GFX_focus_protect_mongolia
+		cost = 5
+		prerequisite = {
+			focus = CHI_offer_mongolian_autonomy
+		}
+		relative_position_id = CHI_restore_order
+		x = -5
+		y = 3
+		
+		available = {
+			has_subject = MON
+			# NOT = {
+			# 	has_government = communism
+			# }
+		}
+		completion_reward = {
+			MON = {
+				add_ideas = {
+					CHI_idea_ceremonial_khan
+				}
+			}
+		}
+		ai_will_do = {
+			factor = 10
+		}
+	}
+	focus = {
+		id = CHI_tuvan_question
+		icon = GFX_goal_generic_cavalry
+		cost = 5
+		prerequisite = {
+			focus = CHI_northern_border
+		}
+		relative_position_id = CHI_restore_order
+		x = -1
+		y = 2
+		
+		available = {
+			OR = {
+				NOT = {
+					country_exists = TAN
+					owns_state = 329
+				}
+				TAN = {
+					exists = yes
+					OR = {
+						is_neighbor_of = ROOT
+						any_other_country = {
+							is_neighbor_of = PREV
+							is_subject_of = ROOT
+						}
+					}
+				}
+			}
+			is_subject = no
+			has_war = no
+			if = {
+				limit = {
+					OR = {
+						has_global_flag = warlord_era
+						has_global_flag = chinese_warlord_crisis
+					}
+				}
+				has_global_flag = warlord_era_end
+			}
+			NOT = {
+				has_idea = idea_armistice
+				has_idea = idea_army_restrictions
+				has_idea = CHI_idea_government_divided
+				has_country_leader = { character = CHI_beiyang_triumvirate }
+				has_active_mission = CHI_government_split_mission
+				has_active_mission = CHI_warlord_era_mission
+				has_active_mission = CHI_constitutional_protection_war
+				has_idea = CHI_idea_unstable_republic
+				has_idea = QIN_idea_fractured_empire
+				# has_idea = CHI_idea_stable_republic
+			}
+		}
+		bypass = {
+			OR = {
+				has_subject = TAN
+				owns_state =  329
+			}
+		}
+		completion_reward = {
+			if = {
+				limit = {
+					country_exists = TAN
+				}
+				if = {
+					limit = {
+						TAN = { is_subject = yes }
+					}
+					TAN = {
+						OVERLORD = {
+							country_event = {
+								id = ww1_china.164
+								days = 2
+							}
+						}
+					}
+				}
+				else = {
+					TAN = {
+						country_event = {
+							id = generic.100
+							days = 2
+						}
+					}
+				}
+			}
+			else = {
+				random_other_country = {
+					limit = {
+						owns_state = 329
+					}
+					country_event = {
+						id = ww1_china.164
+						days = 2
+					}
+				}
+			}
+		}
+		will_lead_to_war_with = TAN
+		will_lead_to_war_with = RUS
+		ai_will_do = {
+			factor = 10
+		}
+	}
+	focus = {
+		id = CHI_seize_tuvan_riches
+		icon = GFX_focus_generic_farmland
+		cost = 6
+		prerequisite = {
+			focus = CHI_tuvan_question
+		}
+		relative_position_id = CHI_restore_order
+		x = -1
+		y = 3
+		
+		available = {
+			329 = { is_owned_or_subject_trigger = yes }
+		}
+		completion_reward = {
+			329 = {
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = industrial_complex
+					level = 1
+					instant_build = yes
+				}
+			}
+		}
+		search_filters = {
+			FOCUS_FILTER_INDUSTRY
+		}
+		ai_will_do = {
+			factor = 10
+		}
+	}
+	focus = {
+		id = CHI_the_north_secured
+		icon = GFX_focus_generic_little_entente
+		cost = 5
+		prerequisite = {
+			focus = CHI_seize_tuvan_riches
+		}
+		prerequisite = {
+			focus = CHI_appease_the_khanate
+			focus = CHI_integration_campaign
+		}
+		relative_position_id = CHI_restore_order
+		x = -3
+		y = 4
+		
+		available = {
+			329 = {
+				is_owned_or_subject_trigger = yes
+			}
+			330 = {
+				is_owned_or_subject_trigger = yes
+			}
+			982 = {
+				is_owned_or_subject_trigger = yes
+			}
+			983 = {
+				is_owned_or_subject_trigger = yes
+			}
+		}
+		completion_reward = {
+			add_political_power = 100
+		}
+		ai_will_do = {
+			factor = 10
+		}
+	}
+	focus = {
+		id = CHI_tibetian_question
+		icon = GFX_focus_GRE_a_land_of_mountains
+		cost = 1
+		relative_position_id = CHI_restore_order
+		x = 3
+		y = 1
+		prerequisite = {
+			focus = CHI_restore_order
+		}
+		available = {
+			if = {
+				limit = {
+					RAJ = { is_neighbor_of = TIB }
+				}
+				has_global_flag = simla_convention_reject
+			}
+			TIB = { exists = yes NOT = { is_subject_of = ROOT } }
+			is_subject = no
+			has_war = no
+			if = {
+				limit = {
+					OR = {
+						has_global_flag = warlord_era
+						has_global_flag = chinese_warlord_crisis
+					}
+				}
+				has_global_flag = warlord_era_end
+			}
+			NOT = {
+				has_idea = idea_armistice
+				has_idea = idea_army_restrictions
+				has_idea = CHI_idea_government_divided
+				has_country_leader = { character = CHI_beiyang_triumvirate }
+				has_active_mission = CHI_government_split_mission
+				has_active_mission = CHI_warlord_era_mission
+				has_active_mission = CHI_constitutional_protection_war
+				has_idea = CHI_idea_unstable_republic
+				has_idea = QIN_idea_fractured_empire
+				# has_idea = CHI_idea_stable_republic
+			}
+		}
+		bypass = {
+			OR = {
+				AND = {
+					322 = { is_owned_or_subject_trigger = yes }
+					985 = { is_owned_or_subject_trigger = yes }
+				}
+				has_global_flag = simla_convention
+			}
+		}
+		completion_reward = {
+			add_political_power = 25
+		}
+		ai_will_do = {
+			factor = 10
+		}
+	}
+	focus = {
+		id = CHI_negotiations_with_britain
+		icon = GFX_goal_generic_forceful_treaty
+		cost = 5
+		relative_position_id = CHI_restore_order
+		x = 2
+		y = 2
+		prerequisite = {
+			focus = CHI_tibetian_question
+		}
+		mutually_exclusive = {
+			focus = CHI_tibetian_autonomy
+		}
+		available = {
+			TIB = {
+				has_war = no
+				OR = {
+					AND = {
+						is_subject = yes
+						NOT = { is_subject_of = ROOT }
+					}
+					any_other_country = {
+						has_guaranteed = PREV
+					}
+				}
+			}
+			is_subject = no
+			has_war = no
+			if = {
+				limit = {
+					OR = {
+						has_global_flag = warlord_era
+						has_global_flag = chinese_warlord_crisis
+					}
+				}
+				has_global_flag = warlord_era_end
+			}
+			NOT = {
+				has_idea = idea_armistice
+				has_idea = idea_army_restrictions
+				has_idea = CHI_idea_government_divided
+				has_country_leader = { character = CHI_beiyang_triumvirate }
+				has_active_mission = CHI_government_split_mission
+				has_active_mission = CHI_warlord_era_mission
+				has_active_mission = CHI_constitutional_protection_war
+				has_idea = CHI_idea_unstable_republic
+				has_idea = QIN_idea_fractured_empire
+				# has_idea = CHI_idea_stable_republic
+			}
+		}
+		bypass = {
+			NOT = { country_exists = TIB }
+		}
+		completion_reward = {
+			if = {
+				limit = {
+					any_other_country = {
+						OR = {
+							has_guaranteed = TIB
+							has_subject = TIB
+						}
+						NOT = { has_war_with = ROOT }
+					}
+				}
+				country_event = {
+					id = ww1_china.167
+					days = 2
+				}
+			}
+			else = {
+				TIB = {
+					country_event = {
+						id = generic.100
+						days = 2
+					}
+				}
+			}
+		}
+		will_lead_to_war_with = TIB
+		ai_will_do = {
+			factor = 10
+		}
+	}
+	focus = {
+		id = CHI_integrate_the_plains
+		icon = GFX_goal_generic_more_territorial_claims
+		cost = 7
+		relative_position_id = CHI_restore_order
+		x = 2
+		y = 3
+		prerequisite = {
+			focus = CHI_negotiations_with_britain
+		}
+		available = {
+			OR = {
+				has_subject = TIB
+				any_owned_state = {
+					is_core_of = TIB
+					region = 146
+				}
+			}
+		}
+		completion_reward = {
+			if = {
+				limit = {
+					has_subject = TIB
+				}
+				add_relation_modifier = {
+					target = TIB
+					modifier = CHI_breakaway_integration
+				}
+			}
+			else = {
+				every_owned_state = {
+					limit = {
+						is_core_of = TIB
+						NOT = { is_core_of = ROOT }
+					}
+					add_compliance = 40
+				}
+			}
+		}
+		ai_will_do = {
+			factor = 10
+		}
+	}
+	focus = {
+		id = CHI_tibetian_autonomy
+		icon = GFX_focus_generic_annex_country
+		cost = 5
+		relative_position_id = CHI_restore_order
+		x = 4
+		y = 2
+		prerequisite = {
+			focus = CHI_tibetian_question
+		}
+		mutually_exclusive = {
+			focus = CHI_negotiations_with_britain
+		}
+		bypass = {
+			has_global_flag = simla_convention
+		}
+		available = {
+			TIB = {
+				is_subject = no
+				is_neighbor_of_subject = yes
+				has_war = no
+				NOT = {
+					any_other_country = {
+						has_guaranteed = PREV
+					}
+				}
+			}
+			is_subject = no
+			has_war = no
+			if = {
+				limit = {
+					OR = {
+						has_global_flag = warlord_era
+						has_global_flag = chinese_warlord_crisis
+					}
+				}
+				has_global_flag = warlord_era_end
+			}
+			NOT = {
+				has_idea = idea_armistice
+				has_idea = idea_army_restrictions
+				has_idea = CHI_idea_government_divided
+				has_country_leader = { character = CHI_beiyang_triumvirate }
+				has_active_mission = CHI_government_split_mission
+				has_active_mission = CHI_warlord_era_mission
+				has_active_mission = CHI_constitutional_protection_war
+				has_idea = CHI_idea_unstable_republic
+				has_idea = QIN_idea_fractured_empire
+				# has_idea = CHI_idea_stable_republic
+			}
+		}
+		will_lead_to_war_with = TIB
+		completion_reward = {
+			custom_effect_tooltip = agree_effect_tooltip
+			effect_tooltip = {
+				puppet = TIB
+			}
+			custom_effect_tooltip = disagree_effect_tooltip
+			effect_tooltip = {
+				create_wargoal = {
+					target = TIB
+					type = puppet_wargoal_focus
+				}
+			}
+			hidden_effect = {
+				TIB = {
+					country_event = {
+						id = ww1_china.165
+						days = 2
+					}
+				}
+			}
+		}
+		search_filters = {
+			FOCUS_FILTER_INDUSTRY
+		}
+		ai_will_do = {
+			factor = 10
+		}
+	}
+	focus = {
+		id = CHI_freedom_of_religion
+		icon = GFX_focus_smiling_buddha
+		cost = 5
+		relative_position_id = CHI_restore_order
+		x = 4
+		y = 3
+		prerequisite = {
+			focus = CHI_tibetian_autonomy
+		}
+		available = {
+			is_subject = no
+			has_subject = TIB
+		}
+		bypass = {
+			OR = {
+				has_global_flag = simla_convention
+				has_idea = CHI_idea_guaranteed_religion
+			}
+		}
+		completion_reward = {
+			every_country = {
+				limit = {
+					OR = {
+						tag = ROOT
+						is_subject_of = ROOT
+					}
+				}
+				add_ideas = CHI_idea_guaranteed_religion
+			}
+		}
+		ai_will_do = {
+			factor = 10
+		}
+	}
+	focus = {
+		id = CHI_tibet_secured
+		icon = GFX_focus_SOV_mobilization_plan
+		cost = 5
+		relative_position_id = CHI_restore_order
+		x = 3
+		y = 4
+		prerequisite = {
+			focus = CHI_freedom_of_religion
+			focus = CHI_integrate_the_plains
+		}
+		available = {
+			is_subject = no
+			has_war = no
+			OR = {
+				AND = {
+					322 = { is_owned_or_subject_trigger = yes }
+					985 = { is_owned_or_subject_trigger = yes }
+				}
+				has_global_flag = simla_convention
+			}
+		}
+		completion_reward = {
+			add_political_power = 100
+		}
+		ai_will_do = {
+			factor = 10
+		}
+	}
+	focus = {
+		id = CHI_our_borders_restored
+		icon = GFX_goal_generic_position_armies
+		cost = 8
+		relative_position_id = CHI_restore_order
+		x = 0
+		y = 5
+		prerequisite = {
+			focus = CHI_the_north_secured
+		}
+		prerequisite = {
+			focus = CHI_tibet_secured
+		}
+		available = {
+			322 = {
+				is_owned_or_subject_trigger = yes
+			}
+			329 = {
+				is_owned_or_subject_trigger = yes
+			}
+			330 = {
+				is_owned_or_subject_trigger = yes
+			}
+			982 = {
+				is_owned_or_subject_trigger = yes
+			}
+			983 = {
+				is_owned_or_subject_trigger = yes
+			}
+			985 = { is_owned_or_subject_trigger = yes }
+		}
+		completion_reward = {
+			add_stability = 0.15
+		}
+		ai_will_do = {
+			factor = 10
+		}
+	}
+
+	# Beiyang Republic without Yuan in power
+	### this cannot be manually passed but used for events
+	focus = {
+		id = CHI_beiyang_meditator
+		icon = GFX_focus_li_yuanhong
+		cost = 14
+		relative_position_id = CHI_maintain_status_quo
+		x = 0
+		y = 1
+		allow_branch = {
+			has_global_flag = yuan_shikai_dead
+		}
+		prerequisite = {
+			focus = CHI_maintain_status_quo
+		}
+		available = {
+			custom_trigger_tooltip = {
+				tooltip = CHI_beiyang_meditator_tt
+				has_character = CHI_li_yuanhong
+				has_civil_war = no
+				is_qing_monarchy = no
+				NOT = {
+					has_country_flag = CHI_national_protection_flag
+					has_country_leader = {
+						character = CHI_yuan_keding
+						ruling_only = yes
+					}
+					has_country_leader = {
+						character = CHI_beiyang_triumvirate
+						ruling_only = yes
+					}
+				}
+				OR = {
+					has_global_flag = national_protection_war
+					has_global_flag = yuan_shikai_dead
+				}
+			}
+		}
+		completion_reward = {
+			effect_tooltip = {
+				set_politics = {
+					ruling_party = neutrality
+					elections_allowed = yes
+				}
+				promote_character = CHI_li_yuanhong
+			}
+		}
+		search_filters = {
+			FOCUS_FILTER_HISTORICAL
+			FOCUS_FILTER_POLITICAL
+		}
+	}
+
+	focus = {
+		id = CHI_southern_compromise
+		icon = GFX_focus_beiyang_liangguang_negoitations
+		cost = 4
+		relative_position_id = CHI_beiyang_meditator
+		x = -2
+		y = 1
+		prerequisite = {
+			focus = CHI_beiyang_meditator
+		}
+		available = {
+			# Li Yuanhong only, Duan Qirui won't do it
+			has_country_leader = {
+				character = CHI_li_yuanhong
+				ruling_only = yes
+			}
+			# Southern provinces are not loyal
+			any_other_country = {
+				exists = yes
+				OR = {
+					original_tag = YUN
+					original_tag = GXC
+					original_tag = GDC
+					original_tag = GZC
+					original_tag = HNC
+					original_tag = SCC
+				}
+				NOT = {
+					has_war_with = ROOT
+					is_subject_of = ROOT
+				}
+			}
+		}
+		completion_reward = {
+			custom_effect_tooltip = if_they_accept_newline_tt
+			effect_tooltip = {
+				add_political_power = 50
+				every_other_country = {
+					limit = {
+						OR = {
+							original_tag = YUN
+							original_tag = GXC
+							original_tag = GDC
+							original_tag = GZC
+							original_tag = HNC
+							original_tag = SCC
+						}
+						NOT = {
+							has_war_with = ROOT
+							is_subject_of = ROOT
+						}
+					}
+					set_truce = {
+						target = ROOT
+						days = 120
+					}
+					add_political_power = 50
+				}
+			}
+		}
+		search_filters = {
+			FOCUS_FILTER_HISTORICAL
+			FOCUS_FILTER_POLITICAL
+		}
+	}
+
+	focus = {
+		id = CHI_li_duan_conflict
+		icon = GFX_focus_duan_qirui_leads
+		cost = 4
+		relative_position_id = CHI_beiyang_meditator
+		x = 0
+		y = 1
+		prerequisite = {
+			focus = CHI_beiyang_meditator
+		}
+		available = {
+			has_country_leader = {
+				character = CHI_li_yuanhong
+				ruling_only = yes
+			}
+			has_idea = CHI_idea_duan_qirui
+		}
+		completion_reward = {
+			country_event = ww1_china.108
+		}
+		search_filters = {
+			FOCUS_FILTER_HISTORICAL
+			FOCUS_FILTER_POLITICAL
+		}
+	}
+
+	focus = {
+		id = CHI_confucianism_in_constitution
+		icon = GFX_focus_china_confucianism
+		cost = 4
+		relative_position_id = CHI_li_duan_conflict
+		x = 0
+		y = 1
+		prerequisite = {
+			focus = CHI_li_duan_conflict
+		}
+		available = {
+			has_country_leader = {
+				character = CHI_li_yuanhong
+				ruling_only = yes
+			}
+			has_idea = CHI_idea_duan_qirui
+		}
+		completion_reward = {
+			country_event = ww1_china.109
+		}
+		search_filters = {
+			FOCUS_FILTER_HISTORICAL
+			FOCUS_FILTER_POLITICAL
+		}
+	}
+
+	focus = {
+		id = CHI_provincial_autonomy
+		icon = GFX_focus_develop_provinces
+		cost = 4
+		relative_position_id = CHI_li_duan_conflict
+		x = -2
+		y = 1
+		prerequisite = {
+			focus = CHI_li_duan_conflict
+		}
+		available = {
+			has_country_leader = {
+				character = CHI_li_yuanhong
+				ruling_only = yes
+			}
+			has_idea = CHI_idea_duan_qirui
+		}
+		completion_reward = {
+			country_event = ww1_china.110
+		}
+		search_filters = {
+			FOCUS_FILTER_HISTORICAL
+			FOCUS_FILTER_POLITICAL
+		}
+	}
+
+	focus = {
+		id = CHI_military_authority
+		icon = GFX_focus_the_army_debate
+		cost = 4
+		relative_position_id = CHI_li_duan_conflict
+		x = 2
+		y = 1
+		prerequisite = {
+			focus = CHI_li_duan_conflict
+		}
+		available = {
+			has_country_leader = {
+				character = CHI_li_yuanhong
+				ruling_only = yes
+			}
+			has_idea = CHI_idea_duan_qirui
+		}
+		completion_reward = {
+			country_event = ww1_china.111
+		}
+		search_filters = {
+			FOCUS_FILTER_HISTORICAL
+			FOCUS_FILTER_POLITICAL
+		}
+	}
+
+	focus = {
+		id = CHI_join_great_war
+		icon = GFX_focus_SWE_varnplikt
+		cost = 10
+		relative_position_id = CHI_li_duan_conflict
+		x = 0
+		y = 2
+		prerequisite = {
+			focus = CHI_provincial_autonomy
+		}
+		prerequisite = {
+			focus = CHI_confucianism_in_constitution
+		}
+		prerequisite = {
+			focus = CHI_military_authority
+		}
+		available = {
+			has_country_leader = {
+				character = CHI_li_yuanhong
+				ruling_only = yes
+			}
+			has_idea = CHI_idea_duan_qirui
+			is_great_war_ongoing = yes
+			NOT = {
+				is_in_faction_with = GER
+				is_in_faction_with = ENT
+				has_war_with = GER
+				has_war_with = ENT
+				has_country_flag = CHI_join_great_war
+			}
+		}
+		completion_reward = {
+			set_global_flag = duan_qirui_great_war
+			country_event = ww1_china.143
+		}
+		search_filters = {
+			FOCUS_FILTER_HISTORICAL
+			FOCUS_FILTER_POLITICAL
+		}
+	}
+
+	focus = {
+		id = CHI_declare_constitution
+		icon = GFX_focus_chinese_constitution
+		cost = 10
+		relative_position_id = CHI_li_duan_conflict
+		x = 0
+		y = 3
+		prerequisite = {
+			focus = CHI_provincial_autonomy
+		}
+		prerequisite = {
+			focus = CHI_confucianism_in_constitution
+		}
+		prerequisite = {
+			focus = CHI_military_authority
+		}
+		available = {
+			is_subject = no
+			NOT = {
+				has_war_with = QIN
+				has_idea = CHI_idea_duan_qirui
+				has_government = fascism
+			}
+		}
+		completion_reward = {
+			add_ideas = CHI_idea_anfu_constitution
+		}
+		search_filters = {
+			FOCUS_FILTER_HISTORICAL
+			FOCUS_FILTER_POLITICAL
+		}
+	}
+
+	focus = {
+		id = CHI_anfu_assembly
+		icon = GFX_focus_anfu_club
+		cost = 10
+		relative_position_id = CHI_join_great_war
+		x = 2
+		y = 1
+		prerequisite = {
+			focus = CHI_join_great_war
+			focus = CHI_li_duan_conflict
+		}
+		available = {
+			has_country_leader = {
+				character = CHI_duan_qirui
+				ruling_only = yes
+			}
+			has_global_flag = manchu_restoration
+			is_subject = no
+			NOT = {
+				has_idea = CHI_idea_duan_qirui
+				country_exists = QIN
+			}
+		}
+		completion_reward = {
+			add_ideas = CHI_anfu_assembly
+
+			set_party_name = {
+				ideology = democratic
+				long_name = CHI_jiwei_party
+				name = CHI_jiwei_party
+			}
+			CHI_jin_yunpeng = {
+				add_country_leader_role = {
+					promote_leader = yes
+					country_leader = {
+						ideology = conservatism
+					}
+				}
+			}
+		}
+		search_filters = {
+			FOCUS_FILTER_HISTORICAL
+			FOCUS_FILTER_POLITICAL
+		}
+	}
+
+	focus = {
+		id = CHI_annex_zhili
+		icon = GFX_focus_zhi_wan_war
+		cost = 10
+		relative_position_id = CHI_join_great_war
+		x = -2
+		y = 1
+		prerequisite = {
+			focus = CHI_join_great_war
+			focus = CHI_li_duan_conflict
+		}
+		available = {
+			has_country_leader = {
+				character = CHI_duan_qirui
+				ruling_only = yes
+			}
+			has_global_flag = constitutional_protection_war_end
+			is_subject = no
+			has_subject = ZHC
+			NOT = {
+				has_idea = CHI_idea_duan_qirui
+				country_exists = QIN
+				has_country_flag = chinese_government_crackdown
+			}
+		}
+		completion_reward = {
+			set_autonomy = {
+				target = ZHC
+				autonomy_state = autonomy_free
+			}
+			declare_war_on = {
+				target = ZHC
+				type = civil_war
+			}
+		}
+		search_filters = {
+			FOCUS_FILTER_HISTORICAL
+			FOCUS_FILTER_POLITICAL
+		}
+	}
+	
+	focus = {
+		id = CHI_new_army_reform
+		icon = GFX_focus_five_race_star_flag
+		cost = 10
+		prerequisite = {
+			focus = CHI_ruling_of_yuan_shikai
+			focus = CHI_kuomintang
+		}
+		relative_position_id = CHI_hold_parliamentary_elections
+		x = 6
+		y = 3
+		offset = {
+			trigger = {
+				has_completed_focus = CHI_kuomintang
+			}
+			x = -16
+		}
+		offset = {
+			trigger = {
+				has_completed_focus = CHI_ruling_of_yuan_shikai
+			}
+			x = 3
+		}
+		available = {
+			has_civil_war = no
+			is_subject = no
+			has_capitulated = no
+		}
+		bypass = {
+			
+		}
+		completion_reward = {
+			add_command_power = 70
+		}
+	}
+	focus = {
+		id = CHI_focus_install_arsenals
+		icon = GFX_goal_generic_construct_mil_factory
+		cost = 10
+		x = -2
+		y = 1
+		relative_position_id = CHI_new_army_reform
+		prerequisite = {
+			focus = CHI_new_army_reform
+		}
+		available = {
+			
+		}
+		bypass = {
+			custom_trigger_tooltip = {
+				tooltip = production_effort_tt
+				all_owned_state = {
+					free_building_slots = {
+						building = arms_factory
+						size < 1
+						include_locked = yes
+					}
+				}
+			}
+		}
+		complete_tooltip = {
+			add_extra_state_shared_building_slots = 2
+			add_building_construction = {
+				type = arms_factory
+				level = 1
+				instant_build = yes
+			}
+			add_building_construction = {
+				type = arms_factory
+				level = 1
+				instant_build = yes
+			}
+		}
+		completion_reward = {
+			random_owned_controlled_state = {
+				limit = {
+					free_building_slots = {
+						building = arms_factory
+						size > 0
+						include_locked = yes
+					}
+					impassable = no
+					OR = {
+						is_in_home_area = yes
+						NOT = {
+							owner = {
+								any_owned_state = {
+									free_building_slots = {
+										building = arms_factory
+										size > 0
+										include_locked = yes
+									}
+									is_in_home_area = yes
+								}
+							}
+						}
+					}
+				}
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = arms_factory
+					level = 1
+					instant_build = yes
+				}
+			}
+			random_owned_controlled_state = {
+				limit = {
+					free_building_slots = {
+						building = arms_factory
+						size > 0
+						include_locked = yes
+					}
+					impassable = no
+					OR = {
+						is_in_home_area = yes
+						NOT = {
+							owner = {
+								any_owned_state = {
+									free_building_slots = {
+										building = arms_factory
+										size > 0
+										include_locked = yes
+									}
+									is_in_home_area = yes
+								}
+							}
+						}
+					}
+				}
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = arms_factory
+					level = 1
+					instant_build = yes
+				}
+			}
+		}
+		search_filters = {
+			FOCUS_FILTER_INDUSTRY
+		}
+	}
+	focus = {
+		id = CHI_focus_expand_military_industry
+		icon = GFX_goal_generic_construct_mil_factory
+		cost = 10
+		x = 0
+		y = 1
+		relative_position_id = CHI_focus_install_arsenals
+		prerequisite = {
+			focus = CHI_focus_install_arsenals
+		}
+		available = {
+			
+		}
+		bypass = {
+			custom_trigger_tooltip = {
+				tooltip = production_effort_tt
+				all_owned_state = {
+					free_building_slots = {
+						building = arms_factory
+						size < 1
+						include_locked = yes
+					}
+				}
+			}
+		}
+		complete_tooltip = {
+			add_extra_state_shared_building_slots = 2
+			add_building_construction = {
+				type = arms_factory
+				level = 1
+				instant_build = yes
+			}
+			add_building_construction = {
+				type = arms_factory
+				level = 1
+				instant_build = yes
+			}
+		}
+		completion_reward = {
+			random_owned_controlled_state = {
+				limit = {
+					free_building_slots = {
+						building = arms_factory
+						size > 0
+						include_locked = yes
+					}
+					impassable = no
+					OR = {
+						is_in_home_area = yes
+						NOT = {
+							owner = {
+								any_owned_state = {
+									free_building_slots = {
+										building = arms_factory
+										size > 0
+										include_locked = yes
+									}
+									is_in_home_area = yes
+								}
+							}
+						}
+					}
+				}
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = arms_factory
+					level = 1
+					instant_build = yes
+				}
+			}
+			random_owned_controlled_state = {
+				limit = {
+					free_building_slots = {
+						building = arms_factory
+						size > 0
+						include_locked = yes
+					}
+					impassable = no
+					OR = {
+						is_in_home_area = yes
+						NOT = {
+							owner = {
+								any_owned_state = {
+									free_building_slots = {
+										building = arms_factory
+										size > 0
+										include_locked = yes
+									}
+									is_in_home_area = yes
+								}
+							}
+						}
+					}
+				}
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = arms_factory
+					level = 1
+					instant_build = yes
+				}
+			}
+		}
+		search_filters = {
+			FOCUS_FILTER_INDUSTRY
+		}
+	}
+	focus = {
+		id = CHI_focus_purchase_weapons
+		icon = GFX_goal_generic_small_arms
+		cost = 10
+		x = 0
+		y = 1
+		relative_position_id = CHI_new_army_reform
+		prerequisite = {
+			focus = CHI_new_army_reform
+		}
+		available = {
+			has_tech = infantry_weapons1
+		}
+		bypass = {
+			
+		}
+		completion_reward = {
+			add_equipment_to_stockpile = {
+				type = infantry_equipment_1
+				amount = 5000
+				producer = ROOT
+			}
+		}
+	}
+	focus = {
+		id = CHI_focus_supply_measures
+		icon = GFX_focus_generic_railroad
+		cost = 10
+		x = 0
+		y = 1
+		relative_position_id = CHI_focus_purchase_weapons
+		prerequisite = {
+			focus = CHI_focus_purchase_weapons
+		}
+		available = {
+			has_tech = tech_trucks
+			has_tech = basic_train
+		}
+		bypass = {
+			
+		}
+		completion_reward = {
+			add_equipment_to_stockpile = {
+				type = motorized_equipment
+				amount = 50
+				producer = ROOT
+			}
+			add_equipment_to_stockpile = {
+				type = train_equipment_1
+				amount = 20
+				producer = ROOT
+			}
+		}
+	}
+	focus = {
+		id = CHI_focus_modernised_army
+		icon = GFX_focus_beiyang_army
+		cost = 10
+		x = 1
+		y = 1
+		relative_position_id = CHI_focus_expand_military_industry
+		prerequisite = {
+			focus = CHI_focus_expand_military_industry
+		}
+		prerequisite = {
+			focus = CHI_focus_supply_measures
+		}
+		available = {
+			has_tech = basic_armored_car
+		}
+		bypass = {
+			
+		}
+		completion_reward = {
+			army_experience = 30
+		}
+		search_filters = {
+			FOCUS_FILTER_ARMY_XP
+		}
+	}
+	focus = {
+		id = CHI_focus_recruit_men
+		icon = GFX_focus_beiyang_army_corruption
+		cost = 10
+		x = 2
+		y = 1
+		relative_position_id = CHI_new_army_reform
+		prerequisite = {
+			focus = CHI_new_army_reform
+		}
+		available = {
+			
+		}
+		bypass = {
+			
+		}
+		completion_reward = {
+			add_ideas = CHI_idea_mobilisation
+		}
+	}
+	focus = {
+		id = CHI_focus_raise_ellites
+		icon = GFX_focus_patronize_chinese_elites
+		cost = 10
+		x = 0
+		y = 1
+		relative_position_id = CHI_focus_recruit_men
+		prerequisite = {
+			focus = CHI_focus_recruit_men
+		}
+		available = {
+			
+		}
+		bypass = {
+			
+		}
+		completion_reward = {
+			remove_ideas = CHI_banditry
+			add_ideas = CHI_military_elites
+		}
+	}
+	focus = {
+		id = CHI_focus_tactics_and_strategy
+		icon = GFX_goal_generic_special_forces
+		cost = 10
+		x = 1
+		y = 1
+		relative_position_id = CHI_focus_supply_measures
+		prerequisite = {
+			focus = CHI_focus_supply_measures
+		}
+		prerequisite = {
+			focus = CHI_focus_raise_ellites
+		}
+		available = {
+			
+		}
+		bypass = {
+			OR = {
+				has_idea = CHI_offensive_posture
+				has_idea = CHI_defensive_posture
+			}
+		}
+		completion_reward = {
+			country_event = ww1_china.142
+		}
+	}
+	focus = {
+		id = CHI_focus_republic_army
+		icon = GFX_focus_beiyang_army_foward
+		cost = 10
+		x = 1
+		y = 1
+		relative_position_id = CHI_focus_modernised_army
+		prerequisite = {
+			focus = CHI_focus_modernised_army
+		}
+		prerequisite = {
+			focus = CHI_focus_tactics_and_strategy
+		}
+		available = {
+			
+		}
+		bypass = {
+			NOT = {
+				has_idea = CHI_idea_army_corruption
+				has_idea = CHI_idea_army_corruption2
+				has_idea = CHI_idea_army_corruption3
+			}
+		}
+		completion_reward = {
+			add_war_support = 0.15
+			add_ideas = CHI_idea_republic_army
+		}
+		search_filters = {
+			FOCUS_FILTER_WAR_SUPPORT
+			
+		}
+	}
+}

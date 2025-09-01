@@ -1,13 +1,177 @@
-﻿capital=431
-oob="RAJ_1910"
-
-set_stability=0.31
-set_convoys=20
+﻿capital = 439
 set_research_slots = 3
+oob="RAJ_1910"
 add_to_tech_sharing_group = commonwealth_research
-
 set_cosmetic_tag = RAJ_UK
+if = {
+	limit = {
+		NOT = {
+			has_global_flag = raj_tfv_focus_tree
+		}
+	}
+	country_event = {
+		id = india.1
+		days = 32
+	}
+}
+every_unit_leader = {
+	set_unit_leader_flag = ENG_colonial_commander
+}
 
+
+if = {
+	limit = {
+		has_dlc = "Battle for the Bosporus"
+	}
+	set_technology = { camelry = 1 }
+	load_oob = camel_template
+}
+set_stability = 0.6
+set_war_support = 0.1
+# Starting tech
+set_technology = {
+
+	# Extended Technologies
+	etax_doctrine = 1
+	camo = 1
+
+	steel_production_1 = 1
+	aluminum_production_1 = 1
+	
+	infantry_weapons = 1
+	infantry_weapons1 = 1
+	tech_support = 1
+	tech_engineers = 1
+	tech_recon = 1
+	gw_artillery = 1
+	interwar_antiair = 1
+	trench_warfare = 1
+
+	fleet_in_being = 1
+	fuel_silos = 1
+
+	basic_train = 1
+}
+if = {
+	limit = { has_dlc = "By Blood Alone" }
+		set_air_oob = "RAJ_1936_air_bba"
+		set_technology = {
+			aa_lmg = 1
+			engines_1 = 1
+			engines_2 = 1
+			early_bombs = 1
+			aircraft_construction = 1
+			iw_small_airframe = 1
+			iw_medium_airframe = 1
+			iw_large_airframe = 1
+			basic_small_airframe = 1
+			basic_medium_airframe = 1
+		}
+	else = {
+		set_air_oob = "RAJ_1936_air_legacy"
+		set_technology = {
+			CAS1 = 1
+			early_fighter = 1
+				
+
+		}
+	}
+}
+if = {
+	limit = {
+		has_dlc = "La Resistance"
+	}
+	set_technology = {
+		armored_car1 = 1
+	}
+}
+if = {
+	limit = {
+		not = { has_dlc = "Man the Guns" }
+	}
+	set_technology = {
+		transport = 1
+	}
+}
+if = {
+	limit = {
+		has_dlc = "Man the Guns"
+	}
+	set_technology = {
+		mtg_transport = 1
+		basic_naval_mines = 1
+		submarine_mine_laying = 1
+		early_ship_hull_light = 1
+		basic_ship_hull_light = 1
+		early_ship_hull_submarine = 1
+		basic_ship_hull_submarine = 1
+		early_ship_hull_cruiser = 1
+		basic_ship_hull_cruiser = 1
+		basic_battery = 1
+		basic_light_battery = 1
+		basic_medium_battery = 1
+		basic_heavy_battery = 1
+		basic_torpedo = 1
+		sonar = 1
+		smoke_generator = 1
+		basic_depth_charges = 1
+		basic_cruiser_armor_scheme = 1
+	}
+}
+if = {
+	limit = {
+		NOT = { has_dlc = "No Step Back" }
+	}
+	set_technology = {
+		gwtank = 1
+		basic_light_tank = 1
+	}
+}
+if = {
+	limit = {
+		has_dlc = "No Step Back"
+	}
+	set_technology = {
+		gwtank_chassis = 1
+		basic_light_tank_chassis = 1
+	}
+}
+
+if = {
+	limit = { has_dlc = "Together for Victory" }
+
+	#add_ideas = {
+	#	RAJ_princely_states
+	#	RAJ_marginalized_muslim_community
+	#	RAJ_agrarian_society
+	#	RAJ_risk_of_famine
+	#}
+
+	add_to_tech_sharing_group = commonwealth_research
+}
+add_ideas = {
+	RAJ_Agrarian_Economy
+	RAJ_caste_system
+	
+}
+
+set_convoys = 20
+
+set_cosmetic_tag = RAJ_UK # British Raj
+
+set_politics = {
+	ruling_party = neutrality
+	last_election = "1935.11.14"
+	election_frequency = 48
+	elections_allowed = no
+}
+
+set_popularities = {
+	democratic = 23
+	fascism = 2
+	communism = 3
+	neutrality = 72
+}
 recruit_character = RAJ_gilbert_elliot
 recruit_character = RAJ_bal_gangadhar_tilak
 recruit_character = RAJ_keshav_baliram_hedgewar
@@ -36,92 +200,49 @@ recruit_character = RAJ_sir_mohammed_iqbal
 recruit_character = RAJ_sir_william_duke
 recruit_character = RAJ_alexander_cobbe
 recruit_character = RAJ_bhaskar_soman
+recruit_character = RAJ_john_mathai
 
-1910.1.1 = {
-	set_technology = {
-		#infantry
-		infantry_weapons = 1
-		camelry = 1
-	
-		#support
-		tech_support = 1
-		basic_train = 1
-        basic_railways = 1
-   	 	construction0 = 1
-    	powder_type_b = 1    
-	}
-	
-	if = {
-		limit = {
-			has_dlc = "Man the Guns"
-		}
-		set_technology = {
-			mtg_transport = 1
-		}
-		else = {
-			set_technology = {
-				transport = 1
-			}
-		}	
-	}
-
-	if = {
-		limit = {
-			has_dlc = "Graveyard of Empires"
-		}
-		set_technology = {
-			elephantry = 1
-		}
-	}
-	
-
-	set_politics = {
-		ruling_party = neutrality
-		last_election = "1910.1.1"
-		election_frequency = 48
-		elections_allowed = no
-	}
-	set_popularities = {
-		democratic = 10
-		fascism = 2
-		communism = 1
-		neutrality = 87
-	}
-	
-	add_ideas = {
-		RAJ_agrarian_society
-		RAJ_marginalized_muslim_community
-		RAJ_princely_states
+create_country_leader = {
+	name = "P. Krishna Pillai"
+	desc = "POLITICS_P_KRISHNA_PILLAI_DESC"
+	picture = "GFX_RAJ_krishna_pillai"
+	expire = "1965.1.1"
+	ideology = marxism
+	traits = {
+		
 	}
 }
-1914.1.1 = {
-	add_political_power = 1198
-	add_command_power = 100
-
-	#generic focuses
-	complete_national_focus = state_of_the_country_army
-	complete_national_focus = modernize_equipment
-	complete_national_focus = capital_manoeuvers
-	complete_national_focus = planes_experiments
-	complete_national_focus = naval_experience
-	unlock_national_focus = naval_expansion
-	complete_national_focus = early_industrialization
-	complete_national_focus = new_roads
-	unlock_national_focus = develop_capital
-	unlock_national_focus = capital_country_arsenal
-	complete_national_focus = open_the_political_sphere
-
-	retire_character = RAJ_gilbert_elliot
-	promote_character = RAJ_charles_hardinge
-
-	set_capital = { state = 439 }
-
-	add_popularity = {
-		ideology = democratic
-		popularity = 0.15
+if = {
+	limit = {
+		has_dlc = "La Resistance"
 	}
-
-	country_event = { id = ww1_tibet.5 days = 20 } #Simla Conference
+	create_operative_leader = {
+		name = "Noor Inayat Khan"
+		gfx = GFX_portrait_noor_inayat_khan
+		traits = { operative_tough operative_linguist }
+		bypass_recruitment = no
+		available_to_spy_master = yes
+		female = yes
+		nationalities = { RAJ FRA }
+	}
 }
 
 
+640 = { #Mandalay
+	add_dynamic_modifier = { modifier = dense_rural_infrastructure }
+}
+432 = { #Assam
+	add_dynamic_modifier = { modifier = dense_rural_infrastructure }
+}
+427 = { #Hyderabad
+	add_dynamic_modifier = { modifier = dense_rural_infrastructure }
+}
+436 = { #Jabalpur
+	add_dynamic_modifier = { modifier = dense_rural_infrastructure }
+}
+437 = { #Indore
+	add_dynamic_modifier = { modifier = dense_rural_infrastructure }
+}
+433 = { #Rajahsthan
+	add_dynamic_modifier = { modifier = dense_rural_infrastructure }
+}

@@ -400,7 +400,7 @@ characters={
 					}
 				}
 				traits  = {
-					ideological_crusader 
+					captain_of_industry 
 				}
 		}
 		name="RAJ_agha_khan_iii"
@@ -423,7 +423,7 @@ characters={
 					}
 				}
 				traits  = {
-					backroom_backstabber 
+					economist
 				}
 				ai_will_do  = {
 					factor  = 0.000
@@ -523,6 +523,28 @@ characters={
 		portraits={
 			army={
 				small="GFX_idea_generic_navy_arab_3"
+			}
+		}
+	}
+
+		RAJ_john_mathai={
+		advisor={
+			slot = political_advisor
+			idea_token = RAJ_john_mathai
+			available = {
+				always = yes
+			}
+			allowed = {
+				tag = RAJ
+			}
+			traits = {
+				war_industrialist
+			}
+		}
+		name="RAJ_john_mathai"
+		portraits={
+			army={
+				small="GFX_idea_generic_political_advisor_europe_1"
 			}
 		}
 	}

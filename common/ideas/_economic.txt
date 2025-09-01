@@ -400,387 +400,218 @@ ideas = {
 		
 		civilian_economy = {
 
+
 			cost = 150
 			removal_cost = -1
-			
+
 			modifier = {
 				consumer_goods_expected_value = 0.35
-				production_speed_industrial_complex_factor = -0.3
 				production_speed_arms_factory_factor = -0.3
+				#production_speed_infrastructure_factor = 0.10
+				#production_speed_industrial_complex_factor = 0.10
 				conversion_cost_civ_to_mil_factor= 0.3
-				conversion_cost_mil_to_civ_factor = 0.3
+				conversion_cost_mil_to_civ_factor = -0.3
 				max_fuel_factor = -0.25
 				fuel_gain_factor = -0.4
 			}
-			
-			default = yes
-			
-			ai_will_do = {
-				factor = 40
-				modifier = {
-					factor = 0
-					OR = {
-						has_idea = low_economic_mobilisation
-						has_idea = partial_economic_mobilisation
-						has_idea = war_economy
-						has_idea = tot_economic_mobilisation
-					}
-				}
-				modifier = {
-					factor = 9999
-					has_idea = interwar_recovery
-				}
-			}
 
-			available = {
-				if = {
-					limit = {
-						has_completed_focus = TUR_strengthen_the_national_economy
-					}
-					NOT = {
-						has_idea = TUR_economic_etatism
-						has_idea = interwar_recovery
-					}
-				}
-				else_if = {
-					limit = {
-						has_idea = HUN_ausgleich
-					}
-					NOT = {
-						has_idea = HUN_ausgleich
-					}
-				}
-				else_if = {
-					limit = {
-						has_idea = AUH_condominium
-					}
-					NOT = {
-						has_idea = AUH_condominium
-					}
-				}
-			}
-			on_add = {
-				update_mobilisation_bonus = yes
-				if = {
-					limit = {
-						tag = AUS
-						any_subject_country = {
-							has_idea = HUN_ausgleich
-						}
-					}
-					every_subject_country = {
-						limit = {
-							has_idea = HUN_ausgleich
-						}
-						country_event = {
-							id = ww1_auh.215
-							days = 1
-						}
-					}
-				}
-				if = {
-					limit = {
-						OR = {
-							tag = AUS
-							tag = HUN
-						}	
-						any_subject_country = {
-							has_idea = AUH_condominium
-						}
-					}
-					every_subject_country = {
-						limit = {
-							has_idea = AUH_condominium
-						}
-						country_event = {
-							id = ww1_auh.215
-							days = 1
-						}
-					}
-				}
-			}
-			
+			default = yes
+
 			cancel_if_invalid = no
 		}
 		
 		low_economic_mobilisation = {
-			
+
 			available = {
 				has_war_support > 0.15
-				OR = {
-					has_war = yes
-					threat > 0.10
-					has_government = fascism
-					custom_trigger_tooltip = {
-						tooltip = has_government_vanguardism_tt
-						has_country_leader_ideology = vanguardism
+				
+				IF = {
+					limit = {
+						original_tag = HUN
+						has_dlc = "Death or Dishonor"
+						NOT = {
+							has_dlc = "Gotterdammerung"
+						}
 					}
-					if = {
+					IF = {
 						limit = {
-							tag = GER
-							has_focus_tree = german_focus
-							is_GER_a_monarchy = yes
+							has_dlc = "Arms Against Tyranny"
 						}
-						AND = {
-							has_war = yes
-							OR = {
-								has_completed_focus = GER_regulating_the_war_economy
-								has_completed_focus = GER_war_socialism
+						NOT = { has_idea = HUN_treaty_of_triannon_aat }
+					}
+					ELSE = {
+						NOT = { has_idea = HUN_treaty_of_triannon }
+					}
+				}
+				ELSE_IF = {
+					limit = {
+						original_tag = HUN
+						has_dlc = "Gotterdammerung"
+					}
+					IF = {
+						limit = {
+							has_dlc = "Arms Against Tyranny"
+						}
+						custom_trigger_tooltip = {
+							tooltip = wuw_HUN_not_has_trianon_for_laws_tt
+							NOT = { 
+								OR = {
+									has_idea = HUN_treaty_of_triannon_aat_wuw 
+									has_idea = HUN_treaty_of_triannon_aat_wuw_no_air_debuff 
+									has_idea = HUN_treaty_of_triannon_aat_wuw_no_army_exp_debuff 
+									has_idea = HUN_treaty_of_triannon_aat_wuw_no_air_or_army_debuff 
+								}
 							}
-						}						
-						else = {
-							hidden_trigger = {
-								always = no
+							
+						}		
+					}
+					ELSE = {
+						custom_trigger_tooltip = {
+							tooltip = wuw_HUN_not_has_trianon_for_laws_tt
+							NOT = { 
+								OR = {
+									has_idea = HUN_treaty_of_triannon_wuw 
+									has_idea = HUN_treaty_of_triannon_wuw_no_army_exp_debuff 
+									has_idea = HUN_treaty_of_triannon_wuw_no_air_debuff 
+									has_idea = HUN_treaty_of_triannon_wuw_no_air_or_army_debuff 
+								}
 							}
 						}
 					}
 				}
-				NOT = {
-					has_country_flag = cant_change_from_civilian_economy
-				}
-				hidden_trigger = {
-					NOT = {
-						has_idea = FRA_wadai_war
-					}	
+
+				if = {
+					limit = {
+						has_completed_focus = USA_limited_intervention
+						has_defensive_war = no
+					}
+					has_war_support > 0.3
+					congress_high_support_trigger = yes
 				}
 				if = {
 					limit = {
-						has_completed_focus = TUR_strengthen_the_national_economy
+						original_tag = TUR
+						has_dlc = "Battle for the Bosporus"
 					}
 					NOT = {
-						has_idea = TUR_economic_etatism
-						has_idea = interwar_recovery
-					}
-				}
-				if = {
-					limit = { has_idea = SRA_marching_army }
-					NOT = { has_idea = SRA_marching_army }
-				}
-				else_if = {
-					limit = { original_tag = LUX }
-					OR = {
-						has_war = yes
-						NOT = {
-							has_idea = LUX_london_treaty
+						OR = {
+							has_active_mission = TUR_etatism_crisis_2
+							has_active_mission = TUR_etatism_crisis_3
+							has_active_mission = TUR_etatism_crisis_4
 						}
-					}
-					if = {
-						limit = {
-							has_idea = LUX_occupation
-						}
-						NOT = {
-							has_idea = LUX_occupation
-						}
-					}
-				}
-				else_if = {
-					limit = {
-						has_idea = HUN_ausgleich
-					}
-					NOT = {
-						has_idea = HUN_ausgleich
-					}
-				}
-				else_if = {
-					limit = {
-						has_idea = AUH_condominium
-					}
-					NOT = {
-						has_idea = AUH_condominium
 					}
 				}
 			}
 			on_add = {
-				update_mobilisation_bonus = yes
 				if = {
 					limit = {
-						tag = AUS
-						any_subject_country = {
-							has_idea = HUN_ausgleich
-						}
+						tag = USA
+						has_completed_focus = USA_limited_intervention
+						has_defensive_war = no
 					}
-					every_subject_country = {
-						limit = {
-							has_idea = HUN_ausgleich
-						}
-						country_event = {
-							id = ww1_auh.215
-							days = 1
-						}
-					}
-				}
-				if = {
-					limit = {
-						OR = {
-							tag = AUS
-							tag = HUN
-						}	
-						any_subject_country = {
-							has_idea = AUH_condominium
-						}
-					}
-					every_subject_country = {
-						limit = {
-							has_idea = AUH_condominium
-						}
-						country_event = {
-							id = ww1_auh.215
-							days = 1
-						}
-					}
+					USA_congress_large_opposition = yes
 				}
 			}
-			
+
 			cost = 150
 			removal_cost = -1
-			
+
 			modifier = {
 				consumer_goods_expected_value = 0.3
-				production_speed_industrial_complex_factor = -0.1
+				#production_speed_industrial_complex_factor = 0.05
+				#production_speed_infrastructure_factor = 0.05
 				production_speed_arms_factory_factor = -0.1
 				fuel_gain_factor = -0.25
 			}
-			
+
 			cancel_if_invalid = no
 
 			ai_will_do = {
-				factor = 5000
-				modifier = {
-					factor = 0
-					OR = {
-						has_idea = partial_economic_mobilisation
-						has_idea = war_economy
-						has_idea = tot_economic_mobilisation
-						AND  = {
-							is_major = yes
-							has_manpower < 1000 #dont do it if you need PP for manpower !
-							NOT = {
-								has_idea = scraping_the_barrel
-							}
-						}
-					}
+   				factor = 2
+
+   				modifier = {
+					factor = 20
+
+					is_major = yes
 				}
-			}
+				modifier = {
+					has_war_support > 0.25
+					factor = 0 #don't even look at it if you could be taking partial mob
+				}
+				modifier = {
+					tag = ENG
+					has_war = no
+					date < 1937.6.1
+					factor = 0
+				}
+   			}
 		}
 		
 		partial_economic_mobilisation = {
-			
+
 			available = {
 				has_war_support > 0.25
-				OR = {
-					has_war = yes
-					threat > 0.25
-					has_government = fascism
-					custom_trigger_tooltip = {
-						tooltip = has_government_vanguardism_tt
-						has_country_leader_ideology = vanguardism
-					}						
-				}		
-				NOT = {
-					has_country_flag = cant_change_from_civilian_economy
-				}
-				hidden_trigger = {
-					NOT = {
-						has_idea = FRA_wadai_war
-					}
-				}
-				if = {
-					limit = { original_tag = ENG } 
-					OR = {
-						threat > 0.5
-						has_global_flag = great_war
-					}	
-				}
-				#else_if = {
-				#	limit = {
-				#		tag = GER
-				#		is_GER_a_monarchy = yes
-				#	}
-				#	has_war = yes
-				#}
-				else_if = {
+
+				IF = {
 					limit = {
-						has_completed_focus = TUR_strengthen_the_national_economy
-					}
-					NOT = {
-						has_idea = TUR_economic_etatism
-						has_idea = interwar_recovery
-					}
-				}	
-				else_if = {
-					limit = { has_idea = SRA_marching_army }
-					NOT = { has_idea = SRA_marching_army }
-				}
-				else_if = {
-					limit = { original_tag = LUX }
-					OR = {
-						has_war = yes
+						original_tag = HUN
+						has_dlc = "Death or Dishonor"
 						NOT = {
-							has_idea = LUX_london_treaty
+							has_dlc = "Gotterdammerung"
 						}
 					}
-					if = {
+					IF = {
 						limit = {
-							has_idea = LUX_occupation
+							has_dlc = "Arms Against Tyranny"
 						}
-						NOT = {
-							has_idea = LUX_occupation
-						}
-					}
-				}
-				else_if = {
-					limit = {
-						has_idea = HUN_ausgleich
-					}
-					NOT = {
-						has_idea = HUN_ausgleich
-					}
-				}
-				else_if = {
-					limit = {
-						has_idea = AUH_condominium
-					}
-					NOT = {
-						has_idea = AUH_condominium
-					}
-				}
-			}
-			on_add = {
-				update_mobilisation_bonus = yes
-				if = {
-					limit = {
-						tag = AUS
-						any_subject_country = {
-							has_idea = HUN_ausgleich
-						}
-					}
-					every_subject_country = {
-						limit = {
-							has_idea = HUN_ausgleich
-						}
-						country_event = {
-							id = ww1_auh.215
-							days = 1
-						}
-					}
-				}
-				if = {
-					limit = {
 						OR = {
-							tag = AUS
-							tag = HUN
-						}	
-						any_subject_country = {
-							has_idea = AUH_condominium
+							has_completed_focus = HUN_secret_rearmament
+							NOT = { has_idea = HUN_treaty_of_triannon_aat }
 						}
 					}
-					every_subject_country = {
+					ELSE = {
+						has_completed_focus = HUN_secret_rearmament
+						NOT = { has_idea = HUN_treaty_of_triannon }
+					}
+				}
+				ELSE_IF = {
+					limit = {
+						original_tag = HUN
+						has_dlc = "Gotterdammerung"
+					}
+					IF = {
 						limit = {
-							has_idea = AUH_condominium
+							has_dlc = "Arms Against Tyranny"
 						}
-						country_event = {
-							id = ww1_auh.215
-							days = 1
+						OR = {
+							has_completed_focus = wuw_HUN_secret_rearmament
+							NOT = { has_idea = HUN_treaty_of_triannon_aat_wuw }
+						}
+					}
+					ELSE = {
+						has_completed_focus = wuw_HUN_secret_rearmament
+						NOT = { has_idea = HUN_treaty_of_triannon_wuw }
+					}
+				}
+
+				if = {
+					limit = {
+						has_completed_focus = USA_limited_intervention
+						has_defensive_war = no
+					}
+					has_war_support > 0.5
+					congress_high_support_trigger = yes
+				}
+				if = {
+					limit = {
+						original_tag = TUR
+						has_dlc = "Battle for the Bosporus"
+					}
+					NOT = {
+						OR = {
+							has_active_mission = TUR_etatism_crisis_1
+							has_active_mission = TUR_etatism_crisis_3
+							has_active_mission = TUR_etatism_crisis_4
 						}
 					}
 				}
@@ -788,406 +619,392 @@ ideas = {
 
 			cost = 150
 			removal_cost = -1
-			
+
 			modifier = {
 				consumer_goods_expected_value = 0.25
 				production_speed_arms_factory_factor = 0.1
+				production_speed_dockyard_factor = 0.1
 				conversion_cost_civ_to_mil_factor= -0.1
 				conversion_cost_mil_to_civ_factor = -0.1
 				fuel_gain_factor = -0.1
 			}
-			
-			cancel_if_invalid = no
 
+			cancel_if_invalid = no
+			on_add = {
+				if = {
+					limit = {
+						tag = USA
+						has_completed_focus = USA_limited_intervention
+						has_defensive_war = no
+					}
+					USA_congress_large_opposition = yes
+				}
+			}
 			ai_will_do = {
-				factor = 6000
+   				factor = 2
+
+   				modifier = {
+					factor = 20
+
+					is_major = yes
+				}
+				
 				modifier = {
-					factor = 0
-					OR = {
-						has_idea = war_economy
-						has_idea = tot_economic_mobilisation
-						AND  = {
-							is_major = yes
-							has_manpower < 1000 #dont do it if you need PP for manpower !
-							NOT = {
-								has_idea = scraping_the_barrel
-							}
+					add = 80
+					original_tag = SOV
+					date < 1937.1.1
+					NOT = { 
+						OR = {
+							has_idea = war_economy 
+							has_idea = tot_economic_mobilisation
 						}
 					}
 				}
-			}
+				
+				modifier = {
+					factor = 100
+					OR = {
+						original_tag = URG
+						original_tag = PAR
+					}
+					NOT = {
+						has_idea = war_economy
+					}
+					has_completed_focus = GUAY_coup_detat
+				}
+   			}
 		}
 		
 		war_economy = {
-			
-			available = {
-				
-				has_war = yes
-				has_war_support > 0.5
-				if = {
-					limit = {
-						tag = GER
-						has_focus_tree = german_focus
-						is_GER_a_monarchy = yes
-					}
-					has_completed_focus = GER_war_socialism			
-				}
-				else = {
-					OR = {
-						threat > 0.4
-						has_government = fascism
-						custom_trigger_tooltip = {
-							tooltip = has_government_vanguardism_tt
-							has_country_leader_ideology = vanguardism
-						}						
-					}
-				}		
-				any_enemy_country = {
-					ic_ratio = {
-						tag = ROOT 
-						ratio > 0.4
-					}
-				}
-				NOT = {
-					has_country_flag = cant_change_from_civilian_economy
-				}
-				if = {
-					limit = { original_tag = ENG }
-					OR = {					
-						threat > 0.7
-						has_global_flag = great_war
-					}	
-				}
-				if = {
-					limit = {
-						tag = SOV
-						has_idea = SOV_idea_NEP
-					}
-					has_completed_focus = SOV_economic_alternative
-				}
-				if = {
-					limit = {
-						has_completed_focus = TUR_strengthen_the_national_economy
-					}
-					NOT = {
-						has_idea = TUR_economic_etatism
-						has_idea = interwar_recovery
-					}
-				}
-				if = {
-					limit = { has_idea = SRA_marching_army }
-					NOT = { has_idea = SRA_marching_army }
-				}
-				else_if = {
-					limit = { original_tag = LUX }
-					OR = {
-						has_war = yes
-						NOT = {
-							has_idea = LUX_london_treaty
-						}
-					}
-					if = {
-						limit = {
-							has_idea = LUX_occupation
-						}
-						NOT = {
-							has_idea = LUX_occupation
-						}
-					}
-				}
-				else_if = {
-					limit = {
-						has_idea = HUN_ausgleich
-					}
-					NOT = {
-						has_idea = HUN_ausgleich
-					}
-				}
-				else_if = {
-					limit = {
-						has_idea = AUH_condominium
-					}
-					NOT = {
-						has_idea = AUH_condominium
-					}
-				}
-			}
-			on_add = {
-				update_mobilisation_bonus = yes
-				if = {
-					limit = {
-						tag = AUS
-						any_subject_country = {
-							has_idea = HUN_ausgleich
-						}
-					}
-					every_subject_country = {
-						limit = {
-							has_idea = HUN_ausgleich
-						}
-						country_event = {
-							id = ww1_auh.215
-							days = 1
-						}
-					}
-				}
-				if = {
-					limit = {
-						OR = {
-							tag = AUS
-							tag = HUN
-						}	
-						any_subject_country = {
-							has_idea = AUH_condominium
-						}
-					}
-					every_subject_country = {
-						limit = {
-							has_idea = AUH_condominium
-						}
-						country_event = {
-							id = ww1_auh.215
-							days = 1
-						}
-					}
-				}
-			}
 
-			cancel = {
-				has_war = no
-				if = {
-					limit = {
-						has_idea = HUN_ausgleich
-					}
-					NOT = {
-						has_idea = HUN_ausgleich
-					}
-				}
-				else_if = {
-					limit = {
-						has_idea = AUH_condominium
-					}
-					NOT = {
-						has_idea = AUH_condominium
-					}
-				}
-			}
-		
-			cost = 150
-			removal_cost = -1
-			
-			modifier = {
-				consumer_goods_expected_value = 0.2
-				production_speed_arms_factory_factor = 0.2
-				conversion_cost_civ_to_mil_factor= -0.2
-				conversion_cost_mil_to_civ_factor = -0.2
-			}
-			
-			cancel_if_invalid = no
-			
-			ai_will_do = {
-				factor = 7000
-				modifier = {
-					factor = 0
-					OR = {
-						has_idea = tot_economic_mobilisation
-						AND  = {
-							is_major = yes
-							has_manpower < 1000 #dont do it if you need PP for manpower !
-							NOT = {
-								has_idea = scraping_the_barrel
+
+			available = {
+				has_war_support > 0.5
+				OR = {
+					has_government = fascism
+					has_government = communism
+					custom_trigger_tooltip = { tooltip = or_clarification_tooltip always = no }
+					AND = {
+						has_war = yes
+						any_enemy_country = {
+							ic_ratio = {
+								tag = ROOT
+								ratio > 0.4
 							}
 						}
 					}
 				}
-			}
-		}
-		
-		tot_economic_mobilisation = {
-			
-			available = {
-				has_war = yes
-				has_war_support > 0.8
-				if = {
+
+				IF = {
 					limit = {
-						tag = GER
-						has_focus_tree = german_focus
-						is_GER_a_monarchy = yes
+						original_tag = HUN
+						has_dlc = "Death or Dishonor"
+						NOT = {
+							has_dlc = "Gotterdammerung"
+						}
 					}
-					has_completed_focus = GER_war_socialism
+					IF = {
+						limit = {
+							has_dlc = "Arms Against Tyranny"
+						}
+						NOT = { has_idea = HUN_treaty_of_triannon_aat }
+					}
+					ELSE = {
+						NOT = { has_idea = HUN_treaty_of_triannon }
+					}
 				}
-				else = {
-					OR = {
-						threat > 0.5
-						has_government = fascism
+				ELSE_IF = {
+					limit = {
+						original_tag = HUN
+						has_dlc = "Gotterdammerung"
+					}
+					IF = {
+						limit = {
+							has_dlc = "Arms Against Tyranny"
+						}
 						custom_trigger_tooltip = {
-							tooltip = has_government_vanguardism_tt
-							has_country_leader_ideology = vanguardism
-						}				
+							tooltip = wuw_HUN_not_has_trianon_for_laws_tt
+							NOT = { 
+								OR = {
+									has_idea = HUN_treaty_of_triannon_aat_wuw 
+									has_idea = HUN_treaty_of_triannon_aat_wuw_no_air_debuff 
+									has_idea = HUN_treaty_of_triannon_aat_wuw_no_army_exp_debuff 
+									has_idea = HUN_treaty_of_triannon_aat_wuw_no_air_or_army_debuff 
+								}
+							}
+							
+						}		
 					}
-				}		
-				any_enemy_country = {
-					ic_ratio = {
-						tag = ROOT
-						ratio > 0.7
+					ELSE = {
+						custom_trigger_tooltip = {
+							tooltip = wuw_HUN_not_has_trianon_for_laws_tt
+							NOT = { 
+								OR = {
+									has_idea = HUN_treaty_of_triannon_wuw 
+									has_idea = HUN_treaty_of_triannon_wuw_no_army_exp_debuff 
+									has_idea = HUN_treaty_of_triannon_wuw_no_air_debuff 
+									has_idea = HUN_treaty_of_triannon_wuw_no_air_or_army_debuff 
+								}
+							}
+						}
 					}
 				}
-				NOT = {
-					has_country_flag = cant_change_from_civilian_economy
-				}
+
 				if = {
-					limit = { original_tag = ENG }
-					OR = {					
-						threat > 0.99
-						has_global_flag = great_war
+					limit = {
+						has_completed_focus = USA_limited_intervention
+						has_defensive_war = no
 					}
+					has_war_support > 0.75
+					congress_high_support_trigger = yes
 				}
 				if = {
 					limit = {
-						tag = SOV
-						has_idea = SOV_idea_NEP
-					}
-					has_completed_focus = SOV_economic_alternative
-				}
-				if = {
-					limit = {
-						has_completed_focus = TUR_strengthen_the_national_economy
+						original_tag = TUR
+						has_dlc = "Battle for the Bosporus"
 					}
 					NOT = {
-						has_idea = TUR_economic_etatism
-						has_idea = interwar_recovery
-					}
-				}
-				if = {
-					limit = { has_idea = SRA_marching_army }
-					NOT = { has_idea = SRA_marching_army }
-				}
-				else_if = {
-					limit = { original_tag = LUX }
-					OR = {
-						has_war = yes
-						NOT = {
-							has_idea = LUX_london_treaty
-						}
-					}
-					if = {
-						limit = {
-							has_idea = LUX_occupation
-						}
-						NOT = {
-							has_idea = LUX_occupation
-						}
-					}
-				}
-				else_if = {
-					limit = {
-						has_idea = HUN_ausgleich
-					}
-					NOT = {
-						has_idea = HUN_ausgleich
-					}
-				}
-				else_if = {
-					limit = {
-						has_idea = AUH_condominium
-					}
-					NOT = {
-						has_idea = AUH_condominium
-					}
-				}
-			}
-			on_add = {
-				update_mobilisation_bonus = yes
-				if = {
-					limit = {
-						tag = AUS
-						any_subject_country = {
-							has_idea = HUN_ausgleich
-						}
-					}
-					every_subject_country = {
-						limit = {
-							has_idea = HUN_ausgleich
-						}
-						country_event = {
-							id = ww1_auh.215
-							days = 1
-						}
-					}
-				}
-				if = {
-					limit = {
 						OR = {
-							tag = AUS
-							tag = HUN
-						}	
-						any_subject_country = {
-							has_idea = AUH_condominium
-						}
-					}
-					every_subject_country = {
-						limit = {
-							has_idea = AUH_condominium
-						}
-						country_event = {
-							id = ww1_auh.215
-							days = 1
+							has_active_mission = TUR_etatism_crisis_1
+							has_active_mission = TUR_etatism_crisis_2
+							has_active_mission = TUR_etatism_crisis_4
 						}
 					}
 				}
 			}
 
-			cancel = {
-				has_war = no
+			cost = 150
+			removal_cost = -1
+
+			modifier = {
+				consumer_goods_expected_value = 0.2
+				production_speed_arms_factory_factor = 0.2
+				production_speed_dockyard_factor = 0.20
+				conversion_cost_civ_to_mil_factor= -0.2
+				conversion_cost_mil_to_civ_factor = -0.2
+			}
+
+			cancel_if_invalid = no
+			on_add = {
 				if = {
 					limit = {
-						has_idea = HUN_ausgleich
+						tag = USA
+						has_completed_focus = USA_limited_intervention
+						has_defensive_war = no
 					}
-					NOT = {
-						has_idea = HUN_ausgleich
+					USA_congress_large_opposition = yes
+				}
+			}
+			ai_will_do = {
+   				base = 3
+
+				modifier = {
+					#High prio on production
+					factor = 20
+					manpower_per_military_factory >  1000
+				}
+
+				modifier = {
+					# If we CAN go for total mobilization and have enough manpower for it, skip war economy, it's only a waste of PP
+					factor = 0
+
+					manpower_per_military_factory > 15000
+					has_war = yes
+					has_war_support > 0.8
+					any_enemy_country = {
+						ic_ratio = {
+							tag = ROOT
+							ratio > 0.5
+						}
 					}
 				}
-				else_if = {
+
+				modifier = {
+					add = 1800
+
+					# revert from closed_economy if we have large allies
+					has_idea = closed_economy
+					has_large_ally_not_pick_closed_economy = yes
+				}
+   			}
+		}
+		tot_economic_mobilisation = {
+
+			visible = {
+				if = {
 					limit = {
-						has_idea = AUH_condominium
+						original_tag = GER
+					}
+					NOT = { has_completed_focus = GER_totaler_krieg }
+				}
+			}
+
+			available = {
+				has_war = yes
+				has_war_support > 0.8
+				any_enemy_country = {
+					ic_ratio = {
+						tag = ROOT
+						ratio > 0.5
+					}
+				}
+
+				IF = {
+					limit = {
+						original_tag = HUN
+						has_dlc = "Death or Dishonor"
+						NOT = {
+							has_dlc = "Gotterdammerung"
+						}
+					}
+					IF = {
+						limit = {
+							has_dlc = "Arms Against Tyranny"
+						}
+						NOT = { has_idea = HUN_treaty_of_triannon_aat }
+					}
+					ELSE = {
+						NOT = { has_idea = HUN_treaty_of_triannon }
+					}
+				}
+				ELSE_IF = {
+					limit = {
+						original_tag = HUN
+						has_dlc = "Gotterdammerung"
+					}
+					IF = {
+						limit = {
+							has_dlc = "Arms Against Tyranny"
+						}
+						custom_trigger_tooltip = {
+							tooltip = wuw_HUN_not_has_trianon_for_laws_tt
+							NOT = { 
+								OR = {
+									has_idea = HUN_treaty_of_triannon_aat_wuw 
+									has_idea = HUN_treaty_of_triannon_aat_wuw_no_air_debuff 
+									has_idea = HUN_treaty_of_triannon_aat_wuw_no_army_exp_debuff 
+									has_idea = HUN_treaty_of_triannon_aat_wuw_no_air_or_army_debuff 
+								}
+							}
+							
+						}		
+					}
+					ELSE = {
+						custom_trigger_tooltip = {
+							tooltip = wuw_HUN_not_has_trianon_for_laws_tt
+							NOT = { 
+								OR = {
+									has_idea = HUN_treaty_of_triannon_wuw 
+									has_idea = HUN_treaty_of_triannon_wuw_no_army_exp_debuff 
+									has_idea = HUN_treaty_of_triannon_wuw_no_air_debuff 
+									has_idea = HUN_treaty_of_triannon_wuw_no_air_or_army_debuff 
+								}
+							}
+						}
+					}
+				}
+				
+				if = {
+					limit = {
+						has_completed_focus = USA_limited_intervention
+						has_defensive_war = no
+					}
+					has_war_support > 0.9
+					congress_high_support_trigger = yes
+				}
+				if = {
+					limit = {
+						original_tag = TUR
+						has_dlc = "Battle for the Bosporus"
 					}
 					NOT = {
-						has_idea = AUH_condominium
+						OR = {
+							has_active_mission = TUR_etatism_crisis_1
+							has_active_mission = TUR_etatism_crisis_2
+							has_active_mission = TUR_etatism_crisis_3
+						}
 					}
 				}
 			}
-			
+			on_add = {
+				if = {
+					limit = {
+						tag = USA
+						has_completed_focus = USA_limited_intervention
+						has_defensive_war = no
+					}
+					USA_congress_large_opposition = yes
+				}
+			}
+			ai_will_do = {
+   				factor = 1
+
+				modifier = {
+					factor = 25
+					#Prio this if nation has a lot of manpower compared to MIC
+					manpower_per_military_factory > 15000
+				}
+
+				modifier = {
+					#Block  unless nation has a lot of manpower
+					factor = 0
+					manpower_per_military_factory <  10000
+				}
+
+
+				modifier = {
+					# never take this if we are on low conscription laws for safety
+					factor = 0
+					OR = {
+						has_idea = volunteer_only
+						has_idea = limited_conscription
+					}
+				}
+
+				# Germany needs to be careful
+				modifier = {
+					factor = 0
+
+					tag = GER
+					NOT = { has_tech = volkssturm }
+					has_war = yes
+					date < 1944.01.01
+				}
+				modifier = {
+					factor = 0
+
+					tag = SOV
+					has_war = yes
+					OR = {
+						has_manpower < 2000000
+						NOT = {
+							OR = {
+								has_idea = all_adults_serve
+								has_idea = service_by_requirement
+							}
+						}
+					}
+				}
+   			}
+
 			cost = 150
 			removal_cost = -1
-			
+
 			modifier = {
-				consumer_goods_expected_value = 0.10
+				consumer_goods_expected_value = 0.15
 				conscription = -0.03
 				production_speed_arms_factory_factor = 0.3
+				production_speed_dockyard_factor = 0.3
 				conversion_cost_civ_to_mil_factor= -0.3
 				conversion_cost_mil_to_civ_factor = -0.3
 			}
-			
+
 			cancel_if_invalid = no
-			
-			ai_will_do = {
-				factor = 80
-				modifier = { #don't increase without having enough manpower
-					factor = 0
-					check_variable = { manpower_k < num_battalions }
-				}
-				modifier = { #we don't want the conscription% to drop too low
-					factor = 0
-					has_manpower > 150000 #minimum manpower for minors
-					OR = {
-						has_idea = disarmed_nation
-						has_idea = volunteer_only
-						has_idea = limited_conscription
-						has_idea = extensive_conscription
-					}
-				}
-			}
 		}
+
+
+
+
 	}
 	
 	trade_laws = { 

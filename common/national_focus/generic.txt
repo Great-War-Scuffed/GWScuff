@@ -1,10 +1,10 @@
 
 focus_tree = {
-	id = generic_focus
+	id = keep_here
 	country = {
-		factor = 5
+		factor = 0
 	}	
-	default = yes
+	default = no
 	reset_on_civilwar = no
 
 	#Focus Path shortcuts

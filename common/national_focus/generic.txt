@@ -3,7 +3,104 @@ focus_tree = {
 	id = keep_here
 	country = {
 		factor = 0
-	}	
+		
+		modifier = {
+			add = 10
+			tag = AFG
+		}
+		modifier = {
+			add = 10
+			tag = PAN
+		}
+		modifier = {
+			add = 10
+			tag = URG
+		}
+		modifier = {
+			add = 10
+			tag = PAR
+		}
+		modifier = {
+			add = 10
+			tag = BOS
+		}
+		modifier = {
+			add = 10
+			tag = ARB
+		}
+		modifier = {
+			add = 10
+			tag = KUW
+		}
+		modifier = {
+			add = 10
+			tag = QAT
+		}
+		modifier = {
+			add = 10
+			tag = MSC
+		}
+		modifier = {
+			add = 10
+			tag = LUX
+		}
+		modifier = {
+			add = 10
+			tag = AFA
+		}
+		modifier = {
+			add = 10
+			tag = ETH
+		}
+		modifier = {
+			add = 10
+			tag = ECU
+		}
+		modifier = {
+			add = 10
+			tag = PAN
+		}
+		modifier = {
+			add = 10
+			tag = COS
+		}
+		modifier = {
+			add = 10
+			tag = NIC
+		}
+		modifier = {
+			add = 10
+			tag = ELS
+		}
+		modifier = {
+			add = 10
+			tag = GUA
+		}
+		modifier = {
+			add = 10
+			tag = HAI
+		}
+		modifier = {
+			add = 10
+			tag = DOM
+		}
+		modifier = {
+			add = 10
+			tag = BOL
+		}
+		modifier = {
+			add = 10
+			tag = PRU
+		}
+		modifier = {
+			add = 10
+			tag = LBA
+		}
+		modifier = {
+			add = 10
+			tag = D15
+		}
+	}
 	default = no
 	reset_on_civilwar = no
 
@@ -50,6 +147,9 @@ focus_tree = {
 shared_focus = {
 	id = open_the_political_sphere
 	icon = GFX_goal_generic_demand_territory
+	available = {
+		is_ai = NO
+	}
 	completion_reward = { 
 		add_political_power = 75
 		country_event = {
@@ -1678,6 +1778,7 @@ shared_focus = {
 			is_coastal = yes
 			naval_base > 0
 		}
+		is_ai = NO
 	}
 	completion_reward = {
 		add_doctrine_cost_reduction = {
@@ -2144,6 +2245,9 @@ shared_focus = {
 shared_focus = {
 	id = state_of_the_country_army
 	icon = GFX_focus_generic_commonwealth_build_infantry
+		available = {
+		is_ai = NO
+	}
 	completion_reward = {
 		add_tech_bonus = {
 			name = state_of_the_country_army

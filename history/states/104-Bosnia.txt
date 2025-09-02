@@ -34,7 +34,9 @@ state = {
 		add_core_of = BOS
 		add_claim_by = SER
 		buildings = {
-			infrastructure = 2
+			infrastructure = 3
+			industrial_complex=2
+			arms_factory=2
 		}
 	}
 	local_supplies = 7

@@ -46,7 +46,7 @@ focus_tree = {
 	focus = { 
 		id = BRA_1910_elections
 		icon = GFX_focus_generic_voting
-		cost = 10
+		cost = 5
 		x = 11
 		y = 0
 		available = {
@@ -66,7 +66,7 @@ focus_tree = {
 	focus = {
 		id = BRA_aeroclube_do_brasil
 		icon = GFX_focus_BRA_air_force
-		cost = 10
+		cost = 5
 		x = 24
 		y = 0
 		available = {
@@ -94,7 +94,7 @@ focus_tree = {
 	focus = {
 		id = BRA_industrial_outbreak
 		icon = GFX_goal_generic_construct_civilian
-		cost = 10
+		cost = 5
 		x = 2
 		y = 0
 		completion_reward = {
@@ -267,7 +267,7 @@ focus_tree = {
 	focus = {
 		id = BRA_army_effort
 		icon = GFX_focus_BRA_army
-		cost = 10
+		cost = 5
 		x = 20
 		y = 0
 		completion_reward = {
@@ -275,7 +275,7 @@ focus_tree = {
 			add_doctrine_cost_reduction = {
 				name = land_doc_bonus
 				cost_reduction = 0.5
-				uses = 1
+				uses = 2
 				category = land_doctrine
 			}
 		}
@@ -288,7 +288,7 @@ focus_tree = {
 	focus = {
 		id = BRA_south_american_naval_race
 		icon = GFX_focus_SMB_reescalate_the_naval_arms_race
-		cost = 10
+		cost = 5
 		x = 24
 		y = 3
 		available = {
@@ -314,7 +314,7 @@ focus_tree = {
 	focus = {
 		id = BRA_attract_foreign_investors
 		icon = GFX_goal_generic_improve_relations
-		cost = 10
+		cost = 5
 		prerequisite = {
 			focus = BRA_industrial_outbreak
 		}
@@ -326,7 +326,7 @@ focus_tree = {
 		completion_reward = {
 			add_offsite_building = {
 				type = industrial_complex
-				level = 1
+				level = 2
 			}
 		}
 		search_filters = { FOCUS_FILTER_INDUSTRY }
@@ -337,7 +337,7 @@ focus_tree = {
 	focus = {
 		id = BRA_amadeo_rossi
 		icon = GFX_goal_generic_production
-		cost = 10
+		cost = 5
 		prerequisite = {
 			focus = BRA_attract_foreign_investors
 		}
@@ -348,10 +348,10 @@ focus_tree = {
 		}
 		completion_reward = {
 			502 = {
-				add_extra_state_shared_building_slots = 1
+				add_extra_state_shared_building_slots = 2
 				add_building_construction = {
 					type = arms_factory
-					level = 1
+					level = 2
 					instant_build = yes
 				}
 			}
@@ -387,6 +387,7 @@ focus_tree = {
 					}
 				}
 				prioritize = { 501 }
+				add_extra_state_shared_building_slots = 1
 				add_building_construction = {
 					type = infrastructure
 					level = 1
@@ -401,6 +402,7 @@ focus_tree = {
 					}
 				}
 				prioritize = { 504 }
+				add_extra_state_shared_building_slots = 1
 				add_building_construction = {
 					type = infrastructure
 					level = 1
@@ -415,6 +417,7 @@ focus_tree = {
 					}
 				}
 				prioritize = { 503 }
+				add_extra_state_shared_building_slots = 1
 				add_building_construction = {
 					type = infrastructure
 					level = 1
@@ -429,6 +432,97 @@ focus_tree = {
 					}
 				}
 				prioritize = { 502 }
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = infrastructure
+					level = 1
+					instant_build = yes
+				}
+			}
+						random_owned_controlled_state = {
+				limit = {
+					free_building_slots = {
+						building = infrastructure
+						size > 0
+					}
+				}
+				prioritize = { 1079 }
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = infrastructure
+					level = 1
+					instant_build = yes
+				}
+			}
+						random_owned_controlled_state = {
+				limit = {
+					free_building_slots = {
+						building = infrastructure
+						size > 0
+					}
+				}
+				prioritize = { 1073 }
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = infrastructure
+					level = 1
+					instant_build = yes
+				}
+			}
+						random_owned_controlled_state = {
+				limit = {
+					free_building_slots = {
+						building = infrastructure
+						size > 0
+					}
+				}
+				prioritize = { 499 }
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = infrastructure
+					level = 1
+					instant_build = yes
+				}
+			}
+						random_owned_controlled_state = {
+				limit = {
+					free_building_slots = {
+						building = infrastructure
+						size > 0
+					}
+				}
+				prioritize = { 1074 }
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = infrastructure
+					level = 1
+					instant_build = yes
+				}
+			}
+						random_owned_controlled_state = {
+				limit = {
+					free_building_slots = {
+						building = infrastructure
+						size > 0
+					}
+				}
+				prioritize = { 497 }
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = infrastructure
+					level = 1
+					instant_build = yes
+				}
+			}
+						random_owned_controlled_state = {
+				limit = {
+					free_building_slots = {
+						building = infrastructure
+						size > 0
+					}
+				}
+				prioritize = { 496 }
+				add_extra_state_shared_building_slots = 1
 				add_building_construction = {
 					type = infrastructure
 					level = 1
@@ -443,7 +537,7 @@ focus_tree = {
 	focus = {
 		id = BRA_steel_mills
 		icon = GFX_focus_BRA_national_steel_company
-		cost = 10
+		cost = 5
 		prerequisite = {
 			focus = BRA_expand_the_railways
 		}
@@ -482,10 +576,18 @@ focus_tree = {
 		}
 		completion_reward = {
 			811 = {
-				add_extra_state_shared_building_slots = 1
+				add_extra_state_shared_building_slots = 2
 				add_building_construction = {
 					type = arms_factory
-					level = 1
+					level = 2
+					instant_build = yes
+				}
+			}
+			505 = {
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = arms_factory
+					level = 2
 					instant_build = yes
 				}
 			}
@@ -520,10 +622,32 @@ focus_tree = {
 					}
 					is_in_home_area = yes
 				}
-				add_extra_state_shared_building_slots = 1
+				add_extra_state_shared_building_slots = 2
 				add_building_construction = {
 					type = industrial_complex
-					level = 1
+					level = 2
+					instant_build = yes
+				}
+			}
+						random_owned_controlled_state = {
+				limit = {
+					NOT = {
+						state = 280
+						state = 495
+						state = 496
+						state = 1071
+					}
+					free_building_slots = {
+						building = industrial_complex
+						size > 0
+						include_locked = yes
+					}
+					is_in_home_area = yes
+				}
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = industrial_complex
+					level = 2
 					instant_build = yes
 				}
 			}
@@ -554,7 +678,7 @@ focus_tree = {
 	focus = {
 		id = BRA_loan_from_us
 		icon = GFX_focus_chi_mission_to_the_us
-		cost = 10
+		cost = 5
 		prerequisite = {
 			focus = BRA_federal_center_for_technological_education
 		}
@@ -599,9 +723,9 @@ focus_tree = {
 			num_of_civilian_factories > 20
 		}	
 		completion_reward = {
-			500 = {add_extra_state_shared_building_slots = 1}
-			811 = {add_extra_state_shared_building_slots = 1}
-			501 = {add_extra_state_shared_building_slots = 1}
+			500 = {add_extra_state_shared_building_slots = 4}
+			811 = {add_extra_state_shared_building_slots = 4}
+			501 = {add_extra_state_shared_building_slots = 4}
 				random_owned_controlled_state = {
 					limit = {
 						free_building_slots = {
@@ -659,7 +783,7 @@ focus_tree = {
 	focus = {
 		id = BRA_madeira_mamore_railroad
 		icon = GFX_focus_generic_tropical_railway
-		cost = 10
+		cost = 5
 		prerequisite = {
 			focus = BRA_expand_the_railways
 		}
@@ -706,9 +830,10 @@ focus_tree = {
 							size > 0
 						}
 					}
+					add_extra_state_shared_building_slots = 3
 					add_building_construction = {
 						type = infrastructure
-						level = 1
+						level = 3
 						instant_build = yes
 					}
 				}	

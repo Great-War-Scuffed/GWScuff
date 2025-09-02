@@ -12,8 +12,9 @@ state={
 		owner=SWI
 		add_core_of=SWI
 		buildings={
-			infrastructure = 2
-			industrial_complex=1
+			infrastructure = 5
+			industrial_complex=2
+			arms_factory = 2
 		}
 	}
 }

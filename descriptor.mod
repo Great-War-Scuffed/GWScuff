@@ -69,5 +69,6 @@ tags={
 	"Technologies"
 }
 version="1.0"
+picture="thumbnail.png"
 name="Great War Scuffed - DEV"
 supported_version="1.16.9"

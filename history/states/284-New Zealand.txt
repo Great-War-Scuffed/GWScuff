@@ -10,9 +10,9 @@ state={
 		owner=NZL
 		add_core_of=NZL
 		buildings={
-			infrastructure = 2
-			industrial_complex=2
-			arms_factory=1
+			infrastructure = 3
+			industrial_complex=3
+			arms_factory=2
 			4543={ naval_base=2 }
 			1814={ naval_base=2 }
 		}

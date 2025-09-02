@@ -2,6 +2,7 @@
  agree_effect_tooltip:0 "If the targeted country §GAgrees§!:\n"
  disagree_effect_tooltip:0 "If the targeted country §RDisagrees§!:\n"
  empty_focus:0 "Focus Tree Unavailable"
+ AUH_annex_hungary:0 "Going Solo"
 
  open_the_political_sphere:0 "Open the [ROOT.getAdjective] Political Sphere"
  open_the_political_sphere_desc:0 "As our nation grapples with modernity, it becomes imperative that we open our political sphere to new ideas and movements. This will ensure a more vibrant, robust, and responsive governance."

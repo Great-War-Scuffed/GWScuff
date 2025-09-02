@@ -11,10 +11,10 @@ state={
 		add_core_of=DEN
 
 		buildings={
-			infrastructure = 4
+			infrastructure = 5
 			industrial_complex=2
 			dockyard=1
-			arms_factory=1
+			arms_factory=2
 			6287={ naval_base=8 }
 			3260={ naval_base=1 }
 		}

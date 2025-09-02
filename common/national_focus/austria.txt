@@ -145,6 +145,97 @@ focus_tree = {
 ##									AUSTRIAN POLITICS
 ######################################################################################################################################
 ######################################################################################################################################
+	focus = {
+		id = AUH_annex_hungary
+		icon = GFX_SOV_an_adaptable_army_ccp_2d_sov_compatibility
+		cost = 5
+		x = 0
+		y = 1
+		prerequisite = {
+			focus = AUH_stabilize_the_empire
+		}
+		mutually_exclusive = {
+			focus = AUH_hungarian_politics
+		}
+		available = {
+			HUN = {
+				NOT = {
+					is_ai=NO
+				}
+			}
+		}
+		relative_position_id = AUH_stabilize_the_empire
+		completion_reward = {
+			add_political_power = 120
+			transfer_state = 70
+			transfer_state = 71
+			transfer_state = 994
+			transfer_state = 1043
+			transfer_state = 73
+			transfer_state = 664
+			transfer_state = 147
+			transfer_state = 155
+			transfer_state = 43
+			transfer_state = 1139
+			transfer_state = 45
+			transfer_state = 764
+			transfer_state = 82
+			transfer_state = 154
+			transfer_state = 1020
+			transfer_state = 83
+			transfer_state = 1044
+			transfer_state = 76
+			transfer_state = 778
+			transfer_state = 84
+			transfer_state = 82
+			transfer_state = 575
+			transfer_state = 109
+			transfer_state = 208
+			transfer_state = 104
+			transfer_state = 513
+			transfer_state = 875
+
+
+			add_state_core = 70
+			add_state_core = 71
+			add_state_core = 994
+			add_state_core = 1043
+			add_state_core = 73
+			add_state_core = 664
+			add_state_core = 147
+			add_state_core = 155
+			add_state_core = 43
+			add_state_core = 1139
+			add_state_core = 45
+			add_state_core = 764
+			add_state_core = 82
+			add_state_core = 154
+			add_state_core = 1020
+			add_state_core = 83
+			add_state_core = 1044
+			add_state_core = 76
+			add_state_core = 778
+			add_state_core = 84
+			add_state_core = 82
+			add_state_core = 575
+			add_state_core = 109
+			add_state_core = 208
+			add_state_core = 104
+			add_state_core = 513
+			add_state_core = 875
+		}
+		search_filters = {
+			FOCUS_FILTER_HISTORICAL
+			FOCUS_FILTER_POLITICAL
+		}
+		ai_will_do = { 
+			factor = 35
+		}
+	}
+
+
+
+
 
 	focus = {
 		id = AUH_austrian_politics
@@ -5766,6 +5857,9 @@ focus = {
 				is_subject_of = AUS
 				has_subject = HUN
 			}
+		}
+				mutually_exclusive = {
+			focus = AUH_annex_hungary
 		}
 		search_filters = {
 			FOCUS_FILTER_HISTORICAL

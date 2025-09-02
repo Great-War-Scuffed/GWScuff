@@ -69,7 +69,7 @@ tags={
 	"Technologies"
 }
 version="1.0"
-picture="thumbnail.jpg"
+picture="thumbnail.png"
 name="The Great War Scuffed - DEV"
 supported_version="1.16.9"
 remote_file_id="3560593695"

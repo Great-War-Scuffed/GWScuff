@@ -47,7 +47,7 @@ focus_tree = {
 		id = CAN_political
 		#A Mari Usque ad Mare
 		icon = GFX_goal_CAN_political
-		cost = 10.00
+		cost = 5
 		x = 8
 		y = 0
 		
@@ -68,7 +68,7 @@ focus_tree = {
 		id = CAN_Americanism
 		#Americanism
 		icon = GFX_goal_CAN_Americanism
-		cost = 10.00
+		cost = 5
 		
 		prerequisite = {
 			focus = CAN_Patriation
@@ -143,7 +143,7 @@ focus_tree = {
 			add_tech_bonus = {
 				category = industry
 				bonus = 0.5
-				uses = 1
+				uses = 2
 				name = CAN_industrial_tree
 			}
 		}
@@ -157,7 +157,7 @@ focus_tree = {
 		id = CAN_army_focus
 		#The Canadian Armed Forces
 		icon = GFX_goal_CAN_army_focus
-		cost = 10.00
+		cost = 5
 		x = 46
 		y = 0
 		
@@ -178,7 +178,7 @@ focus_tree = {
 		id = CAN_navy_focus
 		#A Navy of Our Own
 		icon = GFX_goal_CAN_navy_focus
-		cost = 10.00
+		cost = 5
 		x = 50
 		y = 0
 		
@@ -211,7 +211,7 @@ focus_tree = {
 		id = CAN_air_focus
 		#A New Airforce
 		icon = GFX_goal_CAN_air_focus
-		cost = 10.00
+		cost = 5
 		x = 54
 		y = 0
 		
@@ -231,7 +231,7 @@ focus_tree = {
 		id = CAN_Loyalty
 		#Canadian Loyalty
 		icon = GFX_goal_CAN_Loyalty
-		cost = 10.00
+		cost = 5
 		prerequisite = {
 			focus = CAN_political
 		}
@@ -385,7 +385,7 @@ focus_tree = {
 		id = CAN_seperation
 		#The Canadian Dream
 		icon = GFX_goal_CAN_separation
-		cost = 10
+		cost = 5
 		prerequisite = {
 			focus = CAN_political
 		}
@@ -420,7 +420,7 @@ focus_tree = {
 		id = CAN_Patriation
 		#Immediate Patriation
 		icon = GFX_goal_tfv_sever_ties_with_uk
-		cost = 10.00
+		cost = 5
 		prerequisite = {
 			focus = CAN_seperation
 		}
@@ -449,7 +449,7 @@ focus_tree = {
 		id = CAN_const_monarchy
 		#The British Compromise
 		icon = GFX_goal_CAN_const_monarchy
-		cost = 10.00
+		cost = 5
 		prerequisite = {
 			focus = CAN_Patriation
 		}
@@ -483,7 +483,7 @@ focus_tree = {
 		id = CAN_commonwealth_research
 		#For the Empire
 		icon = GFX_focus_CAN_for_the_empire
-		cost = 10.00
+		cost = 5
 		prerequisite = {
 			focus = CAN_Loyalty
 			focus = CAN_const_monarchy
@@ -833,7 +833,7 @@ focus_tree = {
 		id = CAN_kingdom_own
 		# A Kingdom of our Own!
 		icon = GFX_goal_CAN_kingdom_own
-		cost = 10.00
+		cost = 5
 		prerequisite = {
 			focus = CAN_Patriation
 		}
@@ -1835,7 +1835,7 @@ focus_tree = {
 		id = CAN_lowland_excavation
 		# Lowland Quarries
 		icon = GFX_focus_generic_tungsten
-		cost = 10
+		cost = 5
 		prerequisite = {
 			focus = CAN_excavation
 		}
@@ -1903,7 +1903,7 @@ focus_tree = {
 		id = CAN_grand_excavation
 		# Grand Canadian Excavation
 		icon = GFX_goal_CAN_excavation
-		cost = 10.00
+		cost = 5
 		prerequisite = {
 			focus = CAN_columbian_metals
 		}
@@ -2116,7 +2116,7 @@ focus_tree = {
 		id = CAN_industry_limited
 		# Canadian Industries Limited
 		icon = GFX_goal_CAN_industry_limited
-		cost = 10.00
+		cost = 5
 		prerequisite = {
 			focus = CAN_industrial_tree
 		}
@@ -2131,10 +2131,10 @@ focus_tree = {
 		
 		completion_reward = {
 			276 = {
-				add_extra_state_shared_building_slots = 1
+				add_extra_state_shared_building_slots = 2
 				add_building_construction = {
 					type = industrial_complex
-					level = 1
+					level = 2
 					instant_build = yes
 				}
 			}
@@ -2149,7 +2149,7 @@ focus_tree = {
 		id = CAN_assembly_line
 		# The Assembly Line
 		icon = GFX_goal_generic_construct_civ_factory
-		cost = 10.00
+		cost = 5
 		prerequisite = {
 			focus = CAN_industry_limited
 		}
@@ -2198,18 +2198,18 @@ focus_tree = {
 		}
 		completion_reward = {
 			276 = {
-				add_extra_state_shared_building_slots = 1
+				add_extra_state_shared_building_slots = 2
 				add_building_construction = {
 					type = industrial_complex
-					level = 1
+					level = 2
 					instant_build = yes
 				}
 			}
 			466 = {
-				add_extra_state_shared_building_slots = 1
+				add_extra_state_shared_building_slots = 2
 				add_building_construction = {
 					type = industrial_complex
-					level = 1
+					level = 2
 					instant_build = yes
 				}
 			}
@@ -2235,16 +2235,16 @@ focus_tree = {
 		}
 		
 		available = {
-			has_war = yes
+			#has_war = yes
 		}
 		
 		
 		completion_reward = {
 			468 = {
-				add_extra_state_shared_building_slots = 1
+				add_extra_state_shared_building_slots = 2
 				add_building_construction = {
 					type = arms_factory
-					level = 1
+					level = 2
 					instant_build = yes
 				}
 			}
@@ -2270,10 +2270,10 @@ focus_tree = {
 		
 		completion_reward = {
 			276 = {
-				add_extra_state_shared_building_slots = 1
+				add_extra_state_shared_building_slots = 2
 				add_building_construction = {
 					type = arms_factory
-					level = 1
+					level = 2
 					instant_build = yes
 				}
 			}
@@ -3482,7 +3482,7 @@ focus_tree = {
 	focus = { 
 		id = CAN_fund_paper_mills
 		icon = GFX_goal_generic_construct_civ_factory
-		cost = 10
+		cost = 5
 		x = 2
 		y = 1
 		prerequisite = {
@@ -3493,6 +3493,11 @@ focus_tree = {
 			468 = {
 				add_extra_state_shared_building_slots = 1
 				add_building_construction = {
+    				type = infrastructure
+    				level = 1
+    				instant_build = yes
+				}
+				add_building_construction = {
     				type = industrial_complex
     				level = 1
     				instant_build = yes
@@ -3502,6 +3507,11 @@ focus_tree = {
 				add_extra_state_shared_building_slots = 1
 				add_building_construction = {
     				type = infrastructure
+    				level = 1
+    				instant_build = yes
+				}
+				add_building_construction = {
+    				type = industrial_complex
     				level = 1
     				instant_build = yes
 				}

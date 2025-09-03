@@ -5857,6 +5857,7 @@ focus = {
 				is_subject_of = AUS
 				has_subject = HUN
 			}
+			is_ai=NO
 		}
 				mutually_exclusive = {
 			focus = AUH_annex_hungary

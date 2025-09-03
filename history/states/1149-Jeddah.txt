@@ -8,8 +8,8 @@ state={
 		victory_points = {
 			12883 5
 		}
-		owner = TUR
-		add_core_of = HJZ
+		owner = SAU
+		add_core_of = SAU
 		buildings={
 			infrastructure = 1
 			12883 = {

@@ -119,8 +119,8 @@ ideas = {
 			
 			modifier = {
 				drift_defence_factor = 0.5
-				monthly_population = 0.2
-				research_speed_factor = -0.15
+				weekly_manpower = 200
+				research_speed_factor = -0.05
 			}
 		}
 

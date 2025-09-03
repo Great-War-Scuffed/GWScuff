@@ -13,11 +13,12 @@ state={
 		victory_points = {
 			10786 1 
 		}
-		owner = TUR
-		add_core_of = TUR
-		add_claim_by = JBS
+		owner = SAU
+		add_core_of = SAU
 		buildings = {
-			infrastructure = 0
+			infrastructure = 2
+			industrial_complex = 1
+			arms_factory = 1
 
 		}
 
@@ -27,6 +28,6 @@ state={
 		2090 5024 5093 7995 8004 8060 10748 10786 12727 12870 
 	}
 	manpower=310000
-	buildings_max_level_factor=1.000
+	buildings_max_level_factor=4.000
 	state_category=rural
 }

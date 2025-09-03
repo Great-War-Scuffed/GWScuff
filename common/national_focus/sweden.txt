@@ -36,7 +36,7 @@ focus_tree = {
 	focus = {
 		id = SWE_recovering_from_strike
 		icon = GFX_focus_dead_economy
-		cost = 4.40
+		cost = 5
 		x = 4
 		y = 0
 		completion_reward = {
@@ -47,6 +47,39 @@ focus_tree = {
 			swap_ideas = {
 			    remove_idea = SWE_high_emigration_1
 			    add_idea = SWE_high_emigration_2
+			}
+			138 = {
+				limit = {
+					is_controlled_by = ROOT
+				}
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+				    type = infrastructure
+				    level = 1
+				    instant_build = yes
+				}
+			}
+			140 = {
+				limit = {
+					is_controlled_by = ROOT
+				}
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+				    type = infrastructure
+				    level = 1
+				    instant_build = yes
+				}
+			}
+			139 = {
+				limit = {
+					is_controlled_by = ROOT
+				}
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+				    type = infrastructure
+				    level = 1
+				    instant_build = yes
+				}
 			}
 		}
 		ai_will_do = {
@@ -114,7 +147,7 @@ focus_tree = {
 	focus = {
 		id = SWE_support_the_landsorganisationen
 		icon = GFX_focus_eng_concessions_to_the_trade_unions
-		cost = 6.00
+		cost = 5
 		prerequisite = {
 			focus = SWE_recovering_from_strike
 		}
@@ -150,7 +183,7 @@ focus_tree = {
 	focus = {
 		id = SWE_find_employment
 		icon = GFX_focus_socialist_worker
-		cost = 15.00
+		cost = 5
 		prerequisite = {
 			focus = SWE_support_the_landsorganisationen
 		}
@@ -161,10 +194,10 @@ focus_tree = {
 				limit = {
 					is_controlled_by = ROOT
 				}
-				add_extra_state_shared_building_slots = 1
+				add_extra_state_shared_building_slots = 2
 				add_building_construction = {
 				    type = arms_factory
-				    level = 1
+				    level = 2
 				    instant_build = yes
 				}
 			}
@@ -180,7 +213,7 @@ focus_tree = {
 	focus = {
 		id = SWE_saltsjobaden
 		icon = GFX_focus_spr_masters_of_our_own_fate
-		cost = 10.7
+		cost = 5
 		prerequisite = {
 			focus = SWE_support_the_landsorganisationen
 		}
@@ -193,7 +226,19 @@ focus_tree = {
 		}
 		completion_reward = {
 			remove_ideas = SWE_class_conflict
+			random_state = {
+				limit = {
+					is_controlled_by = ROOT
+				}
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+				    type = industrial_complex
+				    level = 1
+				    instant_build = yes
+				}
+			}
 		}
+		
 		ai_will_do = {
 			base = 100
 		}
@@ -201,7 +246,7 @@ focus_tree = {
 	focus = {
 		id = SWE_encourage_industrialisation
 		icon = GFX_focus_economic_control_red
-		cost = 20.00
+		cost = 5
 		prerequisite = {
 			focus = SWE_find_employment
 		}
@@ -215,10 +260,10 @@ focus_tree = {
 				limit = {
 					is_controlled_by = ROOT
 				}
-				add_extra_state_shared_building_slots = 3
+				add_extra_state_shared_building_slots = 2
 				add_building_construction = {
 				    type = industrial_complex
-				    level = 3
+				    level = 2
 				    instant_build = yes
 				}
 			}
@@ -234,7 +279,7 @@ focus_tree = {
 	focus = {
 		id = SWE_support_saf
 		icon = GFX_focus_control_economy
-		cost = 4.00
+		cost = 5
 		prerequisite = {
 			focus = SWE_recovering_from_strike
 		}
@@ -268,7 +313,7 @@ focus_tree = {
 	focus = {
 		id = SWE_reasons_to_stay
 		icon = GFX_focus_generic_treaty
-		cost = 10.7
+		cost = 5
 		prerequisite = {
 			focus = SWE_support_the_landsorganisationen
 			focus = SWE_support_saf
@@ -282,7 +327,19 @@ focus_tree = {
 		}
 		completion_reward = {
 			remove_ideas = SWE_high_emigration_2
+					random_state = {
+				limit = {
+					is_controlled_by = ROOT
+				}
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+				    type = industrial_complex
+				    level = 1
+				    instant_build = yes
+				}
+			}
 		}
+
 		ai_will_do = {
 			base = 100
 		}
@@ -293,7 +350,7 @@ focus_tree = {
 	focus = {
 		id = SWE_reimburse_employers
 		icon = GFX_focus_industry_profit
-		cost = 15.00
+		cost = 5
 		prerequisite = {
 			focus = SWE_support_saf
 		}
@@ -304,10 +361,10 @@ focus_tree = {
 				limit = {
 					is_controlled_by = ROOT
 				}
-				add_extra_state_shared_building_slots = 1
+				add_extra_state_shared_building_slots = 2
 				add_building_construction = {
 				    type = industrial_complex
-				    level = 1
+				    level = 2
 				    instant_build = yes
 				}
 			}
@@ -326,7 +383,7 @@ focus_tree = {
 	focus = {
 		id = SWE_woo_army
 		icon = GFX_focus_generic_little_entente
-		cost = 20.00
+		cost = 5
 		prerequisite = {
 			focus = SWE_reimburse_employers
 		}
@@ -367,7 +424,7 @@ focus_tree = {
 	focus = {
 		id = SWE_recovery_complete
 		icon = GFX_focus_generic_economic_profit
-		cost = 20.00
+		cost = 10
 		prerequisite = {
 			focus = SWE_woo_army
 			focus = SWE_encourage_industrialisation
@@ -393,7 +450,7 @@ focus_tree = {
 	focus = {
 		id = SWE_allying_socialists
 		icon = GFX_focus_red_rose
-		cost = 10.00
+		cost = 5
 		prerequisite = {
 			focus = SWE_staaff
 		}
@@ -422,7 +479,7 @@ focus_tree = {
 	focus = {
 		id = SWE_shun_socialism
 		icon = GFX_focus_generic_suppress_socdems
-		cost = 10.00
+		cost = 5
 		prerequisite = {
 			focus = SWE_staaff
 		}
@@ -444,7 +501,7 @@ focus_tree = {
 	focus = {
 		id = SWE_slash_military_spending
 		icon = GFX_focus_split_helmet
-		cost = 10.00
+		cost = 5
 		prerequisite = {
 			focus = SWE_shun_socialism
 			focus = SWE_allying_socialists
@@ -1851,7 +1908,7 @@ focus_tree = {
 	focus = {
 		id = SWE_doctrine_effort
 		icon = GFX_goal_rhineland
-		cost = 10
+		cost = 5
 		prerequisite = {
 			focus = SWE_boosting_army
 		}
@@ -1890,10 +1947,10 @@ focus_tree = {
 				limit = {
 					is_controlled_by = ROOT
 				}
-				add_extra_state_shared_building_slots = 1
+				add_extra_state_shared_building_slots = 3
 				add_building_construction = {
 				    type = arms_factory
-				    level = 1
+				    level = 3
 				    instant_build = yes
 				}
 			}

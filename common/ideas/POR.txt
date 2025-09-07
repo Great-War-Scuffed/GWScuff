@@ -41,9 +41,9 @@ ideas={
 			removal_cost = -1
 			
 			modifier = {
-				political_power_gain = -0.5
-				stability_factor = -0.15
-				production_speed_buildings_factor = -0.20	
+				#political_power_gain = -0.5
+				stability_factor = -0.05
+				#production_speed_buildings_factor = -0.20	
 			}
 		}
 		POR_unreliable_army = {

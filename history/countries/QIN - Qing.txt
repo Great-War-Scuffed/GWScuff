@@ -11,6 +11,8 @@ set_war_support = 0.19
 set_convoys = 64
 
 give_military_access = GER #Qingdao–Jinan Railway
+give_military_access = RUS
+give_military_access = JAP
 
 diplomatic_relation = {
 	country = CER
@@ -28,6 +30,7 @@ recruit_character = QIN_zaifeng
 # recruit_character = CHI_yuan_shikai
 # recruit_character = CHI_sun_yatsen
 recruit_character = QIN_kang_youwei
+recruit_character = CHI_carsun_chang
 
 # qing loyalist
 recruit_character = QIN_yikuang

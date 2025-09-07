@@ -65,7 +65,7 @@ focus_tree = {
 	focus = {
 		id = RUS_convene_iv_state_duma
 		icon = GFX_focus_rus_duma_elections
-		cost = 10
+		cost = 5
 		x = 7
 		y = 0
 		mutually_exclusive = {
@@ -165,7 +165,7 @@ focus_tree = {
 	focus = {
 		id = RUS_20_years_of_peace
 		icon = GFX_goal_generic_construction2
-		cost = 10
+		cost = 5
 		x = 23
 		y = 0
 		completion_reward = {
@@ -190,7 +190,7 @@ focus_tree = {
 	focus = {
 		id = RUS_ten_years_plan
 		icon = GFX_goal_generic_navy_doctrines_tactics
-		cost = 10
+		cost = 5
 		x = 32
 		y = 0
 		completion_reward = {
@@ -685,7 +685,7 @@ focus_tree = {
 	focus = {
 		id = RUS_resist_the_duma
 		icon = GFX_focus_rus_loyal_duma
-		cost = 10
+		cost = 5
 		mutually_exclusive = {
 			focus = RUS_convene_iv_state_duma
 		}
@@ -713,7 +713,7 @@ focus_tree = {
 	focus = {
 		id = RUS_union_of_russian_people
 		icon = GFX_focus_RUS_black_hundreds
-		cost = 10
+		cost = 5
 		prerequisite = {
 			focus = RUS_resist_the_duma
 		}
@@ -1318,7 +1318,7 @@ focus_tree = {
 	focus = {
 		id = RUS_entrepreneurship
 		icon = GFX_focus_eng_concessions_to_the_trade_unions
-		cost = 10
+		cost = 5
 		prerequisite = {
 			focus = RUS_20_years_of_peace
 		}
@@ -1340,7 +1340,7 @@ focus_tree = {
 	focus = {
 		id = RUS_nobel_partnership
 		icon = GFX_goal_generic_construction2
-		cost = 10
+		cost = 5
 		prerequisite = {
 			focus = RUS_entrepreneurship
 		}
@@ -1360,7 +1360,7 @@ focus_tree = {
 	focus = {
 		id = RUS_british_capital
 		icon = GFX_goal_generic_positive_trade_relations
-		cost = 10
+		cost = 5
 		prerequisite = {
 			focus = RUS_nobel_partnership
 		}
@@ -1381,7 +1381,7 @@ focus_tree = {
 	focus = {
 		id = RUS_vogau
 		icon = GFX_goal_generic_neutrality_focus
-		cost = 10
+		cost = 5
 		prerequisite = {
 			focus = RUS_entrepreneurship
 		}
@@ -1401,7 +1401,7 @@ focus_tree = {
 	focus = {
 		id = RUS_german_capital
 		icon = GFX_goal_generic_positive_trade_relations
-		cost = 10
+		cost = 5
 		prerequisite = {
 			focus = RUS_vogau
 		}
@@ -1416,7 +1416,7 @@ focus_tree = {
 			add_stability = 0.05
 			add_offsite_building = {
 				type = arms_factory
-				level = 1
+				level = 2
 			}
 		}
 		ai_will_do = {
@@ -1430,7 +1430,7 @@ focus_tree = {
 	focus = {
 		id = RUS_north_caucasus_oil_basin
 		icon = GFX_goal_generic_oil_refinery
-		cost = 10
+		cost = 5
 		prerequisite = {
 			focus = RUS_german_capital
 			focus = RUS_british_capital
@@ -1456,7 +1456,7 @@ focus_tree = {
 	focus = {
 		id = RUS_machine_building_association
 		icon = GFX_goal_generic_production2
-		cost = 10
+		cost = 5
 		prerequisite = {
 			focus = RUS_20_years_of_peace
 		}
@@ -1480,7 +1480,7 @@ focus_tree = {
 	focus = {
 		id = RUS_tula_armor_plant
 		icon = GFX_goal_generic_construct_mil_factory
-		cost = 10
+		cost = 5
 		prerequisite = {
 			focus = RUS_machine_building_association
 		}
@@ -1509,7 +1509,7 @@ focus_tree = {
 	focus = {
 		id = RUS_kazan_powder_factory
 		icon = GFX_goal_generic_construct_mil_factory
-		cost = 10
+		cost = 5
 		prerequisite = {
 			focus = RUS_tula_armor_plant
 		}
@@ -1567,7 +1567,7 @@ focus_tree = {
 	focus = {
 		id = RUS_Elektrostal
 		icon = GFX_goal_generic_construct_civ_factory
-		cost = 10
+		cost = 5
 		prerequisite = {
 			focus = RUS_AMO
 		}
@@ -1584,10 +1584,10 @@ focus_tree = {
 				category = electronics
 			}
 			219 = {
-				add_extra_state_shared_building_slots = 1
+				add_extra_state_shared_building_slots = 2
 				add_building_construction = {
 					type = industrial_complex
-					level = 1
+					level = 2
 					instant_build = yes
 				}
 			}
@@ -1602,7 +1602,7 @@ focus_tree = {
 	focus = {
 		id = RUS_extension_of_the_putilov_factory
 		icon = GFX_focus_generic_industry_2
-		cost = 10
+		cost = 5
 		prerequisite = {
 			focus = RUS_kazan_powder_factory
 		}
@@ -1633,7 +1633,7 @@ focus_tree = {
 	focus = {
 		id = RUS_complete_stolypin_reform
 		icon = GFX_focus_generic_wheat
-		cost = 20
+		cost = 10
 		prerequisite = {
 			focus = RUS_extension_of_the_putilov_factory
 		}
@@ -1707,6 +1707,14 @@ focus_tree = {
 					instant_build = yes
 				}
 			}
+			1012 = {
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = industrial_complex
+					level = 2
+					instant_build = yes
+				}
+			}
 		}
 		ai_will_do = {
 			factor = 1
@@ -1719,7 +1727,7 @@ focus_tree = {
 	focus = {
 		id = RUS_modernization_of_the_central_railways
 		icon = GFX_focus_forest_railway
-		cost = 10
+		cost = 5
 		prerequisite = {
 			focus = RUS_tver_railway_plant
 		}
@@ -1782,7 +1790,7 @@ focus_tree = {
 	focus = {
 		id = RUS_north_shipyard
 		icon = GFX_goal_generic_construct_naval_dockyard
-		cost = 7
+		cost = 5
 		prerequisite = {
 			focus = RUS_ten_years_plan
 		}
@@ -1805,7 +1813,7 @@ focus_tree = {
 	focus = {
 		id = RUS_development_of_the_north
 		icon = GFX_focus_generic_train
-		cost = 7
+		cost = 5
 		prerequisite = {
 			focus = RUS_north_shipyard
 		}
@@ -1878,7 +1886,7 @@ focus_tree = {
 	focus = {
 		id = RUS_modernize_transsib
 		icon = GFX_focus_Generic_Develop_Rail_Network
-		cost = 10
+		cost = 5
 		prerequisite = {
 			focus = RUS_modernization_of_the_central_railways
 			focus = RUS_development_of_the_north
@@ -1927,7 +1935,7 @@ focus_tree = {
 		}
 		completion_reward = {
 			build_railway = {
-				level = 1
+				level = 5
 				build_only_on_allied = yes
 				fallback = yes
 				path = { 9292 1327 1292 10542  }
@@ -1935,7 +1943,7 @@ focus_tree = {
 				target_province = 10542
 			}
 			build_railway = {
-				level = 1
+				level = 5
 				build_only_on_allied = yes
 				fallback = yes
 				path = { 10542 1775 1294 12521 4780 7800 1709 10696 }
@@ -1943,7 +1951,7 @@ focus_tree = {
 				target_province = 10696
 			}
 			build_railway = {
-				level = 1
+				level = 5
 				build_only_on_allied = yes
 				fallback = yes
 				path = { 10696 12679 1733 1860 7825 7274 }
@@ -1951,7 +1959,7 @@ focus_tree = {
 				target_province = 7274
 			}
 			build_railway = {
-				level = 1
+				level = 5
 				build_only_on_allied = yes
 				fallback = yes
 				path = { 7274 4866 7757 12631 7886 10712 10639 12691 }
@@ -1959,7 +1967,7 @@ focus_tree = {
 				target_province = 12691
 			}
 			build_railway = {
-				level = 1
+				level = 5
 				build_only_on_allied = yes
 				fallback = yes
 				path = { 12691 12621 1876 1813 10549 10661 12540 4797 }
@@ -1967,7 +1975,7 @@ focus_tree = {
 				target_province = 4797
 			}
 			build_railway = {
-				level = 1
+				level = 5
 				build_only_on_allied = yes
 				fallback = yes
 				path = { 4797 1762 4837 10528 4766 12507 7860 1672 12641 }
@@ -1975,7 +1983,7 @@ focus_tree = {
 				target_province = 12641
 			}
 			build_railway = {
-				level = 1
+				level = 5
 				build_only_on_allied = yes
 				fallback = yes
 				path = { 4797 1762 4837 10528 4766 12507 7860 1672 12641 }
@@ -1983,13 +1991,21 @@ focus_tree = {
 				target_province = 12641
 			}
 			build_railway = {
-				level = 1
+				level = 5
 				build_only_on_allied = yes
 				fallback = yes
 				path = { 12641 10574 }
 				start_province = 12641
 				target_province = 10574
 			}
+						 build_railway = {
+			 	level = 5
+			 	build_only_on_allied = yes
+			 	fallback = yes
+			 	path = { 10574 12556 12543 7851 10678 12657 7763 4725 10655 7801 10722 7672 4805 12192 12189 }
+			 	start_province = 10574
+			 	target_province = 12189
+			 }	
 			unlock_decision_tooltip = RUS_build_amur_railway
 			# it's not finished yet until 1930s irl
 			# build_railway = {

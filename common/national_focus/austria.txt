@@ -533,6 +533,7 @@ focus_tree = {
 		}
 		prerequisite = {
 			focus = AUH_invalidate_croatian_constitution
+			focus = AUH_annex_hungary
 		}
 		relative_position_id = AUH_integration_of_southern_croatia
 		completion_reward = {	
@@ -852,9 +853,7 @@ focus_tree = {
 		prerequisite = {
 			focus = AUH_integration_of_southern_croatia
 		}
-		prerequisite = {
-			focus = AUH_invalidate_croatian_constitution
-		}
+
 		search_filters = {
 			FOCUS_FILTER_HISTORICAL
 			FOCUS_FILTER_INTERNAL_AFFAIRS

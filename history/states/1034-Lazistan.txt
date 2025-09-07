@@ -12,6 +12,9 @@ state={
         add_claim_by = GEO
 		buildings={
 			infrastructure = 1
+			11753 = {
+				bunker = 5
+			}
 		}
 	}
 	provinces={ 

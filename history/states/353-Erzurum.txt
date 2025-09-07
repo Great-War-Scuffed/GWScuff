@@ -13,6 +13,15 @@ state={
 		add_core_of=ARM
 		buildings={
 			infrastructure = 1
+			6976 = {
+				bunker = 5
+			}
+			652 = {
+				bunker = 5
+			}
+			4583 = {
+				bunker = 5
+			}
 		}
 	}
 	provinces={ 

@@ -383,6 +383,18 @@ From;To;Type;Through;start_x;start_y;stop_x;stop_y;adjacency_rule_name;Comment
 3665;11605;impassable;-1;-1;-1;-1;-1;;Romania
 6709;12643;impassable;-1;-1;-1;-1;-1;;Romania
 
+3711;1897;impassable;-1;-1;-1;-1;-1;;russia ottoman
+4477;4545;impassable;-1;-1;-1;-1;-1;;russia ottoman
+4477;4614;impassable;-1;-1;-1;-1;-1;;russia ottoman
+10838;4614;impassable;-1;-1;-1;-1;-1;;russia ottoman
+10838;12434;impassable;-1;-1;-1;-1;-1;;russia ottoman
+672;6674;impassable;-1;-1;-1;-1;-1;;russia ottoman
+11617;6674;impassable;-1;-1;-1;-1;-1;;russia ottoman
+11617;11599;impassable;-1;-1;-1;-1;-1;;russia ottoman
+10454;12434;impassable;-1;-1;-1;-1;-1;;russia ottoman
+10454;4473;impassable;-1;-1;-1;-1;-1;;russia ottoman
+4901;4473;impassable;-1;-1;-1;-1;-1;;russia ottoman
+
 9458;6489;sea;2895;-1;-1;-1;-1;;Isle of Wight
 6363;9322;sea;8340;-1;-1;-1;-1;;Anglesey
 3314;6336;sea;8622;2885;1579;2890;1582;;Vlie

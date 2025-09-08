@@ -2,7 +2,7 @@
 
 shared_focus = {
 	id = GEN_ARMY_expand_the_general_staff
-	icon = GFX_goal_ITA_arditi
+	icon = GFX_focus_RAJ_indian_gentlemen_offcers
 	x = 10
 	y = 0
 	cost = 5
@@ -32,7 +32,7 @@ shared_focus = {
 
 shared_focus = {
 	id = GEN_ARMY_organize_army_inspection
-	icon = GFX_goal_generic_army
+	icon = GFX_focus_RAJ_military_into_the_workforce
 	x = -12
 	y = 0
 	relative_position_id = GEN_ARMY_expand_the_general_staff
@@ -51,7 +51,7 @@ shared_focus = {
 
 shared_focus = {
 	id = GEN_ARMY_mobilize_the_reserves
-	icon = GFX_goal_generic_army_mobilization
+	icon = GFX_focus_CONGO_congolese_generals
 	prerequisite = { focus = GEN_ARMY_organize_army_inspection }
 	x = -1
 	y = 1
@@ -73,7 +73,7 @@ shared_focus = {
 
 shared_focus = {
 	id = GEN_ARMY_field_hospital_initiative
-	icon = GFX_goal_medicine
+	icon = GFX_focus_RAJ_legalize_the_opium_trade
 	prerequisite = { focus = GEN_ARMY_mobilize_the_reserves }
 	x = -1
 	y = 1
@@ -97,7 +97,7 @@ shared_focus = {
 
 shared_focus = {
 	id = GEN_ARMY_desperate_measures
-	icon = GFX_goal_generic_recruitment
+	icon = GFX_focus_generic_annex_country_2
 	prerequisite = { focus = GEN_ARMY_mobilize_the_reserves }
 	x = 0
 	y = 2
@@ -126,7 +126,7 @@ shared_focus = {
 
 shared_focus = {
 	id = GEN_ARMY_demids_legacy
-	icon = GFX_goal_mechanized_offensive
+	icon = GFX_focus_SWE_per_albin_bus
 	prerequisite = { focus = GEN_ARMY_organize_army_inspection }
 	x = 0
 	y = 4
@@ -150,7 +150,7 @@ shared_focus = {
 
 shared_focus = {
 	id = GEN_ARMY_improve_coordination_capabilities
-	icon = GFX_goal_generic_radio_development_2
+	icon = GFX_focus_SWE_varnplikt
 	prerequisite = { focus = GEN_ARMY_demids_legacy }
 	x = -1
 	y = 1
@@ -198,7 +198,7 @@ shared_focus = {
 
 shared_focus = {
 	id = GEN_ARMY_foundation_for_special_task_battalion
-	icon = GFX_goal_generic_army_elite
+	icon = GFX_focus_eng_special_air_service
 	prerequisite = { focus = GEN_ARMY_organize_army_inspection }
 	prerequisite = { focus = GEN_ARMY_expand_the_general_staff }
 	x = 2
@@ -246,7 +246,7 @@ shared_focus = {
 
 shared_focus = {
 	id = GEN_ARMY_equipment_recovery_teams
-	icon = GFX_goal_ammunitions
+	icon = GFX_focus_focus_fra_maquis
 	prerequisite = { focus = GEN_ARMY_mountainous_specialization focus = GEN_ARMY_gobi_training_facilities }
 	x = 1
 	y = 1
@@ -292,7 +292,7 @@ shared_focus = {
 
 shared_focus = {
 	id = GEN_ARMY_ratify_battleplans
-	icon = GFX_goal_generic_secret_documents
+	icon = GFX_focus_SWE_hedgehog_defense
 	prerequisite = { focus = GEN_ARMY_expand_the_general_staff }
 	prerequisite = { focus = GEN_ARMY_organize_army_inspection }
 	x = -7
@@ -311,7 +311,7 @@ shared_focus = {
 
 shared_focus = {
 	id = GEN_ARMY_old_heritage
-	icon = GFX_focus_generic_army_modernizations
+	icon = GFX_focus_RAJ_indian_gurkhas
 	prerequisite = { focus = GEN_ARMY_expand_the_general_staff }
 	x = -2
 	y = 1
@@ -344,7 +344,7 @@ shared_focus = {
 
 shared_focus = {
 	id = GEN_ARMY_soldier_devotion
-	icon = GFX_goal_generic_combined_arms_artillery_antiair_antitank
+	icon = GFX_focus_generic_urban_training
 	prerequisite = { focus = GEN_ARMY_expand_the_general_staff }
 	x = 0
 	y = 1
@@ -410,7 +410,7 @@ shared_focus = {
 
 shared_focus = {
 	id = GEN_ARMY_support_old_officers_corps
-	icon = GFX_goal_infantry_flames
+	icon = GFX_focus_RAJ_indianisation_of_army
 	prerequisite = { focus = GEN_ARMY_expand_the_general_staff }
 	prerequisite = { focus = GEN_ARMY_organize_army_inspection }
 	x = -5
@@ -472,7 +472,7 @@ shared_focus = {
 
 shared_focus = {
 	id = GEN_ARMY_revive_forgotten_doctrines
-	icon = GFX_goal_assymetric_doctrine
+	icon = GFX_focus_RAJ_a_private_military
 	prerequisite = { focus = GEN_ARMY_support_old_officers_corps }
 	x = -3
 	y = 1
@@ -566,7 +566,7 @@ shared_focus = {
 
 shared_focus = {
 	id = GEN_ARMY_ideological_loyalty_of_the_masses
-	icon = GFX_goal_airplane_hunt
+	icon = GFX_focus_generic_air_defense
 	prerequisite = { focus = GEN_ARMY_improve_militia_formations }
 	x = 0
 	y = 1
@@ -584,7 +584,7 @@ shared_focus = {
 
 shared_focus = {
 	id = GEN_ARMY_good_old_new_ways
-	icon = GFX_goal_ussr_revolt
+	icon = GFX_focus_ICE_thungur_hnifur
 	prerequisite = { focus = GEN_ARMY_ideological_loyalty_of_the_masses }
 	prerequisite = { focus = GEN_ARMY_expand_universal_military_act }
 	x = -1
@@ -607,7 +607,7 @@ shared_focus = {
 
 shared_focus = {
 	id = GEN_ARMY_rely_on_soviet_tactics
-	icon = GFX_goal_mass_assault
+	icon = GFX_focus_AFG_adopt_nufus
 	prerequisite = { focus = GEN_ARMY_support_old_officers_corps }
 	x = 1
 	y = 1
@@ -638,7 +638,7 @@ shared_focus = {
 
 shared_focus = {
 	id = GEN_ARMY_weapon_prototype_development
-	icon = GFX_goal_tank_hunt
+	icon = GFX_focus_generic_anti_tank_guns
 	prerequisite = { focus = GEN_ARMY_rely_on_soviet_tactics }
 	x = -1
 	y = 1
@@ -684,7 +684,7 @@ shared_focus = {
 
 shared_focus = {
 	id = GEN_ARMY_focus_on_infantry
-	icon = GFX_goal_infantry_offensive
+	icon = GFX_focus_ETH_freedom_at_gunpoint
 	prerequisite = { focus = GEN_ARMY_rely_on_soviet_tactics }
 	x = 1
 	y = 1
@@ -696,49 +696,50 @@ shared_focus = {
 
 	completion_reward = {
 		army_experience = 25
-		if = {
-			limit = {
-				original_tag = ROM
-			}
-			ROM_gheorghe_manoliu = {
-				add_field_marshal_role = {
-					skill = 4
-					attack_skill = 3
-					defense_skill = 4
-					planning_skill = 2
-					logistics_skill = 3
-				}
-				add_unit_leader_trait = inflexible_strategist
-				add_unit_leader_trait = career_officer
-			}
-		}
-		if = {
-			limit = {
-				original_tag = RAJ
-			}
-			RAJ_frank_messervy = {
-				add_general_role = {
-					skill = 3
-					attack_skill = 2
-					defense_skill = 2
-					planning_skill = 3
-					logistics_skill = 3
-				}
-				add_unit_leader_trait = inflexible_strategist
-				add_unit_leader_trait = career_officer
-			}
-			RAJ_lakshmi_sahgal = {
-				add_general_role = {
-					skill = 3
-					attack_skill = 2
-					defense_skill = 4
-					planning_skill = 2
-					logistics_skill = 1
-				}
-				add_unit_leader_trait = inflexible_strategist
-				add_unit_leader_trait = career_officer
-			}
-		}
+		#if = {
+		#	limit = {
+		#		original_tag = ROM
+		#	}
+		#	ROM_gheorghe_manoliu = {
+		#		add_field_marshal_role = {
+		#			skill = 4
+		#			attack_skill = 3
+		#			defense_skill = 4
+		#			planning_skill = 2
+		#			logistics_skill = 3
+		#		}
+		#		add_unit_leader_trait = inflexible_strategist
+		#		add_unit_leader_trait = career_officer
+		#	}
+		#}
+		#if = {
+		#	limit = {
+		#		original_tag = RAJ
+		#	}
+		#	RAJ_frank_messervy = {
+		#		add_general_role = {
+		#			skill = 3
+		#			attack_skill = 2
+		#			defense_skill = 2
+		#			planning_skill = 3
+		#			logistics_skill = 3
+		#		}
+		#		add_unit_leader_trait = inflexible_strategist
+		#		add_unit_leader_trait = career_officer
+		#	}
+		#	RAJ_lakshmi_sahgal = {
+		#		add_general_role = {
+		#			skill = 3
+		#			attack_skill = 2
+		#			defense_skill = 4
+		#			planning_skill = 2
+		#			logistics_skill = 1
+		#		}
+		#		add_unit_leader_trait = inflexible_strategist
+		#		add_unit_leader_trait = career_officer
+		#	}
+		#}
+		add_ideas = military_youth_focus
 
 		
 
@@ -748,7 +749,7 @@ shared_focus = {
 
 shared_focus = {
 	id = GEN_ARMY_the_inevitable_counterblow
-	icon = GFX_goal_defensive_position2
+	icon = GFX_focus_generic_strike_at_democracy1
 	prerequisite = { focus = GEN_ARMY_focus_on_infantry }
 	x = 0
 	y = 1
@@ -788,7 +789,7 @@ shared_focus = {
 
 shared_focus = {
 	id = GEN_ARMY_the_grand_stratagem
-	icon = GFX_goal_grand_battleplan
+	icon = GFX_focus_RAJ_lions_of_the_great_war
 	prerequisite = { focus = GEN_ARMY_favour_young_officers focus = GEN_ARMY_support_old_officers_corps }
 	x = 5
 	y = 1
@@ -862,7 +863,7 @@ shared_focus = {
 
 shared_focus = {
 	id = GEN_ARMY_support_tactical_decision_freedom
-	icon = GFX_goal_plan
+	icon = GFX_focus_generic_subjugation
 	prerequisite = { focus = GEN_ARMY_the_grand_stratagem }
 	x = 1
 	y = 1
@@ -939,7 +940,7 @@ shared_focus = {
 
 shared_focus = {
 	id = GEN_ARMY_adopt_tsogs_methods
-	icon = GFX_goal_superior_firepower
+	icon = GFX_focus_RAJ_mountain_guns
 	prerequisite = { focus = GEN_ARMY_favour_young_officers }
 	x = -1
 	y = 1
@@ -970,7 +971,7 @@ shared_focus = {
 
 shared_focus = {
 	id = GEN_ARMY_investigate_improvement_opportunities
-	icon = GFX_goal_generic_artillery_improved
+	icon = GFX_focus_wonderweapons
 	prerequisite = { focus = GEN_ARMY_adopt_tsogs_methods }
 	x = -1
 	y = 1
@@ -1033,7 +1034,7 @@ shared_focus = {
 
 shared_focus = {
 	id = GEN_ARMY_combined_arms_operations
-	icon = GFX_goal_CAN_land_mattress
+	icon = GFX_focus_generic_combined_arms
 	prerequisite = { focus = GEN_ARMY_strengthen_air_land_links }
 	x = 0
 	y = 1
@@ -1055,7 +1056,7 @@ shared_focus = {
 
 shared_focus = {
 	id = GEN_ARMY_the_ultimate_weapon
-	icon = GFX_goal_generic_combined_arms_artillery_antiair_antitank
+	icon = GFX_focus_FIN_coastal_defense
 	prerequisite = { focus = GEN_ARMY_feature_compact_mortar_designs }
 	prerequisite = { focus = GEN_ARMY_combined_arms_operations }
 	x = 1
@@ -1074,7 +1075,7 @@ shared_focus = {
 
 shared_focus = {
 	id = GEN_ARMY_experimental_mobility
-	icon = GFX_goal_mobile_warfare
+	icon = GFX_focus_generic_tank_assault 
 	prerequisite = { focus = GEN_ARMY_favour_young_officers }
 	x = 3
 	y = 1
@@ -1105,7 +1106,7 @@ shared_focus = {
 
 shared_focus = {
 	id = GEN_ARMY_study_motorized_equipment
-	icon = GFX_goal_generic_modernizing_the_cavalry
+	icon = GFX_focus_generic_mechanized
 	prerequisite = { focus = GEN_ARMY_experimental_mobility }
 	x = -1
 	y = 1
@@ -1167,7 +1168,7 @@ shared_focus = {
 
 shared_focus = {
 	id = GEN_ARMY_utilize_new_designs_strength
-	icon = GFX_goal_generic_heavy_armour_russian
+	icon = GFX_focus_GER_german_army_invincible
 	prerequisite = { focus = GEN_ARMY_acquire_foreign_tank_designs }
 	x = 0
 	y = 1
@@ -1190,7 +1191,7 @@ shared_focus = {
 
 shared_focus = {
 	id = GEN_ARMY_train_specialized_crews
-	icon = GFX_focus_NZL_bob_semple_tank
+	icon = GFX_focus_BEL_flooded_tank_barriers
 	prerequisite = { focus = GEN_ARMY_utilize_new_designs_strength }
 	prerequisite = { focus = GEN_ARMY_specialization_on_vehicle_production }
 	x = -1

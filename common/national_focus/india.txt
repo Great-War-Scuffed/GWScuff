@@ -688,7 +688,7 @@ add_building_construction = {
 
 	focus = {
 		id = RAJ_qandhis_vision
-		icon = GFX_focus_SWE_form_rfsu
+		icon = GFX_focus_RAJ_mahatma
 		prerequisite = { focus = RAJ_quit_india }
 		x = 0
 		y = 1
@@ -1117,7 +1117,7 @@ add_building_construction = {
 
 	focus = {
 		id = RAJ_subas_bose_way
-		icon = GFX_goal_RAJ_dreams_of_ahand_hindustan
+		icon = GFX_focus_RAJ_hindutava
 		prerequisite = { focus = RAJ_abolish_the_caste_system }
 		mutually_exclusive = { focus = RAJ_quit_india focus = RAJ_the_rise_of_communism }
 		x = 8
@@ -1526,7 +1526,7 @@ relative_position_id = RAJ_gupt_pulis
 
 	focus = {
 		id = RAJ_strengthen_the_caste_system
-		icon = GFX_goal_ENG_imperial_conscription
+		icon = GFX_focus_RAJ_his_majestys_loyal_government
 		prerequisite = { focus = RAJ_expansion_of_colonial_powers }
 		x = 0
 		y = 1
@@ -1594,7 +1594,7 @@ relative_position_id = RAJ_gupt_pulis
 
 	focus = {
 		id = RAJ_arrest_political_leaders
-		icon = GFX_goal_generic_citizens
+		icon = GFX_focus_RAJ_all_india_forward_bloc
 		prerequisite = { focus = RAJ_forced_mandatory_service }
 		x = 0
 		y = 1

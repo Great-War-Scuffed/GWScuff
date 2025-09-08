@@ -8144,16 +8144,20 @@ formable_nations_timurids = {
 				AND = {
 					
 					count_triggers = {
-						amount = 9
+						amount = 12
+						851 = { is_controlled_by = ROOT }
 						3 = { is_controlled_by = ROOT }
 						151 = { is_controlled_by = ROOT }
-						845 = { is_controlled_by = ROOT }
-						846 = { is_controlled_by = ROOT }
-						847 = { is_controlled_by = ROOT }
-						4 = { is_controlled_by = ROOT }
-						152 = { is_controlled_by = ROOT }
+						850 = { is_controlled_by = ROOT }
+						1195 = { is_controlled_by = ROOT }
 						153 = { is_controlled_by = ROOT }
-						848 = { is_controlled_by = ROOT }
+						39 = { is_controlled_by = ROOT }
+						1190 = { is_controlled_by = ROOT }
+						1191 = { is_controlled_by = ROOT }
+						1194 = { is_controlled_by = ROOT }
+						152 = { is_controlled_by = ROOT }
+						4 = { is_controlled_by = ROOT }
+						
 					}
 				}
 				AND = {
@@ -8169,19 +8173,20 @@ formable_nations_timurids = {
 			set_capital = { state = 4 }
 			custom_effect_tooltip = core_land
 			hidden_effect = { sound_effect = complete_focus  set_country_flag = unform_available
-				3 = { add_core_of = ROOT }
-				151 = { add_core_of = ROOT }
-				845 = { add_core_of = ROOT }
-				846 = { add_core_of = ROOT }
-				847 = { add_core_of = ROOT }
-				4 = { add_core_of = ROOT }
-				152 = { add_core_of = ROOT }
-				153 = { add_core_of = ROOT }
-				848 = { add_core_of = ROOT }
 			}
-			39 = { add_core_of = ROOT }
+
+			851 = { add_core_of = ROOT }
+			3 = { add_core_of = ROOT }
+			151 = { add_core_of = ROOT }
 			850 = { add_core_of = ROOT }
-			52 = { add_core_of = ROOT }
+			1195 = { add_core_of = ROOT }
+			153 = { add_core_of = ROOT }
+			39 = { add_core_of = ROOT }
+			1190 = { add_core_of = ROOT }
+			1191 = { add_core_of = ROOT }
+			1194 = { add_core_of = ROOT }
+			152 = { add_core_of = ROOT }
+			4 = { add_core_of = ROOT }
 		}
 	}
 	formable_nations_greater_croatia = {

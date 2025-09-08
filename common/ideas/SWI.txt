@@ -25,7 +25,7 @@ ideas = {
 				ai_get_ally_desire_factor = -100
 				army_chief_cost_factor = 2 
 				opinion_gain_monthly_factor = -0.2
-				enemy_justify_war_goal_time = 5
+				#enemy_justify_war_goal_time = 5
 			}
 		}
 	}

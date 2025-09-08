@@ -8549,6 +8549,7 @@ formable_nations_timurids = {
 				original_tag = CZE
 				original_tag = ROM
 				original_tag = MOL
+				original_tag = AUS
 			}
 			NOT = { has_global_flag = modern_country }
 		}
@@ -8599,6 +8600,7 @@ formable_nations_timurids = {
 				tag = ROM
 				tag = HUN
 				tag = CZE
+				tag = AUS
 			}
 			custom_trigger_tooltip = { tooltip = not_already_existing_tt NOT = { any_country = { has_cosmetic_tag = FORM_CAP } } }
 		}

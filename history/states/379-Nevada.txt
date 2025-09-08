@@ -15,6 +15,7 @@ state={
 		add_core_of=USA
 		buildings={
 			infrastructure = 2
+			industrial_complex = 1
 		}
 		set_state_flag = wild_west_state
 		add_province_modifier = {

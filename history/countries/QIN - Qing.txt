@@ -125,20 +125,20 @@ every_character = {
 		communism = 0
 	}
 	add_ideas = {
-		QIN_idea_xuantong_young
-		QIN_idea_low_legitimacy
-		QIN_idea_payments_of_indemnities
-		QIN_idea_boxer_protocol
-		QIN_idea_purchase_restriction
-		QIN_idea_beiyang_army
-		QIN_idea_tongmenghui
-		QIN_idea_constitutional_movement
-		PRC_government_corruption
-		CHI_idea_illiteracy
-		CHI_idea_weak_industry
-		isolation
-		# limited_exports
-		unequal_treaties
+	#	QIN_idea_xuantong_young
+	#	QIN_idea_low_legitimacy
+	#	QIN_idea_payments_of_indemnities
+	#	QIN_idea_boxer_protocol
+	#	QIN_idea_purchase_restriction
+	#	QIN_idea_beiyang_army
+	#	QIN_idea_tongmenghui
+	#	QIN_idea_constitutional_movement
+	#	PRC_government_corruption
+	#	CHI_idea_illiteracy
+	#	CHI_idea_weak_industry
+	#	isolation
+	#	# limited_exports
+	#	unequal_treaties
 	}
 	# add_dynamic_modifier = { modifier = unequal_treaties_dm }
 	# add_dynamic_modifier = { modifier = qing_court_opp_dm }
@@ -261,19 +261,19 @@ every_character = {
 	#unlock_national_focus = QIN_nineteen_articles
 	#unlock_national_focus = CHI_nation_recovery
 	
-	swap_ideas = {
-		remove_idea = CHI_idea_illiteracy
-		add_idea = CHI_idea_illiteracy2
-		days = 730
-	}
-	remove_ideas = {
-		QIN_idea_tongmenghui
-		QIN_idea_constitutional_movement
-	}
-	add_ideas = {
-		QIN_idea_new_policies
-		QIN_idea_nineteen_articles
-	}
+	#swap_ideas = {
+	#	remove_idea = CHI_idea_illiteracy
+	#	add_idea = CHI_idea_illiteracy2
+	#	days = 730
+	#}
+	#remove_ideas = {
+	#	QIN_idea_tongmenghui
+	#	QIN_idea_constitutional_movement
+	#}
+	#add_ideas = {
+	#	QIN_idea_new_policies
+	#	QIN_idea_nineteen_articles
+	#}
 }
 
 if = {

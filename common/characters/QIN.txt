@@ -38,7 +38,7 @@ characters = {
 			cost = 150
 			available = {
 				# is_country_leader = no
-				has_completed_focus = QIN_royal_cabinet
+				#has_completed_focus = QIN_royal_cabinet
 				NOT = {
 					has_country_leader = {
 						character = CHI_yuan_shikai
@@ -78,7 +78,7 @@ characters = {
 			}
 			available = {
 				is_country_leader = no
-				has_completed_focus = QIN_continue_qing_new_reforms
+				#has_completed_focus = QIN_continue_qing_new_reforms
 			}
 			traits = {
 				financial_expert
@@ -303,7 +303,7 @@ characters = {
 			available = {
 				is_country_leader = no
 				has_government = neutrality
-				has_completed_focus = QIN_loyal_parliament
+				#has_completed_focus = QIN_loyal_parliament
 			}	
 			traits = {
 				ideological_crusader 
@@ -332,7 +332,7 @@ characters = {
 				smooth_talking_charmer 
 			}
 			available = {
-				has_completed_focus = QIN_continue_qing_new_reforms
+				#has_completed_focus = QIN_continue_qing_new_reforms
 			}
 			on_remove = {
 				QIN = {
@@ -366,7 +366,7 @@ characters = {
 				financial_expert
 			}
 			available = {
-				has_completed_focus = QIN_national_currency_regulations
+				#has_completed_focus = QIN_national_currency_regulations
 			}
 			ai_will_do = {
 				factor = 1
@@ -382,7 +382,7 @@ characters = {
 				is_china_or_warlord_no_tt = yes
 			}
 			available = {
-				has_completed_focus = QIN_army_leadership_problem
+				#has_completed_focus = QIN_army_leadership_problem
 			}
 			ledger = army 
 			traits = {
@@ -407,7 +407,7 @@ characters = {
 				is_china_or_warlord_no_tt = yes
 			}
 			available = {
-				has_completed_focus = QIN_army_leadership_problem
+				#has_completed_focus = QIN_army_leadership_problem
 			}
 			ledger = army 
 			traits = {
@@ -433,15 +433,15 @@ characters = {
 				is_china_or_warlord_no_tt = yes
 			}
 			available = {
-				if = {
-					limit = {
-						OR = {
-							has_focus_tree = china_focus
-							has_focus_tree = qing_focus
-						}
-					}
-					has_completed_focus = CHI_submarine_fleet
-				}
+				#if = {
+				#	limit = {
+				#		OR = {
+				#			has_focus_tree = china_focus
+				#			has_focus_tree = qing_focus
+				#		}
+				#	}
+				#	has_completed_focus = CHI_submarine_fleet
+				#}
 			}
 			ledger = navy 
 			traits = {

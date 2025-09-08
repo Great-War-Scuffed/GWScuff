@@ -4005,7 +4005,7 @@ focus = {
 	focus = {
 		id = AUH_invest_in_galicia
 		icon = GFX_focus_manage_industries
-		cost = 10
+		cost = 5
 		x = 0
 		y = 1
 		relative_position_id = AUH_industrial_expansion
@@ -4035,7 +4035,7 @@ focus = {
 				add_extra_state_shared_building_slots = 2
 				add_building_construction = {
 					type = infrastructure
-					level = 1
+					level = 2
 					instant_build = yes
 				}
 				add_resource = {
@@ -4058,7 +4058,7 @@ focus = {
 				add_extra_state_shared_building_slots = 2
 				add_building_construction = {
 					type = infrastructure
-					level = 1
+					level = 2
 					instant_build = yes
 				}
 				add_resource = {
@@ -4362,7 +4362,7 @@ focus = {
 		x = 26
 		y = 0
 		available = {
-			has_completed_focus = AUH_army_question_statemate
+			#has_completed_focus = AUH_army_question_statemate
 		}
 		relative_position_id = AUH_stabilize_the_empire
 		completion_reward = {

@@ -55,7 +55,7 @@ recruit_character = SAF_cornelius_van_wyk
 
 	add_ideas = {
 		SAF_mining_reliant_economy
-		SAF_segregation
+		#SAF_segregation
 	}
 
 	set_politics = {

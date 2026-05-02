@@ -1,7 +1,9 @@
 on_actions = {
     on_startup = {
         effect = {
+
 		if ={
+
 		limit = {
 			has_game_rule = {
 				rule = soo_optimization
@@ -21,25 +23,16 @@ on_actions = {
 						idea = sooo_Day_one_production
 						days = 31
 					}
-					country_event = r56.startup.event.1
+					add_timed_idea = {
+						idea = sooo_anticivboost
+						days = 730
+					}
 				}
 				
 			}
-			CHI = {
-				add_timed_idea = {
-					idea = taming_the_tiger
-					days = 1095
-				}
-			}
-
-			#ETH = {
-			#	add_timed_idea = {
-			#		idea = taming_the_lion
-			#		days = 730
-			#	}
-			#}
 
 		  }
+
         }
     }
 }

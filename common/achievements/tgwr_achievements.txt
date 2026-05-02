@@ -461,3 +461,137 @@ our_place_in_the_rising_sun = {
 		has_country_flag = our_place_in_the_rising_sun_flag
 	}
 }
+
+no_road_through_belgium = {
+	possible = {
+		# is_ironman = yes
+		difficulty > 1
+		has_start_date < 1910.5.2
+		has_any_custom_difficulty_setting = no
+		game_rules_allow_achievements = yes
+		original_tag = BEL
+	}
+
+	happened = {
+		is_subject = no
+		has_war = no
+		has_global_flag = great_war_ends
+		NOT = {
+			has_country_flag = achievement_lost_state
+		}
+	}
+}
+viva_il_re = {
+	possible = {
+		# is_ironman = yes
+		difficulty > 1
+		has_start_date < 1910.5.2
+		has_any_custom_difficulty_setting = no
+		game_rules_allow_achievements = yes
+		original_tag = ITA
+	}
+
+	happened = {
+		is_subject = no
+		has_civil_war = no
+		has_completed_focus = ITA_empower_the_king
+		has_country_leader = {
+			character = ITA_vittorio_emanuele_iii
+			ruling_only = yes
+		}
+	}
+}
+liberation_day = {
+	possible = {
+		# is_ironman = yes
+		difficulty > 1
+		has_start_date < 1914.1.1
+		original_tag = ITA
+		has_any_custom_difficulty_setting = no
+		game_rules_allow_achievements = yes
+	}
+	happened = {
+		original_tag = ITA
+		check_variable = {
+			ITA_total_tariffs = 6
+			tooltip = has_liberation_day_ACHIEVEMENT_tt
+		}
+		has_completed_focus = ITA_moderate_protectionism
+	}
+}
+ultimate_balancing_act = {
+	possible = {
+		# is_ironman = yes
+		difficulty > 1
+		has_start_date < 1914.1.1
+		original_tag = ITA
+		has_any_custom_difficulty_setting = no
+		game_rules_allow_achievements = yes
+	}
+	happened = {
+		original_tag = ITA
+		has_country_leader = {
+			character = ITA_giovanni_giolitti
+			ruling_only = yes
+		}
+		has_global_flag = ITA_reformist_wins
+		has_completed_focus = ITA_ally_the_catholic_electoral_union
+	}
+}
+libya_with_a_side_of_greek = {
+	possible = {
+		# is_ironman = yes
+		difficulty > 1
+		has_start_date < 1914.1.1
+		original_tag = ITA
+		has_any_custom_difficulty_setting = no
+		game_rules_allow_achievements = yes
+	}
+	happened = {
+		original_tag = ITA
+		has_global_flag = libyan_crisis_resolved
+		owns_state = 448
+		owns_state = 450
+		owns_state = 1060
+		owns_state = 1157
+		owns_state = 1061
+		owns_state = 899
+		owns_state = 164
+	}
+}
+cadornas_italy = {
+	possible = {
+		# is_ironman = yes
+		difficulty > 1
+		has_start_date > 1910.1.1
+		original_tag = ITA
+		has_any_custom_difficulty_setting = no
+		game_rules_allow_achievements = yes
+	}
+	happened = {
+		original_tag = ITA
+		has_country_leader = {
+			character = ITA_luigi_cadorna
+			ruling_only = yes
+		}
+		has_completed_focus = ITA_military_dictatorship
+	}
+}
+greatest_romania = {
+	possible = {
+		# is_ironman = yes
+		difficulty > 1
+		has_start_date < 1910.5.2
+		has_any_custom_difficulty_setting = no
+		game_rules_allow_achievements = yes
+		original_tag = ROM
+	}
+
+	happened = {
+		is_subject = no
+		has_war = no
+		has_completed_focus = ROM_ignore_the_entente_protests
+		has_subject = HUN
+		ROM_owns_controls_achievement_trigger_states = yes
+	}
+}

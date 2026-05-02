@@ -11,7 +11,7 @@ state={
 		add_core_of=NZL
 		buildings={
 			infrastructure = 3
-			industrial_complex=3
+			industrial_complex=4
 			arms_factory=2
 			4543={ naval_base=2 }
 			1814={ naval_base=2 }

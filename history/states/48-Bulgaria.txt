@@ -6,6 +6,7 @@ state={
 	provinces={ 935 949 3908 3971 }
 	resources={
 		steel=2
+		coal=1
 	}
 	history={
 		victory_points={ 949 10 } #102,812
@@ -13,8 +14,8 @@ state={
 		add_core_of=BUL
 		buildings={
 			infrastructure = 3
-			industrial_complex=3
-			arms_factory=1
+			industrial_complex=1
+			arms_factory=2
 		}
 	}
 }

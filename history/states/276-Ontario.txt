@@ -26,8 +26,8 @@ state={
 		owner=CAN
 		add_core_of=CAN
 		buildings={
-			infrastructure = 5
-			industrial_complex=2
+			infrastructure = 4
+			industrial_complex=3
 			arms_factory=2
 		}
 		1914.6.14 = {

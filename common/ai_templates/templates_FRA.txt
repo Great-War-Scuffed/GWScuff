@@ -6,7 +6,7 @@ light_armor_FRA = {
 	}
 	
 	role = light_armor
-
+	front_role_override = offence
 	upgrade_prio = {
 		factor = 10
 	}
@@ -35,16 +35,19 @@ light_armor_FRA = {
 			}
 		}
 
-		target_template = {
+		target_template = {			
 			support = {
+				field_gun = 1
 				engineer = 1
-				logistics_company = 1
+				logistics_company = 1 #from 1916 eg: battle of the somme
+				armored_car_recon = 1 #peugeot AM, AM canon, White AM
 				maintenance_company = 1
 			}
 			
 			regiments = {
-				light_armor = 4
-				infantry = 4
+				light_armor = 1
+				infantry = 9	#its 3 regiments of 3 infantry so 9 batallions
+				field_gun_brigade = 2 #36 75mm canons + 12 105mm canons
 			}
 		}
 	}
@@ -129,7 +132,7 @@ light_armored_artillery_FRA = {
 	}
 	
 	role = light_armor_artillery
-
+	front_role_override = offence
 	upgrade_prio = {
 		factor = 1000
 	}
@@ -166,7 +169,7 @@ medium_armor_FRA = {
 	}
 	
 	role = medium_armor
-
+	front_role_override = offence
 	upgrade_prio = {
 		factor = 10
 	}
@@ -191,14 +194,17 @@ medium_armor_FRA = {
 
 		target_template = {
 			support = {
+				field_gun = 1
 				engineer = 1
-				logistics_company = 1
+				logistics_company = 1 #from 1916 eg: battle of the somme
+				armored_car_recon = 1 #peugeot AM, AM canon, White AM
 				maintenance_company = 1
 			}
 			
 			regiments = {
-				medium_armor = 4
-				infantry = 4
+				medium_armor = 1
+				infantry = 9	#its 3 regiments of 3 infantry so 9 batallions
+				field_gun_brigade = 2 #36 75mm canons + 12 105mm canons
 			}
 		}
 	}
@@ -211,7 +217,7 @@ heavy_armor_FRA = {
 	}
 	
 	role = heavy_armor
-
+	front_role_override = offence
 	upgrade_prio = {
 		factor = 10
 	}
@@ -236,14 +242,17 @@ heavy_armor_FRA = {
 
 		target_template = {
 			support = {
+				field_gun = 1
 				engineer = 1
-				logistics_company = 1
+				logistics_company = 1 #from 1916 eg: battle of the somme
+				armored_car_recon = 1 #peugeot AM, AM canon, White AM
 				maintenance_company = 1
 			}
 			
 			regiments = {
 				heavy_armor = 1
-				infantry = 4
+				infantry = 9	#its 3 regiments of 3 infantry so 9 batallions
+				field_gun_brigade = 2 #36 75mm canons + 12 105mm canons
 			}
 		}
 	}
@@ -320,6 +329,7 @@ infantry_FRA = {
 			regiments = {
 				infantry = 12	#its 4 regiments of 3 infantry so 12 batallions
 				field_gun_brigade = 1 #36 75mm canons
+				machine_gun_company = 1
 			}
 		}
 		
@@ -348,6 +358,7 @@ infantry_FRA = {
 			regiments = {
 				infantry = 9	#its 3 regiments of 3 infantry so 9 batallions
 				field_gun_brigade = 2 #36 75mm canons + 12 105mm canons
+				machine_gun_company = 1
 			}
 		}
 	}
@@ -382,6 +393,7 @@ infantry_FRA = {
 			regiments = {
 				infantry = 9	#its 3 regiments of 3 infantry so 9 batallions
 				field_gun_brigade = 2 #36 75mm canons + 12 105mm canons
+				machine_gun_company = 1
 			}
 		}
 	}
@@ -409,6 +421,7 @@ infantry_FRA = {
 			regiments = {
 				infantry = 9	#its 3 regiments of 3 infantry so 9 batallions
 				field_gun_brigade = 2
+				machine_gun_company = 1
 			}
 		}
 	}
@@ -443,6 +456,7 @@ infantry_FRA = {
 			regiments = {
 				infantry = 9	#its 3 regiments of 3 infantry so 9 batallions
 				field_gun_brigade = 2
+				machine_gun_company = 1
 			}
 		}
 	}

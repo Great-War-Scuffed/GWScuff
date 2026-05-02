@@ -9,7 +9,7 @@
  #################### 
 
 ROM_atelierele_CFR_grivita_organization = {
-	include = generic_tank_refurbishment_plant_organization
+	include = generic_train_organization
 	name = ROM_atelierele_CFR_grivita
 	icon = GFX_idea_ROM_caile_ferate_romane
 	allowed = { 

@@ -10,6 +10,8 @@ state={
 		victory_points = { 6933 2 } #Beja 30,058 in 1911
 		buildings={
 			infrastructure = 3
+			arms_factory=2
+			industrial_complex=2
 		}
 	}
 }

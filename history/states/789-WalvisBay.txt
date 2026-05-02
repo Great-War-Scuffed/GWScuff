@@ -7,8 +7,9 @@ state={
 		victory_points = {
 			2207 1 
 		}
-		owner = SAF
-		add_core_of = SAF
+		owner = CAP
+		add_core_of = CAP
+		add_claim_by = NMB
 		buildings = {
 			infrastructure = 2
 			2207 = {

@@ -2,7 +2,9 @@
 state={
 	id=872
 	name="STATE_872"
-
+	resources = {
+		coal=1
+	}
 	history={
 		victory_points = {
 			1104 1 
@@ -13,9 +15,7 @@ state={
 		owner = QIN
 		add_core_of = QIN
 		buildings = {
-			infrastructure = 3
-			industrial_complex=1
-			arms_factory=1
+			infrastructure = 2
 			1104 = {
 				naval_base = 1
 

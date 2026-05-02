@@ -1,0 +1,337 @@
+# DO NOT MODIFY/REUPLOAD/RE-DISTRIBUTE WITHOUT MY PERMISSION - IF YOU WANT TO USE IT IN YOUR MOD CONTACT ME
+
+#############
+# Nassau
+#############
+
+animation = {
+	name = "nassau_battleship_idle_animation"
+	file = "nassau_battleship_idle.anim"
+}
+
+animation = {
+	name = "nassau_battleship_attack_animation"
+	file = "nassau_battleship_attack.anim"
+}
+
+animation = {
+	name = "nassau_battleship_defend_animation"
+	file = "nassau_battleship_defend.anim"
+}
+
+animation = {
+	name = "nassau_battleship_death_animation"
+	file = "nassau_battleship_death.anim"
+}
+
+#############
+# Kaiser
+#############
+
+animation = {
+	name = "kaiser_battleship_idle_animation"
+	file = "kaiser_battleship_idle.anim"
+}
+
+animation = {
+	name = "kaiser_battleship_attack_animation"
+	file = "kaiser_battleship_attack.anim"
+}
+
+animation = {
+	name = "kaiser_battleship_defend_animation"
+	file = "kaiser_battleship_defend.anim"
+}
+
+animation = {
+	name = "kaiser_battleship_death_animation"
+	file = "kaiser_battleship_death.anim"
+}
+
+#############
+# Moltke
+#############
+
+animation = {
+	name = "moltke_battlecruiser_idle_animation"
+	file = "moltke_battlecruiser_idle.anim"
+}
+
+animation = {
+	name = "moltke_battlecruiser_attack_animation"
+	file = "moltke_battlecruiser_attack.anim"
+}
+
+animation = {
+	name = "moltke_battlecruiser_defend_animation"
+	file = "moltke_battlecruiser_defend.anim"
+}
+
+animation = {
+	name = "moltke_battlecruiser_death_animation"
+	file = "moltke_battlecruiser_death.anim"
+}
+
+#############
+# König
+#############
+
+animation = {
+	name = "konig_battleship_idle_animation"
+	file = "konig_battleship_idle.anim"
+}
+
+animation = {
+	name = "konig_battleship_attack_animation"
+	file = "konig_battleship_attack.anim"
+}
+
+animation = {
+	name = "konig_battleship_defend_animation"
+	file = "konig_battleship_defend.anim"
+}
+
+animation = {
+	name = "konig_battleship_death_animation"
+	file = "konig_battleship_death.anim"
+}
+
+#############
+# Von der Tann
+#############
+
+animation = {
+	name = "von_der_tann_battlecruiser_idle_animation"
+	file = "von_der_tann_battlecruiser_idle.anim"
+}
+
+animation = {
+	name = "von_der_tann_battlecruiser_attack_animation"
+	file = "von_der_tann_battlecruiser_attack.anim"
+}
+
+animation = {
+	name = "von_der_tann_battlecruiser_defend_animation"
+	file = "von_der_tann_battlecruiser_defend.anim"
+}
+
+animation = {
+	name = "von_der_tann_battlecruiser_death_animation"
+	file = "von_der_tann_battlecruiser_death.anim"
+}
+
+#############
+# Derfflinger
+#############
+
+animation = {
+	name = "derfflinger_battlecruiser_idle_animation"
+	file = "derfflinger_battlecruiser_idle.anim"
+}
+
+animation = {
+	name = "derfflinger_battlecruiser_attack_animation"
+	file = "derfflinger_battlecruiser_attack.anim"
+}
+
+animation = {
+	name = "derfflinger_battlecruiser_defend_animation"
+	file = "derfflinger_battlecruiser_defend.anim"
+}
+
+animation = {
+	name = "derfflinger_battlecruiser_death_animation"
+	file = "derfflinger_battlecruiser_death.anim"
+}
+
+#############
+# Dreadnought
+#############
+
+animation = {
+	name = "dreadnought_battleship_idle_animation"
+	file = "dreadnought_battleship_idle.anim"
+}
+
+animation = {
+	name = "dreadnought_battleship_attack_animation"
+	file = "dreadnought_battleship_attack.anim"
+}
+
+animation = {
+	name = "dreadnought_battleship_defend_animation"
+	file = "dreadnought_battleship_defend.anim"
+}
+
+animation = {
+	name = "dreadnought_battleship_death_animation"
+	file = "dreadnought_battleship_death.anim"
+}
+
+#############
+# Neptune
+#############
+
+animation = {
+	name = "neptune_battleship_idle_animation"
+	file = "neptune_battleship_idle.anim"
+}
+
+animation = {
+	name = "neptune_battleship_attack_animation"
+	file = "neptune_battleship_attack.anim"
+}
+
+animation = {
+	name = "neptune_battleship_defend_animation"
+	file = "neptune_battleship_defend.anim"
+}
+
+animation = {
+	name = "neptune_battleship_death_animation"
+	file = "neptune_battleship_death.anim"
+}
+
+#############
+# Orion
+#############
+
+animation = {
+	name = "orion_battleship_idle_animation"
+	file = "orion_battleship_idle.anim"
+}
+
+animation = {
+	name = "orion_battleship_attack_animation"
+	file = "orion_battleship_attack.anim"
+}
+
+animation = {
+	name = "orion_battleship_defend_animation"
+	file = "orion_battleship_defend.anim"
+}
+
+animation = {
+	name = "orion_battleship_death_animation"
+	file = "orion_battleship_death.anim"
+}
+
+#############
+# Lord Nelson
+#############
+
+animation = {
+	name = "lord_nelson_battleship_idle_animation"
+	file = "lord_nelson_battleship_idle.anim"
+}
+
+animation = {
+	name = "lord_nelson_battleship_attack_animation"
+	file = "lord_nelson_battleship_attack.anim"
+}
+
+animation = {
+	name = "lord_nelson_battleship_defend_animation"
+	file = "lord_nelson_battleship_defend.anim"
+}
+
+animation = {
+	name = "lord_nelson_battleship_death_animation"
+	file = "lord_nelson_battleship_death.anim"
+}
+
+#############
+# Invincible
+#############
+
+animation = {
+	name = "invincible_battlecruiser_idle_animation"
+	file = "invincible_battlecruiser_idle.anim"
+}
+
+animation = {
+	name = "invincible_battlecruiser_attack_animation"
+	file = "invincible_battlecruiser_attack.anim"
+}
+
+animation = {
+	name = "invincible_battlecruiser_defend_animation"
+	file = "invincible_battlecruiser_defend.anim"
+}
+
+animation = {
+	name = "invincible_battlecruiser_death_animation"
+	file = "invincible_battlecruiser_death.anim"
+}
+
+#############
+# Indefatigable
+#############
+
+animation = {
+	name = "indefatigable_battlecruiser_idle_animation"
+	file = "indefatigable_battlecruiser_idle.anim"
+}
+
+animation = {
+	name = "indefatigable_battlecruiser_attack_animation"
+	file = "indefatigable_battlecruiser_attack.anim"
+}
+
+animation = {
+	name = "indefatigable_battlecruiser_defend_animation"
+	file = "indefatigable_battlecruiser_defend.anim"
+}
+
+animation = {
+	name = "indefatigable_battlecruiser_death_animation"
+	file = "indefatigable_battlecruiser_death.anim"
+}
+
+#############
+# Lion
+#############
+
+animation = {
+	name = "lion_battlecruiser_idle_animation"
+	file = "lion_battlecruiser_idle.anim"
+}
+
+animation = {
+	name = "lion_battlecruiser_attack_animation"
+	file = "lion_battlecruiser_attack.anim"
+}
+
+animation = {
+	name = "lion_battlecruiser_defend_animation"
+	file = "lion_battlecruiser_defend.anim"
+}
+
+animation = {
+	name = "lion_battlecruiser_death_animation"
+	file = "lion_battlecruiser_death.anim"
+}
+
+#############
+# Tiger
+#############
+
+animation = {
+	name = "tiger_battlecruiser_idle_animation"
+	file = "tiger_battlecruiser_idle.anim"
+}
+
+animation = {
+	name = "tiger_battlecruiser_attack_animation"
+	file = "tiger_battlecruiser_attack.anim"
+}
+
+animation = {
+	name = "tiger_battlecruiser_defend_animation"
+	file = "tiger_battlecruiser_defend.anim"
+}
+
+animation = {
+	name = "tiger_battlecruiser_death_animation"
+	file = "tiger_battlecruiser_death.anim"
+}

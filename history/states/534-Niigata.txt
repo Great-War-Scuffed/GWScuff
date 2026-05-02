@@ -2,7 +2,9 @@
 state={
 	id=534
 	name="STATE_534"
-
+	resources = {
+		oil = 2 #3 Niitsu Oil Field
+	}
 	history={
 		victory_points = {
 			10032 12 
@@ -13,9 +15,7 @@ state={
 		owner = JAP
 		add_core_of = JAP
 		buildings = {
-			infrastructure = 3
-			industrial_complex = 2
-			arms_factory = 2
+			infrastructure = 2
 
 		}
 

@@ -8,6 +8,7 @@ state={
 		}
 		owner = SAU
 		add_core_of = SAU
+		add_core_of = ASR	
 		buildings = {
 			infrastructure = 0
 		}

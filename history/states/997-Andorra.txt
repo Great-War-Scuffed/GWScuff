@@ -9,6 +9,7 @@ state={
 			12393 2
 		}
 		owner = SPR
+		add_core_of = ADR
 		add_core_of = SPR
 		buildings={
 			infrastructure = 2

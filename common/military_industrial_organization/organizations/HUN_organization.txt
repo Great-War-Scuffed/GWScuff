@@ -10,7 +10,7 @@
 
  HUN_mavag_organization = {
 	name = HUN_mavag
-	include = generic_tank_refurbishment_plant_organization
+	include = generic_train_organization
 	icon = GFX_idea_mavag
 	allowed = {
 		OR = {

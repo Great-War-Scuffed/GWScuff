@@ -2,7 +2,9 @@
 state={
 	id=866
 	name="STATE_866"
-
+	resources = {
+		coal=2
+	}
 	history={
 		victory_points = { 9224 1 } #Drobeta-Turnu Severin - 23,643
 		owner = ROM
@@ -20,6 +22,6 @@ state={
 	}
 	manpower=32643
 	buildings_max_level_factor=1.000
-	state_category=town
+	state_category=enclave
 	local_supplies=0.000
 }

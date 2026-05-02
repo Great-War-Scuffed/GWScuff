@@ -10,5 +10,6 @@ state={
 		}
 		owner = SAU
 		add_core_of = SAU
+		add_claim_by = SAU
 	}
 }

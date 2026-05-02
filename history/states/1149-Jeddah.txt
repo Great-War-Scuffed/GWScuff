@@ -2,7 +2,7 @@ state={
 	id=1149
 	name="STATE_1149"
 	manpower = 300000
-	state_category=rural
+	state_category=city
 	provinces={ 2033 12883 13361 }
 	history={
 		victory_points = {
@@ -11,7 +11,7 @@ state={
 		owner = SAU
 		add_core_of = SAU
 		buildings={
-			infrastructure = 1
+			infrastructure = 2
 			12883 = {
 				naval_base = 3
 			}

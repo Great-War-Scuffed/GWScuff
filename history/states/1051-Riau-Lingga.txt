@@ -6,8 +6,8 @@ state={
 	}
 	history={
 		victory_points = { 12113 1 }
-		owner = RIA
-		add_core_of = RIA
+		owner = INS
+		add_core_of = INS
 		buildings = {
 			infrastructure = 1
 			12113 = {

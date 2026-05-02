@@ -4,7 +4,7 @@ methodical_fire = {
     description = SUBDOCTRINE_METHODICAL_FIRE_DESC
     icon = GFX_advanced_firebases_medium
 
-    xp_cost = 1
+    xp_cost = 100
     xp_type = army
 
     available = {
@@ -78,7 +78,7 @@ integrated_firepower = {
     description = SUBDOCTRINE_INTEGRATED_FIREPOWER_DESC
     icon = GFX_dispersed_support_medium
 
-    xp_cost = 1
+    xp_cost = 100
     xp_type = army
 
     available = {
@@ -156,7 +156,7 @@ hurricane_bombardment = {
     description = SUBDOCTRINE_HURRICANE_BOMBARDMENT_DESC
     icon = GFX_overwhelming_firepower_medium
 
-    xp_cost = 1
+    xp_cost = 100
     xp_type = army
 
     available = {
@@ -229,7 +229,7 @@ fire_concentration = {
     description = SUBDOCTRINE_FIRE_CONCENTRATION_DESC
     icon = GFX_doctrine_fire_concentration_medium
 
-    xp_cost = 1
+    xp_cost = 100
     xp_type = army
 
     available = {
@@ -316,7 +316,7 @@ anti_tank_frontline = {
     description = SUBDOCTRINE_ANTI_TANK_FRONT_DESC
     icon = GFX_doctrine_antitank_frontline_medium
 
-    xp_cost = 1
+    xp_cost = 100
     xp_type = army
 
     available = {
@@ -381,7 +381,7 @@ flying_batteries = {
     description = SUBDOCTRINE_FLYING_BATTERIES_DESC
     icon = GFX_doctrine_flying_batteries_medium
 
-    xp_cost = 1
+    xp_cost = 100
     xp_type = army
 
     available = {
@@ -468,7 +468,7 @@ mobile_recon_and_assault = {
     description = SUBDOCTRINE_MOBILE_RECON_AND_ASSAULT_DESC
     icon = GFX_doctrine_mobile_recon_assault_medium
 
-    xp_cost = 1
+    xp_cost = 100
     xp_type = army
 
     available = {
@@ -564,7 +564,7 @@ mobile_recon_and_assault_no_lar = {
     description = SUBDOCTRINE_MOBILE_RECON_AND_ASSAULT_DESC
     icon = GFX_doctrine_mobile_recon_assault_medium
 
-    xp_cost = 1
+    xp_cost = 100
     xp_type = army
 
     available = {
@@ -657,7 +657,7 @@ self_propelled_support = {
     description = SUBDOCTRINE_SELF_PROPELLED_SUPPORT_DESC
     icon = GFX_doctrine_self_propelled_support_medium
 
-    xp_cost = 1
+    xp_cost = 100
     xp_type = army
 
     available = {
@@ -769,7 +769,7 @@ siege_artillery = {
     description = SUBDOCTRINE_SIEGE_ARTILLERY_DESC
     icon = GFX_doctrine_siege_artillery_medium
 
-    xp_cost = 1
+    xp_cost = 100
     xp_type = army
 
     available = {
@@ -899,7 +899,7 @@ field_engineering = {
     description = SUBDOCTRINE_FIELD_ENGINEERING_DESC
     icon = GFX_doctrine_field_engineering_medium
 
-    xp_cost = 1
+    xp_cost = 100
     xp_type = army
 
     ai_will_do = { 

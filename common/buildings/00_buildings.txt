@@ -32,18 +32,17 @@ buildings = {
 	#   repair_speed_factor = 0.5 # Optional. Factor for how fast the building is repaired (default = 1.0)
 
 	infrastructure = {
-		base_cost = 3000
+		base_cost = 6000
 		icon_frame = 3
 		infrastructure = yes
 		value = 1
 
 		show_modifier = yes
-		allied_build = yes
-		affects_energy = yes
+		allied_build = infrastructure
 
 		infrastructure_construction_effect = yes
 		level_cap = {
-			state_max = 10
+			state_max = 5
 		}
 		country_modifiers = {
 			modifiers = {

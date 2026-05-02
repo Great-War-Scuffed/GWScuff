@@ -421,19 +421,15 @@ focus_tree = {
 			#agency stuff
 			add_political_power = 50
 			if = {
-				limit = { 
-					has_dlc = "La Resistance"
+				limit = {
+					has_intelligence_agency = no
 				}
 				create_intelligence_agency = {
 					name = "Bureau de surveillance"
-					icon = GFX_intelligence_agency_logo_fra
 				}
-				if = {
-					limit = { NOT = { has_done_agency_upgrade = upgrade_passive_defense }}
-					upgrade_intelligence_agency = upgrade_passive_defense
-				}
-				gain_random_agency_upgrade = yes
-			}	
+			}
+			gain_random_agency_upgrade = yes
+			upgrade_intelligence_agency = upgrade_passive_defense
 		}
 		search_filters = {
 			FOCUS_FILTER_INTERNAL_AFFAIRS

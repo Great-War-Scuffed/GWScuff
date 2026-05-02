@@ -1193,6 +1193,7 @@ parliament_gui_decision_category = {
 			has_country_flag = FRA_1911_no_budget_decision_flag
 			NOT = { has_country_flag = FRA_cant_vote_1911_budget_in_time }
 		}
+		is_good = no
 		
 		remove_effect = {
 			add_stability = -0.05
@@ -1545,14 +1546,11 @@ parliament_gui_decision_category = {
 						add_political_power = 10
 						custom_effect_tooltip = FRA_decommissioning_northern_defensive_works_tt
 						hidden_effect = {
-							random_owned_state = {
-								prioritize = { 18 }
-								remove_building = {									
-									type = bunker
-									province = 13011
-									level = 1
-								}
-							}							
+							remove_building = {
+								type = bunker
+								province = 13011
+								level = 1
+							}
 						}
 					}
 				}
@@ -1888,6 +1886,7 @@ parliament_gui_decision_category = {
 			NOT = { has_country_flag =  FRA_exceptional_loan_to_indochina_ended }
 			has_country_flag = FRA_exceptional_loan_to_indochina
 		}
+		is_good = no
 	}
 
 	FRA_press_african_tribes_to_abolish_slavery = {
@@ -2218,28 +2217,21 @@ parliament_gui_decision_category = {
 					}
 					hidden_effect = {
 						add_political_power = 10
-						random_owned_state = {
-							prioritize = { 1 }
-							remove_building = {
-								type = coastal_bunker
-								province = 9851
-								level = 1
-							}
+						remove_building = {
+							type = coastal_bunker
+							province = 9851
+							level = 1
 						}
-						
 					}
 				}
 			}
 			custom_effect_tooltip = FRA_effect_if_law_pass
 			effect_tooltip = {
 				add_political_power = 10
-				random_owned_state = {
-					prioritize = { 1 }
-					remove_building = {
-						type = coastal_bunker
-						province = 9851
-						level = 1
-					}
+				remove_building = {
+					type = coastal_bunker
+					province = 9851
+					level = 1
 				}
 			}
 			custom_effect_tooltip = FRA_effect_if_law_fail
@@ -3610,13 +3602,8 @@ parliament_gui_decision_category = {
 				ideology = neutrality
 				popularity = 0.05
 			}
-			FRA = {
-				FRA_philippe_viii = {
-					set_nationality = ROOT
-				}
-				FRA_jean_iii = {
-					set_nationality = ROOT
-				}
+			FRA_jean_iii = {
+				set_nationality = FRA
 			}
 			custom_effect_tooltip = escape_line
 			custom_effect_tooltip = FRA_could_be_a_popular_figurehead
@@ -3666,13 +3653,8 @@ parliament_gui_decision_category = {
 				ideology = neutrality
 				popularity = 0.05
 			}
-			FRA = {
-				FRA_jacques_i = {
-					set_nationality = FRA
-				}
-				FRA_charles_xii = {
-					set_nationality = FRA
-				}
+			FRA_jacques_i = {
+				set_nationality = FRA
 			}
 			custom_effect_tooltip = escape_line
 			custom_effect_tooltip = FRA_could_be_a_popular_figurehead
@@ -3722,16 +3704,8 @@ parliament_gui_decision_category = {
 				ideology = neutrality
 				popularity = 0.05
 			}
-			FRA = {
-				FRA_napoleon_v = {
-					set_nationality = ROOT
-				}
-				FRA_louis_joseph_bonaparte = {
-					set_nationality = ROOT
-				}
-				FRA_napoleon_vi = {
-					set_nationality = ROOT
-				}
+			FRA_napoleon_v = {
+				set_nationality = FRA
 			}
 			custom_effect_tooltip = escape_line
 			custom_effect_tooltip = FRA_could_be_a_popular_figurehead
@@ -4688,8 +4662,8 @@ parliament_gui_decision_category = {
 						modifier = FRA_reinforced_military_presence
 						days = 420
 					}
+					far_left_hate = yes
 				}
-				far_left_hate = yes
 			}
 			custom_effect_tooltip = FRA_effect_if_law_fail
 			effect_tooltip = {
@@ -4717,8 +4691,10 @@ parliament_gui_decision_category = {
 			NOT = {
 				has_government = communism
 			}
-			any_owned_state = {
-				is_core_of = CHA
+			OR = {
+				any_owned_state = {
+					is_core_of = CHA
+				}
 			}
 			NOT = {
 				has_country_flag = FRA_military_expedition_in_tchad
@@ -4744,9 +4720,9 @@ parliament_gui_decision_category = {
 				has_country_flag = SFIO_allied
 				has_government = communism
 			}
-			any_owned_state = {
+			any_state = {
 				is_core_of = CHA
-				is_controlled_by = ROOT
+				is_owned_and_controlled_by = ROOT
 			}
 		}
 		fire_only_once = yes
@@ -5249,7 +5225,7 @@ parliament_gui_decision_category = {
 						remove_ideas = FRA_defiant_army
 						remove_ideas = FRA_defiant_army2
 						remove_ideas = FRA_defiant_army3
-						#remove_ideas = FRA_defiant_army4
+						remove_ideas = FRA_defiant_army4
 						remove_ideas = FRA_defiant_armyBis
 						set_country_flag = army_defiance
 					}

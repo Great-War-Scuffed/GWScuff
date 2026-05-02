@@ -161,7 +161,7 @@ focus_tree = {
 		available = {
 			custom_trigger_tooltip = {
 				tooltip = kings_gov.tt
-				has_completed_focus = ROM_the_kings_government
+				always = no
 			}
 		}
 		relative_position_id = ROM_his_majestys_influence
@@ -344,9 +344,6 @@ focus_tree = {
 		}
 		completion_reward = {
 			custom_effect_tooltip = on_select_ROM_our_duty_to_the_people
-			effect_tooltip = {
-				ROM_land_reform_up = yes
-			}
 		}
 		ai_will_do = {
 			factor = 3
@@ -546,10 +543,7 @@ focus_tree = {
 			add_manpower = 12000
 			add_command_power = 25
 			add_political_power = 40
-			unlock_decision_tooltip = {
-				decision = ROM_embrace_revanchism
-				show_effect_tooltip = yes
-			}
+			unlock_decision_tooltip = ROM_embrace_revanchism
 		}
 		ai_will_do = {
 			factor = 10
@@ -651,7 +645,7 @@ focus_tree = {
 		available = {
 			custom_trigger_tooltip = {
 				tooltip = kings_gov3.tt
-				has_completed_focus = ROM_the_conservative_conservatives
+				always = no
 			}
 		}
 		prerequisite = {
@@ -659,23 +653,13 @@ focus_tree = {
 		}
 		relative_position_id = ROM_bratianu_resign
 		completion_reward = {
-			effect_tooltip = {
-				ROM_barbu_delavrancea = { promote_character = { ideology = authoritarian_democracy } }
-				set_politics = {
-					ruling_party = neutrality
-					elections_allowed = yes
-					name = ROM_conservative_party
-					long_name = ROM_conservative_party_long
-				}
-				add_ideas = ROM_divided_party
-			}
+			add_ideas = ROM_divided_party
 		}
 		ai_will_do = {
 			factor = 3
 		}
 		search_filters = {
 			FOCUS_FILTER_INTERNAL_AFFAIRS
-			FOCUS_FILTER_COMPLETED_BY_EVENT
 		}
 	}
 	focus = {
@@ -687,7 +671,7 @@ focus_tree = {
 		available = {
 			custom_trigger_tooltip = {
 				tooltip = kings_gov4.tt
-				has_completed_focus = ROM_a_man_from_junimea
+				always = no
 			}
 		}
 		prerequisite = {
@@ -695,22 +679,12 @@ focus_tree = {
 		}
 		relative_position_id = ROM_bratianu_resign
 		completion_reward = {
-			effect_tooltip = {
-				promote_character = ROM_constantin_arion
-				set_politics = {
-					ruling_party = democratic
-					elections_allowed = yes
-					name = ROM_conservative_party
-					long_name = ROM_conservative_party_long
-				}
-			}
 		}
 		ai_will_do = {
 			factor = 3
 		}
 		search_filters = {
 			FOCUS_FILTER_INTERNAL_AFFAIRS
-			FOCUS_FILTER_COMPLETED_BY_EVENT
 		}
 	}
 	focus = {
@@ -867,11 +841,10 @@ focus_tree = {
 				limit = {
 					has_country_flag = ROM_has_political_tree_research_slot
 				}
-				custom_effect_tooltip = ROM_modify_economy_tt
 				add_to_variable = {
 					ROM_research_speed = 0.05
-					tooltip = research_speed_factor_tt
 				}
+				custom_effect_tooltip = ROM_research_invest.tt
 			}
 			else = {
 				add_research_slot = 1
@@ -966,15 +939,13 @@ focus_tree = {
 		}
 		relative_position_id = ROM_a_man_from_junimea
 		completion_reward = {
-			custom_effect_tooltip = ROM_modify_economy_tt
 			add_to_variable = {
 				ROM_build_speed = 0.05
-				tooltip = production_speed_buildings_factor_tt
 			}
 			add_to_variable = {
 				ROM_consumer_goods = 0.05
-				tooltip = consumer_goods_factor_tt
 			}
+			custom_effect_tooltip = ROM_mafa
 		}
 		ai_will_do = {
 			factor = 3
@@ -1172,7 +1143,7 @@ focus_tree = {
 		available = {
 			custom_trigger_tooltip = {
 				tooltip = kings_gov2.tt
-				has_completed_focus = ROM_agrarianists_in_power
+				always = no
 			}
 		}
 		prerequisite = {
@@ -1180,15 +1151,6 @@ focus_tree = {
 		}
 		relative_position_id = ROM_bratianu_resign
 		completion_reward = {
-			effect_tooltip = {
-				promote_character = ROM_titu_maiorescu
-				set_politics = {
-					ruling_party = democratic
-					elections_allowed = yes
-					name = ROM_conservative_party
-					long_name = ROM_conservative_party_long
-				}
-			}
 			hidden_effect = {
 				country_event = {
 					id = ww1_romania.36
@@ -1202,7 +1164,6 @@ focus_tree = {
 		search_filters = {
 			FOCUS_FILTER_HISTORICAL
 			FOCUS_FILTER_INTERNAL_AFFAIRS
-			FOCUS_FILTER_COMPLETED_BY_EVENT
 		}
 	}
 	focus = {
@@ -1224,95 +1185,89 @@ focus_tree = {
 			}
 			custom_effect_tooltip = king_opinion_improve.tt
 			ROM_king_effect = yes
-			custom_effect_tooltip = ROM_democratic_bonuses.tt
-			effect_tooltip = {
-				add_stability = 0.01
-				add_political_power = 5
-			}
-			custom_effect_tooltip = empty_space_tt
-			custom_effect_tooltip = ROM_current_democratic_bonuses.tt
+			custom_effect_tooltip = ROM_a_moral_romania.tt
 			if = {
 				limit = {
 					democratic > 0.96
 				}
-				add_stability = 0.12
+				add_stability = 0.125
 				add_political_power = 60
 			}
 			else_if = {
 				limit = {
 					democratic > 0.88
 				}
-				add_stability = 0.11
+				add_stability = 0.115
 				add_political_power = 55
 			}
 			else_if = {
 				limit = {
 					democratic > 0.8
 				}
-				add_stability = 0.1
+				add_stability = 0.105
 				add_political_power = 50
 			}
 			else_if = {
 				limit = {
 					democratic > 0.72
 				}
-				add_stability = 0.09
+				add_stability = 0.095
 				add_political_power = 45
 			}
 			else_if = {
 				limit = {
 					democratic > 0.64
 				}
-				add_stability = 0.08
+				add_stability = 0.085
 				add_political_power = 40
 			}
 			else_if = {
 				limit = {
 					democratic > 0.56
 				}
-				add_stability = 0.07
+				add_stability = 0.075
 				add_political_power = 35
 			}
 			else_if = {
 				limit = {
 					democratic > 0.48
 				}
-				add_stability = 0.06
+				add_stability = 0.065
 				add_political_power = 30
 			}
 			else_if = {
 				limit = {
 					democratic > 0.4
 				}
-				add_stability = 0.05
+				add_stability = 0.055
 				add_political_power = 25
 			}
 			else_if = {
 				limit = {
 					democratic > 0.32
 				}
-				add_stability = 0.04
+				add_stability = 0.045
 				add_political_power = 20
 			}
 			else_if = {
 				limit = {
 					democratic > 0.24
 				}
-				add_stability = 0.03
+				add_stability = 0.035
 				add_political_power = 15
 			}
 			else_if = {
 				limit = {
 					democratic > 0.16
 				}
-				add_stability = 0.02
+				add_stability = 0.025
 				add_political_power = 10
 			}
 			else_if = {
 				limit = {
 					democratic > 0.08
 				}
-				add_stability = 0.01
+				add_stability = 0.015
 				add_political_power = 5
 			}
 		}
@@ -1343,12 +1298,7 @@ focus_tree = {
 		relative_position_id = ROM_the_conservative_conservatives
 		completion_reward = {
 			add_ideas = ROM_enpower_the_elites_idea
-			custom_effect_tooltip = ROM_democratic_bonuses.tt
-			effect_tooltip = {
-				add_political_power = 5
-			}
-			custom_effect_tooltip = empty_space_tt
-			custom_effect_tooltip = ROM_current_democratic_bonuses.tt
+			custom_effect_tooltip = ROM_enpower_the_elites.tt
 			if = {
 				limit = {
 					democratic > 0.96
@@ -1447,22 +1397,18 @@ focus_tree = {
 		}
 		relative_position_id = ROM_the_conservative_conservatives
 		completion_reward = {
-			custom_effect_tooltip = ROM_modify_economy_tt
+			custom_effect_tooltip = ROM_ber.tt
 			add_to_variable = {
 				ROM_eco_pp_cost = -0.05
-				tooltip = political_power_cost_tt
 			}
 			add_to_variable = {
 				ROM_build_speed = 0.075
-				tooltip = production_speed_buildings_factor_tt
 			}
 			add_to_variable = {
 				ROM_eco_stability = -0.1
-				tooltip = stability_factor_tt
 			}
 			add_to_variable = {
 				ROM_consumer_goods = 0.15
-				tooltip = consumer_goods_factor_tt
 			}
 		}
 		ai_will_do = {
@@ -1614,11 +1560,6 @@ focus_tree = {
 		completion_reward = {
 			set_global_flag = ROM_socialists_dealt_with
 			custom_effect_tooltip = ROM_socialist_ally_focus
-			custom_effect_tooltip = ROM_modify_national_opposition_tt
-			add_to_variable = {
-				ROM_national_opposition_stability = 0.1
-				tooltip = stability_factor_tt
-			}
 			custom_effect_tooltip = available_political_advisor
 			show_ideas_tooltip = ROM_constantin_dobrogeanu_gherea
 		}
@@ -1660,16 +1601,13 @@ focus_tree = {
 				ideology = fascism
 				popularity = 0.2
 			}
-			custom_effect_tooltip = ROM_old_guard_crush_focus
-			custom_effect_tooltip = ROM_modify_national_opposition_tt
 			add_to_variable = {
 				ROM_national_opposition_political_power = 0.05
-				tooltip = political_power_gain_tt
 			}
 			add_to_variable = {
 				ROM_national_opposition_stability = -0.1
-				tooltip = stability_factor_tt
 			}
+			custom_effect_tooltip = ROM_old_guard_crush_focus
 		}
 		ai_will_do = {
 			factor = 3
@@ -1704,10 +1642,8 @@ focus_tree = {
 		completion_reward = {
 			set_global_flag = ROM_socialists_dealt_with
 			custom_effect_tooltip = ROM_socialist_crush_focus
-			custom_effect_tooltip = ROM_modify_national_opposition_tt
 			add_to_variable = {
 				ROM_national_opposition_political_power = 0.1
-				tooltip = political_power_gain_tt
 			}
 		}
 		ai_will_do = {
@@ -1743,16 +1679,13 @@ focus_tree = {
 		relative_position_id = ROM_crush_radical_marxists
 		completion_reward = {
 			set_global_flag = ROM_old_guard_gone
-			custom_effect_tooltip = ROM_old_guard_ally_focus
-			custom_effect_tooltip = ROM_modify_national_opposition_tt
 			add_to_variable = {
 				ROM_national_opposition_political_power = -0.05
-				tooltip = political_power_gain_tt
 			}
 			add_to_variable = {
 				ROM_national_opposition_stability = 0.15
-				tooltip = stability_factor_tt
 			}
+			custom_effect_tooltip = ROM_old_guard_ally_focus
 		}
 		ai_will_do = {
 			factor = 3
@@ -1786,11 +1719,10 @@ focus_tree = {
 		completion_reward = {
 			ROM_land_reform_up = yes
 			custom_effect_tooltip = ROM_peasants_become
-			custom_effect_tooltip = ROM_modify_national_opposition_tt
 			add_to_variable = {
 				ROM_national_opposition_stability = 0.1
-				tooltip = stability_factor_tt
 			}
+			custom_effect_tooltip = ROM_peasant_focus
 		}
 		ai_will_do = {
 			factor = 3
@@ -1825,12 +1757,10 @@ focus_tree = {
 		}
 		relative_position_id = ROM_placate_the_peasants
 		completion_reward = {
-			custom_effect_tooltip = ROM_ban_pnl_pcd
-			custom_effect_tooltip = ROM_modify_national_opposition_tt
 			add_to_variable = {
 				ROM_national_opposition_political_power = 0.15
-				tooltip = political_power_gain_tt
 			}
+			custom_effect_tooltip = ROM_ban_pnl_pcd
 			country_event = ww1_romania.121
 		}
 		ai_will_do = {
@@ -1861,15 +1791,14 @@ focus_tree = {
 		}
 		relative_position_id = ROM_ban_the_pnl_and_pcd
 		completion_reward = {
-			custom_effect_tooltip = ROM_modify_national_opposition_tt
 			add_to_variable = {
 				ROM_national_opposition_stability = 0.1
-				tooltip = stability_factor_tt
 			}
 			79 = {
 				set_demilitarized_zone = no
 			}
 			add_manpower = -23193
+			custom_effect_tooltip = ROM_trump
 		}
 		ai_will_do = {
 			factor = 3
@@ -2100,6 +2029,9 @@ focus_tree = {
 		}
 		relative_position_id = ROM_ban_the_pnl_and_pcd
 		completion_reward = {
+			add_to_variable = {
+				ROM_national_opposition_political_power = 0.1
+			}
 			add_popularity = {
 				ideology = neutrality
 				popularity = -0.05
@@ -2111,11 +2043,7 @@ focus_tree = {
 			retire_character = ROM_ion_ic_bratianu
 			retire_character = ROM_take_ionescu
 			custom_effect_tooltip = ROM_trumpism
-			custom_effect_tooltip = ROM_modify_national_opposition_tt
-			add_to_variable = {
-				ROM_national_opposition_political_power = 0.1
-				tooltip = political_power_gain_tt
-			}
+			custom_effect_tooltip = ROM_trump2
 			add_manpower = -12041
 		}
 		ai_will_do = {
@@ -2146,16 +2074,14 @@ focus_tree = {
 		}
 		relative_position_id = ROM_unity_of_the_nation
 		completion_reward = {
-			custom_effect_tooltip = ROM_modify_economy_tt
 			add_to_variable = {
 				ROM_eco_pp_cost = 0.1
-				tooltip = political_power_cost_tt
 			}
 			add_to_variable = {
 				ROM_build_speed = 0.05
-				tooltip = production_speed_buildings_factor_tt
 			}
 			add_war_support = -0.05
+			custom_effect_tooltip = ROM_ift2.tt
 		}
 		ai_will_do = {
 			factor = 3
@@ -2190,11 +2116,10 @@ focus_tree = {
 				limit = {
 					has_country_flag = ROM_has_political_tree_research_slot
 				}
-				custom_effect_tooltip = ROM_modify_economy_tt
 				add_to_variable = {
 					ROM_research_speed = 0.05
-					tooltip = research_speed_factor_tt
 				}
+				custom_effect_tooltip = ROM_research_invest.tt
 			}
 			else = {
 				add_research_slot = 1
@@ -2233,14 +2158,12 @@ focus_tree = {
 		}
 		relative_position_id = ROM_invite_german_intellectuals
 		completion_reward = {
-			custom_effect_tooltip = ROM_modify_economy_tt
+			custom_effect_tooltip = ROM_m2ifocus
 			add_to_variable = {
 				ROM_factory_output = 0.05
-				tooltip = industrial_capacity_factory_tt
 			}
 			add_to_variable = {
 				ROM_eco_production_e = 0.05
-				tooltip = production_factory_efficiency_gain_factor_tt
 			}
 		}
 		ai_will_do = {
@@ -2339,10 +2262,9 @@ focus_tree = {
 		}
 		relative_position_id = ROM_placate_the_king
 		completion_reward = {
-			custom_effect_tooltip = ROM_modify_national_opposition_tt
+			custom_effect_tooltip = ROM_strong_arm_focus
 			add_to_variable = {
 				ROM_national_opposition_political_power = 0.1
-				tooltip = political_power_gain_tt
 			}
 		}
 		ai_will_do = {
@@ -2414,13 +2336,15 @@ focus_tree = {
 			has_country_flag = ROM_collaborationist_tag
 		}
 		completion_reward = {
-			add_dynamic_modifier = {
-				modifier = ROM_national_opposition
+			custom_effect_tooltip = ROM_pefect_spelling_tt
+			hidden_effect = {
+				add_dynamic_modifier = {
+					modifier = ROM_national_opposition
+				}
 			}
 		}
 		search_filters = {
 			FOCUS_FILTER_INTERNAL_AFFAIRS
-			FOCUS_FILTER_COMPLETED_BY_EVENT
 		}
 	}
 	focus = {
@@ -2436,17 +2360,12 @@ focus_tree = {
 			focus = ROM_a_pefect_puppet
 		}
 		completion_reward = {
-			unlock_decision_tooltip = {
-				decision = ROM_invite_fredrick_wilhelm_as_king
-				show_effect_tooltip = yes
-			}
-			custom_effect_tooltip = empty_space_tt
+			unlock_decision_tooltip = ROM_invite_fredrick_wilhelm_as_king
 			add_war_support = 0.05
-			custom_effect_tooltip = ROM_modify_national_opposition_tt
 			add_to_variable = {
 				ROM_national_opposition_political_power = 0.1
-				tooltip = political_power_gain_tt
 			}
+			custom_effect_tooltip = ROM_trump2
 		}
 		search_filters = {
 			FOCUS_FILTER_INTERNAL_AFFAIRS
@@ -2465,19 +2384,16 @@ focus_tree = {
 			focus = ROM_not_our_king
 		}
 		completion_reward = {
-			custom_effect_tooltip = ROM_modify_army_tt
 			add_to_variable = {
 				ROM_army_defense = 0.05
-				tooltip = army_defence_factor_tt
 			}
 			add_to_variable = {
 				ROM_army_org = 0.05
-				tooltip = army_org_factor_tt
 			}
 			add_to_variable = {
 				ROM_army_regain = 0.05
-				tooltip = army_org_regain_tt
 			}
+			custom_effect_tooltip = ROM_pwarmy
 		}
 		search_filters = {
 			FOCUS_FILTER_INTERNAL_AFFAIRS
@@ -2500,9 +2416,12 @@ focus_tree = {
 			focus = ROM_begin_the_trials
 		}
 		completion_reward = {
-			remove_dynamic_modifier = {
-				modifier = ROM_national_opposition
+			hidden_effect = {
+				remove_dynamic_modifier = {
+					modifier = ROM_national_opposition
+				}
 			}
+			custom_effect_tooltip = ROM_ihatethis
 		}
 		search_filters = {
 			FOCUS_FILTER_INTERNAL_AFFAIRS
@@ -2521,11 +2440,10 @@ focus_tree = {
 			focus = ROM_not_our_king
 		}
 		completion_reward = {
-			custom_effect_tooltip = ROM_modify_economy_tt
 			add_to_variable = {
-				ROM_factory_output = 0.075
-				tooltip = industrial_capacity_factory_tt
+				ROM_mil_output = 0.075
 			}
+			custom_effect_tooltip = ROM_gdom
 			add_war_support = 0.1
 		}
 		search_filters = {
@@ -2570,11 +2488,10 @@ focus_tree = {
 			focus = ROM_a_pefect_puppet
 		}
 		completion_reward = {
-			custom_effect_tooltip = ROM_modify_national_opposition_tt
 			add_to_variable = {
 				ROM_national_opposition_political_power = 0.1
-				tooltip = political_power_gain_tt
 			}
+			custom_effect_tooltip = ROM_trump2
 		}
 		search_filters = {
 			FOCUS_FILTER_INTERNAL_AFFAIRS
@@ -2618,11 +2535,10 @@ focus_tree = {
 			focus = ROM_bring_in_the_collaborators
 		}
 		completion_reward = {
-			custom_effect_tooltip = ROM_modify_national_opposition_tt
 			add_to_variable = {
 				ROM_national_opposition_stability = 0.1
-				tooltip = stability_factor_tt
 			}
+			custom_effect_tooltip = ROM_nok_focus
 		}
 		search_filters = {
 			FOCUS_FILTER_INTERNAL_AFFAIRS
@@ -2642,15 +2558,13 @@ focus_tree = {
 			focus = ROM_lock_down_nation
 		}
 		completion_reward = {
-			custom_effect_tooltip = ROM_modify_national_opposition_tt
 			add_to_variable = {
 				ROM_national_opposition_stability = 0.05
-				tooltip = stability_factor_tt
 			}
 			add_to_variable = {
 				ROM_national_opposition_political_power = 0.05
-				tooltip = political_power_gain_tt
 			}
+			custom_effect_tooltip = ROM_btt_focus
 		}
 		search_filters = {
 			FOCUS_FILTER_INTERNAL_AFFAIRS
@@ -2862,10 +2776,9 @@ focus_tree = {
 				uncomplete_national_focus = {
 					focus = ROM_overturn_the_blue_law
 				}
-				custom_effect_tooltip = ROM_modify_economy_tt
+				custom_effect_tooltip = ROM_hello_blue_law.tt
 				add_to_variable = {
 					ROM_consumer_goods = 0.1
-					tooltip = consumer_goods_factor_tt
 				}
 			}
 		}
@@ -3045,7 +2958,7 @@ focus_tree = {
 	}
 	focus = {
 		id = ROM_investments_in_rural_education
-		icon = GFX_focus_generic_education_tgwr
+		icon = GFX_focus_generic_education
 		cost = 5
 		x = 0
 		y = 2
@@ -3067,20 +2980,16 @@ focus_tree = {
 				limit = {
 					has_country_flag = ROM_has_political_tree_research_slot
 				}
-				custom_effect_tooltip = ROM_modify_economy_tt
 				add_to_variable = {
 					ROM_research_speed = 0.05
-					tooltip = research_speed_factor_tt
 				}
+				custom_effect_tooltip = ROM_research_invest.tt
 			}
 			else = {
 				add_research_slot = 1
 				set_country_flag = ROM_has_political_tree_research_slot
 			}
-			unlock_decision_tooltip = {
-				decision = ROM_sway_intellectuals
-				show_effect_tooltip = yes
-			}
+			unlock_decision_tooltip = ROM_sway_intellectuals
 		}
 		ai_will_do = {
 			factor = 3
@@ -3110,10 +3019,7 @@ focus_tree = {
 		completion_reward = {
 			custom_effect_tooltip = available_political_advisor
 			show_ideas_tooltip = ROM_constantin_motru
-			unlock_decision_tooltip = {
-				decision = ROM_populist_rhetoric
-				show_effect_tooltip = yes
-			}
+			unlock_decision_tooltip = ROM_populist_rhetoric
 		}
 		ai_will_do = {
 			factor = 3
@@ -3213,10 +3119,9 @@ focus_tree = {
 				uncomplete_national_focus = {
 					focus = ROM_overturn_the_blue_law
 				}
-				custom_effect_tooltip = ROM_modify_economy_tt
+				custom_effect_tooltip = ROM_hello_blue_law.tt
 				add_to_variable = {
 					ROM_consumer_goods = 0.1
-					tooltip = consumer_goods_factor_tt
 				}
 			}
 			custom_effect_tooltip = ROM_cement
@@ -3251,11 +3156,10 @@ focus_tree = {
 		}
 		relative_position_id = ROM_agrarianists_in_power
 		completion_reward = {
-			custom_effect_tooltip = ROM_modify_economy_tt
 			add_to_variable = {
 				ROM_build_speed = 0.05
-				tooltip = production_speed_buildings_factor_tt
 			}
+			custom_effect_tooltip = ROM_efi
 			add_stability = -0.05
 			add_political_power = -20
 		}
@@ -3287,19 +3191,16 @@ focus_tree = {
 				prioritize = { 79 805 }
 				add_extra_state_shared_building_slots = 1
 			}
-			custom_effect_tooltip = ROM_modify_economy_tt
 			add_to_variable = {
 				ROM_research_speed = 0.05
-				tooltip = research_speed_factor_tt
 			}
 			add_to_variable = {
 				ROM_eco_pp_cost = 0.05
-				tooltip = political_power_cost_tt
 			}
 			add_to_variable = {
 				ROM_eco_stability = 0.05
-				tooltip = stability_factor_tt
 			}
+			custom_effect_tooltip = ROM_new_rural_schools.tt
 		}
 		ai_will_do = {
 			factor = 3
@@ -3379,24 +3280,14 @@ focus_tree = {
 		relative_position_id = ROM_agrarianists_in_power
 		completion_reward = {
 			custom_effect_tooltip = ROM_reject_excess.tt
-			custom_effect_tooltip = ROM_modify_economy_tt
-			effect_tooltip = {
-				add_to_variable = {
-					ROM_consumer_goods = -0.02
-					tooltip = consumer_goods_factor_tt
-				}				
-			}
-			custom_effect_tooltip = ROM_agrarian_focuses_effect
 			if = {
 				limit = {
 					check_variable = {
 						ROM_completed_agrarian = 1
 					}
 				}
-				custom_effect_tooltip = ROM_modify_economy_tt
 				add_to_variable = {
 					ROM_consumer_goods = -0.02
-					tooltip = consumer_goods_factor_tt
 				}
 			}
 			else_if = {
@@ -3405,10 +3296,8 @@ focus_tree = {
 						ROM_completed_agrarian = 2
 					}
 				}
-				custom_effect_tooltip = ROM_modify_economy_tt
 				add_to_variable = {
 					ROM_consumer_goods = -0.04
-					tooltip = consumer_goods_factor_tt
 				}
 			}
 			else_if = {
@@ -3417,10 +3306,8 @@ focus_tree = {
 						ROM_completed_agrarian = 3
 					}
 				}
-				custom_effect_tooltip = ROM_modify_economy_tt
 				add_to_variable = {
 					ROM_consumer_goods = -0.06
-					tooltip = consumer_goods_factor_tt
 				}
 			}
 			else_if = {
@@ -3429,10 +3316,8 @@ focus_tree = {
 						ROM_completed_agrarian = 4
 					}
 				}
-				custom_effect_tooltip = ROM_modify_economy_tt
 				add_to_variable = {
 					ROM_consumer_goods = -0.08
-					tooltip = consumer_goods_factor_tt
 				}
 			}
 			else_if = {
@@ -3441,10 +3326,8 @@ focus_tree = {
 						ROM_completed_agrarian = 5
 					}
 				}
-				custom_effect_tooltip = ROM_modify_economy_tt
 				add_to_variable = {
 					ROM_consumer_goods = -0.1
-					tooltip = consumer_goods_factor_tt
 				}
 			}
 		}
@@ -3807,11 +3690,10 @@ focus_tree = {
 		}
 		relative_position_id = ROM_bratianu_resign
 		completion_reward = {
-			custom_effect_tooltip = ROM_modify_economy_tt
 			add_to_variable = {
 				ROM_build_speed = 0.05
-				tooltip = production_speed_buildings_factor_tt
 			}
+			custom_effect_tooltip = ROM_efi
 			add_political_power = 50
 		}
 		ai_will_do = {
@@ -3847,11 +3729,10 @@ focus_tree = {
 		relative_position_id = ROM_from_the_top_down
 		completion_reward = {
 			add_stability = -0.05
-			custom_effect_tooltip = ROM_modify_economy_tt
 			add_to_variable = {
 				ROM_consumer_goods = -0.1
-				tooltip = consumer_goods_factor_tt
 			}
+			custom_effect_tooltip = ROM_otb.tt
 			country_event = ww1_romania.131
 		}
 		ai_will_do = {
@@ -3880,19 +3761,16 @@ focus_tree = {
 		}
 		relative_position_id = ROM_from_the_top_down
 		completion_reward = {
-			custom_effect_tooltip = ROM_modify_economy_tt
 			add_to_variable = {
 				ROM_eco_pp_cost = 0.15
-				tooltip = political_power_cost_tt
 			}
 			add_to_variable = {
 				ROM_consumer_goods = -0.1
-				tooltip = consumer_goods_factor_tt
 			}
 			add_to_variable = {
 				ROM_eco_stability = 0.05
-				tooltip = stability_factor_tt
 			}
+			custom_effect_tooltip = ROM_txp.tt
 			add_to_variable = {
 				ROM_peasant_anger = -1
 			}
@@ -3928,20 +3806,14 @@ focus_tree = {
 		}
 		relative_position_id = ROM_the_natural_party_of_governance
 		completion_reward = {
-			custom_effect_tooltip = ROM_modify_economy_tt
 			add_to_variable = {
 				ROM_eco_stability = 0.05
-				tooltip = stability_factor_tt
 			}
 			add_to_variable = {
 				ROM_eco_production_e = 0.05
-				tooltip = production_factory_efficiency_gain_factor_tt
 			}
-			custom_effect_tooltip = empty_space_tt
-			unlock_decision_tooltip = {
-				decision = ROM_adopt_a_workers_right_plank
-				show_effect_tooltip = yes
-			}
+			unlock_decision_tooltip = ROM_adopt_a_workers_right_plank
+			custom_effect_tooltip = ROM_mifocus
 		}
 		ai_will_do = {
 			factor = 3
@@ -3972,14 +3844,12 @@ focus_tree = {
 			focus = ROM_the_natural_party_of_governance
 		}
 		completion_reward = {
-			custom_effect_tooltip = ROM_modify_economy_tt
+			custom_effect_tooltip = ROM_m2ifocus
 			add_to_variable = {
 				ROM_factory_output = 0.05
-				tooltip = industrial_capacity_factory_tt
 			}
 			add_to_variable = {
 				ROM_eco_production_e = 0.05
-				tooltip = production_factory_efficiency_gain_factor_tt
 			}
 		}
 		search_filters = {
@@ -4032,10 +3902,7 @@ focus_tree = {
 		}
 		completion_reward = {
 			ROM_land_reform_up = yes
-			unlock_decision_tooltip = {
-				decision = ROM_consolidate_support_amongst_rural_areas
-				show_effect_tooltip = yes
-			}
+			unlock_decision_tooltip = ROM_consolidate_support_amongst_rural_areas
 		}
 		search_filters = {
 			FOCUS_FILTER_HISTORICAL
@@ -4060,24 +3927,17 @@ focus_tree = {
 			focus = ROM_minimum_wage_law
 		}
 		completion_reward = {
-			custom_effect_tooltip = ROM_modify_economy_tt
 			add_to_variable = {
 				ROM_eco_production_e = -0.05
-				tooltip = production_factory_efficiency_gain_factor_tt
 			}
 			add_to_variable = {
 				ROM_factory_output = 0.05
-				tooltip = industrial_capacity_factory_tt
 			}
 			add_to_variable = {
 				ROM_eco_stability = 0.05
-				tooltip = stability_factor_tt
 			}
-			custom_effect_tooltip = empty_space_tt
-			unlock_decision_tooltip = {
-				decision = ROM_challenge_pc_dominance_of_urban_romania
-				show_effect_tooltip = yes
-			}
+			custom_effect_tooltip = ROM_m23focus
+			unlock_decision_tooltip = ROM_challenge_pc_dominance_of_urban_romania
 		}
 		search_filters = {
 			FOCUS_FILTER_STABILITY
@@ -4340,18 +4200,9 @@ focus_tree = {
 			focus = ROM_revive_the_committee_on_the_agrarian_question
 		}
 		completion_reward = {
-			unlock_decision_tooltip = {
-				decision = ROM_embrace_modernization
-				show_effect_tooltip = yes
-			}
-			unlock_decision_tooltip = {
-				decision = ROM_encourage_factory_jobs
-				show_effect_tooltip = yes
-			}
-			unlock_decision_tooltip = {
-				decision = ROM_pander_to_the_middle_class
-				show_effect_tooltip = yes
-			}
+			unlock_decision_tooltip = ROM_embrace_modernization
+			unlock_decision_tooltip = ROM_encourage_factory_jobs
+			unlock_decision_tooltip = ROM_pander_to_the_middle_class
 		}
 		search_filters = {
 			FOCUS_FILTER_HISTORICAL
@@ -4378,6 +4229,7 @@ focus_tree = {
 		completion_reward = {
 			custom_effect_tooltip = available_political_advisor
 			show_ideas_tooltip = ROM_gala_galaction
+			unlock_decision_tooltip = ROM_populist_rhetoric2
 			add_stability = 0.04
 			add_war_support = 0.03
 			if = {
@@ -4385,11 +4237,6 @@ focus_tree = {
 					has_idea = ROM_jewish_immigration
 				}
 				remove_ideas = ROM_jewish_immigration
-			}
-			custom_effect_tooltip = empty_space_tt
-			unlock_decision_tooltip = {
-				decision = ROM_populist_rhetoric2
-				show_effect_tooltip = yes
 			}
 		}
 		search_filters = {
@@ -4646,11 +4493,10 @@ focus_tree = {
 				limit = {
 					has_country_flag = ROM_has_political_tree_research_slot
 				}
-				custom_effect_tooltip = ROM_modify_economy_tt
 				add_to_variable = {
 					ROM_research_speed = 0.05
-					tooltip = research_speed_factor_tt
 				}
+				custom_effect_tooltip = ROM_research_invest.tt
 			}
 			else = {
 				add_research_slot = 1
@@ -4707,19 +4553,16 @@ focus_tree = {
 			focus = ROM_peasants_democracy
 		}
 		completion_reward = {
-			custom_effect_tooltip = ROM_modify_economy_tt
 			add_to_variable = {
 				ROM_consumer_goods = -0.1
-				tooltip = consumer_goods_factor_tt
 			}
 			add_to_variable = {
-				ROM_build_speed = -0.05
-				tooltip = production_speed_buildings_factor_tt
+				production_speed_buildings_factor = -0.05
 			}
 			add_to_variable = {
 				ROM_eco_pp_cost = -0.15
-				tooltip = political_power_cost_tt
 			}
+			custom_effect_tooltip = ROM_tbotr.tt
 		}
 		search_filters = {
 			FOCUS_FILTER_INTERNAL_AFFAIRS
@@ -4871,7 +4714,7 @@ focus_tree = {
 		available = {
 			custom_trigger_tooltip = {
 				tooltip = ROM_autocomplete_19072
-				has_global_flag = ROM_the_second_great_disaster
+				always = no
 			}
 			has_completed_focus = ROM_ban_the_pnl_and_pcd
 		}
@@ -4885,7 +4728,6 @@ focus_tree = {
 		}
 		search_filters = {
 			FOCUS_FILTER_INTERNAL_AFFAIRS
-			FOCUS_FILTER_COMPLETED_BY_EVENT
 		}
 	}
 	focus = {
@@ -4903,18 +4745,9 @@ focus_tree = {
 			has_ROM_pcd_government = yes
 		}
 		completion_reward = {
-			unlock_decision_tooltip = {
-				decision = ROM_isolate_stere
-				show_effect_tooltip = yes
-			}
-			unlock_decision_tooltip = {
-				decision = ROM_exile_carp_from_politics
-				show_effect_tooltip = yes
-			}
-			unlock_decision_tooltip = {
-				decision = ROM_bipartisan_rhetoric
-				show_modifiers = yes
-			}
+			unlock_decision_tooltip = ROM_isolate_stere
+			unlock_decision_tooltip = ROM_exile_carp_from_politics
+			unlock_decision_tooltip = ROM_bipartisan_rhetoric
 		}
 		search_filters = {
 			FOCUS_FILTER_INTERNAL_AFFAIRS
@@ -4934,20 +4767,9 @@ focus_tree = {
 			has_ROM_pcd_government = yes
 		}
 		completion_reward = {
-			unlock_decision_tooltip = {
-				decision = ROM_investigate_missing_government_funds
-				show_effect_tooltip = yes
-			}
-			custom_effect_tooltip = empty_space_tt
-			unlock_decision_tooltip = {
-				decision = ROM_shrink_the_size_of_government
-				show_effect_tooltip = yes
-			}
-			custom_effect_tooltip = empty_space_tt
-			unlock_decision_tooltip = {
-				decision = ROM_fight_pnl_corruption_networks
-				show_effect_tooltip = yes
-			}
+			unlock_decision_tooltip = ROM_investigate_missing_government_funds
+			unlock_decision_tooltip = ROM_shrink_the_size_of_government
+			unlock_decision_tooltip = ROM_fight_pnl_corruption_networks
 		}
 		search_filters = {
 			FOCUS_FILTER_INTERNAL_AFFAIRS
@@ -4999,11 +4821,10 @@ focus_tree = {
 				limit = {
 					has_country_flag = ROM_has_political_tree_research_slot
 				}
-				custom_effect_tooltip = ROM_modify_economy_tt
 				add_to_variable = {
 					ROM_research_speed = 0.05
-					tooltip = research_speed_factor_tt
 				}
+				custom_effect_tooltip = ROM_research_invest.tt
 			}
 			else = {
 				add_research_slot = 1
@@ -5035,11 +4856,10 @@ focus_tree = {
 				limit = {
 					has_country_flag = ROM_has_political_tree_research_slot
 				}
-				custom_effect_tooltip = ROM_modify_economy_tt
 				add_to_variable = {
 					ROM_research_speed = 0.05
-					tooltip = research_speed_factor_tt
 				}
+				custom_effect_tooltip = ROM_research_invest.tt
 			}
 			else = {
 				add_research_slot = 1
@@ -5200,20 +5020,9 @@ focus_tree = {
 			}
 		}
 		completion_reward = {
-			unlock_decision_tooltip = {
-				decision = ROM_oppose_political_parties
-				show_effect_tooltip = yes
-			}
-			custom_effect_tooltip = empty_space_tt
-			unlock_decision_tooltip = {
-				decision = ROM_glorify_the_monarchy
-				show_modifiers = yes
-			}
-			custom_effect_tooltip = empty_space_tt
-			unlock_decision_tooltip = {
-				decision = ROM_cut_government_bloat
-				show_modifiers = yes
-			}
+			unlock_decision_tooltip = ROM_oppose_political_parties
+			unlock_decision_tooltip = ROM_glorify_the_monarchy
+			unlock_decision_tooltip = ROM_cut_government_bloat
 		}
 		search_filters = {
 			FOCUS_FILTER_INTERNAL_AFFAIRS
@@ -5240,16 +5049,14 @@ focus_tree = {
 			}
 		}
 		completion_reward = {
-			custom_effect_tooltip = ROM_modify_economy_tt
 			add_to_variable = {
 				ROM_eco_pp_cost = 0.1
-				tooltip = political_power_cost_tt
 			}
 			add_to_variable = {
 				ROM_build_speed = 0.05
-				tooltip = production_speed_buildings_factor_tt
 			}
 			add_war_support = -0.05
+			custom_effect_tooltip = ROM_ift2.tt
 		}
 		search_filters = {
 			FOCUS_FILTER_INTERNAL_AFFAIRS
@@ -5273,11 +5080,10 @@ focus_tree = {
 			}
 		}
 		completion_reward = {
-			custom_effect_tooltip = ROM_modify_army_tt
 			add_to_variable = {
 				ROM_army_org = 0.05
-				tooltip = army_org_factor_tt
 			}
+			custom_effect_tooltip = ROM_army_org2
 			add_stability = 0.05
 			add_command_power = 50
 			add_war_support = 0.075
@@ -5373,10 +5179,7 @@ focus_tree = {
 			set_variable = {
 				var = ROM_encouraged_dobruja_migration
 			}
-			unlock_decision_tooltip = {
-				decision = ROM_encourage_aromanian_migration
-				show_effect_tooltip = yes
-			}
+			unlock_decision_tooltip = ROM_encourage_aromanian_migration
 			custom_effect_tooltip = ROM_arfocus
 		}
 		ai_will_do = {
@@ -5436,10 +5239,7 @@ focus_tree = {
 		relative_position_id = ROM_mandatory_insurance
 		completion_reward = {
 			add_ideas = ROM_soldiers_benefits
-			unlock_decision_tooltip = {
-				decision = ROM_sway_the_vote_of_soldiers
-				show_effect_tooltip = yes
-			}
+			unlock_decision_tooltip = ROM_sway_the_vote_of_soldiers
 		}
 		ai_will_do = {
 			factor = 3
@@ -5504,18 +5304,13 @@ focus_tree = {
 		x = 3
 		y = 1
 		completion_reward = {
+			unlock_decision_tooltip = ROM_fix_the_railways
 			custom_effect_tooltip = ROM_fixing_the_railways.tt
 			add_tech_bonus = {
 				name = ROM_fixing_the_railways
 				bonus = 0.75
 				uses = 1
 				category = train_tech
-			}
-			custom_effect_tooltip = empty_space_tt
-			unlock_decision_tooltip = {
-				decision = ROM_fix_the_railways
-				show_modifiers = yes
-				show_effect_tooltip = yes
 			}
 		}
 		ai_will_do = {
@@ -5538,11 +5333,10 @@ focus_tree = {
 		x = 3
 		y = 3
 		completion_reward = {
-			custom_effect_tooltip = ROM_modify_economy_tt
 			add_to_variable = {
 				ROM_building_slots = 0.1
-				tooltip = global_building_slots_factor_tt
 			}
+			custom_effect_tooltip = ROM_prah_f2.tt
 		}
 		ai_will_do = {
 			factor = 3
@@ -5568,11 +5362,10 @@ focus_tree = {
 		x = 4
 		y = 2
 		completion_reward = {
-			custom_effect_tooltip = ROM_modify_economy_tt
 			add_to_variable = {
 				ROM_building_slots = 0.05
-				tooltip = global_building_slots_factor_tt
 			}
+			custom_effect_tooltip = ROM_prah_f3.tt
 			79 = {
 				add_extra_state_shared_building_slots = 2
 			}
@@ -5603,10 +5396,7 @@ focus_tree = {
 			owns_state = 77
 		}
 		completion_reward = {
-			unlock_decision_tooltip = {
-				decision = ROM_law_on_southern_dobruja_decision
-				show_effect_tooltip = yes
-			}
+			unlock_decision_tooltip = ROM_law_on_southern_dobruja_decision
 		}
 		ai_will_do = {
 			factor = 3
@@ -5671,17 +5461,23 @@ focus_tree = {
 			focus = ROM_import_foreign_tools
 		}
 		completion_reward = {
-			custom_effect_tooltip = ROM_modify_economy_tt
+			custom_effect_tooltip = ROM_agricultural_knowledge.tt
 			add_to_variable = {
 				ROM_consumer_goods = -0.07
-				tooltip = consumer_goods_factor_tt
 			}
 			add_to_variable = {
 				ROM_eco_pp_cost = 0.05
-				tooltip = political_power_cost_tt
 			}
 			add_to_variable = {
 				ROM_completed_agrarian = 1
+			}
+			random_owned_controlled_state = {
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = industrial_complex
+					level = 1
+					instant_build = yes
+				}
 			}
 		}
 		ai_will_do = {
@@ -5703,18 +5499,21 @@ focus_tree = {
 		x = -4
 		y = 2
 		completion_reward = {
-			custom_effect_tooltip = ROM_modify_economy_tt
+			custom_effect_tooltip = ROM_ice.tt
 			add_to_variable = {
 				ROM_consumer_goods = -0.05
-				tooltip = consumer_goods_factor_tt
 			}
-			custom_effect_tooltip = empty_space_tt
-			unlock_decision_tooltip = {
-				decision = ROM_fight_for_increased_exports
-				show_effect_tooltip = yes
-			}
+			unlock_decision_tooltip = ROM_fight_for_increased_exports
 			add_to_variable = {
 				ROM_completed_agrarian = 1
+			}
+						46 = {
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = industrial_complex
+					level = 2
+					instant_build = yes
+				}
 			}
 		}
 		ai_will_do = {
@@ -5737,10 +5536,9 @@ focus_tree = {
 		y = 4
 		completion_reward = {
 			add_stability = 0.02
-			custom_effect_tooltip = ROM_modify_economy_tt
+			custom_effect_tooltip = ROM_ice.tt
 			add_to_variable = {
 				ROM_consumer_goods = -0.05
-				tooltip = consumer_goods_factor_tt
 			}
 			add_to_variable = {
 				ROM_completed_agrarian = 1
@@ -5776,14 +5574,12 @@ focus_tree = {
 			}
 		}
 		completion_reward = {
-			custom_effect_tooltip = ROM_modify_economy_tt
+			custom_effect_tooltip = ROM_inc_gold_silv_exp
 			add_to_variable = {
 				ROM_consumer_goods = -0.05
-				tooltip = consumer_goods_factor_tt
 			}
 			add_to_variable = {
 				ROM_min_export_var = 0.1
-				tooltip = min_export_tt
 			}
 			add_tech_bonus = {
 				name = ROM_prahova_valley
@@ -5813,23 +5609,30 @@ focus_tree = {
 			}
 		}
 		relative_position_id = ROM_sa_faci_din_rahat_bici
-		cost = 5
+		cost = 10
 		x = -3
 		y = 5
 		completion_reward = {
 			46 = {
-				add_extra_state_shared_building_slots = 1
+				add_extra_state_shared_building_slots = 2
 				add_building_construction = {
 					type = industrial_complex
-					level = 1
+					level = 2
 					instant_build = yes
 				}
 			}
-			custom_effect_tooltip = ROM_modify_economy_tt
+			81 = {
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = industrial_complex
+					level = 2
+					instant_build = yes
+				}
+			}
 			add_to_variable = {
 				ROM_build_speed = 0.05
-				tooltip = production_speed_buildings_factor_tt
 			}
+			custom_effect_tooltip = ROM_eoli.tt
 			add_to_variable = {
 				ROM_completed_agrarian = 1
 			}
@@ -5862,14 +5665,12 @@ focus_tree = {
 			}
 		}
 		completion_reward = {
-			custom_effect_tooltip = ROM_modify_economy_tt
+			custom_effect_tooltip = ROM_tdga
 			add_to_variable = {
 				ROM_consumer_goods = -0.1
-				tooltip = consumer_goods_factor_tt
 			}
 			add_to_variable = {
 				ROM_eco_pp_cost = 0.1
-				tooltip = political_power_cost_tt
 			}
 		}
 		ai_will_do = {
@@ -5891,14 +5692,12 @@ focus_tree = {
 		x = -4
 		y = 4
 		completion_reward = {
-			custom_effect_tooltip = ROM_modify_economy_tt
+			custom_effect_tooltip = ROM_cttd
 			add_to_variable = {
 				ROM_consumer_goods = -0.05
-				tooltip = consumer_goods_factor_tt
 			}
 			add_to_variable = {
 				ROM_eco_pp_cost = 0.05
-				tooltip = political_power_cost_tt
 			}
 		}
 		ai_will_do = {
@@ -5924,14 +5723,20 @@ focus_tree = {
 			focus = ROM_agricultural_knowledge
 		}
 		completion_reward = {
-			custom_effect_tooltip = ROM_modify_economy_tt
+			custom_effect_tooltip = ROM_ift.tt
 			add_to_variable = {
 				ROM_factory_output = 0.05
-				tooltip = industrial_capacity_factory_tt
 			}
 			add_to_variable = {
 				ROM_eco_pp_cost = 0.05
-				tooltip = political_power_cost_tt
+			}
+			random_owned_controlled_state = {
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = industrial_complex
+					level = 1
+					instant_build = yes
+				}
 			}
 		}
 		ai_will_do = {
@@ -5952,11 +5757,10 @@ focus_tree = {
 		x = 2
 		y = 2
 		completion_reward = {
-			custom_effect_tooltip = ROM_modify_economy_tt
 			add_to_variable = {
 				ROM_research_speed = 0.125
-				tooltip = research_speed_factor_tt
 			}
+			custom_effect_tooltip = ROM_research_invest.tt2
 			ROM_land_reform_down = yes
 		}
 		ai_will_do = {
@@ -5982,15 +5786,13 @@ focus_tree = {
 		x = 1
 		y = 3
 		completion_reward = {
-			custom_effect_tooltip = ROM_modify_economy_tt
 			add_to_variable = {
 				ROM_eco_pp_cost = 0.1
-				tooltip = political_power_cost_tt
 			}
 			add_to_variable = {
 				ROM_build_speed = 0.05
-				tooltip = production_speed_buildings_factor_tt
 			}
+			custom_effect_tooltip = ROM_si.tt
 		}
 		ai_will_do = {
 			factor = 3
@@ -6015,20 +5817,18 @@ focus_tree = {
 		x = 2
 		y = 4
 		completion_reward = {
-			custom_effect_tooltip = ROM_modify_economy_tt
 			add_to_variable = {
 				ROM_eco_pp_cost = 0.05
-				tooltip = political_power_cost_tt
 			}
 			add_to_variable = {
 				ROM_consumer_goods = 0.05
-				tooltip = consumer_goods_factor_tt
 			}
+			custom_effect_tooltip = ROM_gati
 			46 = {
-				add_extra_state_shared_building_slots = 1
+				add_extra_state_shared_building_slots = 2
 				add_building_construction = {
 					type = industrial_complex
-					level = 1
+					level = 2
 					instant_build = yes
 				}
 			}
@@ -6054,19 +5854,16 @@ focus_tree = {
 		x = 1
 		y = 5
 		completion_reward = {
-			custom_effect_tooltip = ROM_modify_economy_tt
 			add_to_variable = {
 				ROM_build_speed = 0.05
-				tooltip = production_speed_buildings_factor_tt
 			}
 			add_to_variable = {
 				ROM_consumer_goods = 0.05
-				tooltip = consumer_goods_factor_tt
 			}
 			add_to_variable = {
 				ROM_min_export_var = -0.1
-				tooltip = min_export_tt
 			}
+			custom_effect_tooltip = ROM_export_less_tt_tt
 		}
 		ai_will_do = {
 			factor = 3
@@ -6100,10 +5897,10 @@ focus_tree = {
 					type = steel
 					amount = 8
 				}
-				add_extra_state_shared_building_slots = 1
+				add_extra_state_shared_building_slots = 2
 				add_building_construction = {
 					type = industrial_complex
-					level = 1
+					level = 2
 					instant_build = yes
 				}
 			}
@@ -6132,16 +5929,15 @@ focus_tree = {
 		x = -1
 		y = 3
 		completion_reward = {
-			custom_effect_tooltip = ROM_modify_economy_tt
+			custom_effect_tooltip = ROM_edd.tt
 			add_to_variable = {
 				ROM_eco_docs = 0.05
-				tooltip = industrial_capacity_dockyard_tt
 			}
 			805 = {
-				add_extra_state_shared_building_slots = 1
+				add_extra_state_shared_building_slots = 2
 				add_building_construction = {
 					type = dockyard
-					level = 1
+					level = 2
 					instant_build = yes
 				}
 			}
@@ -6170,37 +5966,27 @@ focus_tree = {
 		x = 1
 		y = 1
 		completion_reward = {
+			46 = {
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = industrial_complex
+					level = 2
+					instant_build = yes
+				}
+				add_resource = {
+					type = oil
+					amount = 5
+				}
+			}
+			add_to_variable = {
+				ROM_building_slots = 0.02
+			}
+			custom_effect_tooltip = ROM_prah_f.tt
 			add_tech_bonus = {
 				name = ROM_prahova_valley
 				bonus = 0.75
 				uses = 1
 				category = excavation_tech
-			}
-			46 = {
-				add_extra_state_shared_building_slots = 1
-				add_building_construction = {
-					type = industrial_complex
-					level = 1
-					instant_build = yes
-				}
-				if = {
-					limit = { 
-						has_start_date < 1914.1.1
-					}
-					# oil adding in 1914 transfered to on_startup
-					add_resource = {
-						type = oil
-						amount = 5
-					}
-				}
-				else = {
-					effect_tooltip = {
-						add_resource = {
-							type = oil
-							amount = 5
-						}
-					}
-				}
 			}
 		}
 		ai_will_do = {
@@ -6234,23 +6020,11 @@ focus_tree = {
 				uses = 1
 				category = electronics
 			}
-			custom_effect_tooltip = ROM_modify_economy_tt
-			add_to_variable = { 
-				ROM_eco_pp_cost = 0.05
-				tooltip = political_power_cost_tt
-			}
-			add_to_variable = { 
-				ROM_consumer_goods = 0.05
-				tooltip = consumer_goods_factor_tt
-			}
-			add_to_variable = { 
-				ROM_eco_stability = 0.05 
-				tooltip = stability_factor_tt
-			}
-			add_to_variable = { 
-				ROM_build_speed = 0.05
-				tooltip = production_speed_buildings_factor_tt 
-			}
+			add_to_variable = { ROM_eco_pp_cost = 0.05 }
+			add_to_variable = { ROM_consumer_goods = 0.05 }
+			add_to_variable = { ROM_eco_stability = 0.05 }
+			add_to_variable = { ROM_build_speed = 0.05 }
+			custom_effect_tooltip = ROM_cte.tt
 		}
 		ai_will_do = {
 			factor = 3
@@ -6460,11 +6234,10 @@ focus_tree = {
 		}
 		completion_reward = {
 			army_experience = 20
-			custom_effect_tooltip = ROM_modify_army_tt
 			add_to_variable = {
 				ROM_army_speed = 0.05
-				tooltip = army_speed_factor_tt
 			}
+			custom_effect_tooltip = ROM_speed
 		}
 		search_filters = {
 			FOCUS_FILTER_ARMY_XP
@@ -6487,11 +6260,8 @@ focus_tree = {
 			}
 		}
 		completion_reward = {
+			unlock_decision_tooltip = ROM_recruitment_campaign
 			add_manpower = 7500
-			unlock_decision_tooltip = {
-				decision = ROM_recruitment_campaign
-				show_modifiers = yes
-			}
 		}
 		search_filters = {
 			FOCUS_FILTER_MANPOWER
@@ -6536,19 +6306,8 @@ focus_tree = {
 		}
 		completion_reward = {
 			custom_effect_tooltip = ROM_prevent_cerchez_bankruptcy.tt
-			custom_effect_tooltip = empty_space_tt
-			unlock_decision_tooltip = {
-				decision = ROM_invest_in_cerchez_and_co_research
-				show_effect_tooltip = yes
-				show_modifiers = yes
-			}
-			custom_effect_tooltip = empty_space_tt
-			unlock_decision_tooltip = {
-				decision = ROM_purchase_cerchez_and_co_fighters
-				show_effect_tooltip = yes
-				show_modifiers = yes
-			}
-			custom_effect_tooltip = empty_space_tt
+			unlock_decision_tooltip = ROM_invest_in_cerchez_and_co_research
+			unlock_decision_tooltip = ROM_purchase_cerchez_and_co_fighters
 			if = {
 				limit = {
 					has_dlc = "Arms Against Tyranny"
@@ -6638,10 +6397,9 @@ focus_tree = {
 		available = {
 		}
 		completion_reward = {
-			custom_effect_tooltip = ROM_modify_army_tt
+			custom_effect_tooltip = modify_rom_army_sup
 			add_to_variable = {
 				ROM_army_supply = -0.1
-				tooltip = supply_consumption_factor_tt
 			}
 		}
 		search_filters = {
@@ -6697,11 +6455,10 @@ focus_tree = {
 			focus = ROM_romanian_army
 		}
 		completion_reward = {
-			custom_effect_tooltip = ROM_modify_army_tt
 			add_to_variable = {
 				ROM_army_xp = 0.1
-				tooltip = experience_gain_army_tt
 			}
+			custom_effect_tooltip = modify_rom_army
 		}
 		ai_will_do = {
 			factor = 3
@@ -6731,15 +6488,13 @@ focus_tree = {
 			focus = ROM_romanian_army
 		}
 		completion_reward = {
-			custom_effect_tooltip = ROM_modify_army_tt
 			add_to_variable = {
 				ROM_army_org = 0.05
-				tooltip = army_org_factor_tt
 			}
 			add_to_variable = {
 				ROM_army_regain = 0.05
-				tooltip = army_org_regain_tt
 			}
+			custom_effect_tooltip = ROM_army_org
 		}
 		search_filters = {
 			FOCUS_FILTER_ARMY_XP
@@ -6934,25 +6689,19 @@ focus_tree = {
 			}
 		}
 		completion_reward = {
-			unlock_decision_tooltip = {
-				decision = ROM_armistice_of_focsani_decision
-				show_effect_tooltip = yes
-			}
-			custom_effect_tooltip = empty_space_tt
-			unlock_decision_tooltip = {
-				decision = ROM_treaty_of_bucharest
-				show_effect_tooltip = yes
-			}
+			unlock_decision_tooltip = ROM_armistice_of_focsani_decision
+			unlock_decision_tooltip = ROM_treaty_of_bucharest
 		}
 		bypass = {
-			has_global_flag = great_war
+			any_country = {
+				has_global_flag = great_war
+			}
 		}
 		ai_will_do = {
 			factor = 3
 		}
 		search_filters = {
 			FOCUS_FILTER_HISTORICAL
-			FOCUS_FILTER_COMPLETED_BY_EVENT
 		}
 	}
 	focus = {
@@ -6991,15 +6740,13 @@ focus_tree = {
 			focus = ROM_claim_bessarabia
 		}
 		completion_reward = {
-			custom_effect_tooltip = ROM_modify_army_tt
 			add_to_variable = {
 				ROM_army_speed = 0.05
-				tooltip = army_speed_factor_tt
 			}
 			add_to_variable = {
 				ROM_army_defense = 0.1
-				tooltip = army_defence_factor_tt
 			}
+			custom_effect_tooltip = ROM_for_truth.tt
 		}
 		search_filters = {
 			FOCUS_FILTER_HISTORICAL			# Pe Aici nu se Trece makes it historical https://en.wikipedia.org/wiki/They_shall_not_pass
@@ -7058,11 +6805,10 @@ focus_tree = {
 			focus = ROM_claim_bessarabia
 		}
 		completion_reward = {
-			custom_effect_tooltip = ROM_modify_army_tt
 			add_to_variable = {
 				ROM_army_org = 0.1
-				tooltip = army_org_factor_tt
 			}
+			custom_effect_tooltip = ROM_acds
 		}
 		search_filters = {
 			FOCUS_FILTER_ARMY_XP
@@ -7081,11 +6827,10 @@ focus_tree = {
 		}
 		completion_reward = {
 			add_command_power = 20
-			custom_effect_tooltip = ROM_modify_army_tt
 			add_to_variable = {
 				ROM_army_regain = 0.1
-				tooltip = army_org_regain_tt
 			}
+			custom_effect_tooltip = ROM_rthc
 		}
 		search_filters = {
 			FOCUS_FILTER_HISTORICAL
@@ -7104,11 +6849,10 @@ focus_tree = {
 			focus = ROM_claim_bessarabia
 		}
 		completion_reward = {
-			custom_effect_tooltip = ROM_modify_economy_tt
 			add_to_variable = {
 				ROM_factory_output = 0.05
-				tooltip = industrial_capacity_factory_tt
 			}
+			custom_effect_tooltip = ROM_fftf
 			increase_mobilisation = yes
 		}
 		search_filters = {
@@ -7127,14 +6871,10 @@ focus_tree = {
 		}
 		relative_position_id = ROM_encourage_jobs_in_the_war_industry
 		completion_reward = {
-			custom_effect_tooltip = ROM_modify_economy_tt
+			unlock_decision_tooltip = ROM_improve_fortifications
+			custom_effect_tooltip = ROM_impfort.tt
 			add_to_variable = {
 				ROM_production_speed_bunker_army = 0.2
-				tooltip = production_speed_bunker_factor_tt
-			}
-			unlock_decision_tooltip = {
-				decision = ROM_improve_fortifications
-				show_effect_tooltip = yes
 			}
 		}
 		ai_will_do = {
@@ -7156,11 +6896,10 @@ focus_tree = {
 			focus = ROM_encourage_jobs_in_the_war_industry
 		}
 		completion_reward = {
-			custom_effect_tooltip = ROM_modify_economy_tt
 			add_to_variable = {
 				ROM_mil_build_speed = 0.15
-				tooltip = production_speed_arms_factory_factor_tt
 			}
+			custom_effect_tooltip = ROM_mil_speed_2
 		}
 		search_filters = {
 			FOCUS_FILTER_INDUSTRY
@@ -7178,20 +6917,14 @@ focus_tree = {
 			focus = ROM_restructure_the_high_command
 		}
 		completion_reward = {
-			custom_effect_tooltip = ROM_modify_army_tt
+			unlock_decision_tooltip = ROM_teach_new_tactics
 			add_to_variable = {
 				ROM_army_defense = 0.05
-				tooltip = army_defence_factor_tt
 			}
 			add_to_variable = {
 				ROM_army_regain = 0.05
-				tooltip = army_org_regain_tt
 			}
-			custom_effect_tooltip = empty_space_tt
-			unlock_decision_tooltip = {
-				decision = ROM_teach_new_tactics
-				show_effect_tooltip = yes
-			}
+			custom_effect_tooltip = ROM_tsarmy
 		}
 		search_filters = {
 			FOCUS_FILTER_HISTORICAL
@@ -7210,15 +6943,10 @@ focus_tree = {
 			focus = ROM_restructure_the_high_command
 		}
 		completion_reward = {
-			custom_effect_tooltip = ROM_modify_army_tt
 			add_to_variable = {
 				ROM_army_speed = 0.1
-				tooltip = army_speed_factor_tt
 			}
-			add_to_variable = {
-				ROM_army_regain = 0.05
-				tooltip = army_org_regain_tt
-			}
+			custom_effect_tooltip = ROM_ads
 		}
 		search_filters = {
 			FOCUS_FILTER_ARMY_XP
@@ -7237,15 +6965,13 @@ focus_tree = {
 		available = {
 		}
 		completion_reward = {
-			custom_effect_tooltip = ROM_modify_army_tt
 			add_to_variable = {
 				ROM_army_regain = 0.05
-				tooltip = army_org_regain_tt
 			}
 			add_to_variable = {
 				ROM_army_speed = 0.05
-				tooltip = army_speed_factor_tt
 			}
+			custom_effect_tooltip = ROM_sec
 		}
 		ai_will_do = {
 			factor = 3
@@ -7387,17 +7113,15 @@ focus_tree = {
 			focus = ROM_general_directorate_of_munitions
 		}
 		completion_reward = {
-			add_stability = 0.025
-			add_war_support = -0.025
-			custom_effect_tooltip = ROM_modify_army_tt
 			add_to_variable = {
 				ROM_army_defense = 0.05
-				tooltip = army_defence_factor_tt
 			}
 			add_to_variable = {
-				ROM_army_org = 0.05
-				tooltip = army_org_factor_tt
+				ROM_army_org = 0.025
 			}
+			custom_effect_tooltip = ROM_talcoholi.tt
+			add_stability = 0.025
+			add_war_support = -0.025
 		}
 		search_filters = {
 			FOCUS_FILTER_STABILITY
@@ -7427,15 +7151,7 @@ focus_tree = {
 					add_mio_size = 1
 				}
 			}
-			else = {
-				custom_effect_tooltip = available_designer
-				show_ideas_tooltip = ROM_arsenal_de_depozit_central_de_artilerie
-			}
-			custom_effect_tooltip = empty_space_tt
-			unlock_decision_tooltip = {
-				decision = ROM_artillery_modernization_decision
-				show_effect_tooltip = yes
-			}
+			unlock_decision_tooltip = ROM_artillery_modernization_decision
 		}
 		search_filters = {
 			FOCUS_FILTER_HISTORICAL
@@ -7568,19 +7284,16 @@ focus_tree = {
 			focus = ROM_for_the_truth
 		}
 		completion_reward = {
-			custom_effect_tooltip = ROM_modify_army_tt
 			add_to_variable = {
 				ROM_army_defense = 0.05
-				tooltip = army_defence_factor_tt
 			}
 			add_to_variable = {
 				ROM_army_org = 0.05
-				tooltip = army_org_factor_tt
 			}
 			add_to_variable = {
 				ROM_army_regain = 0.05
-				tooltip = army_org_regain_tt
 			}
+			custom_effect_tooltip = ROM_pwarmy
 		}
 		search_filters = {
 			FOCUS_FILTER_ARMY_XP
@@ -7700,18 +7413,8 @@ focus_tree = {
 				slot = political_advisor
 				trait = establishment_liberal
 			}
-			custom_effect_tooltip = empty_space_tt
-			unlock_decision_tooltip = {
-				decision = ROM_anti_populist_campaigns
-				show_effect_tooltip = yes
-			}
-			custom_effect_tooltip = empty_space_tt
-			unlock_decision_tooltip = {
-				decision = ROM_prevent_a_brain_drain
-				show_effect_tooltip = yes
-				show_modifiers = yes
-			}
-			custom_effect_tooltip = empty_space_tt
+			unlock_decision_tooltip = ROM_anti_populist_campaigns
+			unlock_decision_tooltip = ROM_prevent_a_brain_drain
 			add_to_variable = {
 				kings_approval_of_government = 1
 			}
@@ -7948,8 +7651,8 @@ focus_tree = {
 		y = 1
 		available = {
 			custom_trigger_tooltip = {
+				always = no
 				tooltip = ROM_depends_on_event.tt
-				has_completed_focus = ROM_general_army_inspectorate
 			}
 		}
 		relative_position_id = ROM_a_question_of_priorities
@@ -7967,7 +7670,6 @@ focus_tree = {
 		}
 		search_filters = {
 			FOCUS_FILTER_ARMY_XP
-			FOCUS_FILTER_COMPLETED_BY_EVENT
 		}
 	}
 	focus = {
@@ -7986,14 +7688,12 @@ focus_tree = {
 			focus = ROM_general_army_inspectorate
 		}
 		completion_reward = {
-			custom_effect_tooltip = ROM_modify_army_tt
+			custom_effect_tooltip = ROM_army_org
 			add_to_variable = {
 				ROM_army_org = 0.05
-				tooltip = army_org_factor_tt
 			}
 			add_to_variable = {
 				ROM_army_regain = 0.05
-				tooltip = army_org_regain_tt
 			}
 		}
 		ai_will_do = {
@@ -8019,10 +7719,12 @@ focus_tree = {
 			focus = ROM_army_focus1
 		}
 		completion_reward = {
-			custom_effect_tooltip = ROM_modify_army_tt
+			custom_effect_tooltip = ROM_army_org
 			add_to_variable = {
-				ROM_army_defense = 0.05
-				tooltip = army_defence_factor_tt
+				ROM_army_org = 0.05
+			}
+			add_to_variable = {
+				ROM_army_regain = 0.05
 			}
 		}
 		ai_will_do = {
@@ -8048,10 +7750,9 @@ focus_tree = {
 			focus = ROM_army_focus1
 		}
 		completion_reward = {
-			custom_effect_tooltip = ROM_modify_army_tt
+			custom_effect_tooltip = modify_rom_army_sup
 			add_to_variable = {
 				ROM_army_supply = -0.1
-				tooltip = supply_consumption_factor_tt
 			}
 		}
 		ai_will_do = {
@@ -8069,8 +7770,8 @@ focus_tree = {
 		y = 1
 		available = {
 			custom_trigger_tooltip = {
+				always = no
 				tooltip = ROM_depends_on_event.tt
-				has_completed_focus = ROM_prioritise_economic_growth
 			}
 		}
 		relative_position_id = ROM_a_question_of_priorities
@@ -8089,7 +7790,6 @@ focus_tree = {
 		search_filters = {
 			FOCUS_FILTER_HISTORICAL
 			FOCUS_FILTER_STABILITY
-			FOCUS_FILTER_COMPLETED_BY_EVENT
 		}
 	}
 	focus = {
@@ -8112,10 +7812,9 @@ focus_tree = {
 			focus = ROM_prioritise_economic_growth
 		}
 		completion_reward = {
-			custom_effect_tooltip = ROM_modify_economy_tt
+			custom_effect_tooltip = ROM_reduce_reliance.tt
 			add_to_variable = {
 				ROM_eco_pp_cost = -0.1
-				tooltip = political_power_cost_tt
 			}
 		}
 		ai_will_do = {
@@ -8141,14 +7840,12 @@ focus_tree = {
 			focus = ROM_reduce_reliance_on_world
 		}
 		completion_reward = {
-			custom_effect_tooltip = ROM_modify_economy_tt
-			add_to_variable = {
-				ROM_build_speed = 0.05
-				tooltip = production_speed_buildings_factor_tt
-			}
+			custom_effect_tooltip = ROM_mafa
 			add_to_variable = {
 				ROM_consumer_goods = 0.05
-				tooltip = consumer_goods_factor_tt
+			}
+			add_to_variable = {
+				ROM_build_speed = 0.05
 			}
 		}
 		ai_will_do = {
@@ -8174,10 +7871,9 @@ focus_tree = {
 			focus = ROM_reduce_reliance_on_world
 		}
 		completion_reward = {
-			custom_effect_tooltip = ROM_modify_economy_tt
+			custom_effect_tooltip = ROM_fftf
 			add_to_variable = {
 				ROM_factory_output = 0.05
-				tooltip = industrial_capacity_factory_tt
 			}
 		}
 		ai_will_do = {
@@ -8218,10 +7914,9 @@ focus_tree = {
 			focus = ROM_prioritise_economic_growth
 		}
 		completion_reward = {
-			custom_effect_tooltip = ROM_modify_economy_tt
+			custom_effect_tooltip = ROM_ice.tt
 			add_to_variable = {
-				ROM_consumer_goods = -0.05
-				tooltip = consumer_goods_factor_tt
+				ROM_consumer_goods = 0.05
 			}
 		}
 		ai_will_do = {
@@ -8259,10 +7954,9 @@ focus_tree = {
 			focus = ROM_french_grain_deal
 		}
 		completion_reward = {
-			custom_effect_tooltip = ROM_modify_economy_tt
+			custom_effect_tooltip = ROM_ice.tt
 			add_to_variable = {
 				ROM_consumer_goods = -0.05
-				tooltip = consumer_goods_factor_tt
 			}
 		}
 		ai_will_do = {
@@ -8299,17 +7993,9 @@ focus_tree = {
 					days = 1
 				}
 			}
-			custom_effect_tooltip = if_they_accept.tt
-			custom_effect_tooltip = ROM_modify_economy_tt
 			effect_tooltip = {
-				add_to_variable = {
-					ROM_consumer_goods = -0.1
-					tooltip = consumer_goods_factor_tt
-				}
-				add_to_variable = {
-					ROM_build_speed = 0.05
-					tooltip = production_speed_buildings_factor_tt
-				}
+				custom_effect_tooltip = if_they_accept.tt
+				custom_effect_tooltip = ROM_unblocked_straits.tt
 			}
 		}
 		ai_will_do = {
@@ -8359,14 +8045,12 @@ focus_tree = {
 		available = {
 		}
 		completion_reward = {
-			custom_effect_tooltip = ROM_modify_economy_tt
+			custom_effect_tooltip = ROM_mil_speed_1
 			add_to_variable = {
 				ROM_factory_output = 0.05
-				tooltip = industrial_capacity_factory_tt
 			}
 			add_to_variable = {
 				ROM_mil_build_speed = 0.1
-				tooltip = production_speed_arms_factory_factor_tt
 			}
 		}
 		ai_will_do = {
@@ -8423,14 +8107,8 @@ focus_tree = {
 				}
 				custom_effect_tooltip = empty_space_tt
 				custom_effect_tooltip = ROM_french_planes_buff.tt
-				unlock_decision_tooltip = {
-					decision = ROM_assemble_french_fighters_in_iasi
-					show_effect_tooltip = yes
-				}
-				unlock_decision_tooltip = {
-					decision = ROM_assemble_french_bombers_in_iasi
-					show_effect_tooltip = yes
-				}
+				unlock_decision_tooltip = ROM_assemble_french_fighters_in_iasi
+				unlock_decision_tooltip = ROM_assemble_french_bombers_in_iasi
 			}
 			else_if = {
 				limit = {
@@ -8550,15 +8228,13 @@ focus_tree = {
 		}
 		completion_reward = {
 			add_command_power = 15
-			custom_effect_tooltip = ROM_modify_army_tt
 			add_to_variable = {
-				ROM_army_org = 0.1
-				tooltip = army_org_factor_tt
+				ROM_army_org = 0.075
 			}
 			add_to_variable = {
 				ROM_army_speed = 0.05
-				tooltip = army_speed_factor_tt
 			}
+			custom_effect_tooltip = ROM_eoc
 		}
 		ai_will_do = {
 			factor = 3
@@ -8619,19 +8295,14 @@ focus_tree = {
 				type = arms_factory
 				level = 2
 			}
-			custom_effect_tooltip = ROM_modify_economy_tt
+			custom_effect_tooltip = ROM_mife.tt
 			add_to_variable = {
 				ROM_eco_pp_cost = 0.15
-				tooltip = political_power_cost_tt
 			}
 			add_to_variable = {
 				ROM_consumer_goods = 0.2
-				tooltip = consumer_goods_factor_tt
 			}
-			unlock_decision_tooltip = {
-				decision = ROM_end_foreign_purchases
-				show_effect_tooltip = yes
-			}
+			unlock_decision_tooltip = ROM_end_foreign_purchases
 		}
 		ai_will_do = {
 			factor = 3
@@ -8983,11 +8654,7 @@ focus_tree = {
 				enemy = AUS
 				hostility_reason = asked_to_join
 			}
-			unlock_decision_tooltip = {
-				decision = ROM_request_french_military_mission
-				show_effect_tooltip = yes
-			}
-			custom_effect_tooltip = empty_space_tt
+			unlock_decision_tooltip = ROM_request_french_military_mission
 			if = {
 				limit = {
 					has_country_flag = ROM_z_hypothesis_flag
@@ -9004,15 +8671,13 @@ focus_tree = {
 				}
 				clr_country_flag = ROM_has_access_through_straits
 				set_country_flag = ROM_turkey_blocked_straits
-				custom_effect_tooltip = ROM_modify_economy_tt
 				add_to_variable = {
 					ROM_consumer_goods = 0.1
-					tooltip = consumer_goods_factor_tt
 				}
 				add_to_variable = {
 					ROM_build_speed = -0.05
-					tooltip = production_speed_buildings_factor_tt
 				}
+				custom_effect_tooltip = ROM_blocked_straits.tt
 				custom_effect_tooltip = ROM_remove_access_to_strait.tt
 			}
 			if = {
@@ -9049,20 +8714,9 @@ focus_tree = {
 		completion_reward = {
 			country_event = ww1_romania.138
 			custom_effect_tooltip = ROM_prepare_for_war.tt
-			unlock_decision_tooltip = {
-				decision = ROM_fortify_bucharest
-				show_effect_tooltip = yes
-			}
-			custom_effect_tooltip = empty_space_tt
-			unlock_decision_tooltip = {
-				decision = ROM_prepare_oil_field_scorching
-				show_effect_tooltip = yes
-			}
-			custom_effect_tooltip = empty_space_tt
-			unlock_decision_tooltip = {
-				decision = ROM_military_planning
-				show_modifiers = yes
-			}
+			unlock_decision_tooltip = ROM_fortify_bucharest
+			unlock_decision_tooltip = ROM_prepare_oil_field_scorching
+			unlock_decision_tooltip = ROM_military_planning
 		}
 		search_filters = {
 			FOCUS_FILTER_HISTORICAL
@@ -9077,7 +8731,7 @@ focus_tree = {
 		available = {
 			custom_trigger_tooltip = {
 				tooltip = ROM_war_has_ended
-				has_completed_focus = ROM_new_times
+				always = no
 			}
 		}
 		allow_branch = {
@@ -9112,7 +8766,7 @@ focus_tree = {
 		}
 		search_filters = {
 			FOCUS_FILTER_HISTORICAL
-			FOCUS_FILTER_COMPLETED_BY_EVENT
+			FOCUS_FILTER_INTERNAL_AFFAIRS
 		}
 	}
 	focus = {
@@ -9124,7 +8778,8 @@ focus_tree = {
 		available = {
 			custom_trigger_tooltip = {
 				tooltip = ROM_autocomplete_tt
-				has_completed_focus = ROM_recover_from_defeat
+				always = no
+				has_global_flag = ROM_treaty_of_bucharest
 			}
 		}
 		allow_branch = {
@@ -9167,15 +8822,13 @@ focus_tree = {
 		}
 		relative_position_id = ROM_recover_from_defeat
 		completion_reward = {
-			custom_effect_tooltip = ROM_modify_occupation_cost_tt
 			add_to_variable = {
 				ROM_occupation_pp_cost = 0.05
-				tooltip = political_power_gain_tt
 			}
 			add_to_variable = {
 				ROM_occupation_consumer = -0.1
-				tooltip = consumer_goods_factor_tt
 			}
+			custom_effect_tooltip = ROM_occupation_SRE.tt
 		}
 		ai_will_do = {
 			factor = 3
@@ -9203,11 +8856,10 @@ focus_tree = {
 		}
 		relative_position_id = ROM_recover_from_defeat
 		completion_reward = {
-			custom_effect_tooltip = ROM_modify_occupation_cost_tt
 			add_to_variable = {
 				ROM_occupation_consumer = -0.15
-				tooltip = consumer_goods_factor_tt
 			}
+			custom_effect_tooltip = ROM_occupation_EGCP.tt
 		}
 		ai_will_do = {
 			factor = 3
@@ -9236,16 +8888,13 @@ focus_tree = {
 		}
 		relative_position_id = ROM_recover_from_defeat
 		completion_reward = {
-			custom_effect_tooltip = ROM_modify_occupation_cost_tt
 			add_to_variable = {
 				ROM_occupation_consumer = -0.1
-				tooltip = consumer_goods_factor_tt
 			}
-			custom_effect_tooltip = ROM_modify_economy_tt
 			add_to_variable = {
 				ROM_factory_output = -0.05
-				tooltip = industrial_capacity_factory_tt
 			}
+			custom_effect_tooltip = ROM_occupation_FWCP.tt
 		}
 		ai_will_do = {
 			factor = 3
@@ -9277,15 +8926,13 @@ focus_tree = {
 		}
 		relative_position_id = ROM_recover_from_defeat
 		completion_reward = {
-			custom_effect_tooltip = ROM_modify_occupation_cost_tt
 			add_to_variable = {
 				ROM_occupation_consumer = -0.1
-				tooltip = consumer_goods_factor_tt
 			}
 			add_to_variable = {
 				ROM_occupation_pp_cost = 0.1
-				tooltip = political_power_gain_tt
 			}
+			custom_effect_tooltip = ROM_occupation_ESGER.tt
 		}
 		ai_will_do = {
 			factor = 3
@@ -9321,11 +8968,10 @@ focus_tree = {
 		}
 		relative_position_id = ROM_recover_from_defeat
 		completion_reward = {
-			custom_effect_tooltip = ROM_modify_occupation_cost_tt
 			add_to_variable = {
 				ROM_occupation_consumer = -0.05
-				tooltip = consumer_goods_factor_tt
 			}
+			custom_effect_tooltip = ROM_occupation_IAUHi_tt
 		}
 		ai_will_do = {
 			factor = 3
@@ -9393,7 +9039,7 @@ focus_tree = {
 		available = {
 			custom_trigger_tooltip = {
 				tooltip = ROM_war_has_ended_lost
-				has_completed_focus = ROM_defeat_in_gw
+				always = no
 			}
 		}
 		completion_reward = {
@@ -9403,7 +9049,6 @@ focus_tree = {
 		}
 		search_filters = {
 			FOCUS_FILTER_INTERNAL_AFFAIRS
-			FOCUS_FILTER_COMPLETED_BY_EVENT
 		}
 	}
 	focus = {
@@ -9426,11 +9071,7 @@ focus_tree = {
 			set_variable = {
 				ROM_mass_payment = 0
 			}
-			unlock_decision_tooltip = {
-				show_effect_tooltip = yes
-				decision = ROM_repay_war_debt_bulk
-				show_modifiers = yes
-			}
+			unlock_decision_tooltip = ROM_repay_war_debt_bulk
 			custom_effect_tooltip = ROM_save_pp.tt
 		}
 		ai_will_do = {
@@ -9461,11 +9102,7 @@ focus_tree = {
 			set_variable = {
 				ROM_small_repayment = 0
 			}
-			unlock_decision_tooltip = {
-				decision = ROM_repay_war_debt_small
-				show_effect_tooltip = yes
-				show_modifiers = yes
-			}
+			unlock_decision_tooltip = ROM_repay_war_debt_small
 		}
 		ai_will_do = {
 			factor = 3
@@ -9488,7 +9125,7 @@ focus_tree = {
 		available = {
 			custom_trigger_tooltip = {
 				tooltip = ROM_war_has_ended_victory
-				has_completed_focus = ROM_victory_in_the_great_war
+				always = no
 			}
 		}
 		completion_reward = {
@@ -9498,7 +9135,7 @@ focus_tree = {
 		}
 		search_filters = {
 			FOCUS_FILTER_HISTORICAL
-			FOCUS_FILTER_COMPLETED_BY_EVENT
+			FOCUS_FILTER_INTERNAL_AFFAIRS
 		}
 	}
 	focus = {
@@ -9566,7 +9203,7 @@ focus_tree = {
 		}
 		search_filters = {
 			FOCUS_FILTER_HISTORICAL
-			FOCUS_FILTER_INTERNAL_AFFAIRS
+			FOCUS_FILTER_ANNEXATION
 		}
 	}
 	focus = {
@@ -9587,10 +9224,7 @@ focus_tree = {
 		}
 		completion_reward = {
 			add_stability = 0.05
-			unlock_decision_tooltip = {
-				decision = ROM_suppress_khotyn_uprising
-				show_effect_tooltip = yes
-			}
+			unlock_decision_tooltip = ROM_suppress_khotyn_uprising
 		}
 		ai_will_do = {
 			factor = 0
@@ -9598,7 +9232,7 @@ focus_tree = {
 		search_filters = {
 			FOCUS_FILTER_HISTORICAL
 			FOCUS_FILTER_STABILITY
-			FOCUS_FILTER_INTERNAL_AFFAIRS
+			FOCUS_FILTER_ANNEXATION
 		}
 	}
 	focus = {
@@ -9621,19 +9255,18 @@ focus_tree = {
 			78 = {
 				add_compliance = 10
 			}
-			custom_effect_tooltip = ROM_modify_economy_tt
 			add_to_variable = {
 				ROM_consumer_goods = -0.05
-				tooltip = consumer_goods_factor_tt
 			}
+			custom_effect_tooltip = ROM_arbasa.tt
 		}
 		ai_will_do = {
 			factor = 0
 		}
 		search_filters = {
 			FOCUS_FILTER_HISTORICAL
+			FOCUS_FILTER_STABILITY
 			FOCUS_FILTER_INDUSTRY
-			FOCUS_FILTER_INTERNAL_AFFAIRS
 		}
 	}
 	focus = {
@@ -9662,9 +9295,7 @@ focus_tree = {
 			factor = 0
 		}
 		search_filters = {
-			FOCUS_FILTER_STABILITY
-			FOCUS_FILTER_HISTORICAL
-			FOCUS_FILTER_INTERNAL_AFFAIRS
+			FOCUS_FILTER_INDUSTRY
 		}
 	}
 	focus = {
@@ -9695,8 +9326,7 @@ focus_tree = {
 			factor = 0
 		}
 		search_filters = {
-			FOCUS_FILTER_INTERNAL_AFFAIRS
-			FOCUS_FILTER_HISTORICAL
+			FOCUS_FILTER_WAR_SUPPORT
 		}
 	}
 	focus = {
@@ -9811,7 +9441,6 @@ focus_tree = {
 		}
 		search_filters = {
 			FOCUS_FILTER_INTERNAL_AFFAIRS
-			FOCUS_FILTER_COMPLETED_BY_EVENT
 		}
 	}
 	focus = {
@@ -9993,11 +9622,10 @@ focus_tree = {
 		relative_position_id = ROM_consolidate_the_dictatorship2
 		completion_reward = {
 			ROM_remove_land_unfinished_land_reform = yes
-			custom_effect_tooltip = ROM_modify_economy_tt
 			add_to_variable = {
 				ROM_eco_pp_cost = -0.1
-				tooltip = political_power_cost_tt
 			}
+			custom_effect_tooltip = ROM_rtwoc.tt
 		}
 		ai_will_do = {
 			factor = 3
@@ -10025,15 +9653,13 @@ focus_tree = {
 		}
 		relative_position_id = ROM_consolidate_the_dictatorship2
 		completion_reward = {
-			custom_effect_tooltip = ROM_modify_economy_tt
 			add_to_variable = {
 				ROM_eco_pp_cost = -0.1
-				tooltip = political_power_cost_tt
 			}
 			add_to_variable = {
 				ROM_consumer_goods = 0.1
-				tooltip = consumer_goods_factor_tt
 			}
+			custom_effect_tooltip = ROM_otcsp.tt
 		}
 		ai_will_do = {
 			factor = 3
@@ -10187,15 +9813,13 @@ focus_tree = {
 		}
 		relative_position_id = ROM_fuse_with_the_peoples_party
 		completion_reward = {
-			custom_effect_tooltip = ROM_modify_economy_tt
 			add_to_variable = {
 				ROM_build_speed = 0.07
-				tooltip = production_speed_buildings_factor_tt
 			}
 			add_to_variable = {
 				ROM_eco_pp_cost = 0.07
-				tooltip = political_power_cost_tt
 			}
+			custom_effect_tooltip = ROM_33.tt
 		}
 		ai_will_do = {
 			factor = 3
@@ -10223,19 +9847,16 @@ focus_tree = {
 		}
 		relative_position_id = ROM_fuse_with_the_peoples_party
 		completion_reward = {
-			custom_effect_tooltip = ROM_modify_economy_tt
 			add_to_variable = {
 				ROM_consumer_goods = 0.05
-				tooltip = consumer_goods_factor_tt
 			}
 			add_to_variable = {
 				ROM_eco_pp_cost = -0.15
-				tooltip = political_power_cost_tt
 			}
 			add_to_variable = {
 				ROM_eco_stability = 0.025
-				tooltip = stability_factor_tt
 			}
+			custom_effect_tooltip = ROM_35.tt
 		}
 		ai_will_do = {
 			factor = 3
@@ -10301,15 +9922,13 @@ focus_tree = {
 		}
 		relative_position_id = ROM_nationalization_of_enterprise
 		completion_reward = {
-			custom_effect_tooltip = ROM_modify_economy_tt
 			add_to_variable = {
 				ROM_eco_pp_cost = 0.1
-				tooltip = political_power_cost_tt
 			}
 			add_to_variable = {
 				ROM_build_speed = 0.05
-				tooltip = production_speed_buildings_factor_tt
 			}
+			custom_effect_tooltip = ROM_si.tt
 		}
 		ai_will_do = {
 			factor = 3
@@ -10373,15 +9992,13 @@ focus_tree = {
 		}
 		relative_position_id = ROM_fuse_with_the_peoples_party
 		completion_reward = {
-			custom_effect_tooltip = ROM_modify_economy_tt
 			add_to_variable = {
 				ROM_consumer_goods = -0.15
-				tooltip = consumer_goods_factor_tt
 			}
 			add_to_variable = {
 				ROM_eco_pp_cost = 0.1
-				tooltip = political_power_cost_tt
 			}
+			custom_effect_tooltip = ROM_as.tt
 		}
 		ai_will_do = {
 			factor = 3
@@ -10669,16 +10286,8 @@ focus_tree = {
 		relative_position_id = ROM_the_man_to_end_the_chaos
 		cancelable = no
 		completion_reward = {
-			custom_effect_tooltip = ROM_modify_economy_tt
-			add_to_variable = {
-				ROM_consumer_goods = -0.1
-				tooltip = consumer_goods_factor_tt
-			}
-			unlock_decision_tooltip = {
-				decision = ROM_takeover_resita_machine_plant
-				show_effect_tooltip = yes
-				show_modifiers = yes
-			}
+			custom_effect_tooltip = ROM_otb.tt
+			unlock_decision_tooltip = ROM_takeover_resita_machine_plant
 			82 = {
 				add_resource = {
 					type = steel
@@ -10903,7 +10512,6 @@ focus_tree = {
 		}
 		completion_reward = {
 			custom_effect_tooltip = ROM_on_select_lame_duck
-			custom_effect_tooltip = empty_space_tt
 			add_stability = 0.05
 			add_political_power = -50
 		}
@@ -10963,10 +10571,7 @@ focus_tree = {
 				ideology = democratic
 				popularity = 0.05
 			}
-			unlock_decision_tooltip = {
-				decision = ROM_united_conservative_front
-				show_effect_tooltip = yes
-			}
+			unlock_decision_tooltip = ROM_united_conservative_front
 		}
 		ai_will_do = {
 			factor = 3
@@ -11162,15 +10767,13 @@ focus_tree = {
 		}
 		relative_position_id = ROM_torch_to_the_future
 		completion_reward = {
-			custom_effect_tooltip = ROM_modify_economy_tt
 			add_to_variable = {
 				ROM_eco_pp_cost = 0.1
-				tooltip = political_power_cost_tt
 			}
 			add_to_variable = {
 				ROM_consumer_goods = -0.1
-				tooltip = consumer_goods_factor_tt
 			}
+			custom_effect_tooltip = ROM_talk_tuah.tt
 		}
 		ai_will_do = {
 			factor = 1
@@ -11258,19 +10861,16 @@ focus_tree = {
 		}
 		relative_position_id = ROM_victory_in_the_great_war
 		completion_reward = {
-			custom_effect_tooltip = ROM_modify_economy_tt
 			add_to_variable = {
 				ROM_consumer_goods = -0.1
-				tooltip = consumer_goods_factor_tt
 			}
 			add_to_variable = {
 				ROM_build_speed = -0.05
-				tooltip = production_speed_buildings_factor_tt
 			}
 			add_to_variable = {
 				ROM_eco_pp_cost = -0.1
-				tooltip = political_power_cost_tt
 			}
+			custom_effect_tooltip = ROM_spike_interest.tt
 		}
 		ai_will_do = {
 			factor = 1
@@ -11290,15 +10890,13 @@ focus_tree = {
 		}
 		relative_position_id = ROM_spike_interest_rates
 		completion_reward = {
-			custom_effect_tooltip = ROM_modify_economy_tt
 			add_to_variable = {
 				ROM_consumer_goods = -0.1
-				tooltip = consumer_goods_factor_tt
 			}
 			add_to_variable = {
 				ROM_eco_pp_cost = 0.15
-				tooltip = political_power_cost_tt
 			}
+			custom_effect_tooltip = ROM_price_controls.tt
 		}
 		ai_will_do = {
 			factor = 1
@@ -11320,19 +10918,16 @@ focus_tree = {
 		}
 		relative_position_id = ROM_spike_interest_rates
 		completion_reward = {
-			custom_effect_tooltip = ROM_modify_economy_tt
 			add_to_variable = {
 				ROM_consumer_goods = -0.05
-				tooltip = consumer_goods_factor_tt
 			}
 			add_to_variable = {
 				ROM_factory_output = -0.05
-				tooltip = industrial_capacity_factory_tt
 			}
 			add_to_variable = {
 				ROM_eco_stability = 0.025
-				tooltip = stability_factor_tt
 			}
+			custom_effect_tooltip = ROM_strengthen_leu.tt
 		}
 		ai_will_do = {
 			factor = 1
@@ -11354,15 +10949,13 @@ focus_tree = {
 		}
 		relative_position_id = ROM_victory_in_the_great_war
 		completion_reward = {
-			custom_effect_tooltip = ROM_modify_economy_tt
 			add_to_variable = {
 				ROM_factory_output = -0.1
-				tooltip = industrial_capacity_factory_tt
 			}
 			add_to_variable = {
 				ROM_build_speed = 0.1
-				tooltip = production_speed_buildings_factor_tt
 			}
+			custom_effect_tooltip = ROM_tafwtj.tt
 		}
 		ai_will_do = {
 			factor = 1
@@ -11385,15 +10978,13 @@ focus_tree = {
 			#has_completed_focus = ROM_balance_the_budget
 		}
 		completion_reward = {
-			custom_effect_tooltip = ROM_modify_economy_tt
 			add_to_variable = {
 				ROM_consumer_goods = -0.05
-				tooltip = consumer_goods_factor_tt
 			}
 			add_to_variable = {
 				ROM_eco_pp_cost = 0.05
-				tooltip = political_power_cost_tt
 			}
+			custom_effect_tooltip = ROM_balbudg.tt
 			add_timed_idea = {
 				idea = ROM_balance_budget
 				days = 365
@@ -11421,15 +11012,13 @@ focus_tree = {
 		}
 		relative_position_id = ROM_balance_budget
 		completion_reward = {
-			custom_effect_tooltip = ROM_modify_economy_tt
 			add_to_variable = {
 				ROM_build_speed = 0.05
-				tooltip = production_speed_buildings_factor_tt
 			}
 			add_to_variable = {
 				ROM_eco_stability = 0.05
-				tooltip = stability_factor_tt
 			}
+			custom_effect_tooltip = ROM_tackle_unemployment.tt
 		}
 		ai_will_do = {
 			factor = 1
@@ -11450,31 +11039,22 @@ focus_tree = {
 		}
 		relative_position_id = ROM_tackle_unemployment
 		completion_reward = {
-			custom_effect_tooltip = ROM_modify_economy_tt
 			add_to_variable = {
 				ROM_eco_stability = 0.05
-				tooltip = stability_factor_tt
 			}
 			add_to_variable = {
 				ROM_eco_pp_cost = -0.1
-				tooltip = political_power_cost_tt
 			}
 			add_to_variable = {
 				ROM_consumer_goods = -0.05
-				tooltip = consumer_goods_factor_tt
 			}
+			custom_effect_tooltip = ROM_revive_agriculture.tt
 			custom_effect_tooltip = empty_space_tt
 			custom_effect_tooltip = ROM_only_available_if_oltenia.tt
-			unlock_decision_tooltip = {
-				decision = ROM_expand_oltenia_agriculture
-				show_effect_tooltip = yes
-			}
+			unlock_decision_tooltip = ROM_expand_oltenia_agriculture
 			custom_effect_tooltip = empty_space_tt
 			custom_effect_tooltip = ROM_if_completed_agr_reforms
-			unlock_decision_tooltip = {
-				decision = ROM_expand_bessarabia_agriculture
-				show_effect_tooltip = yes
-			}
+			unlock_decision_tooltip = ROM_expand_bessarabia_agriculture
 		}
 		ai_will_do = {
 			factor = 1
@@ -11495,15 +11075,13 @@ focus_tree = {
 		x = 0
 		y = 2
 		completion_reward = {
-			custom_effect_tooltip = ROM_modify_economy_tt
 			add_to_variable = {
 				ROM_consumer_goods = -0.05
-				tooltip = consumer_goods_factor_tt
 			}
 			add_to_variable = {
 				ROM_eco_pp_cost = 0.05
-				tooltip = political_power_cost_tt
 			}
+			custom_effect_tooltip = ROM_balbudg.tt
 		}
 		ai_will_do = {
 			factor = 3
@@ -11533,24 +11111,19 @@ focus_tree = {
 			46 = {
 				add_extra_state_shared_building_slots = 1
 				add_resource = {
-					type = coal
-					amount = 5
+					type = steel
+					amount = 3
 				}
 			}
-			custom_effect_tooltip = ROM_modify_economy_tt
+			custom_effect_tooltip = ROM_coal_indus.tt
+			custom_effect_tooltip = empty_space_tt
+			custom_effect_tooltip = ROM_only_available_if_transylvania.tt
+			unlock_decision_tooltip = ROM_open_transylvanian_coal_mines
 			add_to_variable = {
 				ROM_consumer_goods = -0.05
-				tooltip = consumer_goods_factor_tt
 			}
 			add_to_variable = {
 				ROM_build_speed = 0.05
-				tooltip = production_speed_buildings_factor_tt
-			}
-			custom_effect_tooltip = empty_space_tt
-			custom_effect_tooltip = ROM_only_available_if_transylvania.tt
-			unlock_decision_tooltip = {
-				decision = ROM_open_transylvanian_coal_mines
-				show_effect_tooltip = yes
 			}
 		}
 		search_filters = {
@@ -11589,15 +11162,9 @@ focus_tree = {
 				}
 			}
 			custom_effect_tooltip = ROM_only_available_if_transylvania.tt
-			unlock_decision_tooltip = {
-				decision = ROM_takeover_calan_steel_works
-				show_effect_tooltip = yes
-			}
+			unlock_decision_tooltip = ROM_takeover_calan_steel_works
 			custom_effect_tooltip = ROM_only_available_if_banat.tt
-			unlock_decision_tooltip = {
-				decision = ROM_takeover_resita_steel_works
-				show_effect_tooltip = yes
-			}
+			unlock_decision_tooltip = ROM_takeover_resita_steel_works
 		}
 		search_filters = {
 			FOCUS_FILTER_HISTORICAL
@@ -11626,15 +11193,13 @@ focus_tree = {
 					amount = 7
 				}
 			}
-			custom_effect_tooltip = ROM_modify_economy_tt
 			add_to_variable = {
 				ROM_consumer_goods = -0.05
-				tooltip = consumer_goods_factor_tt
 			}
 			add_to_variable = {
 				ROM_build_speed = 0.05
-				tooltip = production_speed_buildings_factor_tt
 			}
+			custom_effect_tooltip = ROM_oil_exc.tt
 		}
 		search_filters = {
 			FOCUS_FILTER_HISTORICAL
@@ -11657,11 +11222,10 @@ focus_tree = {
 			}
 		}
 		completion_reward = {
-			custom_effect_tooltip = ROM_modify_economy_tt
 			add_to_variable = {
 				ROM_consumer_goods = -0.05
-				tooltip = consumer_goods_factor_tt
 			}
+			custom_effect_tooltip = ROM_ets.tt
 		}
 		search_filters = {
 			FOCUS_FILTER_HISTORICAL
@@ -11707,18 +11271,9 @@ focus_tree = {
 					instant_build = yes
 				}
 			}
-			unlock_decision_tooltip = {
-				decision = ROM_develop_banat
-				show_effect_tooltip = yes
-			}
-			unlock_decision_tooltip = {
-				decision = ROM_develop_north_transylvania
-				show_effect_tooltip = yes
-			}
-			unlock_decision_tooltip = {
-				decision = ROM_develop_transylvania
-				show_effect_tooltip = yes
-			}
+			unlock_decision_tooltip = ROM_develop_banat
+			unlock_decision_tooltip = ROM_develop_north_transylvania
+			unlock_decision_tooltip = ROM_develop_transylvania
 		}
 		ai_will_do = {
 			factor = 3
@@ -11737,18 +11292,18 @@ focus_tree = {
 		available = {
 			custom_trigger_tooltip = {
 				tooltip = ROM_war_has_ended_victory
-				has_completed_focus = ROM_balkan_diplomacy
+				always = no
 			}
 		}
 		completion_reward = {
-			add_political_power = 15
 		}
 		ai_will_do = {
 			factor = 3
 		}
 		search_filters = {
 			FOCUS_FILTER_HISTORICAL
-			FOCUS_FILTER_COMPLETED_BY_EVENT
+			FOCUS_FILTER_ANNEXATION
+			FOCUS_FILTER_INTERNAL_AFFAIRS
 		}
 	}
 	focus = {
@@ -11768,7 +11323,6 @@ focus_tree = {
 			}
 		}
 		completion_reward = {
-			add_war_support = 0.02
 		}
 		ai_will_do = {
 			factor = 3
@@ -11777,7 +11331,6 @@ focus_tree = {
 			FOCUS_FILTER_HISTORICAL
 			FOCUS_FILTER_ANNEXATION
 			FOCUS_FILTER_INTERNAL_AFFAIRS
-			FOCUS_FILTER_COMPLETED_BY_EVENT
 		}
 	}
 	focus = {
@@ -11796,7 +11349,7 @@ focus_tree = {
 		available = {
 			custom_trigger_tooltip = {
 				tooltip = ROM_war_has_ended_victory2
-				has_completed_focus = ROM_victory_in_hungarian_war
+				always = no
 			}
 		}
 		completion_reward = {
@@ -11813,7 +11366,6 @@ focus_tree = {
 		search_filters = {
 			FOCUS_FILTER_HISTORICAL
 			FOCUS_FILTER_INTERNAL_AFFAIRS
-			FOCUS_FILTER_COMPLETED_BY_EVENT
 		}
 	}
 	focus = {
@@ -11842,6 +11394,7 @@ focus_tree = {
 		}
 		search_filters = {
 			FOCUS_FILTER_HISTORICAL
+			FOCUS_FILTER_INTERNAL_AFFAIRS
 		}
 	}
 	focus = {
@@ -11884,8 +11437,7 @@ focus_tree = {
 		y = 1
 		completion_reward = {
 			leave_faction = yes
-			create_faction_from_template = faction_template_the_little_entente
-			set_faction_name = little_entente
+			create_faction = little_entente
 			CZE = {
 				country_event = {
 					id = ww1_romania.186
@@ -11904,6 +11456,7 @@ focus_tree = {
 		}
 		search_filters = {
 			FOCUS_FILTER_HISTORICAL
+			FOCUS_FILTER_INTERNAL_AFFAIRS
 		}
 	}
 	focus = {
@@ -11934,6 +11487,7 @@ focus_tree = {
 		}
 		search_filters = {
 			FOCUS_FILTER_HISTORICAL
+			FOCUS_FILTER_INTERNAL_AFFAIRS
 		}
 	}
 	focus = {
@@ -11962,35 +11516,7 @@ focus_tree = {
 		}
 		search_filters = {
 			FOCUS_FILTER_HISTORICAL
-		}
-	}
-	focus = {
-		id = ROM_ally_poland
-		icon = GFX_focus_generic_polish_deal
-		relative_position_id = ROM_czechoslovak_alliance
-		prerequisite = {
-			focus = ROM_form_the_little_entente
-		}
-		available = {
-			POL = {
-				exists = yes
-				is_subject = no
-				has_war = no
-			}
-		}
-		cost = 3
-		x = 2
-		y = 2
-		completion_reward = {
-			POL = {
-				country_event = ww1_romania.213
-			}
-		}
-		ai_will_do = {
-			factor = 3
-		}
-		search_filters = {
-			FOCUS_FILTER_HISTORICAL
+			FOCUS_FILTER_INTERNAL_AFFAIRS
 		}
 	}
 	focus = {
@@ -12000,7 +11526,11 @@ focus_tree = {
 		prerequisite = {
 			focus = ROM_romanian_hungarian_war_focus
 		}
-		available = { NOT = { has_completed_focus = ROM_hostile_takeover_of_government } }
+		available = {
+			NOT = {
+				has_country_flag = ROM_socialist_coup
+			}
+		}
 		bypass = {
 			has_completed_focus = ROM_victory_in_hungarian_war
 		}
@@ -12034,16 +11564,18 @@ focus_tree = {
 		relative_position_id = ROM_anti_hungarian_propaganda
 		available = {
 			controls_state = 1020
-			NOT = { has_war_with = HUN }
-			HUN = { exists = yes }
-			NOT = { has_completed_focus = ROM_hostile_takeover_of_government }
+			NOT = {
+				has_war_with = HUN
+			}
+			HUN = {
+				exists = yes
+			}
+			NOT = {
+				has_country_flag = ROM_socialist_coup
+			}
 		}
 		completion_reward = {
-			unlock_decision_tooltip = {
-				decision = ROM_pillage_the_hungarian_border_decision
-				show_effect_tooltip = yes
-				show_modifiers = yes
-			}
+			unlock_decision_tooltip = ROM_pillage_the_hungarian_border_decision
 		}
 		ai_will_do = {
 			factor = 3
@@ -12277,23 +11809,19 @@ focus_tree = {
 		}
 		relative_position_id = ROM_ensure_hungarian_weakness
 		completion_reward = {
-			custom_effect_tooltip = ROM_modify_economy_tt
 			add_to_variable = {
 				ROM_consumer_goods = -0.1
-				tooltip = consumer_goods_factor_tt
 			}
 			add_to_variable = {
 				ROM_eco_stability = -0.05
-				tooltip = stability_factor_tt
 			}
 			add_to_variable = {
 				ROM_build_speed = 0.05
-				tooltip = production_speed_buildings_factor_tt
 			}
-			custom_effect_tooltip = ROM_modify_army_tt
+			custom_effect_tooltip = ROM_shgal.tt
+			custom_effect_tooltip = modify_rom_army_sup
 			add_to_variable = {
 				ROM_army_supply = -0.1
-				tooltip = supply_consumption_factor_tt
 			}
 			custom_effect_tooltip = empty_space_tt
 			if = {
@@ -12465,11 +11993,7 @@ focus_tree = {
 		}
 		relative_position_id = ROM_law_on_minorities
 		completion_reward = {
-			unlock_decision_tooltip = {
-				decision = ROM_suppress_szekelyfold_rebels
-				show_effect_tooltip = yes
-			}
-			custom_effect_tooltip = empty_space_tt
+			unlock_decision_tooltip = ROM_suppress_szekelyfold_rebels
 			swap_ideas = {
 				remove_idea = ROM_romanianization
 				add_idea = ROM_romanianization_suppress
@@ -12484,6 +12008,7 @@ focus_tree = {
 			factor = 0
 		}
 		search_filters = {
+			FOCUS_FILTER_RESEARCH
 			FOCUS_FILTER_INTERNAL_AFFAIRS
 			FOCUS_FILTER_HISTORICAL
 		}
@@ -12507,16 +12032,8 @@ focus_tree = {
 		}
 		relative_position_id = ROM_law_on_minorities
 		completion_reward = {
-			unlock_decision_tooltip = {
-				decision = ROM_increase_szekelyfold_autonomy
-				show_effect_tooltip = yes
-			}
-			custom_effect_tooltip = empty_space_tt
-			unlock_decision_tooltip = {
-				decision = ROM_decrease_szekelyfold_autonomy
-				show_effect_tooltip = yes
-			}
-			custom_effect_tooltip = empty_space_tt
+			unlock_decision_tooltip = ROM_increase_szekelyfold_autonomy
+			unlock_decision_tooltip = ROM_decrease_szekelyfold_autonomy
 			778 = {
 				add_dynamic_modifier = {
 					modifier = ROM_szekelyfold_autonomy
@@ -12527,6 +12044,7 @@ focus_tree = {
 			factor = 0
 		}
 		search_filters = {
+			FOCUS_FILTER_RESEARCH
 			FOCUS_FILTER_INTERNAL_AFFAIRS
 		}
 	}
@@ -12545,21 +12063,10 @@ focus_tree = {
 		relative_position_id = ROM_suppress_szekelyfold_hungarians
 		completion_reward = {
 			custom_effect_tooltip = ROM_promote_language_if.tt
-			unlock_decision_tooltip = {
-				decision = ROM_rename_szekelyfold
-				show_effect_tooltip = yes
-			}
-			unlock_decision_tooltip = {
-				decision = ROM_clamp_down_on_the_resistance
-				show_effect_tooltip = yes
-				show_modifiers = yes
-			}
+			unlock_decision_tooltip = ROM_rename_szekelyfold
+			unlock_decision_tooltip = ROM_clamp_down_on_the_resistance
 			custom_effect_tooltip = empty_space_tt
-			unlock_decision_tooltip = {
-				decision = ROM_concessions_to_hungarians
-				show_effect_tooltip = yes
-				show_modifiers = yes
-			}
+			unlock_decision_tooltip = ROM_concessions_to_hungarians
 			if = {
 				limit = {
 					has_idea = ROM_romanianization_suppress
@@ -12580,6 +12087,7 @@ focus_tree = {
 			factor = 3
 		}
 		search_filters = {
+			FOCUS_FILTER_RESEARCH
 			FOCUS_FILTER_STABILITY
 			FOCUS_FILTER_INTERNAL_AFFAIRS
 			FOCUS_FILTER_HISTORICAL
@@ -12601,7 +12109,7 @@ focus_tree = {
 		available = {
 			custom_trigger_tooltip = {
 				tooltip = ROM_war_has_ended_lost2
-				has_completed_focus = ROM_defeat_in_hungarian_war
+				always = no
 			}
 		}
 		ai_will_do = {
@@ -12632,7 +12140,6 @@ focus_tree = {
 		}
 		search_filters = {
 			FOCUS_FILTER_INTERNAL_AFFAIRS
-			FOCUS_FILTER_COMPLETED_BY_EVENT
 		}
 	}
 	focus = {
@@ -12661,24 +12168,19 @@ focus_tree = {
 		available = {
 			custom_trigger_tooltip = {
 				tooltip = ROM_coup123
-				has_completed_focus = ROM_hostile_takeover_of_government
+				always = no
 			}
+			has_completed_focus = ROM_defeat_in_hungarian_war
+			has_country_flag = ROM_socialist_coup
 		}
 		ai_will_do = {
 			factor = 3
 		}
 		completion_reward = {
-			effect_tooltip = {
-				promote_character = {
-					character = ROM_constantin_stere
-					ideology = social_democracy
-				}
-			}
 			mark_focus_tree_layout_dirty = yes
 		}
 		search_filters = {
 			FOCUS_FILTER_INTERNAL_AFFAIRS
-			FOCUS_FILTER_COMPLETED_BY_EVENT
 		}
 	}
 	focus = {
@@ -12696,7 +12198,7 @@ focus_tree = {
 				character = ROM_constantin_stere
 				ruling_only = yes
 			}
-			#has_country_flag = ROM_socialist_coup
+			has_country_flag = ROM_socialist_coup
 			HUN = {
 				exists = yes
 				has_opinion = {
@@ -12751,7 +12253,7 @@ focus_tree = {
 			ROOT = {
 				owns_state = 78
 			}
-			#has_country_flag = ROM_socialist_coup
+			has_country_flag = ROM_socialist_coup
 		}
 		ai_will_do = {
 			factor = 3
@@ -12790,7 +12292,7 @@ focus_tree = {
 			focus = ROM_anti_russian_propaganda_in_bessarabia
 		}
 		available = {
-			#has_country_flag = ROM_socialist_coup
+			has_country_flag = ROM_socialist_coup
 			has_country_leader = {
 				character = ROM_constantin_stere
 				ruling_only = yes
@@ -12869,7 +12371,7 @@ focus_tree = {
 		y = 1
 		relative_position_id = ROM_repair_relations_with_hungary
 		available = {
-			#has_country_flag = ROM_socialist_coup
+			has_country_flag = ROM_socialist_coup
 			has_country_leader = {
 				character = ROM_constantin_stere
 				ruling_only = yes
@@ -12898,7 +12400,7 @@ focus_tree = {
 		y = 1
 		relative_position_id = ROM_hostile_takeover_of_government
 		available = {
-			#has_country_flag = ROM_socialist_coup
+			has_country_flag = ROM_socialist_coup
 			has_country_leader = {
 				character = ROM_constantin_stere
 				ruling_only = yes
@@ -12946,15 +12448,13 @@ focus_tree = {
 				}
 				remove_ideas = ROM_welcome_anglo_italian_banks_idea
 			}
-			custom_effect_tooltip = ROM_modify_economy_tt
 			add_to_variable = {
 				ROM_consumer_goods = -0.15
-				tooltip = consumer_goods_factor_tt
 			}
 			add_to_variable = {
 				ROM_eco_stability = 0.05
-				tooltip = stability_factor_tt
 			}
+			custom_effect_tooltip = ROM_nban.tt
 		}
 		search_filters = {
 			FOCUS_FILTER_INTERNAL_AFFAIRS

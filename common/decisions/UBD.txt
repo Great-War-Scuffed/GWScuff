@@ -1,6 +1,6 @@
 operations = {
 	UBD_recruit_units = {
-		icon = generic_military
+		icon = GFX_decision_generic_reorganize_irregulars
 		allowed = {
 			OR = {
 				tag = EST

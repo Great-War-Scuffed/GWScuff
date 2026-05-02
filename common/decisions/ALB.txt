@@ -26,10 +26,6 @@ political_actions = {
 				is_owned_by = ROOT
 				is_fully_controlled_by = ROOT
 			}
-			1225 = {
-				is_owned_by = ROOT
-				is_fully_controlled_by = ROOT
-			}
 			871 = {
 				is_owned_by = ROOT
 				is_fully_controlled_by = ROOT
@@ -60,7 +56,7 @@ political_actions = {
 			}
 			set_autonomy = {
 				target = ALB
-				autonomy_state = autonomy_satellite
+				autonomy_state = autonomy_dominion
 			}
 		}
 	}

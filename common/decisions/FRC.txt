@@ -52,6 +52,15 @@ FRA_defense_of_france = {
 				NOT = {
 					has_state_flag = FRC_has_deployed_partisans_already
 				}
+				OR = {
+					state = 19
+					state = 31
+					state = 21
+					state = 25
+					state = 15
+					state = 16
+					state = 865
+				}
 				OWNER = {
 					original_tag = FRA
 					NOT = {
@@ -60,15 +69,6 @@ FRA_defense_of_france = {
 					has_war_with = FRC
 				}
 			}
-		}
-		targets = {
-			19
-			31
-			21
-			25
-			15
-			16
-			865
 		}
 		custom_cost_trigger = {
 			command_power > 24.9
@@ -119,8 +119,10 @@ FRA_defense_of_france = {
 		}
 		fire_only_once = yes
 		target_non_existing = yes
-		targets = {
-			BRI
+		target_trigger = {
+			FROM = {
+				tag = BRI
+			}
 		}
 		on_map_mode = map_and_decisions_view
 		days_remove = 21
@@ -151,7 +153,7 @@ FRA_defense_of_france = {
 			}
 			set_autonomy = {
 				target = BRI
-				autonomy_state = autonomy_satellite
+				autonomy_state = autonomy_dominion
 			}
 			hidden_effect = {
 				add_manpower = 35000
@@ -208,8 +210,10 @@ FRA_defense_of_france = {
 		}
 		fire_only_once = yes
 		target_non_existing = yes
-		targets = {
-			NAV
+		target_trigger = {
+			FROM = {
+				tag = NAV
+			}
 		}
 		on_map_mode = map_and_decisions_view
 		days_remove = 21
@@ -240,7 +244,7 @@ FRA_defense_of_france = {
 			}
 			set_autonomy = {
 				target = NAV
-				autonomy_state = autonomy_satellite
+				autonomy_state = autonomy_dominion
 			}
 			hidden_effect = {
 				add_manpower = 15000
@@ -298,8 +302,10 @@ FRA_defense_of_france = {
 		}
 		fire_only_once = yes
 		target_non_existing = yes
-		targets = {
-			COR
+		target_trigger = {
+			FROM = {
+				tag = COR
+			}
 		}
 		on_map_mode = map_and_decisions_view
 		days_remove = 21
@@ -332,7 +338,7 @@ FRA_defense_of_france = {
 			effect_tooltip = {
 				set_autonomy = {
 					target = COR
-					autonomy_state = autonomy_satellite
+					autonomy_state = autonomy_dominion
 				}
 			}
 			hidden_effect = {
@@ -438,8 +444,10 @@ peace_deals = {
 		}
 		on_map_mode = map_and_decisions_view
 		state_target = yes
-		targets = {
-			1210
+		target_trigger = {
+			FROM = {
+				state = 1210
+			}
 		}
 		cost = 0
 		complete_effect = {
@@ -449,7 +457,7 @@ peace_deals = {
 				}
 			}
 			SWI = {
-				news_event = {
+				country_event = {
 					id = ww1_switzerland.11
 					days = 2
 				}
@@ -500,7 +508,7 @@ FRC_interwar_internationale_category = {
 			}
 		}
 		complete_effect = {
-			create_faction_from_template = faction_template_third_international
+			create_faction = internationale
 			hidden_effect = {
 				news_event = {
 					id = news.173

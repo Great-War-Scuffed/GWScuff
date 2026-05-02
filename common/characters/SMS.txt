@@ -3,7 +3,7 @@ characters = {
 		name = GRE_andreas_kopasis
 		portraits = {
 			civilian = {
-				large = "gfx/leaders/SMS/SMS_andreas_kopasis.png"
+				large = "gfx/leaders/SMS/SMS_Andreas_Kopasis.png"
 			}
 		}
 		country_leader = {
@@ -15,7 +15,7 @@ characters = {
 		name = GRE_grigorios_vegleris
 		portraits = {
 			civilian = {
-				large = "gfx/leaders/SMS/SMS_grigorios_vegleris.png"
+				large = "gfx/leaders/SMS/SMS_Grigorios_Vegleris.png"
 			}
 		}
 		country_leader = {

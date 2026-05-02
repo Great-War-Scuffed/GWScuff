@@ -9,8 +9,10 @@ peace_deals = {
 				tag = GRE
 			}	
 		}
-		targets = {
-			AUS
+		target_trigger = {
+			FROM = {
+				tag = AUS
+			}	
 		}
 		# target_root_trigger = {
 		# 	has_war_with = FROM
@@ -25,15 +27,7 @@ peace_deals = {
 				has_global_flag = great_war
 				has_global_flag = austria_has_beat_balkan_alliance
 				has_global_flag = balkan_alliance_has_beat_austria
-				any_allied_country = {
-					is_major = yes
-					NOT = {
-						original_tag = SER
-						original_tag = BUL
-						original_tag = GRE
-					}
-				}
-			}
+			}	
 		}
 		available = {
 			OR = {
@@ -193,8 +187,10 @@ peace_deals = {
 		allowed = {
 			tag = AUS
 		}
-		targets = {
-			BLL
+		target_trigger = {
+			FROM = {
+				tag = BLL
+			}	
 		}
 		# target_root_trigger = {
 		# 	has_war_with = FROM
@@ -204,17 +200,11 @@ peace_deals = {
 			has_war_with = BLL
 			NOT = {
 				has_war_with = HUN
+			}
+			NOT = {
 				has_global_flag = great_war
 				has_global_flag = austria_has_beat_balkan_alliance
 				has_global_flag = balkan_alliance_has_beat_austria
-				any_enemy_country = {
-					is_major = yes
-					NOT = {
-						original_tag = SER
-						original_tag = BUL
-						original_tag = GRE
-					}
-				}
 			}
 		}
 		available = {
@@ -276,8 +266,10 @@ AUH_franzferdinand = {
 			original_tag = SER
 		}	
 
-		targets = {
-			AUS
+		target_trigger = {
+			FROM = {
+				tag = AUS
+			}		
 		}
 		
 		available = {
@@ -321,8 +313,10 @@ AUH_franzferdinand = {
 			NOT = { original_tag = SER }
 		}
 
-		targets = {
-			SER
+		target_trigger = {
+			FROM = {
+				tag = SER
+			}		
 		}
 		
 		available = {
@@ -765,7 +759,8 @@ AUH_terrorism = {
 			has_global_flag = SLO_pacified
 		}
 		activation = {
-			any_controlled_state = {
+			any_state = {
+				is_controlled_by = ROOT
 				has_state_flag = SLO_is_under_focus
 			}
 			NOT = {
@@ -863,8 +858,8 @@ AUH_terrorism = {
 			NOT = {
 				has_global_flag = ITA_pacified
 			}
-			any_owned_state = {
-				is_controlled_by = ROOT
+			any_state = {
+				is_owned_and_controlled_by = ROOT
 				has_state_flag = AUH_ITA_state
 			}
 		}
@@ -899,7 +894,8 @@ AUH_terrorism = {
 			has_global_flag = ITA_pacified
 		}
 		activation = {
-			any_controlled_state = {
+			any_state = {
+				is_controlled_by = ROOT
 				has_state_flag = ITA_is_under_focus
 				NOT = {
 					has_state_flag = ITA_is_terrorist_target
@@ -1417,7 +1413,7 @@ AUH_suppression_of_russophiles_and_serbs = {
 		}
 		available = {
 			FROM = {
-				is_controlled_by_ROOT_or_subject = yes
+				is_controlled_by = AUS
 				has_resistance = yes
 			}
 		}
@@ -1469,17 +1465,17 @@ AUH_suppression_of_russophiles_and_serbs = {
 		state_target = yes
 		target_trigger = {
 			FROM = {
+				OR = {
+					state = 73
+					state = 237
+					state = 89
+					state = 1043
+				}
 				NOT = {
 					is_core_of = AUS
 					has_state_flag = AUH_russophiles_suppressed
 				}
 			}				
-		}
-		targets = {
-			73
-			237
-			89
-			1043			
 		}
 		available = {
 			has_war_with = RUS
@@ -1649,8 +1645,10 @@ prestigious_projects = {
 			has_country_flag = great_war_winner
 			has_global_flag = interbellum
 		}
-		targets = {
-			GER
+		target_trigger = {
+			FROM = {
+				tag = GER
+			}
 		}
 		cancel_trigger = {
 			OR = {
@@ -1790,11 +1788,9 @@ AUH_greater_austria_category = {
 		}
 		target_trigger = {
 			FROM = {
+				tag = CZE
 				is_subject_of = ROOT
 			}
-		}
-		targets = {
-			CZE
 		}
 		available = {
 			has_capitulated = no
@@ -1861,11 +1857,9 @@ AUH_greater_austria_category = {
 		}
 		target_trigger = {
 			FROM = {
+				tag = GAL
 				is_subject_of = ROOT
 			}
-		}
-		targets = {
-			GAL
 		}
 		available = {
 			has_capitulated = no
@@ -2026,11 +2020,9 @@ AUH_greater_austria_category = {
 		}
 		target_trigger = {
 			FROM = {
+				tag = HUN
 				is_subject_of = ROOT
 			}
-		}
-		targets = {
-			HUN
 		}
 		available = {
 			has_capitulated = no
@@ -2273,11 +2265,9 @@ AUH_greater_austria_category = {
 		}
 		target_trigger = {
 			FROM = {
+				tag = CRO
 				is_subject_of = ROOT
 			}
-		}
-		targets = {
-			CRO
 		}
 		available = {
 			has_capitulated = no
@@ -2347,11 +2337,9 @@ AUH_greater_austria_category = {
 		}
 		target_trigger = {
 			FROM = {
+				tag = SER
 				is_subject_of = ROOT
 			}
-		}
-		targets = {
-			SER
 		}
 		available = {
 			has_capitulated = no
@@ -2805,8 +2793,7 @@ AUH_greater_austria_category = {
 				limit = {
 					is_in_faction = no
 				}
-				create_faction_from_template = faction_template_habsburg_alliance
-				set_faction_name = danube_adriabund
+				create_faction = danube_adriabund
 			}
 		}
 	}
@@ -2818,8 +2805,8 @@ peace_deals = {
 		allowed = {
 			original_tag = AUS
 		}
-		targets = {
-			GER
+		target_trigger = {
+			FROM = { tag = GER }
 		}
 		# target_root_trigger = {
 		# 	has_war_with = FROM
@@ -2867,8 +2854,8 @@ peace_deals = {
 		allowed = {
 			original_tag = AUS
 		}
-		targets = {
-			HUN
+		target_trigger = {
+			FROM = { tag = HUN }
 		}
 		# target_root_trigger = {
 		# 	has_war_with = FROM
@@ -3151,7 +3138,8 @@ AUH_collaboration_governement = {
 			}
 			ROM = {
 				NOT = {
-					is_ally_with = AUS
+					is_in_faction_with = AUS
+					is_puppet_of = AUS
 				}
 			}
 			ROM = {
@@ -3169,8 +3157,8 @@ AUH_collaboration_governement = {
 			set_country_flag = has_puppet_romania
 			if = {
 				limit = {
-					any_owned_state = {
-						is_controlled_by = ROM
+					any_state = {
+						is_owned_and_controlled_by = ROM
 						is_core_of = ROM
 						is_fully_controlled_by = ROM
 					}
@@ -3326,7 +3314,8 @@ AUH_collaboration_governement = {
 			}
 			UKR = {
 				NOT = {
-					is_ally_with = AUS
+					is_in_faction_with = AUS
+					is_puppet_of = AUS
 				}
 			}
 			UKR = {
@@ -4134,7 +4123,7 @@ AUH_famine_decisions = {
 			add_war_support = 0.025
 			add_to_variable = {
 				var = famine_war_support
-				value = 0.001
+				value = 0.0001
 			}
 			clamp_variable = {
 				var = famine_war_support	#cant be positive
@@ -4142,7 +4131,7 @@ AUH_famine_decisions = {
 			}
 			add_to_variable = {
 				var = famine_stability
-				value = 0.001
+				value = 0.0001
 			}
 			clamp_variable = {
 				var = famine_stability	#cant be positive
@@ -4184,7 +4173,7 @@ AUH_famine_decisions = {
 			add_war_support = 0.025
 			add_to_variable = {
 				var = famine_war_support
-				value = 0.001
+				value = 0.0001
 			}
 			clamp_variable = {
 				var = famine_war_support	#cant be positive
@@ -4192,7 +4181,7 @@ AUH_famine_decisions = {
 			}
 			add_to_variable = {
 				var = famine_stability
-				value = 0.001
+				value = 0.0001
 			}
 			clamp_variable = {
 				var = famine_stability	#cant be positive
@@ -4222,31 +4211,22 @@ AUH_famine_decisions = {
 		state_target = yes
 		target_trigger = {
 			FROM = {
+				is_owned_and_controlled_by = ROOT
 				OR = {
-					is_owned_and_controlled_by = ROOT
-					ROOT = {
-						any_subject_country = {
-							FROM = {
-								is_owned_and_controlled_by = PREV
-							}
-						}
-					}
+					state = 45
+					state = 764
+					state = 155
+					state = 43
+					state = 154
+					state = 109
+					state = 88
+					state = 91
+					state = 991
 				}
 				NOT = {
 					has_state_flag = AUH_agricultural_investements
 				}
 			}
-		}
-		targets = {
-			45
-			764
-			155
-			43
-			154
-			109
-			88
-			91
-			991			
 		}
 		remove_effect = {
 			FROM = {
@@ -4254,7 +4234,7 @@ AUH_famine_decisions = {
 			}
 			add_to_variable = {
 				var = famine_war_support
-				value = 0.001
+				value = 0.0001
 			}
 			clamp_variable = {
 				var = famine_war_support	#cant be positive
@@ -4262,7 +4242,7 @@ AUH_famine_decisions = {
 			}
 			add_to_variable = {
 				var = famine_stability
-				value = 0.001
+				value = 0.0001
 			}
 			clamp_variable = {
 				var = famine_stability	#cant be positive
@@ -4338,12 +4318,8 @@ AUH_famine_decisions = {
 				}
 				NOT = {
 					FROM = {
-						any_state_in = {						
-							strategic_region = 5 #it would increase resistance on german front, we dont need that
-						}
-						any_state_in = {						
-							strategic_region = 19
-						}
+						region = 5	#it would increase resistance on german front, we dont need that
+						region = 19
 						state = 6
 						state = 34
 						state = 907
@@ -4384,7 +4360,7 @@ AUH_famine_decisions = {
 			}
 			add_to_variable = {
 				var = famine_stability
-				value = 0.001
+				value = 0.0001
 			}
 			clamp_variable = {
 				var = famine_stability	#cant be positive
@@ -4424,8 +4400,8 @@ GER_great_war = {
 		allowed = {
 			original_tag = AUS
 		}
-		targets = {
-			FRA
+		target_trigger = {
+			FROM = { tag = FRA }
 		}
 		# target_root_trigger = {
 		# 	has_war_with = FROM

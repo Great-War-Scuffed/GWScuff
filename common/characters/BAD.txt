@@ -25,7 +25,8 @@ characters={
 		name=BAD_albert_stolzenburg
 		portraits={
 			civilian={
-				large="gfx/leaders/BAD/BAD_albert_stolzenburg.png"
+				large="gfx/leaders/GER/Portrait_Germany_Generic_1.dds"
+				#large="gfx/leaders/BAD/BAD_Albert_Stolzenburg.png"
 			}
 		}
 		country_leader={

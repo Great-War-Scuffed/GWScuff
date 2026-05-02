@@ -53,7 +53,7 @@ focus_tree = {
 	focus = {
 		id = QIN_expand_imperial_coffers
 		icon = GFX_focus_chinese_centralization
-		cost = 2
+		cost = 5
 		relative_position_id = QIN_prince_zaifeng_regency
 		x = -4
 		y = 1
@@ -67,7 +67,14 @@ focus_tree = {
 
 		}
 		completion_reward = {
-			
+			247 = {
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = arms_factory
+					level = 2
+					instant_build = yes
+				}
+			}
 		}
 		search_filters = {
 			FOCUS_FILTER_HISTORICAL FOCUS_FILTER_POLITICAL
@@ -79,7 +86,7 @@ focus_tree = {
 	focus = {
 		id = QIN_raise_land_taxes
 		icon = GFX_focus_rural_reconstruction_movement
-		cost = 2
+		cost = 5
 		relative_position_id = QIN_expand_imperial_coffers
 		x = -1
 		y = 1
@@ -93,6 +100,14 @@ focus_tree = {
 
 		}
 		completion_reward = {
+						607 = {
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = industrial_complex
+					level = 2
+					instant_build = yes
+				}
+			}
 			
 		}
 		search_filters = {
@@ -105,7 +120,7 @@ focus_tree = {
 	focus = {
 		id = QIN_levy_grain_taxes
 		icon = GFX_focus_generic_agricultural_subsidies
-		cost = 2
+		cost = 5
 		relative_position_id = QIN_expand_imperial_coffers
 		x = 1
 		y = 1
@@ -119,6 +134,14 @@ focus_tree = {
 
 		}
 		completion_reward = {
+						599 = {
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = industrial_complex
+					level = 2
+					instant_build = yes
+				}
+			}
 
 		}
 		search_filters = {
@@ -131,7 +154,7 @@ focus_tree = {
 	focus = {
 		id = QIN_introduce_new_taxes
 		icon = GFX_focus_mex_privatisation
-		cost = 2
+		cost = 5
 		relative_position_id = QIN_expand_imperial_coffers
 		x = 0
 		y = 2
@@ -145,6 +168,19 @@ focus_tree = {
 
 		}
 		completion_reward = {
+						598 = {
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = industrial_complex
+					level = 1
+					instant_build = yes
+				}
+				add_building_construction = {
+					type = arms_factory
+					level = 1
+					instant_build = yes
+				}
+			}
 			
 		}
 		search_filters = {
@@ -176,7 +212,7 @@ focus_tree = {
 					ideology = neutrality
 					popularity = 0.01
 				}
-				add_political_power = 50
+				add_political_power = 150
 			}
 		}
 		search_filters = {
@@ -243,10 +279,13 @@ focus_tree = {
 	
 		}
 		completion_reward = {
-			effect_tooltip = {
+			add_timed_idea = {
+	    		idea = GEN_idea_restoration
+	    		days = 365
+			}
 				add_stability = -0.05
 				add_war_support = 0.1
-			}
+			
 		}
 		search_filters = {
 			FOCUS_FILTER_HISTORICAL FOCUS_FILTER_POLITICAL
@@ -288,6 +327,8 @@ focus_tree = {
 					ideology = neutrality
 					popularity = -0.10
 				}
+				activate_advisor = CHI_carsun_chang
+				
 			}
 		}
 		search_filters = {
@@ -314,11 +355,12 @@ focus_tree = {
 
 		}
 		completion_reward = {
-			effect_tooltip = {
-				add_ideas = QIN_idea_constitutional_movement
-				add_stability = 0.05
-				add_war_support = -0.1
+			add_timed_idea = {
+	    		idea = GEN_idea_liberty
+	    		days = 365
 			}
+			add_stability = 0.05
+			add_war_support = -0.1
 		}
 		search_filters = {
 			FOCUS_FILTER_POLITICAL
@@ -861,7 +903,7 @@ focus_tree = {
 	focus = {
 		id = QIN_money_to_reform
 		icon = GFX_focus_hol_abandon_the_gold_standard
-		cost = 8
+		cost = 5
 		relative_position_id = QIN_royal_cabinet
 		x = -4
 		y = 1
@@ -887,7 +929,7 @@ focus_tree = {
 	focus = {
 		id = QIN_nationalise_railways
 		icon = GFX_focus_generic_railroad
-		cost = 8
+		cost = 5
 		relative_position_id = QIN_money_to_reform
 		x = -2
 		y = 1
@@ -918,7 +960,7 @@ focus_tree = {
 	}
 	focus = {
 		id = QIN_army_leadership_problem
-		icon = GFX_focus_qing_conscription
+		icon = GFX_focus_generic_infiltration
 		cost = 10
 		relative_position_id = QIN_royal_cabinet
 		x = 4
@@ -982,7 +1024,7 @@ focus_tree = {
 	}
 	focus = {
 		id = QIN_nineteen_articles
-		icon = GFX_focus_qing_palace
+		icon = GFX_focus_hol_the_foundations_of_defense
 		cost = 2
 		prerequisite = {
 			focus = QIN_protect_the_dynasty
@@ -1059,7 +1101,54 @@ focus_tree = {
 		completion_reward = {
 			custom_effect_tooltip = available_political_advisor
 			show_ideas_tooltip = QIN_natong
-			QIN_legitimacy_increase = yes
+			if = {
+				limit = {
+					has_idea = QIN_idea_low_legitimacy_4
+					NOT = {
+						has_completed_focus = QIN_pacify_beiyang_army
+					}
+				}
+				swap_ideas = {
+					remove_idea = QIN_idea_low_legitimacy_4
+					add_idea = QIN_idea_low_legitimacy_5
+				}
+			}
+			if = {
+				limit = {
+					has_idea = QIN_idea_low_legitimacy_3
+					NOT = {
+						has_completed_focus = QIN_pacify_beiyang_army
+					}
+				}
+				swap_ideas = {
+					remove_idea = QIN_idea_low_legitimacy_3
+					add_idea = QIN_idea_low_legitimacy_4
+				}
+			}
+			if = {
+				limit = {
+					has_idea = QIN_idea_low_legitimacy_2
+					NOT = {
+						has_completed_focus = QIN_pacify_beiyang_army
+					}
+				}
+				swap_ideas = {
+					remove_idea = QIN_idea_low_legitimacy_2
+					add_idea = QIN_idea_low_legitimacy_3
+				}
+			}
+			if = {
+				limit = {
+					has_idea = QIN_idea_low_legitimacy
+					NOT = {
+						has_completed_focus = QIN_pacify_beiyang_army
+					}
+				}
+				swap_ideas = {
+					remove_idea = QIN_idea_low_legitimacy
+					add_idea = QIN_idea_low_legitimacy_2
+				}
+			}
 		}
 		search_filters = {
 			FOCUS_FILTER_POLITICAL
@@ -1091,7 +1180,42 @@ focus_tree = {
 				show_ideas_tooltip = CHI_liang_qichao
 			}
 			remove_ideas = PRC_government_corruption
-			QIN_legitimacy_increase = yes
+			if = {
+				limit = {
+					has_idea = QIN_idea_low_legitimacy_4
+				}
+				swap_ideas = {
+					remove_idea = QIN_idea_low_legitimacy_4
+					add_idea = QIN_idea_low_legitimacy_5
+				}
+			}
+			if = {
+				limit = {
+					has_idea = QIN_idea_low_legitimacy_3
+				}
+				swap_ideas = {
+					remove_idea = QIN_idea_low_legitimacy_3
+					add_idea = QIN_idea_low_legitimacy_4
+				}
+			}
+			if = {
+				limit = {
+					has_idea = QIN_idea_low_legitimacy_2
+				}
+				swap_ideas = {
+					remove_idea = QIN_idea_low_legitimacy_2
+					add_idea = QIN_idea_low_legitimacy_3
+				}
+			}
+			if = {
+				limit = {
+					has_idea = QIN_idea_low_legitimacy
+				}
+				swap_ideas = {
+					remove_idea = QIN_idea_low_legitimacy
+					add_idea = QIN_idea_low_legitimacy_2
+				}
+			}
 		}
 		search_filters = {
 			FOCUS_FILTER_POLITICAL
@@ -1101,8 +1225,8 @@ focus_tree = {
 		}
 	}
 	focus = {
-		id = QIN_form_imperial_guard_corps
-		icon = GFX_focus_qing_police
+		id = QIN_pacify_beiyang_army
+		icon = GFX_focus_attack_china
 		cost = 5
 		prerequisite = {
 			focus = QIN_reform_ministries
@@ -1116,9 +1240,42 @@ focus_tree = {
 		bypass = {
 		}
 		completion_reward = {
-			add_war_support = 0.05
-			QIN_legitimacy_increase = yes
-			custom_effect_tooltip = QIN_form_imperial_guard_corps_tt
+			if = {
+				limit = {
+					has_idea = QIN_idea_low_legitimacy_4
+				}
+				swap_ideas = {
+					remove_idea = QIN_idea_low_legitimacy_4
+					add_idea = QIN_idea_low_legitimacy_5
+				}
+			}
+			if = {
+				limit = {
+					has_idea = QIN_idea_low_legitimacy_3
+				}
+				swap_ideas = {
+					remove_idea = QIN_idea_low_legitimacy_3
+					add_idea = QIN_idea_low_legitimacy_4
+				}
+			}
+			if = {
+				limit = {
+					has_idea = QIN_idea_low_legitimacy_2
+				}
+				swap_ideas = {
+					remove_idea = QIN_idea_low_legitimacy_2
+					add_idea = QIN_idea_low_legitimacy_3
+				}
+			}
+			if = {
+				limit = {
+					has_idea = QIN_idea_low_legitimacy
+				}
+				swap_ideas = {
+					remove_idea = QIN_idea_low_legitimacy
+					add_idea = QIN_idea_low_legitimacy_2
+				}
+			}
 		}
 		search_filters = {
 			FOCUS_FILTER_POLITICAL
@@ -1143,13 +1300,40 @@ focus_tree = {
 		}
 		completion_reward = {
 			add_war_support = 0.05
-			QIN_legitimacy_increase = yes
-			custom_effect_tooltip = QIN_appeal_to_the_militarists_tt
-			hidden_effect = {
-				CHI = {
-					CHI_cao_kun = {
-						set_character_flag = qing_allegiance
-					}
+			if = {
+				limit = {
+					has_idea = QIN_idea_low_legitimacy_4
+				}
+				swap_ideas = {
+					remove_idea = QIN_idea_low_legitimacy_4
+					add_idea = QIN_idea_low_legitimacy_5
+				}
+			}
+			if = {
+				limit = {
+					has_idea = QIN_idea_low_legitimacy_3
+				}
+				swap_ideas = {
+					remove_idea = QIN_idea_low_legitimacy_3
+					add_idea = QIN_idea_low_legitimacy_4
+				}
+			}
+			if = {
+				limit = {
+					has_idea = QIN_idea_low_legitimacy_2
+				}
+				swap_ideas = {
+					remove_idea = QIN_idea_low_legitimacy_2
+					add_idea = QIN_idea_low_legitimacy_3
+				}
+			}
+			if = {
+				limit = {
+					has_idea = QIN_idea_low_legitimacy
+				}
+				swap_ideas = {
+					remove_idea = QIN_idea_low_legitimacy
+					add_idea = QIN_idea_low_legitimacy_2
 				}
 			}
 		}
@@ -1168,7 +1352,7 @@ focus_tree = {
 			focus = QIN_appeal_to_the_militarists
 		}
 		prerequisite = {
-			focus = QIN_form_imperial_guard_corps
+			focus = QIN_pacify_beiyang_army
 		}
 		relative_position_id = QIN_appeal_to_the_militarists
 		x = 1
@@ -1182,6 +1366,28 @@ focus_tree = {
 			QIN_xuantong = {
 				promote_character = semi_constitutional_monarchy
 			}
+			if = {
+				limit = {
+					has_character = CHI_liang_qichao
+				}
+				CHI_liang_qichao = {
+					if = {
+						limit = {
+							has_ideology = classical_liberalism
+						}
+						promote_character = classical_liberalism
+					}
+					else = {
+						add_country_leader_role = {
+							promote_leader = yes
+							country_leader = {
+								ideology = classical_liberalism
+							}
+						}
+					}
+				}
+			}
+			promote_character = QIN_kang_youwei
 			set_party_name = {
 				ideology = neutrality
 				long_name = QIN_neutrality_party_puyi
@@ -1200,7 +1406,54 @@ focus_tree = {
 				ideology = democratic
 				popularity = 0.6
 			}
-			QIN_legitimacy_increase = yes
+			if = {
+				limit = {
+					has_idea = QIN_idea_low_legitimacy_4
+					NOT = {
+						has_completed_focus = QIN_pacify_beiyang_army
+					}
+				}
+				swap_ideas = {
+					remove_idea = QIN_idea_low_legitimacy_4
+					add_idea = QIN_idea_low_legitimacy_5
+				}
+			}
+			if = {
+				limit = {
+					has_idea = QIN_idea_low_legitimacy_3
+					NOT = {
+						has_completed_focus = QIN_pacify_beiyang_army
+					}
+				}
+				swap_ideas = {
+					remove_idea = QIN_idea_low_legitimacy_3
+					add_idea = QIN_idea_low_legitimacy_4
+				}
+			}
+			if = {
+				limit = {
+					has_idea = QIN_idea_low_legitimacy_2
+					NOT = {
+						has_completed_focus = QIN_pacify_beiyang_army
+					}
+				}
+				swap_ideas = {
+					remove_idea = QIN_idea_low_legitimacy_2
+					add_idea = QIN_idea_low_legitimacy_3
+				}
+			}
+			if = {
+				limit = {
+					has_idea = QIN_idea_low_legitimacy
+					NOT = {
+						has_completed_focus = QIN_pacify_beiyang_army
+					}
+				}
+				swap_ideas = {
+					remove_idea = QIN_idea_low_legitimacy
+					add_idea = QIN_idea_low_legitimacy_2
+				}
+			}
 			hidden_effect = {
 				country_event = {
 					id = ww1_qing.6
@@ -1233,7 +1486,7 @@ focus_tree = {
 				country_exists = CHI
 				country_exists = GXC
 				country_exists = JNC
-				country_exists = SND
+				country_exists = SDC
 				country_exists = FNG
 			}
 		}
@@ -1267,14 +1520,10 @@ focus_tree = {
 		# will_lead_to_war_with = SOV
 		# will_lead_to_war_with = TRK
 		bypass = {
-			owns_state = 589
-			owns_state = 732
-			owns_state = 1219
+			owns_state = 441
 		}
 		completion_reward = {
-			add_state_claim = 589
-			add_state_claim = 732
-			add_state_claim = 1219
+			add_state_claim = 441
 		}
 	}
 	focus = {
@@ -1376,7 +1625,8 @@ focus_tree = {
 					VIN = {
 						exists = yes
 						NOT = {
-							is_ally_with = ROOT
+							is_subject_of = ROOT
+							is_in_faction_with = ROOT
 						}
 					}
 				}
@@ -1390,7 +1640,8 @@ focus_tree = {
 					IND = {
 						exists = yes
 						NOT = {
-							is_ally_with = ROOT
+							is_subject_of = ROOT
+							is_in_faction_with = ROOT
 						}
 					}
 				}
@@ -1405,7 +1656,8 @@ focus_tree = {
 						owns_state = 286
 						exists = yes
 						NOT = {
-							is_ally_with = ROOT
+							is_subject_of = ROOT
+							is_in_faction_with = ROOT
 						}
 					}
 				}

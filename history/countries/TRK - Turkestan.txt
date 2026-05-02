@@ -1,6 +1,6 @@
 ﻿capital = 732
 
-set_research_slots = 2
+set_research_slots = 3
 set_stability = 0.35
 
 recruit_character = TRK_fyodor_kolesov
@@ -42,6 +42,7 @@ set_technology = {
 	obsolete_infantry_weapons = 1
 	infantry_weapons = 1
 	infantry_weapons1 = 1
+	support_weapons = 1
 	camelry = 1
 	
 	#armor

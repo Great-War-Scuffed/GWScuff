@@ -74,8 +74,8 @@ FRA_keep_guard_over_the_versailles_system = {
 				}
 			}
 		}
-		targets = {
-			GER
+		target_trigger = {
+			FROM = { tag = GER }
 		}
 		target_root_trigger = {
 			has_global_flag = interbellum
@@ -149,11 +149,9 @@ FRA_keep_guard_over_the_versailles_system = {
 		}
 		target_trigger = {
 			FROM = { 
+				tag = GER 
 				is_neighbor_of = PREV
 			}
-		}
-		targets = {
-			GER
 		}
 		target_root_trigger = {
 			has_country_flag = great_war_winner
@@ -251,8 +249,8 @@ FRA_keep_guard_over_the_versailles_system = {
 				owns_state = 57
 			}
 		}
-		targets = {
-			GER
+		target_trigger = {
+			FROM = { tag = GER }
 		}
 		target_root_trigger = {
 			has_global_flag = interbellum
@@ -323,8 +321,10 @@ FRA_keep_guard_over_the_versailles_system = {
 				has_country_flag = great_war_loser
 			}
 		}
-		targets = {
-			GER
+		target_trigger = {
+			FROM = {
+				tag = GER
+			}
 		}
 		target_root_trigger = {
 			has_global_flag = interbellum
@@ -416,7 +416,7 @@ FRA_keep_guard_over_the_versailles_system = {
 	# 			owns_state = 50
 	# 		}
 	# 		NOT = {
-	# 			#has_global_flag = prussian_blue
+	# 			has_global_flag = prussian_blue
 	# 			country_exists = WUR
 	# 			country_exists = BAD
 	# 		}
@@ -517,8 +517,8 @@ FRA_keep_guard_over_the_versailles_system = {
 				}
 			}
 		}
-		targets = {
-			GER
+		target_trigger = {
+			FROM = { tag = GER }
 		}
 		target_root_trigger = {
 			has_global_flag = interbellum
@@ -703,7 +703,10 @@ FRA_GER_intervention_in_France = {
 				}
 			}	 
 			FRA = {
-				is_ally_with = GER
+				OR = {
+					is_subject_of = GER
+					is_in_faction_with = GER
+				}
 			}
 		}
 		cancel_trigger = {
@@ -715,41 +718,18 @@ FRA_GER_intervention_in_France = {
 		fire_only_once = yes
 		days_mission_timeout = 280
 		timeout_effect = {
-			if = {
-				limit = { 
-					tag = GER
-				}
-				every_country = {
-					limit = {
-						OR = {
-							original_tag = FRA
-							tag = GER
-							has_war_with = FRC
-							has_war_with = NFA
-						}
-					}
-					country_event = {
-						id = ww1_france.330
-						days = 1
+			every_country = {
+				limit = {
+					OR = {
+						original_tag = FRA
+						tag = GER
+						has_war_with = FRC
+						has_war_with = NFA
 					}
 				}
-			}
-			else = {
-				effect_tooltip = {
-					every_country = {
-						limit = {
-							OR = {
-								original_tag = FRA
-								tag = GER
-								has_war_with = FRC
-								has_war_with = NFA
-							}
-						}
-						country_event = {
-							id = ww1_france.330
-							days = 1
-						}
-					}
+				country_event = {
+					id = ww1_france.330
+					days = 1
 				}
 			}
 		}
@@ -825,11 +805,9 @@ FRA_support_in_polish_war = {
 		days_re_enable = 30
 		target_trigger = {		
 			FROM = {
+				tag = POL
 				has_idea = POL_french_advisors
 			}
-		}
-		targets = {
-			POL
 		}
 		target_root_trigger = {
 			has_country_flag = can_send_to_POL
@@ -862,7 +840,7 @@ FRA_support_in_polish_war = {
 			effect_tooltip = {
 				send_equipment = {
 					equipment = infantry_equipment
-					amount = 1000
+					amount = 5000
 					target = POL
 				}
 			}
@@ -877,7 +855,7 @@ FRA_support_in_polish_war = {
 			modifier = {
 				factor = 0
 				has_equipment = {
-					infantry_equipment < 5000
+					infantry_equipment < 10000
 				}
 			}
 			modifier = {
@@ -912,11 +890,9 @@ FRA_support_in_polish_war = {
 		days_re_enable = 30
 		target_trigger = {
 			FROM = {
+				tag = POL
 				has_idea = POL_french_advisors				
 			}
-		}
-		targets = {
-			POL
 		}
 		target_root_trigger = {
 			has_country_flag = can_send_to_POL
@@ -999,11 +975,9 @@ FRA_support_in_polish_war = {
 		days_re_enable = 30
 		target_trigger = {
 			FROM = {
+				tag = POL
 				has_idea = POL_french_advisors			
 			}
-		}
-		targets = {
-			POL
 		}
 		target_root_trigger = {
 			has_country_flag = can_send_to_POL
@@ -1086,11 +1060,9 @@ FRA_support_in_polish_war = {
 		days_re_enable = 30
 		target_trigger = {
 			FROM = {
+				tag = POL
 				has_idea = POL_french_advisors			
 			}
-		}
-		targets = {
-			POL
 		}
 		target_root_trigger = {
 			has_country_flag = can_send_to_POL
@@ -1173,11 +1145,9 @@ FRA_support_in_polish_war = {
 		days_re_enable = 30
 		target_trigger = {
 			FROM = {
+				tag = POL
 				has_idea = POL_french_advisors
 			}
-		}
-		targets = {
-			POL
 		}
 		target_root_trigger = {
 			has_country_flag = can_send_to_POL
@@ -1260,11 +1230,9 @@ FRA_support_in_polish_war = {
 		days_re_enable = 30
 		target_trigger = {
 			FROM = {
+				tag = POL
 				has_idea = POL_french_advisors
 			}
-		}
-		targets = {
-			POL
 		}
 		target_root_trigger = {
 			has_country_flag = can_send_to_POL
@@ -1350,11 +1318,9 @@ FRA_support_in_polish_war = {
 		days_re_enable = 30
 		target_trigger = {
 			FROM = {
+				tag = POL
 				has_idea = POL_french_advisors
 			}
-		}
-		targets = {
-			POL
 		}
 		target_root_trigger = {
 			has_country_flag = can_send_to_POL

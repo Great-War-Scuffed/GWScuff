@@ -4,9 +4,11 @@ operations = {
 		allowed = {
 			original_tag = YEM
 		}
-		target_array = 930.owner
-		targets = {
-			BID
+		target_trigger = {
+			FROM = {
+				tag = BID
+				owns_state = 930
+			}
 		}
 		highlight_states = {
 			highlight_state_targets = {
@@ -102,9 +104,11 @@ operations = {
 		allowed = {
 			original_tag = YEM
 		}
-		target_array = 929.owner
-		targets = {
-			NAJ
+		target_trigger = {
+			FROM = {
+				tag = NAJ
+				owns_state = 929
+			}
 		}
 		war_with_target_on_remove = yes
 		visible = {
@@ -193,7 +197,11 @@ operations = {
 		allowed = {
 			original_tag = YEM
 		}
-		target_array = 929.owner
+		target_trigger = {
+			FROM = {
+				owns_state = 929
+			}
+		}
 		war_with_target_on_remove = yes
 		visible = {
 			293 = { is_owned_and_controlled_by = ROOT }

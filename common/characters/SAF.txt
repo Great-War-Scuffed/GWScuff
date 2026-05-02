@@ -81,6 +81,7 @@ characters={
 		}
 	}
 	SAF_jan_smuts={
+		name="SAF_jan_smuts"
 		advisor={
 			slot = political_advisor
 			idea_token = SAF_jan_smuts
@@ -113,12 +114,11 @@ characters={
 		}
 		portraits={
 			civilian = {
-				large = "gfx/leaders/SAF/SAF_Jan_Smuts.png"
-				small ="gfx/interface/ideas/SAF/idea_SAF_Jan_Smuts.png"
+				large="GFX_portrait_SAF_jan_smuts"
 			}
-			army={	
-				large="gfx/leaders/SAF/SAF_Jan_Smuts_army.png"
-				small ="gfx/interface/ideas/SAF/idea_SAF_Jan_Smuts_army.png"
+			army={		
+				large="gfx/leaders/SAF/SAF_Jan_Smuts.png"
+				small="gfx/interface/ideas/idea_SAF_jan_smuts.dds"
 			}
 		}
 		field_marshal={
@@ -323,8 +323,10 @@ characters={
 		name="SAF_jopie_fourie"
 		portraits={
 			army={
-				large="GFX_Portrait_Britain_Generic_land_7"
-				small="GFX_Portrait_Britain_Generic_land_7_small"
+				small="GFX_idea_generic_army_chief_off"
+			}
+			army={
+				large="gfx/leaders/ENG/Portrait_Britain_Generic_land_7.png"
 			}
 		}
 		corps_commander={
@@ -339,6 +341,7 @@ characters={
 					NOT = { has_global_flag = boer_rebellion }
 					has_government = fascism
 				}
+				date < 1914.12.20
 			}
 		}
 	}

@@ -236,6 +236,7 @@ characters={
 		portraits={
 			civilian={
 				large="gfx/leaders/ENG/ENG_paul_methuen.png"
+				small="GFX_idea_paul_methuen"
 			}
 		}
 		field_marshal={
@@ -281,7 +282,7 @@ characters={
 				}
 				cost = 200
 				ai_will_do  = {
-					factor  = 0.1
+					factor  = 1.000
 				}
 		}
 		portraits={
@@ -332,7 +333,7 @@ characters={
 				}
 				cost = 200
 				ai_will_do  = {
-					factor  = 0.1
+					factor  = 1.000
 				}
 		}
 		portraits={
@@ -401,8 +402,6 @@ characters={
 		}
 		country_leader={
 			ideology=semi_constitutional_monarchy
-			desc = ENG_edward_vii_desc
-			traits = { eng_bertie }
 		}
 	}
 	ENG_george_v={
@@ -414,7 +413,6 @@ characters={
 		}
 		country_leader={
 			ideology=semi_constitutional_monarchy
-			desc = ENG_george_v_desc
 		}
 	}
 	ENG_edward_viii={
@@ -430,7 +428,7 @@ characters={
 		name="ENG_fallen_government"
 		portraits={
 			civilian={
-				large=GFX_portrait_Fallen_Government
+				large="gfx/leaders/ENG/ENG_fallen_government.png"
 			}
 		}
 	}
@@ -548,7 +546,7 @@ characters={
 		portraits={
 			army={
 				large="gfx/leaders/ENG/ENG_Lewis_Evans.png"
-				small="GFX_idea_ENG_generic_land_6"
+				small="GFX_idea_ENG_generic_land_7"
 			}
 		}
 	}
@@ -618,7 +616,7 @@ characters={
 			ledger  = army 
 			cost = 150
 			traits  = {
-				cult_of_offensive_expert 
+				mass_assault_expert 
 			}
 			ai_will_do  = {
 				factor  = 1.000
@@ -653,7 +651,7 @@ characters={
 			}
 			cost = 200
 			ai_will_do  = {
-				factor  = 0.1
+				factor  = 1.000
 			}
 		}
 		corps_commander={
@@ -694,7 +692,8 @@ characters={
 			visible = {
 				OR = {
 					original_tag = ENG
-					is_ally_with = ENG
+					is_subject_of = ENG
+					is_in_faction_with = ENG
 					has_idea = ENG_british_officers_independent_egypt
 				}
 				NOT = { 
@@ -786,7 +785,8 @@ characters={
 			visible = {
 				OR = {
 					original_tag = ENG
-					is_ally_with = ENG
+					is_subject_of = ENG
+					is_in_faction_with = ENG
 					has_idea = ENG_british_officers_independent_egypt #High Commissioner in Egypt
 				}
 				NOT = { 
@@ -1315,8 +1315,8 @@ characters={
 		name="ENG_william_birdwood"
 		portraits={
 			army={
-				large=GFX_portrait_William_Birdwood
-				small=GFX_idea_ENG_william_birdwood
+				large="gfx/leaders/ENG/ENG_William_Birdwood.png"
+				small="gfx/interface/ideas/ENG/idea_ENG_William_Birdwood.png"
 			}
 		}
 		corps_commander={
@@ -1412,7 +1412,7 @@ characters={
 			}
 			cost = 200
 			ai_will_do  = {
-				factor  = 0.1
+				factor  = 1.000
 			}
 		}
 		portraits={
@@ -1487,7 +1487,7 @@ characters={
 				navy_chief_decisive_battle_2
 			}
 			ai_will_do  = {
-				factor  = 2.000
+				factor  = 1.000
 			}
 		}
 		portraits={
@@ -1900,13 +1900,38 @@ characters={
 			}
 			cost = 100
 			ai_will_do  = {
-				factor  = 1.000
+				factor  = 10.000
 			}
 		}
 		name="ENG_frederic_natusch_maude"
 		portraits={
 			army={
 				small="GFX_idea_generic_army_europe_3"
+			}
+		}
+	}
+	ENG_garrett_o_moore_creagh={
+		advisor={
+			slot = theorist
+			idea_token = ENG_garrett_o_moore_creagh
+			ledger  = army 
+			available  = {
+				not  = {
+					has_government  = communism 
+				}
+			}
+			cost  = 150
+			traits  = {
+				grand_battle_plan_expert 
+			}
+			ai_will_do  = {
+				factor  = 1.000
+			}
+		}
+		name="ENG_garrett_o_moore_creagh"
+		portraits={
+			army={
+				small="GFX_idea_ENG_garrett_o_moore_creagh"
 			}
 		}
 	}
@@ -2038,21 +2063,25 @@ characters={
 	}
 	ENG_richard_haldane={
 		advisor={
-			slot = political_advisor
+			slot = theorist
 			idea_token = ENG_richard_haldane
+			ledger  = army 
 			available  = {
 				not  = {
 					has_government  = communism 
 				}
 			}
 			traits  = {
-				tenacious_negotiator
+				mobile_warfare_expert 
 			}
 			cost  = 150
+			ai_will_do  = {
+				factor  = 0.000
+			}
 		}
 		name="ENG_richard_haldane"
 		portraits={
-			civilian = {
+			army={
 				small="GFX_idea_ENG_richard_haldane"
 			}
 		}
@@ -2228,7 +2257,7 @@ characters={
 				}
 				cost = 200
 				ai_will_do  = {
-					factor  = 0.1
+					factor  = 1.000
 				}
 		}
 		name="ENG_frederick_roberts"
@@ -2251,7 +2280,7 @@ characters={
 				}
 				cost = 200
 				ai_will_do  = {
-					factor  = 0.1
+					factor  = 1.000
 				}
 		}
 		name="ENG_frederick_sykes"
@@ -2597,7 +2626,7 @@ characters={
 				}
 				cost = 200
 				ai_will_do  = {
-					factor  = 0.1
+					factor  = 1.000
 				}
 		}
 		name="ENG_charles_vaughan_lee"

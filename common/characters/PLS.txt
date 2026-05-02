@@ -3,8 +3,7 @@ characters={
 		name = PLS_syed_alwi_jamalullali
 		portraits = {
 			civilian = {
-				large="gfx/leaders/PLS/PLS_syed_alwi_jamalullali.png"
-				small = GFX_Portrait_Asia_Generic_land_5_small
+				large = "gfx/leaders/Asia/portrait_asia_generic_land_5.dds"
 			}
 		}
 		country_leader = {

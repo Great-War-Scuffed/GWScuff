@@ -1,6 +1,6 @@
 ﻿capital = 40
 
-set_research_slots = 2
+set_research_slots = 3
 
 # Starting tech
 set_technology = {
@@ -22,7 +22,7 @@ set_technology = {
 	basic_field_gun = 1
 		
 	#doctrine
-	
+	ww1_landdoctrine = 1
 
 	#air
 	scout_plane = 1

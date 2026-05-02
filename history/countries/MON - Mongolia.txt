@@ -12,7 +12,6 @@ recruit_character = MON_khatanbaatar_magsarjav
 recruit_character = MON_gelegdorjiin_demid
 recruit_character = MON_damdin_sukhbaatar
 recruit_character = MON_ja_lama
-recruit_character = MON_khorloogiin_choibalsan
 
 1910.1.1 = {
 	set_technology = {
@@ -22,7 +21,7 @@ recruit_character = MON_khorloogiin_choibalsan
 		#support
 		tech_support = 1
 	}
-	add_ideas = { MON_divided_rule MON_nomadic_society MON_lama }
+	add_ideas = { MON_divided_rule MON_nomadic_society }
 	set_politics = {
 	    ruling_party = neutrality
 	    last_election = "1910.1.1"
@@ -38,7 +37,7 @@ recruit_character = MON_khorloogiin_choibalsan
 }
 
 1914.1.1 = {
-	oob = "MON_1911"
+	oob = "MON_army"
 
 	add_political_power = 1198
 	add_command_power = 100

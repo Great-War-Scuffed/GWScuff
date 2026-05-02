@@ -58,7 +58,7 @@ focus_tree = {
 	focus = {
 		id = USA_reformist_progressivism
 		icon = GFX_goal_generic_intelligence_exchange
-		cost = 10
+		cost = 5
 		mutually_exclusive = {
 			focus = USA_american_reactionism
 		}
@@ -81,7 +81,7 @@ focus_tree = {
 	focus = {
 		id = USA_american_reactionism
 		icon = GFX_focus_usa_shield
-		cost = 10
+		cost = 5
 		mutually_exclusive = {
 			focus = USA_reformist_progressivism
 		}
@@ -120,7 +120,7 @@ focus_tree = {
 	focus = {
 		id = USA_radicalism_era
 		icon = GFX_goal_generic_dangerous_deal
-		cost = 10
+		cost = 5
 		mutually_exclusive = {
 			focus = USA_reformist_progressivism
 		}
@@ -147,7 +147,7 @@ focus_tree = {
 	focus = {
 		id = USA_international_conference_of_american_states
 		icon = GFX_goal_generic_national_unity
-		cost = 10
+		cost = 5
 		x = 36
 		y = 0
 		available = { 
@@ -179,7 +179,7 @@ focus_tree = {
 	focus = {
 		id = USA_great_white_fleet
 		icon = GFX_focus_usa_navy
-		cost = 10
+		cost = 5
 		x = 50
 		y = 0
 		completion_reward = { navy_experience = 20 }
@@ -207,7 +207,7 @@ focus_tree = {
 	focus = {
 		id = USA_principle_of_workmens_compensation
 		icon = GFX_goal_generic_production
-		cost = 10
+		cost = 5
 		prerequisite = {
 			focus = USA_radicalism_era
 			focus = USA_reformist_progressivism
@@ -440,7 +440,7 @@ focus_tree = {
 	focus = {
 		id = USA_federal_reserve
 		icon = GFX_focus_usa_federal_government
-		cost = 10
+		cost = 5
 		prerequisite = {
 			focus = USA_reformist_progressivism
 			focus = USA_radicalism_era
@@ -741,7 +741,7 @@ focus_tree = {
 	focus = {
 		id = USA_old_neutrality_act
 		icon = GFX_goal_generic_neutrality_focus
-		cost = 10
+		cost = 5
 		prerequisite = {
 			focus = USA_american_reactionism
 			focus = USA_reformist_progressivism
@@ -782,20 +782,12 @@ focus_tree = {
 		}
 		cancel_if_invalid = no
 		continue_if_invalid = yes
-		available = { 
-			OR = {
-				threat > 0.2
-				is_great_war_ongoing = yes
-			}		
-		}
-		completion_reward = {
+		available = { threat > 0.2 }
+		completion_reward = { 
 			swap_ideas = {
 				add_idea = isolation
 				remove_idea = undisturbed_isolation
 			}
-		}
-		ai_will_do = {
-			factor = 10
 		}
 		search_filters = {
 			FOCUS_FILTER_HISTORICAL
@@ -810,13 +802,7 @@ focus_tree = {
 		}
 		x = 10
 		y = 3
-		available = { 
-			OR = {
-				has_defensive_war = yes
-				threat > 0.45
-				is_great_war_ongoing = yes
-			}		
-		}
+		available = { threat > 0.45 }
 		completion_reward = {
 			random_owned_controlled_state = {
 				limit = {
@@ -855,10 +841,7 @@ focus_tree = {
 			factor = 1
 			modifier = {
 				factor = 100
-				OR = {
-					threat > 0.5
-					has_defensive_war = yes
-				}			
+				threat > 0.65
 			}
 		}
 		search_filters = {
@@ -874,34 +857,16 @@ focus_tree = {
 		}
 		x = 12
 		y = 3	
-		available = { 
-			OR = {
-				has_defensive_war = yes
-				threat > 0.45
-				is_great_war_ongoing = yes
-			}		
-		}
+		available = { threat > 0.45 }
 		completion_reward = { 
-			if = {
-				limit = { 
-					has_idea = isolation
-				}
-				swap_ideas = {
-					remove_idea = isolation
-					add_idea = civilian_economy
-				}
-			}
-			else = {
-				effect_tooltip = {
-					add_ideas = civilian_economy
-				}
-			}
+			add_ideas = civilian_economy 
 			custom_effect_tooltip = escape_line
 			swap_ideas = {
 				add_idea = USA_idea_neglected_military_budget2
 				remove_idea = USA_idea_neglected_military_budget
 			}
-			country_lock_all_division_template = no		
+			country_lock_all_division_template = no
+			
 		}
 		search_filters = {
 			FOCUS_FILTER_HISTORICAL
@@ -913,7 +878,7 @@ focus_tree = {
 	focus = {
 		id = USA_do_not_stand_aside
 		icon = GFX_focus_generic_little_entente
-		cost = 5
+		cost = 10
 		prerequisite = {
 			focus = USA_arms_tax
 		}
@@ -926,14 +891,8 @@ focus_tree = {
 			OR = {
 				threat > 0.6
 				has_defensive_war = yes
-				has_war_support > 0.95	
-				GER = {
-					has_unrestricted_submarine_warfare = yes
-				}
-				AND = {
-					is_great_war_ongoing = yes
-					has_country_leader = { character = USA_theodore_roosevelt }
-				}
+				has_war_support > 0.95
+				has_global_flag = zimmermann_telegram_received
 			}
 		}
 		completion_reward = {
@@ -948,7 +907,6 @@ focus_tree = {
 					threat > 0.7
 					has_defensive_war = yes
 					has_global_flag = zimmermann_telegram_received
-					has_country_leader = { character = USA_theodore_roosevelt }
 				}
 			}
 		}
@@ -983,19 +941,10 @@ focus_tree = {
 				has_idea = idea_armistice
 				has_idea = idea_army_restrictions
 			}
-			OR = {
-				has_opinion = {
-					target = GER
-					value < -60
-				}
-				GER = {
-					has_unrestricted_submarine_warfare = yes
-				}
-				has_global_flag = zimmermann_telegram_received
-				has_country_leader = {
-					character = USA_theodore_roosevelt
-				}
-			}		
+			has_opinion = {
+				target = GER
+				value < -60
+			}
 		}
 		will_lead_to_war_with = GER
 		bypass = {
@@ -1021,7 +970,7 @@ focus_tree = {
 			modifier = {
 				add = 1000
 				OR = {
-					has_global_flag = brest_litovsk_finished
+					has_global_flag = brest_litovsk_peace
 					has_global_flag = october_revolution
 					has_global_flag = RUS_surrender_alone
 					RUS = {
@@ -1031,17 +980,7 @@ focus_tree = {
 						}
 					}
 				}
-			}
-			modifier = {
-				factor = 100
-				GER = {
-					has_unrestricted_submarine_warfare = yes
-				}
-			}
-			modifier = {
-				factor = 100
-				has_country_leader = { character = USA_theodore_roosevelt }
-			}
+			}			
 			modifier = {			
 				factor = -1000
 				has_government = democratic
@@ -1086,7 +1025,6 @@ focus_tree = {
 		}
 		completion_reward = {
 			add_ideas = home_of_the_free
-			unlock_decision_tooltip = USA_release_philippines
 			#IRL, the usa arms reduction was non effective and rather useless.
 			# every_country = {
 			# 	limit = {
@@ -1126,7 +1064,7 @@ focus_tree = {
 	focus = {
 		id = USA_interventionalism
 		icon = GFX_goal_generic_propaganda
-		cost = 10
+		cost = 5
 		prerequisite = {
 			focus = USA_american_reactionism
 			focus = USA_reformist_progressivism
@@ -1157,29 +1095,10 @@ focus_tree = {
 		}
 		x = 13
 		y = 2
-		available = { 
-			OR = {
-				has_defensive_war = yes
-				threat > 0.2
-				is_great_war_ongoing = yes
-			}		
-		}
+		bypass = { has_idea = volunteer_only }
 		search_filters = { FOCUS_FILTER_HISTORICAL FOCUS_FILTER_MANPOWER}
-		completion_reward = {	
-			if = {
-				limit = { 
-					has_idea = disarmed_nation
-				}
-				swap_ideas = {
-					remove_idea = disarmed_nation
-					add_idea = volunteer_only
-				}
-			}
-			else = {
-				effect_tooltip = {
-					add_ideas = volunteer_only
-				}
-			}
+		completion_reward = {
+			add_ideas = volunteer_only
 			add_ideas = USA_idea_volunteer_corps
 			if = {
 				limit = {
@@ -1241,7 +1160,7 @@ focus_tree = {
 	focus = {
 		id = USA_gold_reserve
 		icon = GFX_focus_usa_reestablish_the_gold_standard
-		cost = 10
+		cost = 5
 		prerequisite = {
 			focus = USA_reformist_progressivism
 			focus = USA_american_reactionism
@@ -1367,8 +1286,7 @@ focus_tree = {
 				}
 				set_faction_name = pan_american
 				else = {
-					create_faction_from_template = faction_template_pan_american
-					set_faction_name = pan_american
+					create_faction = pan_american
 				}
 			}		
 			set_rule = { can_create_factions = yes }
@@ -1620,15 +1538,9 @@ focus_tree = {
 				has_idea = idea_army_restrictions
 				has_global_flag = great_war_ends
 			}
-			if = {
-				limit = {
-					has_government = democratic
-				}
-				FRA = {
-					NOT = {
-						has_government = democratic
-					}
-				}
+			has_opinion = {
+				target = FRA
+				value < -60
 			}
 		}
 		will_lead_to_war_with = FRA
@@ -1921,7 +1833,7 @@ focus_tree = {
 	focus = {
 		id = USA_cult_of_the_american_nation
 		icon = GFX_focus_generic_strike_at_democracy1
-		cost = 10
+		cost = 5
 		prerequisite = {
 			focus = USA_american_reactionism
 			focus = USA_reformist_progressivism
@@ -2490,7 +2402,7 @@ focus_tree = {
 	focus = {
 		id = USA_the_storm_is_coming
 		icon = GFX_goal_generic_propaganda
-		cost = 10
+		cost = 5
 		prerequisite = {
 			focus = USA_international_conference_of_american_states
 		}
@@ -2677,7 +2589,7 @@ focus_tree = {
 	focus = {
 		id = USA_border_war
 		icon = GFX_focus_mex_caudillo_private_armies
-		cost = 10
+		cost = 5
 		prerequisite = {
 			focus = USA_international_conference_of_american_states
 		}
@@ -2939,13 +2851,10 @@ focus_tree = {
 		y = 6
 		available = {
 			is_subject = no
-			SOV = {
-				has_russian_civil_war = yes
-			}
+			SOV = { has_war_with = RUS }
 			NOT = { 
-				any_enemy_country = {
-					is_russian_tag = yes
-				}
+				has_war_with = SOV
+				has_war_with = RUS 
 				has_country_flag = great_war_loser
 				has_idea = idea_armistice
 				has_idea = idea_army_restrictions
@@ -3003,7 +2912,7 @@ focus_tree = {
 		x = 42
 		y = 1
 		available = {
-			has_tech = tech_trucks
+			has_tech = motorised_infantry
 		}
 		search_filters = {FOCUS_FILTER_RESEARCH}
 		completion_reward = {

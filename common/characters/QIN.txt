@@ -1,4 +1,32 @@
 characters = {
+
+		CHI_carsun_chang = {
+		name = CHI_carsun_chang
+		portraits={
+			civilian={
+				small = GFX_idea_advisor_CHI_carsun_chang
+			}
+		}
+		advisor = {
+			slot = political_advisor
+			idea_token = CHI_carsun_chang
+			allowed = {
+				original_tag = QIN
+			}
+			available = {
+			}
+			ai_will_do = {
+			}
+			cost = 150
+			traits = { 
+				democratic_reformer
+			}
+		}
+	}
+
+
+
+
 	QIN_yikuang = { # 奕劻
 		name = "QIN_yikuang"
 		advisor = {
@@ -7,7 +35,7 @@ characters = {
 			allowed = {
 				is_china_or_warlord_no_tt = yes
 			}
-			cost = 200
+			cost = 150
 			available = {
 				# is_country_leader = no
 				has_completed_focus = QIN_royal_cabinet

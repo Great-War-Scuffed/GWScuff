@@ -9,7 +9,10 @@ ideas = {
 			allowed = { always = no }
 
 			allowed_civil_war = {
-				is_ally_with = FRA
+				OR = {
+					is_in_faction_with = FRA
+					is_subject_of = FRA
+				}
 
 			}
 			
@@ -32,7 +35,10 @@ ideas = {
 			allowed = { always = no }
 
 			allowed_civil_war = {
-				is_ally_with = FRA
+				OR = {
+					is_in_faction_with = FRA
+					is_subject_of = FRA
+				}
 
 			}
 			
@@ -55,7 +61,10 @@ ideas = {
 			allowed = { always = no }
 
 			allowed_civil_war = {
-				is_ally_with = FRA
+				OR = {
+					is_in_faction_with = FRA
+					is_subject_of = FRA
+				}
 
 			}
 			
@@ -65,7 +74,7 @@ ideas = {
 			
 			modifier = {
 				stability_factor = 0.10
-				conscription_factor = 0.20
+				recruitable_population_factor = 0.20
 				army_core_defence_factor = 0.10
 				army_core_attack_factor = 0.10
 			}

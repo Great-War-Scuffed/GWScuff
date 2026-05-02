@@ -4,8 +4,10 @@ peace_deals = {
 		allowed = {
 			original_tag = HUN
 		}
-		targets = {
-			AUS
+		target_trigger = {
+			FROM = {
+				tag = AUS
+			}
 		}
 		# target_root_trigger = {
 		# 	has_war_with = FROM
@@ -69,8 +71,10 @@ GER_great_war = {
 			original_tag = HUN
 		}
 		days_remove = 5
-		targets = {
-			GER
+		target_trigger = {
+			FROM = {
+				tag = GER
+			}
 		}
 		war_with_target_on_remove = yes
 		remove_effect = {
@@ -108,8 +112,10 @@ GER_great_war = {
 			original_tag = HUN
 		}
 		days_remove = 35
-		targets = {
-			AUS
+		target_trigger = {
+			FROM = { 
+				tag = AUS
+			}
 		}
 		modifier = {
 			consumer_goods_factor = -0.1
@@ -284,6 +290,7 @@ HUN_soviet_army = {
 			}
 			NOT = {
 				country_exists = AUS
+				country_exists = AUS
 			}
 		}
 		visible = {
@@ -381,24 +388,24 @@ political_actions = {
 				add = 10
 				is_subject_of = FROM
 			}
-			# modifier = {
-			# 	add = 1
-			# 	OR = {
-			# 		#has_global_flag = prussian_blue
-			# 		has_global_flag = spartakist_in_bavaria
-			# 	}
-			# 	has_war = no
-			# 	FROM = {
-			# 		tag = AUS
-			# 		is_neighbor_of = PREV
-			# 		has_war = no
-			# 		is_subject = no
-			# 		has_country_leader = {
-			# 			character = AUS_otto_von_habsburg
-			# 			ruling_only = yes
-			# 		}
-			# 	}
-			# }
+			modifier = {
+				add = 1
+				# OR = {
+				# 	has_global_flag = prussian_blue
+				# 	has_global_flag = spartakist_in_bavaria
+				# }
+				has_war = no
+				FROM = {
+					tag = AUS
+					is_neighbor_of = PREV
+					has_war = no
+					is_subject = no
+					has_country_leader = {
+						character = AUS_otto_von_habsburg
+						ruling_only = yes
+					}
+				}
+			}
 		}
 		cost = 200
 		complete_effect = {
@@ -469,8 +476,7 @@ HUN_habsburg_restoration = {
 				limit = {
 					is_faction_leader = no
 				}
-				create_faction_from_template = faction_template_habsburg_alliance
-				set_faction_name = danube_adriabund
+				create_faction = danube_adriabund
 			}
 			every_owned_state = {
 				limit = {
@@ -851,31 +857,29 @@ HUN_habsburg_restoration = {
 	}
 }
 ROM_romanian_hungarian_war = {
-    HUN_sue_for_peace_romanian_hungarian_war = { #historical
+    HUN_sue_for_peace_romanian_hungarian_war = {
 		allowed = {
 			original_tag = HUN
 		}
 		icon = GFX_decision_eng_ally_imperialist_coup
-		visible = {
-			ROM = {
-				has_country_flag = great_war_winner
-			}
-		}
 		available = {
 			has_war_with = ROM
+			NOT = {
+				has_country_flag = HUN_invading_czechs
+			}
 		}
 		fire_only_once = yes
 		ai_will_do = {
 			factor = 0
 			modifier = {
 				add = 500
-				surrender_progress > 0.6
+				surrender_progress > 0.7
 			}
 			modifier = {
 				add = 500
-				surrender_progress > 0.45
+				surrender_progress > 0.5
 				any_enemy_country = {
-					controls_province = 9660 #budapest
+					controls_province = 9660
 				}
 			}
 		}
@@ -883,70 +887,7 @@ ROM_romanian_hungarian_war = {
 			ROM = {
 				country_event = {
 					id = ww1_romania.82
-					hours = 2
-				}
-			}
-		}
-	}
-	HUN_sue_for_peace_romanian_hungarian_war2 = { #for a-hist post war transylvanian invasion
-		name = HUN_sue_for_peace_romanian_hungarian_war
-		allowed = {
-			original_tag = HUN
-		}
-		icon = GFX_decision_eng_ally_imperialist_coup
-		visible = {
-			ROM = {
-				NOT = {
-					has_country_flag = great_war_winner
-				}
-			}
-		}
-		available = {
-			has_war_with = ROM
-		}
-		fire_only_once = yes
-		ai_will_do = {
-			factor = 0
-			modifier = {
-				add = 500
-				NOT = {
-					controls_state = 778
-					controls_state = 84
-					controls_state = 76
-					controls_state = 1044
-					controls_state = 82
-				}
-			}
-			modifier = {
-				add = 500
-				surrender_progress > 0.8
-			}
-			modifier = {
-				add = 500
-				NOT = {
-					controls_province = 9660 #budapest
-				}
-			}
-		}
-		complete_effect = {
-			ROM = {
-				country_event = {
-					id = ww1_romania.212
 					hours = 6
-				}
-			}
-			effect_tooltip = {
-				every_owned_state = {
-					limit = {
-						OR = {
-							state = 778
-							state = 84
-							state = 76
-							state = 1044
-							state = 82 #take banat if its not banat republic/serbian
-						}
-					}
-					transfer_state_to = ROM
 				}
 			}
 		}
@@ -999,59 +940,6 @@ ROM_romanian_hungarian_war = {
 			base = 1000
 		}
 	}
-	HUN_capture_presov = {
-		icon = GFX_decision_generic_prepare_civil_war
-		days_mission_timeout = 50
-		#selectable_mission = yes
-		days_remove = 10
-		fire_only_once = yes
-		available = {
-			OR = {
-				HUN = {
-					controls_province = 3581
-				}
-				SLO = {
-					is_subject_of = HUN
-					controls_province = 3581
-				}
-			}
-		}	
-		is_good = no
-		allowed = {
-			always = no
-		}
-		visible = {
-			always = no
-		}
-		cancel_trigger = {
-			NOT = {
-				has_government = communism
-			}
-		}
-		complete_effect = { #success
-			hidden_effect = {
-				remove_ideas = HUN_czech_offensive
-			}
-			country_event = {
-				id = ww1_romania.201
-				days = 1
-			}
-		}
-		timeout_effect = { #they fail
-			country_event = {
-				id = ww1_romania.202
-				days = 1
-			}
-			effect_tooltip = {
-				add_political_power = -100
-				add_war_support = -0.1
-				add_stability = -0.1
-			}
-		}
-		ai_will_do = {
-			base = 1000
-		}
-	}
 	HUN_rom_offensive_mission = {
 		icon = GFX_decision_generic_prepare_civil_war
 		days_mission_timeout = 80
@@ -1076,6 +964,7 @@ ROM_romanian_hungarian_war = {
 				}
 			}
 		}
+		fire_only_once = yes
 		complete_effect = {
 		}
 		timeout_effect = {
@@ -1091,11 +980,11 @@ ROM_romanian_hungarian_war = {
 							has_war_with = HUN
 						}
 					}
-					create_wargoal = {
-						target = HUN
-						type = annex_everything
-					}
-				}		
+				}
+				create_wargoal = {
+					target = HUN
+					type = annex_everything
+				}
 			}
 			hidden_effect = {
 				ROM = {

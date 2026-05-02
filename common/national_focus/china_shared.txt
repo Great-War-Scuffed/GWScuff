@@ -76,7 +76,7 @@ shared_focus = {
 shared_focus = {
 	id = CHI_pave_way_for_industrialization
 	icon = GFX_focus_seven_year_plan
-	cost = 8
+	cost = 5
 	prerequisite = {
 		focus = CHI_restore_military_production
 	}
@@ -104,7 +104,7 @@ shared_focus = {
 shared_focus = {
 	id = CHI_north_provinces
 	icon = GFX_focus_generic_industry_1
-	cost = 8
+	cost = 5
 	prerequisite = {
 		focus = CHI_pave_way_for_industrialization
 	}
@@ -310,7 +310,7 @@ shared_focus = {
 shared_focus = {
 	id = CHI_central_provinces
 	icon = GFX_focus_generic_train
-	cost = 8
+	cost = 5
 	prerequisite = {
 		focus = CHI_pave_way_for_industrialization
 	}
@@ -509,13 +509,6 @@ shared_focus = {
 			}
 		}
 		1066 = {
-			add_building_construction = {
-				type = infrastructure
-				level = 1
-				instant_build = yes
-			}
-		}
-		1224 = {
 			add_building_construction = {
 				type = infrastructure
 				level = 1
@@ -892,7 +885,7 @@ shared_focus = {
 shared_focus = {
 	id = CHI_south_provinces
 	icon = GFX_focus_generic_industry_1
-	cost = 8
+	cost = 5
 	prerequisite = {
 		focus = CHI_pave_way_for_industrialization
 	}
@@ -1308,7 +1301,7 @@ shared_focus = {
 shared_focus = {
 	id = CHI_nanjing_arsenal
 	icon = GFX_goal_generic_construct_mil_factory
-	cost = 7
+	cost = 5
 	prerequisite = {
 		focus = CHI_restore_military_production
 	}
@@ -1342,7 +1335,7 @@ shared_focus = {
 shared_focus = {
 	id = CHI_beijing_arsenal
 	icon = GFX_goal_generic_construct_mil_factory
-	cost = 7
+	cost = 5
 	prerequisite = {
 		focus = CHI_nanjing_arsenal
 	}
@@ -1603,7 +1596,7 @@ shared_focus = {
 shared_focus = {
 	id = CHI_chinese_labour_corps
 	icon = GFX_focus_socialist_worker
-	cost = 6
+	cost = 5
 	prerequisite = {
 		focus = CHI_british_manufacturer
 	}
@@ -1680,7 +1673,7 @@ shared_focus = {
 shared_focus = {
 	id = CHI_aviation
 	icon = GFX_goal_generic_air_production
-	cost = 8
+	cost = 5
 	prerequisite = {
 		focus = CHI_chinese_labour_corps
 	}
@@ -1752,7 +1745,7 @@ shared_focus = {
 shared_focus = {
 	id = CHI_shanghai_shipyards
 	icon = GFX_goal_generic_construct_naval_dockyard
-	cost = 7
+	cost = 5
 	prerequisite = {
 		focus = CHI_japanese_manufacturer
 	}
@@ -1784,7 +1777,7 @@ shared_focus = {
 shared_focus = {
 	id = CHI_coastal_defense
 	icon = GFX_focus_generic_coastal_fort
-	cost = 7
+	cost = 5
 	prerequisite = {
 		focus = CHI_japanese_manufacturer
 	}
@@ -1827,7 +1820,7 @@ shared_focus = {
 shared_focus = {
 	id = CHI_rebuild_beiyang_fleet
 	icon = GFX_goal_generic_navy_battleship
-	cost = 8
+	cost = 5
 	prerequisite = {
 		focus = CHI_coastal_defense
 	}
@@ -1990,7 +1983,7 @@ shared_focus = {
 shared_focus = {
 	id = CHI_cooperation_with_dominions
 	icon = GFX_focus_eng_the_sun_never_sets
-	cost = 6
+	cost = 5
 	prerequisite = {
 		focus = CHI_chinese_labour_corps
 	}
@@ -2008,7 +2001,7 @@ shared_focus = {
 		}
 		any_other_country = {
 			is_subject_of = ENG
-			compare_autonomy_state > autonomy_tgwr_self_governing_colony
+			compare_autonomy_state > autonomy_colony
 			NOT = {
 				has_war_with = PREV
 			}
@@ -2018,7 +2011,7 @@ shared_focus = {
 		every_other_country = {
 			limit = {
 				is_subject_of = ENG
-				compare_autonomy_state > autonomy_tgwr_self_governing_colony
+				compare_autonomy_state > autonomy_colony
 			}
 			add_ideas = CHI_idea_labour_corps
 		}
@@ -2081,7 +2074,7 @@ shared_focus = {
 shared_focus = {
 	id = CHI_invite_military_advisers
 	icon = GFX_goal_generic_army_doctrines
-	cost = 6
+	cost = 5
 	relative_position_id = CHI_army_westernization
 	prerequisite = {
 		focus = CHI_army_westernization
@@ -2246,7 +2239,7 @@ shared_focus = {
 shared_focus = {
 	id = CHI_armored_vehicles
 	icon = GFX_focus_early_tank
-	cost = 8
+	cost = 5
 	relative_position_id = CHI_army_westernization
 	prerequisite = {
 		focus = CHI_train_engineers
@@ -2528,7 +2521,7 @@ shared_focus = {
 shared_focus = {
 	id = CHI_marine_engineering
 	icon = GFX_focus_otto_naval_train
-	cost = 6
+	cost = 5
 	relative_position_id = CHI_recovery_of_naval_infrastructure
 	prerequisite = {
 		focus = CHI_admiralty
@@ -2648,7 +2641,7 @@ shared_focus = {
 shared_focus = {
 	id = CHI_restore_the_nation
 	icon = GFX_goal_generic_construction
-	cost = 8
+	cost = 5
 	prerequisite = {
 		focus = CHI_hold_parliamentary_elections
 		focus = QIN_protect_the_dynasty
@@ -2712,7 +2705,7 @@ shared_focus = {
 shared_focus = {
 	id = CHI_economic_stabilization
 	icon = GFX_goal_generic_neutrality_focus
-	cost = 6
+	cost = 5
 	prerequisite = {
 		focus = CHI_restore_the_nation
 	}
@@ -2743,7 +2736,7 @@ shared_focus = {
 shared_focus = {
 	id = CHI_land_reform
 	icon = GFX_focus_generic_land_reclamation
-	cost = 6
+	cost = 5
 	prerequisite = {
 		focus = CHI_economic_stabilization
 	}
@@ -2772,7 +2765,7 @@ shared_focus = {
 shared_focus = {
 	id = CHI_pay_off_debts
 	icon = GFX_focus_looming_debts
-	cost = 7
+	cost = 5
 	prerequisite = {
 		focus = CHI_land_reform
 	}
@@ -2802,7 +2795,7 @@ shared_focus = {
 shared_focus = {
 	id = CHI_recover_transport_system
 	icon = GFX_focus_generic_train
-	cost = 8
+	cost = 5
 	prerequisite = {
 		focus = CHI_militia_reorganization
 	}
@@ -2873,26 +2866,21 @@ shared_focus = {
 		NOT = {
 			has_country_flag = great_war_loser
 		}
-		if = {
-			limit = {
-				has_focus_tree = china_focus
-			}
-			OR = {
-				has_global_flag = constitutional_protection_war
-				AND = {
-					has_global_flag = national_protection_war
-					NOT = {
-						has_country_leader = {
-							character = CHI_duan_qirui
-							ruling_only = yes
-						}
-						has_country_leader = {
-							character = CHI_li_yuanhong
-							ruling_only = yes
-						}
-						has_idea = CHI_idea_duan_qirui
-						has_idea = CHI_idea_li_duan_conflict
+		OR = {
+			has_global_flag = constitutional_protection_war
+			AND = {
+				has_global_flag = national_protection_war
+				NOT = {
+					has_country_leader = {
+						character = CHI_duan_qirui
+						ruling_only = yes
 					}
+					has_country_leader = {
+						character = CHI_li_yuanhong
+						ruling_only = yes
+					}
+					has_idea = CHI_idea_duan_qirui
+					has_idea = CHI_idea_li_duan_conflict
 				}
 			}
 		}

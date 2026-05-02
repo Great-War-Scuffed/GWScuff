@@ -14,8 +14,7 @@ characters = {
 		name = NFL_john_chalker_crosbie
 		portraits = {
 			civilian = {
-				large = GFX_portrait_europe_generic_3
-				small = GFX_portrait_europe_generic_3_small
+				large = "gfx/leaders/Europe/Portrait_Europe_Generic_3.dds"
 			}
 		}
 		country_leader = {
@@ -26,8 +25,7 @@ characters = {
 		name = NFL_william_frederick_lloyd
 		portraits = {
 			civilian = {
-				large = GFX_portrait_europe_generic_4
-				small = GFX_portrait_europe_generic_4_small
+				large = "gfx/leaders/Europe/Portrait_Europe_Generic_4.dds"
 			}
 		}
 		country_leader = {
@@ -39,8 +37,7 @@ characters = {
 		name = NFL_ralph_champneys_williams
 		portraits = {
 			civilian = {
-				large = GFX_portrait_europe_generic_1
-				small = GFX_portrait_europe_generic_1_small
+				large = "gfx/leaders/Europe/Portrait_Europe_Generic_1.dds"
 			}
 		}
 		country_leader = {

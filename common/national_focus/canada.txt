@@ -47,7 +47,7 @@ focus_tree = {
 		id = CAN_political
 		#A Mari Usque ad Mare
 		icon = GFX_goal_CAN_political
-		cost = 10.00
+		cost = 5
 		x = 8
 		y = 0
 		
@@ -68,7 +68,7 @@ focus_tree = {
 		id = CAN_Americanism
 		#Americanism
 		icon = GFX_goal_CAN_Americanism
-		cost = 10.00
+		cost = 5
 		
 		prerequisite = {
 			focus = CAN_Patriation
@@ -143,7 +143,7 @@ focus_tree = {
 			add_tech_bonus = {
 				category = industry
 				bonus = 0.5
-				uses = 1
+				uses = 2
 				name = CAN_industrial_tree
 			}
 		}
@@ -157,7 +157,7 @@ focus_tree = {
 		id = CAN_army_focus
 		#The Canadian Armed Forces
 		icon = GFX_goal_CAN_army_focus
-		cost = 10.00
+		cost = 5
 		x = 46
 		y = 0
 		
@@ -178,7 +178,7 @@ focus_tree = {
 		id = CAN_navy_focus
 		#A Navy of Our Own
 		icon = GFX_goal_CAN_navy_focus
-		cost = 10.00
+		cost = 5
 		x = 50
 		y = 0
 		
@@ -211,7 +211,7 @@ focus_tree = {
 		id = CAN_air_focus
 		#A New Airforce
 		icon = GFX_goal_CAN_air_focus
-		cost = 10.00
+		cost = 5
 		x = 54
 		y = 0
 		
@@ -231,7 +231,7 @@ focus_tree = {
 		id = CAN_Loyalty
 		#Canadian Loyalty
 		icon = GFX_goal_CAN_Loyalty
-		cost = 10.00
+		cost = 5
 		prerequisite = {
 			focus = CAN_political
 		}
@@ -275,7 +275,7 @@ focus_tree = {
 	}
 	
 	focus = {
-		id = CAN_republic_focus
+		id = CAN_republic_foucs
 		#Formalize the Republic
 		icon = GFX_goal_CAN_republic
 		cost = 10.00
@@ -309,7 +309,7 @@ focus_tree = {
 		icon = GFX_focus_spr_torchbearers_of_tomorrow
 		cost = 14.29
 		prerequisite = {
-			focus = CAN_republic_focus
+			focus = CAN_republic_foucs
 		}
 		x = 11
 		y = 5
@@ -331,11 +331,7 @@ focus_tree = {
 						original_tag = USA
 						original_tag = CAN
 					}
-					has_war = no
-					is_major = no
-					is_subject = no
 				}
-				country_event = canada.79
 				add_timed_idea = { idea = CAN_northern_freedom days = 300 }
 			}
 		}
@@ -357,30 +353,6 @@ focus_tree = {
 		
 		completion_reward = {
 			custom_effect_tooltip = 2_CAN_tt
-			every_country = {
-				limit = {
-					capital_scope = {
-						OR = {
-							is_on_continent = north_america
-							is_on_continent = south_america
-						}
-					}
-					has_war = no
-					is_major = no
-					is_subject = no
-					NOT = {
-						original_tag = USA
-						original_tag = CAN
-					}
-				}
-				ROOT = {
-					diplomatic_relation = {
-					    country = FROM
-					    relation = guarantee
-					    active = yes
-					}
-				}
-			}
 			hidden_effect = {
 				CAN = {
 					give_guarantee = USA
@@ -413,7 +385,7 @@ focus_tree = {
 		id = CAN_seperation
 		#The Canadian Dream
 		icon = GFX_goal_CAN_separation
-		cost = 10
+		cost = 5
 		prerequisite = {
 			focus = CAN_political
 		}
@@ -448,7 +420,7 @@ focus_tree = {
 		id = CAN_Patriation
 		#Immediate Patriation
 		icon = GFX_goal_tfv_sever_ties_with_uk
-		cost = 10.00
+		cost = 5
 		prerequisite = {
 			focus = CAN_seperation
 		}
@@ -477,7 +449,7 @@ focus_tree = {
 		id = CAN_const_monarchy
 		#The British Compromise
 		icon = GFX_goal_CAN_const_monarchy
-		cost = 10.00
+		cost = 5
 		prerequisite = {
 			focus = CAN_Patriation
 		}
@@ -511,7 +483,7 @@ focus_tree = {
 		id = CAN_commonwealth_research
 		#For the Empire
 		icon = GFX_focus_CAN_for_the_empire
-		cost = 10.00
+		cost = 5
 		prerequisite = {
 			focus = CAN_Loyalty
 			focus = CAN_const_monarchy
@@ -612,7 +584,7 @@ focus_tree = {
 		cost = 5
 		prerequisite = {
 			focus = CAN_commonwealth_research
-			focus = CAN_republic_focus
+			focus = CAN_republic_foucs
 		}
 		x = 7
 		y = 5
@@ -641,7 +613,7 @@ focus_tree = {
 		icon = GFX_focus_generic_home_defense
 		cost = 10.00
 		prerequisite = {
-			focus = CAN_republic_focus
+			focus = CAN_republic_foucs
 		}
 		x = 13
 		y = 5
@@ -684,7 +656,7 @@ focus_tree = {
 		}
 		
 		completion_reward = {
-			create_faction_from_template = faction_template_north_american
+			create_faction = "North American Union"
 			USA = {
 				country_event = {id = canada.18}
 			}
@@ -799,24 +771,7 @@ focus_tree = {
 			}
 		}
 		completion_reward = {
-			if = {
-				limit = {
-					has_idea = CAN_safe_haven_world
-				}
-				swap_ideas = {
-					remove_idea = CAN_safe_haven_world
-					add_idea = CAN_safe_haven_world_2
-				}
-			}
-			if = {
-				limit = {
-					has_idea = CAN_safe_haven_world_3
-				}
-				swap_ideas = {
-					remove_idea = CAN_safe_haven_world
-					add_idea = CAN_safe_haven_world_4
-				}
-			}
+			add_ideas = CAN_euro_refugees
 		}
 	}
 	
@@ -826,7 +781,7 @@ focus_tree = {
 		icon = GFX_goal_CAN_toronto_fair
 		cost = 10.00
 		prerequisite = {
-			focus = CAN_republic_focus
+			focus = CAN_republic_foucs
 		}
 		x = 15
 		y = 5
@@ -878,7 +833,7 @@ focus_tree = {
 		id = CAN_kingdom_own
 		# A Kingdom of our Own!
 		icon = GFX_goal_CAN_kingdom_own
-		cost = 10.00
+		cost = 5
 		prerequisite = {
 			focus = CAN_Patriation
 		}
@@ -1514,8 +1469,7 @@ focus_tree = {
 		}
 		
 		completion_reward = {
-			create_faction_from_template = faction_template_generic_dominance
-			set_faction_name = imperial_authority_treaty_organization
+			create_faction = "Imperial Authority Treaty Organization"
 			MEX = {
 				country_event = canada.54
 			}
@@ -1881,7 +1835,7 @@ focus_tree = {
 		id = CAN_lowland_excavation
 		# Lowland Quarries
 		icon = GFX_focus_generic_tungsten
-		cost = 10
+		cost = 5
 		prerequisite = {
 			focus = CAN_excavation
 		}
@@ -1949,7 +1903,7 @@ focus_tree = {
 		id = CAN_grand_excavation
 		# Grand Canadian Excavation
 		icon = GFX_goal_CAN_excavation
-		cost = 10.00
+		cost = 5
 		prerequisite = {
 			focus = CAN_columbian_metals
 		}
@@ -1962,50 +1916,16 @@ focus_tree = {
 		
 		completion_reward = {
 			add_tech_bonus = {
-				name = CAN_grand_excavation
+				
+				name = electronics_bonus
 				bonus = 1
-				uses = 2
+				uses = 3
 				category = excavation_tech
 			}
 		}
 		search_filters = {
 			FOCUS_FILTER_RESEARCH
 			FOCUS_FILTER_INDUSTRY
-		}
-	}
-	focus = {
-		id = CAN_form_dome_mines
-		icon = GFX_focus_generic_mining_industry
-		cost = 5
-		x = 0
-		y = 1
-		prerequisite = {
-			focus = CAN_grand_excavation
-		}
-		relative_position_id = CAN_grand_excavation
-		completion_reward = {
-			add_tech_bonus = {
-				name = CAN_form_dome_mines
-				uses = 1
-				bonus = 1
-				category = excavation_tech
-			}
-			random_owned_controlled_state = {
-				prioritize = {
-					276
-				}
-				limit = {
-					is_core_of = ROOT
-				}
-				add_resource = {
-					type = steel
-					amount = 13
-				}
-			}
-			add_ideas = CAN_dome_mine
-		}
-		search_filters = {
-			FOCUS_FILTER_HISTORICAL
 		}
 	}
 	
@@ -2196,7 +2116,7 @@ focus_tree = {
 		id = CAN_industry_limited
 		# Canadian Industries Limited
 		icon = GFX_goal_CAN_industry_limited
-		cost = 10.00
+		cost = 5
 		prerequisite = {
 			focus = CAN_industrial_tree
 		}
@@ -2211,10 +2131,10 @@ focus_tree = {
 		
 		completion_reward = {
 			276 = {
-				add_extra_state_shared_building_slots = 1
+				add_extra_state_shared_building_slots = 2
 				add_building_construction = {
 					type = industrial_complex
-					level = 1
+					level = 2
 					instant_build = yes
 				}
 			}
@@ -2229,7 +2149,7 @@ focus_tree = {
 		id = CAN_assembly_line
 		# The Assembly Line
 		icon = GFX_goal_generic_construct_civ_factory
-		cost = 10.00
+		cost = 5
 		prerequisite = {
 			focus = CAN_industry_limited
 		}
@@ -2278,18 +2198,18 @@ focus_tree = {
 		}
 		completion_reward = {
 			276 = {
-				add_extra_state_shared_building_slots = 1
+				add_extra_state_shared_building_slots = 2
 				add_building_construction = {
 					type = industrial_complex
-					level = 1
+					level = 2
 					instant_build = yes
 				}
 			}
 			466 = {
-				add_extra_state_shared_building_slots = 1
+				add_extra_state_shared_building_slots = 2
 				add_building_construction = {
 					type = industrial_complex
-					level = 1
+					level = 2
 					instant_build = yes
 				}
 			}
@@ -2315,16 +2235,16 @@ focus_tree = {
 		}
 		
 		available = {
-			has_war = yes
+			#has_war = yes
 		}
 		
 		
 		completion_reward = {
 			468 = {
-				add_extra_state_shared_building_slots = 1
+				add_extra_state_shared_building_slots = 2
 				add_building_construction = {
 					type = arms_factory
-					level = 1
+					level = 2
 					instant_build = yes
 				}
 			}
@@ -2350,10 +2270,10 @@ focus_tree = {
 		
 		completion_reward = {
 			276 = {
-				add_extra_state_shared_building_slots = 1
+				add_extra_state_shared_building_slots = 2
 				add_building_construction = {
 					type = arms_factory
-					level = 1
+					level = 2
 					instant_build = yes
 				}
 			}
@@ -2541,6 +2461,11 @@ focus_tree = {
 		}
 		x = 49
 		y = 1
+		
+		
+		
+		
+		
 		completion_reward = {
 			add_ideas = CAN_pacific_fleet
 			473 = {
@@ -2548,7 +2473,6 @@ focus_tree = {
 					type = naval_base
 					level = 2
 					instant_build = yes
-					province = 1408
 				}
 			}
 		}
@@ -3103,24 +3027,7 @@ focus_tree = {
 		}
 		
 		completion_reward = {
-			if = {
-				limit = {
-					has_idea = CAN_safe_haven_world
-				}
-				swap_ideas = {
-					remove_idea = CAN_safe_haven_world
-					add_idea = CAN_safe_haven_world_3
-				}
-			}
-			if = {
-				limit = {
-					has_idea = CAN_safe_haven_world_2
-				}
-				swap_ideas = {
-					remove_idea = CAN_safe_haven_world
-					add_idea = CAN_safe_haven_world_4
-				}
-			}
+			add_ideas = CAN_immigrants
 		}
 		search_filters = {
 			FOCUS_FILTER_MANPOWER
@@ -3545,7 +3452,7 @@ focus_tree = {
 		}
 		prerequisite = {
 			focus = CAN_commonwealth_research
-			focus = CAN_republic_focus
+			focus = CAN_republic_foucs
 		}
 		relative_position_id = CAN_commonwealth_research
 		completion_reward = {
@@ -3575,7 +3482,7 @@ focus_tree = {
 	focus = { 
 		id = CAN_fund_paper_mills
 		icon = GFX_goal_generic_construct_civ_factory
-		cost = 10
+		cost = 5
 		x = 2
 		y = 1
 		prerequisite = {
@@ -3586,6 +3493,11 @@ focus_tree = {
 			468 = {
 				add_extra_state_shared_building_slots = 1
 				add_building_construction = {
+    				type = infrastructure
+    				level = 1
+    				instant_build = yes
+				}
+				add_building_construction = {
     				type = industrial_complex
     				level = 1
     				instant_build = yes
@@ -3595,6 +3507,11 @@ focus_tree = {
 				add_extra_state_shared_building_slots = 1
 				add_building_construction = {
     				type = infrastructure
+    				level = 1
+    				instant_build = yes
+				}
+				add_building_construction = {
+    				type = industrial_complex
     				level = 1
     				instant_build = yes
 				}

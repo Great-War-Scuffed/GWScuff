@@ -4,7 +4,7 @@ oob = "HJZ_1910"
 #-------------------------------------------------------
 #					GENERIC VALUES
 #-------------------------------------------------------
-set_research_slots = 2
+set_research_slots = 3
 set_stability = 0.50
 set_convoys = 5
 
@@ -23,7 +23,6 @@ recruit_character = HJZ_auda_abu_tayi
 recruit_character = HJZ_thomas_edward_lawrence
 recruit_character = HJZ_mehmet_vehib_kaci
 recruit_character = HJZ_faisal_bin_hussein_bin_ali
-recruit_character = HJZ_ghazi_bin_faisal
 
 1910.1.1 = {
 	set_technology = {

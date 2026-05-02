@@ -819,7 +819,7 @@ focus_tree = {
 
 	focus = {
 		id = CHI_focus_civil_dictatorship
-		icon = GFX_focus_CHI_lay_the_foundation_for_a_united_china
+		icon = GFX_focus_generic_china1
 		prerequisite = {
 			focus = CHI_focus_military_government
 		}
@@ -1383,7 +1383,7 @@ focus_tree = {
 
 	focus = {
 		id = CHI_communist_administrators
-		icon = GFX_focus_PRC_yanan_rectification_movement
+		icon = GFX_focus_generic_soviet_politics
 		prerequisite = { focus = CHI_land_value_tax }
 		x = 0
 		y = 1
@@ -1427,7 +1427,7 @@ focus_tree = {
 
 	focus = {
 		id = CHI_chinese_red_army
-		icon = GFX_focus_PRC_westward_expansion
+		icon = GFX_focus_SOV_builder_of_the_red_army
 		prerequisite = {
 			focus = CHI_power_to_unions
 			focus = CHI_communist_administrators
@@ -1466,7 +1466,7 @@ focus_tree = {
 
 	focus = {
 		id = CHI_join_the_chinese_soviet
-		icon = GFX_focus_PRC_move_capital
+		icon = GFX_focus_SWE_socialist_reforms
 		prerequisite = { focus = CHI_chinese_red_army }
 		x = 0
 		y = 2
@@ -1537,8 +1537,7 @@ focus_tree = {
 					limit = {
 						is_in_faction = no
 					}
-					create_faction_from_template = faction_template_PRC_the_peoples_front
-					set_faction_name = chinese_people_liberation_front
+					create_faction = chinese_people_liberation_front
 				}
 				else_if = {
 					limit = {
@@ -1615,7 +1614,7 @@ focus_tree = {
 
 	focus = {
 		id = CHI_peoples_liberation
-		icon = GFX_focus_PRC_revolutionary_war_of_the_masses
+		icon = GFX_focus_focus_fra_revolution_utmost
 		prerequisite = { focus = CHI_join_the_chinese_soviet }
 		x = 1
 		y = 1
@@ -1658,7 +1657,7 @@ focus_tree = {
 
 	focus = {
 		id = CHI_party_dictatorship
-		icon = GFX_focus_PRC_the_chinese_century
+		icon = GFX_focus_SOV_the_supreme_soviet
 		prerequisite = { focus = CHI_join_the_chinese_soviet }
 		x = -1
 		y = 1
@@ -2008,7 +2007,7 @@ focus_tree = {
 
 	focus = {
 		id = CHI_isolationism
-		icon = GFX_focus_CHI_decisive_battles
+		icon = GFX_goal_generic_small_arms
 		prerequisite = { focus = CHI_local_ideology }
 		mutually_exclusive = {
 			focus = CHI_fubinism
@@ -2312,7 +2311,7 @@ focus_tree = {
 					original_tag = FNG
 					original_tag = SHX
 					original_tag = ANC
-					original_tag = SND
+					original_tag = SDC
 				}
 			}
 			modifier = {
@@ -3565,8 +3564,7 @@ focus_tree = {
 					}
 				}
 				else = {
-					create_faction_from_template = faction_template_asian_dominance
-					set_faction_name = asia_independence_accord
+					create_faction = asia_independence_accord
 					JAP = {
 						country_event = {
 							id = generic.5
@@ -4384,15 +4382,7 @@ focus_tree = {
 			focus = ANC_focus_supply_measures
 		}
 		available = {
-			if = {
-				limit = {
-					has_dlc = "Man the Guns"
-				}				
-				has_tech = basic_armored_car_chassis
-			}
-			else = {
-				has_tech = basic_armored_car
-			}			
+			has_tech = basic_armored_car
 		}
 		bypass = {
 			
@@ -4937,7 +4927,7 @@ focus_tree = {
 	focus = {
 		id = ZHC_focus_seek_opportunity
 		icon = GFX_focus_generic_annex_country_2
-		cost = 6
+		cost = 5
 		x = 10
 		y = 1
 		relative_position_id = CHI_secure_internal_politics
@@ -4981,7 +4971,7 @@ focus_tree = {
 	focus = {
 		id = ZHC_focus_confront_anhui
 		icon = GFX_focus_attack_china
-		cost = 6
+		cost = 5
 		x = 0
 		y = 1
 		relative_position_id = ZHC_focus_seek_opportunity
@@ -5004,7 +4994,7 @@ focus_tree = {
 	focus = {
 		id = ZHC_focus_prepare_for_civil_war
 		icon = GFX_focus_army_is_ready
-		cost = 6
+		cost = 5
 		x = -2
 		y = 1
 		relative_position_id = ZHC_focus_confront_anhui
@@ -5027,7 +5017,7 @@ focus_tree = {
 	focus = {
 		id = ZHC_focus_install_arsenals
 		icon = GFX_goal_generic_construct_mil_factory
-		cost = 6
+		cost = 5
 		x = -1
 		y = 1
 		relative_position_id = ZHC_focus_prepare_for_civil_war
@@ -5094,7 +5084,7 @@ focus_tree = {
 	focus = {
 		id = ZHC_focus_deploy_riflemen
 		icon = GFX_focus_beiyang_conscription
-		cost = 6
+		cost = 5
 		x = 0
 		y = 1
 		relative_position_id = ZHC_focus_install_arsenals
@@ -5117,7 +5107,7 @@ focus_tree = {
 	focus = {
 		id = ZHC_focus_on_zhili_army
 		icon = GFX_focus_zhili_officers
-		cost = 6
+		cost = 5
 		x = 1
 		y = 1
 		relative_position_id = ZHC_focus_prepare_for_civil_war
@@ -5140,7 +5130,7 @@ focus_tree = {
 	focus = {
 		id = ZHC_focus_wu_peifu
 		icon = GFX_focus_zhili_emblem
-		cost = 6
+		cost = 5
 		x = 0
 		y = 1
 		relative_position_id = ZHC_focus_on_zhili_army
@@ -5164,7 +5154,7 @@ focus_tree = {
 	focus = {
 		id = ZHC_focus_war_phase
 		icon = GFX_focus_prc_infiltration
-		cost = 6
+		cost = 5
 		x = 1
 		y = 1
 		relative_position_id = ZHC_focus_deploy_riflemen
@@ -5193,7 +5183,7 @@ focus_tree = {
 	focus = {
 		id = ZHC_focus_political_affairs
 		icon = GFX_focus_zhili_assembly
-		cost = 6
+		cost = 5
 		x = 2
 		y = 1
 		relative_position_id = ZHC_focus_confront_anhui
@@ -5216,7 +5206,7 @@ focus_tree = {
 	focus = {
 		id = ZHC_focus_denounce_nishihara
 		icon = GFX_focus_generic_money_deal
-		cost = 6
+		cost = 5
 		x = -1
 		y = 1
 		relative_position_id = ZHC_focus_political_affairs
@@ -5245,7 +5235,7 @@ focus_tree = {
 	focus = {
 		id = ZHC_focus_confront_duan
 		icon = GFX_focus_duan_qirui
-		cost = 6
+		cost = 5
 		x = 0
 		y = 1
 		relative_position_id = ZHC_focus_denounce_nishihara
@@ -5274,7 +5264,7 @@ focus_tree = {
 	focus = {
 		id = ZHC_focus_demand_dismiss_canzhanjun
 		icon = GFX_focus_beiyang_army_regulations
-		cost = 6
+		cost = 5
 		x = 1
 		y = 1
 		relative_position_id = ZHC_focus_political_affairs
@@ -5304,7 +5294,7 @@ focus_tree = {
 	focus = {
 		id = ZHC_focus_confront_xu_shuzheng
 		icon = GFX_goal_tfv_saf_anti_colonialist_crusade
-		cost = 6
+		cost = 5
 		x = 0
 		y = 1
 		relative_position_id = ZHC_focus_demand_dismiss_canzhanjun
@@ -5333,7 +5323,7 @@ focus_tree = {
 	focus = {
 		id = ZHC_focus_deal_with_fengtian
 		icon = GFX_focus_ally_fengtian
-		cost = 6
+		cost = 5
 		x = 2
 		y = 0
 		relative_position_id = ZHC_focus_political_affairs
@@ -5363,7 +5353,7 @@ focus_tree = {
 	focus = {
 		id = ZHC_focus_guarantee_manchuria
 		icon = GFX_focus_secure_northern_china
-		cost = 6
+		cost = 5
 		x = 1
 		y = 1
 		relative_position_id = ZHC_focus_deal_with_fengtian
@@ -5400,7 +5390,7 @@ focus_tree = {
 	focus = {
 		id = ZHC_focus_zhili_fengtian_alliance
 		icon = GFX_focus_generic_treaty
-		cost = 6
+		cost = 5
 		x = 0
 		y = 1
 		relative_position_id = ZHC_focus_guarantee_manchuria
@@ -5432,7 +5422,7 @@ focus_tree = {
 	focus = {
 		id = ZHC_focus_claim_beiyang_leadership
 		icon = GFX_focus_five_race_star_flag
-		cost = 6
+		cost = 5
 		x = 1
 		y = 1
 		relative_position_id = ZHC_focus_confront_duan
@@ -5702,8 +5692,6 @@ focus_tree = {
 			OR = {
 				owns_state = 329
 				owns_state = 330
-				owns_state = 1228
-				owns_state = 1229
 			}
 		}
 		completion_reward = {
@@ -5814,8 +5802,8 @@ focus_tree = {
 	}
 	focus = {
 		id = ZHC_focus_administration_reform
-		icon = GFX_focus_CHI_restore_the_old_republic
-		cost = 8
+		icon = GFX_focus_generic_treaty
+		cost = 5
 		x = -2
 		y = 1
 		relative_position_id = ZHC_focus_zhili_hegemony
@@ -5842,7 +5830,7 @@ focus_tree = {
 	focus = {
 		id = ZHC_focus_assert_on_beiyang_remnants
 		icon = GFX_focus_FRA_arms_export
-		cost = 8
+		cost = 5
 		x = -1
 		y = 1
 		relative_position_id = ZHC_focus_administration_reform
@@ -5863,7 +5851,7 @@ focus_tree = {
 	focus = {
 		id = ZHC_focus_combat_readiness
 		icon = GFX_goal_generic_small_arms
-		cost = 8
+		cost = 5
 		x = 0
 		y = 1
 		relative_position_id = ZHC_focus_assert_on_beiyang_remnants
@@ -5884,7 +5872,7 @@ focus_tree = {
 	focus = {
 		id = ZHC_focus_militarist_effort
 		icon = GFX_goal_generic_construct_mil_factory
-		cost = 8
+		cost = 5
 		x = 1
 		y = 1
 		relative_position_id = ZHC_focus_administration_reform
@@ -5952,7 +5940,7 @@ focus_tree = {
 	focus = {
 		id = ZHC_focus_annex_fujian
 		icon = GFX_focus_powerful_army
-		cost = 8
+		cost = 5
 		x = 0
 		y = 1
 		relative_position_id = ZHC_focus_militarist_effort
@@ -6005,7 +5993,7 @@ focus_tree = {
 	focus = {
 		id = ZHC_focus_railway_to_shanghai
 		icon = GFX_focus_generic_railroad
-		cost = 8
+		cost = 5
 		x = -1
 		y = 1
 		relative_position_id = ZHC_focus_annex_fujian
@@ -6048,7 +6036,7 @@ focus_tree = {
 	focus = {
 		id = ZHC_focus_secure_northeast
 		icon = GFX_focus_SOV_mobilization_plan
-		cost = 8
+		cost = 5
 		x = 2
 		y = 1
 		relative_position_id = ZHC_focus_zhili_hegemony
@@ -6082,7 +6070,7 @@ focus_tree = {
 	focus = {
 		id = ZHC_focus_ready_to_strike_manchuria
 		icon = GFX_focus_secure_northern_china
-		cost = 8
+		cost = 5
 		x = -1
 		y = 1
 		relative_position_id = ZHC_focus_secure_northeast
@@ -6117,7 +6105,7 @@ focus_tree = {
 	focus = {
 		id = ZHC_focus_army_reform
 		icon = GFX_focus_chi_army_reform
-		cost = 8
+		cost = 5
 		x = 0
 		y = 1
 		relative_position_id = ZHC_focus_ready_to_strike_manchuria
@@ -6143,7 +6131,7 @@ focus_tree = {
 	focus = {
 		id = ZHC_focus_confront_northeast_army
 		icon = GFX_focus_generic_provoke_border_clashes
-		cost = 8
+		cost = 5
 		x = 1
 		y = 1
 		relative_position_id = ZHC_focus_secure_northeast
@@ -6168,7 +6156,7 @@ focus_tree = {
 	focus = {
 		id = ZHC_focus_fortify_legitimacy
 		icon = GFX_focus_five_race_star_flag
-		cost = 8
+		cost = 5
 		x = 0
 		y = 1
 		relative_position_id = ZHC_focus_confront_northeast_army
@@ -6189,7 +6177,7 @@ focus_tree = {
 	focus = {
 		id = ZHC_focus_foreign_support
 		icon = GFX_goal_generic_intelligence_exchange
-		cost = 8
+		cost = 5
 		x = 1
 		y = 1
 		relative_position_id = ZHC_focus_army_reform
@@ -6254,8 +6242,7 @@ focus_tree = {
 						set_faction_name = anti_zhili_alliance
 					}
 					else = {
-						create_faction_from_template = faction_template_generic
-						set_faction_name = anti_zhili_alliance
+						create_faction = anti_zhili_alliance
 					}
 				}
 			}
@@ -6336,13 +6323,13 @@ focus_tree = {
 		}
 		available = {
 			is_subject = no
-			is_neighbor_of = SIC
+			is_neighbor_of = SCC
 		}
 		bypass = {
-			has_subject = SIC
+			has_subject = SCC
 		}
 		completion_reward = {
-			SIC = {
+			SCC = {
 				add_political_power = -200
 				add_stability = -0.15
 				add_popularity = {
@@ -6364,10 +6351,10 @@ focus_tree = {
 		}
 		available = {
 			is_subject = no
-			is_neighbor_of = SIC
+			is_neighbor_of = SCC
 		}
 		bypass = {
-			has_subject = SIC
+			has_subject = SCC
 		}
 		completion_reward = {
 			YUN = {
@@ -6396,7 +6383,8 @@ focus_tree = {
 				is_china_or_warlord = yes
 				has_country_flag = CHI_kuomintang_flag
 				NOT = {
-					is_ally_with = ROOT
+					is_in_faction_with = ROOT
+					is_subject_of = ROOT
 				}
 			}
 		}
@@ -6506,10 +6494,10 @@ focus_tree = {
 			NOT = {
 				has_government = communism
 				has_government = democratic
-				# any_character = {
-				# 	is_country_leader = yes
-				# 	has_character_flag = kmt_allegiance
-				# }
+				any_character = {
+					is_country_leader = yes
+					has_character_flag = kmt_allegiance
+				}
 			}
 		}
 		bypass = {
@@ -6548,7 +6536,8 @@ focus_tree = {
 				is_china_or_warlord = yes
 				has_country_flag = CHI_kuomintang_flag
 				NOT = {
-					is_ally_with = ROOT
+					is_in_faction_with = ROOT
+					is_subject_of = ROOT
 				}
 			}
 		}
@@ -6565,7 +6554,7 @@ focus_tree = {
 		}
 		will_lead_to_war_with = GDC
 		completion_reward = {
-			declare_war_on = {
+			create_wargoal = {
 				target = KMT
 				type = annex_everything
 			}
@@ -6586,20 +6575,22 @@ focus_tree = {
 			YUN = {
 				exists = yes
 				NOT = {
-					is_ally_with = ROOT
+					is_in_faction_with = ROOT
+					is_subject_of = ROOT
 				}
 			}
 		}
 		bypass = {
 			OR = {
 				NOT = { country_exists = YUN }
+				has_subject = YUN
 				has_war_with = YUN
-				is_ally_with = YUN
+				is_in_faction_with = YUN
 			}
 		}
 		will_lead_to_war_with = YUN
 		completion_reward = {
-			declare_war_on = {
+			create_wargoal = {
 				target = YUN
 				type = annex_everything
 			}
@@ -6632,7 +6623,8 @@ focus_tree = {
 				limit = {
 					is_china_or_warlord_no_tt = yes
 					NOT = {
-						is_ally_with = ROOT
+						is_subject_of = ROOT
+						is_in_faction_with = ROOT
 					}
 					any_owned_state = {
 						OR = {
@@ -6642,7 +6634,7 @@ focus_tree = {
 					}
 				}
 				ROOT = {
-					declare_war_on = {
+					create_wargoal = {
 						target = PREV
 						type = take_core_state
 					}
@@ -6662,25 +6654,26 @@ focus_tree = {
 		}
 		available = {
 			is_subject = no
-			SIC = {
+			SCC = {
 				exists = yes
 				NOT = {
-					is_ally_with = ROOT
+					is_in_faction_with = ROOT
+					is_subject_of = ROOT
 				}
 			}
 		}
 		bypass = {
 			OR = {
-				NOT = { country_exists = SIC }
-				has_subject = SIC
-				has_war_with = SIC
-				is_in_faction_with = SIC
+				NOT = { country_exists = SCC }
+				has_subject = SCC
+				has_war_with = SCC
+				is_in_faction_with = SCC
 			}
 		}
-		will_lead_to_war_with = SIC
+		will_lead_to_war_with = SCC
 		completion_reward = {
-			declare_war_on = {
-				target = SIC
+			create_wargoal = {
+				target = SCC
 				type = annex_everything
 			}
 		}
@@ -7121,7 +7114,7 @@ focus_tree = {
 	focus = {
 		id = ZHC_focus_expand_civil_economy
 		icon = GFX_goal_generic_construct_civilian
-		cost = 5
+		cost = 105
 		x = 0
 		y = 1
 		relative_position_id = ZHC_focus_build_civil_factories
@@ -7321,11 +7314,10 @@ focus_tree = {
 				limit = {
 					country_exists = JLN
 				}
-				JLN = {
-					every_core_state = {
-						remove_core_of = JLN
-						add_core_of = ROOT
-					}
+				every_state = {
+					limit = { is_core_of = JLN }
+					remove_core_of = JLN
+					add_core_of = ROOT
 				}
 				annex_country = {
 					target = JLN
@@ -7335,8 +7327,8 @@ focus_tree = {
 			every_state = {
 				limit = {
 					region = 155
+					is_china_or_warlord_no_tt = yes
 					owner = {
-						is_china_or_warlord_no_tt = yes
 						OR = {
 							is_subject = no
 							is_subject_of = ROOT
@@ -8521,7 +8513,8 @@ focus_tree = {
 				}
 				NOT = {
 					has_war_with = ROOT
-					is_ally_with = ROOT
+					is_subject_of = ROOT
+					is_in_faction_with = ROOT
 					has_cosmetic_tag = CER_high_commission
 					has_cosmetic_tag = CER_provisional_russia
 				}
@@ -8592,7 +8585,8 @@ focus_tree = {
 			ZHC = {
 				exists = yes
 				NOT = {
-					is_ally_with = ROOT
+					is_in_faction_with = ROOT
+					is_subject_of = ROOT
 				}
 				owns_state = 608
 			}
@@ -8634,7 +8628,8 @@ focus_tree = {
 			ZHC = {
 				exists = yes
 				NOT = {
-					is_ally_with = ROOT
+					is_in_faction_with = ROOT
+					is_subject_of = ROOT
 				}
 			}
 			any_other_country = {
@@ -8648,7 +8643,8 @@ focus_tree = {
 				owner = {
 					NOT = {
 						tag = ROOT
-						is_ally_with = ROOT
+						is_subject_of = ROOT
+						is_in_faction_with = ROOT
 					}
 				}
 			}
@@ -8661,8 +8657,7 @@ focus_tree = {
 			effect_tooltip = {
 				if = {
 					limit = { is_faction_leader = no }
-					create_faction_from_template = faction_template_generic
-					set_faction_name = anti_zhili_alliance
+					create_faction = anti_zhili_alliance
 				}
 				add_to_faction = KMT
 			}
@@ -8695,7 +8690,8 @@ focus_tree = {
 			ZHC = {
 				exists = yes
 				NOT = {
-					is_ally_with = ROOT
+					is_in_faction_with = ROOT
+					is_subject_of = ROOT
 				}
 			}
 			ANC = {
@@ -8708,7 +8704,8 @@ focus_tree = {
 				owner = {
 					NOT = {
 						tag = ROOT
-						is_ally_with = ROOT
+						is_subject_of = ROOT
+						is_in_faction_with = ROOT
 					}
 				}
 			}
@@ -8721,8 +8718,7 @@ focus_tree = {
 			effect_tooltip = {
 				if = {
 					limit = { is_faction_leader = no }
-					create_faction_from_template = faction_template_generic
-					set_faction_name = anti_zhili_alliance
+					create_faction = anti_zhili_alliance
 				}
 				add_to_faction = ANC
 			}
@@ -8756,7 +8752,8 @@ focus_tree = {
 			ZHC = {
 				exists = yes
 				NOT = {
-					is_ally_with = ROOT
+					is_in_faction_with = ROOT
+					is_subject_of = ROOT
 				}
 			}
 			GMJ = {
@@ -8769,7 +8766,8 @@ focus_tree = {
 				owner = {
 					NOT = {
 						tag = ROOT
-						is_ally_with = ROOT
+						is_subject_of = ROOT
+						is_in_faction_with = ROOT
 					}
 				}
 			}
@@ -8786,8 +8784,7 @@ focus_tree = {
 				effect_tooltip = {
 					if = {
 						limit = { is_faction_leader = no }
-						create_faction_from_template = faction_template_generic
-						set_faction_name = anti_zhili_alliance
+						create_faction = anti_zhili_alliance
 					}
 					add_to_faction = GMJ
 				}
@@ -9015,7 +9012,7 @@ focus_tree = {
 		icon = GFX_focus_the_three_principles
 		x = -2
 		y = 1
-		cost = 8
+		cost = 5
 		relative_position_id = GDC_protect_constitution
 		prerequisite = { focus = GDC_protect_constitution }
 		available = {
@@ -9035,7 +9032,7 @@ focus_tree = {
 		icon = GFX_focus_zhili_assembly
 		x = 2
 		y = 1
-		cost = 8
+		cost = 5
 		relative_position_id = GDC_protect_constitution
 		prerequisite = { focus = GDC_protect_constitution }
 		available = {
@@ -9059,7 +9056,7 @@ focus_tree = {
 		icon = GFX_focus_beiyang_conscription
 		x = 0
 		y = 1
-		cost = 8
+		cost = 5
 		relative_position_id = GDC_protect_constitution
 		prerequisite = { focus = GDC_protect_constitution }
 		available = {
@@ -9086,7 +9083,7 @@ focus_tree = {
 		icon = GFX_focus_new_culture_movement
 		x = 1
 		y = 1
-		cost = 8
+		cost = 5
 		relative_position_id = GDC_follow_tridemism
 		prerequisite = { focus = GDC_follow_tridemism }
 		available = {
@@ -9109,7 +9106,7 @@ focus_tree = {
 		icon = GFX_focus_befriend_soviets
 		x = -1
 		y = 1
-		cost = 8
+		cost = 5
 		relative_position_id = GDC_follow_tridemism
 		prerequisite = { focus = GDC_follow_tridemism }
 		available = {
@@ -9137,7 +9134,7 @@ focus_tree = {
 
 	focus = {
 		id = GDC_anarchist_autonomy_theory
-		icon = GFX_focus_SOV_education
+		icon = GFX_goal_placeholder
 		x = 0
 		y = 2
 		cost = 10
@@ -9162,7 +9159,7 @@ focus_tree = {
 		icon = GFX_focus_china_federalist_army
 		x = 0
 		y = 1
-		cost = 6
+		cost = 5
 		prerequisite = { focus = GDC_anarchist_autonomy_theory }
 		relative_position_id = GDC_anarchist_autonomy_theory
 		available = {
@@ -9181,7 +9178,7 @@ focus_tree = {
 		icon = GFX_generic_lumber
 		x = -2
 		y = 1
-		cost = 6
+		cost = 5
 		relative_position_id = GDC_army_direction
 		prerequisite = { focus = GDC_army_direction }
 		available = {
@@ -9208,7 +9205,7 @@ focus_tree = {
 		icon = GFX_focus_sun_hawk
 		x = 0
 		y = 1
-		cost = 6
+		cost = 5
 		relative_position_id = GDC_army_direction
 		prerequisite = { focus = GDC_army_direction }
 		available = {
@@ -9228,7 +9225,7 @@ focus_tree = {
 		icon = GFX_focus_secure_southern_china
 		x = 2
 		y = 1
-		cost = 6
+		cost = 5
 		relative_position_id = GDC_army_direction
 		prerequisite = { focus = GDC_army_direction }
 		available = {
@@ -9252,7 +9249,7 @@ focus_tree = {
 		icon = GFX_focus_federalist_moderate_revolution
 		x = 0
 		y = 2
-		cost = 6
+		cost = 5
 		relative_position_id = GDC_army_direction
 		prerequisite = { focus = GDC_promise_sun_yat_sen }
 		prerequisite = { focus = GDC_confront_guangxi }
@@ -9285,7 +9282,7 @@ focus_tree = {
 		icon = GFX_focus_federalist_government
 		x = 0
 		y = 1
-		cost = 6
+		cost = 5
 		relative_position_id = GDC_cantonese_rule_canton
 		prerequisite = { focus = GDC_cantonese_rule_canton }
 		available = {
@@ -9310,7 +9307,7 @@ focus_tree = {
 		icon = GFX_focus_generic_banking_legislation
 		x = -2
 		y = 1
-		cost = 6
+		cost = 5
 		relative_position_id = GDC_rebuild_constitutional_government
 		prerequisite = { focus = GDC_rebuild_constitutional_government }
 		completion_reward = {
@@ -9326,7 +9323,7 @@ focus_tree = {
 		icon = GFX_focus_generic_banking
 		x = 0
 		y = 1
-		cost = 6
+		cost = 5
 		relative_position_id = GDC_rebuild_constitutional_government
 		prerequisite = { focus = GDC_rebuild_constitutional_government }
 		bypass = {
@@ -9345,7 +9342,7 @@ focus_tree = {
 		icon = GFX_focus_anglo_american_deals
 		x = 2
 		y = 1
-		cost = 6
+		cost = 5
 		relative_position_id = GDC_rebuild_constitutional_government
 		prerequisite = { focus = GDC_rebuild_constitutional_government }
 		available = {
@@ -9388,7 +9385,7 @@ focus_tree = {
 		icon = GFX_focus_side_with_sun
 		x = 7
 		y = 0
-		cost = 6
+		cost = 5
 		allow_branch = {
 			tag = GDC
 		}
@@ -9601,7 +9598,7 @@ focus_tree = {
 		icon = GFX_focus_democratic_china_unification
 		x = 0
 		y = 1
-		cost = 6
+		cost = 5
 		relative_position_id = GDC_deplace_chen
 		prerequisite = {
 			focus = GDC_deplace_chen
@@ -10133,23 +10130,6 @@ focus_tree = {
 			show_ideas_tooltip = CHI_chiang_kaishek
 			custom_effect_tooltip = available_chief_of_army
 			show_ideas_tooltip = CHI_chiang_kaishek_chief
-			if = {
-				limit = {
-					NOT = { has_global_flag = zhongshan_incident }
-				}
-				effect_tooltip = {
-					GDC_li_zhilong = {
-						add_naval_commander_role = {
-							traits = { politically_connected bold }
-							skill = 1
-							attack_skill = 1
-							defense_skill = 1
-							maneuvering_skill = 3
-							coordination_skill = 3
-						}
-					}
-				}
-			}
 			country_event = {
 				id = ww1_china.272
 				hours = 10
@@ -10310,7 +10290,7 @@ focus_tree = {
 	
 	focus = {
 		id = GDC_the_right
-		icon = GFX_focus_CHI_mend_the_rift_with_hu
+		icon = GFX_focus_kmt_nationalism
 		x = 2
 		y = 1
 		cost = 10
@@ -10541,16 +10521,12 @@ focus_tree = {
 			set_global_flag = northern_expedition
 			if = {
 				limit = {
-					is_in_faction = no
-				}
-				create_faction_from_template = faction_template_chinese_united_front
-				set_faction_name = nationalist_government
-			}
-			else_if = {
-				limit = {
 					is_faction_leader = yes
 				}
 				set_faction_name = nationalist_government
+				else = {
+					create_faction = nationalist_government
+				}
 			}
 			unlock_decision_tooltip = CHI_northern_expedition
 		}
@@ -11267,7 +11243,8 @@ focus_tree = {
 				}
 				NOT = {
 					has_war_with = ROOT
-					is_ally_with = ROOT
+					is_in_faction_with = ROOT
+					is_subject_of = ROOT
 				}
 			}
 		}
@@ -11275,13 +11252,15 @@ focus_tree = {
 			GMJ = {
 				OR = {
 					exists = no
-					is_ally_with = ROOT
+					is_in_faction_with = ROOT
+					is_subject_of = ROOT
 				}
 			}
 			SHX = {
 				OR = {
 					exists = no
-					is_ally_with = ROOT
+					is_in_faction_with = ROOT
+					is_subject_of = ROOT
 				}
 			}
 		}
@@ -11294,7 +11273,8 @@ focus_tree = {
 					}
 					NOT = {
 						has_war_with = ROOT
-						is_ally_with = ROOT
+						is_in_faction_with = ROOT
+						is_subject_of = ROOT
 					}
 				}
 				country_event = {
@@ -11383,7 +11363,8 @@ focus_tree = {
 										controller = {
 											OR = {
 												tag = ROOT
-												is_ally_with = ROOT
+												is_in_faction_with = ROOT
+												is_subject_of = ROOT
 											}
 										}
 									}
@@ -11394,7 +11375,8 @@ focus_tree = {
 										controller = {
 											OR = {
 												tag = PREV.PREV
-												is_ally_with  = PREV.PREV
+												is_subject_of = PREV.PREV
+												is_in_faction_with = PREV.PREV
 											}
 										}
 										PREV = {
@@ -11431,7 +11413,7 @@ focus_tree = {
 	
 	focus = {
 		id = GDC_first_phase_completed
-		icon = GFX_focus_CHI_lay_the_foundation_for_a_united_china
+		icon = GFX_focus_kmt_indoctrination
 		x = 2
 		y = 1
 		cost = 4
@@ -11500,7 +11482,8 @@ focus_tree = {
 											controller = {
 												OR = {
 													tag = ROOT
-													is_ally_with = ROOT
+													is_in_faction_with = ROOT
+													is_subject_of = ROOT
 												}
 											}
 										}
@@ -11511,7 +11494,8 @@ focus_tree = {
 											controller = {
 												OR = {
 													tag = PREV.PREV
-													is_ally_with = PREV.PREV
+													is_subject_of = PREV.PREV
+													is_in_faction_with = PREV.PREV
 												}
 											}
 											PREV = {

@@ -14,7 +14,11 @@ SAU_arabian_conquest = {
 				is_owned_and_controlled_by = ROOT
 			}
 		}
-		target_array = 804.owner
+		target_trigger = {
+			FROM = {
+				owns_state = 804
+			}
+		}
 		available = {
 			has_war = no
 			804 = {
@@ -122,7 +126,11 @@ SAU_arabian_conquest = {
 				has_country_flag = great_war_loser
 			}
 		}
-		target_array = 905.owner
+		target_trigger = {
+			FROM = {
+				owns_state = 905
+			}
+		}
 		available = {
 			has_war = no
 			owns_state = 804
@@ -223,8 +231,10 @@ SAU_arabian_conquest = {
 			}
 		}
 		war_with_target_on_remove = yes
-		targets = {
-			JBS
+		target_trigger = {
+			FROM = {
+				tag = JBS
+			}
 		}
 		cost = 25
 		fire_only_once = yes
@@ -269,8 +279,10 @@ SAU_arabian_conquest = {
 			}
 		}
 		state_target = yes
-		targets = {
-			915
+		target_trigger = {
+			FROM = {
+				state = 915
+			}
 		}
 		highlight_states = {
 			highlight_state_targets = {
@@ -433,8 +445,10 @@ SAU_arabian_conquest = {
 			}
 		}
 		war_with_target_on_remove = yes
-		targets = {
-			HJZ
+		target_trigger = {
+			FROM = {
+				tag = HJZ
+			}
 		}
 		cost = 25
 		fire_only_once = yes
@@ -590,8 +604,10 @@ SAU_arabian_conquest = {
 			}
 		}
 		war_with_target_on_remove = yes
-		targets = {
-			UAS
+		target_trigger = {
+			FROM = {
+				tag = UAS
+			}
 		}
 		cost = 25
 		fire_only_once = yes
@@ -677,8 +693,10 @@ SAU_arabian_conquest = {
 			}
 		}
 		war_with_target_on_remove = yes
-		targets = {
-			ASR
+		target_trigger = {
+			FROM = {
+				tag = ASR
+			}
 		}
 		cost = 25
 		fire_only_once = yes
@@ -793,7 +811,11 @@ SAU_arabian_conquest = {
 		allowed = {
 			original_tag = SAU
 		}
-		target_array = 929.owner
+		target_trigger = {
+			FROM = {
+				owns_state = 929
+			}
+		}
 		war_with_target_on_complete = yes
 		visible = {
 			owns_state = 292
@@ -851,7 +873,7 @@ SAU_arabian_conquest = {
 	SAU_solidify_control_in_empty_quarter = {
 		icon = GFX_decision_generic_operation
 		allowed = {
-			is_arabian_peninsula_tag_no_constant = yes
+			is_arabian_peninsula_tag = yes
 		}
 		visible = {
 			owns_state = 292
@@ -860,8 +882,10 @@ SAU_arabian_conquest = {
 		}
 		cancel_if_not_visible = yes
 		state_target = yes
-		targets = {
-			678
+		target_trigger = {
+			FROM = {
+				state = 678
+			}
 		}
 		highlight_states = {
 			highlight_state_targets = {
@@ -900,7 +924,7 @@ SAU_arabian_conquest = {
 				has_country_flag = ARB_gui_trb_selected
 				has_country_flag = ARB_gui_jbs_selected
 			}
-			always = no #has_completed_focus = SAU_northern_raids
+			has_completed_focus = SAU_northern_raids
 		}
 		available = {
 			
@@ -963,7 +987,7 @@ SAU_arabian_conquest = {
 		icon = border_war
 		visible = {
 			has_country_flag = ARB_gui_trb_selected
-			always = no #has_completed_focus = SAU_northern_raids
+			has_completed_focus = SAU_northern_raids
 		}
 		available = {
 			
@@ -1018,7 +1042,7 @@ SAU_arabian_conquest = {
 	SAU_Settle_Najran_Tribes = {
 		icon = border_war
 		visible = {
-			always = no #has_completed_focus = SAU_settle_tribes
+			has_completed_focus = SAU_settle_tribes
 		}
 		available = {
 			
@@ -1043,7 +1067,7 @@ SAU_arabian_conquest = {
 	SAU_Settle_Hasa_Tribes = {
 		icon = border_war
 		visible = {
-			always = no #has_completed_focus = SAU_settle_tribes
+			has_completed_focus = SAU_settle_tribes
 		}
 		available = {
 			
@@ -1068,7 +1092,7 @@ SAU_arabian_conquest = {
 	SAU_Settle_Qassim_Tribes = {
 		icon = border_war
 		visible = {
-			always = no #has_completed_focus = SAU_settle_tribes
+			has_completed_focus = SAU_settle_tribes
 		}
 		available = {
 			
@@ -1093,7 +1117,7 @@ SAU_arabian_conquest = {
 	SAU_Settle_Hail_Tribes = {
 		icon = border_war
 		visible = {
-			always = no #has_completed_focus = SAU_settle_tribes
+			has_completed_focus = SAU_settle_tribes
 		}
 		available = {
 			
@@ -1124,7 +1148,7 @@ crisis = {
 		}
 		visible = {
 			original_tag = SAU
-			always = no #has_completed_focus = SAU_get_rid_of_ikhwan
+			has_completed_focus = SAU_get_rid_of_ikhwan
 		}
 		
 		available = {		
@@ -1133,7 +1157,7 @@ crisis = {
 		
 		activation = {
 			original_tag = SAU
-			always = no #has_completed_focus = SAU_get_rid_of_ikhwan
+			has_completed_focus = SAU_get_rid_of_ikhwan
 		}
 		
 		timeout_effect = {
@@ -1303,8 +1327,10 @@ crisis = {
 				has_war_with = TUR
 			}
 		}
-		targets = {
-			TUR
+		target_trigger = {
+			FROM = {
+				tag = TUR
+			}
 		}
 		available = {
 			ENG = {

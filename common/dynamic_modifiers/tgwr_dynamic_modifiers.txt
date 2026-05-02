@@ -433,7 +433,7 @@ TUR_socialist_economy = {
 	icon = GFX_modifiers_TUR_socialist_economy
 	
 	stability_factor = var:TUR_stability_factor
-	production_speed_buildings_factor = var:TUR_socialist_production_speed_buildings_factor
+	state_production_speed_buildings_factor = var:TUR_socialist_production_speed_buildings_factor
 	consumer_goods_factor = var:TUR_socialist_consumer_goods_factor
 	global_building_slots_factor = var:TUR_socialist_global_building_slots_factor
 	industrial_capacity_dockyard = var:TUR_socialist_industrial_capacity_dockyard
@@ -494,9 +494,10 @@ SPR_independence_movements = {
 
 	icon = GFX_modifiers_AUH_local_independentism
 	
-	recruitable_population_factor = -0.25
-	state_resources_factor = -0.1
-	state_production_speed_buildings_factor = -0.05
+	recruitable_population_factor = -0.35
+	local_building_slots_factor = -0.25
+	state_resources_factor = -0.35
+	state_production_speed_buildings_factor = -0.5
 }
 GRE_IFC_dynamic_modifier = {
 	icon = GFX_idea_gre_debt_to_the_ifc
@@ -529,7 +530,7 @@ GRE_agrarian_society_dynamic_modifier = {
 	}
 	production_factory_max_efficiency_factor = var:GRE_efficiency_cap_var
 	production_factory_efficiency_gain_factor = var:GRE_efficiency_growth_var
-	production_speed_buildings_factor = var:GRE_construction_speed_var
+	state_production_speed_buildings_factor = var:GRE_construction_speed_var
 	industrial_capacity_factory = var:GRE_factory_output_var
 	production_speed_arms_factory_factor = var:GRE_military_construction_speed_var
 }
@@ -540,7 +541,7 @@ GRE_farmer_focused_culture_dynamic_modifier = {
 	}
 	production_factory_max_efficiency_factor = var:GRE_efficiency_cap_var
 	production_factory_efficiency_gain_factor = var:GRE_efficiency_growth_var
-	production_speed_buildings_factor = var:GRE_construction_speed_var
+	state_production_speed_buildings_factor = var:GRE_construction_speed_var
 	industrial_capacity_factory = var:GRE_factory_output_var
 	production_speed_arms_factory_factor = var:GRE_military_construction_speed_var
 	
@@ -554,7 +555,7 @@ GRE_balanced_approach_dynamic_modifier = {
 	}
 	production_factory_max_efficiency_factor = var:GRE_efficiency_cap_var
 	production_factory_efficiency_gain_factor = var:GRE_efficiency_growth_var
-	production_speed_buildings_factor = var:GRE_construction_speed_var
+	state_production_speed_buildings_factor = var:GRE_construction_speed_var
 	industrial_capacity_factory = var:GRE_factory_output_var
 	production_speed_arms_factory_factor = var:GRE_military_construction_speed_var
 	
@@ -568,7 +569,7 @@ GRE_industrializing_society_dynamic_modifier = {
 	}
 	production_factory_max_efficiency_factor = var:GRE_efficiency_cap_var
 	production_factory_efficiency_gain_factor = var:GRE_efficiency_growth_var
-	production_speed_buildings_factor = var:GRE_construction_speed_var
+	state_production_speed_buildings_factor = var:GRE_construction_speed_var
 	industrial_capacity_factory = var:GRE_factory_output_var
 	production_speed_arms_factory_factor = var:GRE_military_construction_speed_var
 	
@@ -590,9 +591,7 @@ bel_integrating_congo = {
 TUR_turkish_revolts = {
 	enable = { always = yes }
 	remove_trigger = {
-		CONTROLLER = {
-			has_country_flag = TUR_national_movement_tag
-		}
+		has_country_flag = TUR_national_movement_tag
 	}
 
 	icon = GFX_modifiers_TUR_turkish_revolts
@@ -606,9 +605,7 @@ TUR_turkish_revolts = {
 TUR_turkish_revolts2 = {
 	enable = { always = yes }
 	remove_trigger = {
-		CONTROLLER = {
-			has_country_flag = TUR_national_movement_tag
-		}
+		has_country_flag = TUR_national_movement_tag
 	}
 
 	icon = GFX_modifiers_TUR_turkish_revolts
@@ -622,9 +619,7 @@ TUR_turkish_revolts2 = {
 TUR_turkish_support = {
 	enable = { always = yes }
 	remove_trigger = {
-		CONTROLLER = {
-			NOT = { has_country_flag = TUR_national_movement_tag }
-		}
+		NOT = { has_country_flag = TUR_national_movement_tag }
 	}
 
 	icon = GFX_modifiers_TUR_turkish_revolts
@@ -940,7 +935,7 @@ TUR_centralization_of_the_empire = {
 	icon = GFX_idea_TUR_centralization_of_the_empire
 
 	political_power_gain = mtth:TUR_centralization_of_the_empire_political_power
-	conscription_factor = mtth:TUR_centralization_of_the_empire_political_power
+	recruitable_population_factor = mtth:TUR_centralization_of_the_empire_political_power
 	command_power_gain_mult = mtth:TUR_centralization_of_the_empire_political_power
 	custom_modifier_tooltip = TUR_centralization_of_the_empire_tt
 }
@@ -1169,7 +1164,7 @@ GRE_integration_efforts = {
 	remove_trigger = { ROOT = { is_core_of = ROOT.controller } }
 	icon = GFX_modifiers_SOV_civilian_labor_in_defense
 	compliance_gain = 0.15
-	local_non_core_manpower = 0.3
+	non_core_manpower = 0.3
 	custom_modifier_tooltip = will_be_removed_once_is_a_core
 }
 
@@ -1183,11 +1178,11 @@ GRE_support_to_entente = {
 				}
 			}
 			OR = {
-				tag = ENT
-				is_ally_with = ENT
+				tag = FRA
+				is_in_faction_with = FRA
 				original_tag = GRE
 				has_war_together_with = GRE
-				has_war_together_with = ENT
+				has_war_together_with = FRA
 			}
 		}
 		NOT = {
@@ -1243,6 +1238,7 @@ sahel_local_famine = {
 	icon = GFX_modifiers_RAJ_famine_state
 	recruitable_population_factor = -0.25
 	local_supplies_for_controller = -0.25
+	attrition_for_controller = 0.25
 	resistance_target = 0.5
 	compliance_growth = -0.5
 }
@@ -1251,6 +1247,7 @@ generic_local_famine = {
 	icon = GFX_modifiers_RAJ_famine_state
 	recruitable_population_factor = -0.25
 	local_supplies_for_controller = -0.25
+	attrition_for_controller = 0.25
 	resistance_target = 0.5
 	compliance_growth = -0.5
 }
@@ -1340,7 +1337,8 @@ FRA_french_integration = {
 		CONTROLLER = {
 			OR = {
 				tag = FRA
-				is_ally_with = FRA
+				is_subject_of = FRA
+				is_in_faction_with = FRA
 			}
 		}
 	}
@@ -1440,7 +1438,8 @@ FRA_french_integration_weak = {
 		CONTROLLER = {
 			OR = {
 				tag = FRA
-				is_ally_with = FRA
+				is_subject_of = FRA
+				is_in_faction_with = FRA
 			}
 		}
 	}
@@ -1467,7 +1466,8 @@ FRA_french_exploitation = {
 		CONTROLLER = {
 			OR = {
 				tag = FRA
-				is_ally_with = FRA
+				is_subject_of = FRA
+				is_in_faction_with = FRA
 			}
 		}
 	}
@@ -1493,7 +1493,8 @@ FRA_french_local_investments = {
 		CONTROLLER = {
 			OR = {
 				tag = FRA
-				is_ally_with = FRA
+				is_subject_of = FRA
+				is_in_faction_with = FRA
 			}
 		}
 	}
@@ -1501,7 +1502,8 @@ FRA_french_local_investments = {
 		OWNER = {
 			NOT = {
 				tag = FRA
-				is_ally_with = FRA
+				is_subject_of = FRA
+				is_in_faction_with = FRA
 			}
 		}
 	}
@@ -1514,7 +1516,8 @@ FRA_french_local_investments_exploitation = {
 		CONTROLLER = {
 			OR = {
 				tag = FRA
-				is_ally_with = FRA
+				is_subject_of = FRA
+				is_in_faction_with = FRA
 			}
 		}
 	}
@@ -1522,7 +1525,8 @@ FRA_french_local_investments_exploitation = {
 		OWNER = {
 			NOT = {
 				tag = FRA
-				is_ally_with = FRA
+				is_subject_of = FRA
+				is_in_faction_with = FRA
 			}
 		}
 	}
@@ -1536,7 +1540,8 @@ FRA_reinforced_military_presence = {
 		CONTROLLER = {
 			OR = {
 				tag = FRA
-				is_ally_with = FRA
+				is_subject_of = FRA
+				is_in_faction_with = FRA
 			}
 		}
 	}
@@ -1544,7 +1549,8 @@ FRA_reinforced_military_presence = {
 		OWNER = {
 			NOT = {
 				tag = FRA
-				is_ally_with = FRA
+				is_subject_of = FRA
+				is_in_faction_with = FRA
 			}
 		}
 	}
@@ -1558,7 +1564,8 @@ FRA_french_local_investments_non_UEII = {
 		CONTROLLER = {
 			OR = {
 				tag = FRA
-				is_ally_with = FRA
+				is_subject_of = FRA
+				is_in_faction_with = FRA
 			}
 		}
 	}
@@ -1566,7 +1573,8 @@ FRA_french_local_investments_non_UEII = {
 		OWNER = {
 			NOT = {
 				tag = FRA
-				is_ally_with = FRA
+				is_subject_of = FRA
+				is_in_faction_with = FRA
 			}
 		}
 	}
@@ -1618,7 +1626,8 @@ FRA_anti_french_resistance = {
 		CONTROLLER = {
 			OR = {
 				tag = FRA
-				is_ally_with = FRA
+				is_subject_of = FRA
+				is_in_faction_with = FRA
 			}
 		}
 	}
@@ -1628,7 +1637,8 @@ FRA_anti_french_resistance = {
 			owner = {
 				NOT = {
 					tag = FRA
-					is_ally_with = FRA
+					is_subject_of = FRA
+					is_in_faction_with = FRA
 				}
 			}
 		}	
@@ -1647,7 +1657,8 @@ FRA_anti_french_resistance_mid = {
 		CONTROLLER = {
 			OR = {
 				tag = FRA
-				is_ally_with = FRA
+				is_subject_of = FRA
+				is_in_faction_with = FRA
 			}
 		}
 	}
@@ -1657,7 +1668,8 @@ FRA_anti_french_resistance_mid = {
 			owner = {
 				NOT = {
 					tag = FRA
-					is_ally_with = FRA
+					is_subject_of = FRA
+					is_in_faction_with = FRA
 				}
 			}
 		}	
@@ -1665,9 +1677,10 @@ FRA_anti_french_resistance_mid = {
 	icon = GFX_modifiers_generic_resistance
 	recruitable_population_factor = -0.25
 	local_supplies_for_controller = -0.25
+	attrition_for_controller = 0.25
 	resistance_target = 0.25
 	compliance_growth = -0.25
-	required_garrison_factor = 0.2
+	required_garrison_factor = 0.5
 }
 
 FRA_colonial_conscription = {
@@ -1675,7 +1688,8 @@ FRA_colonial_conscription = {
 		CONTROLLER = {
 			OR = {
 				tag = FRA
-				is_ally_with = FRA
+				is_subject_of = FRA
+				is_in_faction_with = FRA
 			}
 		}
 	}
@@ -1685,7 +1699,8 @@ FRA_colonial_conscription = {
 			owner = {
 				NOT = {
 					tag = FRA
-					is_ally_with = FRA
+					is_subject_of = FRA
+					is_in_faction_with = FRA
 				}
 			}
 		}	
@@ -1703,7 +1718,8 @@ FRA_grand_couronnee_defensive_line = {
 		CONTROLLER = {
 			OR = {
 				tag = FRA
-				is_ally_with = FRA
+				is_subject_of = FRA
+				is_in_faction_with = FRA
 			}
 		}
 	}
@@ -1711,7 +1727,8 @@ FRA_grand_couronnee_defensive_line = {
 		owner = {
 			NOT = {
 				tag = FRA
-				is_ally_with = FRA
+				is_subject_of = FRA
+				is_in_faction_with = FRA
 			}
 		}
 	}
@@ -1722,20 +1739,22 @@ FRA_grand_couronnee_defensive_line = {
 
 FRA_michel_defensive_plan = {
 	enable = {
-		ROOT.controller = {
+		CONTROLLER = {
 			OR = {
 				tag = FRA
-				is_ally_with = FRA
+				is_subject_of = FRA
+				is_in_faction_with = FRA
 			}
 		}
 	}
 	remove_trigger = {
 		OR = {
 			has_global_flag = great_war_ends
-			ROOT.controller = {
+			owner = {
 				NOT = {
 					tag = FRA
-					is_ally_with = FRA
+					is_subject_of = FRA
+					is_in_faction_with = FRA
 				}
 			}
 		}
@@ -1749,47 +1768,53 @@ FRA_michel_defensive_plan = {
 
 FRA_voie_sacree_modifier = {
 	enable = {
-		controller = {
+		CONTROLLER = {
 			OR = {
 				tag = FRA
-				is_ally_with = FRA
+				is_subject_of = FRA
+				is_in_faction_with = FRA
 			}
 		}
 	}
 	remove_trigger = {
 		OR = {
 			has_global_flag = great_war_ends
-			controller = {
+			owner = {
 				NOT = {
 					tag = FRA
-					is_ally_with = FRA
+					is_subject_of = FRA
+					is_in_faction_with = FRA
 				}
 			}
 		}
 	}
 	icon = GFX_modifiers_generic_supply
-	local_supplies_for_controller = 0.1
+	local_supplies_for_controller = 0.20
 }
 
 FRA_joffre_offensive_plan = {
 	enable = {
-		ROOT.controller = {
+		CONTROLLER = {
 			OR = {
 				tag = FRA
-				is_ally_with = FRA
+				is_subject_of = FRA
+				is_in_faction_with = FRA
 			}
 		}
 	}
 	remove_trigger = {
 		OR = {
 			has_global_flag = great_war_ends
-			ROOT.controller = {
+			owner = {
 				NOT = {
 					tag = FRA
-					is_ally_with = FRA
+					is_subject_of = FRA
+					is_in_faction_with = FRA
 				}
 			}
 		}
+		
+		
 	}
 	icon = GFX_modifiers_generic_military_plans
 	army_attack_factor = 0.10
@@ -1815,7 +1840,7 @@ MOR_integration_efforts = {
 	}
 	icon = GFX_decision_generic_disband_irregulars
 	compliance_growth = 0.3
-	local_non_core_manpower = 0.3
+	non_core_manpower = 0.3
 }
 
 IND_integration_efforts = {
@@ -1836,7 +1861,7 @@ IND_integration_efforts = {
 	}
 	icon = GFX_modifiers_generic_construction
 	compliance_growth = 0.3
-	local_non_core_manpower = 0.3
+	non_core_manpower = 0.3
 }
 
 tuaregs_revolt = {
@@ -1861,6 +1886,28 @@ tuaregs_revolt = {
 	required_garrison_factor = 2
 }
 
+ITA_social_revolution_modifier = {
+	enable = {
+		always = yes
+	}
+	icon = GFX_idea_GRE_goudi
+	production_speed_buildings_factor = ITA_revolution_prod_speed_var
+	stability_factor = ITA_revolution_stability_var
+	drift_defence_factor = ITA_revolution_drift_def_var
+	political_power_factor = ITA_revolution_pol_power_var
+	global_building_slots = ITA_revolution_building_slots_var
+	monthly_population = ITA_revolution_monthy_pop_var
+	production_factory_max_efficiency_factor = ITA_revolution_prod_eff_cap_var
+	production_factory_efficiency_gain_factor = ITA_revolution_prod_eff_speed_var
+	industrial_capacity_factory = ITA_revolution_factory_output_var
+	production_factory_start_efficiency_factor = ITA_revolution_factory_base_eff_var
+	line_change_production_efficiency_factor = ITA_revolution_prod_retention_var
+	#industrial_capacity_factory = ITA_revolution_mil_output_var
+	research_speed_factor = ITA_revolution_research_speed_var
+	communism_drift = ITA_revolution_socialist_drift_var
+	# WHAT IS THIS
+}
+
 ITA_southern_question_idea = {
 	enable = {
 		always = yes
@@ -1875,7 +1922,7 @@ ITA_social_unrest = {
 	enable = {
 		always = yes
 	}
-	icon = GFX_idea_ICE_general_strike
+	icon = GFX_idea_GRE_goudi
 	communism_drift = ITA_socialist_drift_var
 	fascism_drift = ITA_fascism_drift
 	stability_factor = ITA_stability_var
@@ -1907,15 +1954,13 @@ ITA_fruits_of_the_reforms = {
 	enable = {
 		always = yes
 	}
-	icon = GFX_idea_ITA_fruits_of_the_reforms
+	icon = GFX_idea_generic_agrarian_reform
 	production_speed_industrial_complex_factor = ITA_reforms_civs
 	political_power_cost = ITA_reforms_pp_cost
 	consumer_goods_factor = ITA_reforms_consumer_goods
 	research_speed_factor = ITA_reforms_research
 	stability_factor = ITA_reforms_stability
 	production_speed_buildings_factor = ITA_reforms_buildings
-	monthly_population = ITA_reforms_monthly_population
-	global_building_slots_factor = ITA_reforms_building_slots
 }
 
 ITA_industrialization_program = {
@@ -1950,7 +1995,7 @@ ITA_italian_army = {
 	army_org_factor = ITA_army_org_factor
 	breakthrough_factor = ITA_army_breakthrough
 	experience_gain_army_factor = ITA_army_xp_factor
-	#attrition = ITA_army_attrition #< RREMOVE TS
+	attrition = ITA_army_attrition
 	army_org_regain = ITA_army_org_regain
 	conscription_factor = ITA_army_manpower
 	supply_consumption_factor = ITA_army_supply
@@ -2000,17 +2045,11 @@ ITA_army_preperations = {
 		has_global_flag = libyan_crisis_resolved
 	}
 	icon = GFX_idea_CZE_planning_bonus
-	army_attack_factor = ITA_preperation_offence_var
+	offence = ITA_preperation_offence_var
 	experience_gain_army_factor = ITA_preperation_experience_var
 	army_org_regain = ITA_preperation_org_var
 	heat_attrition_factor = ITA_preperation_heat_var
 	naval_damage_factor = ITA_preperation_naval_attack_var
-	amphibious_invasion = ITA_army_preperations_amphibious_invasion
-	amphibious_invasion_defence = ITA_army_preperations_amphibious_invasion_defence
-	naval_invasion_division_cap = ITA_army_preperations_naval_invasion_division_cap
-	naval_invasion_plan_cap = ITA_army_preperations_naval_invasion_plan_cap
-	invasion_preparation = ITA_army_preperations_invasion_preparation
-	naval_invasion_penalty = ITA_army_preperations_naval_invasion_penalty
 }
 
 ITA_widespread_malaria = {
@@ -2068,10 +2107,7 @@ ITA_ottoman_islands_bombed = {
 	icon = GFX_modifiers_generic_resistance
 	attrition_for_controller = 0.15
 	local_supplies = -1
-	army_attack_factor = -0.15
-	army_defence_factor = -0.15
-	dig_in_speed_factor = -0.5
-	max_dig_in_factor = -0.5
+	local_org_regain = -0.5
 }
 
 ITA_aus_shell = {
@@ -2084,8 +2120,10 @@ ITA_aus_shell = {
 		}
 	}
 	icon = GFX_modifiers_generic_resistance
-	local_supplies = -0.1
+	local_supplies = -0.15
 	local_org_regain = -0.05
+	army_speed_factor_for_controller = -0.05
+	army_defence_factor = -0.05
 }
 
 ITA_neglected_economy = {
@@ -2113,7 +2151,8 @@ ITA_ministry_of_the_colonies = {
 		controller = {
 			OR = {
 				tag = ITA
-				is_ally_with = ITA
+				is_subject_of = ITA
+				is_in_faction_with = ITA
 			}
 		}
 	}
@@ -2137,7 +2176,8 @@ ITA_italian_settlers = {
 		controller = {
 			OR = {
 				original_tag = ITA
-				is_ally_with = ITA
+				is_subject_of = ITA
+				is_in_faction_with = ITA
 			}
 		}
 	}
@@ -2155,7 +2195,8 @@ ITA_the_model_colony = {
 		controller = {
 			OR = {
 				original_tag = ITA
-				is_ally_with = ITA
+				is_subject_of = ITA
+				is_in_faction_with = ITA
 			}
 		}
 	}
@@ -2344,23 +2385,23 @@ ROM_khotyn_uprising = {
 	resistance_target = 0.3
 	resistance_damage_to_garrison = 0.75
 }	
-# SAU_Urban_influence_dynamic_modifier = { 
-# 	enable = { always = yes }
-# 	icon = GFX_idea_ETH_taxed_nobility
-# 	consumer_goods_factor = SAU_Urban_invetments
-# 	min_export = SAU_Urban_resources_to_market
-# 	political_power_cost = SAU_Urban_political_power
-# }
-# SAU_Tribal_influence_dynamic_modifier = { 
-# 	enable = { always = yes }
-# 	icon = GFX_idea_ETH_chitet_law
-# 	local_supplies = SAU_logistics
-# 	army_morale_factor = SAU_army
-# 	state_production_speed_buildings_factor = SAU_modernization
-# }
+SAU_Urban_influence_dynamic_modifier = { 
+	enable = { always = yes }
+	icon = GFX_idea_ETH_taxed_nobility
+	consumer_goods_factor = SAU_Urban_invetments
+	min_export = SAU_Urban_resources_to_market
+	political_power_cost = SAU_Urban_political_power
+}
+SAU_Tribal_influence_dynamic_modifier = { 
+	enable = { always = yes }
+	icon = GFX_idea_ETH_chitet_law
+	local_supplies = SAU_logistics
+	army_morale_factor = SAU_army
+	state_production_speed_buildings_factor = SAU_modernization
+}
 RUS_armistice_effect = {
 	enable = {
-		controller = {
+		OWNER = {
 			OR = {
 				has_idea = RUS_idea_armistice_cp
 				has_idea = RUS_idea_armistice_rus
@@ -2368,7 +2409,7 @@ RUS_armistice_effect = {
 		}
 	}
 	remove_trigger = {
-		controller = {
+		OWNER = {
 			NOT = {
 				has_idea = RUS_idea_armistice_cp
 				has_idea = RUS_idea_armistice_rus
@@ -2384,10 +2425,13 @@ RUS_armistice_effect = {
 }
 HUN_demarcation_line = {
 	enable = {
-		always = yes
+		OR = {
+			is_controlled_by = ROM
+			is_controlled_by = HUN
+		}
 	}
 	remove_trigger = {
-		controller = {
+		OWNER = {
 			NOT = {
 				original_tag = ROM
 				original_tag = HUN
@@ -2451,7 +2495,8 @@ GER_agricultural_incentives = {
 		CONTROLLER = {
 			OR = {
 				original_tag = GER
-				is_ally_with = GER
+				is_subject_of = GER
+				is_in_faction_with = GER
 			}
 		}
 	}
@@ -2461,7 +2506,8 @@ GER_agricultural_incentives = {
 			OWNER = {
 				NOT = {
 					original_tag = GER
-					is_ally_with = GER
+					is_subject_of = GER
+					is_in_faction_with = GER
 				}
 			}
 		}	
@@ -2475,7 +2521,8 @@ GER_new_major_railway_connection = {
 		CONTROLLER = {
 			OR = {
 				original_tag = GER
-				is_ally_with = GER
+				is_subject_of = GER
+				is_in_faction_with = GER
 			}
 		}
 	}
@@ -2485,7 +2532,8 @@ GER_new_major_railway_connection = {
 			OWNER = {
 				NOT = {
 					original_tag = GER
-					is_ally_with = GER
+					is_subject_of = GER
+					is_in_faction_with = GER
 				}
 			}
 		}	
@@ -2499,7 +2547,8 @@ GER_productional_efficiency = {
 		CONTROLLER = {
 			OR = {
 				original_tag = GER
-				is_ally_with = GER
+				is_subject_of = GER
+				is_in_faction_with = GER
 			}
 		}
 	}
@@ -2509,7 +2558,8 @@ GER_productional_efficiency = {
 			OWNER = {
 				NOT = {
 					original_tag = GER
-					is_ally_with = GER
+					is_subject_of = GER
+					is_in_faction_with = GER
 				}
 			}
 		}	
@@ -2520,7 +2570,7 @@ GER_productional_efficiency = {
 	resistance_decay = -0.15
 	resistance_growth = 0.15
 	resistance_target = 0.1
-	local_factory_sabotage = 0.02
+	local_factory_sabotage = 0.25
 	enemy_army_speed_factor = 0.15
 	army_speed_factor_for_controller = -0.05
 	local_building_slots_factor = 0.5
@@ -2534,7 +2584,8 @@ GER_german_migration = {
 		CONTROLLER = {
 			OR = {
 				original_tag = GER
-				is_ally_with = GER
+				is_subject_of = GER
+				is_in_faction_with = GER
 			}
 		}
 	}
@@ -2545,7 +2596,8 @@ GER_german_migration = {
 			OWNER = {
 				NOT = {
 					original_tag = GER
-					is_ally_with = GER
+					is_subject_of = GER
+					is_in_faction_with = GER
 				}
 			}
 		}	
@@ -2569,7 +2621,8 @@ GER_germanisation = {
 		CONTROLLER = {
 			OR = {
 				original_tag = GER
-				is_ally_with = GER
+				is_subject_of = GER
+				is_in_faction_with = GER
 			}
 		}
 	}
@@ -2580,7 +2633,8 @@ GER_germanisation = {
 			OWNER = {
 				NOT = {
 					original_tag = GER
-					is_ally_with = GER
+					is_subject_of = GER
+					is_in_faction_with = GER
 				}
 			}
 		}	
@@ -2598,7 +2652,8 @@ GER_extended_germanisation = {
 		CONTROLLER = {
 			OR = {
 				original_tag = GER
-				is_ally_with = GER
+				is_subject_of = GER
+				is_in_faction_with = GER
 			}
 		}
 	}
@@ -2609,7 +2664,8 @@ GER_extended_germanisation = {
 			OWNER = {
 				NOT = {
 					original_tag = GER
-					is_ally_with = GER
+					is_subject_of = GER
+					is_in_faction_with = GER
 				}
 			}
 		}	
@@ -2628,7 +2684,8 @@ GER_enhanced_conscription = {
 		CONTROLLER = {
 			OR = {
 				original_tag = GER
-				is_ally_with = GER
+				is_subject_of = GER
+				is_in_faction_with = GER
 			}
 		}
 	}
@@ -2639,7 +2696,8 @@ GER_enhanced_conscription = {
 			OWNER = {
 				NOT = {
 					original_tag = GER
-					is_ally_with = GER
+					is_subject_of = GER
+					is_in_faction_with = GER
 				}
 			}
 		}	
@@ -2659,6 +2717,7 @@ GER_ohl_command = {
 	production_speed_arms_factory_factor = ohl_mil_construction_speed
 	political_power_gain = ohl_political_power_gain
 	war_support_factor = ohl_war_support
+	stability_factor = ohl_war_support
 	mobilization_speed = ohl_mob_speed
 	planning_speed = ohl_planning_speed
 	max_planning_factor = ohl_max_planning
@@ -2704,34 +2763,28 @@ GER_konige_im_luftrevier = {
 	country_resource_rubber = 10
 }
 
-GER_bismarksche_reichsverassung = {
+GER_social_reforms = {
 	enable = {
 		always = yes
 	}
-	remove_trigger = {
-		is_GER_a_monarchy = no
-	}
-	icon = GFX_idea_GER_idea_OHL
+	icon = GFX_idea_generic_scales
 	# Political
-	stability_factor = GER_ww1_stability_factor
-	political_power_factor = GER_ww1_political_power_factor
-	monthly_population = GER_ww1_monthly_population
-	conscription_factor = GER_ww1_conscription_factor
-	war_support_factor = GER_ww1_war_support_factor
-	democratic_drift = GER_ww1_democratic_drift
-	neutrality_drift = GER_ww1_neutrality_drift
-	fascism_drift = GER_ww1_fascism_drift
-	resistance_activity = GER_ww1_resistance_activity
-	compliance_growth = GER_ww1_compliance_growth
-	political_advisor_cost_factor = GER_ww1_political_advisor_cost_factor
+	stability_factor = GER_social_reforms_stability_factor
+	political_power_factor = GER_social_reforms_political_power_factor
+	monthly_population = GER_social_reforms_monthly_population
+	conscription_factor = GER_social_reforms_conscription_factor
+	war_support_factor = GER_social_reforms_war_support_factor
+	democratic_drift = GER_social_reforms_democratic_drift
+	neutrality_drift = GER_social_reforms_neutrality_drift
+	fascism_drift = GER_social_reforms_fascism_drift
+	resistance_activity = GER_social_reforms_resistance_activity
+	compliance_growth = GER_social_reforms_compliance_growth
 	# Economic
-	consumer_goods_factor = GER_ww1_consumer_goods_factor
-	production_speed_buildings_factor = GER_ww1_production_speed_buildings_factor
-	production_factory_max_efficiency_factor = GER_ww1_production_factory_max_efficiency_factor
-	industrial_capacity_factory = GER_ww1_industrial_capacity_factory
-	production_speed_industrial_complex_factor = GER_ww1_production_speed_industrial_complex_factor
-	trade_laws_cost_factor = GER_ww1_trade_laws_cost_factor
-	mobilization_laws_cost_factor = GER_ww1_mobilization_laws_cost_factor
+	consumer_goods_factor = GER_social_reforms_consumer_goods_factor
+	production_speed_buildings_factor = GER_social_reforms_production_speed_buildings_factor
+	production_factory_max_efficiency_factor = GER_social_reforms_production_factory_max_efficiency_factor
+	industrial_capacity_factory = GER_social_reforms_industrial_capacity_factory
+	production_speed_industrial_complex_factor = GER_social_reforms_production_speed_industrial_complex_factor
 }
 
 SAU_Hejazi_opposition = {
@@ -2939,24 +2992,6 @@ xinan_modifier = {
 	recruitable_population_factor = -0.15
 }
 
-barga_modifier = {
-	enable = { always = yes }
-	remove_trigger = { 
-		OR = {
-			NOT = { is_core_of = OWNER }
-			owner = { is_china_or_warlord_no_tt = no }
-		}
-	}
-	icon = GFX_decision_eng_ally_imperialist_coup
-
-	recruitable_population_factor = -0.70
-	local_resources_factor = -0.40
-	local_building_slots_factor = -0.5
-	local_factories = -0.5
-	# resistance_growth = -0.30
-	# compliance_gain = 0.10
-}
-
 concessions_modifier = {
 	enable = { always = yes }
 	remove_trigger = { 
@@ -3036,7 +3071,8 @@ PUPPET_FRA_french_judiciary_system = {
 		controller = {
 			OR = {
 				tag = FRA
-				is_ally_with = FRA
+				is_subject_of = FRA
+				is_in_faction_with = FRA
 			}
 		}
 	}
@@ -3336,92 +3372,13 @@ BEL_belgian_resistance_modifier = {
 	local_intel_to_enemies = 0.3
 	resistance_target = 0.10
 }
-BEL_luba_resistance_modifier = {
-	enable = { always = yes } 
-	icon = GFX_modifiers_AUH_local_independentism
-
-	remove_trigger = {
-		
-	}
-
-	compliance_growth = -0.25
-	local_manpower = -0.15
-	local_factory_sabotage = 0.10
-	resistance_target = 0.1
-	army_speed_factor_for_controller = -0.1
-	local_factories = -0.1
-	local_non_core_manpower = -0.15
-	local_supplies = -0.1
-	state_resources_factor = -0.35
-
-}
-
-BEL_luba_resistance_modifier2 = {
-	enable = { always = yes } 
-	
-	icon = GFX_modifiers_AUH_local_independentism
-
-	remove_trigger = {
-		
-	}
-
-	compliance_growth = -0.1
-	local_manpower = -0.1
-	local_factory_sabotage = 0.05
-	resistance_target = 0.05
-	army_speed_factor_for_controller = -0.05
-	local_factories = -0.1
-	local_non_core_manpower = -0.15
-	local_supplies = -0.05
-	state_resources_factor = -0.2
-}
-BEL_belgian_colonial_policy = {
-	enable = { always = yes } 
-	
-	icon = GFX_modifiers_generic_slavery
-
-	remove_trigger = {
-		
-	}
-
-	compliance_growth = -0.1
-	local_manpower = -0.1
-	resistance_target = 0.05
-	army_speed_factor_for_controller = -0.1
-	local_factories = -0.1
-	local_non_core_manpower = -0.4
-	local_supplies = -0.1
-}
-BEL_modifier_belgian_army = {
-	enable = { always = yes }
-	icon = GFX_idea_chi_army_corruption3
-	army_attack_factor = BEL_variable_attack
-	army_defence_factor = BEL_variable_defence
-	army_speed_factor = BEL_variable_speed
-	army_org_factor = BEL_variable_org
-	org_loss_when_moving = BEL_variable_org_moving
-	experience_gain_army_unit_factor = BEL_variable_xp_gain_unit
-	experience_gain_army_factor = BEL_variable_xp_gain_army
-	army_artillery_attack_factor = BEL_variable_arty_attack
-}
-BEL_modifier_belgian_exploitative_labour_conditions = {
-	enable = { always = yes }
-	icon = GFX_idea_ARG_construction_guilds
-	production_factory_start_efficiency_factor = BEL_variable_efficiency_base
-	production_factory_efficiency_gain_factor = BEL_variable_efficiency_gain
-	stability_factor = BEL_variable_stab
-	production_speed_buildings_factor = BEL_variable_construction_speed
-	consumer_goods_factor = BEL_variable_consumers
-	research_speed_factor = BEL_variable_research_speed
-	political_power_factor = BEL_variable_pp_gain
-	local_resources_factor = BEL_variable_excavation_efficiency
-}
 MOR_reformed_tertib = {
 	enable = { 
 		CONTROLLER = {
 			OR = {
 				tag = MOR
-				is_ally_with = MOR
+				is_subject_of = MOR
+				is_in_faction_with = MOR
 			}
 		}
 	}
@@ -3429,7 +3386,8 @@ MOR_reformed_tertib = {
 		owner = {
 			NOT = {
 				tag = MOR
-				is_ally_with = MOR
+				is_subject_of = MOR
+				is_in_faction_with = MOR
 			}
 		}
 	}
@@ -3443,7 +3401,8 @@ MOR_authorized_nzala = {
 		CONTROLLER = {
 			OR = {
 				tag = MOR
-				is_ally_with = MOR
+				is_subject_of = MOR
+				is_in_faction_with = MOR
 			}
 		}
 	}
@@ -3451,7 +3410,8 @@ MOR_authorized_nzala = {
 		owner = {
 			NOT = {
 				tag = MOR
-				is_ally_with = MOR
+				is_subject_of = MOR
+				is_in_faction_with = MOR
 			}
 		}
 	}
@@ -3484,11 +3444,11 @@ LBA_tribal_resistance = {
 	icon = GFX_modifiers_tur_traditionalist_sedition
 	recruitable_population_factor = -0.25
 	local_supplies_for_controller = -0.2
-	resistance_target = 0.1
-	resistance_growth = 0.15
+	resistance_target = 0.15
+	resistance_growth = 0.25
 	compliance_growth = -0.35
 	local_intel_to_enemies = 0.4
-	required_garrison_factor = 0.1
+	required_garrison_factor = 0.15
 	army_speed_factor_for_controller = -0.05
 }
 
@@ -3622,102 +3582,4 @@ GER_effects_of_rapid_urbanization = {
 	state_production_speed_industrial_complex_factor = 0.25
 	# NEEDS TWEAKING (SHALL)
 	# Civ Construction Boost or something would be good
-}
-
-unknown_lands = {
-	enable = { original_tag = ITA }
-	attacker_modifier = yes
-	remove_trigger = { 
-		ROOT.owner = { 
-			NOT = { has_war_with = ITA  original_tag = ITA }
-		}
-	}
-	icon = GFX_unplanned_offensive
-
-	custom_modifier_tooltip = unknown_lands_tt
-	army_attack_factor = -0.1
-	army_defence_factor = -0.05
-	local_supply_impact_factor = 0.1
-}
-unknown_lands_2 = {
-	enable = { original_tag = ITA }
-	attacker_modifier = yes
-	remove_trigger = {
-		OR = {
-			# has_global_flag = libyan_crisis_resolved
-			# has_global_flag = great_war
-			ROOT.owner = {
-				NOT = {
-					has_war_with = ITA
-					original_tag = ITA
-					original_tag = LBA
-				}
-			}
-		}
-	}
-	icon = GFX_unplanned_offensive
-
-	army_attack_factor = -0.1
-	army_defence_factor = -0.05
-	local_supply_impact_factor = 0.1
-}
-
-SIA_british_sphere = {
-	enable = {
-		CONTROLLER = {
-			tag = SIA
-		}
-		any_neighbor_state = {
-			OWNER = {
-				OR = {
-					tag = ENG
-					is_subject_of = ENG
-				}
-				NOT = {
-					has_war_with = SIA
-				}
-			}
-		}
-	}
-	remove_trigger = {
-		OR = {
-			NOT = { is_owned_by = SIA }
-			ENG = { has_civil_war = yes }
-		}
-	}
-	icon = GFX_decision_generic_belgian_colonial_helmet
-	
-	state_production_speed_buildings_factor = 0.15
-	state_resources_factor = -0.30
-	local_factories = -0.30
-}
-
-SIA_french_sphere = {
-	enable = {
-		CONTROLLER = {
-			tag = SIA
-		}
-		any_neighbor_state = {
-			OWNER = {
-				OR = {
-					tag = FRA
-					is_subject_of = FRA
-				}
-				NOT = {
-					has_war_with = SIA
-				}
-			}
-		}
-	}
-	remove_trigger = {
-		OR = {
-			NOT = { is_owned_by = SIA }
-			FRA = { has_civil_war = yes }
-		}
-	}
-	icon = GFX_decision_generic_belgian_colonial_helmet
-	
-	state_production_speed_buildings_factor = 0.10
-	state_resources_factor = -0.15
-	local_factories = -0.15
 }

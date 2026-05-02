@@ -1,6 +1,6 @@
 ﻿capital = 405
 
-set_research_slots = 2
+set_research_slots = 3
 set_stability = 0.46
 
 1910.1.1 = {

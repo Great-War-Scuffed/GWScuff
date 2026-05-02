@@ -5,8 +5,10 @@ peace_deals = {
 		allowed = {
 			tag = LBA
 		}
-		targets = {
-			ENG
+		target_trigger = {
+			FROM = {
+				tag = ENG
+			}
 		}
 		# target_root_trigger = {
 		# 	has_war_with = FROM
@@ -217,19 +219,6 @@ war_in_desert = {
 		}
 		target_trigger = {
 			FROM = {
-				impassable = no
-				OR = {
-					is_core_of = ROOT
-					is_claimed_by = ROOT			
-				}
-				OWNER = {
-					NOT = {
-						original_tag = TUR #dont attack your friend, idiot
-						tag = ROOT
-						is_ally_with = ROOT
-						has_war_with = ROOT
-					}
-				}
 				any_neighbor_state = {
 					is_owned_and_controlled_by = ROOT
 					is_demilitarized_zone = no
@@ -239,6 +228,17 @@ war_in_desert = {
 					}
 				}
 				is_controlled_by = OWNER
+				OWNER = {
+					NOT = {
+						original_tag = TUR #dont attack your friend, idiot
+						tag = ROOT
+						is_in_faction_with = ROOT
+						is_subject_of = ROOT
+						has_subject = ROOT
+						has_war_with = ROOT
+					}
+				}
+				impassable = no
 				OR = {
 					AND = {
 						is_core_of = LBA
@@ -257,6 +257,10 @@ war_in_desert = {
 							has_country_flag = LBA_border_war_against_UK
 						}
 					}
+				}
+				OR = {
+					is_core_of = ROOT
+					is_claimed_by = ROOT			
 				}
 				if = {  #not allowed to take Sennusi main core states
 					limit = {
@@ -464,10 +468,11 @@ war_in_desert = {
 		fire_only_once = yes
 		target_trigger = {
 			FROM = {
+				state = 452
 				CONTROLLER = {
 					NOT = {
 						tag = LBA
-						is_ally_with = LBA
+						is_in_faction_with = LBA
 						tag = TUR
 					}
 					OR = {
@@ -478,9 +483,6 @@ war_in_desert = {
 					}
 				}
 			}
-		}
-		targets = {
-			452
 		}
 		days_mission_timeout = 420
 		visible = {
@@ -555,8 +557,10 @@ war_in_desert = {
 				}
 			}
 		}
-		targets = {
-			LBA
+		target_trigger = {
+			FROM = {
+				tag = LBA
+			}
 		}
 		war_with_on_remove = LBA
 		days_remove = 7

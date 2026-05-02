@@ -14,7 +14,7 @@ recruit_character = ELS_manuel_anrique_araujo
 recruit_character = ELS_jorge_melendez
 recruit_character = ELS_alfonso_quinonez_molina
 
-set_research_slots = 2
+set_research_slots = 3
 add_ideas = banana_republic
 #from agricultural_economy idea
 add_offsite_building = {

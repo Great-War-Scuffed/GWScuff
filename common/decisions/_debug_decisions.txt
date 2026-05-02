@@ -1,30 +1,4 @@
 debug_decisions = {
-	post_ww1_demobilization_debug = {
-		complete_effect = {
-			post_ww1_demobilization_effect = yes
-		}
-		available = {
-			is_ai = no
-		}
-		visible = {
-			is_debug = yes
-		}
-	}
-
-	post_ww1_demobilization_debug_everyone = {
-		complete_effect = {
-			every_country = {
-				post_ww1_demobilization_effect = yes
-			}
-		}
-		available = {
-			is_ai = no
-		}
-		visible = {
-			is_debug = yes
-		}
-	}
-
 	be_major = {
 		complete_effect = {
 			set_major = yes
@@ -226,7 +200,6 @@ debug_decisions = {
 						state = 826
 						state = 731
 						state = 803
-						state = 1225
 						state = 345
 						state = 184
 						state = 790
@@ -282,14 +255,14 @@ debug_decisions = {
 			hidden_effect = {
 				every_country = {
 					limit = {
-						is_ally_with = ENT
+						is_in_faction_with = ENT
 						has_war_with = GER
 					}
 					set_country_flag = member_of_entente
 				}
 				every_other_country = {
 					limit = {
-						is_ally_with = GER
+						is_in_faction_with = GER
 						has_war_with = ENT
 					}
 					set_country_flag = member_of_central_powers
@@ -298,14 +271,14 @@ debug_decisions = {
 					limit = {
 						is_subject = no
 						NOT = {
-							tag = ENT
-							is_ally_with = ENT
+							is_in_faction_with = ENT
 							has_country_flag = member_of_entente
 							has_country_flag = member_of_central_powers
 							tag = SOV
-							is_ally_with = SOV
-							any_country_with_original_tag = {
-								original_tag_to_check = RUS
+							is_in_faction_with = SOV
+							is_subject_of = SOV
+							any_country = {
+								original_tag = RUS
 								has_war_with = SOV
 							}
 						}
@@ -350,7 +323,7 @@ debug_decisions = {
 					limit = {
 						OR = {
 							tag = ENT
-							is_ally_with = ENT
+							is_in_faction_with = ENT
 							has_country_flag = FRA_surrender_alone
 							has_country_flag = RUS_surrender_alone
 						}
@@ -364,7 +337,7 @@ debug_decisions = {
 				}
 				every_other_country = {
 					limit = {
-						is_ally_with = GER
+						is_in_faction_with = GER
 						has_war_with = ENT
 					}
 					set_country_flag = member_of_central_powers
@@ -431,10 +404,7 @@ debug_decisions = {
 		cost = 0
 		complete_effect = {
 			FRA = {
-				activate_targeted_decision = {
-					target = GER
-					decision = FRA_armistice
-				}
+				activate_decision = FRA_armistice
 			}
 		}
 	}
@@ -453,6 +423,7 @@ debug_decisions = {
 			}
 		}
 		visible = {
+			is_debug = yes
 			has_global_flag = great_war
 			has_global_flag = FRA_capitulation_alone
 			NOT = {
@@ -469,17 +440,11 @@ debug_decisions = {
 				}
 			}
 		}
-		target_root_trigger = {
-			is_debug = yes
-		}
 		fire_only_once = no
 		cost = 0
 		complete_effect = {
 			FROM = {
-				activate_targeted_decision = {
-					target = GER
-					decision = ENT_armistice
-				}
+				activate_decision = ENT_armistice
 			}
 		}
 	}
@@ -611,10 +576,8 @@ debug_decisions = {
 			is_ai = no
 		}
 		visible = {
-			is_subject = yes
-		}
-		target_root_trigger = {
 			is_debug = yes
+			is_subject = yes
 		}
 		fire_only_once = no
 		cost = 0
@@ -636,10 +599,8 @@ debug_decisions = {
 			is_ai = no
 		}
 		visible = {
-			is_subject = yes
-		}
-		target_root_trigger = {
 			is_debug = yes
+			is_subject = yes
 		}
 		fire_only_once = no
 		cost = 0
@@ -661,10 +622,8 @@ debug_decisions = {
 			is_ai = no
 		}
 		visible = {
-			is_subject = yes
-		}
-		target_root_trigger = {
 			is_debug = yes
+			is_subject = yes
 		}
 		fire_only_once = no
 		cost = 0
@@ -871,6 +830,7 @@ debug_decisions = {
 		ai_will_do = {
 			base = 0
 		}
+		power_balance = _test_balance
 	}
 	create_recruitable_operative_not_to_spy_master_debug = {
 		icon = generic_research
@@ -1127,6 +1087,7 @@ debug_decisions = {
 	capitulate_em = {
 		available = {
 			is_ai = no
+			is_debug = yes
 		}
 		target_trigger = {
 			FROM = {
@@ -1136,9 +1097,6 @@ debug_decisions = {
 				}
 				has_capitulated = no
 			}
-		}
-		target_root_trigger = {
-			is_debug = yes
 		}
 		visible = {
 		}

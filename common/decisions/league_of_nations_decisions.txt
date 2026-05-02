@@ -128,8 +128,11 @@ league_of_nations_category = {
 							has_government = neutrality
 						}
 						is_subject = no
-						any_country_of = {
-							target = { AUS BUL }
+						any_country = {
+							OR = {
+								tag = AUS
+								tag = BUL
+							}
 							is_league_of_nations_member = yes
 						}
 					}
@@ -343,6 +346,11 @@ league_of_nations_category = {
 		allowed = {
 			always = yes
 		}
+		visible = {
+			is_subject = no
+			is_league_of_nations_member = yes
+			has_global_flag = league_of_nations
+		}
 		available = {
 			NOT = {
 				has_global_flag = LoN_disbanded_flag
@@ -358,11 +366,6 @@ league_of_nations_category = {
 					has_added_tension_amount > 10
 				}
 			}
-		}
-		target_root_trigger = {
-			has_global_flag = league_of_nations
-			is_subject = no
-			is_league_of_nations_member = yes			
 		}
 		cancel_trigger = {
 			has_global_flag = LoN_disbanded_flag
@@ -407,9 +410,9 @@ league_of_nations_category = {
 				news_event = {
 					id = league_of_nations.12
 				}
-				clr_global_flag = lon_embargo_vote
-				clear_global_event_target = lon_embargo_target
 			}
+			clr_global_flag = lon_embargo_vote
+			clear_global_event_target = lon_embargo_target
 		}
 		cancel_effect = {
 			every_country = {
@@ -418,10 +421,8 @@ league_of_nations_category = {
 				}
 				clr_country_flag = lon_embargo_reject
 			}
-			FROM = {
-				clr_global_flag = lon_embargo_vote
-				clear_global_event_target = lon_embargo_target
-			}
+			clr_global_flag = lon_embargo_vote
+			clear_global_event_target = lon_embargo_target
 			add_political_power = 75
 		}
 		ai_will_do = {

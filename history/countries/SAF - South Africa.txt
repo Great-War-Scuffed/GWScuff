@@ -1,7 +1,7 @@
 ﻿capital = 275
 
 set_fuel_ratio = 0.20
-set_research_slots = 2
+set_research_slots = 3
 add_to_tech_sharing_group = commonwealth_research
 set_stability = 0.35
 
@@ -42,7 +42,7 @@ recruit_character = SAF_cornelius_van_wyk
 		basic_field_gun = 1
 
 		#navy
-		
+		transport = 1
 
 		#engineering
 		electrical_engineering = 1
@@ -55,7 +55,7 @@ recruit_character = SAF_cornelius_van_wyk
 
 	add_ideas = {
 		SAF_mining_reliant_economy
-		SAF_segregation
+		#SAF_segregation
 	}
 
 	set_politics = {

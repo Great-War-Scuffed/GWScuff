@@ -4,7 +4,7 @@
 #					GENERIC VALUES
 #-------------------------------------------------------
 set_fuel_ratio = 0.20
-set_research_slots = 2
+set_research_slots = 3
 set_stability = 0.68
 set_convoys = 10
 set_country_flag = monroe_doctrine
@@ -24,6 +24,7 @@ add_offsite_building = {
 		#infantry
 		infantry_weapons = 1
 		infantry_weapons1 = 1
+		support_weapons = 1
 		
 		#support
 		tech_support = 1

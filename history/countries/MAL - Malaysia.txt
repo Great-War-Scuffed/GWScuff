@@ -1,6 +1,6 @@
 ﻿capital = 336 #Kuala Lumpur
 
-set_research_slots = 2
+set_research_slots = 3
 
 recruit_character = MAL_arthur_henderson_young
 recruit_character = MAL_reginald_george_watson
@@ -19,7 +19,6 @@ recruit_character = MAL_reginald_george_watson
 	}
 
 	set_technology = {
-		obsolete_infantry_weapons = 1
 		infantry_weapons = 1
 		infantry_weapons1 = 1
 	}

@@ -64,7 +64,8 @@ peace_deals = {
 						owns_state = 818
 						FROM = {
 							OR = {
-								is_ally_with = AZR
+								is_in_faction_with = AZR
+								has_subject = AZR
 								ROOT = { has_war_with = AZR }
 								AZR = { is_subject = no NOT = { has_war_with = FROM } }
 							}

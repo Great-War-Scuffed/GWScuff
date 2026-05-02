@@ -169,7 +169,7 @@ characters={
 				original_tag = POL
 			}
 			traits = {
-				trench_warfare_expert
+				grand_battle_plan_expert
 			}
 			available  = {
 				or  = {

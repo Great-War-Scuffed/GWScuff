@@ -51,11 +51,15 @@ foreign_politics = {
 		allowed = {
 			original_tag = HOL
 		}
-		targets = {
-			BEL
-			FRA
-			GER
-			LUX
+		target_trigger = {
+			FROM = {
+				OR = {
+					tag = BEL
+					tag = FRA
+					tag = GER
+					tag = LUX
+				}
+			}
 		}
 		available = {
 			is_subject = no
@@ -127,6 +131,7 @@ foreign_politics = {
 			}
 		}
 		visible = {
+			has_completed_focus = HOL_imperial_spirit
 			FROM = {
 				any_owned_state = {
 					OR = {
@@ -135,12 +140,9 @@ foreign_politics = {
 					}
 				}
 			}
-		}
-		target_root_trigger = {
 			NOT = {
 				has_country_flag = great_war_loser
 			}
-			has_completed_focus = HOL_imperial_spirit
 		}
 		fire_only_once = yes
 		complete_effect = {
@@ -160,6 +162,7 @@ foreign_politics = {
 
 foreign_influence = {
 	HOL_annex_RIA = {
+		name = annex_FROM
 		icon = GFX_decision_eng_trade_unions_demand
 		allowed = {
 			OR = {
@@ -169,6 +172,7 @@ foreign_influence = {
 		}
 		target_trigger = {
 			FROM = {
+				tag = RIA
 				OR = {
 					is_subject_of = ROOT
 					AND = {
@@ -177,9 +181,6 @@ foreign_influence = {
 					}
 				}
 			}
-		}
-		targets = {
-			RIA
 		}
 		available = {
 			is_subject = no
@@ -193,7 +194,7 @@ foreign_influence = {
 				}
 			}
 		}
-		target_root_trigger = {
+		visible = {
 			OR = {
 				has_completed_focus = HOL_dutch_indonesia
 				AND = {
@@ -238,7 +239,6 @@ foreign_influence = {
 					}
 				}
 			}
-			1051 = { add_core_of = INS }
 		}
 		cost = 100
 		ai_will_do = {

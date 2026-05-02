@@ -1,7 +1,9 @@
 ﻿capital=554
 set_stability = 0.5
-set_research_slots = 2
+set_research_slots = 3
 
+recruit_character = SYR_faisal_i
+recruit_character = SYR_ghazi_bin_faisal
 recruit_character = SYR_hashim_al_atassil
 recruit_character = SYR_ibrahim_hannau
 recruit_character = SYR_muhammad_al_ashmar

@@ -83,7 +83,8 @@ characters={
 			visible = {
 				OR = {
 					original_tag = ENG
-					is_ally_with = ENG
+					is_subject_of = ENG
+					is_in_faction_with = ENG
 					has_idea = ENG_british_officers_independent_egypt
 				}
 			}
@@ -107,7 +108,8 @@ characters={
 			visible = {
 				OR = {
 					original_tag = ENG
-					is_ally_with = ENG
+					is_subject_of = ENG
+					is_in_faction_with = ENG
 					has_idea = ENG_british_officers_independent_egypt
 				}
 			}

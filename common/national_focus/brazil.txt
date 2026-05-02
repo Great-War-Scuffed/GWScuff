@@ -46,7 +46,7 @@ focus_tree = {
 	focus = { 
 		id = BRA_1910_elections
 		icon = GFX_focus_generic_voting
-		cost = 10
+		cost = 5
 		x = 11
 		y = 0
 		available = {
@@ -66,7 +66,7 @@ focus_tree = {
 	focus = {
 		id = BRA_aeroclube_do_brasil
 		icon = GFX_focus_BRA_air_force
-		cost = 10
+		cost = 5
 		x = 24
 		y = 0
 		available = {
@@ -94,7 +94,7 @@ focus_tree = {
 	focus = {
 		id = BRA_industrial_outbreak
 		icon = GFX_goal_generic_construct_civilian
-		cost = 10
+		cost = 5
 		x = 2
 		y = 0
 		completion_reward = {
@@ -190,29 +190,27 @@ focus_tree = {
 					start_civil_war = {
 						hidden_effect = {
 							set_party_name = { ideology = democratic long_name = BRA_republican_paulista_party_long name = BRA_republican_paulista_party }
-							set_cosmetic_tag = BRA_vargas	
+							set_cosmetic_tag = BRA_vargas
+							BRA_pinheiro_machado = {
+								promote_character = yes
+							}	
 						}
 						ideology = democratic
-						keep_all_characters = yes
+						keep_political_leader = no
+						keep_political_party_members = yes
 						size = BRA_monarchist_cw_opposition
 						capital = 500
 						states = { 501 811 498 }
-						PREV = {
-							BRA_pinheiro_machado = {
-								set_nationality = PREV.PREV
-								promote_character = yes
-							}
-							every_character = {
-								limit = {
-									OR = { 
-										is_character = BRA_setembrino_de_carvalho 
-										is_character = BRA_candido_rondon
-										is_character = BRA_emygdio_dantas_barreto
-										is_character = BRA_augusto_tasso_fragoso
-									}
-								}
-								set_nationality = PREV.PREV
-							}
+						# keep_unit_leaders = {
+ 						# 	55657 55658 55663 55655
+ 						# }
+						keep_unit_leaders_trigger = {
+							NOT = { 
+								is_character = BRA_setembrino_de_carvalho 
+								is_character = BRA_candido_rondon
+								is_character = BRA_emygdio_dantas_barreto
+								is_character = BRA_augusto_tasso_fragoso
+							} 
 						}
 					}
 					hidden_effect = {
@@ -263,21 +261,13 @@ focus_tree = {
 			factor = 5
 		}
 		completion_reward = {
-			effect_tooltip = {
-				start_civil_war = {
-					ruling_party = fascism
-					ideology = communism
-				}
-			}			
-		}
-		search_filters = {
-			FOCUS_FILTER_COMPLETED_BY_EVENT
+			
 		}
 	}
 	focus = {
 		id = BRA_army_effort
 		icon = GFX_focus_BRA_army
-		cost = 10
+		cost = 5
 		x = 20
 		y = 0
 		completion_reward = {
@@ -285,7 +275,7 @@ focus_tree = {
 			add_doctrine_cost_reduction = {
 				name = land_doc_bonus
 				cost_reduction = 0.5
-				uses = 1
+				uses = 2
 				category = land_doctrine
 			}
 		}
@@ -298,7 +288,7 @@ focus_tree = {
 	focus = {
 		id = BRA_south_american_naval_race
 		icon = GFX_focus_SMB_reescalate_the_naval_arms_race
-		cost = 10
+		cost = 5
 		x = 24
 		y = 3
 		available = {
@@ -324,7 +314,7 @@ focus_tree = {
 	focus = {
 		id = BRA_attract_foreign_investors
 		icon = GFX_goal_generic_improve_relations
-		cost = 10
+		cost = 5
 		prerequisite = {
 			focus = BRA_industrial_outbreak
 		}
@@ -336,7 +326,7 @@ focus_tree = {
 		completion_reward = {
 			add_offsite_building = {
 				type = industrial_complex
-				level = 1
+				level = 2
 			}
 		}
 		search_filters = { FOCUS_FILTER_INDUSTRY }
@@ -347,7 +337,7 @@ focus_tree = {
 	focus = {
 		id = BRA_amadeo_rossi
 		icon = GFX_goal_generic_production
-		cost = 10
+		cost = 5
 		prerequisite = {
 			focus = BRA_attract_foreign_investors
 		}
@@ -358,10 +348,10 @@ focus_tree = {
 		}
 		completion_reward = {
 			502 = {
-				add_extra_state_shared_building_slots = 1
+				add_extra_state_shared_building_slots = 2
 				add_building_construction = {
 					type = arms_factory
-					level = 1
+					level = 2
 					instant_build = yes
 				}
 			}
@@ -397,6 +387,7 @@ focus_tree = {
 					}
 				}
 				prioritize = { 501 }
+				add_extra_state_shared_building_slots = 1
 				add_building_construction = {
 					type = infrastructure
 					level = 1
@@ -411,6 +402,7 @@ focus_tree = {
 					}
 				}
 				prioritize = { 504 }
+				add_extra_state_shared_building_slots = 1
 				add_building_construction = {
 					type = infrastructure
 					level = 1
@@ -425,6 +417,7 @@ focus_tree = {
 					}
 				}
 				prioritize = { 503 }
+				add_extra_state_shared_building_slots = 1
 				add_building_construction = {
 					type = infrastructure
 					level = 1
@@ -439,6 +432,97 @@ focus_tree = {
 					}
 				}
 				prioritize = { 502 }
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = infrastructure
+					level = 1
+					instant_build = yes
+				}
+			}
+						random_owned_controlled_state = {
+				limit = {
+					free_building_slots = {
+						building = infrastructure
+						size > 0
+					}
+				}
+				prioritize = { 1079 }
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = infrastructure
+					level = 1
+					instant_build = yes
+				}
+			}
+						random_owned_controlled_state = {
+				limit = {
+					free_building_slots = {
+						building = infrastructure
+						size > 0
+					}
+				}
+				prioritize = { 1073 }
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = infrastructure
+					level = 1
+					instant_build = yes
+				}
+			}
+						random_owned_controlled_state = {
+				limit = {
+					free_building_slots = {
+						building = infrastructure
+						size > 0
+					}
+				}
+				prioritize = { 499 }
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = infrastructure
+					level = 1
+					instant_build = yes
+				}
+			}
+						random_owned_controlled_state = {
+				limit = {
+					free_building_slots = {
+						building = infrastructure
+						size > 0
+					}
+				}
+				prioritize = { 1074 }
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = infrastructure
+					level = 1
+					instant_build = yes
+				}
+			}
+						random_owned_controlled_state = {
+				limit = {
+					free_building_slots = {
+						building = infrastructure
+						size > 0
+					}
+				}
+				prioritize = { 497 }
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = infrastructure
+					level = 1
+					instant_build = yes
+				}
+			}
+						random_owned_controlled_state = {
+				limit = {
+					free_building_slots = {
+						building = infrastructure
+						size > 0
+					}
+				}
+				prioritize = { 496 }
+				add_extra_state_shared_building_slots = 1
 				add_building_construction = {
 					type = infrastructure
 					level = 1
@@ -453,7 +537,7 @@ focus_tree = {
 	focus = {
 		id = BRA_steel_mills
 		icon = GFX_focus_BRA_national_steel_company
-		cost = 10
+		cost = 5
 		prerequisite = {
 			focus = BRA_expand_the_railways
 		}
@@ -492,10 +576,18 @@ focus_tree = {
 		}
 		completion_reward = {
 			811 = {
-				add_extra_state_shared_building_slots = 1
+				add_extra_state_shared_building_slots = 2
 				add_building_construction = {
 					type = arms_factory
-					level = 1
+					level = 2
+					instant_build = yes
+				}
+			}
+			505 = {
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = arms_factory
+					level = 2
 					instant_build = yes
 				}
 			}
@@ -530,10 +622,32 @@ focus_tree = {
 					}
 					is_in_home_area = yes
 				}
-				add_extra_state_shared_building_slots = 1
+				add_extra_state_shared_building_slots = 2
 				add_building_construction = {
 					type = industrial_complex
-					level = 1
+					level = 2
+					instant_build = yes
+				}
+			}
+						random_owned_controlled_state = {
+				limit = {
+					NOT = {
+						state = 280
+						state = 495
+						state = 496
+						state = 1071
+					}
+					free_building_slots = {
+						building = industrial_complex
+						size > 0
+						include_locked = yes
+					}
+					is_in_home_area = yes
+				}
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = industrial_complex
+					level = 2
 					instant_build = yes
 				}
 			}
@@ -564,7 +678,7 @@ focus_tree = {
 	focus = {
 		id = BRA_loan_from_us
 		icon = GFX_focus_chi_mission_to_the_us
-		cost = 10
+		cost = 5
 		prerequisite = {
 			focus = BRA_federal_center_for_technological_education
 		}
@@ -609,9 +723,9 @@ focus_tree = {
 			num_of_civilian_factories > 20
 		}	
 		completion_reward = {
-			500 = {add_extra_state_shared_building_slots = 1}
-			811 = {add_extra_state_shared_building_slots = 1}
-			501 = {add_extra_state_shared_building_slots = 1}
+			500 = {add_extra_state_shared_building_slots = 4}
+			811 = {add_extra_state_shared_building_slots = 4}
+			501 = {add_extra_state_shared_building_slots = 4}
 				random_owned_controlled_state = {
 					limit = {
 						free_building_slots = {
@@ -669,7 +783,7 @@ focus_tree = {
 	focus = {
 		id = BRA_madeira_mamore_railroad
 		icon = GFX_focus_generic_tropical_railway
-		cost = 10
+		cost = 5
 		prerequisite = {
 			focus = BRA_expand_the_railways
 		}
@@ -716,9 +830,10 @@ focus_tree = {
 							size > 0
 						}
 					}
+					add_extra_state_shared_building_slots = 3
 					add_building_construction = {
 						type = infrastructure
-						level = 1
+						level = 3
 						instant_build = yes
 					}
 				}	
@@ -1904,7 +2019,58 @@ focus_tree = {
 			}
 		}
 		completion_reward = {
-			BRA_sao_paulo_battleship_effect = yes
+			if = {
+				limit = {
+					has_dlc = "Man the Guns"
+				}
+				hidden_effect = {
+					ENG = {
+						create_equipment_variant = {
+							name = "Minas Geraes Class"
+							type = ship_hull_heavy_1
+							name_group = BRA_BB_HISTORICAL
+							parent_version = 0
+							modules = {
+								fixed_ship_battery_slot = ship_heavy_battery_1
+								fixed_ship_anti_air_slot = empty
+								fixed_ship_fire_control_system_slot = ship_fire_control_system_0
+								fixed_ship_radar_slot = empty
+								fixed_ship_engine_slot = heavy_ship_engine_1
+								fixed_ship_secondaries_slot = ship_secondaries_1
+								fixed_ship_armor_slot = ship_armor_bb_1
+								front_1_custom_slot = empty
+								mid_1_custom_slot = ship_secondaries_1
+								rear_1_custom_slot = empty
+							}
+							obsolete = yes
+						}
+					}
+				}
+				create_ship = {
+					name = "São Paulo"
+					type = ship_hull_heavy_1
+					creator = ENG
+					equipment_variant = "Minas Geraes Class"
+				}
+			}
+			else = {
+				hidden_effect = {
+					ENG = {
+						create_equipment_variant = {
+							name = "Minas Geraes Class"
+							type = battleship_1
+							parent_version = 0
+							obsolete = yes
+						}
+					}
+				}
+				create_ship = {
+					name = "São Paulo"
+					type = battleship_1
+					creator = ENG
+					equipment_variant = "Minas Geraes Class"
+				}
+			}
 		}
 		ai_will_do = {
 			factor = 3
@@ -2863,7 +3029,8 @@ focus_tree = {
 			PAR = {
 				OR = {
 					exists = no	
-					is_ally_with = BRA
+					is_in_faction_with = BRA
+					is_subject_of = BRA
 				}					
 			}
 		}

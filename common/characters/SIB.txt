@@ -402,7 +402,7 @@ characters={
 			slot = political_advisor
 			idea_token = SIB_viktor_pepelyayev
 			allowed  = {
-				tag = SIB
+				original_tag = RUS
 			}
 			available  = {
 				has_completed_focus = SIB_proclaim_siberia
@@ -504,9 +504,7 @@ characters={
 				OR = {
 					AND = {
 						has_government = neutrality
-						NOT = {
-							has_country_flag = sib_disbanded_duma
-						}
+						has_country_flag = sib_disbanded_duma
 					}	
 					has_government = democratic	
 					has_cosmetic_tag = POLITCENTRE	

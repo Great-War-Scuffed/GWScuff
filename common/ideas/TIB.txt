@@ -1,7 +1,7 @@
 ideas = {
     country = {
 		TIB_monastic_institutions = {
-			picture = TIB_tibetan_politics
+			picture = buddha
 			removal_cost = -1
 
 			allowed = {
@@ -86,9 +86,6 @@ ideas = {
 						}
 					}
 				}
-			}
-			modifier = {
-				custom_modifier_tooltip = TIB_de_facto_independence_tt
 			}
 		}
 	}

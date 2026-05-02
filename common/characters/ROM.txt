@@ -562,7 +562,7 @@ characters = {
 			}
 			cost = 150
 			traits = {
-				cult_of_offensive_expert
+				mass_assault_expert
 			}
 		}
 		corps_commander = {

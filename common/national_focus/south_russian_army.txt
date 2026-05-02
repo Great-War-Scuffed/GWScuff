@@ -22,7 +22,7 @@ focus_tree = {
 		y = 0
 		cost = 1
 		search_filters = {
-			FOCUS_FILTER_POLITICAL FOCUS_FILTER_WAR_SUPPORT FOCUS_FILTER_STABILITY
+			FOCUS_FILTER_POLITICAL
 		}
 		ai_will_do = {
 			factor = 100
@@ -54,15 +54,10 @@ focus_tree = {
 		cost = 2
 		search_filters = {  
 			FOCUS_FILTER_POLITICAL 
-			FOCUS_FILTER_POLITICAL_CHARACTER
 		}
 
 		completion_reward = {
 			country_event = ww1_sra.15
-			custom_effect_tooltip = which_will_give_tt
-			event_option_tooltip = ww1_sra.15.a
-			custom_effect_tooltip = available_political_advisor
-			show_ideas_tooltip = RUS_nikolai_astrov
 		}
 
 		ai_will_do = {
@@ -125,7 +120,7 @@ focus_tree = {
 		 relative_position_id = SRA_special_meeting
 		cost = 5
 		search_filters = {  
-			FOCUS_FILTER_ANNEXATION
+			FOCUS_FILTER_POLITICAL 
 		}
 		completion_reward = {
 			set_country_flag = SRA_foreign_relation_decisions
@@ -150,7 +145,7 @@ focus_tree = {
 		relative_position_id = SRA_foreign_relations
 		cost = 5
 		search_filters = {  
-			FOCUS_FILTER_ANNEXATION
+			FOCUS_FILTER_POLITICAL 
 		}
 
 		completion_reward = {
@@ -163,7 +158,7 @@ focus_tree = {
 						NOT = {
 							has_government = communism
 							has_war_with = ROOT
-							is_ally_with = SOV
+							is_in_faction_with = SOV
 						}
 					}
 				}
@@ -195,7 +190,7 @@ focus_tree = {
 		relative_position_id = SRA_afsr
 		cost = 5
 		search_filters = {  
-			FOCUS_FILTER_ANNEXATION
+			FOCUS_FILTER_POLITICAL 
 		}
 		completion_reward = {
 			unlock_decision_tooltip = SRA_core_states
@@ -209,14 +204,14 @@ focus_tree = {
 			focus = SRA_afsr
 		}
 		available = {
-			has_war_with = SOV
+
 		}
 		x = -1
 		y = 1
 		relative_position_id = SRA_afsr
 		cost = 5
 		search_filters = {  
-			FOCUS_FILTER_WAR_PREPERATION
+			FOCUS_FILTER_POLITICAL 
 		}
 		mutually_exclusive = { 
 			focus = SRA_ufa_directive
@@ -255,13 +250,8 @@ focus_tree = {
 			focus = SRA_afsr
 		}
 		available = {
-			has_war_with = SOV
-			any_other_country = {
-				OR = {
-					tag = KOM
-					tag = SIB
-				}
-				has_war_with = SOV
+			SIB = {
+				exists = yes
 				is_puppet = no
 				NOT = {
 					has_government = communism
@@ -274,7 +264,7 @@ focus_tree = {
 		relative_position_id = SRA_afsr
 		cost = 5
 		search_filters = {  
-			FOCUS_FILTER_WAR_PREPERATION 
+			FOCUS_FILTER_POLITICAL 
 		}
 		mutually_exclusive = { 
 			focus = SRA_moscow_directive
@@ -302,7 +292,6 @@ focus_tree = {
 			UKR = {
 				NOT = {
 					has_government = communism
-					has_war_with = GER
 				}
 				has_war_with = SOV
 				is_puppet = no
@@ -320,7 +309,7 @@ focus_tree = {
 		relative_position_id = SRA_afsr
 		cost = 5
 		search_filters = {  
-			FOCUS_FILTER_ANNEXATION
+			FOCUS_FILTER_POLITICAL 
 		}
 	}
 
@@ -371,7 +360,7 @@ focus_tree = {
 		relative_position_id = SRA_special_council
 		cost = 5
 		search_filters = {  
-			FOCUS_FILTER_WAR_SUPPORT FOCUS_FILTER_STABILITY FOCUS_FILTER_POLITICAL
+			FOCUS_FILTER_ANNEXATION
 		}
 
 		ai_will_do = {
@@ -436,9 +425,7 @@ focus_tree = {
 		relative_position_id = SRA_osvag
 		cost = 5
 		search_filters = {  
-			FOCUS_FILTER_POLITICAL
-			FOCUS_FILTER_POLITICAL_CHARACTER
-			FOCUS_FILTER_WAR_SUPPORT
+			FOCUS_FILTER_ANNEXATION
 		}
 
 		ai_will_do = {
@@ -452,8 +439,6 @@ focus_tree = {
 			}
 			add_war_support = 0.1
 			add_political_power = 100
-			custom_effect_tooltip = available_political_advisor
-			show_ideas_tooltip = RUS_vladimir_purishkevich
 		}
 	}
 
@@ -476,7 +461,7 @@ focus_tree = {
 		relative_position_id = SRA_ice_march
 		cost = 5
 		search_filters = {  
-			FOCUS_FILTER_POLITICAL
+			FOCUS_FILTER_ANNEXATION
 		}
 
 		completion_reward = {
@@ -517,7 +502,7 @@ focus_tree = {
 		relative_position_id = SRA_allied_intervention
 		cost = 5
 		search_filters = {  
-			FOCUS_FILTER_ARMY_XP
+			FOCUS_FILTER_ANNEXATION
 		}
 	}
 
@@ -640,7 +625,7 @@ focus_tree = {
 		relative_position_id = SRA_open_up_mobilization
 		cost = 5
 		search_filters = {  
-			FOCUS_FILTER_POLITICAL_CHARACTER 
+			FOCUS_FILTER_POLITICAL 
 		}
 
 		completion_reward = {
@@ -789,7 +774,15 @@ focus_tree = {
 		completion_reward = {
 			custom_effect_tooltip = SRA_rearm_navy_tt
 			hidden_effect = {
-				load_oob = "SRA_wrangels_fleet"
+				if = {
+					limit = {
+						has_dlc = "Man the Guns"
+					}
+					load_oob = "SRA_wrangels_fleet"
+				}
+				else = {
+					load_oob = "SRA_wrangels_fleet_legacy"
+				}
 			}
 		}
 	}

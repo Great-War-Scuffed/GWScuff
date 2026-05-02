@@ -59,12 +59,7 @@ focus_tree = {
 		}
 		available = {
 			owns_state = 882
-			NOT = {
-				882 = { is_core_of = ROOT }
-			}		
-		}
-		bypass = {
-			has_war_with = OMA
+			882 = { is_core_of = OMA }
 		}
 		completion_reward = {
 			882 = {
@@ -92,16 +87,7 @@ focus_tree = {
 			focus = MSC_deal_with_imamate
 		}
 		available = {
-			OR = {
-				AND = {
-					owns_state = 882
-					NOT = {
-						882 = { is_core_of = ROOT }
-					}
-				}
-				has_war_with = OMA
-			}
-			
+			owns_state = 882
 		}
 		completion_reward = {
 			country_event = ww1_oman.6
@@ -133,12 +119,7 @@ focus_tree = {
 			}
 			OR = {
 				is_subject_of = ENG
-				AND = {
-					is_subject_of = RAJ
-					RAJ = {
-						is_subject_of = ENG
-					}
-				}
+				is_subject = no
 			}
 		}
 		prerequisite = {
@@ -146,8 +127,17 @@ focus_tree = {
 		}
 		completion_reward = {
 			add_political_power = 5
-			add_autonomy_score = {
-				value = 100
+			hidden_effect = {
+				get_current_government_type = yes
+			}
+			ENG = {
+				set_autonomy = {
+					target = ROOT
+					autonomy_state = autonomy_dominion
+				}
+			}
+			hidden_effect = {
+				restore_previous_government_type = yes
 			}
 		}
 	}
@@ -229,22 +219,8 @@ focus_tree = {
 			focus = MSC_matters_of_the_sultanate
 		}
 		completion_reward = {
-			if = {
-				limit = { 
-					OR = {
-						is_subject = no
-						is_subject_of = ENG
-						AND = {
-							is_subject_of = RAJ
-							RAJ = {
-								is_subject_of = ENG
-							}
-						}
-					}	
-				}
-				OVERLORD = {
-					end_puppet = ROOT
-				}
+			ENG={
+				end_puppet = ROOT
 			}
 			add_opinion_modifier = {
 				target = ENG
@@ -566,7 +542,10 @@ focus_tree = {
 			FOCUS_FILTER_INDUSTRY
 		}
 		available = {
-			is_ally_with = ENG	
+			OR = {
+				is_subject_of = ENG
+				is_in_faction_with = ENG
+			}		
 		}
 		prerequisite = {
 			focus = MSC_matters_of_the_sultanate

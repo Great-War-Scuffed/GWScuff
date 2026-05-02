@@ -4,7 +4,11 @@ foreign_politics = {
 		allowed = {
 			original_tag = BOL
 		}
-		target_array = 958.owner
+		target_trigger = {
+			FROM = {
+				owns_state = 958
+			}
+		}
 		visible = {
 			is_subject = no
 			owns_state = 302

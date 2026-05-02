@@ -182,7 +182,7 @@ unification_of_arabia_cat = {
 		allowed = {
 			original_tag = HJZ
 		}
-		target_root_trigger = {
+		visible = {
 			has_country_flag = khurma_negotiations_failed
 		}
 		target_trigger = {
@@ -219,7 +219,11 @@ unification_of_arabia_cat = {
 				has_war_with = ENG
 			}
 		}
-		target_array = 918.owner
+		target_trigger = {
+			FROM = {
+				owns_state = 918
+			}
+		}
 		available = {
 			is_subject = no
 			has_war = no

@@ -191,7 +191,7 @@ characters={
 			}
 		}
 		corps_commander={
-			traits = { artillery_specialist } 
+			traits = { artillery_leader } 
 			skill = 2 
 			attack_skill = 2
 			defense_skill = 2 

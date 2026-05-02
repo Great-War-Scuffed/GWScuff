@@ -1335,7 +1335,7 @@ focus_tree = {
 					}
 				}
 				build_railway = {
-					path = { 7125 7175 1100 7943 4126 10110 }
+					path = { 7125 10030 1100 7943 4126 10110 }
 					start_province = 7125
 					target_province = 10110
 					level = 2
@@ -1412,33 +1412,64 @@ focus_tree = {
 				limit = {
 					NOT = { has_war_with = GER }
 				}
-				create_ship = {
-					type = ship_hull_pre_dreadnought
-					equipment_variant = "Brandenburg Class"
-					creator = GER
-					name = "Chungmugong Yi"
+				if = {
+					limit = { has_dlc = "Man the Guns" }
+					create_ship = {
+						type = ship_hull_pre_dreadnought
+						equipment_variant = "Brandenburg Class"
+						creator = GER
+						name = "Chungmugong Yi"
+					}
+				}
+				else = {
+					create_ship = {
+						type = battleship_1
+						creator = GER
+						name = "Chungmugong Yi"
+					}
 				}
 			}
 			if = {
 				limit = {
 					NOT = { has_war_with = ENG }
 				}
-				create_ship = {
-					type = ship_hull_pre_dreadnought
-					equipment_variant = "Majestic Class"
-					creator = ENG
-					name = "Sejong the Great"
+				if = {
+					limit = { has_dlc = "Man the Guns" }
+					create_ship = {
+						type = ship_hull_pre_dreadnought
+						equipment_variant = "Majestic Class"
+						creator = ENG
+						name = "Sejong the Great"
+					}
+				}
+				else = {
+					create_ship = {
+						type = battleship_1
+						creator = ENG
+						name = "Sejong the Great"
+					}
 				}
 			}
 			if = {
 				limit = {
 					NOT = { has_war_with = RUS }
 				}
-				create_ship = {
-					type = ship_hull_pre_dreadnought
-					equipment_variant = "Borodino Class"
-					creator = RUS
-					name = "Gwanggaeto the Great"
+				if = {
+					limit = { has_dlc = "Man the Guns" }
+					create_ship = {
+						type = ship_hull_pre_dreadnought
+						equipment_variant = "Borodino Class"
+						creator = RUS
+						name = "Gwanggaeto the Great"
+					}
+				}
+				else = {
+					create_ship = {
+						type = battleship_1
+						equipment_variant = "Borodino Class"
+						creator = RUS
+						name = "Gwanggaeto the Great"
+					}
 				}
 			}
 		}
@@ -1460,28 +1491,28 @@ focus_tree = {
 			FOCUS_FILTER_ANNEXATION
 		}
 		bypass = {
-			country_exists = OKN
+			country_exists = RYU
 		}
 		available = {
 			526 = {
 				is_owned_or_subject_trigger = yes
 			}
 			NOT = {
-				country_exists = OKN
+				country_exists = RYU
 			}
 		}
 		completion_reward = {
 			hidden_effect = {
-				OKN = {
+				RYU = {
 					add_state_core = 526
 					transfer_state = 526
 				}
-				puppet = OKN
+				puppet = RYU
 				if = {
 					limit = {
 						NOT = { has_government = communism }
 					}
-					OKN = {
+					RYU = {
 						set_politics = {
 							ruling_party = neutrality
 						}
@@ -1492,7 +1523,7 @@ focus_tree = {
 				}
 			}
 			effect_tooltip = {
-				release_puppet = OKN
+				release_puppet = RYU
 			}
 		}
 	}
@@ -1555,7 +1586,8 @@ focus_tree = {
 				exists = yes
 				NOT = {
 					has_war_with = ROOT
-					is_ally_with = ROOT
+					is_subject_of = ROOT
+					is_in_faction_with = ROOT
 				}
 				strength_ratio = {
 					tag = ROOT
@@ -1754,7 +1786,8 @@ focus_tree = {
 						limit = {
 							NOT = {
 								has_war_with = ROOT
-								is_ally_with = ROOT
+								is_subject_of = ROOT
+								is_in_faction_with = ROOT
 							}
 						}
 						PREV = { save_event_target_as = demanded_prov_target }
@@ -1827,7 +1860,8 @@ focus_tree = {
 				is_neighbor_of_subject = yes
 				NOT = {
 					has_war_with = ROOT
-					is_ally_with = ROOT
+					is_subject_of = ROOT
+					is_in_faction_with = ROOT
 					original_tag = MAN
 				}
 			}
@@ -1835,7 +1869,7 @@ focus_tree = {
 		will_lead_to_war_with = CHI
 		will_lead_to_war_with = QIN
 		will_lead_to_war_with = ANC
-		will_lead_to_war_with = SND
+		will_lead_to_war_with = SDC
 		will_lead_to_war_with = FNG
 		completion_reward = {
 			every_state = {
@@ -1872,7 +1906,8 @@ focus_tree = {
 					is_neighbor_of_subject = yes
 					NOT = {
 						has_war_with = ROOT
-						is_ally_with = ROOT
+						is_subject_of = ROOT
+						is_in_faction_with = ROOT
 						original_tag = MAN
 					}
 					strength_ratio = {
@@ -2299,7 +2334,8 @@ focus_tree = {
 						region = 155
 					}
 					NOT = {
-						is_ally_with = ROOT
+						is_in_faction_with = ROOT
+						is_subject_of = ROOT
 						has_war_with = ROOT
 					}
 					strength_ratio = {
@@ -3080,6 +3116,12 @@ focus_tree = {
 				if = {
 					limit = {
 						OR = {
+							original_tag = JAP
+							original_tag = QIN
+							original_tag = KOR
+							original_tag = CHI
+						}
+						OR = {
 							has_government = fascism
 							has_government = neutrality
 						}
@@ -3087,13 +3129,13 @@ focus_tree = {
 					ROOT = { clr_country_flag = protectorate }
 					set_autonomy = {
 						target = KOR
-						autonomous_state = autonomy_wtt_imperial_associate
+						autonomous_state = autonomy_wtt_imperial_protectorate
 					}
 				}
 				else = {
 					set_autonomy = {
 						target = KOR
-						autonomous_state = autonomy_satellite
+						autonomous_state = autonomy_dominion
 					}
 				}
 				country_event = ww1_korea.4
@@ -3197,7 +3239,9 @@ focus_tree = {
 				name = KOR_new_modernized_army
 				bonus = 0.5
 				uses = 1
-				category = cat_support_weapons
+				technology = support_weapons
+				technology = support_weapons2
+				technology = support_weapons3
 			}
 		}
 		ai_will_do = {
@@ -3535,8 +3579,7 @@ focus_tree = {
 			}
 		}
 		completion_reward = {
-			create_faction_from_template = faction_template_asian_dominance
-			set_faction_name = neoconfucian_order
+			create_faction = neoconfucian_order
 		}
 		ai_will_do = {
 			factor = 1

@@ -5,7 +5,7 @@ oob = CSR_1918
 set_war_support = 0.85
 set_stability = 0.77
 
-set_research_slots = 2
+set_research_slots = 3
 
 recruit_character = PRC_liberated_zone
 
@@ -68,11 +68,9 @@ set_technology = {
 	early_artillery = 1
 	basic_field_gun = 1
 	#doctrine
-	
+	ww1_landdoctrine = 1
 
 	#engineering
 	electrical_engineering = 1
 	mechanical_engineering = 1
 }
-
-add_to_tech_sharing_group = chinese_tech_share

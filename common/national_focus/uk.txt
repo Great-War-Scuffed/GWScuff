@@ -195,10 +195,10 @@ focus_tree = {
 				}
 				add_building_construction = {
 					type = industrial_complex
-					level = 1
+					level = 2
 					instant_build = yes
 				}
-				add_extra_state_shared_building_slots = 1
+				add_extra_state_shared_building_slots = 2
 			}
 		}
 		ai_will_do = {
@@ -208,7 +208,7 @@ focus_tree = {
 	focus = {
 		id = ENG_free_saf
 		icon = GFX_focus_union_south_africa
-		cost = 4.4
+		cost = 5
 		x = 3
 		y = 0
 		available = {
@@ -238,97 +238,7 @@ focus_tree = {
 				exists = yes
 			}
 		}
-		completion_reward = {
-			hidden_effect = {
-				every_subject_country = {
-					limit = {
-						OR = {
-							original_tag = ORA
-							original_tag = NAT
-							original_tag = CAP
-						}				
-					}
-					if = {
-						limit = {
-							original_tag = ORA
-						}
-						every_character = {
-							limit = {
-								OR = {
-									is_character = SAF_abraham_fischer
-									is_character = SAF_j_b_m_hertzog
-									is_character = SAF_christiaan_de_wet
-								}
-							}
-							set_nationality = SAF
-						}
-					}
-					else_if = {
-						limit = {
-							original_tag = CAP
-						}
-						every_character = {
-							limit = {
-								OR = {
-									is_character = SAF_henry_lukin
-									is_character = SAF_daniel_malan
-									is_character = SAF_andries_brink
-									is_character = SAF_christoffel_venter
-								}
-							}
-							set_nationality = SAF
-						}
-					}
-					else_if = {
-						limit = {
-							has_character = ENG_paul_methuen
-						}
-						set_nationality = {
-							target_country = ROOT
-							character = ENG_paul_methuen
-						}
-					}
-					SAF = {
-						annex_country = {
-							target = PREV
-							transfer_troops = yes
-						}
-					}
-					if = {
-						limit = { 
-							NOT = {
-								has_cosmetic_tag = CAP_ENG
-							}
-						}
-						drop_cosmetic_tag = yes			
-					}
-					if = {
-						limit = { 
-							is_ai = no 
-							SAF = { is_ai = yes }
-						}
-						SAF = {
-							change_tag_from = PREV
-						}				
-					}
-				}
-			}		
-			every_state = {
-				limit = {		
-					OR = {
-						state = 681
-						state = 789
-						state = 275
-						state = 719
-						state = 1049
-						state = 1050
-						state = 541
-					}
-					is_owned_or_subject_trigger = yes
-				}		
-				add_core_of = SAF
-				transfer_state_to = SAF
-			}			
+		completion_reward = {		
 			ENG = {
 				set_autonomy = {
 					target = SAF
@@ -339,6 +249,32 @@ focus_tree = {
 			SAF = {
 				set_country_flag = SAF_ENG
 				set_cosmetic_tag = SAF_ENG
+			}
+			681 = {
+				add_building_construction = {
+					type = infrastructure
+					level = 2
+					instant_build = yes
+				}
+				add_building_construction = {
+					type = industrial_complex
+					level = 1
+					instant_build = yes
+				}
+				add_extra_state_shared_building_slots = 4
+			}
+			275 = {
+				add_building_construction = {
+					type = infrastructure
+					level = 2
+					instant_build = yes
+				}
+				add_building_construction = {
+					type = industrial_complex
+					level = 1
+					instant_build = yes
+				}
+				add_extra_state_shared_building_slots = 4
 			}
 			hidden_effect = {
 				SAF = {
@@ -500,7 +436,6 @@ focus_tree = {
 				add_state_core = 771
 				transfer_state = 770
 				add_state_core = 770
-				set_country_flag = colony
 			}
 			ENG = {
 				set_autonomy = {
@@ -1146,12 +1081,6 @@ focus_tree = {
 		y = 1
 		completion_reward = {
 			air_experience = 15
-			add_tech_bonus = {
-				name = ENG_fighter_focus
-				bonus = 0.5
-				uses = 1
-				category = cat_scout_plane
-			}
 			IF = {
 				limit = {
 					has_dlc = "No Step Back"
@@ -1176,8 +1105,8 @@ focus_tree = {
 		completion_reward = {
 			add_tech_bonus = {
 				name = ENG_fighter_focus
-				bonus = 1.2
-				uses = 2
+				bonus = 3
+				uses = 1
 				category = light_fighter
 			}
 			IF = {
@@ -1312,8 +1241,8 @@ focus_tree = {
 		completion_reward = {
 			add_tech_bonus = {
 				name = ENG_Lee_Enfield
-				bonus = 0.8
-				uses = 2
+				bonus = 2
+				uses = 1
 				category = infantry_weapons
 			}
 		}
@@ -1330,8 +1259,8 @@ focus_tree = {
 		completion_reward = {
 			add_tech_bonus = {
 				name = ENG_Modern_Artillery
-				bonus = 1
-				uses = 2
+				bonus = 2
+				uses = 1
 				category = cat_artillery
 			}
 			add_breakthrough_progress = {
@@ -1414,6 +1343,22 @@ focus_tree = {
 					instant_build = yes
 				}
 			}
+			random_owned_controlled_state = {
+				limit = {
+					is_in_home_area = yes
+					free_building_slots = {
+						building = arms_factory
+						size > 1
+						include_locked = yes
+					}
+				}
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = arms_factory
+					level = 2
+					instant_build = yes
+				}
+			}
 		}
 	}
 	focus = {
@@ -1434,14 +1379,14 @@ focus_tree = {
 		completion_reward = {
 			add_tech_bonus = {
 				name = ENG_continental_army
-				bonus = 1
-				uses = 2
+				bonus = 3
+				uses = 1
 				category = support_tech
 				category = infantry_tech
 			}
 			add_equipment_to_stockpile = {
 				type = infantry_equipment
-				amount = 1000
+				amount = 5000
 				producer = ENG
 			}
 		}
@@ -1530,7 +1475,7 @@ focus_tree = {
 		completion_reward = {
 			add_tech_bonus = {
 				name = ENG_Motorisation
-				bonus = 1
+				bonus = 2
 				uses = 1
 				category = motorized_equipment
 			}
@@ -1562,14 +1507,14 @@ focus_tree = {
 					name = ENG_RAC
 					uses = 1
 					bonus = 1
-					ahead_reduction = 0.5
+					ahead_reduction = 1
 					technology = basic_heavy_tank_chassis
 				}
 				add_tech_bonus = {
 					name = ENG_RAC
 					uses = 1
 					bonus = 1
-					ahead_reduction = 0.5
+					ahead_reduction = 1
 					technology = basic_light_tank_chassis
 				}
 				else = {
@@ -1577,14 +1522,14 @@ focus_tree = {
 						name = ENG_RAC
 						uses = 1
 						bonus = 1
-						ahead_reduction = 0.5
+						ahead_reduction = 1
 						technology = basic_heavy_tank
 					}
 					add_tech_bonus = {
 						name = ENG_RAC
 						uses = 1
 						bonus = 1
-						ahead_reduction = 0.5
+						ahead_reduction = 1
 						technology = basic_light_tank
 					}
 				}
@@ -1601,7 +1546,7 @@ focus_tree = {
 					}
 				}
 				sp:sp_land_tank_prototype = {
-					add_project_progress_ratio = 0.3
+					add_project_progress_ratio = 0.5
 				}		
 			}
 		}
@@ -1790,7 +1735,7 @@ focus_tree = {
 	focus = {
 		id = ENG_No_Province_Left_Behind
 		icon = GFX_focus_ENG_british_railways
-		cost = 13
+		cost = 15
 		prerequisite = {
 			focus = ENG_The_Best
 		}
@@ -1837,12 +1782,17 @@ focus_tree = {
 					level = 1
 					instant_build = yes
 				}
+				add_building_construction = {
+					type = industrial_complex
+					level = 1
+					instant_build = yes
+				}
+				add_extra_state_shared_building_slots = 1
 			}
 		}
 	}
 	focus = {
 		id = ENG_Wool
-		dynamic = yes
 		icon = GFX_goal_generic_consumer_goods
 		cost = 10
 		prerequisite = {
@@ -1864,10 +1814,10 @@ focus_tree = {
 				}
 			}
 			131 = {
-				add_extra_state_shared_building_slots = 1
+				add_extra_state_shared_building_slots = 2
 				add_building_construction = {
 					type = industrial_complex
-					level = 1
+					level = 2
 					instant_build = yes
 				}
 			}
@@ -1908,21 +1858,21 @@ focus_tree = {
 	focus = {
 		id = ENG_Dominion_Investment
 		icon = GFX_focus_ENG_british_empire
-		cost = 10
+		cost = 5
 		prerequisite = {
 			focus = ENG_Pax_Britannica
 		}
 		x = 24
 		y = 1
 		available = {
-			any_subject_country = {
-				has_autonomy_state = autonomy_dominion
+			any_country = {
+				is_subject_of = ROOT
 			}
 		}
 		completion_reward = {
-			every_subject_country = {
+			every_country = {
 				limit = {
-					has_autonomy_state = autonomy_dominion
+					is_subject_of = ROOT
 				}
 				add_political_power = 120
 				add_autonomy_ratio = {
@@ -1934,7 +1884,7 @@ focus_tree = {
 	focus = {
 		id = ENG_Investment_Aus
 		icon = GFX_focus_generic_self_management
-		cost = 10
+		cost = 5
 		prerequisite = {
 			focus = ENG_Dominion_Investment
 		}
@@ -1995,7 +1945,7 @@ focus_tree = {
 	focus = {
 		id = ENG_Invest_NZL
 		icon = GFX_focus_generic_self_management
-		cost = 10
+		cost = 5
 		prerequisite = {
 			focus = ENG_Investment_Aus
 		}
@@ -2013,10 +1963,10 @@ focus_tree = {
 		}
 		completion_reward = {
 			284 = {
-				add_extra_state_shared_building_slots = 1
+				add_extra_state_shared_building_slots = 2
 				add_building_construction = {
 					type = industrial_complex
-					level = 1
+					level = 2
 					instant_build = yes
 				}
 				if = {
@@ -2040,7 +1990,7 @@ focus_tree = {
 	focus = {
 		id = ENG_invest_CAN
 		icon = GFX_focus_ENG_canada_focus
-		cost = 10
+		cost = 5
 		prerequisite = {
 			focus = ENG_Dominion_Investment
 		}
@@ -2116,7 +2066,7 @@ focus_tree = {
 	focus = {
 		id = ENG_quebec_federalization
 		icon = GFX_goal_tfv_can_compromise_with_quebec
-		cost = 10
+		cost = 5
 		prerequisite = {
 			focus = ENG_invest_CAN
 		}
@@ -2139,7 +2089,7 @@ focus_tree = {
 	focus = {
 		id = ENG_dev_saf
 		icon = GFX_focus_generic_africa_production
-		cost = 10
+		cost = 5
 		prerequisite = {
 			focus = ENG_Dominion_Investment
 		}
@@ -2185,7 +2135,7 @@ focus_tree = {
 	focus = {
 		id = ENG_campaign_for_Qualified_Franchise
 		icon = GFX_focus_usa_voter_registration_act
-		cost = 10
+		cost = 5
 		prerequisite = {
 			focus = ENG_dev_saf
 		}
@@ -2262,12 +2212,30 @@ focus_tree = {
 					}
 				}
 			}
+			429 = {
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = industrial_complex
+					level = 2
+					instant_build = yes
+				}
+
+			}
+			430 = {
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = industrial_complex
+					level = 1
+					instant_build = yes
+				}
+
+			}
 		}
 	}
 	focus = {
 		id = ENG_Principality_Integration
 		icon = GFX_focus_ENG_increase_indian_trade
-		cost = 10
+		cost = 5
 		prerequisite = {
 			focus = ENG_dev_raj
 		}
@@ -2332,7 +2300,7 @@ focus_tree = {
 	focus = {
 		id = ENG_Imperial_Federation
 		icon = GFX_focus_eng_unite_the_anglosphere
-		cost = 30
+		cost = 15
 		prerequisite = {
 			focus = ENG_quebec_federalization
 		}
@@ -2482,6 +2450,7 @@ focus_tree = {
 			every_country = {
 				limit = {
 					is_usa_tag = yes
+					exists = yes
 					NOT = {
 						is_subject_of = ROOT
 					}
@@ -2520,44 +2489,6 @@ focus_tree = {
 					level = 1
 					instant_build = yes
 				}
-			}
-		}
-	}
-	focus = {
-		id = ENG_Focus_Somalian_Forces
-		icon = GFX_focus_secret_rearmament
-		cost = 10
-		prerequisite = {
-			focus = ENG_Support_Nigerian_Christ
-		}
-		x = 26
-		y = 4
-		available = {
-			any_owned_state = {
-				is_core_of = SOM
-			}
-			NOT = {
-				has_war_with = SOM
-			}
-			NOT = {
-				has_idea = idea_army_restrictions
-				has_idea = idea_armistice
-			}
-		}
-		bypass = {
-			OR = {
-				has_war_with = SOM
-				NOT = {
-					country_exists = SOM
-				}
-				has_global_flag = somaliland_campaign
-			}	
-		}
-		completion_reward = {
-			set_global_flag = somaliland_campaign
-			declare_war_on = {
-				target = SOM
-				type = annex_everything
 			}
 		}
 	}
@@ -3578,14 +3509,14 @@ focus_tree = {
 		x = 42
 		y = 5
 		available = {
-			any_subject_country = {
-				protectorate_type_subject = no
+			any_country = {
+				is_subject_of = ROOT
 			}
 		}
 		completion_reward = {
-			every_subject_country = {
+			every_country = {
 				limit = {
-					protectorate_type_subject = no
+					is_subject_of = ROOT
 				}
 				add_timed_idea = {
 					idea = ENG_Red_Empire
@@ -3829,8 +3760,7 @@ focus_tree = {
 				limit = {
 					is_faction_leader = no
 				}
-				create_faction_from_template = faction_template_entente
-				set_faction_name = ENG_coalition_of_free_commonwealth_states
+				create_faction = ENG_coalition_of_free_commonwealth_states
 			}
 			else = {
 				set_faction_name = ENG_coalition_of_free_commonwealth_states
@@ -3917,11 +3847,6 @@ focus_tree = {
 			add_state_claim = 455
 			add_state_claim = 856
 			add_state_claim = 1021
-
-			add_state_claim = 675
-			add_state_claim = 832
-			add_state_claim = 914
-			add_state_claim = 916
 			add_ai_strategy = {
 				type = ignore_claim
 				id = SAU
@@ -3935,16 +3860,6 @@ focus_tree = {
 			add_ai_strategy = {
 				type = ignore_claim
 				id = QAT
-				value = 1
-			}
-			add_ai_strategy = {
-				type = ignore_claim
-				id = RWL
-				value = 1
-			}
-			add_ai_strategy = {
-				type = ignore_claim
-				id = AMR
 				value = 1
 			}
 		}
@@ -4488,31 +4403,28 @@ focus_tree = {
 		}
 		x = 55
 		y = 1
-		available = {
-			is_subject = no
-		}
 		bypass = {
-			NOT = {
-				any_subject_country = {
-					is_commonwealth_tag = yes
-				}
-			}
+			num_subjects < 1
 		}
 		completion_reward = {
-			every_subject_country = {
+			every_country = {
 				limit = {
-					is_commonwealth_tag = yes
+					is_subject_of = ROOT
 				}
 				add_stability = 0.05
 				if = {
-					limit = { has_government = democratic }
+					limit = {
+						has_government = democratic
+					}
 					add_popularity = {
 						ideology = democratic
 						popularity = 0.1
 					}
 				}
-				else_if = {
-					limit = { has_government = communism }
+				if = {
+					limit = {
+						has_government = communism
+					}
 					add_popularity = {
 						ideology = communism
 						popularity = 0.1
@@ -4691,7 +4603,7 @@ focus_tree = {
 	focus = {
 		id = ENG_raj_focus
 		icon = GFX_focus_ENG_british_raj
-		cost = 5
+		cost = 10
 		prerequisite = {
 			focus = ENG_commonwealth_individuality
 		}
@@ -4855,7 +4767,7 @@ focus_tree = {
 	focus = {
 		id = ENG_canada_focus
 		icon = GFX_goal_CAN_industrialized_new
-		cost = 5
+		cost = 10
 		prerequisite = {
 			focus = ENG_commonwealth_individuality
 		}
@@ -4893,7 +4805,7 @@ focus_tree = {
 	focus = {
 		id = ENG_ast_focus
 		icon = GFX_goal_generic_construct_civilian
-		cost = 5
+		cost = 10
 		prerequisite = {
 			focus = ENG_commonwealth_individuality
 		}
@@ -4917,7 +4829,7 @@ focus_tree = {
 	focus = {
 		id = ENG_nzl_focus
 		icon = GFX_goal_generic_construct_civilian
-		cost = 5
+		cost = 10
 		prerequisite = {
 			focus = ENG_ast_focus
 		}
@@ -5009,31 +4921,7 @@ focus_tree = {
 				add_state_claim = 341
 				add_state_claim = 860
 				add_state_claim = 861
-			}
-			hidden_effect = {		
-				if = {
-					limit = { 
-						is_in_faction_with = ITA
-						ITA = {
-							has_completed_focus = ITA_sign_treaty_of_london
-							NOT = {
-								has_country_flag = great_war_loser
-							}
-							is_subject = no
-							OR = {
-								has_war_with = TUR
-								TUR = {
-									has_country_flag = great_war_loser
-									has_global_flag = mudros_armistice
-								}
-							}
-						}
-					}
-					ITA = {
-						country_event = ww1_italy.439
-					}
-				}
-			}
+			}	
 			country_event = ww1_sykes_picot.1
 		}
 		ai_will_do = {
@@ -5438,7 +5326,7 @@ focus_tree = {
 				name = ENG_future_warfare
 				bonus = 1.5
 				uses = 2
-				category = radio_tech
+				category = radar_tech
 			}
 		}
 	}
@@ -6022,9 +5910,14 @@ focus_tree = {
 		cost = 10.00
 		available = {
 			is_subject = no
-			country_exists = GER
+			GER = {
+				NOT = {
+					is_subject_of = ROOT
+					is_in_faction_with = ROOT
+				}
+				exists = yes
+			}
 			NOT = {
-				is_ally_with = GER
 				has_country_flag = great_war_loser
 				has_idea = idea_armistice
 			}
@@ -6071,7 +5964,12 @@ focus_tree = {
 		icon = GFX_focus_ENG_dev_raj
 		cost = 10.00
 		available = {
-			is_ally_with = RAJ
+			RAJ = {
+				OR = {
+					is_in_faction_with = ROOT
+					is_subject_of = ROOT
+				}
+			}
 		}
 		prerequisite = {
 			focus = ENG_institute_tariff_reform
@@ -6159,12 +6057,6 @@ joint_focus = {
 	cost = 2
 	x = 0
 	y = 1
-	joint_trigger = {
-		OR = {
-			has_focus_tree = german_focus
-			has_focus_tree = uk_focus
-		}
-	}
 	available = {
 		has_crisis = no
 		GER = {
@@ -6191,12 +6083,6 @@ joint_focus = {
 		}	
 		NOT = {
 			has_global_flag = great_war
-		}
-	}
-	allow_branch = {
-		OR = {
-			has_focus_tree = german_focus
-			has_focus_tree = uk_focus
 		}
 	}
 	bypass = {
@@ -6262,12 +6148,6 @@ joint_focus = {
 	relative_position_id = ENG_GER_haldane_mission
 	x = 0
 	y = 1
-	joint_trigger = {
-		OR = {
-			has_focus_tree = german_focus
-			has_focus_tree = uk_focus
-		}
-	}
 	available = {
 		GER = {
 			is_GER_a_monarchy = yes

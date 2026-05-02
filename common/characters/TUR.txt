@@ -24,9 +24,11 @@ characters = {
 			}
 		}
 		portraits = {
-			civilian = {
-				large = "gfx/leaders/TUR/TUR_Prens_Sabahaddin.png"
+			army = {
 				small = "GFX_idea_TUR_prens_sabahattin_advisor"
+			}
+			civilian = {
+				large = "gfx/leaders/TUR/TUR_prens_sabahaddin.png"
 			}
 		}
 		country_leader = {
@@ -1271,12 +1273,9 @@ characters = {
 			cost = 150
 			slot = theorist
 			idea_token = TUR_fahrettin_altay
-			ledger = army
+			ledger = air
 			allowed = {
 				original_tag = TUR
-			}
-			available = {
-				has_completed_industrial_warfare_doctrine = yes
 			}
 			traits = {
 				mobile_warfare_expert
@@ -1633,34 +1632,36 @@ characters = {
 			slot = political_advisor
 			idea_token = TUR_tevfik_fikret
 			allowed = {
-				original_tag = TUR
-			}
-			traits = {
-				freedom_poet 
-			}
-			available = {
-				custom_trigger_tooltip = {
-					tooltip = character_not_dead
-					date < 1922.8.19
+					original_tag = TUR
 				}
-				NOT = {
-					has_government = fascism
-					has_country_leader = {
-						character = TUR_abdulhamid_ii
-						ruling_only = yes 
+				traits = {
+					freedom_poet 
+				}
+				available = {
+					custom_trigger_tooltip = {
+						tooltip = character_not_dead
+						date < 1922.8.19
 					}
 				}
-			}
-			visible = {
-				date < 1922.8.19
-			}
-			ai_will_do = {
-				base = 0.000
-				modifier = {
-					add = 1.000
-					has_government = democratic 
+				visible = {
+					date < 1922.8.19
 				}
-			}
+				available = {
+					NOT = {
+						has_government = fascism
+						has_country_leader = {
+							character = TUR_abdulhamid_ii
+							ruling_only = yes 
+						}
+					}
+				}
+				ai_will_do = {
+					base = 0.000
+					modifier = {
+						add = 1.000
+						has_government = democratic 
+					}
+				}
 		}
 		name = TUR_tevfik_fikret
 		portraits = {

@@ -4,8 +4,10 @@ GER_great_war = {
 			tag = SIA
 		}
 		icon = GFX_decision_generic_prepare_civil_war
-		targets = {
-			GER
+		target_trigger = {
+			FROM = {
+				tag = GER
+			}
 		}
 		available = {
 			has_capitulated = no
@@ -106,8 +108,10 @@ form_rattanakosin_kingdom_category = {
 			original_tag = SIA
 		}
 		icon = GFX_decision_generic_prepare_civil_war
-		targets = {
-			BRM
+		target_trigger = {
+			FROM = {
+				tag = BRM
+			}
 		}
 		available = {
 			has_capitulated = no
@@ -181,13 +185,17 @@ form_rattanakosin_kingdom_category = {
 		allowed = {
 			original_tag = SIA
 		}
-		targets = {
-			KED
-			KEL
-			PLS
-			TRG
-			LAO
-			CAM			
+		target_trigger = {
+			FROM = {
+				OR = {
+					tag = KED
+					tag = KEL
+					tag = PLS
+					tag = TRG
+					tag = LAO
+					tag = CAM
+				}
+			}
 		}
 		available = {
 			has_capitulated = no
@@ -250,7 +258,7 @@ form_rattanakosin_kingdom_category = {
 			935
 			936
 		}
-		on_map_mode = map_only
+		on_map_mode = map_and_decisions_view
 		days_remove = 30
 		available = {
 			OR = {

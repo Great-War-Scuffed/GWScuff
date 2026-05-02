@@ -1,7 +1,7 @@
 ﻿l_russian:
  PANAMA_CANAL_IS_NOT_BUILT: "Панамский канал не построен"
  MESSINA_STRAIT: "Мессинский пролив"
- GULF_ADEN: "Бабельмандеб"
+ GULF_ADEN: "Аденский залив"
  MALACCA_STRAIT: "Малаккский пролив"
  KAISER_WILHELM_KANAL: "Канал кайзера Вильгельма"
  CER_ROUTE: "Китайско-Восточная железная дорога"
@@ -24,5 +24,4 @@
  LIMFJORD_STRAIT: "Лим-фьорд"
  WHITE_SEA_STRAIT: "Горло Белого моря"
  THAMES_ESTUARY: "Эстуарий Темзы"
- ADAMS_BRIDGE: "Адамов Мост"
- ADAMS_BRIDGE_TT_NOT: "мелководье.\nБолее крупным океанским судам с запада приходится обходить Шри-Ланку, чтобы достичь восточного побережья Индии."
+ 

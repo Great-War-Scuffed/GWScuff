@@ -42,6 +42,22 @@ focus_tree = {
 		#available = { has_government=neutrality }
 		completion_reward = {
 			add_political_power = 100
+			528 = {
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = arms_factory
+					level = 2
+					instant_build = yes
+				}
+			}
+			529 = {
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = arms_factory
+					level = 2
+					instant_build = yes
+				}
+			}
 		}
 		ai_will_do = {
 			factor = 20
@@ -68,7 +84,7 @@ focus_tree = {
 		ai_will_do = {
 			factor = 20
 		}
-		cost = 10
+		cost = 5
 		x = 2
 		y = 2
 		search_filters = {
@@ -107,6 +123,22 @@ focus_tree = {
 		icon = GFX_goal_anschluss
 		completion_reward = {
 			add_ideas = liberty_ethos_focus
+			528 = {
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = industrial_complex
+					level = 2
+					instant_build = yes
+				}
+			}
+			529 = {
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = industrial_complex
+					level = 2
+					instant_build = yes
+				}
+			}
 		}
 		ai_will_do = {
 			factor = 0
@@ -168,7 +200,7 @@ focus_tree = {
 		ai_will_do = {
 			factor = 0
 		}
-		cost = 10
+		cost = 5
 		x = 4
 		y = 2
 	}
@@ -222,7 +254,7 @@ focus_tree = {
 		ai_will_do = {
 			factor = 0
 		}
-		cost = 10
+		cost = 5
 		x = 4
 		y = 3
 	}
@@ -335,6 +367,7 @@ focus_tree = {
 				ruling_party = fascism
 				elections_allowed = no
 			}
+			add_ideas = japanese_war_economy
 		}
 		ai_will_do = {
 			factor = 0
@@ -1635,7 +1668,10 @@ focus_tree = {
 						original_tag = FNG
 						AND = {
 							is_china_or_warlord = yes
-							is_ally_with = ROOT
+							OR = {
+								is_subject_of = ROOT
+								is_in_faction_with = ROOT
+							}
 						}
 					}
 				}
@@ -1853,7 +1889,6 @@ focus_tree = {
 				any_enemy_country = {
 					is_russian_tag = yes
 				}
-				has_truce_with = SOV
 			}
 		}
 		will_lead_to_war_with = SOV
@@ -1886,6 +1921,10 @@ focus_tree = {
 				character = JAP_yoshihito
 				ruling_only = yes
 			}
+			OR = {
+				has_country_flag = great_war_winner
+				date > 1918.9.1
+			}
 		}
 		bypass = {
 			OR = {
@@ -1898,12 +1937,10 @@ focus_tree = {
 		}
 		completion_reward = {
 			#unlock_decision_tooltip = CHI_JAP_assassinate_zhang_zuolin
-			add_stability = 0.10
 			add_popularity = {
 				ideology = democratic
 				popularity = 0.40
 			}
-			add_country_leader_trait = JAP_Taisho_Democracy
 			add_ideas = JAP_uncontrollable_military
 		}
 		ai_will_do = {
@@ -2299,91 +2336,88 @@ focus_tree = {
 						}
 					}
 				}
-				random_other_country = {
+				load_focus_tree = generic_focus
+				set_politics = {
+					ruling_party = fascism
+					elections_allowed = no
+				}
+				set_popularities = {
+					fascism = 80
+					neutrality = 20
+				}
+				remove_ideas = standing_alone
+				add_ideas = CHI_FNG_idea_kwantung_army
+				drop_cosmetic_tag = yes
+				every_possible_country = {
 					limit = {
-						original_tag = MAN
-						is_subject_of = ROOT
+						has_character = FNG_zhang_haipeng
 					}
-					load_focus_tree = generic_focus
-					set_politics = {
-						ruling_party = fascism
-						elections_allowed = no
+					FNG_zhang_haipeng = {
+						set_nationality = PREV.PREV
 					}
-					set_popularities = {
-						fascism = 80
-						neutrality = 20
+				}
+				every_possible_country = {
+					limit = {
+						has_character = FNG_zhang_jinghui
 					}
-					remove_ideas = standing_alone
-					add_ideas = CHI_FNG_idea_kwantung_army
-					drop_cosmetic_tag = yes
-					every_possible_country = {
-						limit = {
-							has_character = FNG_zhang_haipeng
-						}
-						FNG_zhang_haipeng = {
-							set_nationality = PREV.PREV
-						}
+					FNG_zhang_jinghui = {
+						set_nationality = PREV.PREV
 					}
-					every_possible_country = {
-						limit = {
-							has_character = FNG_zhang_jinghui
-						}
-						FNG_zhang_jinghui = {
-							set_nationality = PREV.PREV
+				}
+				if = {
+					limit = {
+						all_country = {
+							is_qing_monarchy = no
 						}
 					}
 					if = {
 						limit = {
-							all_country = {
-								is_qing_monarchy = no
-							}
+							NOT = { has_character = MAN_aisin_gioro_puyi }
 						}
-						if = {
+						every_possible_country = {
 							limit = {
-								NOT = { has_character = MAN_aisin_gioro_puyi }
+								has_character = MAN_aisin_gioro_puyi
 							}
-							MAN = {
-								MAN_aisin_gioro_puyi = { set_nationality = PREV.PREV }
-							}
-						}
-						MAN_aisin_gioro_puyi = {
-							add_country_leader_role = {
-								promote_leader = yes
-								country_leader = {
-									ideology = semi_constitutional_monarchy
-									traits = { warrior_code }
-								}
-							}
-							add_country_leader_role = {
-								promote_leader = yes
-								country_leader = {
-									ideology = fascism_ideology
-									traits = { warrior_code }
-								}
-							}
-						}
-						add_victory_points = {
-							province = 4572
-							value = 2
-						}
-						set_capital = {
-							state = 328
+							MAN_aisin_gioro_puyi = { set_nationality = PREV.PREV }
 						}
 					}
-				}	
+					MAN_aisin_gioro_puyi = {
+						add_country_leader_role = {
+							promote_leader = yes
+							country_leader = {
+								ideology = semi_constitutional_monarchy
+								traits = { warrior_code }
+							}
+						}
+						add_country_leader_role = {
+							promote_leader = yes
+							country_leader = {
+								ideology = fascism_ideology
+								traits = { warrior_code }
+							}
+						}
+					}
+					add_victory_points = {
+						province = 4572
+						value = 2
+					}
+					set_capital = {
+						state = 328
+					}
+				}
 			}
 			effect_tooltip = {
 				release_puppet = MAN
 			}
 			hidden_effect = {
-				# set_politics = {
-				# 	ruling_party = fascism
-				# 	elections_allowed = no
-				# }
-				# add_popularity = {
-				# 	ideology = fascism
-				# 	popularity = 0.20
-				# }
+				set_politics = {
+					ruling_party = fascism
+					elections_allowed = no
+				}
+				add_popularity = {
+					ideology = fascism
+					popularity = 0.20
+				}
 				country_event = {
 					id = ww1_china.309
 					days = 40

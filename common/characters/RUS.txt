@@ -239,7 +239,7 @@ characters={
 					armaments_organizer 
 				}
 				ai_will_do  = {
-					factor  = 1
+					factor  = 5.000
 				}
 		}
 		portraits={
@@ -425,8 +425,8 @@ characters={
 		name=RUS_aleksei_polivanov
 		portraits={
 			army={
-				large="gfx/leaders/RUS/RUS_alexei_polivanov.png"
-				small="gfx/interface/ideas/RUS/idea_RUS_alexei_polivanov.png"
+				large="gfx/leaders/RUS/RUS_Alexei_Polivanov.png"
+				small="gfx/interface/ideas/RUS/idea_RUS_Alexei_Polivanov.png"
 			}
 		}
 		field_marshal={
@@ -636,13 +636,13 @@ characters={
 		}
 	}
 	RUS_eduard_eck={
+		name="RUS_eduard_eck"
 		portraits={
 			army={
-				large="gfx/leaders/RUS/RUS_Eduard_Eck.png"
-				small="gfx/interface/ideas/RUS/idea_RUS_Eduard_Eck.png"
+				small="GFX_Portrait_RUS_generic_land_5_small"
 			}
-			civilian = {
-				small="gfx/interface/ideas/RUS/idea_RUS_Eduard_Eck_civil.png"
+			army={
+				large="gfx/leaders/RUS/RUS_Eduard_Eck.png"
 			}
 		}
 		corps_commander={
@@ -756,7 +756,7 @@ characters={
 				small="GFX_Portrait_RUS_generic_land_6_small"
 			}
 			army={
-				large="gfx/leaders/RUS/RUS_alexei_evert.png"
+				large="gfx/leaders/RUS/RUS_Alexei_Evert.png"
 			}
 		}
 		corps_commander={
@@ -1836,13 +1836,13 @@ characters={
 		}
 	}
 	RUS_abram_dragomirov={
+		name="RUS_abram_dragomirov"
 		portraits={
 			army={
-				large="gfx/leaders/RUS/RUS_abram_dragomirov.png"
-				small="gfx/interface/ideas/RUS/idea_RUS_abram_dragomirov.png"
+				small="GFX_Portrait_RUS_generic_land_5_small"
 			}
-			civilian = {
-				small="gfx/interface/ideas/RUS/idea_RUS_abram_dragomirov_civil.png"
+			army={
+				large="gfx/leaders/RUS/RUS_abram_dragomirov.png"
 			}
 		}
 		corps_commander={
@@ -1851,7 +1851,8 @@ characters={
 			attack_skill=1
 			defense_skill=2
 			planning_skill=2
-			logistics_skill=2			
+			logistics_skill=2
+			
 		}
 	}
 	RUS_nikolai_yanushkevich={
@@ -1863,7 +1864,7 @@ characters={
 			}
 		}
 		corps_commander={
-			traits={ politically_connected harsh_leader }
+			traits={ politically_connected }
 			skill=1
 			attack_skill=1
 			defense_skill=1
@@ -1984,9 +1985,7 @@ characters={
 				#is_country_leader = no
 			}
 			visible  = {
-				NOT = {
-					has_global_flag = kolchak_dead
-				}
+				#is_country_leader = no	
 			}
 			ai_will_do  = {
 				factor  = 1.000
@@ -2007,9 +2006,6 @@ characters={
 			}
 			visible  = {
 				is_country_leader = yes
-				NOT = {
-					has_global_flag = kolchak_dead
-				}
 			}
 			ai_will_do  = {
 				factor  = 1.000
@@ -2024,10 +2020,7 @@ characters={
 			coordination_skill=2
 			#legacy_id=92224
 			visible  = {
-				is_country_leader = no
-				NOT = {
-					has_global_flag = kolchak_dead
-				}
+				is_country_leader = no	
 			}
 		}
 		portraits={
@@ -2993,7 +2986,7 @@ characters={
 					captain_of_industry 
 				}
 				ai_will_do  = {
-					factor  = 1
+					factor  = 1.000
 				}
 		}
 		name="RUS_alexei_putilov"
@@ -3121,7 +3114,7 @@ characters={
 				progressive_reformer
 			}
 			ai_will_do  = {
-				factor  = 10
+				factor  = 1.000
 			}
 		}
 		name="RUS_alexander_krivoshein"
@@ -3174,8 +3167,7 @@ characters={
 		}
 		name="RUS_vladimir_kokovtsov"
 		portraits={
-			civilian = {
-				large="gfx/leaders/RUS/RUS_vladimir_kokovtsov.png"
+			army={
 				small="GFX_idea_RUS_vladimir_kokovtsov"
 			}
 		}
@@ -3628,58 +3620,6 @@ characters={
 			ideology=reactionism
 		}
 	}
-	RUS_nikolai_astrov={
-		advisor={
-			slot = political_advisor
-			idea_token = RUS_nikolai_astrov
-			allowed  = {
-				tag = SRA
-			}
-			available = {
-				is_country_leader = no
-				has_completed_focus = SRA_special_meeting
-			}
-			visible = {
-				is_country_leader = no
-			}
-			traits  = {
-				connected_citizen 
-			}
-			ai_will_do  = {
-				factor  = 1
-			}
-		}
-		portraits={
-			civilian={
-				large = "gfx/leaders/RUS/RUS_Nikolai_Astrov.png"
-				small="gfx/interface/ideas/RUS/idea_RUS_Nikolai_Astrov.png"
-			}
-		}
-	}
-	RUS_vladimir_purishkevich={
-		advisor={
-			slot = political_advisor
-			idea_token = RUS_vladimir_purishkevich
-			allowed  = {
-				tag = SRA
-			}
-			available = {
-				has_completed_focus = SRA_monarchist_press
-			}
-			traits  = {
-				national_propagandist 
-			}
-			ai_will_do  = {
-				factor  = 1
-			}
-		}
-		portraits={
-			civilian={
-				large = "gfx/leaders/RUS/RUS_vladimir_purishkevich.png"
-				small="gfx/interface/ideas/RUS/idea_RUS_vladimir_purishkevich.png"
-			}
-		}
-	}
 	RUS_mikhail_shishkevich={
 		advisor={
 			slot = high_command
@@ -4012,7 +3952,8 @@ characters={
 		name="RUS_nikolai_lebedenko"
 		portraits={
 			civilian={
-				large="gfx/leaders/scientists/RUS_Nikolai_Lebedenko.png"
+				#large="gfx/leaders/scientists/RUS_Nikolai_Lebedenko.png" #No photos exist
+				large = GFX_portrait_generic_southamerica_male_01
 			}
 		}
 	}

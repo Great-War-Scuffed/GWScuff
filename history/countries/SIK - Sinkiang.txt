@@ -1,6 +1,6 @@
 ﻿capital = 287
 
-set_research_slots = 2
+set_research_slots = 3
 
 recruit_character = SIK_jin_shuren
 recruit_character = SIK_sheng_shicai
@@ -12,7 +12,6 @@ recruit_character = SIK_ma_fuxing
 recruit_character = SIK_yang_feixia
 recruit_character = SIK_zhang_peiyuan
 recruit_character = SIK_zhou_wuxue
-recruit_character = SIK_li_hairu
 
 1910.1.1 = {
 	set_politics = {
@@ -43,7 +42,7 @@ recruit_character = SIK_li_hairu
 		early_artillery = 1
 		basic_field_gun = 1
 		#doctrine
-		
+		ww1_landdoctrine = 1
 
 		#engineering
 		electrical_engineering = 1

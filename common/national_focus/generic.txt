@@ -1,10 +1,107 @@
 
 focus_tree = {
-	id = generic_focus
+	id = keep_here
 	country = {
-		factor = 5
-	}	
-	default = yes
+		factor = 0
+		
+		modifier = {
+			add = 10
+			tag = AFG
+		}
+		modifier = {
+			add = 10
+			tag = PAN
+		}
+		modifier = {
+			add = 10
+			tag = URG
+		}
+		modifier = {
+			add = 10
+			tag = PAR
+		}
+		modifier = {
+			add = 10
+			tag = BOS
+		}
+		modifier = {
+			add = 10
+			tag = ARB
+		}
+		modifier = {
+			add = 10
+			tag = KUW
+		}
+		modifier = {
+			add = 10
+			tag = QAT
+		}
+		modifier = {
+			add = 10
+			tag = MSC
+		}
+		modifier = {
+			add = 10
+			tag = LUX
+		}
+		modifier = {
+			add = 10
+			tag = AFA
+		}
+		modifier = {
+			add = 10
+			tag = ETH
+		}
+		modifier = {
+			add = 10
+			tag = ECU
+		}
+		modifier = {
+			add = 10
+			tag = PAN
+		}
+		modifier = {
+			add = 10
+			tag = COS
+		}
+		modifier = {
+			add = 10
+			tag = NIC
+		}
+		modifier = {
+			add = 10
+			tag = ELS
+		}
+		modifier = {
+			add = 10
+			tag = GUA
+		}
+		modifier = {
+			add = 10
+			tag = HAI
+		}
+		modifier = {
+			add = 10
+			tag = DOM
+		}
+		modifier = {
+			add = 10
+			tag = BOL
+		}
+		modifier = {
+			add = 10
+			tag = PRU
+		}
+		modifier = {
+			add = 10
+			tag = LBA
+		}
+		modifier = {
+			add = 10
+			tag = D15
+		}
+	}
+	default = no
 	reset_on_civilwar = no
 
 	#Focus Path shortcuts
@@ -50,6 +147,9 @@ focus_tree = {
 shared_focus = {
 	id = open_the_political_sphere
 	icon = GFX_goal_generic_demand_territory
+	available = {
+		is_ai = NO
+	}
 	completion_reward = { 
 		add_political_power = 75
 		country_event = {
@@ -57,7 +157,7 @@ shared_focus = {
 			days = 1
 		}
 	}
-	cost = 10
+	cost = 5
 	x = 8
 	y = 0
 	ai_will_do = { 
@@ -72,7 +172,6 @@ shared_focus = {
 shared_focus = {
 	id = conserve_political_stance
 	icon = GFX_focus_generic_self_management
-	dynamic = yes
 	completion_reward = { 
 		add_popularity = {
 			ideology = var:ROOT.current_party_ideology_group
@@ -88,7 +187,7 @@ shared_focus = {
 	prerequisite = {
 		focus = open_the_political_sphere
 	}
-	cost = 10
+	cost = 5
 	x = 0
 	y = 1
 	ai_will_do = { 
@@ -131,7 +230,7 @@ shared_focus = {
 	prerequisite = {
 		focus = open_the_political_sphere
 	}
-	cost = 10
+	cost = 5
 	x = -5
 	y = 1
 	ai_will_do = { 
@@ -185,7 +284,7 @@ shared_focus = {
 		focus = conserve_political_stance
 		focus = socialist_reforms
 	}
-	cost = 10
+	cost = 5
 	x = -2
 	y = 1
 	ai_will_do = { 
@@ -207,7 +306,7 @@ shared_focus = {
 	mutually_exclusive = {
 		focus = statism
 	}
-	cost = 10
+	cost = 5
 	x = 0
 	y = 1
 	completion_reward = { 	
@@ -227,7 +326,7 @@ shared_focus = {
 		focus = statism
 		focus = liberalism
 	}
-	cost = 10
+	cost = 5
 	x = 1
 	y = 1
 	ai_will_do = { factor = 15 }
@@ -246,7 +345,7 @@ shared_focus = {
 	prerequisite = {
 		focus = liberalism
 	}
-	cost = 10
+	cost = 5
 	x = -1
 	y = 1
 	ai_will_do = { factor = 15 }
@@ -255,9 +354,6 @@ shared_focus = {
 shared_focus = {
 	id = give_seats_to_socialists
 	icon = GFX_goal_support_socialism
-	available = {
-		has_government = democratic
-	}
 	completion_reward = { 
 		add_political_power = 50
 		add_popularity = {
@@ -269,7 +365,7 @@ shared_focus = {
 	prerequisite = {
 		focus = socialist_reforms
 	}
-	cost = 10
+	cost = 5
 	x = 1
 	y = 1
 	ai_will_do = { factor = 15 }
@@ -285,7 +381,7 @@ shared_focus = {
 	prerequisite = {
 		focus = socialist_reforms
 	}
-	cost = 10
+	cost = 5
 	x = -1
 	y = 1
 	ai_will_do = { factor = 15 }
@@ -307,7 +403,7 @@ shared_focus = {
 	prerequisite = {
 		focus = empower_trade_unions
 	}
-	cost = 10
+	cost = 5
 	x = -1
 	y = 1
 	ai_will_do = { factor = 15 }
@@ -335,7 +431,7 @@ shared_focus = {
 	prerequisite = {
 		focus = give_seats_to_socialists
 	}
-	cost = 10
+	cost = 5
 	x = 0
 	y = 1
 	ai_will_do = { factor = 15 }
@@ -354,7 +450,7 @@ shared_focus = {
 	prerequisite = {
 		focus = support_international
 	}
-	cost = 10
+	cost = 5
 	x = -1
 	y = 1
 	ai_will_do = { factor = 10 }
@@ -376,7 +472,7 @@ shared_focus = {
 	prerequisite = {
 		focus = support_international
 	}
-	cost = 10
+	cost = 5
 	x = 1
 	y = 1
 	ai_will_do = { factor = 15 }
@@ -401,7 +497,7 @@ shared_focus = {
 	prerequisite = {
 		focus = open_the_political_sphere
 	}
-	cost = 10
+	cost = 5
 	x = 5
 	y = 1
 
@@ -426,7 +522,7 @@ shared_focus = {
 	prerequisite = {
 		focus = nationalist_regeneration
 	}
-	cost = 10
+	cost = 5
 	x = -1
 	y = 1
 	ai_will_do = { factor = 15 }
@@ -551,7 +647,7 @@ shared_focus = {
 	prerequisite = {
 		focus = nationalist_regeneration
 	}
-	cost = 10
+	cost = 5
 	x = 3
 	y = 1
 	ai_will_do = { factor = 0 }
@@ -602,7 +698,7 @@ shared_focus = {
 	prerequisite = {
 		focus = ressort_old_claims
 	}
-	cost = 10
+	cost = 5
 	x = 0
 	y = 1
 	ai_will_do = { factor = 0 }
@@ -621,7 +717,7 @@ shared_focus = {
 	prerequisite = {
 		focus = nationalist_regeneration
 	}
-	cost = 10
+	cost = 5
 	x = 1
 	y = 1
 	ai_will_do = { factor = 15 }
@@ -651,7 +747,7 @@ shared_focus = {
 	prerequisite = {
 		focus = national_militarism
 	}
-	cost = 10
+	cost = 5
 	x = -1
 	y = 1
 	ai_will_do = { factor = 15 }
@@ -662,7 +758,7 @@ shared_focus = {
 	prerequisite = { focus = military_youth }
 	relative_position_id = military_youth
 	icon = GFX_goal_demand_sudetenland	
-	cost = 10
+	cost = 5
 	x = 0
 	y = 1
 	available = { has_government = fascism }
@@ -684,7 +780,7 @@ shared_focus = {
 	mutually_exclusive = {
 		focus = constitutional_guarantees		
 	}
-	cost = 10
+	cost = 5
 	x = 2
 	y = 1
 	ai_will_do = { factor = 0 }
@@ -703,7 +799,7 @@ shared_focus = {
 	mutually_exclusive = {
 		focus = liberalism
 	}
-	cost = 10
+	cost = 5
 	x = 0
 	y = 1
 	ai_will_do = { 
@@ -722,7 +818,7 @@ shared_focus = {
 		focus = statism
 		focus = liberalism
 	}
-	cost = 10
+	cost = 5
 	x = -1
 	y = 1
 	ai_will_do = { 
@@ -737,7 +833,7 @@ shared_focus = {
 	icon = GFX_focus_generic_diplomatic_treaty
 	x = 1
 	y = 1
-	cost = 10
+	cost = 5
 	ai_will_do = { factor = 10 }	
 	available = {
 		has_idea = idea_statism
@@ -772,7 +868,7 @@ shared_focus = {
 		focus = support_international
 		focus = chauvinism
 	}
-	cost = 10
+	cost = 5
 	x = 0
 	y = 4
 	ai_will_do = { 
@@ -797,10 +893,7 @@ shared_focus = {
 	}
 	relative_position_id = open_the_political_sphere
 	available = {
-		is_subject = no
-		NOT = {
-			has_idea = standing_alone
-		}
+		is_ai = NO
 	}
 	ai_will_do = {
 		factor = 1
@@ -827,7 +920,7 @@ shared_focus = {
 			factor = 150
 		}
 	}
-	cost = 10
+	cost = 5
 	x = 17
 	y = 0
 }
@@ -837,7 +930,8 @@ shared_focus = {
 	x = 0
 	y = 1
 	relative_position_id = take_position
-	cost = 10
+	cost = 5
+	search_filters = {}
 	prerequisite = {
 		focus = take_position
 	}
@@ -875,10 +969,7 @@ shared_focus = {
                 tag = SIA
                 tag = SOM
                 tag = LBA
-               	AND = {
-					tag = SPR
-					has_idea = SPR_pact_of_cartagena_1907
-				}
+                tag = SPR
                 AND = {
                     tag = FIN
                     NOT = {
@@ -897,7 +988,7 @@ shared_focus = {
 	x = -1
 	y = 1
 	relative_position_id = maintain_neutrality
-	cost = 10
+	cost = 5
 	available = {
 		is_subject = no
 	}
@@ -917,7 +1008,7 @@ shared_focus = {
 	x = 1
 	y = 1
 	relative_position_id = maintain_neutrality
-	cost = 10
+	cost = 5
 	prerequisite = {
 		focus = maintain_neutrality
 	}
@@ -954,7 +1045,7 @@ shared_focus = {
 	x = 0
 	y = 2
 	relative_position_id = maintain_neutrality
-	cost = 10
+	cost = 5
 	prerequisite = {
 		focus = defensive_measures
 	}
@@ -985,7 +1076,7 @@ shared_focus = {
 	x = 1
 	y = 3
 	relative_position_id = maintain_neutrality
-	cost = 10
+	cost = 5
 	prerequisite = {
 		focus = capital_arms_workshops
 	}
@@ -1008,7 +1099,7 @@ shared_focus = {
 	x = -1
 	y = 3
 	relative_position_id = maintain_neutrality
-	cost = 10
+	cost = 5
 	prerequisite = {
 		focus = capital_arms_workshops
 	}
@@ -1046,7 +1137,7 @@ shared_focus = {
 	x = -4
 	y = 1
 	relative_position_id = take_position
-	cost = 10
+	cost = 5
 	prerequisite = {
 		focus = take_position
 	}
@@ -1063,12 +1154,6 @@ shared_focus = {
 				has_global_flag = great_war_ends
 			}
 		}
-		if = {
-			limit = { 
-				tag = SPR
-			}
-			has_idea = SPR_pact_of_cartagena_1907
-		}
 	}
 	mutually_exclusive = {
 		focus = maintain_neutrality
@@ -1083,36 +1168,16 @@ shared_focus = {
             }
             remove_ideas = neutrality_idea
         }    
-        every_other_country = {
+        every_country = {
             limit = { is_in_faction_with = ENT }
             add_opinion_modifier = { 
                 target = ROOT
                 modifier = stand_with_major_faction
             }
         }
-        every_other_country = {
+        every_country = {
             limit = { is_in_faction_with = GER }
             add_opinion_modifier = { 
-                target = ROOT
-                modifier = stand_with_major_faction_opposite
-            }
-        }
-	}
-	on_uncomplete = {
-		every_other_country = {
-            limit = { 
-				has_opinion_modifier = stand_with_major_faction
-			}
-            remove_opinion_modifier = { 
-                target = ROOT
-                modifier = stand_with_major_faction
-            }
-        }
-		every_other_country = {
-            limit = { 
-				has_opinion_modifier = stand_with_major_faction_opposite
-			}
-            remove_opinion_modifier = { 
                 target = ROOT
                 modifier = stand_with_major_faction_opposite
             }
@@ -1183,7 +1248,7 @@ shared_focus = {
 	x = -1
 	y = 1
 	relative_position_id = secure_entente_support
-	cost = 10
+	cost = 5
 	prerequisite = {
 		focus = secure_entente_support
 	}
@@ -1215,7 +1280,7 @@ shared_focus = {
 	x = -2
 	y = 2
 	relative_position_id = secure_entente_support
-	cost = 10
+	cost = 5
 	prerequisite = {
 		focus = request_entente_cannons
 	}
@@ -1238,12 +1303,6 @@ shared_focus = {
 			level = 1
 		}
 	}
-	on_uncomplete = {
-		add_offsite_building = {
-			type = arms_factory
-			level = -1
-		}
-	}
 	ai_will_do = {
 		base = 3
 	}
@@ -1254,7 +1313,7 @@ shared_focus = {
 	x = 1
 	y = 1
 	relative_position_id = secure_entente_support
-	cost = 10
+	cost = 5
 	prerequisite = {
 		focus = secure_entente_support
 	}
@@ -1269,12 +1328,6 @@ shared_focus = {
 			level = 1
 		}
 	}
-	on_uncomplete = {
-		add_offsite_building = {
-			type = industrial_complex
-			level = -1
-		}
-	}
 	ai_will_do = {
 		base = 3
 	}
@@ -1285,7 +1338,7 @@ shared_focus = {
 	x = 0
 	y = 2
 	relative_position_id = secure_entente_support
-	cost = 10
+	cost = 5
 	prerequisite = {
 		focus = request_entente_cannons
 	}
@@ -1300,9 +1353,6 @@ shared_focus = {
 	completion_reward = {
 		add_ideas = french_advisors
 	}
-	on_uncomplete = {
-		remove_ideas = french_advisors
-	}
 	ai_will_do = {
 		base = 3
 	}
@@ -1313,7 +1363,7 @@ shared_focus = {
 	x = 0
 	y = 3
 	relative_position_id = secure_entente_support
-	cost = 10
+	cost = 5
 	prerequisite = {
 		focus = entente_advisors
 	}
@@ -1334,7 +1384,6 @@ shared_focus = {
 			has_idea = standing_alone
 		}
 	}
-	will_lead_to_war_with = GER
 	completion_reward = {
 		ENT = {
 			add_to_faction = ROOT
@@ -1359,7 +1408,8 @@ shared_focus = {
 	x = 1
 	y = 4
 	relative_position_id = secure_entente_support
-	cost = 10
+	cost = 5
+	search_filters = {}
 	prerequisite = {
 		focus = join_entente
 	}
@@ -1390,7 +1440,7 @@ shared_focus = {
 	x = 4
 	y = 1
 	relative_position_id = take_position
-	cost = 10
+	cost = 5
 	prerequisite = {
 		focus = take_position
 	}
@@ -1420,46 +1470,15 @@ shared_focus = {
                 has_idea = neutrality_idea
             }
             remove_ideas = neutrality_idea
-        }
-		if = {
-            limit = {
-                has_idea = SPR_pact_of_cartagena_1907
-            }
-            remove_ideas = SPR_pact_of_cartagena_1907
-			every_state = {
-				limit = {
-					OR = {
-						is_core_of = MOR
-						is_core_of = RMO #moroccan resistance
-					}
-					NOT = {
-						is_owned_by = ROOT
-						is_claimed_by = ROOT
-					}
-				}
-				add_claim_by = ROOT
-			}
-			every_other_country = {
-				limit = {
-					OR = {
-						tag = FRA
-						tag = ENG
-					}
-				}
-				country_event = {
-					id = ww1_france.586
-					days = 2
-				}
-			}
-        }  
-        every_other_country = {
+        }    
+        every_country = {
             limit = { is_in_faction_with = GER }
             add_opinion_modifier = { 
                 target = ROOT
                 modifier = stand_with_major_faction
             }
         }
-        every_other_country = {
+        every_country = {
             limit = { is_in_faction_with = ENT }
             add_opinion_modifier = { 
                 target = ROOT
@@ -1483,12 +1502,6 @@ shared_focus = {
                 }
                 tag = SOM
                 tag = LBA
-				AND = {
-					tag = SPR
-					NOT = {
-						has_idea = SPR_pact_of_cartagena_1907
-					}
-				}
             }
             factor = 10
         }
@@ -1501,12 +1514,7 @@ shared_focus = {
                     }
                 }
                 tag = SOM
-				AND = {
-					tag = SPR
-					NOT = {
-						has_idea = SPR_pact_of_cartagena_1907
-					}
-				}
+                tag = LBA
             }
             is_historical_focus_on = yes
             factor = 6
@@ -1521,12 +1529,6 @@ shared_focus = {
                 }
                 tag = SOM
                 tag = LBA
-				AND = {
-					tag = SPR
-					NOT = {
-						has_idea = SPR_pact_of_cartagena_1907
-					}
-				}
             }
             is_historical_focus_on = yes
             factor = 0
@@ -1558,7 +1560,7 @@ shared_focus = {
 	x = 1
 	y = 1
 	relative_position_id = secure_german_support
-	cost = 10
+	cost = 5
 	prerequisite = {
 		focus = secure_german_support
 	}
@@ -1585,7 +1587,7 @@ shared_focus = {
 	x = 2
 	y = 2
 	relative_position_id = secure_german_support
-	cost = 10
+	cost = 5
 	prerequisite = {
 		focus = german_smallarms
 	}
@@ -1629,7 +1631,7 @@ shared_focus = {
 	x = -1
 	y = 1
 	relative_position_id = secure_german_support
-	cost = 10
+	cost = 5
 	prerequisite = {
 		focus = secure_german_support
 	}
@@ -1654,7 +1656,7 @@ shared_focus = {
 	x = 0
 	y = 2
 	relative_position_id = secure_german_support
-	cost = 10
+	cost = 5
 	prerequisite = {
 		focus = german_smallarms
 	}
@@ -1679,7 +1681,7 @@ shared_focus = {
 	x = 0
 	y = 3
 	relative_position_id = secure_german_support
-	cost = 10
+	cost = 5
 	prerequisite = {
 		focus = german_military_mission
 	}
@@ -1700,7 +1702,6 @@ shared_focus = {
 			has_idea = standing_alone
 		}
 	}
-	will_lead_to_war_with = ENT
 	completion_reward = {
 		GER = {
 			add_to_faction = ROOT
@@ -1716,7 +1717,7 @@ shared_focus = {
 	x = -1
 	y = 4
 	relative_position_id = secure_german_support
-	cost = 10
+	cost = 5
 	prerequisite = {
 		focus = join_central_powers
 	}
@@ -1740,7 +1741,7 @@ shared_focus = {
 	x = 0
 	y = 4
 	relative_position_id = maintain_neutrality
-	cost = 10
+	cost = 5
 	prerequisite = {
 		focus = join_central_powers
 		focus = join_entente
@@ -1755,9 +1756,6 @@ shared_focus = {
 	}
 	completion_reward = {
 		add_ideas = idea_civil_defense
-	}
-	on_uncomplete = {
-		remove_ideas = idea_civil_defense
 	}
 	ai_will_do = {
 		base = 3
@@ -1780,6 +1778,7 @@ shared_focus = {
 			is_coastal = yes
 			naval_base > 0
 		}
+		is_ai = NO
 	}
 	completion_reward = {
 		add_doctrine_cost_reduction = {
@@ -1792,7 +1791,7 @@ shared_focus = {
 	ai_will_do = { 
 		factor = 15
 	}
-	cost = 10
+	cost = 5
 	x = 13
 	y = 6
 	offset = {
@@ -1859,7 +1858,7 @@ shared_focus = {
 	ai_will_do = { 
 		factor = 15
 	}
-	cost = 10
+	cost = 5
 	x = 0
 	y = 1
 }
@@ -1883,7 +1882,7 @@ shared_focus = {
 	ai_will_do = { 
 		factor = 15
 	}
-	cost = 10
+	cost = 5
 	x = 2
 	y = 1
 }
@@ -1907,7 +1906,7 @@ shared_focus = {
 	ai_will_do = { 
 		factor = 15
 	}
-	cost = 10
+	cost = 5
 	x = -1
 	y = 1
 }
@@ -1947,7 +1946,6 @@ shared_focus = {
 				limit = {
 					is_core_of = ROOT
 					is_fully_controlled_by = ROOT
-					impassable = no
 				}
 				prioritize = { 2 162 117 158 }
 				create_unit = {
@@ -1962,7 +1960,7 @@ shared_focus = {
 	ai_will_do = { 
 		factor = 15
 	}
-	cost = 10
+	cost = 5
 	x = 0
 	y = 1
 }
@@ -2006,7 +2004,7 @@ shared_focus = {
 	ai_will_do = { 
 		factor = 15
 	}
-	cost = 10
+	cost = 5
 	x = 18
 	y = 7
 	offset = {
@@ -2080,7 +2078,7 @@ shared_focus = {
 	ai_will_do = { 
 		factor = 15
 	}
-	cost = 10
+	cost = 5
 	x = -2
 	y = 1
 	offset = {
@@ -2137,7 +2135,7 @@ shared_focus = {
 	ai_will_do = { 
 		factor = 15
 	}
-	cost = 10
+	cost = 5
 	x = 0
 	y = 1
 	offset = {
@@ -2174,7 +2172,7 @@ shared_focus = {
 	ai_will_do = { 
 		factor = 15
 	}
-	cost = 10
+	cost = 5
 	x = 2
 	y = 1
 	offset = {
@@ -2207,7 +2205,7 @@ shared_focus = {
 	ai_will_do = { 
 		factor = 15
 	}
-	cost = 10
+	cost = 5
 	x = -1
 	y = 1
 }
@@ -2233,7 +2231,7 @@ shared_focus = {
 	ai_will_do = { 
 		factor = 15
 	}
-	cost = 10
+	cost = 5
 	x = -1
 	y = 1
 }
@@ -2247,6 +2245,9 @@ shared_focus = {
 shared_focus = {
 	id = state_of_the_country_army
 	icon = GFX_focus_generic_commonwealth_build_infantry
+		available = {
+		is_ai = NO
+	}
 	completion_reward = {
 		add_tech_bonus = {
 			name = state_of_the_country_army
@@ -2259,7 +2260,7 @@ shared_focus = {
 	ai_will_do = { 
 		factor = 15
 	}
-	cost = 10
+	cost = 5
 	x = 23
 	y = 6
 	offset = {
@@ -2331,7 +2332,7 @@ shared_focus = {
 	ai_will_do = { 
 		factor = 15
 	}
-	cost = 10
+	cost = 5
 	x = -2
 	y = 1
 }
@@ -2354,7 +2355,7 @@ shared_focus = {
 	ai_will_do = { 
 		factor = 15
 	}
-	cost = 10
+	cost = 5
 	x = 0
 	y = 1
 }
@@ -2383,7 +2384,7 @@ shared_focus = {
 	ai_will_do = { 
 		factor = 15
 	}
-	cost = 10
+	cost = 5
 	x = 2
 	y = 1
 }
@@ -2433,7 +2434,7 @@ shared_focus = {
 	ai_will_do = { 
 		factor = 15
 	}
-	cost = 10
+	cost = 5
 	x = -1
 	y = 1
 	offset = {
@@ -2461,7 +2462,7 @@ shared_focus = {
 	ai_will_do = { 
 		factor = 15
 	}
-	cost = 10
+	cost = 5
 	offset = {
 		x = 1
 		y = 0
@@ -2495,7 +2496,7 @@ shared_focus = {
 	ai_will_do = { 
 		factor = 15
 	}
-	cost = 10
+	cost = 5
 	x = 0
 	y = 1
 }
@@ -2516,7 +2517,7 @@ shared_focus = {
 	ai_will_do = { 
 		factor = 15
 	}
-	cost = 10
+	cost = 5
 	x = 0
 	y = 1
 }
@@ -2542,7 +2543,7 @@ shared_focus = {
 	prerequisite = {
 		focus = state_of_the_country_army
 	}
-	cost = 10
+	cost = 5
 	x = 4
 	y = 1
 	ai_will_do = { factor = 2 }
@@ -2563,7 +2564,7 @@ shared_focus = {
 	prerequisite = {
 		focus = fund_the_intel_services
 	}
-	cost = 10
+	cost = 5
 	x = 0
 	y = 1
 	ai_will_do = { factor = 15 }
@@ -2589,23 +2590,61 @@ shared_focus = {
 			uses = 2
 			bonus = 0.5
 		}
-		if = {
-			limit = {
-				is_a_very_weak_country = no
-			}
-			random_owned_controlled_state = {
-				limit = {
-					is_core_of = ROOT
-					impassable = no
-				}
-				add_extra_state_shared_building_slots = 1
-			}
-		}
-		
 		random_owned_controlled_state = {
 			limit = {
-				is_core_of = ROOT
-				impassable = no
+				impassable = no	
+				free_building_slots = {
+					building = infrastructure
+					size > 0
+				}
+				OR = {
+					is_in_home_area = yes
+					NOT = {
+						owner = {
+							any_owned_state = {
+								free_building_slots = {
+									building = infrastructure
+									size > 0
+								}
+								is_in_home_area = yes
+							}
+						}
+					}
+				}
+			}
+			add_building_construction = {
+				type = infrastructure
+				level = 1
+				instant_build = yes
+			}
+			add_extra_state_shared_building_slots = 1
+		}
+				random_owned_controlled_state = {
+			limit = {
+				impassable = no	
+				free_building_slots = {
+					building = infrastructure
+					size > 0
+				}
+				OR = {
+					is_in_home_area = yes
+					NOT = {
+						owner = {
+							any_owned_state = {
+								free_building_slots = {
+									building = infrastructure
+									size > 0
+								}
+								is_in_home_area = yes
+							}
+						}
+					}
+				}
+			}
+			add_building_construction = {
+				type = infrastructure
+				level = 1
+				instant_build = yes
 			}
 			add_extra_state_shared_building_slots = 1
 		}
@@ -2613,7 +2652,7 @@ shared_focus = {
 	ai_will_do = { 
 		factor = 15
 	}
-	cost = 10
+	cost = 5
 	x = -7
 	y = 0
 }
@@ -2680,10 +2719,10 @@ shared_focus = {
 			}
 			add_building_construction = {
 				type = infrastructure
-				level = 1
+				level = 2
 				instant_build = yes
 			}
-			add_extra_state_shared_building_slots = 1
+			add_extra_state_shared_building_slots = 2
 		}
 		add_tech_bonus = {
 			name = rural_reform
@@ -2696,7 +2735,7 @@ shared_focus = {
 	ai_will_do = { 
 		factor = 15
 	}
-	cost = 10
+	cost = 5
 	x = -4
 	y = 1
 }
@@ -2756,10 +2795,10 @@ shared_focus = {
 			}
 			add_building_construction = {
 				type = infrastructure
-				level = 1
+				level = 2
 				instant_build = yes
 			}
-			add_extra_state_shared_building_slots = 1
+			add_extra_state_shared_building_slots = 2
 		}
 		random_owned_controlled_state = {
 			limit = {
@@ -2785,16 +2824,16 @@ shared_focus = {
 			}
 			add_building_construction = {
 				type = infrastructure
-				level = 1
+				level = 2
 				instant_build = yes
 			}
-			add_extra_state_shared_building_slots = 1
+			add_extra_state_shared_building_slots = 2
 		}
 	}
 	ai_will_do = { 
 		factor = 15
 	}
-	cost = 10
+	cost = 5
 	x = -2
 	y = 1
 }
@@ -2824,7 +2863,7 @@ shared_focus = {
 	ai_will_do = { 
 		factor = 15
 	}
-	cost = 10
+	cost = 5
 	x = 1
 	y = 1
 }
@@ -2884,7 +2923,7 @@ shared_focus = {
 	ai_will_do = { 
 		factor = 15
 	}
-	cost = 10
+	cost = 5
 	x = 0
 	y = 1
 }
@@ -2913,10 +2952,10 @@ shared_focus = {
 					is_core_of = ROOT
 					impassable = no
 				}	
-				add_extra_state_shared_building_slots = 1
+				add_extra_state_shared_building_slots = 2
 				add_building_construction = {
 					type = industrial_complex
-					level = 1
+					level = 2
 					instant_build = yes
 				}				
 			}
@@ -2926,7 +2965,7 @@ shared_focus = {
 						is_core_of = ROOT
 						impassable = no
 					}
-					add_extra_state_shared_building_slots = 1
+					add_extra_state_shared_building_slots = 2
 				}
 			}
 		}
@@ -2934,7 +2973,7 @@ shared_focus = {
 	ai_will_do = { 
 		factor = 15
 	}
-	cost = 10
+	cost = 5
 	x = 0
 	y = 1
 }
@@ -2948,15 +2987,15 @@ shared_focus = {
 	}
 	available = {
 		capital_scope = {
-			is_controlled_by = ROOT
+			is_fully_controlled_by = ROOT
 		}
 	}
 	completion_reward = {
 		capital_scope = {
-			add_extra_state_shared_building_slots = 1
+			add_extra_state_shared_building_slots = 2
 			add_building_construction = {
 				type = industrial_complex
-				level = 1
+				level = 2
 				instant_build = yes
 			}	
 		}
@@ -2964,7 +3003,7 @@ shared_focus = {
 	ai_will_do = { 
 		factor = 15
 	}
-	cost = 10
+	cost = 5
 	x = 0
 	y = 1
 }
@@ -2978,7 +3017,7 @@ shared_focus = {
 	}
 	available = {
 		capital_scope = {
-			is_controlled_by = ROOT
+			is_fully_controlled_by = ROOT
 		}
 	}
 	completion_reward = {
@@ -3014,7 +3053,7 @@ shared_focus = {
 	ai_will_do = { 
 		factor = 15
 	}
-	cost = 10
+	cost = 5
 	x = -1
 	y = 1
 }
@@ -3037,7 +3076,7 @@ shared_focus = {
 	ai_will_do = { 
 		factor = 15
 	}
-	cost = 10
+	cost = 5
 	x = 1
 	y = 1
 }
@@ -3073,7 +3112,7 @@ shared_focus = {
 	ai_will_do = { 
 		factor = 15
 	}
-	cost = 10
+	cost = 5
 	x = -1
 	y = 1
 }
@@ -3086,6 +3125,7 @@ shared_focus = {
 		focus = mechanical_innovation
 	}
 	available = {
+		has_tech = fortification1
 		industrial_complex > 2
 		capital_scope = {
 			is_fully_controlled_by = ROOT
@@ -3120,21 +3160,16 @@ shared_focus = {
 		focus = mechanical_innovation
 	}
 	available = {
-		is_subject = no
-		OR = {
-			has_war = yes
-			threat > 0.5
-		}
 		capital_scope = {
-			is_controlled_by = ROOT
+			is_fully_controlled_by = ROOT
 		}
 	}
 	completion_reward = {
 		capital_scope = {
-			add_extra_state_shared_building_slots = 1
+			add_extra_state_shared_building_slots = 2
 			add_building_construction = {
 				type = arms_factory
-				level = 1
+				level = 2
 				instant_build = yes
 			}		
 			if = {
@@ -3155,7 +3190,7 @@ shared_focus = {
 	ai_will_do = { 
 		factor = 15
 	}
-	cost = 10
+	cost = 5
 	x = 1
 	y = 1
 }
@@ -3196,8 +3231,34 @@ shared_focus = {
 					instant_build = yes
 				}				
 			}
+			random_owned_controlled_state = {
+				limit = {
+					is_coastal = yes
+					is_core_of = ROOT
+					naval_base > 0
+				}
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = industrial_complex
+					level = 2
+					instant_build = yes
+				}				
+			}
 			else = {
 				random_owned_controlled_state = {
+					limit = {
+						is_coastal = yes
+						is_core_of = ROOT
+						naval_base > 0
+					}
+					add_extra_state_shared_building_slots = 1
+					add_building_construction = {
+						type = industrial_complex
+						level = 1
+						instant_build = yes
+					}					
+				}
+								random_owned_controlled_state = {
 					limit = {
 						is_coastal = yes
 						is_core_of = ROOT
@@ -3260,7 +3321,33 @@ shared_focus = {
 					instant_build = yes
 				}		
 			}
+			random_owned_controlled_state = {
+				limit = {
+					is_coastal = yes
+					is_core_of = ROOT
+					naval_base > 0
+				}
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = dockyard
+					level = 2
+					instant_build = yes
+				}		
+			}
 			else = {
+				random_owned_controlled_state = {
+					limit = {
+						is_coastal = yes
+						is_core_of = ROOT
+						naval_base > 0
+					}
+					add_extra_state_shared_building_slots = 1
+					add_building_construction = {
+						type = dockyard
+						level = 1
+						instant_build = yes
+					}	
+				}
 				random_owned_controlled_state = {
 					limit = {
 						is_coastal = yes
@@ -3346,7 +3433,7 @@ shared_focus = {
 	ai_will_do = { 
 		factor = 15
 	}
-	cost = 10
+	cost = 5
 	x = -1
 	y = 1
 }
@@ -3368,7 +3455,7 @@ shared_focus = {
 	ai_will_do = { 
 		factor = 15
 	}
-	cost = 10
+	cost = 5
 	x = 1
 	y = 1
 }
@@ -3403,13 +3490,28 @@ shared_focus = {
 				instant_build = yes
 			}
 		}
-		add_tech_bonus = {
-			name = greater_naval_project
-			technology = basic_ship_hull_heavy
-			technology = improved_ship_hull_heavy
-			technology = advanced_ship_hull_heavy
-			uses = 2
-			bonus = 2
+		if = {
+			limit = {
+				has_dlc = "Man the Guns"
+			}
+			add_tech_bonus = {
+				name = greater_naval_project
+				technology = basic_ship_hull_heavy
+				technology = improved_ship_hull_heavy
+				technology = advanced_ship_hull_heavy
+				uses = 2
+				bonus = 2
+			}
+			else = {
+				add_tech_bonus = {
+					name = greater_naval_project
+					technology = basic_battleship
+					technology = improved_battleship
+					technology = advanced_battleship
+					uses = 2
+					bonus = 1
+				}
+			}
 		}
 	}
 	ai_will_do = { 
@@ -3418,7 +3520,7 @@ shared_focus = {
 	mutually_exclusive = {
 		focus = wolf_pack
 	}
-	cost = 10
+	cost = 5
 	x = 0
 	y = 1
 }
@@ -3431,13 +3533,28 @@ shared_focus = {
 		focus = buy_convoys
 	}
 	completion_reward = {
-		add_tech_bonus = {
-			name = FRA_ww1_equipment_innovations
-			technology = basic_ship_hull_submarine
-			technology = improved_ship_hull_submarine
-			technology = advanced_ship_hull_submarine
-			uses = 1
-			bonus = 1
+		if = {
+			limit = {
+				has_dlc = "Man the Guns"
+			}
+			add_tech_bonus = {
+				name = FRA_ww1_equipment_innovations
+				technology = basic_ship_hull_submarine
+				technology = improved_ship_hull_submarine
+				technology = advanced_ship_hull_submarine
+				uses = 1
+				bonus = 1
+			}
+			else = {
+				add_tech_bonus = {
+					name = FRA_ww1_improve_destroyers_flottila
+					technology = basic_submarine
+					technology = improved_submarine
+					technology = advanced_submarine
+					uses = 1
+					bonus = 1
+				}
+			}
 		}
 		add_ideas = idea_wolf_pack
 	}
@@ -3447,7 +3564,7 @@ shared_focus = {
 	ai_will_do = { 
 		factor = 15
 	}
-	cost = 10
+	cost = 5
 	x = 2
 	y = 1
 }

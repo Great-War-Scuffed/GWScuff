@@ -1,6 +1,6 @@
 ﻿capital = 937 #Johor Bahru
 
-set_research_slots = 2
+set_research_slots = 3
 
 recruit_character = JOH_ibrahim_of_johor
 
@@ -19,8 +19,8 @@ give_military_access = ENG
 	}
 
 	set_technology = {
-		obsolete_infantry_weapons = 1
 		infantry_weapons = 1
+		infantry_weapons1 = 1
 	}
 	add_ideas = {
 		agricultural_economy

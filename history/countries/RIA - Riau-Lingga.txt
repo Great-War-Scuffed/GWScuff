@@ -1,6 +1,6 @@
 ﻿capital = 1051
 
-set_research_slots = 3
+set_research_slots = 2
 
 recruit_character = RIA_abdul_rahman_ii
 
@@ -16,8 +16,8 @@ recruit_character = RIA_abdul_rahman_ii
 		elections_allowed = no
 	}
 	set_technology = {
+		obsolete_infantry_weapons = 1
 		infantry_weapons = 1
-		infantry_weapons1 = 1
 	}
 	add_ideas = {
 		agricultural_economy

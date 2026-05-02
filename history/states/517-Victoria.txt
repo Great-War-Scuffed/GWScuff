@@ -13,9 +13,9 @@ state={
 		owner=AST
 		add_core_of=AST
 		buildings={
-			infrastructure = 4
-			industrial_complex=3
-			arms_factory=2
+			infrastructure = 3
+			industrial_complex=2
+			arms_factory=1
 			7798={ naval_base=4 }
 		}
 	}

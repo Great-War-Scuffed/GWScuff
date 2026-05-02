@@ -6,6 +6,7 @@ state={
 	provinces={ 4553 7969 8040 9816 10523 }
 	history={
 		victory_points = { 10523 2 } #Hamadan 40,000
+		victory_points = { 4553 1 } #Qazvin
 		victory_points = { 7969 1 } #Karaj
 		owner=PER
 		add_core_of=PER

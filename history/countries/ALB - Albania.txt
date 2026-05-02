@@ -1,6 +1,6 @@
 ﻿capital = 871
 
-set_research_slots = 3
+set_research_slots = 2
 set_stability = 0.15
 set_convoys = 5
 
@@ -29,7 +29,6 @@ recruit_character = ALB_filip_noga
 	set_technology = {
 		#infantry
 		infantry_weapons = 1
-		support_weapons = 1
 		
 		#support
 		tech_support = 1

@@ -52,7 +52,7 @@ focus_tree = {
 	focus = {
 		id = HOL_dutch_neutrality
 		icon = GFX_goal_generic_neutrality_focus
-		cost = 5
+		cost = 10
 		x = 11
 		y = 0
 		available_if_capitulated = yes
@@ -69,7 +69,7 @@ focus_tree = {
 	focus = {
 		id = HOL_dutch_indonesia
 		icon = GFX_focus_GER_south_east_asian_natural_wealth
-		cost = 5
+		cost = 10
 		x = 33
 		y = 0
 		available = {
@@ -118,7 +118,7 @@ focus_tree = {
 	focus = {
 		id = HOL_country_of_rivers_and_lakes
 		icon = GFX_goal_generic_position_armies
-		cost = 5
+		cost = 10
 		x = 27
 		y = 0
 		completion_reward = {
@@ -126,10 +126,10 @@ focus_tree = {
 				limit = {
 					is_core_of = ROOT
 				}
-				add_extra_state_shared_building_slots = 2
+				add_extra_state_shared_building_slots = 1
 				add_building_construction = {
 					type = industrial_complex
-					level = 2
+					level = 1
 					instant_build = yes
 				}
 				add_building_construction = {
@@ -169,7 +169,7 @@ focus_tree = {
 	focus = {
 		id = HOL_christian_democracy
 		icon = GFX_focus_por_concordat
-		cost = 5
+		cost = 10
 		prerequisite = {
 			focus = HOL_dutch_neutrality
 		}
@@ -192,7 +192,7 @@ focus_tree = {
 	focus = {
 		id = HOL_radical_reform
 		icon = GFX_goal_generic_demand_territory
-		cost = 5
+		cost = 10
 		prerequisite = {
 			focus = HOL_christian_democracy
 		}
@@ -258,7 +258,7 @@ focus_tree = {
 		completion_reward = {
 			set_autonomy = {
 				target = INS
-				autonomy_state = autonomy_dominion
+				autonomy_state = autonomy_tgwr_self_governing_colony
 			}
 			INS = {
 				add_opinion_modifier = {
@@ -385,7 +385,7 @@ focus_tree = {
 	focus = {
 		id = HOL_conservative_liberalism
 		icon = GFX_goal_support_democracy
-		cost = 5
+		cost = 10
 		prerequisite = {
 			focus = HOL_christian_democracy
 		}
@@ -562,7 +562,7 @@ focus_tree = {
 	focus = {
 		id = HOL_conservative_nation
 		icon = GFX_goal_tfv_strengthen_commonwealth_ties
-		cost = 5
+		cost = 10
 		prerequisite = {
 			focus = HOL_christian_democracy
 		}
@@ -797,7 +797,7 @@ focus_tree = {
 	focus = {
 		id = HOL_gateway_to_europe
 		icon = GFX_focus_hol_gateway_to_europe
-		cost = 5
+		cost = 10
 		prerequisite = {
 			focus = HOL_dutch_neutrality
 		}
@@ -816,7 +816,7 @@ focus_tree = {
 	focus = {
 		id = HOL_sympathy_for_germany
 		icon = GFX_focus_deal_with_german_empire
-		cost = 5
+		cost = 10
 		prerequisite = {
 			focus = HOL_gateway_to_europe
 		}
@@ -943,7 +943,7 @@ focus_tree = {
 	focus = {
 		id = HOL_independent_course
 		icon = GFX_focus_hol_oranje_boven
-		cost = 5
+		cost = 10
 		prerequisite = {
 			focus = HOL_gateway_to_europe
 		}
@@ -1048,7 +1048,7 @@ focus_tree = {
 	focus = {
 		id = HOL_sympathy_for_england
 		icon = GFX_focus_chi_british_cooperation
-		cost = 5
+		cost = 10
 		prerequisite = {
 			focus = HOL_gateway_to_europe
 		}
@@ -1262,7 +1262,7 @@ focus_tree = {
 	focus = {
 		id = HOL_rearmament_subsidies
 		icon = GFX_goal_generic_construct_mil_factory
-		cost = 5
+		cost = 10
 		prerequisite = {
 			focus = HOL_reorganization_of_production
 		}
@@ -1338,7 +1338,7 @@ focus_tree = {
 	focus = {
 		id = HOL_restrictive_measures
 		icon = GFX_goal_generic_trade
-		cost = 5
+		cost = 10
 		prerequisite = {
 			focus = HOL_import_techs
 		}
@@ -1354,21 +1354,24 @@ focus_tree = {
 	focus = {
 		id = HOL_expand_royal_shell
 		icon = GFX_goal_generic_construct_civ_factory
-		cost = 5
+		cost = 10
 		prerequisite = {
 			focus = HOL_country_of_rivers_and_lakes
 		}
 		x = 27
 		y = 1
 		completion_reward = {
-				random_owned_state = {
+			random_owned_state = {
 				limit = {
-					is_core_of = ROOT
+					is_core_of = INS
 				}
-				add_extra_state_shared_building_slots = 2
+				prioritize = {
+					672
+				}
+				add_extra_state_shared_building_slots = 1
 				add_building_construction = {
 					type = industrial_complex
-					level = 2
+					level = 1
 					instant_build = yes
 				}
 			}
@@ -1379,24 +1382,13 @@ focus_tree = {
 	focus = {
 		id = HOL_plant_complexes
 		icon = GFX_focus_hol_philips
-		cost = 5
+		cost = 10
 		prerequisite = {
 			focus = HOL_expand_royal_shell
 		}
 		x = 27
 		y = 2
 		completion_reward = {
-						random_owned_state = {
-				limit = {
-					is_core_of = ROOT
-				}
-				add_extra_state_shared_building_slots = 1
-				add_building_construction = {
-					type = industrial_complex
-					level = 1
-					instant_build = yes
-				}
-			}
 			add_tech_bonus = {
 				name = HOL_plant_complexes
 				bonus = 1
@@ -1410,7 +1402,7 @@ focus_tree = {
 	focus = {
 		id = HOL_food_act
 		icon = GFX_goal_generic_positive_trade_relations
-		cost = 5
+		cost = 10
 		prerequisite = {
 			focus = HOL_plant_complexes
 		}
@@ -1426,7 +1418,7 @@ focus_tree = {
 	focus = {
 		id = HOL_expand_railway_system
 		icon = GFX_goal_generic_construct_infrastructure
-		cost = 5
+		cost = 10
 		prerequisite = {
 			focus = HOL_country_of_rivers_and_lakes
 		}
@@ -1438,7 +1430,6 @@ focus_tree = {
 		}
 		completion_reward = {
 			36 = {
-				add_extra_state_shared_building_slots = 1
 				add_building_construction = {
 					type = infrastructure
 					level = 1
@@ -1446,7 +1437,6 @@ focus_tree = {
 				}
 			}
 			7 = {
-				add_extra_state_shared_building_slots = 1
 				add_building_construction = {
 					type = infrastructure
 					level = 1
@@ -1458,7 +1448,7 @@ focus_tree = {
 	focus = {
 		id = HOL_drain_program
 		icon = GFX_goal_generic_construction2
-		cost = 5
+		cost = 10
 		prerequisite = {
 			focus = HOL_expand_railway_system
 		}
@@ -1469,14 +1459,14 @@ focus_tree = {
 		}
 		completion_reward = {
 			36 = {
-				add_extra_state_shared_building_slots = 3
+				add_extra_state_shared_building_slots = 2
 			}
 		}
 	}
 	focus = {
 		id = HOL_dutch_waterline
 		icon = GFX_focus_hol_prepare_the_inundation_lines
-		cost = 5
+		cost = 10
 		prerequisite = {
 			focus = HOL_drain_program
 		}
@@ -1488,17 +1478,17 @@ focus_tree = {
 		}
 		completion_reward = {
 			7 = {
-				add_extra_state_shared_building_slots = 3
+				add_extra_state_shared_building_slots = 2
 			}
 			35 = {
-				add_extra_state_shared_building_slots = 3
+				add_extra_state_shared_building_slots = 2
 			}
 		}
 	}
 	focus = {
 		id = HOL_jakarta_resources
 		icon = GFX_focus_generic_rubber
-		cost = 5
+		cost = 10
 		prerequisite = {
 			focus = HOL_dutch_indonesia
 		}
@@ -1534,7 +1524,7 @@ focus_tree = {
 	focus = {
 		id = HOL_found_east_indies_factories
 		icon = GFX_focus_generic_industry_2
-		cost = 5
+		cost = 10
 		prerequisite = {
 			focus = HOL_dutch_indonesia
 		}
@@ -1577,7 +1567,7 @@ focus_tree = {
 	focus = {
 		id = HOL_coolie_labor
 		icon = GFX_goal_generic_construction2
-		cost = 5
+		cost = 10
 		prerequisite = {
 			focus = HOL_jakarta_resources
 			focus = HOL_found_east_indies_factories
@@ -1599,7 +1589,7 @@ focus_tree = {
 	focus = {
 		id = HOL_arm_the_colonies
 		icon = GFX_goal_generic_construct_mil_factory
-		cost = 5
+		cost = 10
 		prerequisite = {
 			focus = HOL_coolie_labor
 		}
@@ -1642,7 +1632,7 @@ focus_tree = {
 	focus = {
 		id = HOL_colonial_railway_commission
 		icon = GFX_goal_generic_construct_infrastructure
-		cost = 5
+		cost = 10
 		prerequisite = {
 			focus = HOL_jakarta_resources
 			focus = HOL_found_east_indies_factories
@@ -1685,7 +1675,7 @@ focus_tree = {
 	focus = {
 		id = HOL_expand_comission
 		icon = GFX_goal_generic_construct_infrastructure
-		cost = 5
+		cost = 10
 		prerequisite = {
 			focus = HOL_colonial_railway_commission
 		}
@@ -1741,7 +1731,7 @@ focus_tree = {
 	focus = {
 		id = HOL_sumatra_resources
 		icon = GFX_focus_generic_aluminum
-		cost = 5
+		cost = 10
 		prerequisite = {
 			focus = HOL_jakarta_resources
 			focus = HOL_found_east_indies_factories
@@ -1768,7 +1758,7 @@ focus_tree = {
 	focus = {
 		id = HOL_east_indies_oil_company
 		icon = GFX_goal_generic_oil_refinery
-		cost = 5
+		cost = 10
 		prerequisite = {
 			focus = HOL_sumatra_resources
 		}
@@ -1804,7 +1794,7 @@ focus_tree = {
 	focus = {
 		id = HOL_colonial_education
 		icon = GFX_focus_research
-		cost = 5
+		cost = 10
 		prerequisite = {
 			focus = HOL_expand_comission
 		}

@@ -2,7 +2,7 @@ ideas = {
 	country = {
 		TRP_governing_tetrarchy = {
 			picture = generic_disjointed_gov
-			allowed = { always = yes }
+			allowed = { always = no }
 			allowed_civil_war = { always = yes }
 			removal_cost = -1
 			modifier = {
@@ -11,7 +11,7 @@ ideas = {
 		}
 		TRP_consultative_council = {
 			picture = generic_pp_unity_bonus
-			allowed = { always = yes }
+			allowed = { always = no }
 			allowed_civil_war = { always = yes }
 			removal_cost = -1
 			modifier = {
@@ -20,7 +20,7 @@ ideas = {
 		}
 		TRP_unrecognized_republic = {
 			picture = TUR_diplomatic_isolation
-			allowed = { always = yes }
+			allowed = { always = no }
 			allowed_civil_war = { always = yes }
 			removal_cost = -1
 			modifier = { opinion_gain_monthly_factor = -0.5 }

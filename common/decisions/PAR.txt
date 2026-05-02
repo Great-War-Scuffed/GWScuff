@@ -4,11 +4,7 @@ foreign_politics = {
 		allowed = {
 			original_tag = PAR
 		}
-		target_trigger = {
-			FROM = {
-				owns_state = 901
-			}
-		}
+		target_array = 901.owner
 		visible = {
 			has_global_flag = chaco_border_conflict
 			is_subject = no
@@ -84,11 +80,7 @@ foreign_politics = {
 		allowed = {
 			original_tag = PAR
 		}
-		target_trigger = {
-			FROM = {
-				owns_state = 901
-			}
-		}
+		target_array = 901.owner
 		visible = {
 			has_global_flag = chaco_border_war
 			has_border_war = no

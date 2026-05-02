@@ -13,7 +13,7 @@ state={
 		victory_points = {
 			12199 1
 		}
-		owner = ENG
+		owner = TRG
 		add_core_of = TRG
 		add_core_of = MAL
 		buildings={

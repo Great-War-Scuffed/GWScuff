@@ -57,7 +57,6 @@ focus_tree = {
 		x = 18
 		y = 0
 		available = {
-			is_ai = NO
 			NOT = {
 				has_country_flag = HUN_1910_elections_done
 			}	
@@ -105,9 +104,6 @@ focus_tree = {
 		}
 		allow_branch = {
 			is_subject_of = AUS
-		}
-		available = {
-			is_ai = NO
 		}
 		completion_reward = {		
 			add_popularity = {
@@ -853,7 +849,7 @@ focus_tree = {
 	focus = {
 		id = HUN_open_dunauijvaros_iron_mines
 		icon = GFX_focus_generic_steel
-		cost = 5
+		cost = 10
 		x = 0
 		y = 0
 		available = {
@@ -866,9 +862,23 @@ focus_tree = {
 					level = 1
 					instant_build = yes
 				}
-				add_resource = {
-					type = steel
-					amount = 8
+				if = {
+					limit = {
+						has_start_date < 1914.1.1
+					}
+					# for 1914 transfered to on_startup
+					add_resource = {
+						type = steel
+						amount = 8
+					}
+				}
+				else = {
+					effect_tooltip = {
+						add_resource = {
+							type = steel
+							amount = 8
+						}
+					}
 				}
 			}
 		}
@@ -880,7 +890,7 @@ focus_tree = {
 	focus = {
 		id = HUN_rural_industrialisation
 		icon = GFX_goal_generic_construct_civ_factory
-		cost = 5
+		cost = 10
 		x = -2
 		y = 1
 		relative_position_id = HUN_open_dunauijvaros_iron_mines
@@ -934,7 +944,7 @@ focus_tree = {
 	focus = {
 		id = HUN_build_new_roads
 		icon = GFX_focus_SOV_the_road_of_life
-		cost = 5
+		cost = 10
 		x = -4
 		y = 1
 		relative_position_id = HUN_open_dunauijvaros_iron_mines
@@ -972,7 +982,7 @@ focus_tree = {
 	focus = {
 		id = HUN_expand_the_national_railways
 		icon = GFX_focus_HUN_magyar_allamvasutak
-		cost = 5
+		cost = 10
 		x = 0
 		y = 1
 		relative_position_id = HUN_build_new_roads
@@ -1004,7 +1014,7 @@ focus_tree = {
 	focus = {
 		id = HUN_invest_in_budapest
 		icon = GFX_focus_generic_economic_recovery
-		cost = 5
+		cost = 10
 		x = -1
 		y = 2
 		relative_position_id = HUN_rural_industrialisation
@@ -1016,15 +1026,15 @@ focus_tree = {
 		}
 		completion_reward = {		
 			43 = {
-				add_extra_state_shared_building_slots = 2
+				add_extra_state_shared_building_slots = 1
 				add_building_construction = {
 					type = industrial_complex
-					level = 2
+					level = 1
 					instant_build = yes
 				}
 			}
 			43 = {
-				add_extra_state_shared_building_slots = 2
+				add_extra_state_shared_building_slots = 1
 				add_building_construction = {
 					type = infrastructure
 					level = 1
@@ -1040,7 +1050,7 @@ focus_tree = {
 	focus = {
 		id = HUN_autarkia
 		icon = GFX_goal_generic_construction2
-		cost = 5
+		cost = 10
 		x = 0
 		y = 1
 		relative_position_id = HUN_rural_industrialisation
@@ -1081,6 +1091,9 @@ focus_tree = {
 				}	
 				promote_character = HUN_bela_kun
 			}	
+		}
+		search_filters = {
+			FOCUS_FILTER_COMPLETED_BY_EVENT FOCUS_FILTER_HISTORICAL
 		}
 	}
 	focus = {
@@ -1415,10 +1428,8 @@ focus_tree = {
 			if = {
 				limit = {
 					NOT = {
-						OR = {
-							has_idea = all_adults_serve
-							has_idea = scraping_the_barrel
-						}
+						has_idea = all_adults_serve
+						has_idea = scraping_the_barrel
 					}
 				}
 				add_ideas = all_adults_serve
@@ -1443,12 +1454,18 @@ focus_tree = {
 			has_country_flag = HUN_czechs_making_moves
 		}
 		completion_reward = {		
+			hidden_effect = {
+				news_event = {
+					days = 1
+					id = ww1_romania.209
+				}
+			}
 			declare_war_on = {
 				target = CZE
 				type = take_core_state
 			}
+			activate_mission = HUN_capture_presov
 			custom_effect_tooltip = HUN_take_presov.tt
-			set_country_flag = HUN_take_presov
 			add_timed_idea = {
 				idea = HUN_czech_offensive
 				days = 50
@@ -1557,10 +1574,7 @@ focus_tree = {
 				has_war_with = AUS
 				has_global_flag = HUN_want_independence	
 			}
-			OR = {
-				is_in_faction_with = AUS
-				is_subject_of = AUS
-			}
+			is_ally_with = AUS
 		}
 		prerequisite = {
 			focus = HUN_establish_the_hungarian_political_sphere
@@ -1634,10 +1648,7 @@ focus_tree = {
 				has_government = communism
 				has_global_flag = HUN_want_independence	
 			}
-			OR = {
-				is_in_faction_with = AUS
-				is_subject_of = AUS
-			}
+			is_ally_with = AUS
 			AUS = {
 				OR = {
 					has_idea = AUH_karl_i
@@ -1779,7 +1790,7 @@ focus_tree = {
 	focus = {
 		id = HUN_expand_the_honvedseg
 		icon = GFX_focus_AUH_the_army_question
-		cost = 5
+		cost = 10
 		x = 6
 		y = 0
 		available = {
@@ -1803,7 +1814,7 @@ focus_tree = {
 	focus = {
 		id = HUN_mavag_gyarak
 		icon = GFX_goal_generic_construct_mil_factory
-		cost = 5
+		cost = 10
 		x = 0
 		y = 1
 		relative_position_id = HUN_expand_the_honvedseg
@@ -1854,7 +1865,7 @@ focus_tree = {
 	focus = {
 		id = HUN_support_the_Royal_Hungarian_Air_Force
 		icon = GFX_goal_generic_air_fighter
-		cost = 5
+		cost = 10
 		x = -1
 		y = 2
 		relative_position_id = HUN_expand_the_honvedseg

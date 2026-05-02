@@ -17,7 +17,7 @@ recruit_character = FIN_franz_albert_seyn
 recruit_character = RUS_mikhail_stakhovich
 recruit_character = RUS_nikolai_nekrasov
 
-recruit_character = FIN_carl_gustaf_mannerheim
+#recruit_character = FIN_carl_gustaf_mannerheim
 recruit_character = FIN_oskari_tokoi
 recruit_character = FIN_emil_nestor_setala
 recruit_character = FIN_pehr_evind_svinhufvud
@@ -68,7 +68,7 @@ set_technology = {
 	#infantry
 	infantry_weapons = 1
 	infantry_weapons1 = 1
-	support_weapons = 1
+	machine_guns = 1
 	tech_trucks = 1
 	tech_mountaineers = 1
 
@@ -85,10 +85,10 @@ set_technology = {
 	basic_field_gun = 1
 
 	#doctrine
-	ww1_landdoctrine = 1
+	
 
 	#navy
-	transport = 1
+	
 
 	#air
 	scout_plane = 1
@@ -107,8 +107,8 @@ set_technology = {
 
 }
 1910.1.1 = {
-	##load_focus_tree = empty_focus
-	#country_lock_all_division_template = yes
+	load_focus_tree = empty_focus
+	country_lock_all_division_template = yes
 	set_politics = {
 		ruling_party = neutrality
 		last_election = "1909.1.2"
@@ -123,8 +123,8 @@ set_technology = {
 	}
 }
 add_ideas = {
-	#disarmed_nation
-	#FIN_sotilasmiljoonat
+	disarmed_nation
+	FIN_sotilasmiljoonat
 	sisu
 }
 

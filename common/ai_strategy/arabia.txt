@@ -57,6 +57,7 @@ SAU_unite_hejaz = {
 	enable = {
 		HJZ = { exists = yes is_subject = no }
 		JBS = { exists = no }
+		UAS = { exists = no }
 	}
 	abort_when_not_enabled = yes
 	ai_strategy = {
@@ -87,7 +88,6 @@ SAU_unite_upper_asir = {
 	enable = {
 		UAS = { exists = yes is_subject = no }
 		JBS = { exists = no }
-		HJZ = { exists = no }
 	}
 	abort_when_not_enabled = yes
 	ai_strategy = {
@@ -205,6 +205,12 @@ KUW_be_guaranteed_by_ottomans = {
 		is_guaranteed_by = TUR
 		OR = {
 			is_subject_of = ENG
+			AND = {
+				is_subject = yes
+				OVERLORD = {
+					is_subject_of = ENG
+				}			
+			}
 			is_subject_of = TUR
 		}
 	}

@@ -5,6 +5,7 @@ armor_ENG = {
 	}
 	
 	role = heavy_armor
+	front_role_override = offence
 
 	upgrade_prio = {
 		factor = 10
@@ -30,14 +31,19 @@ armor_ENG = {
 
 		target_template = {
 			support = {
+				recon = 1
 				engineer = 1
-				logistics_company = 1
 				maintenance_company = 1
+				logistics_company = 1
 			}
 			
 			regiments = {
-				heavy_armor = 3
-				infantry = 4
+				infantry = 10
+				field_gun_brigade = 1
+				field_gun_brigade = 1
+				howitzer_brigade = 0
+				machine_gun_company = 0
+				heavy_armor = 1
 			}
 		}
 	}
@@ -119,6 +125,7 @@ infantry_ENG = {
 				infantry = 12
 				field_gun_brigade = 2
 				howitzer_brigade = 1
+				machine_gun_company = 1
 			}
 		}
 	}
@@ -148,6 +155,7 @@ infantry_ENG = {
 				infantry = 12
 				field_gun_brigade = 2
 				howitzer_brigade = 1
+				machine_gun_company = 1
 			}
 		}
 	}
@@ -175,6 +183,8 @@ infantry_ENG = {
 			regiments = {
 				infantry = 10
 				field_gun_brigade = 2
+				howitzer_brigade = 0
+				machine_gun_company = 1
 			}
 		}
 	}
@@ -208,6 +218,8 @@ infantry_ENG = {
 			regiments = {
 				infantry = 10
 				field_gun_brigade = 2
+				howitzer_brigade = 0
+				machine_gun_company = 1
 			}
 		}
 	}

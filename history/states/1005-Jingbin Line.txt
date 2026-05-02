@@ -4,7 +4,7 @@ state={
 
 	history={
 		victory_points = { 9155 1 }
-		owner = QIN
+		owner = CER
 		add_core_of = CER
 		add_core_of = QIN
 		buildings = {

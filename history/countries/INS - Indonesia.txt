@@ -4,7 +4,7 @@ recruit_character = INS_a_w_frederik_idenburg
 recruit_character = INS_frits_van_daalen
 recruit_character = INS_volksraad
 
-set_research_slots = 3
+set_research_slots = 2
 
 RIA = { set_country_flag = protectorate }
 set_autonomy = {
@@ -15,6 +15,7 @@ set_autonomy = {
 
 1910.1.1 = {
 	set_technology = {
+		obsolete_infantry_weapons = 1
 		infantry_weapons = 1
 		basic_train = 1
 		basic_railways = 1

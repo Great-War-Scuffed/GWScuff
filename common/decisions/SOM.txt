@@ -4,10 +4,8 @@ operations = {
 		allowed = {
 			original_tag = SOM
 		}
-		target_trigger = {
-			FROM = {
-				original_tag = ENG
-			}
+		targets = {
+			ENG
 		}
 		days_remove = 65
 		available = {
@@ -82,9 +80,7 @@ operations = {
 		}
 		cancel_if_not_visible = yes
 		cancel_trigger = {
-			OR = {
-				NOT = { controls_state = FROM }
-			}
+			NOT = { controls_state = FROM }
 		}
 		cost = 25
 		remove_effect = {
@@ -104,16 +100,12 @@ operations = {
 				original_tag = MJT
 			}
 		}
-		target_trigger = {
-			FROM = {
-				OR = {
-					tag = HBY
-					tag = SOM
-					tag = GLD
-					tag = MJT
-					tag = AFA
-				}
-			}
+		targets = {
+			HBY
+			SOM
+			GLD
+			MJT
+			AFA			
 		}
 		war_with_target_on_remove = yes
 		visible = {

@@ -1,6 +1,6 @@
 ﻿capital = 935 #Kota Bahru
 
-set_research_slots = 3
+set_research_slots = 2
 
 recruit_character = KEL_muhammad_iv
 
@@ -18,8 +18,8 @@ recruit_character = KEL_muhammad_iv
 	}
 
 	set_technology = {
+		obsolete_infantry_weapons = 1
 		infantry_weapons = 1
-		infantry_weapons1 = 1
 	}
 	add_ideas = {
 		agricultural_economy

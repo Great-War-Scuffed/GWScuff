@@ -7,15 +7,16 @@ state = {
 	resources = {
 		chromium = 12
 		steel = 4
+		coal = 5
 	}
 	history = {
 		victory_points = { 10400 10 }
 		owner = SAF
 		add_core_of = SAF
 		buildings = {
-			infrastructure = 4
-			industrial_complex = 2
-			arms_factory = 2
+			infrastructure = 3
+			industrial_complex = 1
+			arms_factory = 1
 		}
 	}
 }

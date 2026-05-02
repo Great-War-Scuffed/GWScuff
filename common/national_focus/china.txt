@@ -68,7 +68,7 @@ focus_tree = {
 	focus = {
 		id = CHI_establish_provisional_gov
 		icon = GFX_focus_chinese_revolutionaries
-		cost = 5
+		cost = 6
 		relative_position_id = CHI_stand_with_tongmenghui
 		prerequisite = {
 			focus = CHI_stand_with_tongmenghui
@@ -224,7 +224,7 @@ focus_tree = {
 	focus = {
 		id = CHI_ruling_of_yuan_shikai
 		icon = GFX_focus_beiyang_beijing
-		cost = 5
+		cost = 7
 		prerequisite = {
 			focus = CHI_tongmenghui_cabinet
 		}
@@ -824,6 +824,7 @@ focus_tree = {
 	}
 	focus = {
 		id = CHI_favor_civilian_government
+		dynamic = yes
 		icon = GFX_focus_AUH_demoratic_action
 		cost = 5
 		prerequisite = {
@@ -961,7 +962,7 @@ focus_tree = {
 	focus = {
 		id = CHI_maintain_status_quo
 		icon = GFX_focus_beiyang_purges
-		cost = 5
+		cost = 6
 		relative_position_id = CHI_ruling_of_yuan_shikai
 		prerequisite = {
 			focus = CHI_parliament_liquidation
@@ -1288,6 +1289,36 @@ focus_tree = {
 					id = ww1_china.1
 					hours = 2
 				}
+				if = {
+					limit = {
+						OR = {
+							original_tag = MON
+							original_tag = TIB
+						}
+						any_subject_country = {
+							has_autonomy_state = autonomy_tgwr_regional_government
+						}
+					}
+					every_subject_country = {
+						limit = {
+							OR = {
+								original_tag = MON
+								original_tag = TIB
+							}
+							any_subject_country = {
+								has_autonomy_state = autonomy_tgwr_regional_government
+							}
+						}
+						PREV = {
+							set_autonomy = {
+								target = PREV
+								autonomy_state = autonomy_tgwr_personal_union
+								end_civil_wars = no
+								end_wars = no
+							}
+						}
+					}
+				}
 			}
 		}
 		ai_will_do = {
@@ -1305,7 +1336,7 @@ focus_tree = {
 	focus = {
 		id = CHI_continue_constitutional_reforms
 		icon = GFX_focus_chinese_reform
-		cost = 5
+		cost = 6
 		prerequisite = {
 			focus = CHI_second_empire
 		}
@@ -1338,7 +1369,7 @@ focus_tree = {
 	focus = {
 		id = CHI_a_traditional_empire
 		icon = GFX_focus_beiyang_forbidden_city
-		cost = 5
+		cost = 6
 		prerequisite = {
 			focus = CHI_second_empire
 		}
@@ -1366,7 +1397,7 @@ focus_tree = {
 	focus = {
 		id = CHI_our_glorious_army
 		icon = GFX_focus_beiyang_expeditions
-		cost = 5
+		cost = 6
 		prerequisite = {
 			focus = CHI_second_empire
 		}
@@ -1391,7 +1422,7 @@ focus_tree = {
 	focus = {
 		id = CHI_empower_ministers
 		icon = GFX_focus_patronize_chinese_elites
-		cost = 5
+		cost = 8
 		prerequisite = {
 			focus = CHI_propaganda_of_imperialism
 		}
@@ -1707,6 +1738,47 @@ focus_tree = {
 				#	democratic = 47
 				#	neutrality = 25
 				#}
+				if = {
+					limit = {
+						has_character = CHI_yuan_shikai
+					}
+					CHI_yuan_shikai = {
+						promote_character = stratocracy
+						if = {
+							limit = {
+								has_ideology = authoritarian_democracy
+							}
+							promote_character = authoritarian_democracy
+						}
+						else = {
+							add_country_leader_role = {
+								promote_leader = yes
+								country_leader = {
+									ideology = authoritarian_democracy
+								}
+							}
+						}
+					}
+				}
+				else = {
+					CHI_duan_qirui = {
+						promote_character = stratocracy
+						if = {
+							limit = {
+								has_ideology = authoritarian_democracy
+							}
+							promote_character = authoritarian_democracy
+						}	
+						else = {
+							add_country_leader_role = {
+								promote_leader = yes
+								country_leader = {
+									ideology = authoritarian_democracy
+								}
+							}
+						}
+					}
+				}
 			}
 			mark_focus_tree_layout_dirty = yes
 		}
@@ -1835,7 +1907,7 @@ focus_tree = {
 					has_character = CHI_sun_yatsen
 					CHI_sun_yatsen = {
 						NOT = {
-							has_character_flag = sun_yatsen_president
+							has_character_flag = president
 						}
 					}
 				}
@@ -1886,7 +1958,7 @@ focus_tree = {
 	}
 	focus = {
 		id = CHI_land_equality
-		icon = GFX_focus_SWE_form_rfsu
+		icon = GFX_focus_CHI_clear_out_sycophants
 		cost = 5
 		prerequisite = {
 			focus = CHI_kmt_state_reform
@@ -1990,7 +2062,7 @@ focus_tree = {
 	}
 	focus = {
 		id = CHI_deal_with_beiyang
-		icon = GFX_focus_SWE_revoke_militia_law
+		icon = GFX_focus_CHI_unify_as_the_china_democratic_league
 		cost = 5
 		prerequisite = {
 			focus = CHI_focus_democratic_presidential_election
@@ -2888,6 +2960,12 @@ focus_tree = {
 			983 = {
 				is_owned_or_subject_trigger = yes
 			}
+			1228 = {
+				is_owned_or_subject_trigger = yes
+			}
+			1229 = {
+				is_owned_or_subject_trigger = yes
+			}
 		}
 		completion_reward = {
 			add_political_power = 25
@@ -2914,8 +2992,7 @@ focus_tree = {
 			MON = {
 				exists = yes
 				NOT = {
-					is_subject_of = ROOT
-					is_in_faction_with = ROOT
+					is_ally_with = ROOT
 				}
 				is_neighbor_of_subject = yes
 			}
@@ -2945,6 +3022,8 @@ focus_tree = {
 		}
 		bypass = {
 			owns_state = 330
+			owns_state = 1228
+			owns_state = 1229
 		}
 		completion_reward = {
 			create_wargoal = {
@@ -2960,7 +3039,7 @@ focus_tree = {
 	focus = {
 		id = CHI_integration_campaign
 		icon = GFX_focus_mongolia
-		cost = 5
+		cost = 7
 		prerequisite = {
 			focus = CHI_restore_outer_mongolia
 		}
@@ -3019,8 +3098,7 @@ focus_tree = {
 				exists = yes
 				is_subject = no
 				NOT = {
-					is_subject_of = ROOT
-					is_in_faction_with = ROOT
+					is_ally_with = ROOT
 				}
 				is_neighbor_of_subject = yes
 			}
@@ -3107,6 +3185,7 @@ focus_tree = {
 	}
 	focus = {
 		id = CHI_tuvan_question
+		dynamic = yes
 		icon = GFX_goal_generic_cavalry
 		cost = 5
 		prerequisite = {
@@ -3211,7 +3290,7 @@ focus_tree = {
 	focus = {
 		id = CHI_seize_tuvan_riches
 		icon = GFX_focus_generic_farmland
-		cost = 5
+		cost = 6
 		prerequisite = {
 			focus = CHI_tuvan_question
 		}
@@ -3265,6 +3344,12 @@ focus_tree = {
 				is_owned_or_subject_trigger = yes
 			}
 			983 = {
+				is_owned_or_subject_trigger = yes
+			}
+			1228 = {
+				is_owned_or_subject_trigger = yes
+			}
+			1229 = {
 				is_owned_or_subject_trigger = yes
 			}
 		}
@@ -3335,6 +3420,7 @@ focus_tree = {
 	}
 	focus = {
 		id = CHI_negotiations_with_britain
+		dynamic = yes
 		icon = GFX_goal_generic_forceful_treaty
 		cost = 5
 		relative_position_id = CHI_restore_order
@@ -3419,7 +3505,7 @@ focus_tree = {
 	focus = {
 		id = CHI_integrate_the_plains
 		icon = GFX_goal_generic_more_territorial_claims
-		cost = 5
+		cost = 7
 		relative_position_id = CHI_restore_order
 		x = 2
 		y = 3
@@ -3606,7 +3692,7 @@ focus_tree = {
 	focus = {
 		id = CHI_our_borders_restored
 		icon = GFX_goal_generic_position_armies
-		cost = 5
+		cost = 8
 		relative_position_id = CHI_restore_order
 		x = 0
 		y = 5
@@ -3632,7 +3718,15 @@ focus_tree = {
 			983 = {
 				is_owned_or_subject_trigger = yes
 			}
-			985 = { is_owned_or_subject_trigger = yes }
+			985 = {
+				is_owned_or_subject_trigger = yes
+			}
+			1228 = {
+				is_owned_or_subject_trigger = yes
+			}
+			1229 = {
+				is_owned_or_subject_trigger = yes
+			}
 		}
 		completion_reward = {
 			add_stability = 0.15
@@ -3653,6 +3747,7 @@ focus_tree = {
 		y = 1
 		allow_branch = {
 			has_global_flag = yuan_shikai_dead
+			has_completed_focus = CHI_ruling_of_yuan_shikai
 		}
 		prerequisite = {
 			focus = CHI_maintain_status_quo
@@ -3720,7 +3815,7 @@ focus_tree = {
 					original_tag = GDC
 					original_tag = GZC
 					original_tag = HNC
-					original_tag = SCC
+					original_tag = SIC
 				}
 				NOT = {
 					has_war_with = ROOT
@@ -3740,7 +3835,7 @@ focus_tree = {
 							original_tag = GDC
 							original_tag = GZC
 							original_tag = HNC
-							original_tag = SCC
+							original_tag = SIC
 						}
 						NOT = {
 							has_war_with = ROOT

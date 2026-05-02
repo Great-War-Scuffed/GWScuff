@@ -16,10 +16,8 @@ peace_deals = {
 		}
 		on_map_mode = map_and_decisions_view
 		state_target = yes
-		target_trigger = {
-			FROM = {
-				state = 1210
-			}
+		targets = {
+			1210
 		}
 		cost = 0
 		complete_effect = {

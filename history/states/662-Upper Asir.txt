@@ -6,8 +6,9 @@ state={
 		victory_points = {
 			9121 1 
 		}
-		owner = SAU
-		add_core_of = SAU
+		owner = TUR
+		add_core_of = UAS
+		add_core_of = ASR	
 		buildings = {
 			infrastructure = 0
 		}

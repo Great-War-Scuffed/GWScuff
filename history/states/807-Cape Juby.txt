@@ -6,7 +6,7 @@ state={
 	}
 	history={
 		victory_points = { 8111 1 }	# Tarfaya
-		owner = FRA
+		owner = MOR
 		add_core_of = MOR
 		add_claim_by = SPR
 		buildings = {

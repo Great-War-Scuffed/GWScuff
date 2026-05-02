@@ -17,9 +17,8 @@ state={
 		owner = FIN
 		add_core_of=FIN
 		buildings = {
-			infrastructure = 4
-			industrial_complex = 3
-			arms_factory = 2		
+			infrastructure = 3
+			industrial_complex = 1			
 			11105 = {
 				naval_base = 5
 			}

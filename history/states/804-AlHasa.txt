@@ -9,8 +9,7 @@ state={
 		# victory_points = { was founded in 1923 by the Al Dawasir tribe
 		# 	12702 2 
 		# }
-		owner = SAU
-		add_core_of = SAU
+		owner = TUR
 		add_claim_by = SAU
 		buildings = {
 			infrastructure = 1

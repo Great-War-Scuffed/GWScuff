@@ -145,97 +145,6 @@ focus_tree = {
 ##									AUSTRIAN POLITICS
 ######################################################################################################################################
 ######################################################################################################################################
-	focus = {
-		id = AUH_annex_hungary
-		icon = GFX_SOV_an_adaptable_army_ccp_2d_sov_compatibility
-		cost = 5
-		x = 0
-		y = 1
-		prerequisite = {
-			focus = AUH_stabilize_the_empire
-		}
-		mutually_exclusive = {
-			focus = AUH_hungarian_politics
-		}
-		available = {
-			HUN = {
-				NOT = {
-					is_ai=NO
-				}
-			}
-		}
-		relative_position_id = AUH_stabilize_the_empire
-		completion_reward = {
-			add_political_power = 120
-			transfer_state = 70
-			transfer_state = 71
-			transfer_state = 994
-			transfer_state = 1043
-			transfer_state = 73
-			transfer_state = 664
-			transfer_state = 147
-			transfer_state = 155
-			transfer_state = 43
-			transfer_state = 1139
-			transfer_state = 45
-			transfer_state = 764
-			transfer_state = 82
-			transfer_state = 154
-			transfer_state = 1020
-			transfer_state = 83
-			transfer_state = 1044
-			transfer_state = 76
-			transfer_state = 778
-			transfer_state = 84
-			transfer_state = 82
-			transfer_state = 575
-			transfer_state = 109
-			transfer_state = 208
-			transfer_state = 104
-			transfer_state = 513
-			transfer_state = 875
-
-
-			add_state_core = 70
-			add_state_core = 71
-			add_state_core = 994
-			add_state_core = 1043
-			add_state_core = 73
-			add_state_core = 664
-			add_state_core = 147
-			add_state_core = 155
-			add_state_core = 43
-			add_state_core = 1139
-			add_state_core = 45
-			add_state_core = 764
-			add_state_core = 82
-			add_state_core = 154
-			add_state_core = 1020
-			add_state_core = 83
-			add_state_core = 1044
-			add_state_core = 76
-			add_state_core = 778
-			add_state_core = 84
-			add_state_core = 82
-			add_state_core = 575
-			add_state_core = 109
-			add_state_core = 208
-			add_state_core = 104
-			add_state_core = 513
-			add_state_core = 875
-		}
-		search_filters = {
-			FOCUS_FILTER_HISTORICAL
-			FOCUS_FILTER_POLITICAL
-		}
-		ai_will_do = { 
-			factor = 35
-		}
-	}
-
-
-
-
 
 	focus = {
 		id = AUH_austrian_politics
@@ -317,7 +226,7 @@ focus_tree = {
 	focus = {
 		id = AUH_limit_czech_partliament_authority
 		icon = GFX_focus_convention
-		cost = 5
+		cost = 10
 		x = 0
 		y = 1
 		available = {
@@ -362,7 +271,7 @@ focus_tree = {
 	focus = {
 		id = AUH_ban_trade_unions
 		icon = GFX_focus_industry_profit
-		cost = 5
+		cost = 10
 		x = 2
 		y = 1
 		available = {
@@ -407,7 +316,7 @@ focus_tree = {
 	focus = {
 		id = AUH_dissolve_austrian_parliament
 		icon = GFX_focus_AUH_strengthen_monarchy
-		cost = 5
+		cost = 10
 		x = 3
 		y = 2
 		available = {
@@ -443,7 +352,7 @@ focus_tree = {
 	focus = {
 		id = AUH_dissolve_czech_autonomy
 		icon = GFX_focus_CZE_AUH_coat_of_arms
-		cost = 5
+		cost = 10
 		x = 1
 		y = 1
 		available = {
@@ -533,9 +442,13 @@ focus_tree = {
 		}
 		prerequisite = {
 			focus = AUH_invalidate_croatian_constitution
-			focus = AUH_annex_hungary
 		}
 		relative_position_id = AUH_integration_of_southern_croatia
+		available = {
+			109 = {
+				is_owned_or_subject_trigger = yes
+			}
+		}
 		completion_reward = {	
 			custom_effect_tooltip = AUH_spawn_3_guards_divisions_to_zagreb
 			hidden_effect = {
@@ -745,7 +658,7 @@ focus_tree = {
 	focus = {
 		id = AUH_galicia_integration
 		icon = GFX_focus_GAL_coat_of_arms
-		cost = 5
+		cost = 10
 		available = {
 			has_completed_focus = AUH_invest_in_galicia
 			OR = {
@@ -844,7 +757,7 @@ focus_tree = {
 	focus = {
 		id = AUH_suppress_slav_opposition
 		icon = GFX_focus_destroy_meclis
-		cost = 5
+		cost = 10
 		x = 1
 		y = 1
 		prerequisite = {
@@ -853,7 +766,9 @@ focus_tree = {
 		prerequisite = {
 			focus = AUH_integration_of_southern_croatia
 		}
-
+		prerequisite = {
+			focus = AUH_invalidate_croatian_constitution
+		}
 		search_filters = {
 			FOCUS_FILTER_HISTORICAL
 			FOCUS_FILTER_INTERNAL_AFFAIRS
@@ -867,13 +782,25 @@ focus_tree = {
 			}
 		}
 		relative_position_id = AUH_integration_of_southern_croatia
-		completion_reward = {	
+		completion_reward = {
 			BOS = {
 				swap_ideas = {
 					remove_idea = BOS_south_slavic_terrorism
 					add_idea = BOS_south_slavic_terrorism2
 					days = 720
 				}
+			}
+			if = {
+				limit = {
+					has_character = AUH_franz_ferdinand
+					NOT = {
+						has_country_leader = {
+							character = AUH_franz_ferdinand
+						}						
+					}
+				}
+				custom_effect_tooltip = AUH_prevent_ferdinand_assasination
+				custom_effect_tooltip = empty_space_tt
 			}
 			unlock_decision_tooltip = BOS_suspend_bosnian_diet
 			set_country_flag = AUH_suppress_slav_opposition
@@ -886,7 +813,7 @@ focus_tree = {
 	focus = {
 		id = AUH_balkan_expansion
 		icon = GFX_focus_ser_balkan_fist
-		cost = 5
+		cost = 10
 		x = 0
 		y = 1
 		prerequisite = {
@@ -961,7 +888,7 @@ focus_tree = {
 	focus = {
 		id = AUH_purification_of_the_empire
 		icon = GFX_focus_auh_austrian_empire
-		cost = 5
+		cost = 10
 		x = 0
 		y = 2
 		available = {
@@ -969,7 +896,7 @@ focus_tree = {
 				has_country_flag = AUH_racism_ban
 			}
 			any_state = {
-				is_controlled_by = ROOT
+				is_controlled_by_ROOT_or_subject = yes
 				OR = {
 					is_core_of = POL
 					is_core_of = SER
@@ -1065,7 +992,7 @@ focus = {
 		}
 	}
 	search_filters = {
-		FOCUS_FILTER_INTERNAL_AFFAIRS
+		FOCUS_FILTER_INTERNAL_AFFAIRS FOCUS_FILTER_COMPLETED_BY_EVENT
 	}
 	relative_position_id = AUH_stabilize_the_empire
 	# prerequisite = {
@@ -1551,7 +1478,7 @@ focus = {
 		custom_effect_tooltip = AUH_corruption_reduction_4
 		add_to_variable = {
 			var = AUH_corruption_var
-			value = 0.04
+			value = -0.04
 		}
 		set_variable = {
 			var = AUH_corruption_var_plain
@@ -2018,40 +1945,17 @@ focus = {
 		}
 		NOT = {
 			has_global_flag = AUH_lose_against_hungary
-			HUN = {
-				exists = yes
-				NOT = {
-					is_puppet_of = AUS
-				}
-			}
-			CZE = {
-				exists = yes
-				NOT = {
-					is_puppet_of = AUS
-				}
-			}
-			GAL = {
-				exists = yes
-				NOT = {
-					is_puppet_of = AUS
-				}
-			}
-			CRO = {
-				exists = yes
-				NOT = {
-					is_puppet_of = AUS
-				}
-			}
-			BOS = {
-				exists = yes
-				NOT = {
-					is_puppet_of = AUS
-				}
-			}
+			has_subject = CRO
 		}
 	}
 	bypass = {
-		has_completed_focus = AUH_federalist_reform
+		OR = {
+			has_completed_focus = AUH_federalist_reform
+			AND = {
+				has_subject = CRO
+				has_subject = HUN
+			}
+		}
 	}
 	search_filters = {
 		FOCUS_FILTER_STABILITY
@@ -2241,7 +2145,13 @@ focus = {
 		focus = AUH_economic_liberisation
 	}
 	completion_reward = {
-		remove_ideas = standing_alone
+		if = {
+			limit = { 
+				has_idea = standing_alone
+			}
+			remove_ideas = standing_alone
+		}
+		
 		if = {
 			limit = {
 				NOT = { is_in_faction_with = GER }
@@ -2380,30 +2290,34 @@ focus = {
 			}
 			leave_faction = yes
 		}
-		diplomatic_relation = {
-			country = GER
-			relation = guarantee
-			active = no
-	    }
-		diplomatic_relation = {
-			country = ITA
-			relation = guarantee
-			active = no
-	    }
-		hidden_effect = {
-			GER = {
+		every_other_country = {
+			limit = { 
+				is_guaranteed_by = ROOT 
+				NOT = {
+					original_tag = LIE
+				}
+			}
+			ROOT = {
 				diplomatic_relation = {
-					country = ROOT
+					country = PREV
 					relation = guarantee
 					active = no
 				}
 			}
-			ITA = {
-				diplomatic_relation = {
-					country = ROOT
-					relation = guarantee
-					active = no
+		}
+		every_other_country = {
+			limit = { 
+				has_guaranteed = ROOT 
+				OR = {
+					original_tag = GER
+					original_tag = ITA
+					original_tag = ROM
 				}
+			}
+			diplomatic_relation = {
+				country = PREV
+				relation = guarantee
+				active = no
 			}
 		}
 	}
@@ -2716,6 +2630,8 @@ focus = {
 		focus = AUH_self_defence_doctrines
 	}
 	completion_reward = {
+		add_political_power = 50
+		add_stability = 0.05
 		add_ideas = neutrality_idea
 		
 	}
@@ -3983,18 +3899,18 @@ focus = {
 				uses = 1
 			}
 			69 = {
-				add_extra_state_shared_building_slots = 2
+				add_extra_state_shared_building_slots = 1
 				add_building_construction = {
 					type = industrial_complex
-					level = 2
+					level = 1
 					instant_build = yes
 				}
 			}
 			9 = {
-				add_extra_state_shared_building_slots = 2
+				add_extra_state_shared_building_slots = 1
 				add_building_construction = {
 					type = industrial_complex
-					level = 2
+					level = 1
 					instant_build = yes
 				}
 			}
@@ -4005,7 +3921,7 @@ focus = {
 	focus = {
 		id = AUH_invest_in_galicia
 		icon = GFX_focus_manage_industries
-		cost = 5
+		cost = 10
 		x = 0
 		y = 1
 		relative_position_id = AUH_industrial_expansion
@@ -4035,7 +3951,7 @@ focus = {
 				add_extra_state_shared_building_slots = 2
 				add_building_construction = {
 					type = infrastructure
-					level = 2
+					level = 1
 					instant_build = yes
 				}
 				add_resource = {
@@ -4058,7 +3974,7 @@ focus = {
 				add_extra_state_shared_building_slots = 2
 				add_building_construction = {
 					type = infrastructure
-					level = 2
+					level = 1
 					instant_build = yes
 				}
 				add_resource = {
@@ -4080,7 +3996,7 @@ focus = {
 	focus = {
 		id = AUH_develop_austrian_cisleithania
 		icon = GFX_focus_generic_train
-		cost = 5
+		cost = 10
 		x = -2
 		y = 1
 		relative_position_id = AUH_industrial_expansion
@@ -4175,18 +4091,18 @@ focus = {
 				state = 75
 			}
 			75 = {
-				add_extra_state_shared_building_slots = 2
+				add_extra_state_shared_building_slots = 1
 				add_building_construction = {
 					type = industrial_complex
-					level = 2
+					level = 1
 					instant_build = yes
 				}
 			}
 			75 = {
-				add_extra_state_shared_building_slots = 2
+				add_extra_state_shared_building_slots = 1
 				add_building_construction = {
 					type = industrial_complex
-					level = 2
+					level = 1
 					instant_build = yes
 				}
 			}
@@ -4265,10 +4181,10 @@ focus = {
 				prioritize = {
 					9
 				}
-				add_extra_state_shared_building_slots = 2
+				add_extra_state_shared_building_slots = 1
 				add_building_construction = {
 					type = arms_factory
-					level = 2
+					level = 1
 					instant_build = yes
 				}
 			}
@@ -4280,10 +4196,10 @@ focus = {
 				prioritize = {
 					9
 				}
-				add_extra_state_shared_building_slots = 2
+				add_extra_state_shared_building_slots = 1
 				add_building_construction = {
 					type = arms_factory
-					level = 2
+					level = 1
 					instant_build = yes
 				}
 			}
@@ -4362,7 +4278,7 @@ focus = {
 		x = 26
 		y = 0
 		available = {
-			#has_completed_focus = AUH_army_question_statemate
+			has_completed_focus = AUH_army_question_statemate
 		}
 		relative_position_id = AUH_stabilize_the_empire
 		completion_reward = {
@@ -4986,7 +4902,7 @@ focus = {
 						}					
 					}
 					create_unit = {
-						division = "name = \"Ukrainski sichovi striltsi\" division_template = \"Ukrainski sichovi striltsi\" start_experience_factor = 0.1 start_equipment_factor = 0.9"
+						division = "name = \"Ukrainski Sichovi Striltsi\" division_template = \"Ukrainski Sichovi Striltsi\" start_experience_factor = 0.1 start_equipment_factor = 0.9"
 						owner = ROOT
 					}
 				}
@@ -5019,7 +4935,7 @@ focus = {
 				bonus = 1
 				uses = 1
 				ahead_reduction = 1
-				category = radar_tech
+				category = radio_tech
 				category = armor
 				category = air_equipment
 			}
@@ -5368,6 +5284,8 @@ focus = {
 			FOCUS_FILTER_NAVY_XP
 		}
 		completion_reward = {
+			unlock_decision_tooltip = AUS_blockade_italy
+			unlock_decision_tooltip = AUS_shell_venice
 			navy_experience = 25
 			add_doctrine_cost_reduction = {
 				name = AUH_expand_pula_base
@@ -5856,10 +5774,6 @@ focus = {
 				is_subject_of = AUS
 				has_subject = HUN
 			}
-			is_ai=NO
-		}
-				mutually_exclusive = {
-			focus = AUH_annex_hungary
 		}
 		search_filters = {
 			FOCUS_FILTER_HISTORICAL
@@ -6500,7 +6414,7 @@ focus = {
 joint_focus = {
 	id = AUH_hungarian_aluminium_production
 	icon = GFX_focus_generic_aluminum
-	cost = 5
+	cost = 10
 	text_icon = joint_AUS_HUN_focus_style
 	x = 2
 	y = 1
@@ -6562,7 +6476,7 @@ joint_focus = {
 	id = AUH_croatian_industrialisation
 	icon = GFX_focus_SOV_organize_wreckers
 	text_icon = joint_AUS_HUN_focus_style
-	cost = 5
+	cost = 10
 	x = 4
 	y = 1
 	offset = {
@@ -6612,10 +6526,10 @@ joint_focus = {
 			prioritize = {
 				109
 			}
-			add_extra_state_shared_building_slots = 2
+			add_extra_state_shared_building_slots = 1
 			add_building_construction = {
 				type = industrial_complex
-				level = 2
+				level = 1
 				instant_build = yes
 			}
 		}
@@ -6670,10 +6584,10 @@ joint_focus = {
 			prioritize = {
 				154
 			}
-			add_extra_state_shared_building_slots = 2
+			add_extra_state_shared_building_slots = 1
 			add_building_construction = {
 				type = industrial_complex
-				level = 2
+				level = 1
 				instant_build = yes
 			}
 		}
@@ -6685,7 +6599,7 @@ joint_focus = {
 	id = AUH_modernisation_of_slovakia
 	icon = GFX_focus_generic_industry_3
 	text_icon = joint_AUS_HUN_focus_style
-	cost = 5
+	cost = 10
 	x = 0
 	y = 1
 	offset = {
@@ -6763,7 +6677,7 @@ joint_focus = {
 	id = AUH_mavag_gyarak
 	icon = GFX_goal_generic_construct_mil_factory
 	text_icon = joint_AUS_HUN_focus_style
-	cost = 5
+	cost = 10
 	x = -1
 	y = 1
 	offset = {

@@ -2,12 +2,15 @@
 NDefines.NCareerProfile.MOD_STATISTICS_GROUP = "tgwr_career_profile"
 NDefines.NCareerProfile.MOD_STATISTICS_GROUP_NAME = "TGWR_CAREER_PROFILE"
 
-NDefines.NGame.START_DATE = "1910.1.1.12"				
+NDefines.NGame.START_DATE = "1910.5.1.12"				
 NDefines.NGame.END_DATE = "1935.1.1.1"
 NDefines.NGame.HANDS_OFF_START_TAG = "BHU"
 NDefines.NGame.DECISION_ALERT_TIMEOUT_DAYS = 60	
+NDefines.NGame.LAG_DAYS_FOR_LOWER_SPEED = 30								-- Vanilla is 10
+NDefines.NGame.LAG_DAYS_FOR_PAUSE = 60			
 NDefines.NCountry.BASE_STABILITY_WAR_FACTOR = -0.1
 NDefines.NCountry.WAR_SUPPORT_OFFNSIVE_WAR = -0.1							-- Vanilla is 25
+NDefines.NCountry.MAJOR_MIN_FACTORIES = 20							        -- Vanilla is 35 -- need at least these many factories to become a major
 
 NDefines.NDiplomacy.TENSION_TIME_SCALE_START_DATE = "1910.5.1.12"
 
@@ -45,7 +48,6 @@ NDefines.NAI.PEACE_AI_EVALUATE_OTHER_ALWAYS = true							-- Vanilla is false
 NDefines.NAI.DIPLOMACY_FACTION_WRONG_IDEOLOGY_PENALTY = 30
 NDefines.NAI.NEUTRAL_THREAT_PARANOIA = 0									
 NDefines.NAI.DIFFERENT_FACTION_THREAT = 0	
-NDefines.NAI.ENEMY_NAVY_STRENGTH_DONT_BOTHER = 1.5		
 
 -- General AI
 NDefines.NAI.RESEARCH_BONUS_FACTOR = 1.5									-- Vanilla is 0.9
@@ -102,6 +104,9 @@ NDefines.NAI.SEND_VOLUNTEER_AIDESIRE_SAME_IDEOLOGY = 0					-- Added to AI desire
 NDefines.NAI.SEND_VOLUNTEER_AIDESIRE_SAME_IDEOLOGY_CIVIL_WAR = 0		-- Added to AI desire to send volunteers if recipent is same ideology and they are currently in civil war
 
 NDefines.NAI.CALL_ALLY_PUPPET_INVITE_OVERLORD = 100    -- Desire for a puppet to call its overlord into the war -- Vanilla is -1000
+
+NDefines.NAI.CONSTRUCTION_PRIO_RAILWAY = 0.5 -- vanilla is 4
+
 NDefines.NDiplomacy.IDEOLOGY_JOIN_FACTION_MIN_LEVEL = -1
 NDefines.NDiplomacy.MARKET_ACCESS_ACCEPTANCE_SAME_IDEOLOGY = 0				 -- Acceptance value added if same ideology (Vanilla is 15)
 NDefines.NDiplomacy.MARKET_ACCESS_ACCEPTANCE_TRADE_INFLUENCE = 0.2 			 -- Acceptance factor for trade influence (Vanilla is 0.70)
@@ -114,18 +119,17 @@ NDefines.NRailwayGun.RAILWAY_GUN_POSSIBLE_RANGES = { 15, 10, 30 }	-- Possible va
 NDefines.NGraphics.VICTORY_POINT_MAP_ICON_TEXT_CUTOFF = {200, 350, 600}  	-- Vanilla is 100, 250, 500
 NDefines.NGraphics.VICTORY_POINTS_DISTANCE_CUTOFF = {300, 500, 1000} 		-- Vanilla is 300, 500, 1500
 
-NDefines_Graphics.NGraphics.POLITICAL_GRID_SMALL_BOX_LIMIT = 18              	-- Limit for gridbox in political view before it will be replaced with extended gridbox, Vanilla is 6
-
 NDefines.NSupply.CAPITAL_SUPPLY_BASE = 1.0
 NDefines.NSupply.CAPITAL_SUPPLY_CIVILIAN_FACTORIES = 0.6
 NDefines.NSupply.CAPITAL_SUPPLY_MILITARY_FACTORIES = 0.5
 NDefines.NSupply.CAPITAL_SUPPLY_DOCKYARDS = 0.3
 
 -- Production AI
+NDefines.NProduction.BASE_ENERGY_COST = 2						-- How much energy per factory consumes (Vanilla is 0.25)
 
 NDefines.NDiplomacy.EMBARGO_COST = 0 -- Vanilla is 100
 NDefines.NDiplomacy.EMBARGO_THREAT_THRESHOLD = 0 -- Vanilla is 30
-NDefines.NAI.EMBARGO_WORLD_TENSION_THREAT_DIVISOR = 0 -- Vanilla is 2.5
+NDefines.NAI.EMBARGO_WORLD_TENSION_THREAT_DIVISOR = 10000 -- Vanilla is 2.5
 
 -- Navy
 NDefines.NNavy.TRAINING_MAX_DAILY_COUNTRY_EXP = 1.0 -- Vanilla is 3.5
@@ -143,97 +147,23 @@ NDefines.NCountry.FEMALE_UNIT_LEADER_BASE_CHANCE = {
     0.1, -- scientists
 }
 
+NDefines.NMilitary.LAND_COMBAT_COLLATERAL_FORT_FACTOR = 0.002 --0.005
+NDefines.NMilitary.LAND_COMBAT_FORT_DAMAGE_CHANCE = 2 -- out of 100 - vanilla is 5
 
--- NEW SHIT
+NDefines.NNavy.NAVAL_INVASION_PLAN_CAP = 0	--1								-- base cap of naval invasions can be planned at the same time
+NDefines.NNavy.BASE_NAVAL_INVASION_DIVISION_CAP = 0	--4						-- base cap of divisions that can be assigned in a naval invasion
+NDefines.NNavy.NAVAL_INVASION_PREPARE_DAYS = 30	--60						-- base days needed to prepare a naval invasion
 
-NDefines.NFocus.FOCUS_POINT_DAYS = 5 -- 1.5x focuses
-NDefines.NDiplomacy.DIPLOMACY_REQUEST_EXPIRY_DAYS = 30
-NDefines.NDiplomacy.NUM_DAYS_TO_ENABLE_KICKING_NEW_MEMBERS_OF_FACTION = 1			-- Number of days before being able to kick a new member of faction
-NDefines.NDiplomacy.NUM_DAYS_TO_ENABLE_REINVITE_KICKED_NATIONS = 1			-- Number of days before being able to re invite a kicked nation to your faction
-NDefines.NDiplomacy.BASE_NEGATIVE_OPINION_AFTER_BEING_KICKED = 0				-- Negative opinion that will be received after kicking a nation
-NDefines.NDiplomacy.DECAY_RATE_OF_NEGATIVE_OPINION_AFTER_BEING_KICKED = 1			-- Weekly decay rate of the negative opinion
-NDefines.NDiplomacy.BASE_SEND_ATTACHE_COST = 50				-- Political power cost to send attache
-NDefines.NDiplomacy.BASE_SEND_ATTACHE_CP_COST = 50.0				-- Command Power sent attache usage cost
-NDefines.NDiplomacy.PEACE_SCORE_PER_PASS = 100.0
-NDefines.NDiplomacy.IDEOLOGY_JOIN_FACTION_MIN_LEVEL = 0
-NDefines.NDiplomacy.VOLUNTEERS_TRANSFER_SPEED = 5 
-----------------------------------
-NDefines.NCountry.EVENT_PROCESS_OFFSET = 30				-- Events are checked every X day per country or state (1 is ideal, but CPU heavy)
-----------------------------------
-NDefines.NTrade.BASE_TRADE_FACTOR = 1000
-NDefines.NTrade.PARTY_SUPPORT_TRADE_FACTOR = 20
-NDefines.NDiplomacy.EMBARGO_THREAT_THRESHOLD = -10
-NDefines.NDiplomacy.EMBARGO_COST = 25
+NDefines.NDoctrines.TRAINING_MASTERY_GAIN_FACTOR = 0.01
 
-NDefines.NBuildings.OWNER_CHANGE_EXTRA_SHARED_SLOTS_FACTOR = 1
-----------------------------------
-NDefines.NProduction.EQUIPMENT_MODULE_ADD_XP_COST = 0					-- XP cost for adding a new equipment module in an empty slot when creating an equipment variant.
-NDefines.NProduction.EQUIPMENT_MODULE_REPLACE_XP_COST = 0				-- XP cost for replacing one equipment module with an unrelated module when creating an equipment variant.
-NDefines.NProduction.EQUIPMENT_MODULE_CONVERT_XP_COST = 0				-- XP cost for converting one equipment module to a related module when creating an equipment variant.
-NDefines.NProduction.EQUIPMENT_MODULE_REMOVE_XP_COST = 0				-- XP cost for removing an equipment module and leaving the slot empty when creating an equipment variant.
-NDefines.NProduction.MIN_POSSIBLE_TRAINING_MANPOWER = 15000000
-NDefines.NProduction.DEFAULT_MAX_NAV_FACTORIES_PER_LINE = 100
-NDefines.NProduction.CONVOY_MAX_NAV_FACTORIES_PER_LINE = 100
-NDefines.NProduction.CAPITAL_SHIP_MAX_NAV_FACTORIES_PER_LINE = 100
-NDefines.NProduction.FLOATING_HARBOR_MAX_NAV_FACTORIES_PER_LINE = 100
-NDefines.NProduction.RAILWAY_GUN_MAX_MIL_FACTORIES_PER_LINE = 30
-NDefines.NProduction.BASE_FACTORY_SPEED_MIL = 4.5
-NDefines.NProduction.BASE_FACTORY_SPEED_NAV = 2.5
-NDefines.NProduction.MINIMUM_NUMBER_OF_FACTORIES_TAKEN_BY_CONSUMER_GOODS_PERCENT = 0.01
-NDefines.NProduction.CAPITULATE_STOCKPILES_RATIO = 0
----------
-NDefines.NProject.RECRUIT_SCIENTIST_COST = {						-- Amount of pp to hire a scientist based on available scientist
-		0,			-- pp cost if no available scientist
-		0,			-- pp cost if 1 available scientist
-		0,			-- pp cost if 2 available scientist
-		0			-- pp cost if more than 2 available scientist
-	}
+-- Factions
+NDefines.NFactions.FACTION_SCIENTIST_CONTRIBUTION_VALUE = 0.01              --how much contribution one scientists gives to you if it is working for somebody else.
+NDefines.NFactions.FACTION_ASSIGN_SCIENTIST_COST = 50                      --how much political power it costs to assign a supportive scientist
 
-NDefines.NProject.BREAKTHROUGH_DAILY_TECHNOLOGY_GAIN = 15
-NDefines.NProject.BREAKTHROUGH_DAILY_SCIENTIST_SKILL_GAIN = 10
-----------------------------------
-NDefines.NTechnology.MAX_SUBTECHS = 4						-- Max number of sub technologies a technology can have.
-----------------------------------
-NDefines.NCountry.SPECIAL_FORCES_CAP_BASE = 0.0 -- prevent special forces exploit 
-NDefines.NCountry.SPECIAL_FORCES_CAP_MIN = 1000 -- 20 forty-width special forces divisions, plenty  
-NDefines.NMilitary.CORPS_COMMANDER_DIVISIONS_CAP = 50
-NDefines.NMilitary.FIELD_MARSHAL_DIVISIONS_CAP = 50
-NDefines.NMilitary.FIELD_MARSHAL_ARMIES_CAP = 10
-NDefines.NMilitary.MAX_ARMY_EXPERIENCE = 5000
-NDefines.NMilitary.MAX_NAVY_EXPERIENCE = 5000
-NDefines.NMilitary.MAX_AIR_EXPERIENCE = 5000
-NDefines.NMilitary.UNIT_LEADER_USE_NONLINEAR_XP_GAIN = true -- yeah lets keep this true, or else EVERYONE and their mother has cracked out generals
-----------------------------------
-NDefines.NFocus.MAX_SAVED_FOCUS_PROGRESS = 25		-- This much progress can be saved while not having a focus selected
-----------------------------------
-NDefines.NBuildings.MAX_SHARED_SLOTS = 35
-----------------------------------
-NDefines.NMilitary.COMBAT_OVER_WIDTH_PENALTY = -2
-
-NDefines.NDiplomacy.MAX_TRUST_VALUE = 200									-- Vanilla is 100
-NDefines.NDiplomacy.MIN_TRUST_VALUE = -200									-- Vanilla is -100
-NDefines.NDiplomacy.MAX_OPINION_VALUE = 200								-- Vanilla is 100
-NDefines.NDiplomacy.MIN_OPINION_VALUE = -200								-- Vanilla is -100
-NDefines.NDiplomacy.VERY_GOOD_OPINION = 100								-- Vanilla is 50
-NDefines.NDiplomacy.VERY_BAD_OPINION = -100								-- Vanilla is -50
-
-NDefines.NCountry.BASE_RESEARCH_SLOTS = 3
-
-NDefines.NPolitics.BASE_POLITICAL_POWER_INCREASE = 2.5 -- base pp
-
-NDefines.NMilitary.BASE_DIVISION_BRIGADE_GROUP_COST = 0 -- Base cost to unlock a regiment slot
-NDefines.NMilitary.BASE_DIVISION_BRIGADE_CHANGE_COST = 0 -- Base cost to change a regiment column.
-NDefines.NMilitary.BASE_DIVISION_SUPPORT_SLOT_COST = 0
-NDefines.NMilitary. LAND_EQUIPMENT_RAMP_COST = 0
-
-NDefines.NMilitary.EXPERIENCE_COMBAT_FACTOR = 0.10
-
---LICENSE
-NDefines.NProduction.LICENSE_EQUIPMENT_SPEED_NOT_FACTION = 0
-NDefines.NProduction.LICENSE_EQUIPMENT_TECH_SPEED_PER_YEAR = 0
-NDefines.NProduction.LICENSE_EQUIPMENT_BASE_SPEED = -0.1
-NDefines.NProduction.BASE_LICENSE_IC_COST = 0	
-NDefines.NProduction.LICENSE_IC_COST_YEAR_INCREASE = 0		
-
--- FUEL CONVOY REQUIREMENT
-NDefines.NCountry.FUEL_LEASE_CONVOY_RATIO = 0.00007
+-- Special Projects
+NDefines.NProject.RECRUIT_SCIENTIST_COST = {                                -- Amount of pp to hire a scientist based on available scientist
+    100,            -- pp cost if no available scientist
+    100,            -- pp cost if 1 available scientist
+    100,            -- pp cost if 2 available scientist
+    100             -- pp cost if more than 2 available scientist
+}

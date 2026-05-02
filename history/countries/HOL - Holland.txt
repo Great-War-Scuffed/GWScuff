@@ -21,18 +21,13 @@ recruit_character = HOL_willem_hendrik_van_terwisga
 recruit_character = HOL_jacob_zacharias_stuten
 recruit_character = HOL_willem_hendrik_piepers
 recruit_character = HOL_willem_august_henri_doorman
+recruit_character = HOL_mda_forbes_wels
 recruit_character = HOL_adiraan_loenard_klerk_de_reus
 recruit_character = HOL_prince_hendrik
-recruit_character = HOL_abraham_george_ellis
 recruit_character = HOL_jan_wentholt
-recruit_character = HOL_jacob_roell
-recruit_character = HOL_william_cohen_stuart
-recruit_character = HOL_gerardus_berenschot
 recruit_character = HOL_herman_van_karnebeek
 recruit_character = HOL_anton_van_gijn
-recruit_character = HOL_conrad_helfrich
 recruit_character = HOL_reneke_de_marees_van_swinderen
-recruit_character = HOL_murk_boerstra
 recruit_character = HOL_alidius_tjarda_van_starkenborgh_stachouwer
 recruit_character = HOL_simon_de_vries_czn
 recruit_character = HOL_willem_naudin_ten_cate
@@ -51,13 +46,11 @@ recruit_character = HOL_wilhelmus_frederik_van_leeuwen
 recruit_character = HOL_david_wijnkoop
 recruit_character = HOL_antonie_pannekoek
 recruit_character = HOL_jean_rambonnet
-recruit_character = HOL_p_forbes_wels
 recruit_character = HOL_hendrik_goeman_borgesius
-recruit_character = HOL_tan_malaka
 recruit_character = HOL_maximilien_kolkman
-recruit_character = HOL_ludolph_van_oyen
 recruit_character = HOL_cornelis_lely
 
+INS = { set_country_flag = colony }
 set_autonomy = {
 	target = INS
 	autonomous_state = autonomy_colony
@@ -91,7 +84,7 @@ set_autonomy = {
 		#doctrine
 		
 		#navy
-		transport = 1
+		
 		
 		#engineering
 		electrical_engineering = 1
@@ -121,6 +114,10 @@ set_autonomy = {
 		HOL_wilhelmina
 		HOL_citizens_centered_economy
 	}
+	if = {
+		limit = { has_start_date < 1914.1.1 }
+		HOL_jan_wentholt = { unit_leader_event = { id = ww1_generic.39 days = 744 }} #retired in 1912.5.14 over the parliment voting against making an ironclad for the  Dutch East Indies, implement in the dutch rework
+	}	
 }
 1914.1.1 = {
 	set_politics = {
@@ -154,73 +151,10 @@ set_autonomy = {
 	complete_national_focus = HOL_censuskiesrecht
 	unlock_national_focus = HOL_rearmament_subsidies
 	complete_national_focus = HOL_sympathy_for_germany
+
+	retire_character = HOL_jan_wentholt
 }
 
-if = {
-	limit = {
-		not = { has_dlc = "Man the Guns" }
-	}
-
-	set_naval_oob = "HOL_1910_naval_legacy"
-
-	set_technology = {
-		early_submarine = 1
-		early_destroyer = 1
-		basic_destroyer = 1
-		early_light_cruiser = 1
-		early_heavy_cruiser = 1
-		obsolete_battleship = 1
-		early_battleship = 1
-		transport = 1
-	}
-
-	create_equipment_variant = {
-		name = "De Zeven Provincien Class"
-		type = coastal_defense_ship
-		parent_version = 0
-		obsolete = yes
-	}
-	create_equipment_variant = {
-		name = "Jacob Van Heemskerck Class"
-		type = coastal_defense_ship
-		parent_version = 0
-		obsolete = yes
-	}
-	create_equipment_variant = {
-		name = "Marten Harpertszoon Tromp Class"
-		type = coastal_defense_ship
-		parent_version = 0
-		obsolete = yes
-	}
-	create_equipment_variant = {
-		name = "Koningin Regentes Class"
-		type = coastal_defense_ship
-		parent_version = 0
-		obsolete = yes
-	}
-	create_equipment_variant = {
-		name = "Evertsen Class"
-		type = coastal_defense_ship
-		parent_version = 0
-		obsolete = yes
-	}
-	create_equipment_variant = {
-		name = "Holland Class"
-		type = light_cruiser_1
-		parent_version = 0
-		obsolete = yes
-	}
-	create_equipment_variant = {
-		name = "Wolf Class"
-		type = destroyer_1
-		parent_version = 0
-	}
-	create_equipment_variant = {
-		name = "O 1 Class"
-		type = submarine_1
-		parent_version = 0
-	}
-}
 
 if = {
 	limit = {
@@ -232,34 +166,45 @@ if = {
 	set_technology = {	
 		early_ship_hull_submarine = 1
 		early_ship_hull_light = 1
-        victorian_ship_hull_light = 1
+		gunboat_ship_hull_light = 1
+        torpedo_boat_ship_hull_light = 1
 		basic_ship_hull_light = 1
 		early_ship_hull_cruiser = 1
-        protected_ship_hull_cruiser = 1
+			basic_armored_cruiser_armor_scheme = 1
+        victorian_ship_hull_cruiser = 1
+		
 		basic_battery = 1
+		
+		ironclad_artillery = 1
+		ironclad_coal_engine = 1
+		
+		basic_coal_engine = 1
+		early_oil_engine = 1
 		basic_medium_battery = 1
 		basic_heavy_battery = 1
-		basic_secondary_battery = 1
+		
+			basic_secondary_battery = 1
 		basic_heavy_armor_scheme = 1
+		early_torpedo_tubes = 1
+		
 		basic_torpedo = 1
 		mtg_transport = 1
-		pre_dreadnoughts = 1
+		ironclad_ship_hull_heavy = 1
+		pre_dreadnought_ship_hull_heavy = 1
 	}
 
 	create_equipment_variant = {
 		name = "De Zeven Provincien Class"
-		type = ship_hull_cruiser_coastal_defense_ship
+		type = ship_hull_cruiser_1
 		name_group = HOL_CA_HISTORICAL
+		icon = GFX_ship_hull_cruiser_coastal_defense_ship_medium
 		parent_version = 0
 		modules = {
-			fixed_ship_battery_slot = ship_heavy_battery_1
-			fixed_ship_anti_air_slot = empty
-			fixed_ship_fire_control_system_slot = empty
-			fixed_ship_radar_slot = empty
+			fixed_ship_battery_slot = ship_medium_battery_1
+			
 			fixed_ship_engine_slot = cruiser_ship_engine_1
 			fixed_ship_secondaries_slot = ship_secondaries_1
-			fixed_ship_armor_slot = ship_armor_cruiser_1
-			front_1_custom_slot = empty
+			fixed_ship_armor_slot = ship_armor_coastal_defense_ship
 			mid_1_custom_slot = ship_secondaries_1
 			rear_1_custom_slot = empty
 		}
@@ -267,18 +212,16 @@ if = {
 	}
 	create_equipment_variant = {
 		name = "Jacob Van Heemskerck Class"
-		type = ship_hull_cruiser_coastal_defense_ship
+		type = ship_hull_cruiser_1
 		name_group = HOL_CA_HISTORICAL
+		icon = GFX_ship_hull_cruiser_coastal_defense_ship_medium
 		parent_version = 0
 		modules = {
-			fixed_ship_battery_slot = ship_heavy_battery_1
-			fixed_ship_anti_air_slot = empty
-			fixed_ship_fire_control_system_slot = empty
-			fixed_ship_radar_slot = empty
+			fixed_ship_battery_slot = ship_medium_battery_1
+			
 			fixed_ship_engine_slot = cruiser_ship_engine_1
 			fixed_ship_secondaries_slot = ship_secondaries_1
-			fixed_ship_armor_slot = ship_armor_cruiser_1
-			front_1_custom_slot = empty
+			fixed_ship_armor_slot = ship_armor_coastal_defense_ship
 			mid_1_custom_slot = ship_secondaries_1
 			rear_1_custom_slot = empty
 		}
@@ -286,18 +229,16 @@ if = {
 	}
 	create_equipment_variant = {
 		name = "Marten Harpertszoon Tromp Class"
-		type = ship_hull_cruiser_coastal_defense_ship
+		type = ship_hull_cruiser_1
 		name_group = HOL_CA_HISTORICAL
+		icon = GFX_ship_hull_cruiser_coastal_defense_ship_medium
 		parent_version = 0
 		modules = {
-			fixed_ship_battery_slot = ship_heavy_battery_1
-			fixed_ship_anti_air_slot = empty
-			fixed_ship_fire_control_system_slot = empty
-			fixed_ship_radar_slot = empty
+			fixed_ship_battery_slot = ship_medium_battery_1
+			
 			fixed_ship_engine_slot = cruiser_ship_engine_1
 			fixed_ship_secondaries_slot = ship_secondaries_1
-			fixed_ship_armor_slot = ship_armor_cruiser_1
-			front_1_custom_slot = empty
+			fixed_ship_armor_slot = ship_armor_coastal_defense_ship
 			mid_1_custom_slot = ship_secondaries_1
 			rear_1_custom_slot = empty
 		}
@@ -305,18 +246,16 @@ if = {
 	}
 	create_equipment_variant = {
 		name = "Koningin Regentes Class"
-		type = ship_hull_cruiser_coastal_defense_ship
+		type = ship_hull_cruiser_1
 		name_group = HOL_CA_HISTORICAL
+		icon = GFX_ship_hull_cruiser_coastal_defense_ship_medium
 		parent_version = 0
 		modules = {
-			fixed_ship_battery_slot = ship_heavy_battery_1
-			fixed_ship_anti_air_slot = empty
-			fixed_ship_fire_control_system_slot = empty
-			fixed_ship_radar_slot = empty
+			fixed_ship_battery_slot = ship_medium_battery_1
+			
 			fixed_ship_engine_slot = cruiser_ship_engine_1
 			fixed_ship_secondaries_slot = ship_secondaries_1
-			fixed_ship_armor_slot = ship_armor_cruiser_1
-			front_1_custom_slot = empty
+			fixed_ship_armor_slot = ship_armor_coastal_defense_ship
 			mid_1_custom_slot = ship_secondaries_1
 			rear_1_custom_slot = empty
 		}
@@ -324,18 +263,16 @@ if = {
 	}
 	create_equipment_variant = {
 		name = "Evertsen Class"
-		type = ship_hull_cruiser_coastal_defense_ship
+		type = ship_hull_cruiser_1
 		name_group = HOL_CA_HISTORICAL
+		icon = GFX_ship_hull_cruiser_coastal_defense_ship_medium
 		parent_version = 0
 		modules = {
-			fixed_ship_battery_slot = ship_heavy_battery_1
-			fixed_ship_anti_air_slot = empty
-			fixed_ship_fire_control_system_slot = empty
-			fixed_ship_radar_slot = empty
+			fixed_ship_battery_slot = ship_medium_battery_1
+			
 			fixed_ship_engine_slot = cruiser_ship_engine_1
 			fixed_ship_secondaries_slot = ship_secondaries_1
-			fixed_ship_armor_slot = ship_armor_cruiser_1
-			front_1_custom_slot = empty
+			fixed_ship_armor_slot = ship_armor_coastal_defense_ship
 			mid_1_custom_slot = ship_secondaries_1
 			rear_1_custom_slot = empty
 		}
@@ -348,11 +285,9 @@ if = {
 		parent_version = 0
 		modules = {
 			fixed_ship_battery_slot = ship_light_medium_battery_1
-			fixed_ship_anti_air_slot = empty
 			fixed_ship_fire_control_system_slot = ship_fire_control_system_0
-			fixed_ship_radar_slot = empty
 			fixed_ship_engine_slot = cruiser_ship_engine_1
-			fixed_ship_armor_slot = ship_armor_cruiser_1
+			fixed_ship_armor_slot = ship_armor_light_cruiser_1
 			mid_1_custom_slot = empty
 			rear_1_custom_slot = ship_light_medium_battery_1
 		}
@@ -366,7 +301,6 @@ if = {
 		modules = {
 			fixed_ship_battery_slot = ship_light_battery_1
 			fixed_ship_anti_air_slot = empty
-			fixed_ship_fire_control_system_slot = empty
 			fixed_ship_radar_slot = empty
 			fixed_ship_engine_slot = light_ship_engine_1
 			fixed_ship_torpedo_slot = ship_torpedo_1
@@ -382,7 +316,6 @@ if = {
 		modules = {
 			fixed_ship_torpedo_slot = ship_torpedo_sub_1
 			fixed_ship_engine_slot = sub_ship_engine_1
-			rear_1_custom_slot = empty
 		}
 	}
 }

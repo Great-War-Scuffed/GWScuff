@@ -9,8 +9,8 @@ state = {
 	}
 	history = {
 		victory_points = { 5231 2 }
-		owner = SAF
-		add_core_of = SAF
+		owner = ORA
+		add_core_of = ORA
 		buildings = {
 			infrastructure = 2
 		}

@@ -1,6 +1,6 @@
 ﻿capital = 1219
 
-set_research_slots = 3
+set_research_slots = 2
 
 recruit_character = KYR_kanat_ibike
 recruit_character = KYR_mokush_shabdanov

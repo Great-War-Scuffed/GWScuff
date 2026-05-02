@@ -13,14 +13,17 @@ state={
 		owner = QIN
 		add_core_of = QIN
 		buildings = {
-			infrastructure = 4
-			industrial_complex = 2
+			infrastructure = 3
+			industrial_complex = 1
 			air_base = 1
 			7014 = {
 				naval_base = 6
 
 			}
 
+		}
+		strategic_province_location = {
+			natural_harbor = 7014
 		}
 		1912.2.12 = {
 			owner = CHI

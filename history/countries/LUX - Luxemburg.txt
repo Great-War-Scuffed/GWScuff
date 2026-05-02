@@ -1,6 +1,6 @@
 ﻿capital = 8
 
-set_research_slots = 3
+set_research_slots = 2
 set_stability = 0.7
 set_war_support = 0.1
 
@@ -67,7 +67,6 @@ diplomatic_relation = {
 	set_technology = {
 		#infantry
 		infantry_weapons = 1
-		support_weapons = 1
 		
 		#support
 		tech_support = 1

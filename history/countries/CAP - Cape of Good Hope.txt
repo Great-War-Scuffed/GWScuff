@@ -1,6 +1,6 @@
 ﻿capital = 681
 
-set_research_slots = 3
+set_research_slots = 2
 add_to_tech_sharing_group = commonwealth_research
 set_stability = 0.35
 set_convoys = 15
@@ -31,7 +31,7 @@ recruit_character = SAF_christoffel_venter
 		basic_field_gun = 1
 
 		#navy
-		transport = 1
+		
 
 		#engineering
 		electrical_engineering = 1

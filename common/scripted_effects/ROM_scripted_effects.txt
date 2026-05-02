@@ -6,9 +6,9 @@ ROM_king_effect = {
 					has_global_flag = ROM_ferd_death
 					has_completed_focus = ROM_the_house_always_wins
 					has_completed_focus = ROM_deal_with_the_liberal_king
-					has_completed_focus = ROM_new_constitution
 					has_completed_focus = ROM_in_the_hall_of_the_mountain_king
 					has_completed_focus = ROM_entrench_the_aristocracy
+					has_completed_focus = ROM_new_constitution
 				}
 			}		
 			remove_ideas = ROM_carol_i_heavy_disaprove

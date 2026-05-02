@@ -1,0 +1,228 @@
+objectTypes = {
+
+# DO NOT MODIFY/REUPLOAD/RE-DISTRIBUTE WITHOUT MY PERMISSION - IF YOU WANT TO USE IT IN YOUR MOD CONTACT ME
+
+####
+# nassau
+####
+	pdxmesh = {
+		name = "nassau_battleship_mesh"
+		file = "gfx/models/units/ships/nassau_battleship.mesh"
+		
+		animation = { id = "idle"			type = "nassau_battleship_idle_animation" }
+		animation = { id = "attack"			type = "nassau_battleship_attack_animation" }
+		animation = { id = "defend"			type = "nassau_battleship_defend_animation" }
+		animation = { id = "damaged_attack"	type = "nassau_battleship_attack_animation" }
+		animation = { id = "damaged_defend"	type = "nassau_battleship_defend_animation" }
+		animation = { id = "death"			type = "nassau_battleship_death_animation" }
+		
+	}
+
+####
+# dreadnought
+####
+	pdxmesh = {
+		name = "dreadnought_battleship_mesh"
+		file = "gfx/models/units/ships/dreadnought_battleship.mesh"
+		
+		animation = { id = "idle"			type = "dreadnought_battleship_idle_animation" }
+		animation = { id = "attack"			type = "dreadnought_battleship_attack_animation" }
+		animation = { id = "defend"			type = "dreadnought_battleship_defend_animation" }
+		animation = { id = "damaged_attack"	type = "dreadnought_battleship_attack_animation" }
+		animation = { id = "damaged_defend"	type = "dreadnought_battleship_defend_animation" }
+		animation = { id = "death"			type = "dreadnought_battleship_death_animation" }
+		
+	}
+
+####
+# neptune
+####
+	pdxmesh = {
+		name = "neptune_battleship_mesh"
+		file = "gfx/models/units/ships/neptune_battleship.mesh"
+		
+		animation = { id = "idle"			type = "neptune_battleship_idle_animation" }
+		animation = { id = "attack"			type = "neptune_battleship_attack_animation" }
+		animation = { id = "defend"			type = "neptune_battleship_defend_animation" }
+		animation = { id = "damaged_attack"	type = "neptune_battleship_attack_animation" }
+		animation = { id = "damaged_defend"	type = "neptune_battleship_defend_animation" }
+		animation = { id = "death"			type = "neptune_battleship_death_animation" }
+		
+	}
+
+####
+# orion
+####
+	pdxmesh = {
+		name = "orion_battleship_mesh"
+		file = "gfx/models/units/ships/orion_battleship.mesh"
+		
+		animation = { id = "idle"			type = "orion_battleship_idle_animation" }
+		animation = { id = "attack"			type = "orion_battleship_attack_animation" }
+		animation = { id = "defend"			type = "orion_battleship_defend_animation" }
+		animation = { id = "damaged_attack"	type = "orion_battleship_attack_animation" }
+		animation = { id = "damaged_defend"	type = "orion_battleship_defend_animation" }
+		animation = { id = "death"			type = "orion_battleship_death_animation" }
+		
+	}
+
+####
+# lord nelson
+####
+	pdxmesh = {
+		name = "lord_nelson_battleship_mesh"
+		file = "gfx/models/units/ships/lord_nelson_battleship.mesh"
+		
+		animation = { id = "idle"			type = "lord_nelson_battleship_idle_animation" }
+		animation = { id = "attack"			type = "lord_nelson_battleship_attack_animation" }
+		animation = { id = "defend"			type = "lord_nelson_battleship_defend_animation" }
+		animation = { id = "damaged_attack"	type = "lord_nelson_battleship_attack_animation" }
+		animation = { id = "damaged_defend"	type = "lord_nelson_battleship_defend_animation" }
+		animation = { id = "death"			type = "lord_nelson_battleship_death_animation" }
+		
+	}
+
+####
+# invincible
+####
+	pdxmesh = {
+		name = "invincible_battlecruiser_mesh"
+		file = "gfx/models/units/ships/invincible_battlecruiser.mesh"
+		
+		animation = { id = "idle"			type = "invincible_battlecruiser_idle_animation" }
+		animation = { id = "attack"			type = "invincible_battlecruiser_attack_animation" }
+		animation = { id = "defend"			type = "invincible_battlecruiser_defend_animation" }
+		animation = { id = "damaged_attack"	type = "invincible_battlecruiser_attack_animation" }
+		animation = { id = "damaged_defend"	type = "invincible_battlecruiser_defend_animation" }
+		animation = { id = "death"			type = "invincible_battlecruiser_death_animation" }
+		
+	}
+
+####
+# indefatigable
+####
+	pdxmesh = {
+		name = "indefatigable_battlecruiser_mesh"
+		file = "gfx/models/units/ships/indefatigable_battlecruiser.mesh"
+		
+		animation = { id = "idle"			type = "indefatigable_battlecruiser_idle_animation" }
+		animation = { id = "attack"			type = "indefatigable_battlecruiser_attack_animation" }
+		animation = { id = "defend"			type = "indefatigable_battlecruiser_defend_animation" }
+		animation = { id = "damaged_attack"	type = "indefatigable_battlecruiser_attack_animation" }
+		animation = { id = "damaged_defend"	type = "indefatigable_battlecruiser_defend_animation" }
+		animation = { id = "death"			type = "indefatigable_battlecruiser_death_animation" }
+		
+	}
+
+####
+# lion
+####
+	pdxmesh = {
+		name = "lion_battlecruiser_mesh"
+		file = "gfx/models/units/ships/lion_battlecruiser.mesh"
+		
+		animation = { id = "idle"			type = "lion_battlecruiser_idle_animation" }
+		animation = { id = "attack"			type = "lion_battlecruiser_attack_animation" }
+		animation = { id = "defend"			type = "lion_battlecruiser_defend_animation" }
+		animation = { id = "damaged_attack"	type = "lion_battlecruiser_attack_animation" }
+		animation = { id = "damaged_defend"	type = "lion_battlecruiser_defend_animation" }
+		animation = { id = "death"			type = "lion_battlecruiser_death_animation" }
+		
+	}
+
+####
+# tiger
+####
+	pdxmesh = {
+		name = "tiger_battlecruiser_mesh"
+		file = "gfx/models/units/ships/tiger_battlecruiser.mesh"
+		
+		animation = { id = "idle"			type = "tiger_battlecruiser_idle_animation" }
+		animation = { id = "attack"			type = "tiger_battlecruiser_attack_animation" }
+		animation = { id = "defend"			type = "tiger_battlecruiser_defend_animation" }
+		animation = { id = "damaged_attack"	type = "tiger_battlecruiser_attack_animation" }
+		animation = { id = "damaged_defend"	type = "tiger_battlecruiser_defend_animation" }
+		animation = { id = "death"			type = "tiger_battlecruiser_death_animation" }
+		
+	}
+
+####
+# könig
+####
+	pdxmesh = {
+		name = "konig_battleship_mesh"
+		file = "gfx/models/units/ships/konig_battleship.mesh"
+		
+		animation = { id = "idle"			type = "konig_battleship_idle_animation" }
+		animation = { id = "attack"			type = "konig_battleship_attack_animation" }
+		animation = { id = "defend"			type = "konig_battleship_defend_animation" }
+		animation = { id = "damaged_attack"	type = "konig_battleship_attack_animation" }
+		animation = { id = "damaged_defend"	type = "konig_battleship_defend_animation" }
+		animation = { id = "death"			type = "konig_battleship_death_animation" }
+		
+	}
+
+####
+# moltke
+####
+	pdxmesh = {
+		name = "moltke_battlecruiser_mesh"
+		file = "gfx/models/units/ships/moltke_battlecruiser.mesh"
+		
+		animation = { id = "idle"			type = "moltke_battlecruiser_idle_animation" }
+		animation = { id = "attack"			type = "moltke_battlecruiser_attack_animation" }
+		animation = { id = "defend"			type = "moltke_battlecruiser_defend_animation" }
+		animation = { id = "damaged_attack"	type = "moltke_battlecruiser_attack_animation" }
+		animation = { id = "damaged_defend"	type = "moltke_battlecruiser_defend_animation" }
+		animation = { id = "death"			type = "moltke_battlecruiser_death_animation" }
+		
+	}
+
+####
+# von der tann
+####
+	pdxmesh = {
+		name = "von_der_tann_battlecruiser_mesh"
+		file = "gfx/models/units/ships/von_der_tann_battlecruiser.mesh"
+		
+		animation = { id = "idle"			type = "von_der_tann_battlecruiser_idle_animation" }
+		animation = { id = "attack"			type = "von_der_tann_battlecruiser_attack_animation" }
+		animation = { id = "defend"			type = "von_der_tann_battlecruiser_defend_animation" }
+		animation = { id = "damaged_attack"	type = "von_der_tann_battlecruiser_attack_animation" }
+		animation = { id = "damaged_defend"	type = "von_der_tann_battlecruiser_defend_animation" }
+		animation = { id = "death"			type = "von_der_tann_battlecruiser_death_animation" }
+		
+	}
+
+####
+# derfflinger
+####
+	pdxmesh = {
+		name = "derfflinger_battlecruiser_mesh"
+		file = "gfx/models/units/ships/derfflinger_battlecruiser.mesh"
+		
+		animation = { id = "idle"			type = "derfflinger_battlecruiser_idle_animation" }
+		animation = { id = "attack"			type = "derfflinger_battlecruiser_attack_animation" }
+		animation = { id = "defend"			type = "derfflinger_battlecruiser_defend_animation" }
+		animation = { id = "damaged_attack"	type = "derfflinger_battlecruiser_attack_animation" }
+		animation = { id = "damaged_defend"	type = "derfflinger_battlecruiser_defend_animation" }
+		animation = { id = "death"			type = "derfflinger_battlecruiser_death_animation" }
+		
+	}
+
+####
+# kaiser
+####
+	pdxmesh = {
+		name = "kaiser_battleship_mesh"
+		file = "gfx/models/units/ships/kaiser_battleship.mesh"
+		
+		animation = { id = "idle"			type = "kaiser_battleship_idle_animation" }
+		animation = { id = "attack"			type = "kaiser_battleship_attack_animation" }
+		animation = { id = "defend"			type = "kaiser_battleship_defend_animation" }
+		animation = { id = "damaged_attack"	type = "kaiser_battleship_attack_animation" }
+		animation = { id = "damaged_defend"	type = "kaiser_battleship_defend_animation" }
+		animation = { id = "death"			type = "kaiser_battleship_death_animation" }
+		
+	}
+}

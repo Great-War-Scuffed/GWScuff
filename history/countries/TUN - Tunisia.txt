@@ -4,7 +4,7 @@ oob = "TUN_1910"
 capital = 458 # Tunis
 
 set_fuel_ratio = 0.20
-set_research_slots = 3
+set_research_slots = 2
 set_stability = 0.5
 set_war_support = 0.05
 set_convoys = 12
@@ -45,7 +45,6 @@ recruit_character = TUN_abdelaziz_thaalbi
 		obsolete_infantry_weapons = 1
 		infantry_weapons = 1
 		camelry = 1
-		support_weapons = 1
 		
 		#support
 		tech_support = 1

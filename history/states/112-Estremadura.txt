@@ -13,9 +13,9 @@ state={
 		owner=POR
 		add_core_of=POR
 		buildings={
-			infrastructure = 4
-			industrial_complex=3
-			arms_factory=3
+			infrastructure = 3
+			industrial_complex=1
+			arms_factory=1
 			11805={ naval_base=6 }
 			970={ naval_base=1 }
 		}

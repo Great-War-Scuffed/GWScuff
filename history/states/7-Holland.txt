@@ -18,10 +18,10 @@ state={
 		owner=HOL
 		add_core_of=HOL
 		buildings={
-			infrastructure = 4
-			industrial_complex=3
+			infrastructure = 3
+			industrial_complex=2
 			dockyard=3
-			arms_factory=3
+			arms_factory=1
 			391={ naval_base=6 }
 			9498={ naval_base=4 }
 			3314={ naval_base=2 }

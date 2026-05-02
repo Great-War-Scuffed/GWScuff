@@ -6,8 +6,8 @@ state = {
 	provinces = { 4556 }
 	history = {
 		victory_points = {4556 1}
-		owner = SAF
-		add_core_of = SAF
+		owner = ENG
+		add_core_of = BST
 		
 		buildings = {
 			infrastructure = 1

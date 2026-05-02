@@ -5,7 +5,7 @@ state={
 		1102 1989 4022 4108 5046 7203 
 	}
 	history={
-		owner = FRA
+		owner = MOR
 		add_core_of = MOR
 		buildings = {
 			infrastructure = 2

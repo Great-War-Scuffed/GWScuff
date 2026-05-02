@@ -55,6 +55,7 @@ country_event = {
 					is_owned_by = RUS
 					is_owned_by = SOV
 					is_owned_by = BLR
+					is_owned_by = BRS
 					# is_owned_by = POL
 					is_owned_by = GER
 				}
@@ -63,7 +64,24 @@ country_event = {
 					# state = 766
 				}
 			}
-			transfer_state_to = UKR
+			if = {
+				limit = {
+					UKR = { has_war_with = DKR }
+					is_owned_by = SOV
+					region = 40
+				}
+				transfer_state_to = DKR
+			}
+			else_if = {
+				limit = {
+					UKR = { has_war_with = USR }
+					is_owned_by = SOV
+				}
+				transfer_state_to = USR
+			}
+			else = {
+				transfer_state_to = UKR
+			}		
 			if = {
 				limit = { 
 					OR = {
@@ -269,7 +287,6 @@ country_event = {
 				has_war_with = FROM
 				NOT = {
 					is_ally_with = ROOT
-					is_in_faction_with = ROOT
 				}
 			}
 			ROOT = {
@@ -402,6 +419,7 @@ country_event = {
 						state = 194
 						state = 241
 						state = 808
+						state = 1233
 					}
 					NOT = { state = 237 }
 				}
@@ -411,8 +429,7 @@ country_event = {
 				limit = {
 					OR = {
 						tag = PREV
-						is_subject_of = PREV
-						is_in_faction_with = PREV
+						is_ally_with = PREV
 					}
 				}
 				set_truce = {
@@ -443,9 +460,8 @@ country_event = {
 		if = {
 			limit = {
 				NOT = {
-					is_subject_of = SOV
 					has_war_with = SOV
-					is_in_faction_with = SOV
+					is_ally_with = SOV
 					has_government = communism
 					has_global_flag = polish_soviet_war
 				}

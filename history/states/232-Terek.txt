@@ -15,9 +15,6 @@ state={
 		add_core_of = MOU
 		buildings = {
 			infrastructure = 2
-			11614 = {
-				bunker = 10
-			}
 		}
 	}
 	provinces={

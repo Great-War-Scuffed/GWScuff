@@ -97,22 +97,46 @@ country_event = {
 			keep_all_characters = yes
 			hidden_effect = {
 				ROOT = {
-					SWE_harald_hjalmarson = {
-						set_nationality = PREV.PREV
-					}
+					if = {
+						limit = {
+							has_character = SWE_harald_hjalmarson
+						}				
+						SWE_harald_hjalmarson = {
+							set_nationality = PREV.PREV
+						}
+					}				
 					PER_nezam_us_saltaneh = {
 						set_nationality = PREV.PREV
 						promote_character = stratocracy
-						promote_leader = yes
+						if = {
+							limit = { has_ideology = authoritarian_democracy }
+							promote_character = authoritarian_democracy
+						}
+						else = {
+							add_country_leader_role = {
+								promote_leader = yes
+								country_leader = {
+									ideology = authoritarian_democracy
+								}
+							}
+						}
+					}
+					PER_mohammad_taqi_pessian = {
+						set_nationality = PREV.PREV
 					}	
 				}
 				add_ideas = PER_idea_government_gendarmerie
 				add_ideas = standing_alone
 				set_popularities = {
 					democratic = 35
-					neutrality = 10
-					fascism = 55
+					neutrality = 30
+					fascism = 35
 					communism = 0
+				}
+				set_party_name = {
+					ideology = neutrality
+					name = PER_fascism_party
+					long_name = PER_fascism_party
 				}
 				set_cosmetic_tag = PER_gendarmerie
 				set_country_flag = PER_gendarmerie_flag
@@ -128,10 +152,17 @@ country_event = {
 						value = -200
 					}
 				}
-				declare_war_on = {
-					target = ENG
-					type = take_core_state
-					generator = { 410 }
+				RUS = {
+					add_to_war = {
+						targeted_alliance = PER
+						enemy = PREV
+					}
+				}
+				ENG = {
+					add_to_war = {
+						targeted_alliance = PER
+						enemy = PREV
+					}
 				}
 				if = {
 					limit = {
@@ -139,17 +170,14 @@ country_event = {
 							has_subject = ARB
 						}
 					}
-					declare_war_on = {
-						target = ARB
-						type = annex_everything
+					ARB = {
+						add_to_war = {
+							targeted_alliance = PER
+							enemy = PREV
+						}
 					}
 				}
 				add_state_claim = 413
-				declare_war_on = {
-					target = RUS
-					type = take_core_state
-					generator = { 420 }
-				}
 				add_ideas = PER_idea_civil_war
 				ROOT = {
 					add_ideas = PER_idea_civil_war
@@ -169,24 +197,13 @@ country_event = {
 	}
 	option = {
 		name = ww1_persia.5.b
-		declare_war_on = {
-			target = ENG
-			type = take_core_state
+		add_to_war = {
+			targeted_alliance = GER
+			enemy = ENG
 		}
-		if = {
-			limit = {
-				ENG = {
-					has_subject = ARB
-				}			
-			}
-			declare_war_on = {
-				target = ARB
-				type = annex_everything
-			}
-		}
-		declare_war_on = {
-			target = RUS
-			type = take_core_state
+		add_to_war = {
+			targeted_alliance = GER
+			enemy = RUS
 		}
 		add_popularity = {
 			ideology = fascism

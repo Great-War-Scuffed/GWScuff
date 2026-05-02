@@ -1,10 +1,9 @@
 ﻿capital = 229
 
-set_research_slots = 3
+set_research_slots = 2
 set_technology = {
 	#infantry
 	infantry_weapons = 1
-	support_weapons = 1
 	
 	#support
 	tech_support = 1

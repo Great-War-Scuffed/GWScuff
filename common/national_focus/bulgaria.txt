@@ -53,7 +53,7 @@
 	focus = {
 		id = BUL_new_balkan_power
 		icon = GFX_focus_BUL_promote_bulgarian_nationalism
-		cost = 5
+		cost = 10
 		x = 1
 		y = 0
 		ai_will_do = {
@@ -465,6 +465,7 @@
 							is_owned_by = TUR
 							OR = {
 								region = 24
+								region = 14
 								region = 25
 								region = 26
 							}
@@ -527,10 +528,10 @@
 				}
 				has_global_flag = balkan_league_fail
 				has_global_flag = BW1_avoided
-				AND = {
-					country_exists = MAC
-					has_global_flag = autonomous_macedonia
-				}
+				#AND = {
+				#	country_exists = MAC
+				#	has_global_flag = autonomous_macedonia
+				#}
 			}
 			has_war = no
 			NOT = {
@@ -540,7 +541,14 @@
 		}
 		bypass = {
 			has_global_flag = kis_firstbalkanwar_victory
-			owns_state = 203
+			OR = {
+				owns_state = 203						
+				custom_trigger_tooltip = {
+					tooltip = autonomous_macedonia_happened
+					has_global_flag = autonomous_macedonia
+					country_exists = MAC
+				}
+			}
 		}
 		x = 2
 		y = 6
@@ -571,6 +579,26 @@
 					type = antagonize
 					id = "SER"
 					value = 100
+				}
+			}
+		}
+		bypass_effect = { # better put dismantle here
+			hidden_effect = {
+				if = {
+					limit = {
+						has_global_flag = autonomous_macedonia
+					}
+					every_country = {
+						limit = {
+							is_faction_leader = yes
+							OR = {
+								tag = BUL
+								tag = SER
+								tag = GRE
+							}
+						}
+						dismantle_faction = yes
+					}
 				}
 			}
 		}
@@ -688,6 +716,11 @@
 				is_in_faction_with = SER
 				has_idea = idea_armistice
 				has_idea = idea_army_restrictions
+				custom_trigger_tooltip = {
+					tooltip = autonomous_macedonia_happened
+					has_global_flag = autonomous_macedonia
+					country_exists = MAC
+				}
 			}
 			SER = {
 				OR = {
@@ -788,6 +821,9 @@
 		completion_reward = {
 			add_political_power = 100
 		}
+		search_filters = {
+			FOCUS_FILTER_COMPLETED_BY_EVENT
+		}
 	}
 	focus = {
 		id = BUL_first_national_catastrophe
@@ -815,7 +851,7 @@
 			factor = 100
 		}
 		search_filters = {
-			FOCUS_FILTER_HISTORICAL
+			FOCUS_FILTER_HISTORICAL FOCUS_FILTER_COMPLETED_BY_EVENT
 		}
 		completion_reward = {
 			add_political_power = -100
@@ -1112,10 +1148,15 @@
 			NOT = {
 				has_war_with = SER
 			}
-			owns_state = 106
-			owns_state = 788
-			owns_state = 759
-			owns_state = 1213
+			OR = {
+				AND = {
+					owns_state = 788
+					owns_state = 759
+					owns_state = 1213
+					owns_state = 106
+				}
+				country_exists = MAC
+			}
 			has_country_leader = {
 				character = BUL_ferdinand_i
 			}
@@ -1492,11 +1533,9 @@
 				limit = {
 					is_in_faction = no
 				}
-				create_faction = pact_of_sofia
-				else = {
-					set_faction_name = pact_of_sofia
-				}
+				create_faction_from_template = faction_template_balkan_pact
 			}
+			set_faction_name = pact_of_sofia
 		}
 	}
 	focus = {
@@ -2811,9 +2850,11 @@
 		relative_position_id = BUL_pact_of_sofia
 		x = 2
 		y = 0
+		will_lead_to_war_with = ENT
 		available = {
 			NOT = {
 				has_global_flag = BUL_FRA_alliance
+				has_country_flag = BUL_SER_agreed_annex_MAC
 			}
 			if = {
 				limit = {
@@ -2916,6 +2957,7 @@
 		relative_position_id = BUL_declare_neutrality
 		x = 3
 		y = 0
+		will_lead_to_war_with = GER
 		available = {
 			if = {
 				limit = {
@@ -3331,7 +3373,7 @@
 	focus = {
 		id = BUL_continue_militarisation
 		icon = GFX_focus_secret_rearmament
-		cost = 5
+		cost = 10
 		x = 8
 		y = 0
 		bypass = {
@@ -3364,7 +3406,7 @@
 	focus = {
 		id = BUL_military_stuff_reorganisation
 		icon = GFX_focus_generic_military_mission
-		cost = 5
+		cost = 10
 		prerequisite = {
 			focus = BUL_continue_militarisation
 		}
@@ -3386,7 +3428,7 @@
 			add_doctrine_cost_reduction = {
 				name = land_doc_bonus
 				cost_reduction = 0.5
-				uses = 2
+				uses = 1
 				category = land_doctrine
 			}
 		}
@@ -3397,7 +3439,7 @@
 	focus = {
 		id = BUL_bulgarian_militarism
 		icon = GFX_focus_BUL_bulgarian_administration_of_the_balkans
-		cost = 5
+		cost = 10
 		prerequisite = {
 			focus = BUL_military_stuff_reorganisation
 		}
@@ -3574,7 +3616,7 @@
 	focus = {
 		id = BUL_equipment_effort
 		icon = GFX_focus_AUS_raid_military_storages
-		cost = 5
+		cost = 10
 		prerequisite = {
 			focus = BUL_bulgarian_militarism
 		}
@@ -3606,7 +3648,7 @@
 	focus = {
 		id = BUL_artillery_effort
 		icon = GFX_goal_generic_army_artillery2
-		cost = 5
+		cost = 10
 		prerequisite = {
 			focus = BUL_equipment_effort
 		}
@@ -3730,7 +3772,7 @@
 	focus = {
 		id = BUL_urbanization_of_sofia
 		icon = GFX_goal_generic_construction
-		cost = 5
+		cost = 10
 		x = 15
 		y = 0
 		bypass = {
@@ -3750,7 +3792,7 @@
 				add_extra_state_shared_building_slots = 2
 				add_building_construction = {
 					type = infrastructure
-					level = 2
+					level = 1
 					instant_build = yes
 				}
 			}
@@ -3773,7 +3815,7 @@
 	focus = {
 		id = BUL_agrarian_economy
 		icon = GFX_focus_generic_wheat
-		cost = 5
+		cost = 10
 		prerequisite = {
 			focus = BUL_urbanization_of_sofia
 		}
@@ -3801,7 +3843,7 @@
 	focus = {
 		id = BUL_expand_civilian_industry
 		icon = GFX_focus_generic_industry_1
-		cost = 5
+		cost = 10
 		prerequisite = {
 			focus = BUL_agrarian_economy
 		}
@@ -3813,10 +3855,10 @@
 		}
 		completion_reward = {
 			48 = {
-				add_extra_state_shared_building_slots = 2
+				add_extra_state_shared_building_slots = 1
 				add_building_construction = {
 					type = industrial_complex
-					level = 2
+					level = 1
 					instant_build = yes
 				}
 			}
@@ -3828,7 +3870,7 @@
 	focus = {
 		id = BUL_extensive_urbanisation
 		icon = GFX_focus_SWE_urbanization
-		cost = 5
+		cost = 10
 		prerequisite = {
 			focus = BUL_start_industrialization
 			focus = BUL_agrarian_economy
@@ -3851,18 +3893,18 @@
 		}
 		completion_reward = {
 			212 = {
-				add_extra_state_shared_building_slots = 2
+				add_extra_state_shared_building_slots = 1
 				add_building_construction = {
 					type = infrastructure
-					level = 2
+					level = 1
 					instant_build = yes
 				}
 			}
 			912 = {
-				add_extra_state_shared_building_slots = 2
+				add_extra_state_shared_building_slots = 1
 				add_building_construction = {
 					type = infrastructure
-					level = 2
+					level = 1
 					instant_build = yes
 				}
 			}
@@ -3874,7 +3916,7 @@
 	focus = {
 		id = BUL_land_distribution
 		icon = GFX_goal_generic_trade
-		cost = 5
+		cost = 10
 		prerequisite = {
 			focus = BUL_expand_civilian_industry
 		}
@@ -3889,10 +3931,10 @@
 		}
 		completion_reward = {
 			212 = {
-				add_extra_state_shared_building_slots = 3
+				add_extra_state_shared_building_slots = 1
 			}
 			211 = {
-				add_extra_state_shared_building_slots = 3
+				add_extra_state_shared_building_slots = 1
 			}
 			swap_ideas = {
 				add_idea = BUL_idea_agrarian_economy2
@@ -3903,7 +3945,7 @@
 	focus = {
 		id = BUL_agrarian_mobilization
 		icon = GFX_focus_generic_agricultural_subsidies
-		cost = 5
+		cost = 10
 		prerequisite = {
 			focus = BUL_expand_civilian_industry
 		}
@@ -3926,7 +3968,7 @@
 	focus = {
 		id = BUL_start_industrialization
 		icon = GFX_focus_industry_profit
-		cost = 5
+		cost = 10
 		prerequisite = {
 			focus = BUL_urbanization_of_sofia
 		}
@@ -3969,7 +4011,7 @@
 	focus = {
 		id = BUL_expand_arms_industry
 		icon = GFX_goal_generic_construct_mil_factory
-		cost = 5
+		cost = 10
 		prerequisite = {
 			focus = BUL_start_industrialization
 		}
@@ -3988,10 +4030,10 @@
 		}
 		completion_reward = {
 			48 = {
-				add_extra_state_shared_building_slots = 2
+				add_extra_state_shared_building_slots = 1
 				add_building_construction = {
 					type = arms_factory
-					level = 2
+					level = 1
 					instant_build = yes
 				}
 			}
@@ -4003,7 +4045,7 @@
 	focus = {
 		id = BUL_steel_production
 		icon = GFX_focus_industry_steel
-		cost = 5
+		cost = 10
 		prerequisite = {
 			focus = BUL_expand_arms_industry
 		}
@@ -4042,7 +4084,7 @@
 	focus = {
 		id = BUL_national_champions
 		icon = GFX_focus_manage_industries
-		cost = 5
+		cost = 10
 		prerequisite = {
 			focus = BUL_expand_arms_industry
 		}
@@ -4118,7 +4160,6 @@
 		}
 		completion_reward = {
 			788 = {
-				add_extra_state_shared_building_slots = 2
 				add_building_construction = {
 					type = infrastructure
 					level = 1
@@ -4126,7 +4167,6 @@
 				}
 			}
 			451 = {
-				add_extra_state_shared_building_slots = 2
 				add_building_construction = {
 					type = infrastructure
 					level = 1
@@ -4134,7 +4174,6 @@
 				}
 			}
 			757 = {
-				add_extra_state_shared_building_slots = 2
 				add_building_construction = {
 					type = infrastructure
 					level = 1
@@ -4166,10 +4205,10 @@
 		}
 		completion_reward = {
 			788 = {
-				add_extra_state_shared_building_slots = 4
+				add_extra_state_shared_building_slots = 1
 				add_building_construction = {
 					type = industrial_complex
-					level = 4
+					level = 1
 					instant_build = yes
 				}
 			}
@@ -4198,10 +4237,10 @@
 		}
 		completion_reward = {
 			212 = {
-				add_extra_state_shared_building_slots = 4
+				add_extra_state_shared_building_slots = 1
 				add_building_construction = {
 					type = arms_factory
-					level = 4
+					level = 1
 					instant_build = yes
 				}
 			}

@@ -27,6 +27,7 @@ ideas = {
 				industrial_capacity_factory = -0.95
 				industrial_capacity_dockyard = -0.95
 				custom_modifier_tooltip = interwar_recovery_tt
+				factory_energy_consumption = -0.3
 			}	
 			allowed_to_remove = {
 				OR = {
@@ -116,6 +117,7 @@ ideas = {
 				industrial_capacity_dockyard = -0.90
 				production_factory_max_efficiency_factor = -0.50
 				production_factory_efficiency_gain_factor = -0.80
+				factory_energy_consumption = -0.3
 			}	
 			allowed_to_remove = {
 				any_enemy_country = {
@@ -192,6 +194,7 @@ ideas = {
 				fuel_gain_factor = -0.6
 				agency_upgrade_time = 1.0
 				conscription_factor = -0.1
+				factory_energy_consumption = -0.3
 			}
 			
 			allowed_to_remove = {
@@ -274,6 +277,7 @@ ideas = {
 				max_fuel_factor = -0.35
 				fuel_gain_factor = -0.5
 				agency_upgrade_time = 0.8
+				factory_energy_consumption = -0.3
 			}
 			allowed_to_remove = {
 				OR = {
@@ -400,333 +404,798 @@ ideas = {
 		
 		civilian_economy = {
 
-
 			cost = 150
 			removal_cost = -1
-
+			
 			modifier = {
 				consumer_goods_expected_value = 0.35
+				production_speed_industrial_complex_factor = -0.3
 				production_speed_arms_factory_factor = -0.3
-				#production_speed_infrastructure_factor = 0.10
-				#production_speed_industrial_complex_factor = 0.10
 				conversion_cost_civ_to_mil_factor= 0.3
-				conversion_cost_mil_to_civ_factor = -0.3
+				conversion_cost_mil_to_civ_factor = 0.3
 				max_fuel_factor = -0.25
 				fuel_gain_factor = -0.4
+				factory_energy_consumption = -0.3
+			}
+			
+			default = yes
+			
+			ai_will_do = {
+				factor = 40
+				modifier = {
+					factor = 0
+					OR = {
+						has_idea = low_economic_mobilisation
+						has_idea = partial_economic_mobilisation
+						has_idea = war_economy
+						has_idea = tot_economic_mobilisation
+					}
+				}
+				modifier = {
+					factor = 9999
+					has_idea = interwar_recovery
+				}
 			}
 
-			default = yes
-
+			available = {
+				if = {
+					limit = {
+						has_completed_focus = TUR_strengthen_the_national_economy
+					}
+					NOT = {
+						has_idea = TUR_economic_etatism
+						has_idea = interwar_recovery
+					}
+				}
+				else_if = {
+					limit = {
+						has_idea = HUN_ausgleich
+					}
+					NOT = {
+						has_idea = HUN_ausgleich
+					}
+				}
+				else_if = {
+					limit = {
+						has_idea = AUH_condominium
+					}
+					NOT = {
+						has_idea = AUH_condominium
+					}
+				}
+			}
+			on_add = {
+				update_mobilisation_bonus = yes
+				if = {
+					limit = {
+						tag = AUS
+						any_subject_country = {
+							has_idea = HUN_ausgleich
+						}
+					}
+					every_subject_country = {
+						limit = {
+							has_idea = HUN_ausgleich
+						}
+						country_event = {
+							id = ww1_auh.215
+							days = 1
+						}
+					}
+				}
+				if = {
+					limit = {
+						OR = {
+							tag = AUS
+							tag = HUN
+						}	
+						any_subject_country = {
+							has_idea = AUH_condominium
+						}
+					}
+					every_subject_country = {
+						limit = {
+							has_idea = AUH_condominium
+						}
+						country_event = {
+							id = ww1_auh.215
+							days = 1
+						}
+					}
+				}
+			}
+			
 			cancel_if_invalid = no
 		}
 		
 		low_economic_mobilisation = {
-
+			
 			available = {
 				has_war_support > 0.15
+				OR = {
+					has_war = yes
+					threat > 0.10
+					has_government = fascism
+					custom_trigger_tooltip = {
+						tooltip = has_government_vanguardism_tt
+						has_country_leader_ideology = vanguardism
+					}
+					if = {
+						limit = {
+							tag = GER
+							has_focus_tree = german_focus
+							is_GER_a_monarchy = yes
+						}
+						AND = {
+							has_war = yes
+							OR = {
+								has_completed_focus = GER_regulating_the_war_economy
+								has_completed_focus = GER_war_socialism
+							}
+						}						
+						else = {
+							hidden_trigger = {
+								always = no
+							}
+						}
+					}
+				}
+				NOT = {
+					has_country_flag = cant_change_from_civilian_economy
+				}
+				hidden_trigger = {
+					NOT = {
+						has_idea = FRA_wadai_war
+					}	
+				}
+				if = {
+					limit = {
+						has_completed_focus = TUR_strengthen_the_national_economy
+					}
+					NOT = {
+						has_idea = TUR_economic_etatism
+						has_idea = interwar_recovery
+					}
+				}
+				if = {
+					limit = { has_idea = SRA_marching_army }
+					NOT = { has_idea = SRA_marching_army }
+				}
+				else_if = {
+					limit = { original_tag = LUX }
+					OR = {
+						has_war = yes
+						NOT = {
+							has_idea = LUX_london_treaty
+						}
+					}
+					if = {
+						limit = {
+							has_idea = LUX_occupation
+						}
+						NOT = {
+							has_idea = LUX_occupation
+						}
+					}
+				}
+				else_if = {
+					limit = {
+						has_idea = HUN_ausgleich
+					}
+					NOT = {
+						has_idea = HUN_ausgleich
+					}
+				}
+				else_if = {
+					limit = {
+						has_idea = AUH_condominium
+					}
+					NOT = {
+						has_idea = AUH_condominium
+					}
+				}
 			}
-
+			on_add = {
+				update_mobilisation_bonus = yes
+				if = {
+					limit = {
+						tag = AUS
+						any_subject_country = {
+							has_idea = HUN_ausgleich
+						}
+					}
+					every_subject_country = {
+						limit = {
+							has_idea = HUN_ausgleich
+						}
+						country_event = {
+							id = ww1_auh.215
+							days = 1
+						}
+					}
+				}
+				if = {
+					limit = {
+						OR = {
+							tag = AUS
+							tag = HUN
+						}	
+						any_subject_country = {
+							has_idea = AUH_condominium
+						}
+					}
+					every_subject_country = {
+						limit = {
+							has_idea = AUH_condominium
+						}
+						country_event = {
+							id = ww1_auh.215
+							days = 1
+						}
+					}
+				}
+			}
+			
 			cost = 150
 			removal_cost = -1
-
+			
 			modifier = {
 				consumer_goods_expected_value = 0.3
-				#production_speed_industrial_complex_factor = 0.05
-				#production_speed_infrastructure_factor = 0.05
+				production_speed_industrial_complex_factor = -0.1
 				production_speed_arms_factory_factor = -0.1
 				fuel_gain_factor = -0.25
+				factory_energy_consumption = -0.15
 			}
-
+			
 			cancel_if_invalid = no
 
 			ai_will_do = {
-   				factor = 2
-
-   				modifier = {
-					factor = 20
-
-					is_major = yes
-				}
+				factor = 5000
 				modifier = {
-					has_war_support > 0.25
-					factor = 0 #don't even look at it if you could be taking partial mob
-				}
-				modifier = {
-					tag = ENG
-					has_war = no
-					date < 1937.6.1
 					factor = 0
+					OR = {
+						has_idea = partial_economic_mobilisation
+						has_idea = war_economy
+						has_idea = tot_economic_mobilisation
+						AND  = {
+							is_major = yes
+							has_manpower < 1000 #dont do it if you need PP for manpower !
+							NOT = {
+								has_idea = scraping_the_barrel
+							}
+						}
+					}
 				}
-   			}
+			}
 		}
 		
 		partial_economic_mobilisation = {
-
+			
 			available = {
 				has_war_support > 0.25
+				OR = {
+					has_war = yes
+					threat > 0.25
+					has_government = fascism
+					custom_trigger_tooltip = {
+						tooltip = has_government_vanguardism_tt
+						has_country_leader_ideology = vanguardism
+					}						
+				}		
+				NOT = {
+					has_country_flag = cant_change_from_civilian_economy
+				}
+				hidden_trigger = {
+					NOT = {
+						has_idea = FRA_wadai_war
+					}
+				}
+				if = {
+					limit = { original_tag = ENG } 
+					OR = {
+						threat > 0.5
+						has_global_flag = great_war
+					}	
+				}
+				#else_if = {
+				#	limit = {
+				#		tag = GER
+				#		is_GER_a_monarchy = yes
+				#	}
+				#	has_war = yes
+				#}
+				else_if = {
+					limit = {
+						has_completed_focus = TUR_strengthen_the_national_economy
+					}
+					NOT = {
+						has_idea = TUR_economic_etatism
+						has_idea = interwar_recovery
+					}
+				}	
+				else_if = {
+					limit = { has_idea = SRA_marching_army }
+					NOT = { has_idea = SRA_marching_army }
+				}
+				else_if = {
+					limit = { original_tag = LUX }
+					OR = {
+						has_war = yes
+						NOT = {
+							has_idea = LUX_london_treaty
+						}
+					}
+					if = {
+						limit = {
+							has_idea = LUX_occupation
+						}
+						NOT = {
+							has_idea = LUX_occupation
+						}
+					}
+				}
+				else_if = {
+					limit = {
+						has_idea = HUN_ausgleich
+					}
+					NOT = {
+						has_idea = HUN_ausgleich
+					}
+				}
+				else_if = {
+					limit = {
+						has_idea = AUH_condominium
+					}
+					NOT = {
+						has_idea = AUH_condominium
+					}
+				}
+			}
+			on_add = {
+				update_mobilisation_bonus = yes
+				if = {
+					limit = {
+						tag = AUS
+						any_subject_country = {
+							has_idea = HUN_ausgleich
+						}
+					}
+					every_subject_country = {
+						limit = {
+							has_idea = HUN_ausgleich
+						}
+						country_event = {
+							id = ww1_auh.215
+							days = 1
+						}
+					}
+				}
+				if = {
+					limit = {
+						OR = {
+							tag = AUS
+							tag = HUN
+						}	
+						any_subject_country = {
+							has_idea = AUH_condominium
+						}
+					}
+					every_subject_country = {
+						limit = {
+							has_idea = AUH_condominium
+						}
+						country_event = {
+							id = ww1_auh.215
+							days = 1
+						}
+					}
+				}
 			}
 
 			cost = 150
 			removal_cost = -1
-
+			
 			modifier = {
 				consumer_goods_expected_value = 0.25
 				production_speed_arms_factory_factor = 0.1
-				production_speed_dockyard_factor = 0.1
 				conversion_cost_civ_to_mil_factor= -0.1
 				conversion_cost_mil_to_civ_factor = -0.1
 				fuel_gain_factor = -0.1
 			}
-
+			
 			cancel_if_invalid = no
-			on_add = {
-				if = {
-					limit = {
-						tag = USA
-						has_completed_focus = USA_limited_intervention
-						has_defensive_war = no
-					}
-					USA_congress_large_opposition = yes
-				}
-			}
+
 			ai_will_do = {
-   				factor = 2
-
-   				modifier = {
-					factor = 20
-
-					is_major = yes
-				}
-				
+				factor = 6000
 				modifier = {
-					add = 80
-					original_tag = SOV
-					date < 1937.1.1
-					NOT = { 
-						OR = {
-							has_idea = war_economy 
-							has_idea = tot_economic_mobilisation
+					factor = 0
+					OR = {
+						has_idea = war_economy
+						has_idea = tot_economic_mobilisation
+						AND  = {
+							is_major = yes
+							has_manpower < 1000 #dont do it if you need PP for manpower !
+							NOT = {
+								has_idea = scraping_the_barrel
+							}
 						}
 					}
 				}
-				
-				modifier = {
-					factor = 100
-					OR = {
-						original_tag = URG
-						original_tag = PAR
-					}
-					NOT = {
-						has_idea = war_economy
-					}
-					has_completed_focus = GUAY_coup_detat
-				}
-   			}
+			}
 		}
 		
 		war_economy = {
-
-
+			
 			available = {
+				
+				has_war = yes
 				has_war_support > 0.5
-				OR = {
-					has_government = fascism
-					has_government = communism
-					custom_trigger_tooltip = { tooltip = or_clarification_tooltip always = no }
-					AND = {
+				if = {
+					limit = {
+						tag = GER
+						has_focus_tree = german_focus
+						is_GER_a_monarchy = yes
+					}
+					has_completed_focus = GER_war_socialism			
+				}
+				else = {
+					OR = {
+						threat > 0.4
+						has_government = fascism
+						custom_trigger_tooltip = {
+							tooltip = has_government_vanguardism_tt
+							has_country_leader_ideology = vanguardism
+						}						
+					}
+				}		
+				any_enemy_country = {
+					ic_ratio = {
+						tag = ROOT 
+						ratio > 0.4
+					}
+				}
+				NOT = {
+					has_country_flag = cant_change_from_civilian_economy
+				}
+				if = {
+					limit = { original_tag = ENG }
+					OR = {					
+						threat > 0.7
+						has_global_flag = great_war
+					}	
+				}
+				if = {
+					limit = {
+						tag = SOV
+						has_idea = SOV_idea_NEP
+					}
+					has_completed_focus = SOV_economic_alternative
+				}
+				if = {
+					limit = {
+						has_completed_focus = TUR_strengthen_the_national_economy
+					}
+					NOT = {
+						has_idea = TUR_economic_etatism
+						has_idea = interwar_recovery
+					}
+				}
+				if = {
+					limit = { has_idea = SRA_marching_army }
+					NOT = { has_idea = SRA_marching_army }
+				}
+				else_if = {
+					limit = { original_tag = LUX }
+					OR = {
 						has_war = yes
-						any_enemy_country = {
-							ic_ratio = {
-								tag = ROOT
-								ratio > 0.4
-							}
+						NOT = {
+							has_idea = LUX_london_treaty
+						}
+					}
+					if = {
+						limit = {
+							has_idea = LUX_occupation
+						}
+						NOT = {
+							has_idea = LUX_occupation
+						}
+					}
+				}
+				else_if = {
+					limit = {
+						has_idea = HUN_ausgleich
+					}
+					NOT = {
+						has_idea = HUN_ausgleich
+					}
+				}
+				else_if = {
+					limit = {
+						has_idea = AUH_condominium
+					}
+					NOT = {
+						has_idea = AUH_condominium
+					}
+				}
+			}
+			on_add = {
+				update_mobilisation_bonus = yes
+				if = {
+					limit = {
+						tag = AUS
+						any_subject_country = {
+							has_idea = HUN_ausgleich
+						}
+					}
+					every_subject_country = {
+						limit = {
+							has_idea = HUN_ausgleich
+						}
+						country_event = {
+							id = ww1_auh.215
+							days = 1
+						}
+					}
+				}
+				if = {
+					limit = {
+						OR = {
+							tag = AUS
+							tag = HUN
+						}	
+						any_subject_country = {
+							has_idea = AUH_condominium
+						}
+					}
+					every_subject_country = {
+						limit = {
+							has_idea = AUH_condominium
+						}
+						country_event = {
+							id = ww1_auh.215
+							days = 1
 						}
 					}
 				}
 			}
 
+			cancel = {
+				has_war = no
+				if = {
+					limit = {
+						has_idea = HUN_ausgleich
+					}
+					NOT = {
+						has_idea = HUN_ausgleich
+					}
+				}
+				else_if = {
+					limit = {
+						has_idea = AUH_condominium
+					}
+					NOT = {
+						has_idea = AUH_condominium
+					}
+				}
+			}
+		
 			cost = 150
 			removal_cost = -1
-
+			
 			modifier = {
 				consumer_goods_expected_value = 0.2
 				production_speed_arms_factory_factor = 0.2
-				production_speed_dockyard_factor = 0.20
 				conversion_cost_civ_to_mil_factor= -0.2
 				conversion_cost_mil_to_civ_factor = -0.2
+				factory_energy_consumption = 0.25
 			}
-
+			
 			cancel_if_invalid = no
-			on_add = {
-				if = {
-					limit = {
-						tag = USA
-						has_completed_focus = USA_limited_intervention
-						has_defensive_war = no
-					}
-					USA_congress_large_opposition = yes
-				}
-			}
+			
 			ai_will_do = {
-   				base = 3
-
+				factor = 7000
 				modifier = {
-					#High prio on production
-					factor = 20
-					manpower_per_military_factory >  1000
-				}
-
-				modifier = {
-					# If we CAN go for total mobilization and have enough manpower for it, skip war economy, it's only a waste of PP
-					factor = 0
-
-					manpower_per_military_factory > 15000
-					has_war = yes
-					has_war_support > 0.8
-					any_enemy_country = {
-						ic_ratio = {
-							tag = ROOT
-							ratio > 0.5
-						}
-					}
-				}
-
-				modifier = {
-					add = 1800
-
-					# revert from closed_economy if we have large allies
-					has_idea = closed_economy
-					has_large_ally_not_pick_closed_economy = yes
-				}
-   			}
-		}
-		tot_economic_mobilisation = {
-
-			visible = {
-				if = {
-					limit = {
-						original_tag = GER
-					}
-					NOT = { has_completed_focus = GER_totaler_krieg }
-				}
-			}
-
-			available = {
-				has_war = yes
-				has_war_support > 0.8
-				any_enemy_country = {
-					ic_ratio = {
-						tag = ROOT
-						ratio > 0.5
-					}
-				}
-			}
-			ai_will_do = {
-   				factor = 1
-
-				modifier = {
-					factor = 25
-					#Prio this if nation has a lot of manpower compared to MIC
-					manpower_per_military_factory > 15000
-				}
-
-				modifier = {
-					#Block  unless nation has a lot of manpower
-					factor = 0
-					manpower_per_military_factory <  10000
-				}
-
-
-				modifier = {
-					# never take this if we are on low conscription laws for safety
 					factor = 0
 					OR = {
-						has_idea = volunteer_only
-						has_idea = limited_conscription
-					}
-				}
-
-				# Germany needs to be careful
-				modifier = {
-					factor = 0
-
-					tag = GER
-					NOT = { has_tech = volkssturm }
-					has_war = yes
-					date < 1944.01.01
-				}
-				modifier = {
-					factor = 0
-
-					tag = SOV
-					has_war = yes
-					OR = {
-						has_manpower < 2000000
-						NOT = {
-							OR = {
-								has_idea = all_adults_serve
-								has_idea = service_by_requirement
+						has_idea = tot_economic_mobilisation
+						AND  = {
+							is_major = yes
+							has_manpower < 1000 #dont do it if you need PP for manpower !
+							NOT = {
+								has_idea = scraping_the_barrel
 							}
 						}
 					}
 				}
-   			}
-
-			cost = 150
-			removal_cost = -1
-
-			modifier = {
-				consumer_goods_expected_value = 0.15
-				conscription = -0.03
-				production_speed_arms_factory_factor = 0.3
-				production_speed_dockyard_factor = 0.3
-				conversion_cost_civ_to_mil_factor= -0.3
-				conversion_cost_mil_to_civ_factor = -0.3
 			}
-
-			cancel_if_invalid = no
 		}
-
-
-				japanese_war_economy = {
-			picture = japanese_war_economy
-
-			allowed = {
-				tag = JAP
-			}
-
+		
+		tot_economic_mobilisation = {
+			
 			available = {
-				has_completed_focus = JAP_national_defense_state
 				has_war = yes
 				has_war_support > 0.8
+				if = {
+					limit = {
+						tag = GER
+						has_focus_tree = german_focus
+						is_GER_a_monarchy = yes
+					}
+					has_completed_focus = GER_war_socialism
+				}
+				else = {
+					OR = {
+						threat > 0.5
+						has_government = fascism
+						custom_trigger_tooltip = {
+							tooltip = has_government_vanguardism_tt
+							has_country_leader_ideology = vanguardism
+						}				
+					}
+				}		
+				any_enemy_country = {
+					ic_ratio = {
+						tag = ROOT
+						ratio > 0.7
+					}
+				}
+				NOT = {
+					has_country_flag = cant_change_from_civilian_economy
+				}
+				if = {
+					limit = { original_tag = ENG }
+					OR = {					
+						threat > 0.99
+						has_global_flag = great_war
+					}
+				}
+				if = {
+					limit = {
+						tag = SOV
+						has_idea = SOV_idea_NEP
+					}
+					has_completed_focus = SOV_economic_alternative
+				}
+				if = {
+					limit = {
+						has_completed_focus = TUR_strengthen_the_national_economy
+					}
+					NOT = {
+						has_idea = TUR_economic_etatism
+						has_idea = interwar_recovery
+					}
+				}
+				if = {
+					limit = { has_idea = SRA_marching_army }
+					NOT = { has_idea = SRA_marching_army }
+				}
+				else_if = {
+					limit = { original_tag = LUX }
+					OR = {
+						has_war = yes
+						NOT = {
+							has_idea = LUX_london_treaty
+						}
+					}
+					if = {
+						limit = {
+							has_idea = LUX_occupation
+						}
+						NOT = {
+							has_idea = LUX_occupation
+						}
+					}
+				}
+				else_if = {
+					limit = {
+						has_idea = HUN_ausgleich
+					}
+					NOT = {
+						has_idea = HUN_ausgleich
+					}
+				}
+				else_if = {
+					limit = {
+						has_idea = AUH_condominium
+					}
+					NOT = {
+						has_idea = AUH_condominium
+					}
+				}
+			}
+			on_add = {
+				update_mobilisation_bonus = yes
+				if = {
+					limit = {
+						tag = AUS
+						any_subject_country = {
+							has_idea = HUN_ausgleich
+						}
+					}
+					every_subject_country = {
+						limit = {
+							has_idea = HUN_ausgleich
+						}
+						country_event = {
+							id = ww1_auh.215
+							days = 1
+						}
+					}
+				}
+				if = {
+					limit = {
+						OR = {
+							tag = AUS
+							tag = HUN
+						}	
+						any_subject_country = {
+							has_idea = AUH_condominium
+						}
+					}
+					every_subject_country = {
+						limit = {
+							has_idea = AUH_condominium
+						}
+						country_event = {
+							id = ww1_auh.215
+							days = 1
+						}
+					}
+				}
 			}
 
-			visible = {
-				tag = JAP
+			cancel = {
+				has_war = no
+				if = {
+					limit = {
+						has_idea = HUN_ausgleich
+					}
+					NOT = {
+						has_idea = HUN_ausgleich
+					}
+				}
+				else_if = {
+					limit = {
+						has_idea = AUH_condominium
+					}
+					NOT = {
+						has_idea = AUH_condominium
+					}
+				}
 			}
-
-			cost = 300
+			
+			cost = 150
 			removal_cost = -1
-
+			
 			modifier = {
-				stability_factor = -0.10
 				consumer_goods_expected_value = 0.10
-				production_speed_arms_factory_factor = 0.35
-				production_speed_dockyard_factor = 0.35
-				production_speed_coastal_bunker_factor = 0.15
-				production_speed_radar_station_factor = 0.15
-				production_speed_air_base_factor = 0.15
-				production_speed_naval_base_factor = 0.15
-				production_speed_anti_air_building_factor = 0.15
-				
-				conversion_cost_civ_to_mil_factor= -0.5
+				conscription = -0.03
+				production_speed_arms_factory_factor = 0.3
+				conversion_cost_civ_to_mil_factor= -0.3
+				conversion_cost_mil_to_civ_factor = -0.3
+				factory_energy_consumption = 0.5
 			}
+			
 			cancel_if_invalid = no
+			
+			ai_will_do = {
+				factor = 80
+				modifier = { #don't increase without having enough manpower
+					factor = 0
+					check_variable = { manpower_k < num_battalions }
+				}
+				modifier = { #we don't want the conscription% to drop too low
+					factor = 0
+					has_manpower > 150000 #minimum manpower for minors
+					OR = {
+						has_idea = disarmed_nation
+						has_idea = volunteer_only
+						has_idea = limited_conscription
+						has_idea = extensive_conscription
+					}
+				}
+			}
 		}
-
-
-
-
 	}
 	
 	trade_laws = { 
@@ -839,33 +1308,45 @@ ideas = {
 					}
 				}		
 			}
+
+			cancel = {
+				if = {
+					limit = {
+						original_tag = GER
+						ENG = {
+							NOT = {
+								has_country_flag = great_war_loser
+							}
+							is_major = yes
+						}					
+					}
+					has_war_with = ENG			
+				}
+				else_if = {
+					limit = {
+						original_tag = RUS
+						FRA = {
+							NOT = {
+								has_country_flag = great_war_loser
+							}
+							is_major = yes
+						}					
+					}
+					has_war_with = FRA
+				}
+				else_if = {
+					limit = {
+						original_tag = ITA				
+					}
+					has_idea = ITA_trade_wars
+				}
+				else = {
+					always = no
+				}
+			}
 			
 			ai_will_do = {
-				factor = 50
-				modifier = {
-					check_variable = { resource@steel > 0 }
-					add = resource@steel
-				}
-				modifier = {
-					check_variable = { resource@oil > 0 }
-					add = resource@oil
-				}
-				modifier = {
-					check_variable = { resource@rubber > 0 }
-					add = resource@rubber
-				}
-				modifier = {
-					check_variable = { resource@aluminium > 0 }
-					add = resource@aluminium
-				}
-				modifier = {
-					check_variable = { resource@tungsten > 0 }
-					add = resource@tungsten
-				}
-				modifier = {
-					check_variable = { resource@chromium > 0 }
-					add = resource@chromium
-				}
+				factor = 1
 				modifier = {
 					has_war = yes
 					factor = 0
@@ -966,43 +1447,7 @@ ideas = {
 			cancel_if_invalid = no
 			
 			ai_will_do = {
-				factor = 40
-				modifier = {
-					check_variable = { resource_produced@steel > 0 }
-
-					subtract_from_temp_variable = { steel_deficit = resource@steel }
-					add = steel_deficit
-				}
-				modifier = {
-					check_variable = { resource_produced@oil > 0 }
-
-					subtract_from_temp_variable = { oil_deficit = resource@oil }
-					add = oil_deficit
-				}
-				modifier = {
-					check_variable = { resource_produced@rubber > 0 }
-
-					subtract_from_temp_variable = { rubber_deficit = resource@rubber }
-					add = rubber_deficit
-				}
-				modifier = {
-					check_variable = { resource_produced@aluminium > 0 }
-
-					subtract_from_temp_variable = { aluminium_deficit = resource@aluminium }
-					add = aluminium_deficit
-				}
-				modifier = {
-					check_variable = { resource_produced@tungsten > 0 }
-
-					subtract_from_temp_variable = { tungsten_deficit = resource@tungsten }
-					add = tungsten_deficit
-				}
-				modifier = {
-					check_variable = { resource_produced@chromium > 0 }
-
-					subtract_from_temp_variable = { chromium_deficit = resource@chromium }
-					add = chromium_deficit
-				}
+				factor = 1
 				modifier = {
 					has_war = yes
 					has_idea = free_trade
@@ -1102,7 +1547,7 @@ ideas = {
 			cancel_if_invalid = no
 
 			ai_will_do = {
-				factor = 20
+				factor = 1
 				modifier = {
 					factor = 0
 					is_major = no
@@ -1116,44 +1561,15 @@ ideas = {
 					}
 				}
 				modifier = {
+					add = 1500
+
+					# revert from closed_economy if we have large allies
+					has_idea = closed_economy
+					has_large_ally_not_pick_closed_economy = yes
+				}
+				modifier = {
 					factor = 0
 					tag = SRA
-				}
-				modifier = {
-					check_variable = { resource_produced@steel > 0 }
-
-					subtract_from_temp_variable = { steel_deficit = resource@steel }
-					add = steel_deficit
-				}
-				modifier = {
-					check_variable = { resource_produced@oil > 0 }
-
-					subtract_from_temp_variable = { oil_deficit = resource@oil }
-					add = oil_deficit
-				}
-				modifier = {
-					check_variable = { resource_produced@rubber > 0 }
-
-					subtract_from_temp_variable = { rubber_deficit = resource@rubber }
-					add = rubber_deficit
-				}
-				modifier = {
-					check_variable = { resource_produced@aluminium > 0 }
-
-					subtract_from_temp_variable = { aluminium_deficit = resource@aluminium }
-					add = aluminium_deficit
-				}
-				modifier = {
-					check_variable = { resource_produced@tungsten > 0 }
-
-					subtract_from_temp_variable = { tungsten_deficit = resource@tungsten }
-					add = tungsten_deficit
-				}
-				modifier = {
-					check_variable = { resource_produced@chromium > 0 }
-
-					subtract_from_temp_variable = { chromium_deficit = resource@chromium }
-					add = chromium_deficit
 				}
 			}
 
@@ -1272,7 +1688,7 @@ ideas = {
 					NOT = {
 						has_idea = AUH_condominium
 					}
-				}	
+				}
 			}
 			
 			modifier = {
@@ -1331,7 +1747,14 @@ ideas = {
 			cancel_if_invalid = no
 
 			ai_will_do = {
-   				base = 0
+   				base = 1
+				modifier = {
+					factor = 0
+
+					# don't take if we have a reasonable sized ally
+					# since they will require our trades
+					has_large_ally_not_pick_closed_economy = yes
+				}
    			}
 		}
 	}

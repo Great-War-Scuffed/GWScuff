@@ -3,7 +3,7 @@ capital = 757
 recruit_character = WTH_hafiz_salih_efendi
 recruit_character = WTH_suleyman_askeri_bey
 
-set_research_slots = 3
+set_research_slots = 2
 
 set_technology = {
 	#infantry
@@ -36,3 +36,5 @@ set_popularities = {
 	democratic = 42
 	fascism = 5
 }
+
+add_ideas = WTH_provisional_administration

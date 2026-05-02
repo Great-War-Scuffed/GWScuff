@@ -44,7 +44,7 @@ GRE_venizelos_constantine = {
 		range = {
 			id = venizelos_low
 			min = -0.50
-			max = -0.25
+			max = -0.2
 			modifier = {
 				democratic_drift = 0.02
 			}

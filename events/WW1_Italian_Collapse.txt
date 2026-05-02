@@ -45,7 +45,7 @@ country_event = {
 				add_ideas = umberto_ii
 			}
 			remove_ideas = victor_emmanuel_ww1
-			# remove_ideas = victor_emmanuel
+			remove_ideas = victor_emmanuel
 			news_event = {
 				id = garibaldi.2
 				hours = 1
@@ -1358,9 +1358,9 @@ country_event = {
 				remove_claim_by = ROOT
 			}
 			every_character = {
-				limit = {
-					is_generic_character = no
-				}
+				set_nationality = SRD
+			}
+			every_unit_leader = {
 				set_nationality = SRD
 			}
 			transfer_navy = {
@@ -1996,8 +1996,7 @@ news_event = {
 					}
 				}
 				ITS = {
-					create_faction_from_template = faction_template_generic
-					set_faction_name = italian_federation
+					create_faction = italian_federation
 				}
 			}
 			if = {
@@ -2173,20 +2172,17 @@ country_event = {
 				}
 			}
 			every_unit_leader = {
-				set_nationality = TTS
+				set_nationality = SIC
 			}
 			every_state = {
 				remove_core_of = ROOT
 				remove_claim_by = ROOT
 			}
 			transfer_navy = {
-				target = TTS
+				target = SIC
 			}
 			every_character = {
-				limit = {
-					is_generic_character = no
-				}
-				set_nationality = TTS
+				set_nationality = SIC
 			}
 			# if = {
 			# 	limit = {
@@ -2196,13 +2192,13 @@ country_event = {
 			# 		limit = {
 			# 			is_in_faction_with = ROOT
 			# 		}
-			# 		TTS = {
+			# 		SIC = {
 			# 			create_faction = italian_federation
 			# 			add_to_faction = PREV
 			# 		}
 			# 	}
 			# }
-			TTS = {
+			SIC = {
 				if = {
 					limit = {
 						PREV = {
@@ -2235,7 +2231,7 @@ country_event = {
 					}
 					set_autonomy = {
 						target = PAP
-						autonomy_state = autonomy_satellite
+						autonomy_state = autonomy_dominion
 					}
 				}
 				if = {
@@ -2270,7 +2266,7 @@ country_event = {
 						transfer_state = 114
 						if = {
 							limit = {
-								TTS = {
+								SIC = {
 									owns_state = 158
 								}
 							}
@@ -2280,7 +2276,7 @@ country_event = {
 							set_cosmetic_tag = SRD_PIE
 							if = {
 								limit = {
-									TTS = {
+									SIC = {
 										owns_state = 1216
 									}
 								}
@@ -2302,7 +2298,7 @@ country_event = {
 						transfer_state = 160
 						if = {
 							limit = {
-								TTS = {
+								SIC = {
 									owns_state = 159
 								}
 							}
@@ -2320,7 +2316,7 @@ country_event = {
 							owns_state = 117
 						}
 					}
-					set_cosmetic_tag = TTS_ONLY
+					set_cosmetic_tag = SIC_ONLY
 					set_capital = {
 						state = 115
 					}
@@ -2331,26 +2327,26 @@ country_event = {
 							owns_state = 115
 						}
 					}
-					set_cosmetic_tag = TTS_NAPLES
+					set_cosmetic_tag = SIC_NAPLES
 				}
 			}
 			ITA = {
 				ITA_gabriele_d_annunzio = {
-					set_nationality = TTS
+					set_nationality = SIC
 					promote_character = yes
 				}
 				ITA_antonio_salandra = {
-					set_nationality = TTS
+					set_nationality = SIC
 				}
 				ITA_antonino_paterne_castello = {
-					set_nationality = TTS
+					set_nationality = SIC
 				}
 				ITA_vittorio_emanuele_orlando = {
-					set_nationality = TTS
+					set_nationality = SIC
 					promote_character = yes
 				}
 			}
-			TTS = {
+			SIC = {
 				change_tag_from = ROOT
 			}
 		}
@@ -2362,7 +2358,7 @@ country_event = {
 			modifier = {
 				factor = 0
 				all_owned_state = {
-					is_core_of = TTS
+					is_core_of = SIC
 				}
 			}
 		}
@@ -2472,11 +2468,11 @@ country_event = {
 # 					}
 # 					else_if = {
 # 						limit = {
-# 							TTS = {
+# 							SIC = {
 # 								is_faction_leader = yes
 # 							}
 # 						}
-# 						TTS = {
+# 						SIC = {
 # 							add_to_faction = SRD
 # 						}
 # 					}
@@ -2509,8 +2505,7 @@ country_event = {
 		}
 		ITS = {
 			leave_faction = yes
-			create_faction_from_template = faction_template_generic
-			set_faction_name = italian_federation
+			create_faction = italian_federation
 			add_to_faction = ROI
 		}
 	}
@@ -2914,7 +2909,7 @@ news_event = {
 	picture = GFX_news_event_italian_republic
 	trigger = {
 		has_global_flag = italian_civil_war
-		TTS = {
+		SIC = {
 			exists = yes
 			has_war = no
 		}
@@ -2924,13 +2919,13 @@ news_event = {
 		ROI = {
 			OR = {
 				exists = no
-				is_subject_of = TTS
+				is_subject_of = SIC
 			}
 		}
 		SRI = {
 			OR = {
 				exists = no
-				is_subject_of = TTS
+				is_subject_of = SIC
 			}
 		}
 		NOT = {
@@ -2948,25 +2943,24 @@ news_event = {
 				limit = {
 					any_country = {
 						has_country_flag = ITA_socialist_italy_flag
-						is_subject_of = TTS
+						is_subject_of = SIC
 					}
 				}
-				TTS = {
+				SIC = {
 					annex_country = {
 						target = SRI
 					}
 				}
 			}
-			TTS = {
+			SIC = {
 				set_rule = {
 					can_join_factions = yes
 				}
-				create_faction_from_template = faction_template_generic
-				set_faction_name = italian_federation
+				create_faction = italian_federation
 			}
 			every_state = {
 				limit = {
-					is_owned_by = TTS
+					is_owned_by = SIC
 					OR = {
 						state = 2
 						state = 835
@@ -2978,7 +2972,7 @@ news_event = {
 						limit = {
 							exists = no
 						}
-						inherit_technology = TTS
+						inherit_technology = SIC
 					}
 					transfer_state = PREV
 					add_state_core = PREV
@@ -2987,7 +2981,7 @@ news_event = {
 			}
 			every_state = {
 				limit = {
-					is_owned_by = TTS
+					is_owned_by = SIC
 					state = 833
 				}
 				EMI = {
@@ -2995,10 +2989,10 @@ news_event = {
 						limit = {
 							exists = no
 						}
-						inherit_technology = TTS
+						inherit_technology = SIC
 						transfer_state = PREV
 						add_state_core = PREV
-						TTS = {
+						SIC = {
 							puppet = EMI
 						}
 					}
@@ -3010,7 +3004,7 @@ news_event = {
 			}
 			every_state = {
 				limit = {
-					is_owned_by = TTS
+					is_owned_by = SIC
 					OR = {
 						state = 114
 						state = 158
@@ -3022,10 +3016,10 @@ news_event = {
 						limit = {
 							exists = no
 						}
-						inherit_technology = TTS
+						inherit_technology = SIC
 						transfer_state = PREV
 						add_state_core = PREV
-						TTS = {
+						SIC = {
 							puppet = SRD
 						}
 					}
@@ -3037,7 +3031,7 @@ news_event = {
 			}
 			every_state = {
 				limit = {
-					is_owned_by = TTS
+					is_owned_by = SIC
 					state = 162
 				}
 				TUS = {
@@ -3045,10 +3039,10 @@ news_event = {
 						limit = {
 							exists = no
 						}
-						inherit_technology = TTS
+						inherit_technology = SIC
 						transfer_state = PREV
 						add_state_core = PREV
-						TTS = {
+						SIC = {
 							puppet = TUS
 						}
 					}
@@ -3084,7 +3078,7 @@ news_event = {
 		trigger = {
 			OR = {
 				original_tag = ITA
-				original_tag = TTS
+				original_tag = SIC
 			}
 		}
 	}
@@ -3096,7 +3090,7 @@ news_event = {
 		trigger = {
 			NOT = {
 				original_tag = ITA
-				original_tag = TTS
+				original_tag = SIC
 			}
 		}
 	}
@@ -3174,8 +3168,7 @@ country_event = {
 					set_rule = {
 						can_join_factions = yes
 					}
-					create_faction_from_template = faction_template_entente
-					set_faction_name = entente
+					create_faction = entente
 					every_country = {
 						limit = {
 							is_in_faction_with = ITS
@@ -3192,8 +3185,7 @@ country_event = {
 						is_in_faction = yes
 					}
 					leave_faction = yes
-					create_faction_from_template = faction_template_entente
-					set_faction_name = entente
+					create_faction = entente
 					every_country = {
 						limit = {
 							is_in_faction_with = ITS
@@ -3282,8 +3274,7 @@ country_event = {
 				set_rule = {
 					can_join_factions = yes
 				}
-				create_faction_from_template = faction_template_third_international
-				set_faction_name = internationale
+				create_faction = internationale
 				add_to_faction = SRI
 			}
 		}
@@ -3707,26 +3698,6 @@ country_event = {
 				limit = {
 					is_italian_nation = yes
 				}
-				PREV = {
-					if = {
-						limit = {
-							has_wargoal_against = PREV
-						}
-						remove_wargoal = {
-							target = PREV
-							type = all
-						}
-					}
-				}
-				if = {
-					limit = {
-						has_wargoal_against = PREV
-					}
-					remove_wargoal = {
-						target = PREV
-						type = all
-					}
-				}
 				set_truce = {
 					target = PREV
 					days = 365
@@ -3735,12 +3706,7 @@ country_event = {
 			hidden_effect = {
 				every_state = {
 					limit = {
-						OR = {
-							is_core_of = ITS
-							is_core_of = SRI
-							is_core_of = SRD
-							is_core_of = ITA
-						}
+						is_core_of = ITA
 					}
 					add_core_of = PREV
 				}

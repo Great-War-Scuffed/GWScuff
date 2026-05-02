@@ -20,7 +20,6 @@ country_event = {
 			}
 			is_subject = no
 		}
-		YEM = { has_war = no }
 	}
 	mean_time_to_happen = { days = 0 }
 	option = {
@@ -48,7 +47,7 @@ country_event = {
 				}
 				set_autonomy = {
 					target = ROOT
-					autonomy_state = autonomy_satellite
+					autonomy_state = autonomy_dominion
 				}
 			}
 			add_ideas = arab_vassal_state

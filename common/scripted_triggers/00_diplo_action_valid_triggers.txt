@@ -95,7 +95,6 @@ is_diplomatic_action_valid_offer_docking_rights = {
 }
 is_diplomatic_action_valid_guarantee = {
 	NOT = {
-		is_in_faction_with = FROM
 		has_autonomy_state = autonomy_tgwr_governorate_general
 		has_autonomy_state = autonomy_tgwr_real_union
 		has_autonomy_state = autonomy_tgwr_condominium
@@ -104,7 +103,7 @@ is_diplomatic_action_valid_guarantee = {
 				has_autonomy_state = autonomy_tgwr_governorate_general
 				has_autonomy_state = autonomy_tgwr_real_union
 				has_autonomy_state = autonomy_tgwr_condominium
-			}
+			}		
 		}
 	}
 }
@@ -139,7 +138,12 @@ is_diplomatic_action_valid_request_access_to_licence_production = {
 is_diplomatic_action_valid_join_allies = {
 	if = {
 		limit = {
-			protectorate_type_subject = yes			
+			OR = {
+				has_autonomy_state = autonomy_tgwr_protectorate
+				has_autonomy_state = autonomy_tgwr_informal_protectorate
+				has_autonomy_state = autonomy_tgwr_ottoman_emirate
+				has_autonomy_state = autonomy_tgwr_concession
+			}			
 		}
 		#always = no
 		is_in_faction_with = FROM  #experimental
@@ -147,7 +151,12 @@ is_diplomatic_action_valid_join_allies = {
 	else_if = {
 		limit = {
 			FROM = {
-				protectorate_type_subject = yes			
+				OR = {
+					has_autonomy_state = autonomy_tgwr_protectorate
+					has_autonomy_state = autonomy_tgwr_informal_protectorate
+					has_autonomy_state = autonomy_tgwr_ottoman_emirate
+					has_autonomy_state = autonomy_tgwr_concession
+				}
 			}						
 		}
 		FROM = {
@@ -221,7 +230,10 @@ is_diplomatic_action_valid_join_allies = {
 				has_country_flag = great_war_loser
 			}
 			has_global_flag = great_war_ends
-			is_ally_with = FROM
+			OR = {
+				is_in_faction_with = FROM 
+				has_subject = FROM
+			}
 		}
 		FROM = {
 			any_enemy_country = {
@@ -240,7 +252,12 @@ is_diplomatic_action_valid_call_allies = {
 	if = {
 		limit = {
 			FROM = {
-				protectorate_type_subject = yes
+				OR = {
+					has_autonomy_state = autonomy_tgwr_protectorate
+					has_autonomy_state = autonomy_tgwr_informal_protectorate
+					has_autonomy_state = autonomy_tgwr_ottoman_emirate
+					has_autonomy_state = autonomy_tgwr_concession
+				}			
 			}			
 		}
 		#always = no
@@ -248,7 +265,12 @@ is_diplomatic_action_valid_call_allies = {
 	}
 	else_if = {
 		limit = {
-			protectorate_type_subject = yes
+			OR = {
+				has_autonomy_state = autonomy_tgwr_protectorate
+				has_autonomy_state = autonomy_tgwr_informal_protectorate
+				has_autonomy_state = autonomy_tgwr_ottoman_emirate
+				has_autonomy_state = autonomy_tgwr_concession
+			}			
 		}
 		ROOT = {
 			OR = {
@@ -308,7 +330,10 @@ is_diplomatic_action_valid_call_allies = {
 			has_country_flag = great_war_loser
 			has_global_flag = great_war_ends
 			FROM = {
-				is_ally_with = ROOT
+				OR = {
+					is_in_faction_with = ROOT 
+					has_subject = ROOT
+				}		
 			}
 		}
 		ROOT = {
@@ -387,8 +412,7 @@ is_diplomatic_action_valid_join_faction = {
 		limit = {		
 			OR = {
 				tag = NPA
-				tag = GXC
-				tag = YUN
+				tag = CPG
 				tag = ZHC
 				tag = ANC
 				tag = FNG
@@ -468,8 +492,7 @@ is_diplomatic_action_valid_offer_join_faction= {
 			FROM = {
 				OR = {
 					tag = NPA
-					tag = GXC
-					tag = YUN
+					tag = CPG
 					tag = ZHC
 					tag = ANC
 					tag = FNG

@@ -31,7 +31,6 @@ country_event = {
 	option = {
 		name = ww1_vietnam.2.a
 		get_current_government_type = yes
-		set_country_flag = colony
 		random_other_country = {
 			limit = {
 				original_tag = FRA
@@ -316,10 +315,7 @@ country_event = {
 			GER = {
 				exists = yes
 				is_subject = no
-				NOT = { 
-					has_war_with = ROOT
-					has_country_flag = great_war_loser
-				}
+				NOT = { has_war_with = ROOT }
 			}
 		}
 		GER = {
@@ -625,7 +621,6 @@ country_event = {
 					}
 					white_peace = ROOT
 				}
-				set_country_flag = colony
 				ROOT = {
 					set_autonomy = {
 						target = PREV

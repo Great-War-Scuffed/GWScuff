@@ -179,7 +179,7 @@ country_event = { #donotlog
 	trigger = {
 		OR = {
 			has_global_flag = tgwr_show_division_limiter
-			has_idea = RUS_demobilizing_army
+			has_active_mission = RUS_demobilizing_army_timer
 		}
 		NOT = { has_global_flag = tgwr_no_unit_limits }
 		NOT = { has_country_flag = tgwr_no_unit_limits }
@@ -367,11 +367,17 @@ country_event = {
 	hidden = yes
 	is_triggered_only = yes
 	trigger = {
-		protectorate_type_subject = yes
 		is_in_faction = yes
-		NOT = { has_war_together_with = OVERLORD }
+		has_war = no
 	}
 	immediate = {
-		protectorate_logic = yes
+		leave_faction = yes
+		OVERLORD = {
+			diplomatic_relation = {
+				country = ROOT
+				relation = military_access
+				active = yes
+			}
+		}
 	}
 }

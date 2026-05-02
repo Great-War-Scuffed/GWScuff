@@ -150,10 +150,8 @@ news_event = {
 				is_ai = no
 			}
 			hidden_effect = {
-				clear_superevents = yes
 			    play_song = "SE_eng_george_v"
 			    set_country_flag = se_eng_george_v
-				update_superevents = yes
 			}
 		}
 	}
@@ -196,10 +194,8 @@ news_event = {
 				is_ai = no
 			}
 			hidden_effect = {
-				clear_superevents = yes
 			    play_song = "SE_eng_kitchener"
 			    set_country_flag = se_eng_kitchener
-				update_superevents = yes
 			}
 		}
 	}
@@ -238,10 +234,8 @@ news_event = {
 				is_ai = no
 			}
 			hidden_effect = {
-				clear_superevents = yes
 			    play_song = "SE_eng_republic"
 			    set_country_flag = SE_eng_republic
-				update_superevents = yes
 			}
 		}
 		ai_chance = { factor = 100 }
@@ -437,12 +431,6 @@ news_event = {
 	option = {
 		name = eng_news.23.a
 		trigger = { original_tag = ENG }
-	}
-	option = {
-		name = eng_news.23.b
-		trigger = { NOT = { original_tag = ENG } }
-	}
-	after = {
 		if = {
 			limit = {
 				has_game_rule = {
@@ -452,10 +440,25 @@ news_event = {
 				is_ai = no
 			}
 			hidden_effect = {
-				clear_superevents = yes
 			    play_song = "SE_eng_imperial_federation"
 			    set_country_flag = se_eng_imperial_federation
-				update_superevents = yes
+			}
+		}
+	}
+	option = {
+		name = eng_news.23.b
+		trigger = { NOT = { original_tag = ENG } }
+		if = {
+			limit = {
+				has_game_rule = {
+					rule = rule_superevent
+					option = DEFAULT
+				}
+				is_ai = no
+			}
+			hidden_effect = {
+			    play_song = "SE_eng_imperial_federation"
+			    set_country_flag = se_eng_imperial_federation
 			}
 		}
 	}
@@ -467,6 +470,7 @@ news_event = {
 	desc = eng_news.24.d
 	picture = GFX_news_event_eng_america_falls
 	is_triggered_only = yes
+	fire_only_once = yes
 	major = yes
 	immediate = {
 		set_global_flag = eng_news_america_falls
@@ -479,7 +483,8 @@ news_event = {
 		trigger = {
 			OR = {
 				original_tag = ENG
-				is_ally_with = ENG
+				is_subject_of = ENG
+				is_in_faction_with = ENG
 			}
 		}
 		if = {
@@ -491,10 +496,8 @@ news_event = {
 				is_ai = no
 			}
 			hidden_effect = {
-				clear_superevents = yes
 			    play_song = "SE_eng_fall_of_america"
 			    set_country_flag = SE_eng_fall_of_america
-				update_superevents = yes
 			}
 		}
 	}
@@ -503,7 +506,8 @@ news_event = {
 		trigger = {
 			NOT = {
 				original_tag = ENG
-				is_ally_with = ENG
+				is_subject_of = ENG
+				is_in_faction_with = ENG
 			}
 		}
 		if = {
@@ -515,10 +519,8 @@ news_event = {
 				is_ai = no
 			}
 			hidden_effect = {
-				clear_superevents = yes
 			    play_song = "SE_eng_fall_of_america"
 			    set_country_flag = SE_eng_fall_of_america
-				update_superevents = yes
 			}
 		}
 	}

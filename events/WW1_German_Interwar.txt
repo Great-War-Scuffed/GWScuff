@@ -510,7 +510,15 @@ country_event = {
 		hidden_effect = {
 			destroy_all_ships = yes
 			news_event = ww1_german_interwar.13
-			load_oob = GER_1921_naval_mtg
+			if = {
+				limit = {
+					has_dlc = "Man the Guns"
+				}
+				load_oob = GER_1921_naval_mtg
+				else = {
+					load_oob = GER_1921_naval_legacy
+				}
+			}
 		}
 		ai_chance = {
 			factor = 100
@@ -635,9 +643,7 @@ news_event = {
 			has_country_flag = great_war_loser
 		}
 	}
-	mean_time_to_happen = {
-		days = 0
-	}
+	fire_only_once = yes
 	immediate = {
 		hidden_effect = {
 			set_global_flag = occupation_of_rhineland

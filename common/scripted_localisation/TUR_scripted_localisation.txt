@@ -8028,6 +8028,111 @@ defined_text = {
 	}
 }
 defined_text = {
+	name = ottoman_minority_tt_desc_yozgat
+	text = {
+		trigger = {
+			1017 = {
+				is_controlled_by = ROOT
+			    NOT = {
+					has_dynamic_modifier = { modifier = TUR_armenian_minority }
+					has_dynamic_modifier = { modifier = TUR_arab_minority }
+					has_dynamic_modifier = { modifier = TUR_greek_minority }
+					has_dynamic_modifier = { modifier = TUR_southslav_minority }
+					has_dynamic_modifier = { modifier = TUR_albanian_minority }
+					has_dynamic_modifier = { modifier = TUR_kurd_minority }
+					has_dynamic_modifier = { modifier = TUR_georgian_minority }
+					has_dynamic_modifier = { modifier = TUR_romanian_minority }
+					has_dynamic_modifier = { modifier = TUR_assyrian_minority }
+					has_dynamic_modifier = { modifier = TUR_turkish_minority }
+					has_dynamic_modifier = { modifier = TUR_autonomous_region scope = TUR }
+				}
+			}
+		}
+		localization_key = ottoman_minority_tt_desc_1
+	}
+	text = {
+		trigger = {
+			1017 = {
+				is_controlled_by = ROOT
+			    has_dynamic_modifier = { modifier = TUR_armenian_minority }
+			}
+		}
+		localization_key = ottoman_minority_tt_desc_2
+	}
+	text = {
+		trigger = {
+			1017 = {
+				is_controlled_by = ROOT
+			    has_dynamic_modifier = { modifier = TUR_arab_minority }
+			}
+		}
+		localization_key = ottoman_minority_tt_desc_3
+	}
+	text = {
+		trigger = {
+			1017 = {
+				is_controlled_by = ROOT
+			    has_dynamic_modifier = { modifier = TUR_greek_minority }
+			}
+		}
+		localization_key = ottoman_minority_tt_desc_4
+	}
+	text = {
+		trigger = {
+			1017 = {
+				is_controlled_by = ROOT
+			    has_dynamic_modifier = { modifier = TUR_southslav_minority }
+			}
+		}
+		localization_key = ottoman_minority_tt_desc_5
+	}
+	text = {
+		trigger = {
+			1017 = {
+				is_controlled_by = ROOT
+			    has_dynamic_modifier = { modifier = TUR_turkish_minority }
+			}
+		}
+		localization_key = ottoman_minority_tt_desc_12
+	}
+	text = {
+		trigger = {
+			1017 = {
+				is_controlled_by = ROOT
+			    has_dynamic_modifier = { modifier = TUR_kurd_minority }
+			}
+		}
+		localization_key = ottoman_minority_tt_desc_7
+	}
+	text = {
+		trigger = {
+			1017 = {
+				is_controlled_by = ROOT
+			    has_dynamic_modifier = { modifier = TUR_georgian_minority }
+			}
+		}
+		localization_key = ottoman_minority_tt_desc_8
+	}
+	text = {
+		trigger = {
+			1017 = {
+				is_controlled_by = ROOT
+			    has_dynamic_modifier = { modifier = TUR_romanian_minority }
+			}
+		}
+		localization_key = ottoman_minority_tt_desc_9
+	}
+	text = {
+		trigger = {
+			1017 = {
+				is_controlled_by = ROOT
+			    has_dynamic_modifier = { modifier = TUR_autonomous_region scope = TUR }
+			}
+		}
+		localization_key = ottoman_minority_tt_desc_10
+	}
+}
+defined_text = {
 	name = ottoman_minority_tt_desc_afyon
 	text = {
 		trigger = {
@@ -74687,6 +74792,851 @@ defined_text = {
 			}
 		}
 		localization_key = TUR_ottoman_state_idea_effect_ankara_no_effect
+	}
+}
+defined_text = {
+	name = TUR_ottoman_local_resources_factor_yozgat
+	text = {
+		trigger = {
+			1017 = {
+				is_controlled_by = ROOT
+				OR = {
+					has_dynamic_modifier = { modifier = TUR_armenian_minority }
+					has_dynamic_modifier = { modifier = TUR_arab_minority }
+					has_dynamic_modifier = { modifier = TUR_greek_minority }
+					has_dynamic_modifier = { modifier = TUR_southslav_minority }
+					has_dynamic_modifier = { modifier = TUR_albanian_minority }
+					has_dynamic_modifier = { modifier = TUR_kurd_minority }
+					has_dynamic_modifier = { modifier = TUR_georgian_minority }
+					has_dynamic_modifier = { modifier = TUR_romanian_minority }
+					has_dynamic_modifier = { modifier = TUR_assyrian_minority }
+					has_dynamic_modifier = { modifier = TUR_turkish_minority }
+				}
+				has_variable = TUR_ottoman_local_resources_factor
+			}
+		}
+		localization_key = TUR_ottoman_local_resources_factor_yozgat_yes
+	}
+	text = {
+		trigger = {
+			1017 = {
+				is_controlled_by = ROOT
+				NOT = {
+					has_dynamic_modifier = { modifier = TUR_armenian_minority }
+					has_dynamic_modifier = { modifier = TUR_arab_minority }
+					has_dynamic_modifier = { modifier = TUR_greek_minority }
+					has_dynamic_modifier = { modifier = TUR_southslav_minority }
+					has_dynamic_modifier = { modifier = TUR_albanian_minority }
+					has_dynamic_modifier = { modifier = TUR_kurd_minority }
+					has_dynamic_modifier = { modifier = TUR_georgian_minority }
+					has_dynamic_modifier = { modifier = TUR_romanian_minority }
+					has_dynamic_modifier = { modifier = TUR_assyrian_minority }
+					has_dynamic_modifier = { modifier = TUR_turkish_minority }
+					has_variable =  TUR_ottoman_local_resources_factor
+				}
+			}
+		}
+		localization_key = TUR_ottoman_minority_no
+	}
+}
+defined_text = {
+	name = TUR_ottoman_local_factories_yozgat
+	text = {
+		trigger = {
+			1017 = {
+				is_controlled_by = ROOT
+				OR = {
+					has_dynamic_modifier = { modifier = TUR_armenian_minority }
+					has_dynamic_modifier = { modifier = TUR_arab_minority }
+					has_dynamic_modifier = { modifier = TUR_greek_minority }
+					has_dynamic_modifier = { modifier = TUR_southslav_minority }
+					has_dynamic_modifier = { modifier = TUR_albanian_minority }
+					has_dynamic_modifier = { modifier = TUR_kurd_minority }
+					has_dynamic_modifier = { modifier = TUR_georgian_minority }
+					has_dynamic_modifier = { modifier = TUR_romanian_minority }
+					has_dynamic_modifier = { modifier = TUR_assyrian_minority }
+					has_dynamic_modifier = { modifier = TUR_turkish_minority }
+				}
+				has_variable = TUR_ottoman_local_factories
+			}
+		}
+		localization_key = TUR_ottoman_local_factories_yozgat_yes
+	}
+	text = {
+		trigger = {
+			1017 = {
+				is_controlled_by = ROOT
+				NOT = {
+					has_dynamic_modifier = { modifier = TUR_armenian_minority }
+					has_dynamic_modifier = { modifier = TUR_arab_minority }
+					has_dynamic_modifier = { modifier = TUR_greek_minority }
+					has_dynamic_modifier = { modifier = TUR_southslav_minority }
+					has_dynamic_modifier = { modifier = TUR_albanian_minority }
+					has_dynamic_modifier = { modifier = TUR_kurd_minority }
+					has_dynamic_modifier = { modifier = TUR_georgian_minority }
+					has_dynamic_modifier = { modifier = TUR_romanian_minority }
+					has_dynamic_modifier = { modifier = TUR_assyrian_minority }
+					has_dynamic_modifier = { modifier = TUR_turkish_minority }
+					has_variable =  TUR_ottoman_local_factories
+				}
+			}
+		}
+		localization_key = TUR_ottoman_minority_no
+	}
+}
+defined_text = {
+	name = TUR_ottoman_attrition_yozgat
+	text = {
+		trigger = {
+			1017 = {
+				is_controlled_by = ROOT
+				OR = {
+					has_dynamic_modifier = { modifier = TUR_armenian_minority }
+					has_dynamic_modifier = { modifier = TUR_arab_minority }
+					has_dynamic_modifier = { modifier = TUR_greek_minority }
+					has_dynamic_modifier = { modifier = TUR_southslav_minority }
+					has_dynamic_modifier = { modifier = TUR_albanian_minority }
+					has_dynamic_modifier = { modifier = TUR_kurd_minority }
+					has_dynamic_modifier = { modifier = TUR_georgian_minority }
+					has_dynamic_modifier = { modifier = TUR_romanian_minority }
+					has_dynamic_modifier = { modifier = TUR_assyrian_minority }
+					has_dynamic_modifier = { modifier = TUR_turkish_minority }
+				}
+				has_variable = TUR_ottoman_attrition
+			}
+		}
+		localization_key = TUR_ottoman_attrition_yozgat_yes
+	}
+	text = {
+		trigger = {
+			1017 = {
+				is_controlled_by = ROOT
+				NOT = {
+					has_dynamic_modifier = { modifier = TUR_armenian_minority }
+					has_dynamic_modifier = { modifier = TUR_arab_minority }
+					has_dynamic_modifier = { modifier = TUR_greek_minority }
+					has_dynamic_modifier = { modifier = TUR_southslav_minority }
+					has_dynamic_modifier = { modifier = TUR_albanian_minority }
+					has_dynamic_modifier = { modifier = TUR_kurd_minority }
+					has_dynamic_modifier = { modifier = TUR_georgian_minority }
+					has_dynamic_modifier = { modifier = TUR_romanian_minority }
+					has_dynamic_modifier = { modifier = TUR_assyrian_minority }
+					has_dynamic_modifier = { modifier = TUR_turkish_minority }
+					has_variable =  TUR_ottoman_attrition
+				}
+			}
+		}
+		localization_key = TUR_ottoman_minority_no
+	}
+}
+defined_text = {
+	name = TUR_ottoman_local_intel_to_enemies_yozgat
+	text = {
+		trigger = {
+			1017 = {
+				is_controlled_by = ROOT
+				OR = {
+					has_dynamic_modifier = { modifier = TUR_armenian_minority }
+					has_dynamic_modifier = { modifier = TUR_arab_minority }
+					has_dynamic_modifier = { modifier = TUR_greek_minority }
+					has_dynamic_modifier = { modifier = TUR_southslav_minority }
+					has_dynamic_modifier = { modifier = TUR_albanian_minority }
+					has_dynamic_modifier = { modifier = TUR_kurd_minority }
+					has_dynamic_modifier = { modifier = TUR_georgian_minority }
+					has_dynamic_modifier = { modifier = TUR_romanian_minority }
+					has_dynamic_modifier = { modifier = TUR_assyrian_minority }
+					has_dynamic_modifier = { modifier = TUR_turkish_minority }
+				}
+				has_variable = TUR_ottoman_local_intel_to_enemies
+			}
+		}
+		localization_key = TUR_ottoman_local_intel_to_enemies_yozgat_yes
+	}
+	text = {
+		trigger = {
+			1017 = {
+				is_controlled_by = ROOT
+				NOT = {
+					has_dynamic_modifier = { modifier = TUR_armenian_minority }
+					has_dynamic_modifier = { modifier = TUR_arab_minority }
+					has_dynamic_modifier = { modifier = TUR_greek_minority }
+					has_dynamic_modifier = { modifier = TUR_southslav_minority }
+					has_dynamic_modifier = { modifier = TUR_albanian_minority }
+					has_dynamic_modifier = { modifier = TUR_kurd_minority }
+					has_dynamic_modifier = { modifier = TUR_georgian_minority }
+					has_dynamic_modifier = { modifier = TUR_romanian_minority }
+					has_dynamic_modifier = { modifier = TUR_assyrian_minority }
+					has_dynamic_modifier = { modifier = TUR_turkish_minority }
+					has_variable =  TUR_ottoman_local_intel_to_enemies
+				}
+			}
+		}
+		localization_key = TUR_ottoman_minority_no
+	}
+}
+defined_text = {
+	name = TUR_ottoman_local_factory_sabotage_yozgat
+	text = {
+		trigger = {
+			1017 = {
+				is_controlled_by = ROOT
+				OR = {
+					has_dynamic_modifier = { modifier = TUR_armenian_minority }
+					has_dynamic_modifier = { modifier = TUR_arab_minority }
+					has_dynamic_modifier = { modifier = TUR_greek_minority }
+					has_dynamic_modifier = { modifier = TUR_southslav_minority }
+					has_dynamic_modifier = { modifier = TUR_albanian_minority }
+					has_dynamic_modifier = { modifier = TUR_kurd_minority }
+					has_dynamic_modifier = { modifier = TUR_georgian_minority }
+					has_dynamic_modifier = { modifier = TUR_romanian_minority }
+					has_dynamic_modifier = { modifier = TUR_assyrian_minority }
+					has_dynamic_modifier = { modifier = TUR_turkish_minority }
+				}
+				has_variable = TUR_ottoman_local_factory_sabotage
+			}
+		}
+		localization_key = TUR_ottoman_local_factory_sabotage_yozgat_yes
+	}
+	text = {
+		trigger = {
+			1017 = {
+				is_controlled_by = ROOT
+				NOT = {
+					has_dynamic_modifier = { modifier = TUR_armenian_minority }
+					has_dynamic_modifier = { modifier = TUR_arab_minority }
+					has_dynamic_modifier = { modifier = TUR_greek_minority }
+					has_dynamic_modifier = { modifier = TUR_southslav_minority }
+					has_dynamic_modifier = { modifier = TUR_albanian_minority }
+					has_dynamic_modifier = { modifier = TUR_kurd_minority }
+					has_dynamic_modifier = { modifier = TUR_georgian_minority }
+					has_dynamic_modifier = { modifier = TUR_romanian_minority }
+					has_dynamic_modifier = { modifier = TUR_assyrian_minority }
+					has_dynamic_modifier = { modifier = TUR_turkish_minority }
+					has_variable =  TUR_ottoman_local_factory_sabotage
+				}
+			}
+		}
+		localization_key = TUR_ottoman_minority_no
+	}
+}
+defined_text = {
+	name = TUR_ottoman_local_building_slots_factor_yozgat
+	text = {
+		trigger = {
+			1017 = {
+				is_controlled_by = ROOT
+				OR = {
+					has_dynamic_modifier = { modifier = TUR_armenian_minority }
+					has_dynamic_modifier = { modifier = TUR_arab_minority }
+					has_dynamic_modifier = { modifier = TUR_greek_minority }
+					has_dynamic_modifier = { modifier = TUR_southslav_minority }
+					has_dynamic_modifier = { modifier = TUR_albanian_minority }
+					has_dynamic_modifier = { modifier = TUR_kurd_minority }
+					has_dynamic_modifier = { modifier = TUR_georgian_minority }
+					has_dynamic_modifier = { modifier = TUR_romanian_minority }
+					has_dynamic_modifier = { modifier = TUR_assyrian_minority }
+					has_dynamic_modifier = { modifier = TUR_turkish_minority }
+				}
+				has_variable = TUR_ottoman_local_building_slots_factor
+			}
+		}
+		localization_key = TUR_ottoman_local_building_slots_factor_yozgat_yes
+	}
+	text = {
+		trigger = {
+			1017 = {
+				is_controlled_by = ROOT
+				NOT = {
+					has_dynamic_modifier = { modifier = TUR_armenian_minority }
+					has_dynamic_modifier = { modifier = TUR_arab_minority }
+					has_dynamic_modifier = { modifier = TUR_greek_minority }
+					has_dynamic_modifier = { modifier = TUR_southslav_minority }
+					has_dynamic_modifier = { modifier = TUR_albanian_minority }
+					has_dynamic_modifier = { modifier = TUR_kurd_minority }
+					has_dynamic_modifier = { modifier = TUR_georgian_minority }
+					has_dynamic_modifier = { modifier = TUR_romanian_minority }
+					has_dynamic_modifier = { modifier = TUR_assyrian_minority }
+					has_dynamic_modifier = { modifier = TUR_turkish_minority }
+					has_variable =  TUR_ottoman_local_building_slots_factor
+				}
+			}
+		}
+		localization_key = TUR_ottoman_minority_no
+	}
+}
+defined_text = {
+	name = TUR_ottoman_army_defence_factor_yozgat
+	text = {
+		trigger = {
+			1017 = {
+				is_controlled_by = ROOT
+				OR = {
+					has_dynamic_modifier = { modifier = TUR_armenian_minority }
+					has_dynamic_modifier = { modifier = TUR_arab_minority }
+					has_dynamic_modifier = { modifier = TUR_greek_minority }
+					has_dynamic_modifier = { modifier = TUR_southslav_minority }
+					has_dynamic_modifier = { modifier = TUR_albanian_minority }
+					has_dynamic_modifier = { modifier = TUR_kurd_minority }
+					has_dynamic_modifier = { modifier = TUR_georgian_minority }
+					has_dynamic_modifier = { modifier = TUR_romanian_minority }
+					has_dynamic_modifier = { modifier = TUR_assyrian_minority }
+					has_dynamic_modifier = { modifier = TUR_turkish_minority }
+				}
+				has_variable = TUR_ottoman_army_defence_factor
+			}
+		}
+		localization_key = TUR_ottoman_army_defence_factor_yozgat_yes
+	}
+	text = {
+		trigger = {
+			1017 = {
+				is_controlled_by = ROOT
+				NOT = {
+					has_dynamic_modifier = { modifier = TUR_armenian_minority }
+					has_dynamic_modifier = { modifier = TUR_arab_minority }
+					has_dynamic_modifier = { modifier = TUR_greek_minority }
+					has_dynamic_modifier = { modifier = TUR_southslav_minority }
+					has_dynamic_modifier = { modifier = TUR_albanian_minority }
+					has_dynamic_modifier = { modifier = TUR_kurd_minority }
+					has_dynamic_modifier = { modifier = TUR_georgian_minority }
+					has_dynamic_modifier = { modifier = TUR_romanian_minority }
+					has_dynamic_modifier = { modifier = TUR_assyrian_minority }
+					has_dynamic_modifier = { modifier = TUR_turkish_minority }
+					has_variable =  TUR_ottoman_army_defence_factor
+				}
+			}
+		}
+		localization_key = TUR_ottoman_minority_no
+	}
+}
+defined_text = {
+	name = TUR_ottoman_resistance_target_yozgat
+	text = {
+		trigger = {
+			1017 = {
+				is_controlled_by = ROOT
+				OR = {
+					has_dynamic_modifier = { modifier = TUR_armenian_minority }
+					has_dynamic_modifier = { modifier = TUR_arab_minority }
+					has_dynamic_modifier = { modifier = TUR_greek_minority }
+					has_dynamic_modifier = { modifier = TUR_southslav_minority }
+					has_dynamic_modifier = { modifier = TUR_albanian_minority }
+					has_dynamic_modifier = { modifier = TUR_kurd_minority }
+					has_dynamic_modifier = { modifier = TUR_georgian_minority }
+					has_dynamic_modifier = { modifier = TUR_romanian_minority }
+					has_dynamic_modifier = { modifier = TUR_assyrian_minority }
+					has_dynamic_modifier = { modifier = TUR_turkish_minority }
+				}
+				has_variable = TUR_ottoman_resistance_target
+			}
+		}
+		localization_key = TUR_ottoman_resistance_target_yozgat_yes
+	}
+	text = {
+		trigger = {
+			1017 = {
+				is_controlled_by = ROOT
+				NOT = {
+					has_dynamic_modifier = { modifier = TUR_armenian_minority }
+					has_dynamic_modifier = { modifier = TUR_arab_minority }
+					has_dynamic_modifier = { modifier = TUR_greek_minority }
+					has_dynamic_modifier = { modifier = TUR_southslav_minority }
+					has_dynamic_modifier = { modifier = TUR_albanian_minority }
+					has_dynamic_modifier = { modifier = TUR_kurd_minority }
+					has_dynamic_modifier = { modifier = TUR_georgian_minority }
+					has_dynamic_modifier = { modifier = TUR_romanian_minority }
+					has_dynamic_modifier = { modifier = TUR_assyrian_minority }
+					has_dynamic_modifier = { modifier = TUR_turkish_minority }
+					has_variable =  TUR_ottoman_resistance_target
+				}
+			}
+		}
+		localization_key = TUR_ottoman_minority_no
+	}
+}
+defined_text = {
+	name = TUR_ottoman_resistance_decay_yozgat
+	text = {
+		trigger = {
+			1017 = {
+				is_controlled_by = ROOT
+				OR = {
+					has_dynamic_modifier = { modifier = TUR_armenian_minority }
+					has_dynamic_modifier = { modifier = TUR_arab_minority }
+					has_dynamic_modifier = { modifier = TUR_greek_minority }
+					has_dynamic_modifier = { modifier = TUR_southslav_minority }
+					has_dynamic_modifier = { modifier = TUR_albanian_minority }
+					has_dynamic_modifier = { modifier = TUR_kurd_minority }
+					has_dynamic_modifier = { modifier = TUR_georgian_minority }
+					has_dynamic_modifier = { modifier = TUR_romanian_minority }
+					has_dynamic_modifier = { modifier = TUR_assyrian_minority }
+					has_dynamic_modifier = { modifier = TUR_turkish_minority }
+				}
+				has_variable = TUR_ottoman_resistance_decay
+			}
+		}
+		localization_key = TUR_ottoman_resistance_decay_yozgat_yes
+	}
+	text = {
+		trigger = {
+			1017 = {
+				is_controlled_by = ROOT
+				NOT = {
+					has_dynamic_modifier = { modifier = TUR_armenian_minority }
+					has_dynamic_modifier = { modifier = TUR_arab_minority }
+					has_dynamic_modifier = { modifier = TUR_greek_minority }
+					has_dynamic_modifier = { modifier = TUR_southslav_minority }
+					has_dynamic_modifier = { modifier = TUR_albanian_minority }
+					has_dynamic_modifier = { modifier = TUR_kurd_minority }
+					has_dynamic_modifier = { modifier = TUR_georgian_minority }
+					has_dynamic_modifier = { modifier = TUR_romanian_minority }
+					has_dynamic_modifier = { modifier = TUR_assyrian_minority }
+					has_dynamic_modifier = { modifier = TUR_turkish_minority }
+					has_variable =  TUR_ottoman_resistance_decay
+				}
+			}
+		}
+		localization_key = TUR_ottoman_minority_no
+	}
+}
+defined_text = {
+	name = TUR_ottoman_resistance_growth_yozgat
+	text = {
+		trigger = {
+			1017 = {
+				is_controlled_by = ROOT
+				OR = {
+					has_dynamic_modifier = { modifier = TUR_armenian_minority }
+					has_dynamic_modifier = { modifier = TUR_arab_minority }
+					has_dynamic_modifier = { modifier = TUR_greek_minority }
+					has_dynamic_modifier = { modifier = TUR_southslav_minority }
+					has_dynamic_modifier = { modifier = TUR_albanian_minority }
+					has_dynamic_modifier = { modifier = TUR_kurd_minority }
+					has_dynamic_modifier = { modifier = TUR_georgian_minority }
+					has_dynamic_modifier = { modifier = TUR_romanian_minority }
+					has_dynamic_modifier = { modifier = TUR_assyrian_minority }
+					has_dynamic_modifier = { modifier = TUR_turkish_minority }
+				}
+				has_variable = TUR_ottoman_resistance_growth
+			}
+		}
+		localization_key = TUR_ottoman_resistance_growth_yozgat_yes
+	}
+	text = {
+		trigger = {
+			1017 = {
+				is_controlled_by = ROOT
+				NOT = {
+					has_dynamic_modifier = { modifier = TUR_armenian_minority }
+					has_dynamic_modifier = { modifier = TUR_arab_minority }
+					has_dynamic_modifier = { modifier = TUR_greek_minority }
+					has_dynamic_modifier = { modifier = TUR_southslav_minority }
+					has_dynamic_modifier = { modifier = TUR_albanian_minority }
+					has_dynamic_modifier = { modifier = TUR_kurd_minority }
+					has_dynamic_modifier = { modifier = TUR_georgian_minority }
+					has_dynamic_modifier = { modifier = TUR_romanian_minority }
+					has_dynamic_modifier = { modifier = TUR_assyrian_minority }
+					has_dynamic_modifier = { modifier = TUR_turkish_minority }
+					has_variable =  TUR_ottoman_resistance_growth
+				}
+			}
+		}
+		localization_key = TUR_ottoman_minority_no
+	}
+}
+defined_text = {
+	name = TUR_ottoman_compliance_growth_yozgat
+	text = {
+		trigger = {
+			1017 = {
+				is_controlled_by = ROOT
+				OR = {
+					has_dynamic_modifier = { modifier = TUR_armenian_minority }
+					has_dynamic_modifier = { modifier = TUR_arab_minority }
+					has_dynamic_modifier = { modifier = TUR_greek_minority }
+					has_dynamic_modifier = { modifier = TUR_southslav_minority }
+					has_dynamic_modifier = { modifier = TUR_albanian_minority }
+					has_dynamic_modifier = { modifier = TUR_kurd_minority }
+					has_dynamic_modifier = { modifier = TUR_georgian_minority }
+					has_dynamic_modifier = { modifier = TUR_romanian_minority }
+					has_dynamic_modifier = { modifier = TUR_assyrian_minority }
+					has_dynamic_modifier = { modifier = TUR_turkish_minority }
+				}
+				has_variable = TUR_ottoman_compliance_growth
+			}
+		}
+		localization_key = TUR_ottoman_compliance_growth_yozgat_yes
+	}
+	text = {
+		trigger = {
+			1017 = {
+				is_controlled_by = ROOT
+				NOT = {
+					has_dynamic_modifier = { modifier = TUR_armenian_minority }
+					has_dynamic_modifier = { modifier = TUR_arab_minority }
+					has_dynamic_modifier = { modifier = TUR_greek_minority }
+					has_dynamic_modifier = { modifier = TUR_southslav_minority }
+					has_dynamic_modifier = { modifier = TUR_albanian_minority }
+					has_dynamic_modifier = { modifier = TUR_kurd_minority }
+					has_dynamic_modifier = { modifier = TUR_georgian_minority }
+					has_dynamic_modifier = { modifier = TUR_romanian_minority }
+					has_dynamic_modifier = { modifier = TUR_assyrian_minority }
+					has_dynamic_modifier = { modifier = TUR_turkish_minority }
+					has_variable =  TUR_ottoman_compliance_growth
+				}
+			}
+		}
+		localization_key = TUR_ottoman_minority_no
+	}
+}
+defined_text = {
+	name = TUR_ottoman_army_speed_factor_for_controller_yozgat
+	text = {
+		trigger = {
+			1017 = {
+				is_controlled_by = ROOT
+				OR = {
+					has_dynamic_modifier = { modifier = TUR_armenian_minority }
+					has_dynamic_modifier = { modifier = TUR_arab_minority }
+					has_dynamic_modifier = { modifier = TUR_greek_minority }
+					has_dynamic_modifier = { modifier = TUR_southslav_minority }
+					has_dynamic_modifier = { modifier = TUR_albanian_minority }
+					has_dynamic_modifier = { modifier = TUR_kurd_minority }
+					has_dynamic_modifier = { modifier = TUR_georgian_minority }
+					has_dynamic_modifier = { modifier = TUR_romanian_minority }
+					has_dynamic_modifier = { modifier = TUR_assyrian_minority }
+					has_dynamic_modifier = { modifier = TUR_turkish_minority }
+				}
+				has_variable = TUR_ottoman_army_speed_factor_for_controller
+			}
+		}
+		localization_key = TUR_ottoman_army_speed_factor_for_controller_yozgat_yes
+	}
+	text = {
+		trigger = {
+			1017 = {
+				is_controlled_by = ROOT
+				NOT = {
+					has_dynamic_modifier = { modifier = TUR_armenian_minority }
+					has_dynamic_modifier = { modifier = TUR_arab_minority }
+					has_dynamic_modifier = { modifier = TUR_greek_minority }
+					has_dynamic_modifier = { modifier = TUR_southslav_minority }
+					has_dynamic_modifier = { modifier = TUR_albanian_minority }
+					has_dynamic_modifier = { modifier = TUR_kurd_minority }
+					has_dynamic_modifier = { modifier = TUR_georgian_minority }
+					has_dynamic_modifier = { modifier = TUR_romanian_minority }
+					has_dynamic_modifier = { modifier = TUR_assyrian_minority }
+					has_dynamic_modifier = { modifier = TUR_turkish_minority }
+					has_variable =  TUR_ottoman_army_speed_factor_for_controller
+				}
+			}
+		}
+		localization_key = TUR_ottoman_minority_no
+	}
+}
+defined_text = {
+	name = TUR_ottoman_local_supplies_for_controller_yozgat
+	text = {
+		trigger = {
+			1017 = {
+				is_controlled_by = ROOT
+				OR = {
+					has_dynamic_modifier = { modifier = TUR_armenian_minority }
+					has_dynamic_modifier = { modifier = TUR_arab_minority }
+					has_dynamic_modifier = { modifier = TUR_greek_minority }
+					has_dynamic_modifier = { modifier = TUR_southslav_minority }
+					has_dynamic_modifier = { modifier = TUR_albanian_minority }
+					has_dynamic_modifier = { modifier = TUR_kurd_minority }
+					has_dynamic_modifier = { modifier = TUR_georgian_minority }
+					has_dynamic_modifier = { modifier = TUR_romanian_minority }
+					has_dynamic_modifier = { modifier = TUR_assyrian_minority }
+					has_dynamic_modifier = { modifier = TUR_turkish_minority }
+				}
+				has_variable = TUR_ottoman_local_supplies_for_controller
+			}
+		}
+		localization_key = TUR_ottoman_local_supplies_for_controller_yozgat_yes
+	}
+	text = {
+		trigger = {
+			1017 = {
+				is_controlled_by = ROOT
+				NOT = {
+					has_dynamic_modifier = { modifier = TUR_armenian_minority }
+					has_dynamic_modifier = { modifier = TUR_arab_minority }
+					has_dynamic_modifier = { modifier = TUR_greek_minority }
+					has_dynamic_modifier = { modifier = TUR_southslav_minority }
+					has_dynamic_modifier = { modifier = TUR_albanian_minority }
+					has_dynamic_modifier = { modifier = TUR_kurd_minority }
+					has_dynamic_modifier = { modifier = TUR_georgian_minority }
+					has_dynamic_modifier = { modifier = TUR_romanian_minority }
+					has_dynamic_modifier = { modifier = TUR_assyrian_minority }
+					has_dynamic_modifier = { modifier = TUR_turkish_minority }
+					has_variable =  TUR_ottoman_local_supplies_for_controller
+				}
+			}
+		}
+		localization_key = TUR_ottoman_minority_no
+	}
+}
+defined_text = {
+	name = TUR_ottoman_required_garrison_factor_yozgat
+	text = {
+		trigger = {
+			1017 = {
+				is_controlled_by = ROOT
+				OR = {
+					has_dynamic_modifier = { modifier = TUR_armenian_minority }
+					has_dynamic_modifier = { modifier = TUR_arab_minority }
+					has_dynamic_modifier = { modifier = TUR_greek_minority }
+					has_dynamic_modifier = { modifier = TUR_southslav_minority }
+					has_dynamic_modifier = { modifier = TUR_albanian_minority }
+					has_dynamic_modifier = { modifier = TUR_kurd_minority }
+					has_dynamic_modifier = { modifier = TUR_georgian_minority }
+					has_dynamic_modifier = { modifier = TUR_romanian_minority }
+					has_dynamic_modifier = { modifier = TUR_assyrian_minority }
+					has_dynamic_modifier = { modifier = TUR_turkish_minority }
+				}
+				has_variable = TUR_ottoman_required_garrison_factor
+			}
+		}
+		localization_key = TUR_ottoman_required_garrison_factor_yozgat_yes
+	}
+	text = {
+		trigger = {
+			1017 = {
+				is_controlled_by = ROOT
+				NOT = {
+					has_dynamic_modifier = { modifier = TUR_armenian_minority }
+					has_dynamic_modifier = { modifier = TUR_arab_minority }
+					has_dynamic_modifier = { modifier = TUR_greek_minority }
+					has_dynamic_modifier = { modifier = TUR_southslav_minority }
+					has_dynamic_modifier = { modifier = TUR_albanian_minority }
+					has_dynamic_modifier = { modifier = TUR_kurd_minority }
+					has_dynamic_modifier = { modifier = TUR_georgian_minority }
+					has_dynamic_modifier = { modifier = TUR_romanian_minority }
+					has_dynamic_modifier = { modifier = TUR_assyrian_minority }
+					has_dynamic_modifier = { modifier = TUR_turkish_minority }
+					has_variable =  TUR_ottoman_required_garrison_factor
+				}
+			}
+		}
+		localization_key = TUR_ottoman_minority_no
+	}
+}
+defined_text = {
+	name = TUR_ottoman_recruitable_population_factor_yozgat
+	text = {
+		trigger = {
+			1017 = {
+				is_controlled_by = ROOT
+				OR = {
+					has_dynamic_modifier = { modifier = TUR_armenian_minority }
+					has_dynamic_modifier = { modifier = TUR_arab_minority }
+					has_dynamic_modifier = { modifier = TUR_greek_minority }
+					has_dynamic_modifier = { modifier = TUR_southslav_minority }
+					has_dynamic_modifier = { modifier = TUR_albanian_minority }
+					has_dynamic_modifier = { modifier = TUR_kurd_minority }
+					has_dynamic_modifier = { modifier = TUR_georgian_minority }
+					has_dynamic_modifier = { modifier = TUR_romanian_minority }
+					has_dynamic_modifier = { modifier = TUR_assyrian_minority }
+					has_dynamic_modifier = { modifier = TUR_turkish_minority }
+				}
+				has_variable = TUR_ottoman_recruitable_population_factor
+			}
+		}
+		localization_key = TUR_ottoman_recruitable_population_factor_yozgat_yes
+	}
+	text = {
+		trigger = {
+			1017 = {
+				is_controlled_by = ROOT
+				NOT = {
+					has_dynamic_modifier = { modifier = TUR_armenian_minority }
+					has_dynamic_modifier = { modifier = TUR_arab_minority }
+					has_dynamic_modifier = { modifier = TUR_greek_minority }
+					has_dynamic_modifier = { modifier = TUR_southslav_minority }
+					has_dynamic_modifier = { modifier = TUR_albanian_minority }
+					has_dynamic_modifier = { modifier = TUR_kurd_minority }
+					has_dynamic_modifier = { modifier = TUR_georgian_minority }
+					has_dynamic_modifier = { modifier = TUR_romanian_minority }
+					has_dynamic_modifier = { modifier = TUR_assyrian_minority }
+					has_dynamic_modifier = { modifier = TUR_turkish_minority }
+					has_variable =  TUR_ottoman_recruitable_population_factor
+				}
+			}
+		}
+		localization_key = TUR_ottoman_minority_no
+	}
+}
+defined_text = {
+	name = TUR_ottoman_state_production_speed_buildings_factor_yozgat
+	text = {
+		trigger = {
+			1017 = {
+				is_controlled_by = ROOT
+				OR = {
+					has_dynamic_modifier = { modifier = TUR_armenian_minority }
+					has_dynamic_modifier = { modifier = TUR_arab_minority }
+					has_dynamic_modifier = { modifier = TUR_greek_minority }
+					has_dynamic_modifier = { modifier = TUR_southslav_minority }
+					has_dynamic_modifier = { modifier = TUR_albanian_minority }
+					has_dynamic_modifier = { modifier = TUR_kurd_minority }
+					has_dynamic_modifier = { modifier = TUR_georgian_minority }
+					has_dynamic_modifier = { modifier = TUR_romanian_minority }
+					has_dynamic_modifier = { modifier = TUR_assyrian_minority }
+					has_dynamic_modifier = { modifier = TUR_turkish_minority }
+				}
+				has_variable = TUR_ottoman_state_production_speed_buildings_factor
+			}
+		}
+		localization_key = TUR_ottoman_state_production_speed_buildings_factor_yozgat_yes
+	}
+	text = {
+		trigger = {
+			1017 = {
+				is_controlled_by = ROOT
+				NOT = {
+					has_dynamic_modifier = { modifier = TUR_armenian_minority }
+					has_dynamic_modifier = { modifier = TUR_arab_minority }
+					has_dynamic_modifier = { modifier = TUR_greek_minority }
+					has_dynamic_modifier = { modifier = TUR_southslav_minority }
+					has_dynamic_modifier = { modifier = TUR_albanian_minority }
+					has_dynamic_modifier = { modifier = TUR_kurd_minority }
+					has_dynamic_modifier = { modifier = TUR_georgian_minority }
+					has_dynamic_modifier = { modifier = TUR_romanian_minority }
+					has_dynamic_modifier = { modifier = TUR_assyrian_minority }
+					has_dynamic_modifier = { modifier = TUR_turkish_minority }
+					has_variable =  TUR_ottoman_state_production_speed_buildings_factor
+				}
+			}
+		}
+		localization_key = TUR_ottoman_minority_no
+	}
+}
+defined_text = {
+	name = TUR_ottoman_state_idea_effect_yozgat
+	text = {
+		trigger = {
+			1017 = {
+				has_state_flag = TUR_armenian_state
+			}
+		}
+		localization_key = TUR_ottoman_state_idea_effect_yozgat_minority_armenian
+	}
+	text = {
+		trigger = {
+			1017 = {
+				has_state_flag = TUR_arab_state
+			}
+		}
+		localization_key = TUR_ottoman_state_idea_effect_yozgat_minority_arab
+	}
+	text = {
+		trigger = {
+			1017 = {
+				has_state_flag = TUR_greek_state
+			}
+		}
+		localization_key = TUR_ottoman_state_idea_effect_yozgat_minority_greek
+	}
+	text = {
+		trigger = {
+			1017 = {
+				has_state_flag = TUR_southslav_state
+			}
+		}
+		localization_key = TUR_ottoman_state_idea_effect_yozgat_minority_southslav
+	}
+	text = {
+		trigger = {
+			1017 = {
+				has_state_flag = TUR_albanian_state
+			}
+		}
+		localization_key = TUR_ottoman_state_idea_effect_yozgat_minority_albanian
+	}
+	text = {
+		trigger = {
+			1017 = {
+				has_state_flag = TUR_kurd_state
+			}
+		}
+		localization_key = TUR_ottoman_state_idea_effect_yozgat_minority_kurd
+	}
+	text = {
+		trigger = {
+			1017 = {
+				has_state_flag = TUR_georgian_state
+			}
+		}
+		localization_key = TUR_ottoman_state_idea_effect_yozgat_minority_georgian
+	}
+	text = {
+		trigger = {
+			1017 = {
+				has_state_flag = TUR_romanian_state
+			}
+		}
+		localization_key = TUR_ottoman_state_idea_effect_yozgat_minority_romanian
+	}
+	text = {
+		trigger = {
+			1017 = {
+				has_state_flag = TUR_assyrian_state
+			}
+		}
+		localization_key = TUR_ottoman_state_idea_effect_yozgat_minority_assyrian
+	}
+	text = {
+		trigger = {
+			1017 = {
+				has_state_flag = TUR_turkish_state
+			}
+		}
+		localization_key = TUR_ottoman_state_idea_effect_yozgat_minority_turkish
+	}
+	text = {
+		trigger = {
+			1017 = {
+				NOT = {
+					has_state_flag = TUR_armenian_state
+					has_state_flag = TUR_arab_state
+					has_state_flag = TUR_greek_state
+					has_state_flag = TUR_southslav_state
+					has_state_flag = TUR_albanian_state
+					has_state_flag = TUR_kurd_state
+					has_state_flag = TUR_georgian_state
+					has_state_flag = TUR_romanian_state
+					has_state_flag = TUR_assyrian_state
+					has_dynamic_modifier = { modifier = TUR_autonomous_region scope = TUR }
+				}
+			}
+			has_completed_focus = TUR_continuing_ottomanism_efforts
+		}
+		localization_key = TUR_ottoman_state_idea_effect_no_minority
+	}
+	text = {
+		trigger = {
+			1017 = {
+				NOT = {
+					has_state_flag = TUR_armenian_state
+					has_state_flag = TUR_arab_state
+					has_state_flag = TUR_greek_state
+					has_state_flag = TUR_southslav_state
+					has_state_flag = TUR_albanian_state
+					has_state_flag = TUR_kurd_state
+					has_state_flag = TUR_georgian_state
+					has_state_flag = TUR_romanian_state
+					has_state_flag = TUR_assyrian_state
+					has_dynamic_modifier = { modifier = TUR_autonomous_region scope = TUR }
+				}
+			}
+			NOT = {
+				has_completed_focus = TUR_continuing_ottomanism_efforts
+			}
+		}
+		localization_key = TUR_ottoman_state_idea_effect_yozgat_no_effect
 	}
 }
 defined_text = {

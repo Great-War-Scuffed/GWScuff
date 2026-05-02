@@ -105,7 +105,6 @@ country_event = {
 		add_stability = 0.05
 		EGY = {
 			EGY_fuad_i_muhammad_ali = {
-				set_character_name = ALB_fuad_i_muhammad_ali
 				set_nationality = ALB
 				add_country_leader_role = {
 					promote_leader = yes
@@ -443,16 +442,13 @@ country_event = {
 			navy_ratio = 0 # THIS FUCKING PARAMETER IS FUCKING BROKEN FUCK YOU PARADOX
 			stockpile_ratio = 0.1
 		}
-		hidden_effect = {
-			ALB = { # i m genius
-				transfer_units_fraction = {
-					target = PREV
-					size = 0
-					navy_ratio = 1
-				}
-			}			
+		ALB = { # i m genius
+			transfer_units_fraction = {
+				target = PREV
+				size = 0
+				navy_ratio = 1
+			}
 		}
-
 		ai_chance = {
 			factor = 100
 			modifier = {
@@ -483,15 +479,19 @@ country_event = {
 		name = ww1_albania.5.a
 		hidden_effect = {
 			if = {
-				limit = { country_exists = EPR }
+				limit = {
+					country_exists = EPR
+				}
 				FROM = {
 					annex_country = {
 						target = EPR
-						transfer_troops = no
+						transfer_troops = yes
 					}
 				}
 				every_state = {
-					limit = { is_core_of = EPR }
+					limit = {
+						is_core_of = EPR
+					}
 					remove_core_of = EPR
 				}
 			}
@@ -499,12 +499,9 @@ country_event = {
 		803 = {
 			transfer_state_to = FROM
 			set_demilitarized_zone = no
-			#remove_dynamic_modifier = { modifier = ALB_greek_minority }
-		}
-		1225 = {
-			transfer_state_to = FROM
-			set_demilitarized_zone = no
-			#remove_dynamic_modifier = { modifier = ALB_greek_minority }
+			remove_dynamic_modifier = {
+				modifier = ALB_greek_minority
+			}
 		}
 		add_opinion_modifier = {
 			target = FROM
@@ -519,10 +516,17 @@ country_event = {
 						has_guaranteed = ROOT
 						has_capitulated = no
 						is_subject = no
-						NOT = { has_war_with = PREV }
+						NOT = {
+							has_war_with = PREV
+						}
 					}
 				}
-				ITA = { country_event = { id = ww1_albania.19 days = 3 } }
+				ITA = {
+					country_event = {
+						id = ww1_albania.19
+						days = 3
+					}
+				}
 			}
 		}
 	}
@@ -613,7 +617,6 @@ country_event = {
 					state = 870
 					state = 871
 					state = 803
-					state = 1225
 					state = 848
 					state = 847
 					state = 1214
@@ -688,22 +691,6 @@ country_event = {
 				}
 				if = {
 					limit = {
-						1225 = {
-							has_dynamic_modifier = {
-								modifier = TUR_albanian_minority
-							}
-						}
-					}
-					1225 = {
-						create_unit = {
-							division = "division_template = \"Milicitë Shqiptare\" start_experience_factor = 0.1"
-							owner = ALB
-							allow_spawning_on_enemy_provs = yes
-						}
-					}
-				}
-				if = {
-					limit = {
 						871 = {
 							has_dynamic_modifier = {
 								modifier = TUR_albanian_minority
@@ -728,13 +715,6 @@ country_event = {
 							}
 						}
 						803 = {
-							NOT = {
-								has_dynamic_modifier = {
-									modifier = TUR_albanian_minority
-								}
-							}
-						}
-						1225 = {
 							NOT = {
 								has_dynamic_modifier = {
 									modifier = TUR_albanian_minority
@@ -952,15 +932,6 @@ country_event = {
 				transfer_state_to = EPR
 			}
 		}
-		if = {
-			limit = {
-				owns_state = 1225
-			}
-			1225 = { 
-				add_core_of = EPR
-				transfer_state_to = EPR
-			}
-		}
 	}
 }
 
@@ -1032,15 +1003,6 @@ country_event = {
 	fire_only_once = yes
 	option = {
 		name = ww1_albania.12.a
-		hidden_effect = {
-			if = {
-				limit = { is_subject = yes }
-				OVERLORD = {
-					country_event = ww1_albania.21
-				}
-			}
-		}		
-		clear_all_relations = yes
 		add_country_leader_role = {
 			character = ALB_high_council_of_regency
 			promote_leader = yes
@@ -1766,22 +1728,52 @@ country_event = {
 	}
 }
 
-# Congress of Lushnjë (overlord)
+# Albania offers to install Italian monarch
 country_event = {
 	id = ww1_albania.21
 	title = ww1_albania.21.t
 	desc = ww1_albania.21.d
 	fire_only_once = yes
 	picture = GFX_report_event_gre_italian_troops
-	is_triggered_only = yes
+	trigger = {
+		original_tag = ITA
+		OR = {
+			owns_state = 871
+			owns_state = 44
+			owns_state = 1214
+			owns_state = 1215
+		}
+		OR = {
+			has_active_mission = versallies_conference
+			has_active_mission = frankfurt_conference
+		}
+		ALB = {
+			is_subject = no
+			NOT = {
+				has_country_flag = great_war_loser
+			}
+		}
+		NOT = {
+			has_country_flag = great_war_loser
+			has_war_with = ALB
+		}
+	}
+	mean_time_to_happen = {
+		days = 30
+	}
 	option = {
 		name = ww1_albania.21.a
-		if = {
-			limit = { 
-				tag = ITA
+		ai_chance = {
+			base = 30
+			modifier = {
+				factor = 0
+				has_game_rule = {
+					rule = fate_of_albania
+					option = FATE_OF_ALBANIA_VITTORIO_OPTION
+				}
 			}
-			activate_mission = ITA_valona_timer
 		}
+		set_global_flag = valona_war
 		ALB = {
 			add_opinion_modifier = {
 				target = ROOT
@@ -1800,6 +1792,111 @@ country_event = {
 					}
 				}
 				set_demilitarized_zone = yes
+			}
+		}
+	}
+	option = {
+		name = ww1_albania.21.b
+		ai_chance = {
+			base = 10
+			modifier = {
+				factor = 0
+				is_historical_focus_on = yes
+			}
+			modifier = {
+				add = 1000
+				has_game_rule = {
+					rule = fate_of_albania
+					option = FATE_OF_ALBANIA_VITTORIO_OPTION
+				}
+			}
+		}
+		add_named_threat = {
+			threat = 2
+			name = conquest_of_albania
+		}
+		add_political_power = -100
+		every_owned_state = {
+			limit = {
+				is_core_of = ALB
+			}
+			transfer_state_to = ALB
+		}
+		effect_tooltip = {
+			set_autonomy = {
+				target = ALB
+				autonomy_state = autonomy_dominion
+			}
+		}
+		hidden_effect = {
+			ALB = {
+				get_current_government_type = yes
+				ROOT = {
+					set_autonomy = {
+						target = PREV
+						autonomy_state = autonomy_dominion
+					}
+				}
+				if = {
+					limit = {
+						ROOT = {
+							OR = {
+								has_idea = victor_emmanuel
+								has_idea = victor_emmanuel_ww1
+								has_idea = umberto_ii
+								has_country_leader_ideology = semi_constitutional_monarchy
+							}
+						}
+					}
+					set_cosmetic_tag = ALB_kingdom
+					set_politics = {
+						ruling_party = neutrality
+						elections_allowed = yes
+						long_name = ALB_neutrality_savoy_party
+						name = ALB_neutrality_savoy_party
+					}
+					ROOT = {
+						ITA_vittorio_emanuele_di_savoy_aosta = {
+							set_nationality = ALB
+							set_character_name = ALB_vittorio_emanuele
+							if = {
+								limit = {
+									has_ideology = semi_constitutional_monarchy
+								}
+								promote_character = semi_constitutional_monarchy							
+							}
+							else = {
+								add_country_leader_role = {
+									promote_leader = yes
+									country_leader = {
+										ideology = semi_constitutional_monarchy
+										traits = {
+											foreign_leader
+										}
+									}
+								}
+							}
+						}
+					}
+				}
+				else = {
+					restore_previous_government_type = yes
+				}
+				if = {
+					limit = {
+						ROOT = {
+							has_government = communism
+						}
+					}
+					set_politics = {
+						ruling_party = communism
+						elections_allowed = no
+					}
+					add_popularity = {
+						ideology = communism
+						popularity = 0.5
+					}
+				}
 			}
 		}
 	}
@@ -2306,7 +2403,8 @@ country_event = {
 		}
 		SER = {
 			NOT = {
-				is_ally_with = TUR
+				is_in_faction_with = TUR
+				is_subject_of = TUR
 			}
 			has_intelligence_agency = yes
 		}
@@ -2366,6 +2464,7 @@ country_event = {
 	desc = ww1_albania.36.d
 	id = ww1_albania.36
 	picture = GFX_report_event_military_planning
+	fire_only_once = no
 	is_triggered_only = yes
 	option = {
 		name = ww1_albania.36.a
@@ -2417,6 +2516,7 @@ country_event = {
 	desc = ww1_albania.37.d
 	id = ww1_albania.37
 	picture = GFX_report_event_military_planning
+	fire_only_once = no
 	is_triggered_only = yes
 	option = {
 		name = ww1_albania.37.a
@@ -2438,6 +2538,7 @@ country_event = {
 	desc = ww1_albania.38.d
 	id = ww1_albania.38
 	picture = GFX_report_event_military_planning
+	fire_only_once = no
 	is_triggered_only = yes
 	option = {
 		name = ww1_albania.38.a
@@ -2450,6 +2551,7 @@ country_event = {
 	desc = ww1_albania.39.d
 	id = ww1_albania.39
 	picture = GFX_report_event_military_planning
+	fire_only_once = no
 	is_triggered_only = yes
 	option = {
 		name = ww1_albania.39.a

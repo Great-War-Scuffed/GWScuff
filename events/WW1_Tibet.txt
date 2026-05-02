@@ -333,7 +333,10 @@ country_event = {
 				every_other_country = {
 					limit = {
 						is_china_or_warlord = yes
-						is_ally_with = ROOT
+						OR = {
+							is_in_faction_with = ROOT
+							is_subject_of = ROOT
+						}
 					}
 					add_to_war = {
 						targeted_alliance = ROOT

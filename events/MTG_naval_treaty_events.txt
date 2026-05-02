@@ -399,11 +399,13 @@ country_event = {
 	mean_time_to_happen = { days = 2 }
 	fire_only_once = yes
 	trigger = {
-		has_naval_treaty_trigger = yes
-		has_war = yes
-		any_enemy_country = {
-			is_major = yes
-			NOT = { tag = event_target:WTT_current_china_leader} #special exception
+		any_country = {
+			has_naval_treaty_trigger = yes
+			has_war = yes
+			any_enemy_country = {
+				is_major = yes
+				NOT = { tag = event_target:WTT_current_china_leader} #special exception
+			}
 		}
 	}
 	immediate = {
@@ -447,9 +449,11 @@ country_event = {
 		days = 14
 	}
 	trigger = {
-		OR = {
-			has_country_flag = MTG_naval_treaty_adherent
-			has_idea = MTG_naval_treaty_adherent
+		any_country = {
+			OR = {
+				has_country_flag = MTG_naval_treaty_adherent
+				has_idea = MTG_naval_treaty_adherent
+			}
 		}
 	}
 	immediate = {

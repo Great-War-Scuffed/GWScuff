@@ -103,11 +103,9 @@ country_event = {
 	option = {
 		name = ww1_fiume.1.a
 		hidden_effect = {
-			ENG = {
-				country_event = {
-					id = ww1_iw_br_italy.26
-					days = 30
-				}
+			country_event = {
+				id = ww1_iw_br_italy.27
+				days = 30
 			}
 		}
 	}
@@ -689,22 +687,20 @@ country_event = {
 						limit = { has_global_flag = league_of_nations }
 						join_the_league_of_nations = yes
 					}
-					ITA = {
-						ITA_alceste_de_ambris = {
-							set_nationality = ITA
-						}
-						ITA_filippo_tommaso_marinetti = {
-							set_nationality = ITA
-						}
-						ITA_maffeo_pantaleoni = {
-							set_nationality = ITA
-						}
-						ITA_gabriele_d_annunzio = {
-							remove_any_country_role_from_character = yes
-							set_nationality = ITA
-						}
-						give_guarantee = FIU
+					ITA_alceste_de_ambris = {
+						set_nationality = ITA
 					}
+					ITA_filippo_tommaso_marinetti = {
+						set_nationality = ITA
+					}
+					ITA_maffeo_pantaleoni = {
+						set_nationality = ITA
+					}
+					ITA_gabriele_d_annunzio = {
+						remove_any_country_role_from_character = yes
+						set_nationality = ITA
+					}
+					ITA = { give_guarantee = FIU }
 				}
 				else = {
 					ITA = {

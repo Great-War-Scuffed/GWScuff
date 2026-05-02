@@ -443,9 +443,6 @@ country_event = {
 		set_cosmetic_tag = ENG_nr
 		white_peace = IRE
 		transfer_state = 119
-		IRE = {
-			set_country_flag = colony
-		}
 		set_autonomy = {
 			target = IRE
 			autonomous_state = autonomy_dominion
@@ -688,15 +685,6 @@ country_event = {
 		add_opinion_modifier = {
 			target = GER
 			modifier = zimmermann_telegram_opinion
-		}
-		if = {
-			limit = { 
-				has_completed_focus = USA_old_neutrality_act
-				NOT = {
-					has_completed_focus = USA_do_not_stand_aside
-				}
-			}
-			complete_national_focus = USA_do_not_stand_aside
 		}
 		news_event = ww1_england.11
 		ai_chance = {
@@ -1462,8 +1450,7 @@ country_event = {
 			base = 1
 		}
 		ENG = {
-			create_faction_from_template = faction_template_entente
-			set_faction_name = Allies
+			create_faction = Allies
 			add_to_faction = POR
 		}
 	}
@@ -1878,7 +1865,10 @@ country_event = {
 			# }
 			if = {
 				limit = {
-					is_ally_with = AST
+					OR = {
+						has_subject = AST
+						is_in_faction_with = AST
+					}
 				}
 				AST = {
 					country_event = {
@@ -4917,12 +4907,11 @@ country_event = {
 								}
 							}
 							ZIM = {
-								set_country_flag = colony
 								get_current_government_type = yes
 								PREV = {
 									set_autonomy = {
 										target = PREV
-										autonomy_state = autonomy_tgwr_self_governing_colony
+										autonomy_state = autonomy_colony
 										freedom_level = 0.1
 										end_wars = yes
 									}
@@ -5113,7 +5102,7 @@ country_event = {
 		ENG = {
 			set_autonomy = {
 				target = ROOT
-				autonomous_state = autonomy_satellite
+				autonomous_state = autonomy_dominion
 				freedom_level = 0.7
 			}
 		}
@@ -5235,12 +5224,12 @@ country_event = {
 # 		}
 # 		set_autonomy = {
 # 			target = ISR
-# 			autonomous_state = autonomy_satellite
+# 			autonomous_state = autonomy_dominion
 # 			freedom_level = 0.2
 # 		}
 # 		# set_autonomy = {
 # 		# 	target = PAL
-# 		# 	autonomous_state = autonomy_satellite
+# 		# 	autonomous_state = autonomy_dominion
 # 		# 	freedom_level = 0.2
 # 		# }
 # 		hidden_effect = {
@@ -5313,7 +5302,7 @@ country_event = {
 # 		}
 # 		set_autonomy = {
 # 			target = ISR
-# 			autonomous_state = autonomy_satellite
+# 			autonomous_state = autonomy_dominion
 # 			freedom_level = 0.2
 # 		}
 # 		# if = {
@@ -5322,7 +5311,7 @@ country_event = {
 # 		# 	}
 # 		# 	set_autonomy = {
 # 		# 		target = PAL
-# 		# 		autonomous_state = autonomy_satellite
+# 		# 		autonomous_state = autonomy_dominion
 # 		# 		freedom_level = 0.2
 # 		# 	}
 # 		# }
@@ -5413,7 +5402,6 @@ country_event = {
 			}
 			ISR = {
 				get_current_government_type = yes
-				set_country_flag = colony
 			}
 		}
 		set_autonomy = {
@@ -5458,7 +5446,6 @@ country_event = {
 			}
 			ISR = {
 				get_current_government_type = yes
-				set_country_flag = colony
 			}
 		}
 		set_autonomy = {
@@ -5876,9 +5863,6 @@ country_event = {
 			}
 		}
 		add_war_support = -0.01
-		KEN	= {
-			set_country_flag = colony
-		}
 		ENG = {
 			set_autonomy = {
 				target = KEN
@@ -6288,8 +6272,7 @@ country_event = {
 			}
 			set_faction_name = second_entente
 			else = {
-				create_faction_from_template = faction_template_entente
-				set_faction_name = second_entente
+				create_faction = second_entente
 			}
 		}
 		every_other_country = {
@@ -6302,7 +6285,8 @@ country_event = {
 				}
 				NOT = {
 					has_war_with = PREV
-					is_ally_with = PREV
+					is_subject_of = PREV
+					is_in_faction_with = PREV
 				}
 			}
 			country_event = generic.5
@@ -7207,30 +7191,14 @@ country_event = {
 				set_country_flag = protectorate
 				get_current_government_type = yes
 			}
-			if = {
-				limit = { 
-					has_subject = RAJ
+			ROOT = {
+				set_autonomy = {
+					target = PREV
+					autonomous_state = autonomy_tgwr_protectorate
+					freedom_level = 0.5
+					end_wars = yes
 				}
-				RAJ = {
-					set_autonomy = {
-						target = PREV
-						autonomous_state = autonomy_tgwr_protectorate
-						freedom_level = 0.5
-						end_wars = yes
-					}
-				}
-				give_military_access = ROOT		
 			}
-			else = {
-				ROOT = {
-					set_autonomy = {
-						target = PREV
-						autonomous_state = autonomy_tgwr_protectorate
-						freedom_level = 0.5
-						end_wars = yes
-					}
-				}
-			}		
 			hidden_effect = {
 				restore_previous_government_type = yes
 				separate_peace_all_wars = yes
@@ -7677,7 +7645,10 @@ country_event = {
 		white_peace = POR
 		every_other_country = {
 			limit = {
-				is_ally_with = ROOT
+				OR = {
+					is_subject_of = ROOT
+					is_in_faction_with = ROOT
+				}
 				has_war_with = POR
 			}
 			white_peace = POR
@@ -12192,7 +12163,8 @@ country_event = {
 		name = ww1_england.232.a
 		trigger = {
 			NOT = {
-				is_ally_with = DEN
+				is_in_faction_with = DEN
+				has_subject = DEN
 			}
 		}
 		create_wargoal = {
@@ -12209,7 +12181,8 @@ country_event = {
 		if = {
 			limit = {
 				NOT = {
-					is_ally_with = DEN
+					is_in_faction_with = DEN
+					has_subject = DEN
 				}
 			}
 			DEN = { country_event = generic.5 }
@@ -12219,7 +12192,8 @@ country_event = {
 			modifier = {
 				add = 30
 				OR = {
-					is_ally_with = DEN
+					is_in_faction_with = DEN
+					has_subject = DEN
 				}
 			}
 			modifier = {
@@ -12236,7 +12210,8 @@ country_event = {
 		name = ww1_england.232.c
 		trigger = {
 			NOT = {
-				is_ally_with = DEN
+				is_in_faction_with = DEN
+				has_subject = DEN
 			}
 		}
 		add_political_power = -45
@@ -13171,7 +13146,7 @@ country_event = {
 		add_stability = 0.10
 		set_autonomy = {
 			target = ENG
-			autonomy_state = autonomy_satellite
+			autonomy_state = autonomy_dominion
 			end_wars = no
 			end_civil_wars = no
 		}
@@ -13840,7 +13815,14 @@ country_event = {
 						}
 					}
 					restore_previous_government_type = yes
-					separate_peace_all_wars = yes
+					every_enemy_country = {
+						limit = {
+							NOT = {
+								original_tag = PER
+							}
+						}
+						ARB = { white_peace = PREV }
+					}
 				}
 			}
 		}
@@ -13917,13 +13899,12 @@ country_event = {
 			division_template = {
 				name = "Fao Landing Force"
 				division_names_group = ENG_INF_02
-				template_counter = 110
 				regiments = {
 					infantry = { x = 0 y = 0 }
 					infantry = { x = 0 y = 1 }
 					infantry = { x = 1 y = 0 }
 					infantry = { x = 1 y = 1 }
-					field_gun_brigade = { x = 2 y = 0 }
+					field_gun_brigade = { x = 2 y = 1 }
 				}
 				support = { 
 					field_gun = { x = 0 y = 0 }
@@ -14121,7 +14102,7 @@ country_event = {
 			ROOT = { get_current_government_type = yes }
 			set_autonomy = {
 				target = ROOT
-				autonomy_state = autonomy_satellite
+				autonomy_state = autonomy_dominion
 				freedom_level = 0.8
 			}
 			ROOT = { restore_previous_government_type = yes }
@@ -14166,7 +14147,9 @@ country_event = {
 		tag = ENG
 		is_great_war_ongoing = yes
 		has_war_with = GER
-		naval_dominance_enemy_north_sea = yes
+		GER = {
+			enemies_naval_strength_ratio < 1.3
+		}
 		NOT = {
 			has_active_mission = ENG_wavering_naval_supremacy
 			has_idea = ENG_naval_supremacy_lost

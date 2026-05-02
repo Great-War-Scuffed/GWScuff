@@ -320,40 +320,40 @@ USA_naval_mutinies_effect = {
 	if = {
 		limit = {
 			has_navy_size = {
-				unit = armored_cruiser
+				unit = heavy_cruiser
 				size > 12
 			}
 		}
 		transfer_ship = {
-		    type = armored_cruiser
+		    type = heavy_cruiser
 		    target = CSA
 		}
 		transfer_ship = {
-		    type = armored_cruiser
+		    type = heavy_cruiser
 		    target = CSA
 		}
 		transfer_ship = {
-		    type = armored_cruiser
+		    type = heavy_cruiser
 		    target = CSA
 		}
 		transfer_ship = {
-		    type = armored_cruiser
+		    type = heavy_cruiser
 		    target = CSA
 		}
 	}
 	else_if = {
 		limit = {
 			has_navy_size = {
-				unit = armored_cruiser
+				unit = heavy_cruiser
 				size > 6
 			}
 		}
 		transfer_ship = {
-		    type = armored_cruiser
+		    type = heavy_cruiser
 		    target = CSA
 		}
 		transfer_ship = {
-		    type = armored_cruiser
+		    type = heavy_cruiser
 		    target = CSA
 		}
 	}

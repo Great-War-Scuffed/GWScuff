@@ -244,9 +244,9 @@ chinese_flag_replacement = {
 	}
 	else_if = {
 		limit = {
-			original_tag = SIC
+			original_tag = SCC
 		}
-		set_cosmetic_tag = SIC_KMT
+		set_cosmetic_tag = SCC_KMT
 	}
 	else_if = {
 		limit = {
@@ -475,40 +475,20 @@ QIN_legitimacy_increase = {
 			add_idea = QIN_idea_low_legitimacy_5
 		}
 	}
-	else_if = {
-		limit = {
-			has_idea = QIN_idea_low_legitimacy_5
-		}
-		remove_ideas = QIN_idea_low_legitimacy_5
-	}
 	else = {
-		add_political_power = 75
+		remove_ideas = QIN_idea_low_legitimacy_5
 	}
 }
 
 QIN_legitimacy_decrease = {
+
 	if = {
 		limit = {
-			has_idea = QIN_idea_low_legitimacy
-		}
-		add_political_power = -75
-	}
-	else_if = {
-		limit = {
-			has_idea = QIN_idea_low_legitimacy_2
+			has_idea = QIN_idea_low_legitimacy_5
 		}
 		swap_ideas = {
-			remove_idea = QIN_idea_low_legitimacy_2
-			add_idea = QIN_idea_low_legitimacy
-		}
-	}
-	else_if = {
-		limit = {
-			has_idea = QIN_idea_low_legitimacy_3
-		}
-		swap_ideas = {
-			remove_idea = QIN_idea_low_legitimacy_3
-			add_idea = QIN_idea_low_legitimacy_2
+			remove_idea = QIN_idea_low_legitimacy_5
+			add_idea = QIN_idea_low_legitimacy_4
 		}
 	}
 	else_if = {
@@ -522,15 +502,24 @@ QIN_legitimacy_decrease = {
 	}
 	else_if = {
 		limit = {
-			has_idea = QIN_idea_low_legitimacy_5
+			has_idea = QIN_idea_low_legitimacy_3
 		}
 		swap_ideas = {
-			remove_idea = QIN_idea_low_legitimacy_5
-			add_idea = QIN_idea_low_legitimacy_4
+			remove_idea = QIN_idea_low_legitimacy_3
+			add_idea = QIN_idea_low_legitimacy_2
+		}
+	}
+	else_if = {
+		limit = {
+			has_idea = QIN_idea_low_legitimacy_2
+		}
+		swap_ideas = {
+			remove_idea = QIN_idea_low_legitimacy_2
+			add_idea = QIN_idea_low_legitimacy
 		}
 	}
 	else = {
-		add_ideas = QIN_idea_low_legitimacy_5
+		add_stability = -0.05
 	}
 }
 
@@ -1255,14 +1244,14 @@ clear_xinhai_tags = {
 
 				if = {
 					limit = {
-						original_tag = XIC
+						original_tag = SHN
 					}
 					set_party_name = {
 						ideology = democratic
-						long_name = XIC_neutrality_party
-						name = XIC_neutrality_party
+						long_name = SHN_neutrality_party
+						name = SHN_neutrality_party
 					}
-					XIC_zhang_fenghui = {
+					SHN_zhang_fenghui = {
 						remove_country_leader_role = {
 							ideology = conservatism
 						}
@@ -1285,14 +1274,14 @@ clear_xinhai_tags = {
 				}
 				else_if = {
 					limit = {
-						original_tag = SIC
+						original_tag = SCC
 					}
 					set_party_name = {
 						ideology = democratic
-						long_name = SIC_neutrality_party
-						name = SIC_neutrality_party
+						long_name = SCC_neutrality_party
+						name = SCC_neutrality_party
 					}
-					SIC_pu_dianjun = {
+					SCC_pu_dianjun = {
 						remove_country_leader_role = {
 							ideology = conservatism
 						}
@@ -1300,14 +1289,14 @@ clear_xinhai_tags = {
 				}
 				else_if = {
 					limit = {
-						original_tag = SND
+						original_tag = SDC
 					}
 					set_party_name = {
 						ideology = democratic
-						long_name = SND_neutrality_party
-						name = SND_neutrality_party
+						long_name = SDC_neutrality_party
+						name = SDC_neutrality_party
 					}
-					SND_hu_ying = {
+					SDC_hu_ying = {
 						remove_country_leader_role = {
 							ideology = tridemism
 						}
@@ -1435,7 +1424,6 @@ xinhai_end_effect = {
 			}
 			every_character = {
 				limit = {
-					is_generic_character = no
 					NOT = {
 						is_character = QIN_yikuang
 						is_character = QIN_kang_youwei
@@ -1461,18 +1449,25 @@ xinhai_end_effect = {
 			}
 
 			every_enemy_country = {
-				PREV = {
-					every_allied_country = {
-						white_peace = PREV.PREV
+				every_other_country = {
+					limit = {
+						OR = {
+							is_in_faction_with = QIN
+							is_subject_of = QIN
+						}
 					}
-				}			
+					white_peace = PREV
+				}
 			}
 
 			set_politics = {
 				ruling_party = neutrality
+				elections_allowed = no
+			}
+			set_party_name = {
+				ideology = neutrality
 				long_name = QIN_neutrality_cabinet_party
 				name = QIN_neutrality_cabinet_party
-				elections_allowed = no
 			}
 			remove_ideas = QIN_idea_beiyang_army
 		}
@@ -1641,10 +1636,12 @@ xinhai_end_effect = {
 				dismantle_faction = yes
 			}
 		}
-		QIN = {
-			every_core_state = {
-				remove_core_of = QIN
+
+		every_state = {
+			limit = {
+				is_core_of = QIN
 			}
+			remove_core_of = QIN
 		}
 		every_state = {
 			limit = {
@@ -1653,18 +1650,16 @@ xinhai_end_effect = {
 			add_claim_by = CHI
 			remove_claim_by = QIN
 		}
-		CHI = {
-			delete_unit = {}
-			load_oob = CHI_1912
-		}
 
-		598 = {
-			add_building_construction = {
-				type = landmark_nanjing_presidential_palace
-				level = 1
-				instant_build = yes
-				province = 11913
+		every_state = {
+			CHI = {
+				delete_unit = {
+					state = PREV
+				}
 			}
+		}
+		CHI = {
+			load_oob = CHI_1912
 		}
 	}
 }

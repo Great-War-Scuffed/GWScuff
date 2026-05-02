@@ -29,9 +29,8 @@ country_event = {
 					set_nationality = NWA				
 				}
 			}
-			BPR = {
+			BLR = {
 				BLR_stanislav_bulak_balakhovich = {
-					set_character_name = RUS_stanislav_bulak_balakhovich
 					set_nationality = NWA
 				}
 			}
@@ -154,9 +153,8 @@ country_event = {
 					
 				}
 			}
-			BPR = {
+			BLR = {
 				BLR_stanislav_bulak_balakhovich = {
-					set_character_name = RUS_stanislav_bulak_balakhovich
 					set_nationality = NWA
 				}
 			}
@@ -381,6 +379,7 @@ country_event = { #Nikolai Yudenich
 				set_nationality = NWA
 			}
 		}
+		set_cosmetic_tag = NWA
 	}
 	option = { # 
 		name = ww1_nwa.5.b
@@ -709,9 +708,8 @@ country_event = {#NWA spawn event
 		ai_chance = {
 			base = 100
 		}
-		BPR = {
+		BLR = {
 			BLR_stanislav_bulak_balakhovich = {
-				set_character_name = RUS_stanislav_bulak_balakhovich
 				set_nationality = NWA
 			}
 		}
@@ -784,9 +782,8 @@ country_event = {#NWA spawn event
 		ai_chance = {
 			base = 0
 		}
-		BPR = {
+		BLR = {
 			BLR_stanislav_bulak_balakhovich = {
-				set_character_name = RUS_stanislav_bulak_balakhovich
 				set_nationality = NWA
 			}
 		}

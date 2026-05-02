@@ -278,7 +278,7 @@ country_event = {
 					militia = { x = 1 y = 1 }
 				}
 			}
-			974 = {
+			975 = {
 				create_unit = {
 					division = "name = \"Taxiarchía Politofylakís\" division_template = \"Politofylakés Samos\"	start_experience_factor = 0.2	start_equipment_factor = 0.7"
 					owner = PREV

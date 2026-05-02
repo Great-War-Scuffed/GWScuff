@@ -1,104 +1,104 @@
 add_namespace = ww1_bruderkrieg
 
 #Pan Germans rebel
-#country_event = {
-#	id = ww1_bruderkrieg.1
-#	title = ww1_bruderkrieg.1.t
-#	desc = ww1_bruderkrieg.1.d
-#	picture = GFX_report_event_ger_civil_war
-#	trigger = {
-#		OR = {
-#			tag = AUS
-#			tag = GER
-#		}
-#		AUS = { has_war_with = GER }
-#		NOT = {
-#			has_country_flag = brothers_war
-#		}
-#	}
-#	fire_only_once = no
-#	mean_time_to_happen = {
-#		days = 0
-#	}
-#	immediate = {
-#		hidden_effect = {
-#			set_global_flag = brothers_war
-#			set_country_flag = brothers_war
-#			if = {
-#				limit = {
-#					tag = GER
-#				}
-#				division_template = {
-#					name = "Pan-German Rebels"
-#					is_locked = yes
-#					regiments = {
-#						militia = {
-#							x = 0
-#							y = 0
-#						}
-#						militia = {
-#							x = 0
-#							y = 1
-#						}
-#						militia = {
-#							x = 0
-#							y = 2
-#						}
-#					}
-#				}
-#				4 = {
-#					create_unit = {
-#						division = "name = \"Division I\" division_template = \"Pan-German Rebels\" start_experience_factor = 0.5 start_equipment_factor = 0.5"
-#						owner = GER
-#						allow_spawning_on_enemy_provs = yes
-#					}
-#					create_unit = {
-#						division = "name = \"Division II\" division_template = \"Pan-German Rebels\" start_experience_factor = 0.5 start_equipment_factor = 0.5"
-#						owner = GER
-#						allow_spawning_on_enemy_provs = yes
-#					}		
-#				}
-#				152 = {
-#					create_unit = {
-#						division = "name = \"Division III\" division_template = \"Pan-German Rebels\" start_experience_factor = 0.5 start_equipment_factor = 0.5"
-#						owner = GER
-#						allow_spawning_on_enemy_provs = yes
-#					}	
-#				}
-#				153 = {
-#					create_unit = {
-#						division = "name = \"Division IV\" division_template = \"Pan-German Rebels\" start_experience_factor = 0.5 start_equipment_factor = 0.5"
-#						owner = GER
-#						allow_spawning_on_enemy_provs = yes
-#					}	
-#				}
-#				69 = {
-#					create_unit = {
-#						division = "name = \"Division V\" division_template = \"Pan-German Rebels\" start_experience_factor = 0.5 start_equipment_factor = 0.5"
-#						owner = GER
-#						allow_spawning_on_enemy_provs = yes
-#					}	
-#				}
-#			}
-#			news_event = ww1_auh.20
-#		}
-#	}
-#	option = {
-#		name = ww1_bruderkrieg.1.a
-#		hidden_effect = {
-#			country_event = ww1_bruderkrieg.2
-#		}
-#		trigger = {
-#			tag = AUS
-#		}
-#	}
-#	option = {
-#		name = ww1_bruderkrieg.1.b
-#		trigger = {
-#			tag = GER
-#		}
-#	}
-#}
+country_event = {
+	id = ww1_bruderkrieg.1
+	title = ww1_bruderkrieg.1.t
+	desc = ww1_bruderkrieg.1.d
+	picture = GFX_report_event_ger_civil_war
+	trigger = {
+		OR = {
+			tag = AUS
+			tag = GER
+		}
+		AUS = { has_war_with = GER }
+		NOT = {
+			has_country_flag = brothers_war
+		}
+	}
+	fire_only_once = no
+	mean_time_to_happen = {
+		days = 0
+	}
+	immediate = {
+		hidden_effect = {
+			set_global_flag = brothers_war
+			set_country_flag = brothers_war
+			if = {
+				limit = {
+					tag = GER
+				}
+				division_template = {
+					name = "Pan-German Rebels"
+					is_locked = yes
+					regiments = {
+						militia = {
+							x = 0
+							y = 0
+						}
+						militia = {
+							x = 0
+							y = 1
+						}
+						militia = {
+							x = 0
+							y = 2
+						}
+					}
+				}
+				4 = {
+					create_unit = {
+						division = "name = \"Division I\" division_template = \"Pan-German Rebels\" start_experience_factor = 0.5 start_equipment_factor = 0.5"
+						owner = GER
+						allow_spawning_on_enemy_provs = yes
+					}
+					create_unit = {
+						division = "name = \"Division II\" division_template = \"Pan-German Rebels\" start_experience_factor = 0.5 start_equipment_factor = 0.5"
+						owner = GER
+						allow_spawning_on_enemy_provs = yes
+					}		
+				}
+				152 = {
+					create_unit = {
+						division = "name = \"Division III\" division_template = \"Pan-German Rebels\" start_experience_factor = 0.5 start_equipment_factor = 0.5"
+						owner = GER
+						allow_spawning_on_enemy_provs = yes
+					}	
+				}
+				153 = {
+					create_unit = {
+						division = "name = \"Division IV\" division_template = \"Pan-German Rebels\" start_experience_factor = 0.5 start_equipment_factor = 0.5"
+						owner = GER
+						allow_spawning_on_enemy_provs = yes
+					}	
+				}
+				69 = {
+					create_unit = {
+						division = "name = \"Division V\" division_template = \"Pan-German Rebels\" start_experience_factor = 0.5 start_equipment_factor = 0.5"
+						owner = GER
+						allow_spawning_on_enemy_provs = yes
+					}	
+				}
+			}
+			news_event = ww1_auh.20
+		}
+	}
+	option = {
+		name = ww1_bruderkrieg.1.a
+		hidden_effect = {
+			country_event = ww1_bruderkrieg.2
+		}
+		trigger = {
+			tag = AUS
+		}
+	}
+	option = {
+		name = ww1_bruderkrieg.1.b
+		trigger = {
+			tag = GER
+		}
+	}
+}
 
 ###Austria moves the capital as the result
 country_event = {
@@ -147,7 +147,8 @@ country_event = {
 		}
 		has_capitulated = no
 		NOT = {
-			is_ally_with = AUS
+			is_subject_of = AUS
+			is_in_faction_with = AUS
 			has_global_flag = bosnian_revolt
 			has_idea = idea_army_restrictions
 			has_country_flag = great_war_loser
@@ -551,7 +552,7 @@ country_event = {
 						HUN = {
 							set_autonomy = {
 								target = PREV
-								autonomous_state = autonomy_satellite
+								autonomous_state = autonomy_dominion
 							}
 						}
 						CRO_ivan_skerlecz = {
@@ -1065,7 +1066,7 @@ country_event = {
 						HUN = {
 							set_autonomy = {
 								target = PREV
-								autonomous_state = autonomy_satellite
+								autonomous_state = autonomy_dominion
 							}
 						}
 						CRO_ivan_skerlecz = {
@@ -1561,8 +1562,7 @@ country_event = {
 				add_to_faction = PREV
 			}
 			else = {
-				create_faction_from_template = faction_template_habsburg_alliance
-				set_faction_name = danube_adriabund
+				create_faction = danube_adriabund
 				add_to_faction = PREV
 			}
 		}
@@ -1875,7 +1875,8 @@ news_event = {
 		trigger = {
 			OR = {
 				tag = GER
-				is_ally_with = GER
+				is_in_faction_with = GER
+				is_subject_of = GER
 				has_war_with = AUS
 			}
 		}
@@ -1885,7 +1886,8 @@ news_event = {
 		trigger = {
 			OR = {
 				tag = AUS
-				is_ally_with = AUS
+				is_in_faction_with = AUS
+				is_subject_of = AUS
 				has_war_with = GER
 			}
 		}
@@ -1906,7 +1908,8 @@ news_event = {
 		trigger = {
 			OR = {
 				tag = GER
-				is_ally_with = GER
+				is_in_faction_with = GER
+				is_subject_of = GER
 				has_war_with = AUS
 			}
 		}
@@ -1916,7 +1919,8 @@ news_event = {
 		trigger = {
 			OR = {
 				tag = AUS
-				is_ally_with = AUS
+				is_in_faction_with = AUS
+				is_subject_of = AUS
 				has_war_with = GER
 			}
 		}
@@ -1946,7 +1950,8 @@ news_event = {
 		trigger = {
 			OR = {
 				tag = GER
-				is_ally_with = GER
+				is_in_faction_with = GER
+				is_subject_of = GER
 			}
 		}
 	}
@@ -1955,7 +1960,8 @@ news_event = {
 		trigger = {
 			NOT = {
 				tag = GER
-				is_ally_with = GER
+				is_in_faction_with = GER
+				is_subject_of = GER
 			}
 		}
 	}
@@ -1974,7 +1980,8 @@ news_event = {
 		trigger = {
 			OR = {
 				tag = AUS
-				is_ally_with = AUS
+				is_in_faction_with = AUS
+				is_subject_of = AUS
 			}
 		}
 	}
@@ -1983,7 +1990,8 @@ news_event = {
 		trigger = {
 			OR = {
 				tag = RUS
-				is_ally_with = RUS
+				is_in_faction_with = RUS
+				is_subject_of = RUS
 			}
 		}
 	}
@@ -2003,7 +2011,8 @@ news_event = {
 		trigger = {
 			OR = {
 				tag = HUN
-				is_ally_with = HUN
+				is_in_faction_with = HUN
+				is_subject_of = HUN
 				has_war_with = GER
 			}
 		}
@@ -2013,7 +2022,8 @@ news_event = {
 		trigger = {
 			OR = {
 				tag = GER
-				is_ally_with = GER
+				is_in_faction_with = GER
+				is_subject_of = GER
 				has_war_with = HUN
 			}
 		}
@@ -2023,10 +2033,12 @@ news_event = {
 		trigger = {
 			NOT = {
 				tag = HUN
-				is_ally_with = HUN
+				is_in_faction_with = HUN
+				is_subject_of = HUN
 				has_war_with = GER
 				tag = GER
-				is_ally_with = GER
+				is_in_faction_with = GER
+				is_subject_of = GER
 				has_war_with = HUN
 			}
 		}

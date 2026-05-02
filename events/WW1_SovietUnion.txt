@@ -94,7 +94,8 @@ country_event = {
 						exists = yes
 						NOT = {
 							has_government = communism
-							is_ally_with = PREV
+							is_in_faction_with = PREV
+							is_subject_of = PREV
 						}
 					}
 				}
@@ -765,6 +766,7 @@ news_event = {
 	
 	major = yes
 	is_triggered_only = yes
+	fire_only_once = yes
 	
 	option = {
 		name = ww1_soviet.17.a
@@ -793,7 +795,8 @@ country_event = {
 		every_country = {
 			limit = {
 				OR = {
-					is_ally_with = SOV
+					is_in_faction_with = SOV
+					is_subject_of = SOV
 				}
 				has_war_with = POL
 			}
@@ -901,9 +904,10 @@ country_event = {
 					original_tag = UKR
 					OR = {
 						exists = no
-						is_ally_with = SOV
+						is_subject_of = SOV
 						has_government = communism
 						has_capitulated = yes
+						is_in_faction_with = SOV
 						has_war_with = POL
 						has_country_flag = treaty_of_warsaw
 					}
@@ -917,9 +921,10 @@ country_event = {
 					original_tag = BLR
 					OR = {
 						exists = no
-						is_ally_with = SOV
+						is_subject_of = SOV
 						has_government = communism
 						has_capitulated = yes
+						is_in_faction_with = SOV
 						has_war_with = POL
 					}
 				}
@@ -972,7 +977,8 @@ country_event = {
 			limit = {
 				OR = {
 					tag = SOV
-					is_ally_with = SOV
+					is_in_faction_with = SOV
+					is_subject_of = SOV
 				}
 			}
 			white_peace = POL
@@ -982,8 +988,8 @@ country_event = {
 		every_country = {
 			limit = {
 				OR = {
-					original_tag = RUS 
-					has_country_flag = RUS_soviet_tag
+					original_tag = RUS has_country_flag = RUS_soviet_tag
+					original_tag = RUS
 					original_tag = LIT
 					has_country_flag = riga_peace
 				}
@@ -1195,28 +1201,28 @@ country_event = {
 # 		ai_chance = { factor = 100 }
 # 	}
 # }
-# KRONSTADT SAILORS REBELLION - NEWS
-##########################
-news_event = {
-	title = ww1_soviet.25.t
-	desc = ww1_soviet.25.d
-	id = ww1_soviet.25
-	picture = ww1_soviet_24
+# # KRONSTADT SAILORS REBELLION - NEWS
+# ##########################
+# news_event = {
+# 	title = ww1_soviet.25.t
+# 	desc = ww1_soviet.25.d
+# 	id = ww1_soviet.25
+# 	picture = ww1_soviet_24
 	
-	major = yes
-	is_triggered_only = yes
+# 	major = yes
+# 	is_triggered_only = yes
 	
-	option = {
-		name = ww1_soviet.25.a
-		trigger = { has_government = communism }
-		ai_chance = { factor = 100 }
-	}
-	option = {
-		name = ww1_soviet.25.b
-		trigger = { NOT = { has_government = communism } }
-		ai_chance = { factor = 100 }
-	}
-}
+# 	option = {
+# 		name = ww1_soviet.25.a
+# 		trigger = { has_government = communism }
+# 		ai_chance = { factor = 100 }
+# 	}
+# 	option = {
+# 		name = ww1_soviet.25.b
+# 		trigger = { NOT = { has_government = communism } }
+# 		ai_chance = { factor = 100 }
+# 	}
+# }
 # # KRONSTADT SAILORS COUP - VERY HIGH SUPPORT OF NEUTRALITY
 # ##########################
 # country_event = {
@@ -1385,8 +1391,7 @@ country_event = {
 	
 	fire_only_once = yes
 	trigger = {
-		original_tag = RUS
-		has_country_flag = RUS_soviet_tag
+		original_tag = RUS has_country_flag = RUS_soviet_tag
 		has_country_leader = {
 			character = SOV_vladimir_lenin
 		}
@@ -1394,9 +1399,7 @@ country_event = {
 	}
 	mean_time_to_happen = { days = 21 }
 	immediate = {
-		hidden_effect = {
-			set_global_flag = lenin_is_dead
-		}
+		set_global_flag = lenin_is_dead
 	}
 	
 	option = {
@@ -1405,64 +1408,25 @@ country_event = {
 			idea = SOV_idea_power_struggle
 			days = 1000
 		}
-		retire_character = SOV_vladimir_lenin
+		kill_country_leader = yes
 		
 		if = {
 			limit = {
 				has_global_flag = successor_trotsky
 			}
-			hidden_effect = {
-				if = {
-					limit = {
-						NOT = { has_character = SOV_leon_trotsky }
-					}
-					RUS = {
-						SOV_leon_trotsky = {
-							set_nationality = ROOT
-						}
-					}
-				}
-			}
-			SOV_leon_trotsky = {
-				promote_character = vanguardism
-			}
+			promote_character = SOV_leon_trotsky
 		}
 		else_if = {
 			limit = {
 				has_global_flag = successor_bukharin
 			}
-			hidden_effect = {
-				if = {
-					limit = {
-						NOT = { has_character = SOV_nikolai_bukharin }
-					}
-					RUS = {
-						SOV_nikolai_bukharin = {
-							set_nationality = ROOT
-						}
-					}
-				}
-			}
-			SOV_nikolai_bukharin = {
-				promote_character = market_socialism
-			}
+			promote_character = SOV_nikolai_bukharin
 		}
 		else = {
-			hidden_effect = {
-				if = {
-					limit = {
-						NOT = { has_character = SOV_iosif_stalin }
-					}
-					RUS = {
-						SOV_iosif_stalin = {
-							set_nationality = ROOT
-						}
-					}
-				}
-			}
-			SOV_iosif_stalin = {
-				promote_character = vanguardism
-			}
+			promote_character = SOV_iosif_stalin
+		}
+		ai_chance = {
+			factor = 100
 		}
 	}
 }
@@ -1577,7 +1541,8 @@ country_event = {
 				has_war_with = VLN
 				OR = {
 					tag = SOV
-					is_ally_with = SOV
+					is_subject_of = SOV
+					is_in_faction_with = SOV
 				}
 			}
 			white_peace = VLN
@@ -1586,7 +1551,8 @@ country_event = {
 			limit = {
 				OR = {
 					tag = SOV
-					is_ally_with = SOV
+					is_subject_of = SOV
+					is_in_faction_with = SOV
 				}
 			}
 			every_owned_state = {
@@ -1933,7 +1899,10 @@ country_event = {
 		FROM = {
 			every_other_country = {
 				limit = {
-					is_ally_with = PREV.PREV
+					OR = {
+						is_in_faction_with = PREV.PREV
+						is_subject_of = PREV.PREV
+					}
 				}
 				PREV = { add_to_faction = PREV }
 			}
@@ -2029,7 +1998,8 @@ news_event = {
 			OR = {
 				tag = SOV
 				has_government = communism
-				is_ally_with = SOV
+				is_subject_of = SOV
+				is_in_faction_with = SOV
 			}
 		}
 	}
@@ -2040,7 +2010,8 @@ news_event = {
 			NOT = {
 				tag = SOV
 				has_government = communism
-				is_ally_with = SOV
+				is_subject_of = SOV
+				is_in_faction_with = SOV
 			}
 		}
 	}
@@ -2051,7 +2022,8 @@ news_event = {
 			OR = {
 				tag = SOV
 				has_government = communism
-				is_ally_with = SOV
+				is_subject_of = SOV
+				is_in_faction_with = SOV
 			}
 		}
 	}
@@ -2062,7 +2034,8 @@ news_event = {
 				has_global_flag = miracle_on_the_vistula
 				tag = SOV
 				has_government = communism
-				is_ally_with = SOV
+				is_subject_of = SOV
+				is_in_faction_with = SOV
 			}
 		}
 	}
@@ -2082,14 +2055,14 @@ country_event = {
 		name = ww1_soviet.41.a
 		LIT = {
 			annex_country = {
-				target = BRS
+				target = BLR
 				transfer_troops = yes
 			}
 			set_cosmetic_tag = LITBEL
 		}
 		every_state = {
 			limit = {
-				is_core_of = BRS
+				is_core_of = BLR
 			}
 			add_core_of = LIT
 		}
@@ -2103,7 +2076,7 @@ country_event = {
 				}
 				OR = {
 					is_core_of = LIT
-					is_core_of = BRS
+					is_core_of = BLR
 					state = 97
 					state = 1015
 					state = 1017
@@ -2114,7 +2087,6 @@ country_event = {
 					state = 243
 					state = 207
 					state = 913
-					state = 1231
 				}
 			}
 			transfer_state_to = LIT
@@ -2283,76 +2255,40 @@ country_event = {
 	picture = GFX_report_event_generic_read_write
 	option = {
 		name = ww1_soviet.45.a
-		clear_all_relations_except_wars = yes
+		if = {
+			limit = {
+				is_in_faction = yes
+			}
+			if = {
+				limit = {
+					is_faction_leader = no
+				}
+				leave_faction = yes
+			}
+			else = {
+				dismantle_faction = yes
+			}
+		}
 
 		add_stability = -0.30
 		add_political_power = -200
 
-		every_state = {
+		# Galician territories
+		if = {
 			limit = {
-				is_owned_or_subject_trigger = yes
 				OR = {
-					is_core_of = RUS
-					is_core_of = BLR
-					is_core_of = LIT
-					is_core_of = UKR
-					is_core_of = WUK
-					region = 39 #Galicia
+					has_subject = GAL
+					NOT = {
+						country_exists = GAL
+					}
 				}
-				is_polish_criteria_state = no
-				NOT = {
-					#West Galicia
-					state = 88
-					state = 237
-					state = 562
-					state = 991
-					#Non Litbel
-					state = 97
-					state = 1015
-					state = 1017
-				}
+				
 			}
-			transfer_state_to = FROM
-		}
-
-		hidden_effect = {
-			FROM = {
-				#Galicia
-				if = {
-					limit = {
-						any_owned_state = {
-							region = 39
-						}
-						OR = {
-							has_subject = GAL
-							PREV = { has_subject = GAL }
-							NOT = {
-								country_exists = GAL
-							}
-						}
-					}
-					every_owned_state = {
-						limit = {
-							region = 39
-						}
-						transfer_state_to = GAL
-					}
-					if = {
-						limit = {
-							any_subject_country = {
-								original_tag = UKR
-							}
-						}
-						random_subject_country = {
-							limit = {
-								original_tag = UKR
-							}
-							puppet = GAL
-						}
-					}
-					else = {
-						puppet = GAL
-					}
+			every_state = {
+				limit = {
+					region = 39
+				}
+				hidden_effect = {
 					UKR = {
 						UKR_volodymyr_zatonskij = {
 							set_nationality = GAL
@@ -2360,15 +2296,7 @@ country_event = {
 						}
 					}
 					GAL = {
-						every_state = {
-							limit = {
-								region = 39
-								NOT = {
-									is_core_of = ROM
-								}
-							}
-							add_core_of = GAL
-						}
+						add_state_core = PREV
 						set_party_name = {
 							ideology = communism
 							long_name = GAL_communist_party_long
@@ -2379,102 +2307,152 @@ country_event = {
 							elections_allowed = no
 						}
 						set_cosmetic_tag = SOV_puppet
-						inherit_technology = PREV
 					}
 				}
-				
-				#Lithuania-Belarus
 				if = {
 					limit = {
-						has_subject = LIT
-					}
-					every_owned_state = {
-						limit = {
-							is_core_of = LIT
+						is_owned_by = ROOT
+						NOT = {
+							state = 88
+							state = 237
+							state = 991
 						}
-						transfer_state_to = LIT
+					}
+					transfer_state_to = GAL
+					hidden_effect = {
+						SOV = {
+							if = {
+								limit = {
+									any_other_country = {
+										original_tag = UKR
+										is_subject_of = PREV
+									}
+								}
+								random_other_country = {
+									limit = {
+										original_tag = UKR
+										is_subject_of = PREV
+									}
+									puppet = GAL
+									GAL = { inherit_technology = PREV }
+								}
+								else = {
+									puppet = GAL
+									GAL = { inherit_technology = PREV }
+									# if = {
+									# 	limit = {
+									# 		has_completed_focus = SOV_USSR
+									# 		has_cosmetic_tag = SOV_union
+									# 	}
+									# 	GAL = {
+									# 		country_event = { id = ww1_soviet.27 days = 8 }
+									# 	}
+									# }
+								}
+							}
+						}
 					}
 				}
-				else_if = {
+			}
+		}
+		# Lithuanian territories
+		if = {
+			limit = {
+				country_exists = LIT
+			}
+			every_owned_state = {
+				limit = {
+					is_core_of = LIT
+				}
+				set_state_controller_to = SOV
+				transfer_state_to = LIT
+			}
+			if = {
+				limit = {
+					LIT = {
+						has_cosmetic_tag = LITBEL
+					}
+				}
+				every_owned_state = {
 					limit = {
-						has_subject = BLR
-					}
-					if = {
-						limit = {
-							has_war_with = LIT
-						}
-						every_owned_state = {
-							limit = {
-								is_core_of = LIT
-							}
-							set_state_owner_to = LIT
-							set_state_controller_to = PREV
+						OR = {
+							state = 97
+							state = 1015
+							state = 1017
 						}
 					}
-					else = {
-						every_owned_state = {
-							limit = {
-								is_core_of = LIT
-							}
-							transfer_state_to = BLR
-						}
+					transfer_state_to = LIT
+				}
+			}
+		}
+		else = {
+			every_owned_state = {
+				limit = {
+					is_core_of = LIT
+				}
+				transfer_state_to = SOV
+			}
+		}
+		
+		# Ukranian territories
+		every_owned_state = {
+			limit = {
+				OR = {
+					state = 93
+					state = 808
+					state = 562
+					state = 91
+					state = 89
+					state = 766
+				}
+			}
+			if = {
+				limit = {
+					any_other_country = {
+						original_tag = UKR
+						is_subject_of = SOV
+						exists = yes
 					}
 				}
+				random_country = {
+					limit = {
+						original_tag = UKR
+						is_subject_of = SOV
+					}
+					transfer_state = PREV
+				}
+			}
+			else_if = {
+				limit = {
+					country_exists = UKR
+				}
+				set_state_controller_to = SOV
+				transfer_state_to = UKR
+			}
+			else = {
+				transfer_state_to = SOV
+			}
+		}
 
-				#Ukraine
-				if = {
-					limit = {
-						any_enemy_country = {
-							original_tag = UKR
-						}
-					}
-					every_owned_state = {
-						limit = {
-							is_core_of = UKR
-							OR = {
-								region = 38
-								region = 39
-								region = 130
-								region = 131
-							}
-							NOT = {
-								is_core_of = PREV
-								is_core_of = BLR
-							}
-						}
-						random_country = {
-							limit = {
-								original_tag = UKR
-								has_war_with = PREV.PREV
-							}
-							set_state_owner = PREV
-						}
-						set_state_controller_to = PREV
-					}
+		# Belorussian territories
+		every_owned_state = {
+			limit = {
+				OR = {
+					is_core_of = BLR
+					state = 97
+					state = 1015
+					state = 1017
 				}
-				else_if = {
-					limit = {
-						any_subject_country = {
-							original_tag = UKR
-						}
-					}
-					every_owned_state = {
-						limit = {
-							is_core_of = UKR
-							NOT = {
-								is_core_of = PREV
-								is_core_of = BLR
-							}
-						}
-						random_country = {
-							limit = {
-								original_tag = UKR
-								is_subject_of = PREV.PREV
-							}
-							transfer_state = PREV
-						}
-					}
+			}
+			if = {
+				limit = {
+					country_exists = BLR
 				}
+				set_state_controller_to = SOV
+				transfer_state_to = BLR
+			}
+			else = {
+				transfer_state_to = SOV
 			}
 		}
 
@@ -2488,10 +2466,42 @@ country_event = {
 			}
 			every_owned_state = {
 				limit = {
-					region = 8
+					OR = {
+						state = 5
+						state = 67
+						state = 85
+						state = 86
+						state = 404
+						state = 762
+						state = 763
+						state = 995
+					}
 				}
 				add_core_of = GER
 				transfer_state_to = GER
+			}
+		}
+
+		hidden_effect = {
+			SOV = {
+				if = {
+					limit = {
+						NOT = {
+							has_cosmetic_tag = SOV_union
+						}
+						OR = {
+							any_other_country = {
+								original_tag = UKR
+								is_subject_of = PREV
+							}
+							any_other_country = {
+								original_tag = BLR
+								is_subject_of = PREV
+							}
+						}
+					}
+					country_event = ww1_soviet.47
+				}
 			}
 		}
 		
@@ -2534,14 +2544,16 @@ country_event = {
 			limit = {
 				OR = {
 					tag = FROM
-					is_ally_with = FROM
+					is_in_faction_with = FROM
+					is_subject_of = FROM
 				}
 			}
 			every_other_country = {
 				limit = {
 					OR = {
 						tag = PREV.PREV
-						is_ally_with = PREV.PREV
+						is_in_faction_with = PREV.PREV
+						is_subject_of = PREV.PREV
 					}
 					has_war_with = PREV
 				}
@@ -2563,7 +2575,6 @@ country_event = {
 					state = 207
 					state = 241
 					state = 243
-					state = 1233
 				}
 			}
 			set_state_owner_to = PREV
@@ -2644,7 +2655,7 @@ country_event = {
 		every_country = {
 			limit = {
 				OR = {
-					has_country_flag = RUS_soviet_tag
+					original_tag = RUS has_country_flag = RUS_soviet_tag
 					is_subject_of = SOV
 					has_country_flag = riga_peace
 				}
@@ -2659,56 +2670,74 @@ country_event = {
 						state = 240
 						state = 241
 						state = 808
-						state = 1231
-						state = 1233
 					}
 				}
 				every_country = {
 					limit = {
 						original_tag = UKR
-						is_subject_of = SOV
+						OR = {
+							is_subject_of = SOV
+							is_in_faction_with = SOV
+						}
 					}
-					safe_transfer_state_to = yes
+					set_state_owner = PREV
+				}
+			}
+			every_controlled_state = {
+				limit = {
+					is_core_of = UKR
+					NOT = {
+						is_owned_by = PREV
+						state = 94
+						state = 194
+						state = 222
+						state = 240
+						state = 241
+						state = 808
+					}
+				}
+				every_country = {
+					limit = {
+						original_tag = UKR
+						OR = {
+							is_subject_of = SOV
+							is_in_faction_with = SOV
+						}
+					}
+					set_state_owner = PREV
 				}
 			}
 			every_owned_state = {
 				limit = {
 					is_core_of = BLR
+				}
+				every_country = {
+					limit = {
+						original_tag = BLR
+						OR = {
+							is_subject_of = SOV
+							is_in_faction_with = SOV
+						}
+					}
+					set_state_owner = PREV
+				}
+			}
+			every_controlled_state = {
+				limit = {
+					is_core_of = BLR
 					NOT = {
-						state = 204
-						state = 207
-						state = 241
-						state = 242
-						state = 243
-						state = 244
-						state = 913
-						state = 1231
-						state = 1233
+						is_owned_by = PREV
 					}
 				}
 				every_country = {
 					limit = {
 						original_tag = BLR
-						is_subject_of = SOV
+						OR = {
+							is_subject_of = SOV
+							is_in_faction_with = SOV
+						}
 					}
-					safe_transfer_state_to = yes
-				}
-			}
-			every_owned_state = {
-				limit = {
-					OR = {
-						state = 204
-						state = 207
-						state = 222
-						state = 240
-						state = 241
-						state = 1231
-						state = 1233
-					}
-				}
-				SOV = {
-					add_state_core = PREV
-					safe_transfer_state_to = yes
+					set_state_controller = PREV
 				}
 			}
 		}
@@ -2884,66 +2913,6 @@ country_event = {
 		add_opinion_modifier = {
 			target = FROM
 			modifier = karakhan_manifesto
-		}
-	}
-}
-
-# Siberian Intervention of Japan: Japan Withdraws
-country_event = {
-	id = ww1_soviet.52
-	title = ww1_soviet.52.t
-	desc = ww1_soviet.52.d
-	picture = GFX_report_event_japan_army_mountainside
-	is_triggered_only = yes
-	fire_only_once = yes
-	option = {
-		name = ww1_soviet.52.a
-		add_war_support = 0.05
-		army_experience = 50
-	}
-}
-
-# Siberian Intervention of Japan: Japan Victories
-news_event = {
-	id = ww1_soviet.53
-	title = ww1_soviet.53.t
-	desc = ww1_soviet.53.d
-	picture = GFX_news_event_japanese_army_parade
-	is_triggered_only = yes
-	major = yes
-	option = {
-		name = ww1_soviet.53.a
-		trigger = {
-			OR = {
-				tag = SOV
-				is_subject_of = SOV
-				is_in_faction_with = SOV
-				has_government = communism
-			}
-		}
-	}
-	option = {
-		name = ww1_soviet.53.b
-		trigger = {
-			OR = {
-				tag = JAP
-				is_subject_of = JAP
-				is_in_faction_with = JAP
-			}
-		}
-	}
-	option = {
-		name = ww1_soviet.53.c
-		trigger = {
-			NOT = {
-				tag = SOV
-				is_subject_of = SOV
-				is_in_faction_with = SOV
-				has_government = communism
-				tag = JAP
-				is_subject_of = JAP
-				is_in_faction_with = JAP
-			}
 		}
 	}
 }

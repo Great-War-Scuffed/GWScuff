@@ -165,7 +165,8 @@ country_event = {
 				limit = {
 					OR = {
 						tag = PREV
-						is_ally_with = PREV
+						is_subject_of = PREV
+						is_in_faction_with = PREV
 					}
 				}
 				set_truce = {

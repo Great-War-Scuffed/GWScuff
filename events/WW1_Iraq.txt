@@ -63,7 +63,7 @@ country_event = {
 				exists = no
 				NOT = {
 					has_country_leader = {
-						character = HJZ_faisal_bin_hussein_bin_ali
+						character = SYR_faisal_i
 					}
 				}	
 			}
@@ -81,30 +81,15 @@ country_event = {
 			autonomy_state = autonomy_tgwr_protectorate
 			freedom_level = 0.8
 		}
-		HJZ = {
-			HJZ_faisal_bin_hussein_bin_ali = {
+		SYR = {
+			SYR_faisal_i = {
 				set_nationality = IRQ
-				promote_leader = yes
-				set_character_name = SYR_faisal_i
-				if = {
-					limit = {
-						has_ideology = semi_constitutional_monarchy
-					}
-					promote_character = semi_constitutional_monarchy
-				}
-				else = {
-					add_country_leader_role = {
-						promote_leader = yes
-						country_leader = {
-							ideology = semi_constitutional_monarchy
-						}
-					}
-				}
+				promote_character = semi_constitutional_monarchy
 			}
-			HJZ_ghazi_bin_faisal = {
+			SYR_ghazi_bin_faisal = {
 				set_nationality = IRQ
 			}
-		}
+		}	
 		hidden_effect = {
 			IRQ = {
 				set_politics = {
@@ -193,17 +178,16 @@ country_event = {
 		OR = {
 			tag = IRQ
 			tag = SYR
-		}
-		has_character = HJZ_faisal_bin_hussein_bin_ali
+		}	
 		has_country_leader = {
-			character = HJZ_faisal_bin_hussein_bin_ali
+			character = SYR_faisal_i
 		}
 		date > 1933.9.1
 	}
 	option = {
 		name = ww1_iraq.4.a
-		retire_character = HJZ_faisal_bin_hussein_bin_ali
-		HJZ_ghazi_bin_faisal = {
+		retire_character = SYR_faisal_i
+		SYR_ghazi_bin_faisal = {
 			set_character_name = IRQ_ghazi_i
 			add_country_leader_role = {
 				promote_leader = yes

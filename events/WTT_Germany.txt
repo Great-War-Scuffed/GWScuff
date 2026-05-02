@@ -451,8 +451,7 @@ country_event = {
 				limit = {
 					is_faction_leader = no
 				}
-				create_faction_from_template = faction_template_entente
-				set_faction_name = Allies
+				create_faction = Allies
 			}
 			add_to_faction = FRA
 			FRA = {
@@ -512,8 +511,7 @@ country_event = {
 				limit = {
 					is_faction_leader = no
 				}
-				create_faction_from_template = faction_template_entente
-				set_faction_name = Allies
+				create_faction = Allies
 			}
 			add_to_faction = FRA
 			FRA = {

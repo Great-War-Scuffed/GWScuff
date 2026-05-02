@@ -284,7 +284,10 @@ country_event = {
 					tag = ENG
 					AND = {
 						tag = EGY
-						is_ally_with  = ENG
+						OR = {
+							is_in_faction_with = ENG
+							is_subject_of = ENG
+						}
 					}
 				}
 			}

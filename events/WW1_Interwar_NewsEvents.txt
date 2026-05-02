@@ -25,10 +25,8 @@ news_event = {
 				is_ai = no
 			}
 			hidden_effect = {
-				clear_superevents = yes
 				set_country_flag = SE_ger_nazi
 				play_song = "axis_war_1"
-				update_superevents = yes
 			}
 		}
 	}
@@ -124,10 +122,8 @@ news_event = {
 				is_ai = no
 			}
 			hidden_effect = {
-				clear_superevents = yes
 				play_song = "SE_greeko_turkish_war"
 				set_country_flag = SE_greeko_turkish_war
-				update_superevents = yes
 			}
 		}
 	}
@@ -392,8 +388,9 @@ news_event = {
 		trigger = {
 			OR = {
 				tag = GER
-				is_ally_with = GER
+				is_in_faction_with = GER
 				has_country_flag = great_war_winner
+				is_subject_of = GER
 			}
 		}
 	}
@@ -402,9 +399,10 @@ news_event = {
 		trigger = {
 			OR = {
 				tag = FRA
-				is_ally_with = FRA
+				is_in_faction_with = FRA
 				has_country_flag = great_war_loser
 				has_war_with = GER
+				is_subject_of = FRA
 			}
 		}
 	}
@@ -413,12 +411,14 @@ news_event = {
 		trigger = {
 			NOT = {
 				tag = GER
-				is_ally_with = GER
+				is_in_faction_with = GER
 				has_country_flag = great_war_winner
+				is_subject_of = GER
 				tag = FRA
-				is_ally_with = FRA
+				is_in_faction_with = FRA
 				has_country_flag = great_war_loser
 				has_war_with = GER
+				is_subject_of = FRA
 			}
 		}
 	}

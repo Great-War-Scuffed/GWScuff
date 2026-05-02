@@ -1,5 +1,5 @@
 methodical_fire = {
-    track = ww1_combat_support
+    track = combat_support
     name = SUBDOCTRINE_METHODICAL_FIRE
     description = SUBDOCTRINE_METHODICAL_FIRE_DESC
     icon = GFX_advanced_firebases_medium
@@ -73,7 +73,7 @@ methodical_fire = {
     }
 }
 integrated_firepower = {
-    track = ww1_combat_support
+    track = combat_support
     name = SUBDOCTRINE_INTEGRATED_FIREPOWER
     description = SUBDOCTRINE_INTEGRATED_FIREPOWER_DESC
     icon = GFX_dispersed_support_medium
@@ -151,7 +151,7 @@ integrated_firepower = {
     }
 }
 hurricane_bombardment = {
-    track = ww1_combat_support
+    track = combat_support
     name = SUBDOCTRINE_HURRICANE_BOMBARDMENT
     description = SUBDOCTRINE_HURRICANE_BOMBARDMENT_DESC
     icon = GFX_overwhelming_firepower_medium

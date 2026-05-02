@@ -1,3 +1,4 @@
+#SCUFFED PR0PH3TS1
 industrial_warfare = {
     folder = land
 
@@ -16,16 +17,31 @@ industrial_warfare = {
     }
 
     tracks = {
-        ww1_infantry
-        ww1_combat_support
-        ww1_operations
+        infantry
+        combat_support
+        armor
+        operations
     }
 
     # EFFECTS
-	army_speed_factor = 0.1
+    production_speed_bunker_factor = 0.15
+	dig_in_speed_factor = 0.2
     infantry = {
-        max_organisation = -8
-        combat_width = -0.3
+        max_organisation = 10
+    }
+    equipment_bonus = {
+        infantry_equipment = {
+            build_cost_ic = -0.05
+        }
+        field_gun_equipment = {
+            build_cost_ic = -0.05
+        }
+        howitzer_equipment = {
+            build_cost_ic = -0.05
+        }
+        machine_gun_equipment = {
+            build_cost_ic = -0.05
+        }
     }
     additional_brigade_column_size = 1
     enable_tactic = tactic_human_wave_tactics
@@ -33,23 +49,33 @@ industrial_warfare = {
     milestones = {
         {
             #1
-            army_speed_factor = -0.1
+            infantry ={
+                max_organisation = 5
+            }
+            enable_tactic = tactic_elastic_defense
         }
         {
             #2
 	        infantry = {
-                max_organisation = 4
-                combat_width = 0.15
+                max_organisation = 5
             }
+            enable_tactic = tactic_overwhelming_fire
         }
         {
             #3
 	        infantry = {
-                max_organisation = 4
-                combat_width = 0.15
+                max_organisation = 5
             }
+            enable_tactic = tactic_barrage
         }
+        {
+            #4
+            infantry ={
+               max_organisation = 5 
+        }
+            enable_tactic = tactic_tactical_withdrawal
     }
+}
 }
 new_mobile_warfare = {
     folder = land
@@ -102,7 +128,7 @@ new_mobile_warfare = {
         {
             #Operations
 	        planning_speed = 0.2
-            enable_tactic = tactic_backhand_blow   
+            enable_tactic = tactic_backhand_blow
         }
     }
 }

@@ -1,5 +1,5 @@
 bite_and_hold = {
-    track = ww1_infantry
+    track = infantry
     name = SUBDOCTRINE_BITE_AND_HOLD
     description = SUBDOCTRINE_BITE_AND_HOLD_DESC
     icon = GFX_trench_warfare_medium
@@ -73,7 +73,7 @@ bite_and_hold = {
     }
 }
 defense_in_depth = {
-    track = ww1_infantry
+    track = infantry
     name = SUBDOCTRINE_DEFENSE_IN_DEPTH
     description = SUBDOCTRINE_DEFENSE_IN_DEPTH_DESC
     icon = GFX_defence_in_depth_medium

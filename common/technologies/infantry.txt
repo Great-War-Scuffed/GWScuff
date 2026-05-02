@@ -1725,6 +1725,13 @@ technologies = {
 		}
 	}
 
+	militia_tech = {
+ 		allow = { always = no }
+		enable_subunits = {
+			militia
+		}
+	}
+
 	cylinder_gas_tech = {
 		research_cost = 1.5
 		start_year = 1915

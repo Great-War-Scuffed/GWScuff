@@ -5,10 +5,10 @@ industrial_warfare = {
     description = GRAND_DOCTRINE_INDUSTRIAL_WARFARE_DESC
     icon = GFX_doctrine_industrial_warfare_medium
     available = {
-        has_completed_industrial_warfare_doctrine = no
+        
     }
 
-    xp_cost = 250
+    xp_cost = 1
     xp_type = army
 
     ai_will_do = {
@@ -58,10 +58,10 @@ new_mobile_warfare = {
     description = GRAND_DOCTRINE_MOBILE_WARFARE_DESC
     icon = GFX_doctrine_mobile_warfare_medium
     available = {
-        has_completed_industrial_warfare_doctrine = yes
+        
     }
 
-    xp_cost = 100
+    xp_cost = 1
     xp_type = army
 
     ai_will_do = {
@@ -113,10 +113,10 @@ superior_firepower = {
     description = GRAND_DOCTRINE_SUPERIOR_FIREPOWER_DESC
     icon = GFX_doctrine_superior_firepower_medium
     available = {
-        has_completed_industrial_warfare_doctrine = yes
+       
     }
 
-    xp_cost = 100
+    xp_cost = 1
     xp_type = army
 
     ai_will_do = {
@@ -182,10 +182,10 @@ grand_battleplan = {
     description = GRAND_DOCTRINE_GRAND_BATTLEPLAN_DESC
     icon = GFX_doctrine_grand_battleplan_medium
     available = {
-        has_completed_industrial_warfare_doctrine = yes
+        
     }
 
-    xp_cost = 100
+    xp_cost = 1
     xp_type = army
 
     ai_will_do = {
@@ -238,10 +238,10 @@ mass_assault = {
     description = GRAND_DOCTRINE_MASS_ASSAULT_DESC
     icon = GFX_doctrine_mass_assault_medium
     available = {
-        has_completed_industrial_warfare_doctrine = yes
+       
     }
 
-    xp_cost = 100
+    xp_cost = 1
     xp_type = army
 
     ai_will_do = {

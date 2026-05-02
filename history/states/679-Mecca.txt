@@ -6,11 +6,12 @@ state={
 		victory_points = {
 			5037 4
 		}
-		owner = TUR
+		owner = SAU
 		#add_core_of = TUR changed on state modifier
-		add_core_of = HJZ
+		add_core_of = SAU
 		buildings = {
-			infrastructure = 1
+			infrastructure = 2
+			industrial_complex = 1
 		}
 	}
 	provinces={
@@ -18,5 +19,5 @@ state={
 	}
 	manpower=100000
 	buildings_max_level_factor=1.000
-	state_category=pastoral
+	state_category=large_city
 }

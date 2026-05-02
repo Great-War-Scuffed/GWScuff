@@ -17,7 +17,9 @@ state={
 		add_core_of = SAU
 		add_claim_by = JBS
 		buildings = {
-			infrastructure = 0
+			infrastructure = 2
+			industrial_complex=2
+			arms_factory=1
 
 		}
 
@@ -28,5 +30,5 @@ state={
 	}
 	manpower=310000
 	buildings_max_level_factor=1.000
-	state_category=rural
+	state_category=city
 }

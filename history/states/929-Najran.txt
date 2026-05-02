@@ -8,8 +8,8 @@ state={
 		victory_points = {
 			6177 2 
 		}
-		owner = NAJ
-		add_core_of = NAJ
+		owner = SAU
+		add_core_of = SAU
 		add_claim_by = SAU
 	}
 }

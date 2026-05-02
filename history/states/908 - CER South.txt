@@ -3,7 +3,7 @@ state={
 	name="STATE_908"
 
 	history={
-		owner = CER
+		owner = QIN
 		add_core_of = CER
 		add_core_of = QIN
 		buildings = {

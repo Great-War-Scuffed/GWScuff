@@ -16,8 +16,9 @@ state={
 		owner=AFG
 		add_core_of=AFG
 		buildings={
-			infrastructure = 1
-			industrial_complex=1
+			infrastructure = 2
+			industrial_complex=2
+			arms_factory=2
 		}
 	}
 }

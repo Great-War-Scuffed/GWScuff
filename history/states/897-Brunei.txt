@@ -11,7 +11,7 @@ state={
 		victory_points = {
 			7387 2 # Brunei Town
 		}
-		owner = BRN
+		owner = ENG
 		add_core_of = BRN
 		buildings = {
 			infrastructure = 1

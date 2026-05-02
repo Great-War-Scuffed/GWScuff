@@ -19,7 +19,9 @@ state={
 		owner=TUR
 		add_core_of=TUR
 		buildings={
-			infrastructure = 1
+			infrastructure = 3
+			industrial_complex=3
+			arms_factory=2
 		}
 	}
 	provinces={ 

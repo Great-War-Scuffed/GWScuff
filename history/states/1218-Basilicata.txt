@@ -11,6 +11,7 @@ state = {
 		add_core_of = TTS
 		buildings = {
 			infrastructure = 2
+			industrial_complex = 3
 		}
 	}
 	local_supplies=5.0 

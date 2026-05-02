@@ -10,7 +10,8 @@ state={
 		add_core_of=SPR
 		buildings={
 			infrastructure = 3
-			industrial_complex=1
+			industrial_complex=2
+			arms_factory=2
 			air_base=1
 			977 = { dam = 1 } #Presa De El Villar
 		}

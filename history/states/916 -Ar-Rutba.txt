@@ -6,8 +6,8 @@ state={
 	provinces= { 1631 }
 	history={
 		victory_points = { 1631 1 }
-		owner = RWL
-		add_core_of = RWL
+		owner = SAU
+		add_core_of = SAU
 		buildings={
 			infrastructure = 0
 		}

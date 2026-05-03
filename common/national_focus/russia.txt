@@ -3097,7 +3097,7 @@ focus_tree = {
 			is_subject = no
 		}
 		completion_reward = {
-			unlock_decision_category_tooltip = RUS_release_country
+			#unlock_decision_category_tooltip = RUS_release_country
 			add_political_power = 350
 			if = {
 				limit = {
@@ -3110,7 +3110,7 @@ focus_tree = {
 						set_cosmetic_tag = FIN_senate
 						retire_character = RUS_mikhail_stakhovich
 						retire_character = RUS_nikolai_nekrasov					
-						load_focus_tree  = generic_focus
+						#load_focus_tree  = generic_focus
 					}
 				}
 				set_autonomy = {
@@ -3118,88 +3118,6 @@ focus_tree = {
 					autonomy_state = autonomy_dominion
 				}
 			}		
-			hidden_effect = {
-				every_owned_state = {
-					limit = {
-						NOT = {
-							state = 407
-							is_core_of = RUS
-						}
-						region = 136
-						is_core_of = KAZ
-					}
-					transfer_state_to = KAZ
-				}
-				KAZ = {
-					set_cosmetic_tag = KAZ_RUS
-				}
-				every_owned_state = {
-					limit = {
-						is_core_of = TRK
-						is_coastal = no
-					}
-					transfer_state_to = TRK
-				}
-				TRK = {
-					set_capital = { state = 585 }
-					set_cosmetic_tag = TRK_RUS
-				}
-			}
-			puppet = KAZ
-			puppet = TRK
-			hidden_effect = {
-				TRK = {
-					TRK_aleksandr_samsonov = {
-						if = {
-							limit = { has_ideology = colonial_government }
-							promote_character = colonial_government
-						}
-						else = {
-							add_country_leader_role = {
-								promote_leader = yes
-								country_leader = {
-									ideology = colonial_government
-								}
-							}
-						}
-					}
-					set_party_name = {
-						ideology = neutrality
-						long_name = RUS_general_governorate_party
-						name = RUS_general_governorate_party
-					}
-				}
-			}
-			if = {
-				limit = {
-					BUK = {
-						is_subject_of = RUS
-						has_country_flag = protectorate
-					}
-				}
-				BUK = {
-					clr_country_flag = protectorate
-				}
-				set_autonomy = {
-					target = BUK
-					autonomy_state = autonomy_colony
-				}
-			}
-			if = {
-				limit = {
-					KHI = {
-						is_subject_of = RUS
-						has_country_flag = protectorate
-					}
-				}
-				KHI = {
-					clr_country_flag = protectorate
-				}
-				set_autonomy = {
-					target = KHI
-					autonomy_state = autonomy_colony
-				}
-			}
 		}
 	}
 	focus = {

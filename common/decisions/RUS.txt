@@ -1913,9 +1913,7 @@ RUS_release_country = {
 			}
 		}
 		visible = {
-			is_subject = no
-			has_completed_focus = RUS_self_determination_of_nations
-			EST = { exists = no }
+			always = NO
 		}
 		cost = 10
 		fire_only_once = yes
@@ -1961,9 +1959,7 @@ RUS_release_country = {
 			factor = 200
 		}
 		visible = {
-			is_subject = no
-			has_completed_focus = RUS_self_determination_of_nations
-			LAT = { exists = no }
+			always = NO
 		}
 		highlight_states = {
 			highlight_states_trigger = {
@@ -2033,9 +2029,7 @@ RUS_release_country = {
 			factor = 200
 		}
 		visible = {
-			LIT = { exists = no }
-			is_subject = no
-			has_completed_focus = RUS_self_determination_of_nations
+			always = NO
 		}
 		cost = 15
 		fire_only_once = yes
@@ -2099,9 +2093,7 @@ RUS_release_country = {
 			factor = 200
 		}
 		visible = {
-			POL = { exists = no }
-			is_subject = no
-			has_completed_focus = RUS_self_determination_of_nations
+			always = NO
 		}
 		cost = 30
 		fire_only_once = yes
@@ -2204,11 +2196,7 @@ RUS_release_country = {
 			factor = 200
 		}
 		visible = {
-			is_subject = no
-			has_completed_focus = RUS_self_determination_of_nations
-			UKR = {
-				exists = no
-			}
+			always = NO
 		}
 		cost = 20
 		highlight_states = {
@@ -2335,9 +2323,7 @@ RUS_release_country = {
 			factor = 200
 		}
 		visible = {
-			GEO = { exists = no }
-			is_subject = no
-			has_completed_focus = RUS_self_determination_of_nations
+			always = NO
 		}
 		highlight_states = {
 			highlight_states_trigger = {
@@ -2376,9 +2362,7 @@ RUS_release_country = {
 			factor = 200
 		}
 		visible = {
-			ARM = { exists = no }
-			is_subject = no
-			has_completed_focus = RUS_self_determination_of_nations
+			always = NO
 		}
 		highlight_states = {
 			highlight_states_trigger = {
@@ -2434,9 +2418,7 @@ RUS_release_country = {
 			factor = 150
 		}
 		visible = {
-			AZR = { exists = no }
-			is_subject = no
-			has_completed_focus = RUS_self_determination_of_nations
+			always = NO
 		}
 		highlight_states = {
 			highlight_states_trigger = {

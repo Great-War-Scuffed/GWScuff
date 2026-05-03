@@ -44,7 +44,7 @@ add_opinion_modifier = {
 
 set_autonomy = {
 	target = SAU
-	autonomous_state = autonomy_tgwr_ottoman_emirate
+	autonomous_state = autonomy_colony
 	freedom_level = 0.4
 }
 set_autonomy = {

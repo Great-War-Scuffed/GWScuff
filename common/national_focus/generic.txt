@@ -100,6 +100,46 @@ focus_tree = {
 			add = 10
 			tag = D15
 		}
+		modifier = {
+			add = 10
+			tag = VEN
+		}
+		modifier = {
+			add = 10
+			tag = SWI
+		}
+		modifier = {
+			add = 10
+			tag = VEN
+		}
+		modifier = {
+			add = 10
+			tag = COL
+		}
+		modifier = {
+			add = 10
+			tag = ECU
+		}
+		modifier = {
+			add = 10
+			tag = CHL
+		}
+		modifier = {
+			add = 10
+			tag = MNT
+		}
+		modifier = {
+			add = 10
+			tag = MON
+		}
+		modifier = {
+			add = 10
+			tag = TAN
+		}
+		modifier = {
+			add = 10
+			tag = EGY
+		}
 	}
 	default = no
 	reset_on_civilwar = no

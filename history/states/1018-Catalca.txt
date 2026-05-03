@@ -13,11 +13,13 @@ state={
 		add_core_of=TUR
 		buildings={
 			infrastructure = 2
+			industrial_complex=2
+			arms_factory=1
 		}
 	}
 	provinces={ 
 		10907
 	}
 	manpower = 59756
-	state_category=rural 
+	state_category=large_town
 }

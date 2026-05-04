@@ -16,7 +16,7 @@ focus_tree = {
 	###########################################################################################################################
 	focus = {
 		id = JAP_ww1_political_effort
-		icon = GFX_goal_generic_demand_territory
+		icon = GFX_focus_JAP_propaganda
 		completion_reward = {
 			add_political_power = 120
 		}
@@ -38,7 +38,7 @@ focus_tree = {
 		prerequisite = {
 			focus = JAP_ww1_political_effort
 		}
-		icon = GFX_goal_generic_territory_or_war
+		icon = GFX_focus_JAP_form_the_yokusan_sonendan
 		#available = { has_government=neutrality }
 		completion_reward = {
 			add_political_power = 100
@@ -96,7 +96,7 @@ focus_tree = {
 		prerequisite = {
 			focus = spiritual_mobilization_focus
 		}
-		icon = GFX_goal_generic_propaganda
+		icon = GFX_focus_JAP_joshi_teishin_tai
 		completion_reward = {
 			add_ideas = indoctrination_focus
 			add_political_power = 150
@@ -120,7 +120,7 @@ focus_tree = {
 		prerequisite = {
 			focus = JAP_ww1_political_effort
 		}
-		icon = GFX_goal_anschluss
+		icon = GFX_focus_JAP_minpon_shugi
 		completion_reward = {
 			add_ideas = liberty_ethos_focus
 			528 = {
@@ -155,7 +155,7 @@ focus_tree = {
 		prerequisite = {
 			focus = JAP_ww1_contest_republic
 		}
-		icon = GFX_goal_molotov_ribbentrop_pact
+		icon = GFX_focus_JAP_minshu_shugi
 		completion_reward = {
 			random_owned_state = {
 				limit = {
@@ -263,7 +263,7 @@ focus_tree = {
 		prerequisite = {
 			focus = JAP_ww1_reorganization_act
 		}
-		icon = GFX_goal_generic_propaganda
+		icon = GFX_focus_JAP_politicize_the_education_system
 		completion_reward = {
 			add_tech_bonus = {
 				name = industrial_bonus
@@ -285,7 +285,7 @@ focus_tree = {
 		prerequisite = {
 			focus = JAP_ww1_freespeech
 		}
-		icon = GFX_goal_support_democracy
+		icon = GFX_focus_JAP_gather_royal_pacifists_support
 		completion_reward = {
 			add_political_power = -100
 			country_event = ww1_japan.102
@@ -302,7 +302,7 @@ focus_tree = {
 		prerequisite = {
 			focus = JAP_ww1_democracy
 		}
-		icon = GFX_goal_generic_consumer_goods
+		icon = GFX_focus_JAP_the_modern_ashigaru
 		completion_reward = {
 			army_experience = 10
 			add_political_power = 100
@@ -357,7 +357,7 @@ focus_tree = {
 		prerequisite = {
 			focus = JAP_ww1_indoctrination_focus
 		}
-		icon = GFX_goal_support_fascism
+		icon = GFX_focus_JAP_purge_the_kodoha_faction
 		available = {
 			has_war = yes
 			has_government = neutrality
@@ -384,7 +384,7 @@ focus_tree = {
 		prerequisite = {
 			focus = JAP_ww1_indoctrination_focus
 		}
-		icon = GFX_focus_generic_diplomatic_treaty
+		icon = GFX_focus_JAP_revere_the_emperor_destroy_the_traitors
 		available = {
 			has_war = yes
 		}
@@ -409,7 +409,7 @@ focus_tree = {
 		prerequisite = {
 			focus = JAP_ww1_fascist_coup
 		}
-		icon = GFX_goal_generic_military_sphere
+		icon = GFX_focus_JAP_supremacy_of_will
 		completion_reward = {
 			add_ideas = paramilitarism_focus
 		}
@@ -425,7 +425,7 @@ focus_tree = {
 		prerequisite = {
 			focus = jap_improved_sprit_focus
 		}
-		icon = GFX_goal_generic_build_tank
+		icon = GFX_focus_JAP_army_weapons_administration_hq
 		completion_reward = {
 			army_experience = 20
 			add_political_power = 50
@@ -447,7 +447,7 @@ focus_tree = {
 			focus = JAP_ww1_paramilitarism
 			focus = JAP_ww1_full_rearmament
 		}
-		icon = GFX_goal_generic_demand_territory
+		icon = GFX_focus_JAP_advance_one_hundred_million_fireballs
 		completion_reward = {
 			add_political_power = 50
 			add_doctrine_cost_reduction = {
@@ -484,7 +484,7 @@ focus_tree = {
 		prerequisite = {
 			focus = JAP_ww1_unitedpeople
 		}
-		icon = GFX_goal_generic_construction
+		icon = GFX_focus_JAP_new_order_in_east_asia
 		completion_reward = {
 			random_owned_state = {
 				limit = {
@@ -545,7 +545,7 @@ focus_tree = {
 	###########################################################################################################################
 	focus = {
 		id = JAP_ww1_diplomatic_effort
-		icon = GFX_goal_generic_intelligence_exchange
+		icon = GFX_focus_JAP_end_the_interservice_rivalry
 		completion_reward = {
 			add_political_power = 150
 		}
@@ -567,9 +567,24 @@ focus_tree = {
 		prerequisite = {
 			focus = JAP_ww1_diplomatic_effort
 		}
-		icon = GFX_goal_generic_navy_doctrines_tactics
+		icon = GFX_focus_JAP_approach_mitsubishi
 		completion_reward = {
-			add_political_power = 75
+			282 = {
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = industrial_complex
+					level = 2
+					instant_build = yes
+				}
+			}
+			533 = {
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = industrial_complex
+					level = 2
+					instant_build = yes
+				}
+			}
 		}
 		ai_will_do = {
 			factor = 1000
@@ -584,21 +599,23 @@ focus_tree = {
 			focus = JAP_ww1_assert_position_pacific
 		}
 		available = {
-			NOT = {
-				has_war_with = USA
-			}
 		}
-		bypass = {
-			USA = {
-				exists = no
-			}
-		}
-		icon = GFX_goal_support_democracy
+		icon = GFX_focus_JAP_approach_yasuda
 		completion_reward = {
-			USA = {
-				add_opinion_modifier = {
-					target = PREV
-					modifier = HOI4TGW_Opinion_improved_diplomatic_relations
+			531 = {
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = industrial_complex
+					level = 2
+					instant_build = yes
+				}
+			}
+			528 = {
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = industrial_complex
+					level = 1
+					instant_build = yes
 				}
 			}
 		}
@@ -621,40 +638,30 @@ focus_tree = {
 			focus = JAP_ww1_assert_position_pacific
 		}
 		available = {
-			any_state = {
-				is_core_of = PHI
-				is_owned_by = USA
-			}
-		}
-		bypass = {
-			OR = {
-				USA = {
-					exists = no
-				}
-				country_exists = PHI
-			}		
 		}
 		completion_reward = {
-			every_state = {
-				limit = {
-					is_core_of = PHI
-					is_owned_by = USA
+			531 = {
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = arms_factory
+					level = 2
+					instant_build = yes
 				}
-				add_resistance = 30
-				add_compliance = -30
 			}
-			USA = {
-				add_opinion_modifier = {
-					target = PREV
-					modifier = HOI4TGW_Opinion_hostile_diplomatic_relations
+			528 = {
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = arms_factory
+					level = 1
+					instant_build = yes
 				}
 			}
 		}
-		icon = GFX_goal_generic_small_arms
+		icon = GFX_focus_JAP_approach_mitsui
 		ai_will_do = {
 			factor = 0
 		}
-		cost = 10
+		cost = 5
 		x = 8
 		y = 2
 		mutually_exclusive = {
@@ -667,22 +674,16 @@ focus_tree = {
 			focus = JAP_ww1_Support_Filipinos_Separatists
 			focus = JAP_ww1_Support_USA
 		}
-		icon = GFX_goal_molotov_ribbentrop_pact
+		icon = GFX_focus_JAP_approach_sumitomo
 		available = {
-			NOT = {
-				has_war_with = SIA
-			}
-		}
-		bypass = {
-			SIA = {
-				exists = no
-			}
 		}
 		completion_reward = {
-			SIA = {
-				add_opinion_modifier = {
-					target = PREV
-					modifier = HOI4TGW_Opinion_JAP_ambassador_siam
+			528 = {
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = arms_factory
+					level = 1
+					instant_build = yes
 				}
 			}
 		}
@@ -701,7 +702,7 @@ focus_tree = {
 		prerequisite = {
 			focus = JAP_ww1_Diplomatic_Siam
 		}
-		icon = GFX_goal_generic_army_doctrines
+		icon = GFX_focus_JAP_expand_the_irago_proving_ground
 		completion_reward = {
 			add_stability = 0.05
 			add_ideas = warrior_traditions_idea
@@ -722,14 +723,14 @@ focus_tree = {
 		prerequisite = {
 			focus = warrior_traditions_focus
 		}
-		icon = GFX_goal_demand_sudetenland
+		icon = GFX_focus_JAP_give_it_your_all_for_the_emperor
 		completion_reward = {
 			add_manpower = 100000
 		}
 		ai_will_do = {
 			factor = 1000
 		}
-		cost = 10
+		cost = 5
 		x = 7
 		y = 5
 		search_filters = {
@@ -827,7 +828,7 @@ focus_tree = {
 		prerequisite = {
 			focus = JAP_ww1_diplomatic_effort
 		}
-		icon = GFX_goal_generic_position_armies
+		icon = GFX_focus_JAP_return_to_sakoku_ron
 		available = {
 			KOR = {
 				is_subject_of = JAP
@@ -1010,7 +1011,7 @@ focus_tree = {
 		prerequisite = {
 			focus = JAP_ww1_Japan_Korea_Treaty
 		}
-		icon = GFX_goal_generic_occupy_states_ongoing_war
+		icon = GFX_focus_JAP_greater_east_asian_co_properity_sphere
 		available = {
 		}
 		completion_reward = {
@@ -2206,7 +2207,7 @@ focus_tree = {
 		prerequisite = {
 			focus = JAP_ww1_Invasion_of_Manchuria
 		}
-		icon = GFX_focus_jap_manchurian_project
+		icon = GFX_focus_JAP_return_of_the_machukuo_exiles
 		available = {
 			is_subject = no
 			has_capitulated = no
@@ -2478,7 +2479,7 @@ focus_tree = {
 		prerequisite = {
 			focus = JAP_ww1_Japanese_Expansionism
 		}
-		icon = GFX_goal_generic_political_pressure
+		icon = GFX_focus_JAP_hokushin_ron
 		available = {
 			country_exists = RUS
 			NOT = {

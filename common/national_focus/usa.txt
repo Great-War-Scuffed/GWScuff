@@ -1710,6 +1710,7 @@ focus_tree = {
 			NOT = { has_completed_focus = USA_american_reactionism }
 		}
 		completion_reward = { 
+			unlock_decision_category_tooltip = USA_wild_west
 			if = {
 				limit = { 
 					has_country_leader = { character = USA_woodrow_wilson ruling_only = yes }

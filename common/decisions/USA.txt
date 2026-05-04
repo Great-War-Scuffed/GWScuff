@@ -1434,6 +1434,7 @@ USA_wild_west = {
 				has_completed_focus = USA_restore_american_feuds
 				has_completed_focus = USA_socialist_democracy
 				has_completed_focus = USA_american_autarky
+				has_completed_focus = USA_protectionist_act
 			}
 		}
 		highlight_states = {highlight_state_targets = { state = 379 }}

@@ -2292,6 +2292,7 @@ focus_tree = {
 			custom_effect_tooltip = available_political_advisor
 			show_ideas_tooltip = GER_arthur_zimmermann
 			country_event = ww1_germany.29
+			set_global_flag = central_powers_conference_ends
 		}
 		ai_will_do = {
 			factor = 1

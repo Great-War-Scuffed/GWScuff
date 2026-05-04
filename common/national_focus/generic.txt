@@ -140,6 +140,14 @@ focus_tree = {
 			add = 10
 			tag = EGY
 		}
+		modifier = {
+			add = 10
+			tag = PER
+		}
+		modifier = {
+			add = 10
+			tag = SAU
+		}
 	}
 	default = no
 	reset_on_civilwar = no

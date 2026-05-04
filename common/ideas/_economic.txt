@@ -424,6 +424,14 @@ ideas = {
 
 			available = {
 				has_war_support > 0.15
+				OR = {
+					has_war = yes
+					threat > 0.10
+					has_government = fascism
+					has_government = communism
+					has_government = neutrality
+					tag = GER
+				}
 			}
 
 			cost = 150
@@ -464,6 +472,14 @@ ideas = {
 
 			available = {
 				has_war_support > 0.25
+				OR = {
+					has_war = yes
+					threat > 0.25
+					has_government = fascism
+					has_government = communism
+					has_government = neutrality
+					tag = GER
+				}
 			}
 
 			cost = 150
@@ -530,6 +546,7 @@ ideas = {
 			available = {
 				has_war_support > 0.5
 				OR = {
+					threat > 0.50
 					has_government = fascism
 					has_government = communism
 					custom_trigger_tooltip = { tooltip = or_clarification_tooltip always = no }
@@ -614,6 +631,7 @@ ideas = {
 			available = {
 				has_war = yes
 				has_war_support > 0.8
+				threat > 0.75
 				any_enemy_country = {
 					ic_ratio = {
 						tag = ROOT

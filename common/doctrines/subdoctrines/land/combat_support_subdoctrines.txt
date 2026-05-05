@@ -387,9 +387,9 @@ flying_batteries = {
     available = {
     
     }
-    visible = {
-        has_dlc = "No Compromise, No Surrender"
-    }
+    #visible = {
+    #    has_dlc = "No Compromise, No Surrender"
+    #}
 
     
     ai_will_do = {
@@ -474,9 +474,9 @@ mobile_recon_and_assault = {
     available = {
         always = yes
     }
-    visible = {
-        has_dlc = "La Resistance"
-    }
+    #visible = {
+    #    has_dlc = "La Resistance"
+    #}
     
     ai_will_do = {
 
@@ -663,9 +663,9 @@ self_propelled_support = {
     available = {
        
     }
-    visible = {
-        has_dlc = "No Compromise, No Surrender"
-    }
+    #visible = {
+    #    has_dlc = "No Compromise, No Surrender"
+    #}
 
 
     ai_will_do = { base = 0 }
@@ -776,9 +776,9 @@ siege_artillery = {
         is_special_project_completed = sp:sp_land_super_heavy_howitzer
 
     }
-    visible = {
-        has_dlc = "Gotterdammerung"
-    }
+    #visible = {
+    #    has_dlc = "Gotterdammerung"
+    #}
 
     ai_will_do = { base = 0 }
 

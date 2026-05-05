@@ -525,9 +525,9 @@ mounted_infantry = {
     available = {
         always = yes
     }
-    visible = {
-        has_dlc = "No Compromise, No Surrender"
-    }
+    #visible = {
+    #    has_dlc = "No Compromise, No Surrender"
+    #}
 
     ai_will_do = { 
         base = 1
@@ -618,9 +618,9 @@ commandos = {
     available = {
        
     }
-    visible = {
-        has_dlc = "No Compromise, No Surrender"
-    }
+    #visible = {
+    #    has_dlc = "No Compromise, No Surrender"
+    #}
 
 
     ai_will_do = { base = 0 }
@@ -737,9 +737,9 @@ irregulars = {
     available = {
         
     }
-    visible = {
-        has_dlc = "No Compromise, No Surrender"
-    }
+    #visible = {
+    #    has_dlc = "No Compromise, No Surrender"
+    #}
 
 
     ai_will_do = { 
@@ -831,9 +831,9 @@ peoples_war = {
     available = {
         
     }
-    visible = {
-        has_dlc = "No Compromise, No Surrender"
-    }
+    #visible = {
+    #    has_dlc = "No Compromise, No Surrender"
+    #}
     ai_will_do = {
 
         base = 1

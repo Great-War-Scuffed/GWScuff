@@ -473,9 +473,9 @@ deep_battle = {
         always = yes
     }
 
-    visible = {
-            has_dlc = "La Resistance"
-    }
+    #visible = {
+    #        has_dlc = "La Resistance"
+    #}
 
     ai_will_do = {
 
@@ -721,9 +721,9 @@ guerilla_war = {
     available = {
         always = yes
     }
-    visible = {
-        has_dlc = "No Compromise, No Surrender"
-    }
+    #visible = {
+    #    has_dlc = "No Compromise, No Surrender"
+    #}
 
     ai_will_do = { 
         base = 1
@@ -938,9 +938,9 @@ expeditionary_warfare = {
     available = {
     
     }
-    visible = {
-        has_dlc = "No Compromise, No Surrender"
-    }
+    #visible = {
+    #    has_dlc = "No Compromise, No Surrender"
+    #}
 
     ai_will_do = {
 

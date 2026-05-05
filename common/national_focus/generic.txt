@@ -148,6 +148,10 @@ focus_tree = {
 			add = 10
 			tag = SAU
 		}
+		modifier = {
+			add = 10
+			tag = NFL
+		}
 	}
 	default = no
 	reset_on_civilwar = no

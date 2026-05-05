@@ -421,6 +421,9 @@ every_state = {
 		TUR_minorities_idea
 		TUR_ittihadist_academy_spirit_no_remove
 	}
+
+	activate_advisor = TUR_mustafa_kemal
+
 	#now scripted GUI
 	setup_minorities = yes
 }

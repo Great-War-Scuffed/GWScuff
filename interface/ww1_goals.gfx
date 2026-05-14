@@ -751,6 +751,83 @@ spriteTypes = {
 	}
 ###Italy
 	SpriteType = { 
+		name = "GFX_focus_ITA_chiudere_il_vaticano"
+		texturefile = "gfx/interface/goals/ITA/ITA_chiudere_il_vaticano.png"
+	}
+	SpriteType = { 
+		name = "GFX_focus_ITA_le_montagne_sono_degli_italiani"
+		texturefile = "gfx/interface/goals/ITA/ITA_le_montagne_sono_degli_italiani.png"
+	}
+	SpriteType = { 
+		name = "GFX_focus_ITA_le_coste_appartengono_agli_italiani"
+		texturefile = "gfx/interface/goals/ITA/ITA_le_coste_appartengono_agli_italiani.png"
+	}
+	SpriteType = { 
+		name = "GFX_focus_ITA_caccia_il_re_dal_paese"
+		texturefile = "gfx/interface/goals/ITA/ITA_caccia_il_re_dal_paese.png"
+	}
+	SpriteType = { 
+		name = "GFX_focus_ITA_paesi_occidentali_socialisti"
+		texturefile = "gfx/interface/goals/ITA/ITA_paesi_occidentali_socialisti.png"
+	}
+	SpriteType = { 
+		name = "GFX_focus_ITA_terre_orientali_socialiste"
+		texturefile = "gfx/interface/goals/ITA/ITA_terre_orientali_socialiste.png"
+	}
+	SpriteType = { 
+		name = "GFX_focus_ITA_portare_il_socialismo_ai_tedeschi"
+		texturefile = "gfx/interface/goals/ITA/ITA_portare_il_socialismo_ai_tedeschi.png"
+	}
+	SpriteType = { 
+		name = "GFX_focus_ITA_portare_la_morte_ai_francesi"
+		texturefile = "gfx/interface/goals/ITA/ITA_portare_la_morte_ai_francesi.png"
+	}
+	SpriteType = { 
+		name = "GFX_focus_ITA_essere_lincubo_dei_tedeschi"
+		texturefile = "gfx/interface/goals/ITA/ITA_essere_lincubo_dei_tedeschi.png"
+	}
+	SpriteType = { 
+		name = "GFX_focus_ITA_la_democrazia_ha_vinto"
+		texturefile = "gfx/interface/goals/ITA/ITA_la_democrazia_ha_vinto.png"
+	}
+	SpriteType = { 
+		name = "GFX_focus_ITA_uomo_danni"
+		texturefile = "gfx/interface/goals/ITA/ITA_uomo_danni.png"
+	}
+	SpriteType = { 
+		name = "GFX_focus_ITA_sviluppare_litalia"
+		texturefile = "gfx/interface/goals/ITA/ITA_sviluppare_litalia.png"
+	}
+	spriteType = {
+		name = "GFX_focus_ITA_accordo_con_francia_e_gran_bretagna"
+		textureFile = "gfx/interface/goals/ITA/ITA_accordo_con_francia_e_gran_bretagna.png"
+	}
+	spriteType = {
+		name = "GFX_focus_ITA_accordo_per_le_alpi"
+		textureFile = "gfx/interface/goals/ITA/ITA_accordo_per_le_alpi.png"
+	}
+	spriteType = {
+		name = "GFX_focus_ITA_piano_di_sviluppo_giovanni_giolitti"
+		textureFile = "gfx/interface/goals/ITA/ITA_piano_di_sviluppo_giovanni_giolitti.png"
+	}
+
+	SpriteType = { 
+		name = "GFX_focus_ITA_difensori_della_nuova_italia"
+		texturefile = "gfx/interface/goals/ITA/ITA_difensori_della_nuova_italia.png"
+	}
+	SpriteType = { 
+		name = "GFX_focus_ITA_elezioni_del_1910"
+		texturefile = "gfx/interface/goals/ITA/ITA_elezioni_del_1910.png"
+	}
+	SpriteType = { 
+		name = "GFX_focus_ITA_boschetto_adriatico"
+		texturefile = "gfx/interface/goals/ITA/ITA_boschetto_adriatico.png"
+	}
+	SpriteType = {
+		name = "GFX_focus_ITA_economic_reformist"
+		texturefile = "gfx/interface/goals/ITA/ITA_economic_reformist.png"
+	}
+	SpriteType = { 
 		name = "GFX_focus_italian_monarchy"
 		texturefile = "gfx/interface/goals/focus_italian_monarchy.png"
 	}
@@ -773,14 +850,6 @@ spriteTypes = {
 	SpriteType = {
 		name = "GFX_focus_ita_giolitti"
 		texturefile = "gfx/interface/goals/focus_ita_giolitti.png"
-	}
-	SpriteType = {
-		name = "GFX_focus_ITA_centralised_industry"
-		texturefile = "gfx/interface/goals/ITA/ITA_centralised_industry.png"
-	}
-	SpriteType = {
-		name = "GFX_focus_ITA_settle_libya"
-		texturefile = "gfx/interface/goals/ITA/ITA_settle_libya.png"
 	}
 	SpriteType = {
 		name = "GFX_focus_ita_victor_emanuel_iii"
@@ -813,15 +882,6 @@ spriteTypes = {
 	SpriteType = {
 		name = "GFX_focus_ita_ANI"
 		texturefile = "gfx/interface/goals/focus_ita_ANI.png"
-	}
-	
-	SpriteType = {
-		name = "GFX_focus_river_focus"
-		texturefile = "gfx/interface/goals/river_focus.dds"
-	}
-	SpriteType = {
-		name = "GFX_focus_ITA_army_officer"
-		texturefile = "gfx/interface/goals/focus_ITA_army_officer.png"
 	}
 	#Bulgaria
 	SpriteType = {

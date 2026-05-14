@@ -1363,7 +1363,7 @@ technologies = {
 	}
 
 	excavation1 = {		
-		local_resources_factor = 0.10
+		local_resources_factor = 0.15
 		path = {
 			leads_to_tech = stainless_steel
 			research_cost_coeff = 1
@@ -1452,7 +1452,7 @@ technologies = {
 		}
 	}
 	excavation2 = {	
-		local_resources_factor = 0.10	
+		local_resources_factor = 0.15	
 		path = {
 			leads_to_tech = excavation3
 			research_cost_coeff = 1
@@ -1499,7 +1499,7 @@ technologies = {
 		}
 	}
 	excavation3 = {
-		local_resources_factor = 0.10		
+		local_resources_factor = 0.15		
 		path = {
 			leads_to_tech = excavation4
 			research_cost_coeff = 1
@@ -1543,7 +1543,7 @@ technologies = {
 		}
 	}
 	excavation4 = {		
-		local_resources_factor = 0.10	
+		local_resources_factor = 0.15	
 		path = {
 			leads_to_tech = excavation5
 			research_cost_coeff = 1
@@ -1588,7 +1588,7 @@ technologies = {
 		}
 	}			
 	excavation5 = {
-		local_resources_factor = 0.10
+		local_resources_factor = 0.15
 		research_cost = 2
 		start_year = 1920
 		categories = {

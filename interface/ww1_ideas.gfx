@@ -2848,28 +2848,70 @@ spriteTypes = {
 		name = "GFX_idea_ROM_prince_nicolae"
 		texturefile = "gfx/interface/ideas/ROM/idea_ROM_Prince_Nicolae.png"
 	}
-	spriteType = {
-		name = "GFX_idea_ROM_caile_ferate_romane"
-		texturefile = "gfx/interface/ideas/ROM/idea_ROM_caile_ferate_romane.png"
-	}
-	spriteType = {
-		name = "GFX_idea_ROM_rafinaria_steaua_romana"
-		texturefile = "gfx/interface/ideas/ROM/idea_ROM_rafinaria_steaua_romana.png"
-	}
-	spriteType = {
-		name = "GFX_idea_ROM_santierul_naval_constanta"
-		texturefile = "gfx/interface/ideas/ROM/idea_ROM_santierul_naval_constanta.png"
-	}
-	spriteType = {
-		name = "GFX_idea_ROM_universitatea_bucuresti"
-		texturefile = "gfx/interface/ideas/ROM/idea_ROM_universitatea_bucuresti.png"
-	}
 	#Ethiopia
 	spriteType = {
 		name = "GFX_idea_ETH_zewditu"
 		texturefile = "gfx/interface/ideas/ETH/idea_ETH_zewditu.png"
 	}
+	# Japan
+	spriteType = {
+		name = "GFX_idea_JAP_heavy_kawasaki_industries"
+		texturefile = "gfx/interface/ideas/JAP/JAP_heavy_kawasaki_industries.png"
+	}
+	spriteType = {
+		name = "GFX_idea_JAP_national_companies"
+		texturefile = "gfx/interface/ideas/JAP/JAP_national_companies.png"
+	}
+	spriteType = {
+		name = "GFX_idea_JAP_yamaha_corporation"
+		texturefile = "gfx/interface/ideas/JAP/JAP_yamaha_corporation.png"
+	}
+	spriteType = {
+		name = "GFX_idea_JAP_the_sole_power_shadow_shogun"
+		texturefile = "gfx/interface/ideas/JAP/JAP_the_sole_power_shadow_shogun.png"
+	}
+	spriteType = {
+		name = "GFX_idea_JAP_nationalist_officers"
+		texturefile = "gfx/interface/ideas/JAP/JAP_nationalist_officers.png"
+	}
+	spriteType = {
+		name = "GFX_idea_JAP_nationalist_education_system"
+		texturefile = "gfx/interface/ideas/JAP/JAP_nationalist_education_system.png"
+	}
+
+	spriteType = {
+		name = "GFX_idea_JAP_house_of_meiji"
+		texturefile = "gfx/interface/ideas/JAP/JAP_house_of_meiji.png"
+	}
+	spriteType = {
+		name = "GFX_idea_JAP_house_of_taisho"
+		texturefile = "gfx/interface/ideas/JAP/JAP_house_of_taisho.png"
+	}
 	#Spain
+	spriteType = {
+		name = "GFX_idea_SPR_derrota_cubana"
+		texturefile = "gfx/interface/ideas/SPR/SPR_derrota_cubana.png"
+	}
+	spriteType = {
+		name = "GFX_idea_SPR_asesinato_del_general_castillejos"
+		texturefile = "gfx/interface/ideas/SPR/SPR_asesinato_del_general_castillejos.png"
+	}
+	spriteType = {
+		name = "GFX_idea_SPR_golpe_de_martinez_campos"
+		texturefile = "gfx/interface/ideas/SPR/SPR_golpe_de_martinez_campos.png"
+	}
+	spriteType = {
+		name = "GFX_idea_SPR_artilleros_en_huelga"
+		texturefile = "gfx/interface/ideas/SPR/SPR_artilleros_en_huelga.png"
+	}
+	spriteType = {
+		name = "GFX_idea_SPR_proceso_de_transicion_a_la_republica"
+		texturefile = "gfx/interface/ideas/SPR/SPR_proceso_de_transicion_a_la_republica.png"
+	}
+	spriteType = {
+		name = "GFX_idea_SPR_III_catalonia_revolt"
+		texturefile = "gfx/interface/ideas/SPR/SPR_III_catalonia_revolt.png"
+	}
 	spriteType = {
 		name = "GFX_idea_SPR_alfonso_xiii"
 		texturefile = "gfx/interface/ideas/SPR/idea_SPR_alfonso_xiii.png"

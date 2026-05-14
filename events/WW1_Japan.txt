@@ -5,7 +5,6 @@ country_event = {
 	id = ww1_japan.700
 	title = ww1_japan.100.t
 	desc = ww1_japan.100.d
-	picture = GFX_report_event_japanese_army_parade
 	is_triggered_only = yes
 	option = {
 		name = ww1_japan.700.a
@@ -15,23 +14,20 @@ country_event = {
 		trigger = {
 			is_ai = yes
 		}
-		transfer_navy = {
-			target = FROM
+		KOR = {
+			transfer_navy = {
+				target = JAP
+			}
+			set_country_flag = korea_is_annexed
+			clr_country_flag = protectorate
 		}
-		set_country_flag = korea_is_annexed
-		clr_country_flag = protectorate
-		FROM = {
+		JAP = {
 			annex_country = {
-				target = ROOT
+				target = KOR
 				transfer_troops = no
 			}
 		}
-		FROM = {
-			news_event = {
-				id = ww1_japan.100
-				days = 6
-			}
-		}
+		news_event = ww1_japan.100
 	}
 	# Playable
 	option = {
@@ -39,93 +35,86 @@ country_event = {
 		trigger = {
 			is_ai = no
 		}
-		transfer_navy = {
-			target = FROM
-		}
-		effect_tooltip = {
-			set_cosmetic_tag = KOR_JAP_governor_general
-		}
-		hidden_effect = {
-			set_country_flag = korea_is_annexed
-			country_event = ww1_korea.14
-		}
-		FROM = {
-			news_event = {
-				id = ww1_japan.100
-				days = 6
+		KOR = {
+			transfer_navy = {
+				target = JAP
 			}
+			set_country_flag = korea_is_annexed #ww1_korea.14 will be triggered
 		}
+		news_event = ww1_japan.100
 	}
 	option = {
 		name = ww1_japan.700.b
 		ai_chance = {
 			factor = 0
 		}
-		FROM = {
-			end_puppet = ROOT
+		JAP = {
+			end_puppet = KOR
 			declare_war_on = {
-				target = ROOT
+				target = KOR
 				type = annex_everything
 			}
 		}
 		hidden_effect = {
-			clr_country_flag = protectorate
-			division_template = {
-				name = "Militia"
-				regiments = {
-					militia = {
-						x = 0
-						y = 0
-					}
-					militia = {
-						x = 0
-						y = 1
-					}
-				}
-			}
-			800 = {
-				create_unit = {
-					division = "name = \"1. Militia\" division_template = \"Militia\" start_experience_factor = 0"
-					owner = KOR
-				}
-				create_unit = {
-					division = "name = \"2. Militia\" division_template = \"Militia\" start_experience_factor = 0"
-					owner = KOR
-				}
-				create_unit = {
-					division = "name = \"3. Militia\" division_template = \"Militia\" start_experience_factor = 0"
-					owner = KOR
-				}
-				create_unit = {
-					division = "name = \"4. Militia\" division_template = \"Militia\" start_experience_factor = 0"
-					owner = KOR
-				}
-				create_unit = {
-					division = "name = \"5. Militia\" division_template = \"Militia\" start_experience_factor = 0"
-					owner = KOR
-				}
-				create_unit = {
-					division = "name = \"6. Militia\" division_template = \"Militia\" start_experience_factor = 0"
-					owner = KOR
-				}
-				create_unit = {
-					division = "name = \"7. Militia\" division_template = \"Militia\" start_experience_factor = 0"
-					owner = KOR
-				}
-			}
-			KOR_yi_hui = {
-				add_country_leader_role = {
-					promote_leader = yes
-					country_leader = {
-						ideology = semi_constitutional_monarchy
-						traits = { assassination_survivor inexperienced_imperialist }
+			KOR = {
+				clr_country_flag = protectorate
+				division_template = {
+					name = "Militia"
+					regiments = {
+						militia = {
+							x = 0
+							y = 0
+						}
+						militia = {
+							x = 0
+							y = 1
+						}
 					}
 				}
+				800 = {
+					create_unit = {
+						division = "name = \"1. Militia\" division_template = \"Militia\" start_experience_factor = 0"
+						owner = KOR
+					}
+					create_unit = {
+						division = "name = \"2. Militia\" division_template = \"Militia\" start_experience_factor = 0"
+						owner = KOR
+					}
+					create_unit = {
+						division = "name = \"3. Militia\" division_template = \"Militia\" start_experience_factor = 0"
+						owner = KOR
+					}
+					create_unit = {
+						division = "name = \"4. Militia\" division_template = \"Militia\" start_experience_factor = 0"
+						owner = KOR
+					}
+					create_unit = {
+						division = "name = \"5. Militia\" division_template = \"Militia\" start_experience_factor = 0"
+						owner = KOR
+					}
+					create_unit = {
+						division = "name = \"6. Militia\" division_template = \"Militia\" start_experience_factor = 0"
+						owner = KOR
+					}
+					create_unit = {
+						division = "name = \"7. Militia\" division_template = \"Militia\" start_experience_factor = 0"
+						owner = KOR
+					}
+				}
+				KOR_yi_hui = {
+					add_country_leader_role = {
+						promote_leader = yes
+						country_leader = {
+							ideology = semi_constitutional_monarchy
+							traits = { assassination_survivor inexperienced_imperialist }
+						}
+					}
+				}
+				unlock_national_focus = KOR_the_light_returned
+				unlock_national_focus = KOR_establish_government
+				unlock_national_focus = KOR_restoration_of_the_monarchy
 			}
-			unlock_national_focus = KOR_the_light_returned
-			unlock_national_focus = KOR_establish_government
-			unlock_national_focus = KOR_restoration_of_the_monarchy
-			FROM = {
+			JAP = {
 				division_template = {
 					name = "Shubi-tai"
 					regiments = {
@@ -343,19 +332,19 @@ country_event = {
 		days = 30
 	}
 	trigger = {
-		original_tag = JAP
-		has_country_leader = {
-			character = JAP_mutsuhito
-			ruling_only = no
-		}
-		not = {
-			has_country_flag = king_death_meiji
-			has_country_leader = {
-				character = JAP_hirohito
-			}
-		}
-		date > 1912.7.1
-		has_start_date < 1914.1.1
+		always = no
+		#original_tag = JAP
+		#has_country_leader = {
+		#	character = JAP_mutsuhito
+		#	ruling_only = no
+		#}
+		#not = {
+		#	has_country_flag = king_death_meiji
+		#	has_country_leader = {
+		#		character = JAP_hirohito
+		#	}
+		#}
+		#date > 1912.7.1
 	}
 	immediate = {
 		hidden_effect = {
@@ -420,7 +409,6 @@ country_event = {
 		has_character = JAP_kotoku_shusui
 		is_subject = no
 		date > 1910.10.1
-		has_start_date < 1914.1.1
 	}
 	fire_only_once = yes
 	mean_time_to_happen = { days = 80 }
@@ -670,6 +658,9 @@ news_event = {
 	mean_time_to_happen = {
 		days = 1
 	}
+	immediate = {
+		set_global_flag = kis_japankorea_annexation
+	}
 	option = {
 		name = ww1_japan.100.a
 		ai_chance = {
@@ -838,9 +829,14 @@ country_event = {
 		}
 		JAP = {
 			release_puppet = KOR
-			set_autonomy = {
-				target = KOR
-				autonomy_state = autonomy_colony
+			if = {
+				limit = {
+					has_dlc = "Together for Victory"
+				}
+				set_autonomy = {
+					target = KOR
+					autonomy_state = autonomy_colony
+				}
 			}
 			KOR = {
 				set_politics = {
@@ -853,31 +849,12 @@ country_event = {
 					long_name = KOR_governorship_party_long
 					name = KOR_governorship_party
 				}
-				KOR = {
-					KOR_japanese_administraton = {
-						set_nationality = PREV.PREV
-						if = {
-							limit = {
-								has_ideology = stratocracy
-							}
-							promote_character = stratocracy
-						}
-						else = {
-							add_country_leader_role = {
-								promote_leader = yes
-								country_leader = {
-									ideology = stratocracy
-									traits = { foreign_leader }
-								}
-							}
-						}
-						set_character_name = "KOR_JAP_resident_general_name"
-						set_portraits = {
-							civilian = {
-								large = "gfx/leaders/KOR/KOR_JAP_resident_general.png"
-							}
-						}
-					}	
+				create_country_leader = {
+					name = "KOR_JAP_resident_general_name"
+					picture = "gfx/leaders/KOR/KOR_JAP_governor_general.png"
+					ideology = stratocracy
+					
+					
 				}
 				add_popularity = {
 					ideology = fascism
@@ -893,9 +870,14 @@ country_event = {
 		}
 		JAP = {
 			release_puppet = KOR
-			set_autonomy = {
-				target = KOR
-				autonomy_state = autonomy_colony
+			if = {
+				limit = {
+					has_dlc = "Together for Victory"
+				}
+				set_autonomy = {
+					target = KOR
+					autonomy_state = autonomy_colony
+				}
 			}
 			KOR = {
 				set_politics = {
@@ -908,31 +890,12 @@ country_event = {
 					long_name = KOR_governorship_party_long
 					name = KOR_governorship_party
 				}
-				KOR = {
-					KOR_japanese_administraton = {
-						set_nationality = PREV.PREV
-						if = {
-							limit = {
-								has_ideology = stratocracy
-							}
-							promote_character = stratocracy
-						}
-						else = {
-							add_country_leader_role = {
-								promote_leader = yes
-								country_leader = {
-									ideology = stratocracy
-									traits = { foreign_leader }
-								}
-							}
-						}
-						set_character_name = "KOR_JAP_governor_general_name"
-						set_portraits = {
-							civilian = {
-								large = "gfx/leaders/KOR/KOR_JAP_governor_general.png"
-							}
-						}
-					}	
+				create_country_leader = {
+					name = "KOR_JAP_governor_general_name"
+					picture = "gfx/leaders/KOR/KOR_JAP_governor_general.png"
+					ideology = stratocracy
+					
+					
 				}
 				add_popularity = {
 					ideology = fascism
@@ -950,8 +913,22 @@ news_event = {
 	title = ww1_japan.10.t
 	desc = ww1_japan.10.d
 	picture = GFX_news_event_japanese_parade
-	is_triggered_only = yes
+	trigger = {
+		#has_global_flag = interbellum
+		JAP = {
+			has_war_with = FNG
+		}
+		NOT = { has_global_flag = manchurian_invasion_news }
+	}
 	major = yes
+	mean_time_to_happen = {
+		days = 0
+	}
+	immediate = {
+		hidden_effect = {
+			set_global_flag = manchurian_invasion_news
+		}
+	}
 	option = {
 		name = ww1_japan.10.a
 		trigger = {
@@ -998,7 +975,6 @@ news_event = {
 	trigger = {
 		MAN = {
 			is_subject_of = JAP
-			NOT = { has_cosmetic_tag = MAN_kwantung_army }
 		}
 		NOT = {
 			has_global_flag = manchukuo
@@ -1143,63 +1119,13 @@ country_event = {
 			name = JAP_raiden_ei
 			picture = "gfx/leaders/JAP/JAP_raiden_ei.png"
 			female = yes
-			ideology = absolute_monarchy
+			ideology = autocracy
 			traits = {
 				kaiserin_of_the_people
 				imperial_sanction
 			}
 		}
 	}
-}
-
-# Invasion of Manchuria
-country_event = {
-	id = ww1_japan.15
-	title = ww1_japan.15.t
-	desc = ww1_japan.15.d
-	picture = GFX_report_event_japanese_army_parade
-	is_triggered_only = yes
-	option = {
-		name = ww1_japan.15.a
-		set_politics = {
-			ruling_party = fascism
-			elections_allowed = no
-		}
-		add_popularity = {
-			ideology = fascism
-			popularity = 0.20
-		}
-		random_other_country = {
-			limit = {
-				is_subject_of = ROOT
-				original_tag = MAN
-			}
-			every_enemy_country = {
-				ROOT = {
-					add_to_war = {
-						targeted_alliance = PREV.PREV
-						enemy = PREV
-					}
-				}
-			}
-		}
-		ai_chance = {
-			base = 100
-		}
-	}
-	# option = {
-	# 	name = ww1_japan.15.b
-	# 	random_other_country = {
-	# 		limit = {
-	# 			is_subject_of = ROOT
-	# 			original_tag = MAN
-	# 		}
-	# 		ROOT = { end_puppet = PREV }
-	# 	}
-	# 	ai_chance = {
-	# 		base = 0
-	# 	}
-	# }
 }
 
 
@@ -1213,27 +1139,28 @@ country_event = {
 	title = ww1_kiautschou.1.t
 	desc = ww1_kiautschou.1.d
 	picture = GFX_report_event_usa_heavy_cruiser
-	trigger = {
-		tag = JAP
-		GER = {
-			has_war_with = ROOT
-			745 = { is_owned_and_controlled_by = PREV }
-		}
-		872 = {
-			owns_or_subject_of = no
-			owner = {
-				NOT = {
-					has_war_with = ROOT
-					has_war_with = FROM
-				}
-			}
-		}
-		NOT = { has_decision = JAP_invade_kiautschou_mission_activate }
-	}
+	#trigger = {
+	#	tag = JAP
+	#	GER = {
+	#		has_war_with = ROOT
+	#		745 = { is_owned_and_controlled_by = PREV }
+	#	}
+	#	872 = {
+	#		owns_or_subject_of = no
+	#		owner = {
+	#			NOT = {
+	#				has_war_with = ROOT
+	#				has_war_with = FROM
+	#			}
+	#		}
+	#	}
+	#	#NOT = { has_decision = JAP_invade_kiautschou_mission_activate }
+	#}
+	is_triggered_only = yes
 	fire_only_once = yes
 	option = {
 		name = ww1_kiautschou.1.a
-		unlock_decision_tooltip = JAP_invade_kiautschou_mission_activate
+		#unlock_decision_tooltip = JAP_invade_kiautschou_mission_activate
 	}
 }
 
@@ -1366,6 +1293,40 @@ country_event = {
 	is_triggered_only = yes
 	option = {
 		name = ww1_kiautschou.5.a
+		# spawns guard regiments
+		ROOT = {
+			if = {
+				limit = {
+					NOT = { has_template = "Tsingtau Garnison" }
+				}
+				division_template = {
+					name = "Tsingtau Garnison"
+					division_names_group = GER_GAR_01
+					override_model = GER_infantry_0_entity
+					obsolete = yes
+					
+					regiments = {
+						infantry = {
+							x = 0
+							y = 0
+						}
+						infantry = {
+							x = 0
+							y = 1
+						}
+					}
+					priority = 0	
+				}
+			}
+		}
+		745 = {
+			create_unit = {
+				division = "name = \"Schutzgebiet Kiautschou\" division_template = \"Tsingtau Garnison\" start_experience_factor = 0.1 start_equipment_factor = 1.0"
+				owner = ROOT
+				prioritize_location = 10000
+				allow_spawning_on_enemy_provs = yes
+			}
+		}
 	}
 }
 
@@ -1397,13 +1358,7 @@ country_event = {
 	picture = GFX_report_event_generic_peaceful_annexation
 	trigger = {
 		tag = JAP
-		OR = {
-			has_idea = MTG_washington_naval_treaty_adherent
-			AND = {
-				is_league_of_nations_member = yes
-				date > 1921.11.12
-			}
-		}
+		has_idea = MTG_washington_naval_treaty_adherent
 		OR = {
 			owns_state = 745
 			owns_state = 746
@@ -1570,5 +1525,143 @@ country_event = {
 				}
 			}
 		}
+	}
+}
+
+country_event = {
+	id = ww1_japan.300
+	title = "Japanese Empire demands Manchuria"
+	is_triggered_only = yes
+	fire_only_once = no
+
+	option = {
+		ai_chance = {
+			base = 75
+		}
+		name = "They cane have it"
+
+		every_state = {
+			limit = {
+				OR = {
+					state = 744
+					state = 716
+					state = 872
+					state = 328
+					state = 717
+					state = 715
+					state = 617
+					state = 714
+				}
+			}
+			transfer_state_to = JAP
+		}
+		RUS = {
+			country_event = ww1_japan.301
+		}
+	}
+	option = {
+		name = "No we wont give our lands"
+
+		create_wargoal = {
+			target = QIN
+			type = annex_everything
+		}
+	}
+}
+
+country_event = {
+	id = ww1_japan.301
+	title = "Japanese Armed Forces seizes Manchuria and Demands Railways"
+	is_triggered_only = yes
+	fire_only_once = no
+
+	option = {
+		ai_chance = {
+			base = 100
+		}
+		name = "They cane have it"
+
+		every_state = {
+			limit = {
+				OR = {
+					state = 909
+					state = 910
+					state = 908
+				}
+			}
+			transfer_state_to = JAP
+		}
+	}
+	option = {
+		name = "No we wont give our lands"
+
+		FROM = {
+			create_wargoal = {
+				target = ROOT
+				type = annex_everything
+			}
+		}
+	}
+}
+
+country_event = {
+	id = ww1_japan.302
+	title = "Japanese Empire wants to unification with our country"
+	is_triggered_only = yes
+	fire_only_once = no
+
+	option = {
+		ai_chance = {
+			base = 100
+		}
+		name = "Accept"
+
+		FROM = {
+			annex_country = {
+				target = ROOT
+				transfer_troops = yes
+			}
+
+			every_owned_state = {
+				limit = {
+					is_core_of = ROOT
+				}
+				add_compliance = 90
+			}
+		}
+	}
+	option = {
+		name = "Reject"
+	}
+}
+
+country_event = {
+	id = ww1_japan.303
+	title = "Determine the fate of Ökuma Shigenobu"
+	desc = "In 1889, Tōyama and Genyosha were involved in an assassination attempt on foreign minister Ōkuma Shigenobu, but he escaped by losing his leg. Now we will decide what is going to happen:"
+	picture = ww1_japan_303
+
+	is_triggered_only = yes
+	fire_only_once = no
+
+	option = {
+		name = "Finish the unfinished job"
+		add_stability = -0.05
+		add_war_support = 0.15
+		add_popularity = {
+			ideology = fascism
+			popularity = 0.10
+		}
+		retire_character = JAP_okuma_shigenobu
+	}
+	option = {
+		name = "Spare his life and Keep him under house arrest"
+		add_stability = 0.05
+		add_war_support = -0.15
+		add_popularity = {
+			ideology = neutrality
+			popularity = 0.05
+		}
+		retire_character = JAP_okuma_shigenobu
 	}
 }

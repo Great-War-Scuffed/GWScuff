@@ -1888,6 +1888,20 @@ shared_focus = {
 			has_focus_tree = morocco_focus	
 		}
 	}
+	offset = {
+		x = -4
+		y = 4
+		trigger = {
+			tag = ROM
+		}
+	}
+	offset = {
+		x = -4
+		y = 4
+		trigger = {
+			tag = SPR
+		}
+	}
 }
 
 
@@ -2106,6 +2120,20 @@ shared_focus = {
 		y = -6
 		trigger = {
 			has_focus_tree = morocco_focus	
+		}
+	}
+	offset = {
+		x = -4
+		y = 4
+		trigger = {
+			tag = ROM
+		}
+	}
+	offset = {
+		x = -4
+		y = 4
+		trigger = {
+			tag = SPR
 		}
 	}
 }
@@ -2362,6 +2390,20 @@ shared_focus = {
 		y = -6
 		trigger = {
 			has_focus_tree = morocco_focus	
+		}
+	}
+	offset = {
+		x = -4
+		y = 4
+		trigger = {
+			tag = ROM
+		}
+	}
+	offset = {
+		x = -4
+		y = 4
+		trigger = {
+			tag = SPR
 		}
 	}
 }

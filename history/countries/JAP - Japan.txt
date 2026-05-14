@@ -1,11 +1,11 @@
 ﻿capital = 282
 
 set_fuel_ratio = 0.20
-set_research_slots = 4
+set_research_slots = 3
 set_stability = 0.3
 set_war_support = 0.7
 set_convoys = 300
-set_major = yes
+set_major = no
 
 # Anglo-Japanese Alliance
 give_guarantee = ENG
@@ -14,11 +14,42 @@ add_opinion_modifier = {
 	modifier = anglo_japanese_alliance
 }
 
-set_autonomy = {
-	target = KOR
-	autonomous_state = autonomy_wtt_imperial_protectorate
+set_party_name = {
+	ideology = communism
+	long_name = JAP_communism_party_banned
+	name = JAP_communism_party_banned
+}
+set_country_flag = banned_communism_flag
+
+if = {
+	limit = {
+		has_subject_autonomy_feature = yes
+		NOT = { has_dlc = "Waking the Tiger" }
+	}
+	set_autonomy = {
+		target = KOR
+		autonomous_state = autonomy_tgwr_protectorate
+	}
+	KOR = { set_country_flag = protectorate }
+}
+if = {
+	limit = { 
+		has_subject_autonomy_feature = no
+	}
+	puppet = KOR
+	KOR = { add_ideas = protectorate }
+}
+if = {
+	limit = { 
+		has_dlc = "Waking the Tiger"
+	}
+	set_autonomy = {
+		target = KOR
+		autonomous_state = autonomy_wtt_imperial_protectorate
+	}
 }
 
+recruit_character = JAP_vito_the_pumper
 recruit_character = JAP_mutsuhito
 
 recruit_character = JAP_yamagata_aritomo
@@ -80,15 +111,12 @@ recruit_character = JAP_hino_kumazo
 recruit_character = JAP_saito_makoto
 recruit_character = JAP_okuma_shigenobu
 recruit_character = JAP_kusunose_yukihiko
-recruit_character = JAP_kanji_ishiwara
-recruit_character = JAP_shigeru_honjo
 
 recruit_character = JAP_takarabe_takeshi
 recruit_character = JAP_yashiro_rokuro
 recruit_character = JAP_ishii_kikujiro
 recruit_character = JAP_arahata_kanson
 
-recruit_character = JAP_kijiro_nambu
 
 1910.1.1 = {
 	oob = "JAP_1910"
@@ -98,7 +126,6 @@ recruit_character = JAP_kijiro_nambu
 		infantry_weapons = 1
 		infantry_weapons1 = 1
 		bicycle_infantry = 1
-		support_weapons = 1
 		
 		#support
 		tech_support = 1
@@ -106,24 +133,14 @@ recruit_character = JAP_kijiro_nambu
 		tech_recon = 1
 		
 		#artillery
-		early_artillery = 1
-		basic_field_gun = 1
+		gw_artillery = 1
 		
 		#engineering
 		electrical_engineering = 1
 		mechanical_engineering = 1
 		generator_battery = 1
 		basic_train = 1
-        basic_railways = 1
-   		construction0 = 1
-        powder_type_b = 1
-		narrow_gauge_railway = 1
         
-	}
-
-	add_breakthrough_progress = {
-		specialization = specialization_naval
-		value = 0.8
 	}
 
 	set_politics = {
@@ -165,6 +182,7 @@ recruit_character = JAP_kijiro_nambu
 		promote_character = conservatism
 	}
 	set_country_flag = king_death_meiji
+	set_global_flag = kis_japankorea_annexation
 	set_global_flag = KOR_105_man_incident
 	set_global_flag = KOT_korean_independence_plot_1914
 	KOR = {
@@ -173,6 +191,10 @@ recruit_character = JAP_kijiro_nambu
 		}
 		set_country_flag = korea_is_annexed
 		clr_country_flag = protectorate
+	}
+	annex_country = {
+		target = KOR
+		transfer_troops = no
 	}
 
 	complete_national_focus = JAP_ww1_diplomatic_effort
@@ -185,8 +207,6 @@ recruit_character = JAP_kijiro_nambu
 	complete_national_focus = JAP_ww1_Japan_Korea_Treaty
 	complete_national_focus = JAP_ww1_Japanese_Expansionism
 	complete_national_focus = JAP_ww1_Xinhai_Revolution_Opportunity
-	complete_national_focus = JAP_ww1_War_in_Europe_Opportunity
-	complete_national_focus = JAP_ww1_Pro_French
 
 	complete_national_focus = JAP_ww1_political_effort
 	complete_national_focus = JAP_ww1_support_republic
@@ -260,7 +280,6 @@ if = {
 		basic_destroyer = 1
 		early_light_cruiser = 1
 		early_heavy_cruiser = 1
-		obsolete_battleship = 1
 		early_battleship = 1
 		early_battlecruiser = 1
 		transport = 1
@@ -273,25 +292,25 @@ if = {
 	}
 	create_equipment_variant = {
 		name = "Fuji Class"
-		type = battleship_0
+		type = battleship_1
 		parent_version = 0
 		obsolete = yes
 	}
 	create_equipment_variant = {
 		name = "Shikishima Class"
-		type = battleship_0
+		type = battleship_1
 		parent_version = 0
 		obsolete = yes
 	}
 	create_equipment_variant = {
 		name = "Katori Class"
-		type = battleship_0
+		type = battleship_1
 		parent_version = 0
 		obsolete = yes
 	}
 	create_equipment_variant = {
 		name = "Satsuma Class"
-		type = battleship_0
+		type = battleship_1
 		parent_version = 0
 	}
 	create_equipment_variant = {
@@ -513,11 +532,9 @@ if = {
 	set_technology = {
 		basic_naval_mines = 1
 		early_ship_hull_light = 1
-        victorian_ship_hull_light = 1
 		basic_ship_hull_light = 1
 		early_ship_hull_submarine = 1
 		early_ship_hull_cruiser = 1
-        protected_ship_hull_cruiser = 1
 		basic_ship_hull_cruiser = 1
 		early_ship_hull_heavy = 1
 		basic_ship_hull_heavy = 1

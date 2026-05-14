@@ -749,7 +749,144 @@ spriteTypes = {
 		name = "GFX_focus_usa_coast_guard"
 		texturefile = "gfx/interface/goals/USA/focus_usa_coast_guard.png"
 	}
+
+	# Spain	
+	spriteType = {
+		name = "GFX_focus_SPR_Sigue_la_politica_del_marxismo"
+		textureFile = "gfx/interface/goals/SPR/SPR_Sigue_la_politica_del_marxismo.png"
+	}
+	spriteType = {
+		name = "GFX_focus_SPR_Disparar_a_los_golpistas"
+		textureFile = "gfx/interface/goals/SPR/SPR_Disparar_a_los_golpistas.png"
+	}
+	spriteType = {
+		name = "GFX_focus_SPR_Cambiar_al_sistema_de_partido_unico"
+		textureFile = "gfx/interface/goals/SPR/SPR_Cambiar_al_sistema_de_partido_único.png"
+	}
+	SpriteType = {
+		name = "GFX_focus_SPR_Dar_derechos_extra_a_los_catalanes"
+		texturefile = "gfx/interface/goals/SPR/SPR_Dar_derechos_extra_a_los_catalanes.png"
+	}
+	SpriteType = {
+		name = "GFX_focus_SPR_lider_de_los_trabajadores"
+		texturefile = "gfx/interface/goals/SPR/SPR_lider_de_los_trabajadores.png"
+	}
+	SpriteType = {
+		name = "GFX_focus_SPR_Deportar_a_la_familia_real"
+		texturefile = "gfx/interface/goals/SPR/SPR_Deportar_a_la_familia_real.png"
+	}
+	SpriteType = {
+		name = "GFX_focus_SPR_protector_del_pueblo"
+		texturefile = "gfx/interface/goals/SPR/SPR_protector_del_pueblo.png"
+	}
+	SpriteType = {
+		name = "GFX_focus_SPR_Nuevo_orden_nuevo_ejercito"
+		texturefile = "gfx/interface/goals/SPR/SPR_Nuevo_orden_nuevo_ejercito.png"
+	}
+	SpriteType = {
+		name = "GFX_focus_SPR_viva_nuestro_rey"
+		texturefile = "gfx/interface/goals/SPR/SPR_viva_nuestro_rey.png"
+	}
+	SpriteType = {
+		name = "GFX_focus_SPR_desmovilizar_al_ejercito_en_huelga"
+		texturefile = "gfx/interface/goals/SPR/SPR_desmovilizar_al_ejercito_en_huelga.png"
+	}
+	SpriteType = {
+		name = "GFX_focus_SPR_colonizar_centroamerica"
+		texturefile = "gfx/interface/goals/SPR/SPR_colonizar_centroamerica.png"
+	}
+	SpriteType = {
+		name = "GFX_focus_SPR_solonizar_sudamerica_y_las_islas"
+		texturefile = "gfx/interface/goals/SPR/SPR_solonizar_sudamerica_y_las_islas.png"
+	}
+	SpriteType = {
+		name = "GFX_focus_SPR_colonizar_mexico"
+		texturefile = "gfx/interface/goals/SPR/SPR_colonizar_mexico.png"
+	}
+	SpriteType = {
+		name = "GFX_focus_SPR_grande_y_fuerte_como_antes"
+		texturefile = "gfx/interface/goals/SPR/SPR_grande_y_fuerte_como_antes.png"
+	}
+
+
 ###Italy
+	SpriteType = { 
+		name = "GFX_focus_ITA_chiudere_il_vaticano"
+		texturefile = "gfx/interface/goals/ITA/ITA_chiudere_il_vaticano.png"
+	}
+	SpriteType = { 
+		name = "GFX_focus_ITA_le_montagne_sono_degli_italiani"
+		texturefile = "gfx/interface/goals/ITA/ITA_le_montagne_sono_degli_italiani.png"
+	}
+	SpriteType = { 
+		name = "GFX_focus_ITA_le_coste_appartengono_agli_italiani"
+		texturefile = "gfx/interface/goals/ITA/ITA_le_coste_appartengono_agli_italiani.png"
+	}
+	SpriteType = { 
+		name = "GFX_focus_ITA_caccia_il_re_dal_paese"
+		texturefile = "gfx/interface/goals/ITA/ITA_caccia_il_re_dal_paese.png"
+	}
+	SpriteType = { 
+		name = "GFX_focus_ITA_paesi_occidentali_socialisti"
+		texturefile = "gfx/interface/goals/ITA/ITA_paesi_occidentali_socialisti.png"
+	}
+	SpriteType = { 
+		name = "GFX_focus_ITA_terre_orientali_socialiste"
+		texturefile = "gfx/interface/goals/ITA/ITA_terre_orientali_socialiste.png"
+	}
+	SpriteType = { 
+		name = "GFX_focus_ITA_portare_il_socialismo_ai_tedeschi"
+		texturefile = "gfx/interface/goals/ITA/ITA_portare_il_socialismo_ai_tedeschi.png"
+	}
+	SpriteType = { 
+		name = "GFX_focus_ITA_portare_la_morte_ai_francesi"
+		texturefile = "gfx/interface/goals/ITA/ITA_portare_la_morte_ai_francesi.png"
+	}
+	SpriteType = { 
+		name = "GFX_focus_ITA_essere_lincubo_dei_tedeschi"
+		texturefile = "gfx/interface/goals/ITA/ITA_essere_lincubo_dei_tedeschi.png"
+	}
+	SpriteType = { 
+		name = "GFX_focus_ITA_la_democrazia_ha_vinto"
+		texturefile = "gfx/interface/goals/ITA/ITA_la_democrazia_ha_vinto.png"
+	}
+	SpriteType = { 
+		name = "GFX_focus_ITA_uomo_danni"
+		texturefile = "gfx/interface/goals/ITA/ITA_uomo_danni.png"
+	}
+	SpriteType = { 
+		name = "GFX_focus_ITA_sviluppare_litalia"
+		texturefile = "gfx/interface/goals/ITA/ITA_sviluppare_litalia.png"
+	}
+	spriteType = {
+		name = "GFX_focus_ITA_accordo_con_francia_e_gran_bretagna"
+		textureFile = "gfx/interface/goals/ITA/ITA_accordo_con_francia_e_gran_bretagna.png"
+	}
+	spriteType = {
+		name = "GFX_focus_ITA_accordo_per_le_alpi"
+		textureFile = "gfx/interface/goals/ITA/ITA_accordo_per_le_alpi.png"
+	}
+	spriteType = {
+		name = "GFX_focus_ITA_piano_di_sviluppo_giovanni_giolitti"
+		textureFile = "gfx/interface/goals/ITA/ITA_piano_di_sviluppo_giovanni_giolitti.png"
+	}
+
+	SpriteType = { 
+		name = "GFX_focus_ITA_difensori_della_nuova_italia"
+		texturefile = "gfx/interface/goals/ITA/ITA_difensori_della_nuova_italia.png"
+	}
+	SpriteType = { 
+		name = "GFX_focus_ITA_elezioni_del_1910"
+		texturefile = "gfx/interface/goals/ITA/ITA_elezioni_del_1910.png"
+	}
+	SpriteType = { 
+		name = "GFX_focus_ITA_boschetto_adriatico"
+		texturefile = "gfx/interface/goals/ITA/ITA_boschetto_adriatico.png"
+	}
+	SpriteType = {
+		name = "GFX_focus_ITA_economic_reformist"
+		texturefile = "gfx/interface/goals/ITA/ITA_economic_reformist.png"
+	}
 	SpriteType = { 
 		name = "GFX_focus_italian_monarchy"
 		texturefile = "gfx/interface/goals/focus_italian_monarchy.png"
@@ -773,14 +910,6 @@ spriteTypes = {
 	SpriteType = {
 		name = "GFX_focus_ita_giolitti"
 		texturefile = "gfx/interface/goals/focus_ita_giolitti.png"
-	}
-	SpriteType = {
-		name = "GFX_focus_ITA_centralised_industry"
-		texturefile = "gfx/interface/goals/ITA/ITA_centralised_industry.png"
-	}
-	SpriteType = {
-		name = "GFX_focus_ITA_settle_libya"
-		texturefile = "gfx/interface/goals/ITA/ITA_settle_libya.png"
 	}
 	SpriteType = {
 		name = "GFX_focus_ita_victor_emanuel_iii"
@@ -813,15 +942,6 @@ spriteTypes = {
 	SpriteType = {
 		name = "GFX_focus_ita_ANI"
 		texturefile = "gfx/interface/goals/focus_ita_ANI.png"
-	}
-	
-	SpriteType = {
-		name = "GFX_focus_river_focus"
-		texturefile = "gfx/interface/goals/river_focus.dds"
-	}
-	SpriteType = {
-		name = "GFX_focus_ITA_army_officer"
-		texturefile = "gfx/interface/goals/focus_ITA_army_officer.png"
 	}
 	#Bulgaria
 	SpriteType = {
@@ -1186,6 +1306,215 @@ spriteTypes = {
 	SpriteType = {
 		name = "GFX_focus_RUS_regency"
 		texturefile = "gfx/interface/goals/RUS_regency.png"
+	}
+
+	###Romania###
+	SpriteType = {
+		name = "GFX_focus_ROM_continue_with_national_founder_carol"
+		texturefile = "gfx/interface/goals/ROM/ROM_continue_with_national_founder_carol.png"
+	}
+	SpriteType = {
+		name = "GFX_focus_ROM_ferdinand_comes_to_power"
+		texturefile = "gfx/interface/goals/ROM/ROM_ferdinand_comes_to_power.png"
+	}
+	SpriteType = {
+		name = "GFX_focus_ROM_important_decisions_for_romanian_future"
+		texturefile = "gfx/interface/goals/ROM/ROM_important_decisions_for_romanian_future.png"
+	}
+	
+	SpriteType = {
+		name = "GFX_focus_ROM_new_balkan_policy"
+		texturefile = "gfx/interface/goals/ROM/ROM_new_balkan_policy.png"
+	}
+
+	SpriteType = {
+		name = "GFX_focus_ROM_take_our_land_back"
+		texturefile = "gfx/interface/goals/ROM/ROM_take_our_land_back.png"
+	}
+	SpriteType = {
+		name = "GFX_focus_ROM_great_and_powerful_king"
+		texturefile = "gfx/interface/goals/ROM/ROM_great_and_powerful_king.png"
+	}
+	SpriteType = {
+		name = "GFX_focus_ROM_raise_up_the_exhausted_army"
+		texturefile = "gfx/interface/goals/ROM/ROM_raise_up_the_exhausted_army.png"
+	}
+	SpriteType = {
+		name = "GFX_focus_ROM_strong_and_loyal_killing_machines"
+		texturefile = "gfx/interface/goals/ROM/ROM_strong_and_loyal_killing_machines.png"
+	}
+	spriteType = {
+		name = "GFX_focus_ROM_agreement_for_transylvania"
+		textureFile = "gfx/interface/goals/ROM/ROM_agreement_for_transylvania.png"
+	}
+
+	SpriteType = {
+		name = "GFX_focus_ROM_leader_of_balkans"
+		texturefile = "gfx/interface/goals/ROM/ROM_leader_of_balkans.png"
+	}
+	SpriteType = {
+		name = "GFX_focus_ROM_enormous_army"
+		texturefile = "gfx/interface/goals/ROM/ROM_enormous_army.png"
+	}
+	SpriteType = {
+		name = "GFX_focus_ROM_renewed_romanian_army"
+		texturefile = "gfx/interface/goals/ROM/ROM_renewed_romanian_army.png"
+	}
+	SpriteType = {
+		name = "GFX_focus_ROM_reinforced_romanian_air_force"
+		texturefile = "gfx/interface/goals/ROM/ROM_reinforced_romanian_air_force.png"
+	}
+	SpriteType = {
+		name = "GFX_focus_ROM_high_king_ferdinand"
+		texturefile = "gfx/interface/goals/ROM/ROM_high_king_ferdinand.png"
+	}
+	SpriteType = {
+		name = "GFX_focus_ROM_romanian_storm_troopers"
+		texturefile = "gfx/interface/goals/ROM/ROM_romanian_storm_troopers.png"
+	}
+	SpriteType = {
+		name = "GFX_focus_ROM_rule_of_the_balkan"
+		texturefile = "gfx/interface/goals/ROM/ROM_rule_of_the_balkan.png"
+	}
+	SpriteType = {
+		name = "GFX_focus_ROM_ferdinands_economic_plan"
+		texturefile = "gfx/interface/goals/ROM/ROM_ferdinands_economic_plan.png"
+	}
+	SpriteType = {
+		name = "GFX_focus_ROM_new_opportunities_for_romania"
+		texturefile = "gfx/interface/goals/ROM/ROM_new_opportunities_for_romania.png"
+	}
+	SpriteType = {
+		name = "GFX_focus_ROM_university_experiments"
+		texturefile = "gfx/interface/goals/ROM/ROM_university_experiments.png"
+	}
+	SpriteType = {
+		name = "GFX_focus_ROM_land_reform_for_the_people"
+		texturefile = "gfx/interface/goals/ROM/ROM_land_reform_for_the_people.png"
+	}
+	SpriteType = {
+		name = "GFX_focus_ROM_open_public_education_centers"
+		texturefile = "gfx/interface/goals/ROM/ROM_open_public_education_centers.png"
+	}
+
+
+
+	# Japan
+	spriteType = {
+		name = "GFX_focus_JAP_juntendo_university_research"
+		textureFile = "gfx/interface/goals/JAP/JAP_juntendo_university_research.png"
+	}
+	spriteType = {
+		name = "GFX_focus_JAP_seize_korean_companies_and_shops"
+		textureFile = "gfx/interface/goals/JAP/JAP_seize_korean_companies_and_shops.png"
+	}
+	spriteType = {
+		name = "GFX_focus_JAP_get_support_from_the_remaining_samurais"
+		textureFile = "gfx/interface/goals/JAP/JAP_get_support_from_the_remaining_samurais.png"
+	}
+	spriteType = {
+		name = "GFX_focus_JAP_chosen_hakushu_keikaku"
+		textureFile = "gfx/interface/goals/JAP/JAP_chosen_hakushu_keikaku.png"
+	}
+	spriteType = {
+		name = "GFX_focus_JAP_open_the_tenyukyo"
+		textureFile = "gfx/interface/goals/JAP/JAP_open_the_tenyukyo.png"
+	}
+	spriteType = {
+		name = "GFX_focus_JAP_the_sole_power_shadow_shogun"
+		textureFile = "gfx/interface/goals/JAP/JAP_the_sole_power_shadow_shogun.png"
+	}
+	spriteType = {
+		name = "GFX_focus_JAP_introduce_nationalist_officers_into_the_army"
+		textureFile = "gfx/interface/goals/JAP/JAP_introduce_nationalist_officers_into_the_army.png"
+	}
+	spriteType = {
+		name = "GFX_focus_JAP_new_patriotic_imperial_army"
+		textureFile = "gfx/interface/goals/JAP/JAP_new_patriotic_imperial_army.png"
+	}
+	spriteType = {
+		name = "GFX_focus_JAP_re-legalizing_the_supreme_samurai"
+		textureFile = "gfx/interface/goals/JAP/JAP_re-legalizing_the_supreme_samurai.png"
+	}
+	spriteType = {
+		name = "GFX_focus_JAP_finish_the_unfinished_job"
+		textureFile = "gfx/interface/goals/JAP/JAP_finish_the_unfinished_job.png"
+	}
+	spriteType = {
+		name = "GFX_focus_JAP_organize_nationalists"
+		textureFile = "gfx/interface/goals/JAP/JAP_organize_nationalists.png"
+	}
+	spriteType = {
+		name = "GFX_focus_JAP_new_leader_new_order"
+		textureFile = "gfx/interface/goals/JAP/JAP_new_leader_new_order.png"
+	}
+	spriteType = {
+		name = "GFX_focus_JAP_father_of_nationalists"
+		textureFile = "gfx/interface/goals/JAP/JAP_father_of_nationalists.png"
+	}
+	spriteType = {
+		name = "GFX_focus_JAP_attack_the_dragon"
+		textureFile = "gfx/interface/goals/JAP/JAP_attack_the_dragon.png"
+	}
+	spriteType = {
+		name = "GFX_focus_JAP_expand_the_empire"
+		textureFile = "gfx/interface/goals/JAP/JAP_expand_the_empire.png"
+	}
+	spriteType = {
+		name = "GFX_focus_JAP_lesson_from_tsushima"
+		textureFile = "gfx/interface/goals/JAP/JAP_lesson_from_tsushima.png"
+	}
+	spriteType = {
+		name = "GFX_focus_JAP_build_western_quality_railroads_and_dams"
+		textureFile = "gfx/interface/goals/JAP/JAP_build_western_quality_railroads_and_dams.png"
+	}
+	spriteType = {
+		name = "GFX_focus_JAP_continue_modernization_of_the_empire"
+		textureFile = "gfx/interface/goals/JAP/JAP_continue_modernization_of_the_empire.png"
+	}
+	spriteType = {
+		name = "GFX_focus_JAP_give_tender_to_western_companies"
+		textureFile = "gfx/interface/goals/JAP/JAP_give_tender_to_western_companies.png"
+	}
+	spriteType = {
+		name = "GFX_focus_JAP_invasion_of_chinese_ports"
+		textureFile = "gfx/interface/goals/JAP/JAP_invasion_of_chinese_ports.png"
+	}
+	spriteType = {
+		name = "GFX_focus_JAP_invite_investors_to_japan"
+		textureFile = "gfx/interface/goals/JAP/JAP_invite_investors_to_japan.png"
+	}
+	spriteType = {
+		name = "GFX_focus_JAP_manchurian_plan"
+		textureFile = "gfx/interface/goals/JAP/JAP_manchurian_plan.png"
+	}
+	spriteType = {
+		name = "GFX_focus_JAP_meiji_stands"
+		textureFile = "gfx/interface/goals/JAP/JAP_meiji_stands.png"
+	}
+	spriteType = {
+		name = "GFX_focus_JAP_peoples_empire"
+		textureFile = "gfx/interface/goals/JAP/JAP_peoples_empire.png"
+	}
+	spriteType = {
+		name = "GFX_focus_JAP_rising_sun_of_asia"
+		textureFile = "gfx/interface/goals/JAP/JAP_rising_sun_of_asia.png"
+	}
+	spriteType = {
+		name = "GFX_focus_JAP_start_military_production"
+		textureFile = "gfx/interface/goals/JAP/JAP_start_military_production.png"
+	}
+	spriteType = {
+		name = "GFX_focus_JAP_strengthen_the_imperial_navy"
+		textureFile = "gfx/interface/goals/JAP/JAP_strengthen_the_imperial_navy.png"
+	}
+	spriteType = {
+		name = "GFX_focus_JAP_support_national_production"
+		textureFile = "gfx/interface/goals/JAP/JAP_support_national_production.png"
+	}
+	spriteType = {
+		name = "GFX_focus_JAP_taisho_rules_the_empire"
+		textureFile = "gfx/interface/goals/JAP/JAP_taisho_rules_the_empire.png"
 	}
 
 	#Ottoman/Turkey

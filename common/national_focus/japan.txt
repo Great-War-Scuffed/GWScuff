@@ -87,7 +87,7 @@ focus_tree = {
 	focus = {
 		id = JAP_build_new_coal_mines
 		icon = GFX_focus_generic_mining_industry
-		cost = 5
+		cost = 10
 		x = 0
 		y = 1
 		relative_position_id = JAP_continue_modernization_of_the_empire
@@ -159,7 +159,7 @@ focus_tree = {
 	focus = {
 		id = JAP_build_western_quality_railroads_and_dams
 		icon = GFX_focus_JAP_build_western_quality_railroads_and_dams
-		cost = 5
+		cost = 10
 		x = -1
 		y = 1
 		relative_position_id = JAP_build_new_coal_mines
@@ -230,7 +230,7 @@ focus_tree = {
 	focus = {
 		id = JAP_peoples_imperial_factories
 		icon = GFX_focus_spa_the_spanish_miracle
-		cost = 5
+		cost = 10
 		x = 1
 		y = 1
 		relative_position_id = JAP_build_new_coal_mines
@@ -424,7 +424,7 @@ focus_tree = {
 	focus = {
 		id = JAP_give_tender_to_western_companies
 		icon = GFX_focus_JAP_give_tender_to_western_companies
-		cost = 5
+		cost = 10
 		x = 0
 		y = 1
 		relative_position_id = JAP_invite_investors_to_japan
@@ -498,7 +498,7 @@ focus_tree = {
 	focus = {
 		id = JAP_rapid_militarization
 		icon = GFX_focus_jap_zaibatsu
-		cost = 5
+		cost = 10
 		x = -2
 		y = 0
 		relative_position_id = JAP_give_tender_to_western_companies
@@ -560,7 +560,7 @@ focus_tree = {
 	focus = {
 		id = JAP_start_military_production
 		icon = GFX_focus_JAP_start_military_production
-		cost = 5
+		cost = 10
 		x = 0
 		y = 1
 		relative_position_id = JAP_taisho_rules_the_empire
@@ -604,7 +604,7 @@ focus_tree = {
 	focus = {
 		id = JAP_support_national_production
 		icon = GFX_focus_JAP_support_national_production
-		cost = 5
+		cost = 10
 		x = 0
 		y = 1
 		relative_position_id = JAP_start_military_production
@@ -810,7 +810,7 @@ focus_tree = {
 	focus = {
 		id = JAP_new_dockyards_for_heihachiro
 		icon = GFX_focus_POL_develop_polish_shipbuilding
-		cost = 5
+		cost = 10
 		x = 0
 		y = 1
 		relative_position_id = JAP_strengthen_the_imperial_navy
@@ -1064,8 +1064,16 @@ focus_tree = {
 			focus = JAP_start_propaganda_on_the_streets
 		}
 		completion_reward = {
-			529 = {
-				add_local_3x_dockyard = yes
+			random_owned_controlled_state = {
+				limit = {
+					is_core_of = ROOT
+				}
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = dockyard
+					level = 2
+					instant_build = yes
+				}				
 			}
 
 			navy_experience = 50
@@ -1386,15 +1394,23 @@ focus_tree = {
 			focus = JAP_Expand_Kure_Naval_Shipyard
 		}
 		completion_reward = {
-			744 = {
-				add_local_3x_dockyard = yes
+			random_owned_controlled_state = {
+				limit = {
+					is_core_of = ROOT
+				}
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = dockyard
+					level = 2
+					instant_build = yes
+				}				
 			}
 		}
 	}
 	focus = {
 		id = JAP_daihatsu_automobile_factories
 		icon = GFX_goal_generic_construct_civ_factory
-		cost = 5
+		cost = 10
 		x = 2
 		y = 1
 		relative_position_id = JAP_Expand_Kure_Naval_Shipyard
@@ -1402,16 +1418,44 @@ focus_tree = {
 			focus = JAP_Expand_Kure_Naval_Shipyard
 		}
 		completion_reward = {
-			add_3x_civilian = yes
-			add_2x_civilian = yes
-			add_1x_infrastructure = yes
-			add_1x_infrastructure = yes
+			random_owned_controlled_state = {
+				limit = {
+					is_core_of = ROOT
+				}
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = industrial_complex
+					level = 2
+					instant_build = yes
+				}
+				add_building_construction = {
+					type = infrastructure
+					level = 1
+					instant_build = yes
+				}				
+			}
+			random_owned_controlled_state = {
+				limit = {
+					is_core_of = ROOT
+				}
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = industrial_complex
+					level = 2
+					instant_build = yes
+				}	
+				add_building_construction = {
+					type = infrastructure
+					level = 1
+					instant_build = yes
+				}				
+			}
 		}
 	}
 	focus = {
 		id = JAP_support_yamaha_companies
 		icon = GFX_focus_jap_zaibatsu
-		cost = 5
+		cost = 10
 		x = -1
 		y = 1
 		relative_position_id = JAP_daihatsu_automobile_factories
@@ -1420,14 +1464,34 @@ focus_tree = {
 		}
 		completion_reward = {
 			add_ideas = JAP_yamaha_corporation
-			add_3x_military = yes
-			add_3x_military = yes
+			random_owned_controlled_state = {
+				limit = {
+					is_core_of = ROOT
+				}
+				add_extra_state_shared_building_slots = 3
+				add_building_construction = {
+					type = arms_factory
+					level = 3
+					instant_build = yes
+				}				
+			}
+			random_owned_controlled_state = {
+				limit = {
+					is_core_of = ROOT
+				}
+				add_extra_state_shared_building_slots = 3
+				add_building_construction = {
+					type = arms_factory
+					level = 3
+					instant_build = yes
+				}				
+			}
 		}
 	}
 	focus = {
 		id = JAP_Support_National_Companies
 		icon = GFX_focus_POL_complete_april_constitution
-		cost = 5
+		cost = 10
 		x = 1
 		y = 1
 		relative_position_id = JAP_daihatsu_automobile_factories
@@ -1437,9 +1501,39 @@ focus_tree = {
 		completion_reward = {
 			add_ideas = JAP_national_companies
 
-			add_3x_civilian = yes
-			add_2x_civilian = yes
-			add_3x_military = yes
+			random_owned_controlled_state = {
+				limit = {
+					is_core_of = ROOT
+				}
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = arms_factory
+					level = 2
+					instant_build = yes
+				}				
+			}
+			random_owned_controlled_state = {
+				limit = {
+					is_core_of = ROOT
+				}
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = industrial_complex
+					level = 2
+					instant_build = yes
+				}				
+			}
+			random_owned_controlled_state = {
+				limit = {
+					is_core_of = ROOT
+				}
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = arms_factory
+					level = 2
+					instant_build = yes
+				}				
+			}
 
 			mio:JAP_tokyo_arsenal_organization = {
 				add_mio_size = 2
@@ -1449,7 +1543,7 @@ focus_tree = {
 	focus = {
 		id = JAP_heavy_kawasaki_industry
 		icon = GFX_goal_generic_construct_mil_factory
-		cost = 5
+		cost = 10
 		x = 0
 		y = 2
 		relative_position_id = JAP_daihatsu_automobile_factories
@@ -1458,15 +1552,35 @@ focus_tree = {
 			focus = JAP_Support_National_Companies
 		}
 		completion_reward = {
-			add_3x_military = yes
-			add_2x_military = yes
+			random_owned_controlled_state = {
+				limit = {
+					is_core_of = ROOT
+				}
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = arms_factory
+					level = 2
+					instant_build = yes
+				}				
+			}
+			random_owned_controlled_state = {
+				limit = {
+					is_core_of = ROOT
+				}
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = arms_factory
+					level = 2
+					instant_build = yes
+				}				
+			}
 			add_ideas = JAP_heavy_kawasaki_industries
 		}
 	}
 	focus = {
 		id = JAP_seize_korean_companies_and_shops
 		icon = GFX_focus_JAP_seize_korean_companies_and_shops
-		cost = 5
+		cost = 10
 		x = -2
 		y = 2
 		relative_position_id = JAP_daihatsu_automobile_factories
@@ -1474,10 +1588,50 @@ focus_tree = {
 			focus = JAP_support_yamaha_companies
 		}
 		completion_reward = {
-			add_2x_civilian = yes
-			add_2x_civilian = yes
-			add_3x_military = yes
-			add_2x_military = yes
+			random_owned_controlled_state = {
+				limit = {
+					is_core_of = ROOT
+				}
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = industrial_complex
+					level = 1
+					instant_build = yes
+				}				
+			}
+			random_owned_controlled_state = {
+				limit = {
+					is_core_of = ROOT
+				}
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = industrial_complex
+					level = 1
+					instant_build = yes
+				}				
+			}
+			random_owned_controlled_state = {
+				limit = {
+					is_core_of = ROOT
+				}
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = arms_factory
+					level = 2
+					instant_build = yes
+				}				
+			}
+			random_owned_controlled_state = {
+				limit = {
+					is_core_of = ROOT
+				}
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = arms_factory
+					level = 2
+					instant_build = yes
+				}				
+			}
 		}
 	}
 	focus = {

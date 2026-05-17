@@ -38,6 +38,13 @@ mobilisation_penalty_modifier = {
 	
 }
 
+GER_local_investments = {
+	enable = { always = yes  }
+	icon = GFX_modifiers_generic_military_industry
+
+	state_production_speed_buildings_factor = 0.1
+}
+
 generic_local_investments = {
 	enable = { 
 		CONTROLLER = {

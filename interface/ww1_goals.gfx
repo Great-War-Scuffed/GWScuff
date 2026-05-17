@@ -1,5 +1,312 @@
 spriteTypes = {
 	#Germany
+	#Germany
+	spriteType = {
+		name = "GFX_focus_GER_grand_field_marshal_ludendorff"
+		textureFile = "gfx/interface/goals/GER/GER_grand_field_marshal_ludendorff.png"
+	}
+	spriteType = {
+		name = "GFX_focus_GER_east_development_plan"
+		textureFile = "gfx/interface/goals/GER/GER_east_development_plan.dds"
+	}
+	spriteType = {
+		name = "GFX_focus_GER_wurttemberg_industrial_area"
+		textureFile = "gfx/interface/goals/GER/GER_wurttemberg_industrial_area.dds"
+	}
+	spriteType = {
+		name = "GFX_focus_GER_the_army_wants_a_new_leader"
+		textureFile = "gfx/interface/goals/GER/GER_the_army_wants_a_new_leader.png"
+	}
+	spriteType = {
+		name = "GFX_focus_GER_nationalizm_on_the_rise"
+		textureFile = "gfx/interface/goals/GER/GER_nationalizm_on_the_rise.png"
+	}
+	spriteType = {
+		name = "GFX_focus_GER_the_solution_is_in_ludendorff"
+		textureFile = "gfx/interface/goals/GER/GER_the_solution_is_in_ludendorff.png"
+	}
+	spriteType = {
+		name = "GFX_focus_GER_hindenburg_is_the_solution"
+		textureFile = "gfx/interface/goals/GER/GER_hindenburg_is_the_solution.png"
+	}
+	spriteType = {
+		name = "GFX_focus_GER_a_new_and_better_germany"
+		textureFile = "gfx/interface/goals/GER/GER_a_new_and_better_germany.png"
+	}
+	spriteType = {
+		name = "GFX_focus_GER_open_new_bavarian_military_factories"
+		textureFile = "gfx/interface/goals/GER/GER_open_new_bavarian_military_factories.dds"
+	}
+	spriteType = {
+		name = "GFX_focus_GER_finance_krupp"
+		textureFile = "gfx/interface/goals/GER/GER_finance_krupp.png"
+	}
+	spriteType = {
+		name = "GFX_focus_GER_anti_comitern_pact"
+		textureFile = "gfx/interface/goals/GER/GER_anti_comitern_pact.dds"
+	}
+	spriteType = {
+		name = "GFX_focus_GER_anti_comintern_pact_unaligned"
+		textureFile = "gfx/interface/goals/GER/GER_anti_comintern_pact_unaligned.dds"
+	}
+	spriteType = {
+		name = "GFX_focus_GER_anti_soviet_pact"
+		textureFile = "gfx/interface/goals/GER/GER_anti_soviet_pact.dds"
+	}
+	spriteType = {
+		name = "GFX_focus_GER_reinvigorate_german_forces_with_what_remains_of_the_army"
+		textureFile = "gfx/interface/goals/GER/GER_reinvigorate_german_forces_with_what_remains_of_the_army.dds"
+	}
+	spriteType = {
+		name = "GFX_focus_GER_make_the_volkisch-nationalliberal_party_a_single_party"
+		textureFile = "gfx/interface/goals/GER/GER_make_the_volkisch-nationalliberal_party_a_single_party.dds"
+	}
+	spriteType = {
+		name = "GFX_focus_GER_retire_wilhelm"
+		textureFile = "gfx/interface/goals/GER/GER_retire_wilhelm.png"
+	}
+	spriteType = {
+		name = "GFX_focus_GER_collabrate_with_kaiser_wilhelm_2"
+		textureFile = "gfx/interface/goals/GER/GER_collabrate_with_kaiser_wilhelm_2.dds"
+	}
+	spriteType = {
+		name = "GFX_focus_GER_volkisch_movement"
+		textureFile = "gfx/interface/goals/GER/GER_volkisch_movement.dds"
+	}
+
+	spriteType = {
+		name = "GFX_focus_GER_leader_of_the_people_hindenburg"
+		textureFile = "gfx/interface/goals/GER/GER_leader_of_the_people_hindenburg.dds"
+	}
+	spriteType = {
+		name = "GFX_focus_GER_solve_peoples_problem"
+		textureFile = "gfx/interface/goals/GER/GER_solve_peoples_problem.dds"
+	}
+	spriteType = {
+		name = "GFX_focus_GER_more_nationalist_germany"
+		textureFile = "gfx/interface/goals/GER/GER_more_nationalist_germany.dds"
+	}
+	spriteType = {
+		name = "GFX_focus_GER_prussian_army_traditions"
+		textureFile = "gfx/interface/goals/GER/GER_prussian_army_traditions.dds"
+	}
+	spriteType = {
+		name = "GFX_focus_GER_german_war_economy"
+		textureFile = "gfx/interface/goals/GER/GER_german_war_economy_2.dds"
+	}
+	spriteType = {
+		name = "GFX_focus_GER_strengthen_military_industry"
+		textureFile = "gfx/interface/goals/GER/GER_strengthen_military_industry.dds"
+	}
+	spriteType = {
+		name = "GFX_focus_GER_create_new_employment_sources_for_the_public"
+		textureFile = "gfx/interface/goals/GER/GER_create_new_employment_sources_for_the_public.dds"
+	}
+	spriteType = {
+		name = "GFX_focus_GER_expand_german_industry"
+		textureFile = "gfx/interface/goals/GER/GER_expand_german_industry.dds"
+	}
+	spriteType = {
+		name = "GFX_focus_GER_put_the_german_navy_in_a_dominant_position"
+		textureFile = "gfx/interface/goals/GER/GER_put_the_german_navy_in_a_dominant_position.dds"
+	}
+	spriteType = {
+		name = "GFX_focus_GER_hindenburg_line"
+		textureFile = "gfx/interface/goals/GER/GER_hindenburg_line.dds"
+	}
+	spriteType = {
+		name = "GFX_focus_GER_pride_of_the_modern_germany"
+		textureFile = "gfx/interface/goals/GER/GER_pride_of_the_modern_germany.dds"
+	}
+	spriteType = {
+		name = "GFX_focus_GER_seize_jewish_property"
+		textureFile = "gfx/interface/goals/GER/GER_seize_jewish_property.png"
+	}
+	spriteType = {
+		name = "GFX_focus_GER_establish_mefo_company"
+		textureFile = "gfx/interface/goals/GER/GER_establish_mefo_company.png"
+	}
+	spriteType = {
+		name = "GFX_focus_GER_build_reichotobahns"
+		textureFile = "gfx/interface/goals/GER/GER_build_reichotobahns.png"
+	}
+	spriteType = {
+		name = "GFX_focus_GER_rebuild_fatherland"
+		textureFile = "gfx/interface/goals/GER/GER_rebuild_fatherland.png"
+	}
+	spriteType = {
+		name = "GFX_focus_GER_expand_the_powers_of_the_schutzstaffel_union"
+		textureFile = "gfx/interface/goals/GER/GER_expand_the_powers_of_the_schutzstaffel_union.dds"
+	}
+	spriteType = {
+		name = "GFX_focus_GER_dissolve_the_imperial_german_army"
+		textureFile = "gfx/interface/goals/GER/GER_dissolve_the_imperial_german_army.dds"
+	}
+	spriteType = {
+		name = "GFX_focus_GER_establish_the_wehrmacht"
+		textureFile = "gfx/interface/goals/GER/GER_establish_the_wehrmacht.dds"
+	}
+	spriteType = {
+		name = "GFX_focus_GER_establish_kriegsmarine"
+		textureFile = "gfx/interface/goals/GER/GER_establish_kriegsmarine.dds"
+	}
+	spriteType = {
+		name = "GFX_focus_GER_ready_effective_powerful_army"
+		textureFile = "gfx/interface/goals/GER/GER_ready_effective_powerful_army.dds"
+	}
+	spriteType = {
+		name = "GFX_focus_GER_establish_luftwaffe"
+		textureFile = "gfx/interface/goals/GER/GER_establish_luftwaffe.dds"
+	}
+	spriteType = {
+		name = "GFX_focus_GER_speed_up_industrialization"
+		textureFile = "gfx/interface/goals/GER/GER_speed_up_industrialization.dds"
+	}
+	spriteType = {
+		name = "GFX_focus_GER_start_four_year_plan"
+		textureFile = "gfx/interface/goals/GER/GER_start_four_year_plan.dds"
+	}
+	spriteType = {
+		name = "GFX_focus_GER_implement_new_nationalist_curriculum"
+		textureFile = "gfx/interface/goals/GER/GER_implement_new_nationalist_curriculum.dds"
+	}
+	spriteType = {
+		name = "GFX_focus_GER_support_university_research"
+		textureFile = "gfx/interface/goals/GER/GER_support_university_research.dds"
+	}
+	spriteType = {
+		name = "GFX_focus_GER_deutschlands_alleiniger_fuhrer"
+		textureFile = "gfx/interface/goals/GER/GER_deutschlands_alleiniger_fuhrer.dds"
+	}
+	spriteType = {
+		name = "GFX_focus_GER_collabration_with_kaiser"
+		textureFile = "gfx/interface/goals/GER/GER_collabration_with_kaiser.png"
+	}
+	spriteType = {
+		name = "GFX_focus_GER_exile_the_kaiser"
+		textureFile = "gfx/interface/goals/GER/GER_exile_the_kaiser.png"
+	}
+	spriteType = {
+		name = "GFX_focus_GER_lebensraum"
+		textureFile = "gfx/interface/goals/GER/GER_lebensraum.png"
+	}
+	spriteType = {
+		name = "GFX_focus_GER_starten_sie_die_mutterkreuz"
+		textureFile = "gfx/interface/goals/GER/GER_starten_sie_die_mutterkreuz.png"
+	}
+	spriteType = {
+		name = "GFX_focus_GER_found_hitler_youth"
+		textureFile = "gfx/interface/goals/GER/GER_found_hitler_youth.png"
+	}
+
+	spriteType = {
+		name = "GFX_focus_GER_launch_incentive_for_automobile_factories"
+		textureFile = "gfx/interface/goals/GER/GER_launch_incentive_for_automobile_factories.png"
+	}
+	spriteType = {
+		name = "GFX_focus_GER_hjalmar_schacht_policies"
+		textureFile = "gfx/interface/goals/GER/GER_hjalmar_schacht_policies.png"
+	}
+	spriteType = {
+		name = "GFX_focus_GER_deutsche_arbeiterpartei_coup"
+		textureFile = "gfx/interface/goals/GER/GER_deutsche_arbeiterpartei_coup.png"
+	}
+	spriteType = {
+		name = "GFX_focus_GER_schutzstaffeln"
+		textureFile = "gfx/interface/goals/GER/GER_schutzstaffeln.png"
+	}
+	SpriteType = {
+		name = "GFX_focus_GER_bruderkrieg"
+		texturefile = "gfx/interface/goals/focus_GER_bruderkrieg.png"
+	}
+	SpriteType = {
+		name = "GFX_focus_GER_romanian_pact"
+		texturefile = "gfx/interface/goals/focus_ger_romanian_pact.png"
+	}
+	SpriteType = {
+		name = "GFX_focus_GER_investing_in_cameroon"
+		texturefile = "gfx/interface/goals/focus_GER_investing_in_cameroon.png"
+	}
+	SpriteType = {
+		name = "GFX_focus_GER_investing_in_sudwestafrika"
+		texturefile = "gfx/interface/goals/focus_GER_investing_in_sudwestafrika.png"
+	}
+	SpriteType = {
+		name = "GFX_focus_GER_investing_in_ostafrika"
+		texturefile = "gfx/interface/goals/focus_GER_investing_in_ostafrika.png"
+	}
+	SpriteType = {
+		name = "GFX_focus_German_Crown"
+		texturefile = "gfx/interface/goals/focus_German_Crown.png"
+	}
+	SpriteType = {
+		name = "GFX_focus_ger_weltpolitik"
+		texturefile = "gfx/interface/goals/focus_ger_weltpolitik.png"
+	}
+	SpriteType = {
+		name = "GFX_focus_GER_Kaiser_Asshole"
+		texturefile = "gfx/interface/goals/focus_GER_Kaiser_Asshole.png"
+	}
+	SpriteType = {
+		name = "GFX_focus_GER_Kaiser_Asshole_Chained"
+		texturefile = "gfx/interface/goals/focus_GER_Kaiser_Asshole_Chained.png"
+	}
+	SpriteType = {
+		name = "GFX_focus_OHL"
+		texturefile = "gfx/interface/goals/focus_OHL.png"
+	}
+	SpriteType = {
+		name = "GFX_focus_ger_support_austrian_claims"
+		texturefile = "gfx/interface/goals/focus_ger_support_austrian_claims.png"
+	}
+	SpriteType = {
+		name = "GFX_focus_bjork_agreement"
+		texturefile = "gfx/interface/goals/focus_bjork_agreement.png"
+	}
+	SpriteType = {
+		name = "GFX_focus_ger_backstab"
+		texturefile = "gfx/interface/goals/focus_ger_backstab.png"
+	}
+	SpriteType = {
+		name = "GFX_focus_ger_kaiserreich"
+		texturefile = "gfx/interface/goals/focus_ger_kaiserreich.png"
+	}
+	SpriteType = {
+		name = "GFX_focus_ger_HRE_estate"
+		texturefile = "gfx/interface/goals/focus_ger_HRE_estate.png"
+	}
+	SpriteType = {
+		name = "GFX_focus_ger_HRE"
+		texturefile = "gfx/interface/goals/focus_ger_HRE.png"
+	}
+	SpriteType = {
+		name = "GFX_focus_GER_navy"
+		texturefile = "gfx/interface/goals/focus_GER_navy.png"
+	}
+	SpriteType = {
+		name = "GFX_focus_GER_reichstag"
+		texturefile = "gfx/interface/goals/focus_GER_reichstag.png"
+	}
+	spriteType = {
+		name = "GFX_focus_GER_neurer_anfuhrer"
+		textureFile = "gfx/interface/goals/GER_neurer_anfuhrer.png"
+	}
+	spriteType = {
+		name = "GFX_focus_GER_beginnen_sie_den_ersten_weltkrieg"
+		textureFile = "gfx/interface/goals/GER/GER_beginnen_sie_den_ersten_weltkrieg.png"
+	}
+	spriteType = {
+		name = "GFX_focus_GER_sichere_belgien"
+		textureFile = "gfx/interface/goals/GER/GER_sichere_belgien.png"
+	}
+	spriteType = {
+		name = "GFX_focus_GER_sichere_holland"
+		textureFile = "gfx/interface/goals/GER/GER_sichere_holland.png"
+	}
+	spriteType = {
+		name = "GFX_focus_GER_disband_the_central_powers"
+		textureFile = "gfx/interface/goals/GER/GER_disband_the_central_powers.png"
+	}
 	SpriteType = {
 		name = "GFX_generic_police_state"
 		texturefile = "gfx/interface/goals/generic_police_state.png"

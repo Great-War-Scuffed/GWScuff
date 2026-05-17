@@ -26,8 +26,8 @@ focus_tree = {
 			}
 		}
 		completion_reward = {
-			add_3x_civilian = yes
-			add_3x_civilian = yes
+			add_2x_civilian = yes
+			add_2x_civilian = yes
 			add_tech_bonus = {
 				name = industrial_bonus
 				bonus = 0.75
@@ -86,7 +86,7 @@ focus_tree = {
 	focus = {
 		id = ITA_Italo_libici
 		icon = GFX_focus_planning_bonus
-		cost = 5
+		cost = 10
 		prerequisite = {
 			focus = ITA_early_industrialization
 		}
@@ -190,8 +190,8 @@ focus_tree = {
 				amount = 40
 				state = 158
 			}
-			add_3x_civilian = yes
-			add_3x_civilian = yes
+			add_2x_civilian = yes
+			add_2x_civilian = yes
 		}
 		ai_will_do = {
 			factor = 1
@@ -321,8 +321,8 @@ focus_tree = {
 			controls_state = 2
 		}
 		completion_reward = {
-			add_3x_civilian = yes
-			add_3x_civilian = yes
+			add_2x_civilian = yes
+			add_2x_civilian = yes
 
 			2 = {
 				add_building_construction = {
@@ -381,7 +381,7 @@ focus_tree = {
 	focus = {
 		id = ITA_Breda
 		icon = GFX_goal_generic_cavalry
-		cost = 5
+		cost = 10
 		prerequisite = {
 			focus = ITA_Ferrovie_dello_Stato
 		}
@@ -398,8 +398,8 @@ focus_tree = {
 		x = 3
 		y = 2
 		completion_reward = {
-			add_3x_civilian = yes
-			add_3x_civilian = yes
+			add_2x_civilian = yes
+			add_2x_civilian = yes
 
 
 			add_resource = {
@@ -442,8 +442,8 @@ focus_tree = {
 		x = 3
 		y = 4
 		completion_reward = {
-			add_3x_civilian = yes
-			add_3x_military = yes
+			add_2x_civilian = yes
+			add_2x_military = yes
 			add_tech_bonus = {
 				name = ITA_Lancia
 				ahead_reduction = 1
@@ -501,8 +501,8 @@ focus_tree = {
 			}
 		}
 		completion_reward = {
-			add_3x_civilian = yes
-			add_3x_civilian = yes
+			add_2x_civilian = yes
+			add_2x_civilian = yes
 			every_owned_state = {
 				limit = {
 					is_fully_controlled_by = ROOT
@@ -607,8 +607,8 @@ focus_tree = {
 			}
 		}
 		completion_reward = {
-			add_3x_civilian = yes
-			add_3x_civilian = yes
+			add_2x_civilian = yes
+			add_2x_civilian = yes
 			IF = {
 				limit = {
 					has_dlc = "Arms Against Tyranny"

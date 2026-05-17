@@ -92,7 +92,8 @@ on_actions = {
 				}
 				set_technology = {
 					basic_train = 1
-				} 
+					popup = no
+				}
 			}
 		}
 	}
@@ -108,7 +109,8 @@ on_actions = {
 				}
 				set_technology = {
 					magneto_ignition = 1
-				} 
+					popup = no
+				}
 			}
 		}
 	}
@@ -124,7 +126,8 @@ on_actions = {
 				}
 				set_technology = {
 					tech_trucks = 1
-				} 
+					popup = no
+				}
 			}
 		}
 	}
@@ -140,7 +143,8 @@ on_actions = {
 				}
 				set_technology = {
 					tech_support = 1
-				} 
+					popup = no
+				}
 			}
 		}
 	}
@@ -156,7 +160,8 @@ on_actions = {
 				}
 				set_technology = {
 					marines = 1
-				} 
+					popup = no
+				}
 			}
 		}
 	}
@@ -172,7 +177,8 @@ on_actions = {
 				}
 				set_technology = {
 					tech_mountaineers = 1
-				} 
+					popup = no
+				}
 			}
 		}
 	}
@@ -188,7 +194,8 @@ on_actions = {
 				}
 				set_technology = {
 					militia_tech = 1
-				} 
+					popup = no
+				}
 			}
 		}
 	}
@@ -204,7 +211,8 @@ on_actions = {
 				}
 				set_technology = {
 					infantry_weapons1 = 1
-				} 
+					popup = no
+				}
 			}
 		}
 	}
@@ -220,7 +228,8 @@ on_actions = {
 				}
 				set_technology = {
 					machine_guns = 1
-				} 
+					popup = no
+				}
 			}
 		}
 	}
@@ -236,7 +245,8 @@ on_actions = {
 				}
 				set_technology = {
 					early_artillery = 1
-				} 
+					popup = no
+				}
 			}
 		}
 	}
@@ -252,7 +262,8 @@ on_actions = {
 				}
 				set_technology = {
 					basic_field_gun = 1
-				} 
+					popup = no
+				}
 			}
 		}
 	}
@@ -268,7 +279,8 @@ on_actions = {
 				}
 				set_technology = {
 					basic_howitzer = 1
-				} 
+					popup = no
+				}
 			}
 		}
 	}

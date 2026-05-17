@@ -2,20 +2,28 @@ ideas = {
 	country = {
 		SOV_idea_great_revolution = {
 			picture = trotskyite_plot_purged
-			allowed = { always = no }
+			allowed = { original_tag = RUS }
 			allowed_civil_war = { has_government = communism }
 			removal_cost = -1
 			
 			modifier = {
 				ai_focus_aggressive_factor = 0.5
 				war_support_factor = 0.15
-				surrender_limit = 0.2
+				# since they just die with generic conference when germany invaded too hard
+				# also in civil war why would they just give up
+				hidden_modifier = {
+					surrender_limit = 1
+					max_surrender_limit_offset = 0.01
+				}
 			}
-			rule = { can_join_factions = no }
+			rule = { 
+				can_create_factions = yes 
+				# can_join_factions = no 
+			}
 		}
 		SOV_idea_orthodox_church = {
 			picture = SOV_a_church_of_the_catacombs
-			allowed = { always = no }
+			allowed = { original_tag = RUS }
 			allowed_civil_war = { has_government = communism }
 			removal_cost = -1
 			
@@ -26,7 +34,7 @@ ideas = {
 		}
 		SOV_idea_unrecognized_government = {
 			picture = trotskyite_plot
-			allowed = { always = no }
+			allowed = { original_tag = RUS }
 			allowed_civil_war = { has_government = communism }
 			removal_cost = -1
 			
@@ -37,20 +45,16 @@ ideas = {
 		}
 		SOV_idea_red_guard = {
 			picture = generic_communist_army
-			allowed = { is_russian_tag = yes }
+			allowed = { original_tag = RUS }
 			allowed_civil_war = { has_government = communism }
 			available = { has_government = communism }
 			removal_cost = -1
 			
-			on_add = {
-				country_lock_all_division_template = yes
-			}
-			
 			modifier = {
-				dig_in_speed_factor = -0.5
-				max_planning = -0.5 	
-				army_attack_factor = -0.5
-				army_org_factor = -0.3
+				dig_in_speed_factor = -0.10
+				max_planning = -0.10
+				army_attack_factor = -0.10
+				army_org_factor = -0.05
 				communism_drift = 0.05
 				modifier_army_sub_unit_militia_attack_factor = 0.5
 				custom_modifier_tooltip = cannot_enact_conscription_tt
@@ -58,8 +62,8 @@ ideas = {
 			}
 		}
 		SOV_idea_red_army = {
-			picture = SOV_red_army
-			allowed = { always = no }
+			picture = SOV_war_heroes
+			allowed = { original_tag = RUS }
 			allowed_civil_war = { has_government = communism }
 			removal_cost = -1
 			
@@ -70,13 +74,12 @@ ideas = {
 				max_planning = -0.40 	
 				army_attack_factor = -0.40
 				army_org_factor = -0.20
-				custom_modifier_tooltip = cannot_enact_conscription_tt
 			}
 		}
 		SOV_idea_red_army_militia = {
 			name = SOV_idea_red_army
-			picture = SOV_red_army
-			allowed = { always = no }
+			picture = SOV_war_heroes
+			allowed = { original_tag = RUS }
 			allowed_civil_war = { has_government = communism }
 			removal_cost = -1
 			
@@ -90,13 +93,12 @@ ideas = {
 				conscription_factor = 0.25
 				training_time_factor = -0.2
 				mobilization_speed = 0.3
-				custom_modifier_tooltip = cannot_enact_conscription_tt
 			}
 		}
 		SOV_idea_red_army_officers = {
 			name = SOV_idea_red_army
-			picture = SOV_red_army
-			allowed = { always = no }
+			picture = SOV_war_heroes
+			allowed = { original_tag = RUS }
 			allowed_civil_war = { has_government = communism }
 			removal_cost = -1
 			
@@ -107,13 +109,12 @@ ideas = {
 				max_planning = -0.20 	
 				army_attack_factor = -0.20
 				army_org_factor = -0.10
-				custom_modifier_tooltip = cannot_enact_conscription_tt
 			}
 		}
 		SOV_idea_red_army_militia_2 = {
 			name = SOV_idea_red_army
-			picture = SOV_red_army
-			allowed = { always = no }
+			picture = SOV_war_heroes
+			allowed = { original_tag = RUS }
 			allowed_civil_war = { has_government = communism }
 			removal_cost = -1
 			
@@ -127,13 +128,12 @@ ideas = {
 				conscription_factor = 0.25
 				training_time_factor = -0.2
 				mobilization_speed = 0.3
-				custom_modifier_tooltip = cannot_enact_conscription_tt
 			}
 		}
 		SOV_idea_red_army_officers_2 = {
 			name = SOV_idea_red_army
-			picture = SOV_red_army
-			allowed = { always = no }
+			picture = SOV_war_heroes
+			allowed = { original_tag = RUS }
 			allowed_civil_war = { has_government = communism }
 			removal_cost = -1
 			
@@ -144,13 +144,12 @@ ideas = {
 				max_planning = -0.10 	
 				army_attack_factor = -0.15
 				army_org_factor = -0.10
-				custom_modifier_tooltip = cannot_enact_conscription_tt
 			}
 		}
 		SOV_idea_red_army_militia_3 = {
 			name = SOV_idea_red_army
-			picture = SOV_red_army
-			allowed = { always = no }
+			picture = SOV_war_heroes
+			allowed = { original_tag = RUS }
 			allowed_civil_war = { has_government = communism }
 			removal_cost = -1
 			
@@ -164,13 +163,12 @@ ideas = {
 				conscription_factor = 0.25
 				training_time_factor = -0.2
 				mobilization_speed = 0.3
-				custom_modifier_tooltip = cannot_enact_conscription_tt
 			}
 		}
 		SOV_idea_red_army_officers_3 = {
 			name = SOV_idea_red_army
-			picture = SOV_red_army
-			allowed = { always = no }
+			picture = SOV_war_heroes
+			allowed = { original_tag = RUS }
 			allowed_civil_war = { has_government = communism }
 			removal_cost = -1
 			
@@ -180,12 +178,11 @@ ideas = {
 				dig_in_speed_factor = -0.25
 				max_planning = -0.10 	
 				army_attack_factor = -0.15
-				custom_modifier_tooltip = cannot_enact_conscription_tt
 			}
 		}
 		SOV_idea_revolutionary_commanders = { #Красная Армия еще не образована. Коммунисты не образовали Главный штаб.
 			picture = saf_soviet_advisers
-			allowed = { always = no }
+			allowed = { original_tag = RUS }
 			allowed_civil_war = { has_government = communism }
 			removal_cost = -1
 			
@@ -198,7 +195,7 @@ ideas = {
 		}		
 		SOV_idea_very_low_peasant_support = {
 			picture = prc_low_popular_support3
-			allowed = { always = no }
+			allowed = { original_tag = RUS }
 			allowed_civil_war = { has_government = communism }
 			removal_cost = -1
 			
@@ -209,7 +206,7 @@ ideas = {
 		}
 		SOV_idea_low_peasant_support = {
 			picture = prc_low_popular_support3
-			allowed = { always = no }
+			allowed = { original_tag = RUS }
 			allowed_civil_war = { has_government = communism }
 			removal_cost = -1
 			
@@ -220,7 +217,7 @@ ideas = {
 		}
 		SOV_idea_weak_peasant_support = {
 			picture = prc_low_popular_support3
-			allowed = { always = no }
+			allowed = { original_tag = RUS }
 			allowed_civil_war = { has_government = communism }
 			removal_cost = -1
 			
@@ -230,7 +227,7 @@ ideas = {
 		}
 		SOV_idea_agrarian_state = {
 			picture = generic_agrarian_society
-			allowed = { always = no }
+			allowed = { original_tag = RUS }
 			allowed_civil_war = { has_government = communism }
 			removal_cost = -1
 			modifier = {
@@ -240,7 +237,7 @@ ideas = {
 		SOV_idea_agrarian_state2 = {
 			name = SOV_idea_agrarian_state
 			picture = generic_agrarian_society
-			allowed = { always = no }
+			allowed = { original_tag = RUS }
 			allowed_civil_war = { has_government = communism }
 			removal_cost = -1
 			modifier = {
@@ -249,7 +246,7 @@ ideas = {
 		}
 		SOV_idea_famine = {
 			picture = eng_for_the_good_of_the_revolution
-			allowed = { always = no }
+			allowed = { original_tag = RUS }
 			allowed_civil_war = { has_government = communism }
 			removal_cost = -1
 			
@@ -263,7 +260,7 @@ ideas = {
 		}
 		SOV_idea_war_communism = {
 			picture = eng_spirit_of_the_industrial_revolution
-			allowed = { always = no }
+			allowed = { original_tag = RUS }
 			allowed_civil_war = { has_government = communism }
 			removal_cost = -1
 			
@@ -276,72 +273,16 @@ ideas = {
 					build_cost_ic = -0.15
 					instant = yes
 				}
-				support_equipment = {
+				artillery_equipment = {
 					build_cost_ic = -0.15
 					instant = yes
-				}
-				artillery = {
-					build_cost_ic = -0.15
-					instant = yes
-				}
-			}
-		}
-		SOV_idea_focus_infantry_equipment = {
-			picture = eng_spirit_of_the_industrial_revolution
-			allowed = { always = no }
-			allowed_civil_war = { has_government = communism }
-			removal_cost = -1
-			
-			equipment_bonus = {
-				infantry_equipment = {
-					build_cost_ic = -0.25
-					instant = yes
-				}
-			}
-		}
-		SOV_idea_focus_support_equipment = {
-			picture = eng_spirit_of_the_industrial_revolution
-			allowed = { always = no }
-			allowed_civil_war = { has_government = communism }
-			removal_cost = -1
-			
-			equipment_bonus = {
-				support_equipment = {
-					build_cost_ic = -0.25
-					instant = yes
-				}
-			}
-		}
-		SOV_idea_focus_artillery_equipment = {
-			picture = eng_spirit_of_the_industrial_revolution
-			allowed = { always = no }
-			allowed_civil_war = { has_government = communism }
-			removal_cost = -1
-			
-			equipment_bonus = {
-				artillery = {
-					build_cost_ic = -0.25
-					instant = yes
-				}
-
-			}
-		}
-		SOV_idea_focus_fighter_equipment = {
-			picture = eng_spirit_of_the_industrial_revolution
-			allowed = { always = no }
-			allowed_civil_war = { has_government = communism }
-			removal_cost = -1
-			
-			equipment_bonus = {
-				fighter_equipment = {
-					build_cost_ic = -0.25
 				}
 			}
 		}
 		SOV_idea_municipalization = {
 			picture = generic_goods_red_bonus
-			allowed = { always = no }
-			allowed_civil_war = { tag = SOV }
+			allowed = { original_tag = RUS }
+			allowed_civil_war = { tag = RUS }
 			removal_cost = -1
 			
 			modifier = {
@@ -351,8 +292,8 @@ ideas = {
 		}
 		SOV_idea_NEP = {
 			picture = generic_goods_red_bonus
-			allowed = { always = no }
-			allowed_civil_war = { tag = SOV }
+			allowed = { original_tag = RUS }
+			allowed_civil_war = { tag = RUS }
 			removal_cost = -1
 			
 			modifier = {
@@ -364,8 +305,8 @@ ideas = {
 		}
 		SOV_idea_first_five_year_plan = {
 			picture = jap_the_unthinkable_option
-			allowed = { always = no }
-			allowed_civil_war = { tag = SOV }
+			allowed = { original_tag = RUS }
+			allowed_civil_war = { tag = RUS }
 			removal_cost = -1
 			
 			modifier = {
@@ -378,10 +319,10 @@ ideas = {
 			picture = POL_disjointed_industry
 			removal_cost = -1			
 			modifier = {
-				industrial_capacity_factory = -0.35
+				industrial_capacity_factory = -0.3
 				line_change_production_efficiency_factor = -0.3
-				production_factory_max_efficiency_factor = -0.30
-				production_speed_buildings_factor = -0.30 
+				production_factory_max_efficiency_factor = -0.15
+				production_speed_buildings_factor = -0.25 
 			}
 		}
 		SOV_industry_in_chaos_2 = {
@@ -389,10 +330,10 @@ ideas = {
 			picture = POL_disjointed_industry
 			removal_cost = -1			
 			modifier = {
-				industrial_capacity_factory = -0.23
+				industrial_capacity_factory = -0.2
 				line_change_production_efficiency_factor = -0.2
-				production_factory_max_efficiency_factor = -0.2
-				production_speed_buildings_factor = -0.2
+				production_factory_max_efficiency_factor = -0.1
+				production_speed_buildings_factor = -0.15 
 			}
 		}
 		SOV_industry_in_chaos_3 = {
@@ -400,23 +341,23 @@ ideas = {
 			picture = POL_disjointed_industry
 			removal_cost = -1			
 			modifier = {
-				industrial_capacity_factory = -0.10
+				industrial_capacity_factory = -0.1
 				line_change_production_efficiency_factor = -0.1
-				production_factory_max_efficiency_factor = -0.1
-				production_speed_buildings_factor = -0.1 
+				production_factory_max_efficiency_factor = -0.05
+				production_speed_buildings_factor = -0.05 
 			}
 		}
 		SOV_idea_forced_industrialization = {
 			picture = man_five_year_plan_industry
-			allowed = { always = no }
-			allowed_civil_war = { tag = SOV }
+			allowed = { original_tag = RUS }
+			allowed_civil_war = { tag = RUS }
 			removal_cost = -1
 			
 			research_bonus = { industry = 0.15 electronics = -0.15 }			
 		}
 		SOV_idea_world_revolution = {
 			picture = home_of_revolution
-			allowed = { always = no }
+			allowed = { original_tag = RUS }
 			removal_cost = -1
 			available = {
 				OR = {
@@ -433,7 +374,7 @@ ideas = {
 		}
 		SOV_idea_cheka = {
 			picture = generic_secret_police
-			allowed = { always = no }
+			allowed = { original_tag = RUS }
 			allowed_civil_war = { has_government = communism }
 			removal_cost = -1
 			available = {
@@ -446,7 +387,7 @@ ideas = {
 		}
 		SOV_idea_fight_against_dissent = {
 			picture = SOV_scientist_defect
-			allowed = { always = no }
+			allowed = { original_tag = RUS }
 			allowed_civil_war = { has_government = communism }
 			removal_cost = -1
 			available = {
@@ -459,7 +400,7 @@ ideas = {
 		}
 		SOV_idea_sailor_mutiny = {	#Много реформ. Если не решить эту проблему, произойдет восстание в Крондштате.
 			picture = SOV_shipyard_staff_purged
-			allowed = { always = no }
+			allowed = { original_tag = RUS }
 			allowed_civil_war = { has_government = communism }
 			removal_cost = -1
 			available = {
@@ -474,7 +415,7 @@ ideas = {
 		}
 		SOV_idea_soldier_rebellion = {	#Мало реформ. Армия перестанет быть дееспособной.
 			picture = chi_army_corruption2
-			allowed = { always = no }
+			allowed = { original_tag = RUS }
 			allowed_civil_war = { has_government = communism }
 			removal_cost = -1
 			available = {
@@ -488,28 +429,12 @@ ideas = {
 		}
 		SOV_idea_power_struggle = {
 			picture = SOV_factionalism_modifier
-			allowed = { always = no }
+			allowed = { original_tag = RUS }
 			allowed_civil_war = { has_government = communism }
 			removal_cost = -1
 			modifier = {
 				stability_weekly = -0.001
 				weekly_manpower = -100
-			}
-		}
-		SOV_missing_reserves = {
-			picture = generic_army_problems
-			allowed = { always = no }
-			allowed_civil_war = { always = yes }
-			removal_cost = -1
-			targeted_modifier = {
-				tag = KOM
-				attack_bonus_against = -0.1
-				defense_bonus_against = -0.1
-			}
-			targeted_modifier = {
-				tag = SIB
-				attack_bonus_against = -0.1
-				defense_bonus_against = -0.1
 			}
 		}
 		SOV_idea_influence_of_revolution = {
@@ -524,8 +449,8 @@ ideas = {
 							original_tag = RUS
 							has_government = communism
 						}
-						has_cosmetic_tag = SOV
-						tag = SOV
+						has_cosmetic_tag = RUS
+						tag = RUS
 					}
 				}
 				NOT = {
@@ -545,7 +470,7 @@ ideas = {
 		}
 		SOV_idea_mass_aviation = {
 			picture = man_five_year_plan_air
-			allowed = { always = no }
+			allowed = { original_tag = RUS }
 			removal_cost = -1
 			research_bonus = { air_equipment = 0.1 }
 			modifier = {
@@ -554,7 +479,7 @@ ideas = {
 		}
 		SOV_idea_fleet_academy = {
 			picture = generic_the_london_naval_treaty
-			allowed = { always = no }
+			allowed = { original_tag = RUS }
 			removal_cost = -1
 			modifier = {
 				experience_gain_navy = 0.05
@@ -562,7 +487,7 @@ ideas = {
 		}	
 		SOV_idea_cult_of_personality = {
 			picture = socialist_science_focus
-			allowed = { always = no }
+			allowed = { original_tag = RUS }
 			allowed_civil_war = { has_government = communism }
 			removal_cost = -1
 			modifier = {
@@ -571,7 +496,7 @@ ideas = {
 		}
 		SOV_idea_peasant_uprising = {	#Слишком сильное давление на крестьян. Если не решить проблему, Сибирь объявит о независимости.
 			picture = officers_purged
-			allowed = { always = no }
+			allowed = { original_tag = RUS }
 			allowed_civil_war = { has_government = communism }
 			removal_cost = -1
 			available = {
@@ -584,8 +509,8 @@ ideas = {
 		}
 		SOV_idea_scientific_atheism = {
 			picture = jap_supremacy_of_technology
-			allowed = { always = no }
-			allowed_civil_war = { tag = SOV }
+			allowed = { original_tag = RUS }
+			allowed_civil_war = { tag = RUS }
 			removal_cost = -1
 			
 			modifier = {
@@ -594,8 +519,8 @@ ideas = {
 		}
 		SOV_idea_revival_of_russia = {
 			picture = jap_supremacy_of_technology
-			allowed = { always = no }
-			allowed_civil_war = { tag = SOV }
+			allowed = { original_tag = RUS }
+			allowed_civil_war = { tag = RUS }
 			removal_cost = -1
 			available = { has_war = no }
 			modifier = {
@@ -606,7 +531,7 @@ ideas = {
 		}
 		SOV_idea_kronstadt = {
 			picture = chi_war_of_resistance3
-			allowed = { always = no }
+			allowed = { original_tag = RUS }
 			removal_cost = -1
 			available = { has_civil_war = yes }
 			modifier = {
@@ -614,126 +539,17 @@ ideas = {
 				ai_join_ally_desire_factor = -100
 			}
 		}
-		SOV_war_in_the_caucasus_1 = {
-			picture = FRA_scw_intervention_nationalists_focus
-			name = SOV_war_in_the_caucasus
-			allowed = {
-				tag = SOV
-			}
-			
-			available = {
-				# OR = {
-				# 	KUB = {
-				# 		has_war_with = SRA
-				# 		is_puppet_of = SOV
-				# 		OR = {
-				# 			AND = {
-				# 				has_cosmetic_tag = KUB_north_caucasus_communism
-				# 				surrender_progress < 0.33
-				# 			}
-				# 			AND = {
-				# 				has_capitulated = no
-				# 				OR = {
-				# 					STV = {
-				# 						is_puppet_of = SOV
-				# 						surrender_progress < 0.33
-				# 					}
-				# 					TER = {
-				# 						is_puppet_of = SOV
-				# 						surrender_progress < 0.33
-				# 					}
-				# 				}	
-				# 			}
-				# 		}
-				# 	}
-				# 	KUB = {
-				# 		has_war_with = SOV
-				# 	}			
-				# }
-				# NOT = {
-				# 	SRA = {
-				# 		has_army_manpower = {
-				# 			size > 60000
-				# 		}
-				# 	}
-				# }
-			}
-
-			removal_cost = -1
-			
-			targeted_modifier = {
-				tag = SRA
-				attack_bonus_against = -1
-				defense_bonus_against = -1
-			}
-		}
-		SOV_war_in_the_caucasus_2 = {
-			picture = FRA_scw_intervention_nationalists_focus
-			name = SOV_war_in_the_caucasus
-			allowed = {
-				tag = SOV
-			}
-			
-			available = {
-				OR = {
-					KUB = {
-						has_war_with = SRA
-						is_puppet_of = SOV
-						OR = {
-							AND = {
-								has_cosmetic_tag = KUB_north_caucasus_communism
-								surrender_progress < 0.33
-							}
-							AND = {
-								has_capitulated = no
-								OR = {
-									STV = {
-										is_puppet_of = SOV
-										surrender_progress < 0.33
-									}
-									TER = {
-										is_puppet_of = SOV
-										surrender_progress < 0.33
-									}
-								}	
-							}
-						}
-					}
-					KUB = {
-						has_war_with = SOV
-					}
-				}
-				NOT = {
-					SRA = {
-						has_army_manpower = {
-							size > 60000
-						}
-					}
-				}
-			}
-
-			removal_cost = -1
-			
-			targeted_modifier = {
-				tag = SRA
-				attack_bonus_against = -1
-				defense_bonus_against = -1
-			}
-			targeted_modifier = {
-				tag = DON
-				attack_bonus_against = -0.66
-				defense_bonus_against = -0.66
-			}
-		}
 		idea_soviet_liberation_war = {
 			picture = CZE_planning_bonus
-			allowed = { always = no }
+			allowed = {
+				always = yes
+			}
 			available = {
 				has_war_with = SOV
 			}
 			targeted_modifier = {
-				tag = SOV
-				attack_bonus_against = 0.1
+				tag = RUS
+				attack_bonus_against = 0.2
 				defense_bonus_against = 0.5
 			}
 			modifier = {
@@ -765,7 +581,6 @@ ideas = {
 			modifier = {
 				communism_drift = -0.1
 				communism_acceptance = -100
-				ai_focus_defense_factor = 1
 			}
 		}
 	}
@@ -778,7 +593,7 @@ ideas = {
 				has_completed_focus = SOV_soviet_tanks
 			}	
 			allowed = {
-				tag = SOV has_country_flag = RUS_soviet_tag
+				tag = RUS 
 			}
 			research_bonus = {
 				armor = 0.10
@@ -792,7 +607,7 @@ ideas = {
 		
 		astrov_design_bureau = {		
 			allowed = {
-				tag = SOV has_country_flag = RUS_soviet_tag
+				tag = RUS 
 			}
 			available = {
 				has_completed_focus = SOV_soviet_tanks
@@ -811,7 +626,7 @@ ideas = {
 				has_completed_focus = SOV_soviet_tanks
 			}
 			allowed = {
-				tag = SOV has_country_flag = RUS_soviet_tag
+				tag = RUS 
 			}
 			research_bonus = {
 				armor = 0.10
@@ -822,13 +637,16 @@ ideas = {
 			}
 		}
 	}
+	
+	
+	
 	aircraft_manufacturer = {
 		
 		designer = yes
 		
 		mig_design_bureau = {	
 			allowed = {
-				tag = SOV has_country_flag = RUS_soviet_tag
+				tag = RUS 
 			}
 			available = {
 				has_completed_focus = SOV_design_bureau
@@ -845,7 +663,7 @@ ideas = {
 		
 		ilyushin_design_bureau = {	
 			allowed = {
-				tag = SOV has_country_flag = RUS_soviet_tag
+				tag = RUS 
 			}
 			available = {
 				has_completed_focus = SOV_design_bureau
@@ -862,7 +680,7 @@ ideas = {
 		
 		tupolev_design_bureau = {		
 			allowed = {
-				tag = SOV has_country_flag = RUS_soviet_tag
+				tag = RUS 
 			}
 			available = {
 				has_completed_focus = SOV_design_bureau
@@ -879,7 +697,7 @@ ideas = {
 		
 		yakovlev_design_bureau = {		
 			allowed = {
-				tag = SOV has_country_flag = RUS_soviet_tag
+				tag = RUS 
 			}
 			available = {
 				has_completed_focus = SOV_design_bureau
@@ -894,10 +712,11 @@ ideas = {
 			}
 		}
 	}
+	
 	industrial_concern = {				
 		stalingrad_tractor_factory = {			
 			allowed = {
-				tag = SOV has_country_flag = RUS_soviet_tag
+				tag = RUS 
 			}
 			available = {
 				has_completed_focus = SOV_collectivization
@@ -919,7 +738,7 @@ ideas = {
 		amtorg_trading = {
 			picture = generic_industrial_concern_2
 			allowed = {
-				tag = SOV has_country_flag = RUS_soviet_tag
+				tag = RUS 
 			}
 			available = {
 				has_completed_focus = SOV_amtorg_trading_corporation
@@ -938,7 +757,7 @@ ideas = {
 		}
 		leningrad_polytechnical_institute = {			
 			allowed = {
-				tag = SOV has_country_flag = RUS_soviet_tag
+				tag = RUS 
 			}
 			available = {
 				OR = {
@@ -957,6 +776,7 @@ ideas = {
 			}
 		}
 	}
+	
 	materiel_manufacturer = {
 		designer = yes
 		gaz = {
@@ -971,11 +791,12 @@ ideas = {
 			traits = { motorized_equipment_manufacturer }
 		}
 	}
+	
 	naval_manufacturer = {
 		designer = yes		
 		nevskoye_design_bureau = {			
 			allowed = {
-				tag = SOV has_country_flag = RUS_soviet_tag
+				tag = RUS 
 			}
 			available = {
 				OR = {

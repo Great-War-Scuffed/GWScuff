@@ -9,7 +9,7 @@ country_event = {
 	id = ww1_rcw.1
 	title = ww1_rcw.1.t
 	desc = ww1_rcw.1.d
-	picture =  GFX_report_event_czech_revolt
+	picture =  GFX_report_event_soviet_soldiers
 	fire_only_once = yes
 	is_triggered_only = yes
 	immediate = {
@@ -60,35 +60,30 @@ country_event = {
 				}
 				add_core_of = SIB
 			}
-			RUS = {
+			every_possible_country = {
+				limit = {
+					has_character = RUS_boris_annenkov
+				}
 				RUS_boris_annenkov = {
-					set_nationality = SIB
-				}
-				RUS_anatoly_pepelyayev = {
-					set_nationality = SIB
-				}
-				RUS_mikhail_diterikhs = {
-					set_nationality = SIB
-				}
-				RUS_sergej_vojcechovsky = {
 					set_nationality = SIB
 				}		
 			}
-			if = {
+			every_possible_country = {
 				limit = {
-					CZE = {
-						OR = {
-							exists = no
-							is_subject_of = AUS
-						}
-					}
+					has_character = RUS_anatoly_pepelyayev
 				}
-				CZE = {
-					CZE_radola_gajda = {
-						set_nationality = SIB
-					}		
+				RUS_anatoly_pepelyayev = {
+					set_nationality = SIB
+				}		
+			}
+			every_possible_country = {
+				limit = {
+					has_character = RUS_mikhail_diterikhs
 				}
-			}			
+				RUS_mikhail_diterikhs = {
+					set_nationality = SIB
+				}		
+			}
 			SIB = {				
 				inherit_technology = RUS
 				delete_obsolete_russian_templates = yes
@@ -100,26 +95,6 @@ country_event = {
 				}
 				set_faction_leader = yes
 				set_country_flag = czechoslovak_legion
-				add_equipment_to_stockpile = {
-					type = infantry_equipment
-					amount = 20000
-					producer = RUS
-				}
-				add_equipment_to_stockpile = {
-					type = support_equipment
-					amount = 500
-					producer = RUS
-				}
-				add_equipment_to_stockpile = {
-					type = field_gun_equipment
-					amount = 400
-					producer = RUS
-				}
-				add_equipment_to_stockpile = {
-					type = howitzer_equipment
-					amount = 100
-					producer = RUS
-				}
 			}
 			if = {
 				limit = {
@@ -171,7 +146,10 @@ country_event = {
 				}
 				add_core_of = KOM
 			}
-			RUS = {
+			every_possible_country = {
+				limit = {
+					has_character = RUS_vasily_boldyrev
+				}
 				RUS_vasily_boldyrev = {			
 					set_nationality = KOM
 					add_country_leader_role ={
@@ -180,9 +158,19 @@ country_event = {
 							ideology=stratocracy
 						}
 					}
+				}			
+			}
+			every_possible_country = {
+				limit = {
+					has_character = RUS_sergey_rozanov
 				}
 				RUS_sergey_rozanov = {
 					set_nationality = KOM
+				}			
+			}
+			every_possible_country = {
+				limit = {
+					has_character = RUS_vladimir_kappel
 				}
 				RUS_vladimir_kappel = {
 					set_nationality = KOM
@@ -192,32 +180,16 @@ country_event = {
 							ideology=stratocracy
 						}
 					}
+				}			
+			}
+			every_possible_country = {
+				limit = {
+					has_character = RUS_georgiy_stark
 				}
 				RUS_georgiy_stark = {
 					set_nationality = KOM
 				}			
-			}	
-			if = {
-				limit = {
-					CZE = {
-						OR = {
-							exists = no
-							is_subject_of = AUS
-						}
-					}
-				}
-				CZE = {
-					CZE_stanislav_cecek  = {
-						set_nationality = KOM
-						add_country_leader_role ={
-							promote_leader = yes
-							country_leader = {
-								ideology=authoritarian_democracy
-							}
-						}
-					}			
-				}
-			}		
+			}			
 			KOM = {				
 				declare_war_on = {
 					target = SOV
@@ -273,7 +245,7 @@ country_event = {
 			SOV = {
 				add_ideas = RUS_russian_civil_war
 				send_equipment_fraction = {
-					value = 0.35
+					value = 0.25
 					target = SIB
 				}
 				send_equipment_fraction = {
@@ -285,31 +257,12 @@ country_event = {
 					days = 4
 				}
 			}
-			if = {
-				limit = {
-					NOT = {
-						country_exists = ORE
-					}
-				}
-				SOV = {
-					create_ORE = yes
-				}
-			}
-			every_other_country = {
-				limit = {
-					is_russian_tag = yes
-					has_war_with = ROOT
-					is_ai = no
-				}	
-				country_event = ww1_rcw.8
-			}
 		}
 	}
 	option = {
 		name = ww1_rcw.1.a
 		effect_tooltip = {
 			release = SIB
-			release = KOM
 		}
 	}
 	option = {
@@ -319,9 +272,6 @@ country_event = {
 		}
 		trigger = {
 			is_ai = no
-			SIB = {
-				is_ai = yes
-			}
 		}
 	}
 	option = {
@@ -331,9 +281,6 @@ country_event = {
 		}
 		trigger = {
 			is_ai = no
-			KOM = {
-				is_ai = yes
-			}
 		}
 	}
 }
@@ -343,7 +290,7 @@ country_event = {
 	id = ww1_rcw.2
 	title = ww1_rcw.2.t
 	desc = ww1_rcw.2.d
-	picture = GFX_report_event_horvat_gov
+	picture = ww1_russian_state_1
 
 	is_triggered_only = yes
 	trigger = {
@@ -370,7 +317,10 @@ country_event = {
 			set_capital = {
 				state = 408
 			}
-			RUS = {
+			every_possible_country = {
+				limit = {
+					has_character = RUS_vasily_flug
+				}
 				RUS_vasily_flug = {
 					set_nationality = ROOT
 				}
@@ -382,26 +332,18 @@ country_event = {
 				name = CER_cabinet_party
 				elections_allowed = no
 			}
-			CER_dmitry_horvat = {
-				remove_country_leader_role = {
-					ideology = colonial_government
-				}
-				add_country_leader_role = {
-					promote_leader = yes
-					country_leader = {
-						ideology = civilian_dictatorship
-					}
-				}
-			}
 			declare_war_on = {
 				target = SOV
 				type = civil_war
 			}
 			hidden_effect = {
-				FER = {
+				every_possible_country = {
+					limit = {
+						has_character = SIB_pyotr_derber
+					}
 					SIB_pyotr_derber = {
 						set_nationality = ROOT
-						promote_character = social_democracy
+						promote_character = socialism
 					}
 				}
 				set_party_name = {
@@ -413,10 +355,6 @@ country_event = {
 					ideology = fascism
 					long_name = CER_cabinet_party
 					name = CER_cabinet_party
-				}
-				add_equipment_to_stockpile = {
-					type = convoy
-					amount = 30
 				}
 			}
 		}
@@ -437,14 +375,13 @@ country_event = {
 	picture = GFX_report_event_czech_soldiers_01
 	fire_only_once = yes
 	is_triggered_only = yes
-	# trigger = {
-	# 	original_tag = JAP
-	# 	has_completed_focus = JAP_ww1_Russian_Revolution_Opportunity
-	# 	any_country = {
-	# 		is_russian_tag = yes
-	# 		owns_state = 563
-	# 	}	
-	# }
+	trigger = {
+		original_tag = JAP
+		any_country = {
+			is_russian_tag = yes
+			owns_state = 563
+		}	
+	}
 	immediate = {
 		hidden_effect = {
 			563 = {
@@ -454,7 +391,10 @@ country_event = {
 			564 = {
 				add_core_of = TBK
 			}			
-			RUS = {
+			every_possible_country = {
+				limit = {
+					has_character = RUS_grigory_semyonov
+				}
 				RUS_grigory_semyonov = {
 					set_nationality = TBK
 					promote_leader = yes
@@ -464,58 +404,56 @@ country_event = {
 							ideology=stratocracy
 							traits = {
 								cornered_fox
-								cossack_warlord 
 							}	
 						}
 					}
 					add_country_leader_role ={
 						promote_leader = yes
 						country_leader = {
-							ideology=warlordism
+							ideology=despotism
 							traits = {
 								cornered_fox
-								cossack_warlord 
 							}
 						}
 					}
+				}			
+			}
+			every_possible_country = {
+				limit = {
+					has_character = RUS_roman_ungern_sternberg
+					NOT = {
+						original_tag = MON
+					}	
 				}
-				if = {
-					limit = {
-						MON = {
-							NOT = {
-								has_character = RUS_roman_ungern_sternberg
-							}
-						}					
-					}
-					RUS_roman_ungern_sternberg = {
-						set_nationality = TBK					
-					}			
+				RUS_roman_ungern_sternberg = {
+					set_nationality = TBK					
+				}			
+			}
+			every_possible_country = {
+				limit = {
+					has_character = RUS_leonid_skipetrov	
 				}
 				RUS_leonid_skipetrov = {
 					set_nationality = TBK					
-				}
+				}			
 			}
 			TBK = {
 				add_ideas = standing_alone
 				load_focus_tree = white_guard_focus
 				inherit_technology = RUS
 				delete_obsolete_russian_templates = yes
-				load_oob = "RUS_cossack"
+				load_oob = "RUS_civil_war"
 				give_military_access = SIB
 				complete_national_focus = WHI_reach_to_the_world
-				unlock_national_focus = WHI_approach_the_samurai
+				complete_national_focus = WHI_approach_the_samurai
 				declare_war_on = {
 					target = SOV
 					type = civil_war
 				}
-				set_country_flag = siberian_intervention
-			}
-			SIB = {
-				give_military_access = TBK
 			}
 			563 = {
 				create_unit = {
-					division = "division_template = \"Kazach'ya Brigada\"	start_experience_factor = 0.4	start_equipment_factor = 1"
+					division = "division_template = \"Belogvardeyskiy Korpus\"	start_experience_factor = 0.4	start_equipment_factor = 1"
 					owner = TBK
                     prioritize_location = 4677
 					allow_spawning_on_enemy_provs = yes
@@ -556,20 +494,10 @@ country_event = {
 					relation = guarantee
 					active = yes
 				}
-				add_ai_strategy = {
-					type = protect
-					id = TBK
-					value = 100
-				}
-				add_ai_strategy = {
-					type = send_volunteers_desire
-					id = TBK
-					value = 100
-				}
-				add_ai_strategy = {
-					type = support
-					id = TBK
-					value = 100
+				diplomatic_relation = {
+					country = SIB
+					relation = military_access
+					active = yes
 				}
 			}
 			SOV = {
@@ -588,13 +516,6 @@ country_event = {
 	}
 	option = {
 		name = ww1_rcw.3.a
-		effect_tooltip = {
-			TBK = {
-				transfer_state = 563
-				give_military_access = ROOT
-			}
-			give_guarantee = TBK
-		}
 	}
 }
 #Japanese intervention in Transbaikal - report event for Soviets
@@ -622,7 +543,7 @@ country_event = {
 		}
 	}
 }
-#Provisional Regional Government of the Urals
+#Ural republic
 country_event = {
 	id = ww1_rcw.5
 	title = ww1_rcw.5.t
@@ -674,15 +595,6 @@ country_event = {
 	option = {
 		name = ww1_rcw.5.a
 	}
-	option = {
-		name = ww1_rcw.5.b
-		URA = {
-			change_tag_from = ROOT
-		}
-		trigger = {
-			is_ai = no
-		}	
-	}
 }
 # White army coup in Amur
 ###################
@@ -714,7 +626,6 @@ country_event = {
 			ruling_party = democratic
 		}
 		hidden_effect = {
-			clear_all_relations = yes
 			add_ideas = {
 				RUS_russian_civil_war
 				RUS_cossack_volnitsa
@@ -726,6 +637,23 @@ country_event = {
 				democratic = 40
 				fascism = 20
 				communism = 10
+			}	
+			if = {
+				limit = {
+					is_subject_of = SOV
+				}
+				SOV = {
+					end_puppet = AMU
+				}
+			}
+			leave_faction = yes
+			every_other_country = {
+				limit = {
+					has_war_with = ROOT
+				}
+				ROOT = {
+					white_peace = PREV
+				}	
 			}
 			delete_unit_template_and_units = {
 				division_template = "Matrosy amurskoy flotilii"
@@ -787,7 +715,6 @@ country_event = {
 		}	
 		hidden_effect = {
 			set_cosmetic_tag = PRI_communism
-			load_focus_tree = empty_focus
 			give_military_access = SOV
 			set_popularities = {
 				neutrality = 10
@@ -803,110 +730,13 @@ country_event = {
 				long_name = FER_fascism_party_long
 				name = FER_fascism_party
 			}
-			SOV = {
+			every_possible_country = {
+				limit = {
+					has_character = SOV_sergey_lazo
+				}
 				SOV_sergey_lazo = {
 					set_nationality = PRI
 				}			
-			}
-		}
-	}
-}
-# Siberia Tag switching changed
-country_event = {
-	id = ww1_rcw.8
-	title = ww1_rcw.1.t
-	desc = ww1_rcw.1.d
-	picture =  GFX_report_event_soviet_soldiers
-	fire_only_once = yes
-	is_triggered_only = yes
-	option = {
-		name = ww1_rcw.1.a
-	}
-	option = {
-		name = ww1_rcw.1.b
-		SIB = {
-			change_tag_from = ROOT
-		}
-		trigger = {
-			is_ai = no
-			SIB = {
-				is_ai = yes
-			}
-		}
-	}
-	option = {
-		name = ww1_rcw.1.c
-		KOM = {
-			change_tag_from = ROOT
-		}
-		trigger = {
-			is_ai = no
-			KOM = {
-				is_ai = yes
-			}
-		}
-	}
-}
-
-# Yaroslavl Revolt
-country_event = {
-	id = ww1_rcw.9
-	title = ww1_rcw.9.t
-	desc = ww1_rcw.9.d
-	picture =  GFX_report_event_yaroslavl_revolt
-	fire_only_once = yes
-	trigger = {
-		tag = SOV
-		has_government = communism
-		has_war_with = KOM
-		owns_state = 248
-		controls_state = 248
-	}
-	mean_time_to_happen = {
-		days = 20
-	}
-	immediate = {
-		hidden_effect = {
-			add_timed_idea = {
-				idea = SOV_missing_reserves
-				days = 30
-			}
-			248 = {
-				damage_building = {
-					type = infrastructure
-					damage = 1
-				}
-				damage_building = {
-					type = industrial_complex
-					damage = 1
-				}
-				damage_building = {
-					type = arms_factory
-					damage = 1
-				}
-			}
-		}
-	}
-	option = {
-		name = ww1_rcw.9.a
-		effect_tooltip = {
-			add_timed_idea = {
-				idea = SOV_missing_reserves
-				days = 30
-			}
-			248 = {
-				damage_building = {
-					type = infrastructure
-					damage = 1
-				}
-				damage_building = {
-					type = industrial_complex
-					damage = 1
-				}
-				damage_building = {
-					type = arms_factory
-					damage = 1
-				}
 			}
 		}
 	}
@@ -935,18 +765,7 @@ country_event = {
 					original_tag = CER
 				}
 			}
-			if = {
-				limit = {
-					is_ai = no
-					FROM = { is_ai = yes }
-				}
-				effect_tooltip = {
-					FROM = { change_tag_from = ROOT }
-				}
-			}
-			else = {
-				custom_effect_tooltip = GAME_OVER_TT
-			}
+			custom_effect_tooltip = GAME_OVER_TT		
 		}
 		FROM = {
 			country_event = {
@@ -977,12 +796,10 @@ country_event = {
 	picture = GFX_report_event_generic_conference
 	is_triggered_only = yes
 	immediate = {
-		hidden_effect = {
-			FROM = {
-				clr_country_flag = has_supported_to_let_former_territories
-				clr_country_flag = has_supported_to_puppet_former_territories
-				clr_country_flag = has_support_to_annex_former_territories
-			}
+		FROM = {
+			clr_country_flag = has_supported_to_let_former_territories
+			clr_country_flag = has_supported_to_puppet_former_territories
+			clr_country_flag = has_support_to_annex_former_territories
 		}
 	}
 	option = {
@@ -1052,19 +869,9 @@ country_event = {
 						}
 					}			
 					restore_previous_government_type = yes	
-					CER_dmitry_horvat = {
-						promote_character = colonial_government
-					}
 				}
 			}
-		}
-		if = {
-			limit = {
-				is_ai = yes
-				FROM = { is_ai = no }
-			}
-			change_tag_from = FROM
-		}
+		}		
 	}
 }
 
@@ -1249,7 +1056,7 @@ country_event = {
 						has_war_with = ROOT
 						is_subject_of = ROOT
 						has_country_leader_ideology = vanguardism
-						has_country_leader_ideology = revolutionary_socialism
+						has_country_leader_ideology = marxism
 						has_country_flag = has_left_the_conference
 					}
 				}
@@ -1307,7 +1114,7 @@ country_event = {
 						has_war_with = ROOT
 						is_subject_of = ROOT
 						has_country_leader_ideology = vanguardism
-						has_country_leader_ideology = revolutionary_socialism
+						has_country_leader_ideology = marxism
 						has_country_flag = has_left_the_conference
 					}
 				}
@@ -1361,7 +1168,7 @@ country_event = {
 						has_war_with = ROOT
 						is_subject_of = ROOT
 						has_country_leader_ideology = vanguardism
-						has_country_leader_ideology = revolutionary_socialism
+						has_country_leader_ideology = marxism
 						has_country_flag = has_left_the_conference
 					}
 				}
@@ -1419,7 +1226,7 @@ country_event = {
 						has_war_with = ROOT
 						is_subject_of = ROOT
 						has_country_leader_ideology = vanguardism
-						has_country_leader_ideology = revolutionary_socialism
+						has_country_leader_ideology = marxism
 						has_country_flag = has_left_the_conference
 					}
 				}
@@ -1473,7 +1280,7 @@ country_event = {
 						has_war_with = ROOT
 						is_subject_of = ROOT
 						has_country_leader_ideology = vanguardism
-						has_country_leader_ideology = revolutionary_socialism
+						has_country_leader_ideology = marxism
 						has_country_flag = has_left_the_conference
 					}
 				}
@@ -1531,7 +1338,7 @@ country_event = {
 						has_war_with = ROOT
 						is_subject_of = ROOT
 						has_country_leader_ideology = vanguardism
-						has_country_leader_ideology = revolutionary_socialism
+						has_country_leader_ideology = marxism
 						has_country_flag = has_left_the_conference
 					}
 				}
@@ -1715,7 +1522,7 @@ country_event = {
 						has_war_with = ROOT
 						is_subject_of = ROOT
 						has_country_leader_ideology = vanguardism
-						has_country_leader_ideology = revolutionary_socialism
+						has_country_leader_ideology = marxism
 						has_country_flag = has_left_the_conference
 					}
 				}
@@ -1776,7 +1583,7 @@ country_event = {
 						has_war_with = ROOT
 						is_subject_of = ROOT
 						has_country_leader_ideology = vanguardism
-						has_country_leader_ideology = revolutionary_socialism
+						has_country_leader_ideology = marxism
 						has_country_flag = has_left_the_conference
 					}
 				}
@@ -1837,7 +1644,7 @@ country_event = {
 						has_war_with = ROOT
 						is_subject_of = ROOT
 						has_country_leader_ideology = vanguardism
-						has_country_leader_ideology = revolutionary_socialism
+						has_country_leader_ideology = marxism
 						has_country_flag = has_left_the_conference
 					}
 				}
@@ -1898,7 +1705,7 @@ country_event = {
 						has_war_with = ROOT
 						is_subject_of = ROOT
 						has_country_leader_ideology = vanguardism
-						has_country_leader_ideology = revolutionary_socialism
+						has_country_leader_ideology = marxism
 						has_country_flag = has_left_the_conference
 					}
 				}
@@ -1962,7 +1769,7 @@ country_event = {
 						has_war_with = ROOT
 						is_subject_of = ROOT
 						has_country_leader_ideology = vanguardism
-						has_country_leader_ideology = revolutionary_socialism
+						has_country_leader_ideology = marxism
 						has_country_flag = has_left_the_conference
 					}
 				}
@@ -2023,7 +1830,7 @@ country_event = {
 						has_war_with = ROOT
 						is_subject_of = ROOT
 						has_country_leader_ideology = vanguardism
-						has_country_leader_ideology = revolutionary_socialism
+						has_country_leader_ideology = marxism
 						has_country_flag = has_left_the_conference
 					}
 				}
@@ -2109,8 +1916,8 @@ country_event = {
 				OR = {
 					is_in_faction_with = GER
 					is_guaranteed_by = GER
-					is_in_faction_with = AUS
-					is_guaranteed_by = AUS
+					is_in_faction_with = AUH
+					is_guaranteed_by = AUH
 					is_in_faction_with = ENG
 					is_guaranteed_by = ENG
 					is_in_faction_with = FRA
@@ -2302,67 +2109,3 @@ country_event = {
 	}
 }
 
-#Zemsky Sobor ( Chosing the monarch }
-country_event = {
-	id = ww1_rcw_unification.12
-	title = ww1_rcw_unification.12.t
-	desc = ww1_rcw_unification.12.d
-	picture = GFX_report_event_royal_visit
-	is_triggered_only = yes
-	immediate = {
-		hidden_effect = {
-			set_cosmetic_tag = RUS
-		}	
-	}
-	option = {
-		name = ww1_rcw_unification.12.a
-		RUS = {
-			RUS_kirill_vladimirovich_romanov = {
-				set_nationality = ROOT
-				set_character_name = RUS_kirill_i
-				add_country_leader_role ={
-					promote_leader = yes
-					country_leader = {
-						desc = RUS_nicholas_II_desc
-						ideology=semi_constitutional_monarchy
-						traits = { reformist_monarch }
-					}
-				}
-			}
-		}
-	}
-	option = {
-		name = ww1_rcw_unification.12.b
-		RUS = {
-			RUS_dmitriy_pavlovich_romanov = {
-				set_nationality = ROOT
-				set_character_name = RUS_dmitriy_ii
-				add_country_leader_role ={
-					promote_leader = yes
-					country_leader = {
-						desc = RUS_nicholas_II_desc
-						ideology=semi_constitutional_monarchy
-						traits = { CHI_trait_accepted_monarch }
-					}
-				}
-			}
-		}
-	}
-	option = {
-		name = ww1_rcw_unification.12.c
-		RUS = {
-			RUS_nikolai_nikolaevich_romanov = {
-				set_nationality = ROOT
-				set_character_name = RUS_nikolai_iii
-				add_country_leader_role ={
-					promote_leader = yes
-					country_leader = {
-						desc = RUS_nicholas_II_desc
-						ideology=semi_constitutional_monarchy
-						traits = { inexperienced_imperialist }
-					}
-				}
-			}
-		}
-	}
-}

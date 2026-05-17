@@ -36,7 +36,7 @@ focus_tree = {
 	focus = {
 		id = SWE_recovering_from_strike
 		icon = GFX_focus_dead_economy
-		cost = 5
+		cost = 10
 		x = 4
 		y = 0
 		completion_reward = {
@@ -48,39 +48,10 @@ focus_tree = {
 			    remove_idea = SWE_high_emigration_1
 			    add_idea = SWE_high_emigration_2
 			}
-			138 = {
-				limit = {
-					is_controlled_by = ROOT
-				}
-				add_extra_state_shared_building_slots = 1
-				add_building_construction = {
-				    type = infrastructure
-				    level = 1
-				    instant_build = yes
-				}
-			}
-			140 = {
-				limit = {
-					is_controlled_by = ROOT
-				}
-				add_extra_state_shared_building_slots = 1
-				add_building_construction = {
-				    type = infrastructure
-				    level = 1
-				    instant_build = yes
-				}
-			}
-			139 = {
-				limit = {
-					is_controlled_by = ROOT
-				}
-				add_extra_state_shared_building_slots = 1
-				add_building_construction = {
-				    type = infrastructure
-				    level = 1
-				    instant_build = yes
-				}
-			}
+
+			add_2x_civilian = yes
+			add_1x_civilian = yes
+			add_1x_military = yes
 		}
 		ai_will_do = {
 			base = 100
@@ -120,7 +91,7 @@ focus_tree = {
 	}
 	focus = {
 		id = SWE_sweden_in_the_world
-		icon = GFX_focus_generic_develop_sweden_silhouette
+		icon = GFX_focus_deal_with_sweden
 		cost = 4.40
 		x = 26
 		y = 0
@@ -183,24 +154,15 @@ focus_tree = {
 	focus = {
 		id = SWE_find_employment
 		icon = GFX_focus_socialist_worker
-		cost = 5
+		cost = 10
 		prerequisite = {
 			focus = SWE_support_the_landsorganisationen
 		}
 		x = 1
 		y = 2
 		completion_reward = {
-			random_state = {
-				limit = {
-					is_controlled_by = ROOT
-				}
-				add_extra_state_shared_building_slots = 2
-				add_building_construction = {
-				    type = arms_factory
-				    level = 2
-				    instant_build = yes
-				}
-			}
+			add_2x_military = yes
+			add_2x_military = yes
 			swap_ideas = {
 			    remove_idea = SWE_economic_turbulence_3
 			    add_idea = SWE_economic_turbulence_4
@@ -226,19 +188,7 @@ focus_tree = {
 		}
 		completion_reward = {
 			remove_ideas = SWE_class_conflict
-			random_state = {
-				limit = {
-					is_controlled_by = ROOT
-				}
-				add_extra_state_shared_building_slots = 1
-				add_building_construction = {
-				    type = industrial_complex
-				    level = 1
-				    instant_build = yes
-				}
-			}
 		}
-		
 		ai_will_do = {
 			base = 100
 		}
@@ -246,7 +196,7 @@ focus_tree = {
 	focus = {
 		id = SWE_encourage_industrialisation
 		icon = GFX_focus_economic_control_red
-		cost = 5
+		cost = 10
 		prerequisite = {
 			focus = SWE_find_employment
 		}
@@ -256,17 +206,8 @@ focus_tree = {
 		x = 2
 		y = 3
 		completion_reward = {
-			random_state = {
-				limit = {
-					is_controlled_by = ROOT
-				}
-				add_extra_state_shared_building_slots = 2
-				add_building_construction = {
-				    type = industrial_complex
-				    level = 2
-				    instant_build = yes
-				}
-			}
+			add_2x_civilian = yes
+			add_2x_civilian = yes
 			swap_ideas = {
 			    remove_idea = SWE_economic_turbulence_4
 			    add_idea = SWE_economic_turbulence_5
@@ -327,19 +268,7 @@ focus_tree = {
 		}
 		completion_reward = {
 			remove_ideas = SWE_high_emigration_2
-					random_state = {
-				limit = {
-					is_controlled_by = ROOT
-				}
-				add_extra_state_shared_building_slots = 1
-				add_building_construction = {
-				    type = industrial_complex
-				    level = 1
-				    instant_build = yes
-				}
-			}
 		}
-
 		ai_will_do = {
 			base = 100
 		}
@@ -350,24 +279,15 @@ focus_tree = {
 	focus = {
 		id = SWE_reimburse_employers
 		icon = GFX_focus_industry_profit
-		cost = 5
+		cost = 10
 		prerequisite = {
 			focus = SWE_support_saf
 		}
 		x = 7
 		y = 2
 		completion_reward = {
-			random_state = {
-				limit = {
-					is_controlled_by = ROOT
-				}
-				add_extra_state_shared_building_slots = 2
-				add_building_construction = {
-				    type = industrial_complex
-				    level = 2
-				    instant_build = yes
-				}
-			}
+			add_2x_civilian = yes
+			add_2x_civilian = yes
 			swap_ideas = {
 			    remove_idea = SWE_economic_turbulence_3
 			    add_idea = SWE_economic_turbulence_4
@@ -383,7 +303,7 @@ focus_tree = {
 	focus = {
 		id = SWE_woo_army
 		icon = GFX_focus_generic_little_entente
-		cost = 5
+		cost = 10
 		prerequisite = {
 			focus = SWE_reimburse_employers
 		}
@@ -398,17 +318,8 @@ focus_tree = {
 			}
 		}
 		completion_reward = {
-			random_state = {
-				limit = {
-					is_controlled_by = ROOT
-				}
-				add_extra_state_shared_building_slots = 2
-				add_building_construction = {
-				    type = arms_factory
-				    level = 2
-				    instant_build = yes
-				}
-			}
+			add_2x_military = yes
+			add_2x_military = yes
 			swap_ideas = {
 			    remove_idea = SWE_economic_turbulence_4
 			    add_idea = SWE_economic_turbulence_5
@@ -432,6 +343,9 @@ focus_tree = {
 		x = 4
 		y = 4
 		completion_reward = {
+			add_2x_civilian = yes
+			add_2x_military = yes
+			
 			remove_ideas = SWE_economic_turbulence_5
 			if = {
 				limit = {
@@ -1961,7 +1875,7 @@ focus_tree = {
 	focus = {
 		id = SWE_prepare_for_worldwide_revoluition
 		icon = GFX_focus_world_revolution
-		cost = 20.00
+		cost = 15
 		prerequisite = {
 			focus = SWE_exile_monarchy
 		}

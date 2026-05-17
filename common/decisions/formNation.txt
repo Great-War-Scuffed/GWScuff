@@ -12756,7 +12756,7 @@ formable_nations_timurids = {
 				controls_state = 29
 				controls_state = 18
 				controls_state = 17
-				controls_state = 28
+				#controls_state = 28
 				controls_state = 15
 				controls_state = 16
 				controls_state = 27
@@ -12777,7 +12777,7 @@ formable_nations_timurids = {
 				controls_state = 1
 				controls_state = 785
 				controls_state = 31
-			}
+			}f
 			# Spain
 			custom_trigger_tooltip = {
 				tooltip = form_iberia_spain_required_states_tt
@@ -12795,13 +12795,13 @@ formable_nations_timurids = {
 				controls_state = 169
 				controls_state = 173
 				controls_state = 168
-				controls_state = 788
-				controls_state = 789
-				controls_state = 790
-				controls_state = 791
-				controls_state = 792
-				controls_state = 793
-				controls_state = 794
+				#controls_state = 788
+				#controls_state = 789
+				#controls_state = 790
+				#controls_state = 791
+				#controls_state = 792
+				#controls_state = 793
+				#controls_state = 794
 			}
 		}
 

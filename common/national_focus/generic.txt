@@ -160,6 +160,14 @@ focus_tree = {
 			add = 10
 			tag = USB
 		}
+		modifier = {
+			add = 10
+			tag = FIN
+		}
+		modifier = {
+			add = 10
+			tag = DEN
+		}
 	}
 	default = no
 	reset_on_civilwar = no

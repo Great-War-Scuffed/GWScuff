@@ -1372,6 +1372,16 @@ technologies = {
 			leads_to_tech = oil_production1
 			research_cost_coeff = 1
 		}
+		path = {
+			leads_to_tech = steel_production_1
+			research_cost_coeff = 1
+		}
+		path = {
+			leads_to_tech = aluminum_production_1
+			research_cost_coeff = 1
+		}
+
+		
 		research_cost = 2	
 		categories = {
 			industry
@@ -1408,6 +1418,394 @@ technologies = {
 			}
 		}
 	}
+
+	steel_production_1 = {
+		enable_building = {
+			building = steel_mill
+			level = 3
+		}
+		
+		path = {
+			leads_to_tech = steel_production_2
+			research_cost_coeff = 1
+		}
+		
+		research_cost = 1.5
+		start_year = 1910
+		
+		folder = {
+			name = industry_folder
+			position = { x = 4 y = 2 }
+		}
+			
+		categories = {
+			industry
+		
+		}
+		
+		ai_will_do = {
+			factor = 0
+			modifier = {
+				factor = 0.5
+				steel > 10
+			}
+			modifier = {
+				factor = 0.5
+				steel > 20
+			}	
+			modifier = {
+				factor = 1
+				steel > 30
+			}			
+		}
+		
+		ai_research_weights = {
+			steel = -2.0
+		}		
+	}
+
+	steel_production_2 = {
+		on_research_complete = {	
+			modify_building_resources = {
+				building = steel_mill
+				resource = steel
+				amount = 2
+			}
+		}
+
+		path = {
+			leads_to_tech = steel_production_3
+			research_cost_coeff = 1
+		}
+		
+		research_cost = 1.5
+		start_year = 1914
+		
+		folder = {
+			name = industry_folder
+			position = { x = 4 y = 4 }
+		}
+		
+		categories = {
+			industry
+			
+		}
+		
+		ai_will_do = {
+			factor = 0
+			modifier = {
+				factor = 0
+				steel_mill < 1
+			}
+			modifier = {
+				factor = 2
+				steel_mill > 1
+			}			
+		}
+		
+		ai_research_weights = {
+			steel = -2.0
+		}
+
+		show_effect_as_desc = yes		
+	}
+
+	steel_production_3 = {
+	
+		on_research_complete = {	
+			modify_building_resources = {
+				building = steel_mill
+				resource = steel
+				amount = 2
+			}
+		}
+		
+		path = {
+			leads_to_tech = steel_production_4
+			research_cost_coeff = 1
+		}
+		
+		research_cost = 2
+		start_year = 1916
+		
+		folder = {
+			name = industry_folder
+			position = { x = 4 y = 6 }
+		}
+		
+		categories = {
+			industry
+			
+		}
+		
+		ai_will_do = {
+			factor = 0
+			modifier = {
+				factor = 0
+				steel_mill < 1
+			}
+			modifier = {
+				factor = 2
+				steel_mill > 1
+			}				
+		}
+		
+		ai_research_weights = {
+			steel = -2.0
+		}	
+
+		show_effect_as_desc = yes		
+	}
+
+	steel_production_4 = {
+
+		on_research_complete = {	
+			modify_building_resources = {
+				building = steel_mill
+				resource = steel
+				amount = 2
+			}
+		}
+		
+		research_cost = 2.5
+		start_year = 1918
+		
+		folder = {
+			name = industry_folder
+			position = { x = 4 y = 8 }
+		}
+		
+		categories = {
+			industry
+			
+		}
+		
+		ai_will_do = {
+			factor = 0
+			modifier = {
+				factor = 0
+				steel_mill < 1
+			}
+			modifier = {
+				factor = 2
+				steel_mill > 1
+			}			
+		}
+		
+		ai_research_weights = {
+			steel = -2.0
+		}	
+
+		show_effect_as_desc = yes		
+	}
+
+	aluminum_production_1 = {
+
+		enable_building = {
+			building = aluminum_mill
+			level = 3
+		}
+		
+		path = {
+			leads_to_tech = aluminum_production_2 
+			research_cost_coeff = 1
+		}
+		
+		research_cost = 1.5
+		start_year = 1910
+		
+		folder = {
+			name = industry_folder
+			position = { x = 6 y = 2 }
+		}
+			
+		categories = {
+			industry
+		
+		}
+		
+		ai_will_do = {
+			factor = 1
+			modifier = {
+				factor = 0.5
+				aluminium > 10
+			}
+			modifier = {
+				factor = 0.5
+				aluminium > 20
+			}	
+			modifier = {
+				factor = 1
+				aluminium > 30
+			}
+			modifier = {
+				factor = 10
+				tag = USA
+			}
+			modifier = {
+				factor = 6
+				aluminium < 5
+			}									
+		}
+		
+		ai_research_weights = {
+			aluminium = -2.0
+		}		
+	}
+
+	aluminum_production_2 = {
+
+		on_research_complete = {
+			modify_building_resources = {
+				building = aluminum_mill
+				resource = aluminium
+				amount = 2
+			}
+		}
+		
+		path = {
+			leads_to_tech = aluminum_production_3 
+			research_cost_coeff = 1
+		}
+		
+		research_cost = 1.5
+		start_year = 1912
+		
+		folder = {
+			name = industry_folder
+			position = { x = 6 y = 4 }
+		}
+			
+		categories = {
+			industry
+		
+		}
+		
+		ai_will_do = {
+			factor = 1
+			modifier = {
+				factor = 0
+				aluminum_mill < 1
+			}
+			modifier = {
+				factor = 5
+				aluminum_mill > 1
+			}	
+			modifier = {
+				factor = 20
+				aluminum_mill > 5
+			}			
+		}
+		
+		ai_research_weights = {
+			aluminium = -2.0
+		}	
+
+		show_effect_as_desc = yes		
+	}
+
+	aluminum_production_3 = {
+
+		on_research_complete = {
+			modify_building_resources = {
+				building = aluminum_mill
+				resource = aluminium
+				amount = 2
+			}
+		}
+		
+		path = {
+			leads_to_tech = aluminum_production_4 
+			research_cost_coeff = 1
+		}
+		
+		research_cost = 1.5
+		start_year = 1914
+		
+		folder = {
+			name = industry_folder
+			position = { x = 6 y = 6 }
+		}
+			
+		categories = {
+			industry
+		
+		}
+		
+		ai_will_do = {
+			factor = 1
+			modifier = {
+				factor = 0
+				aluminum_mill < 1
+			}
+			modifier = {
+				factor = 5
+				aluminum_mill > 1
+			}	
+			modifier = {
+				factor = 20
+				aluminum_mill > 5
+			}			
+		}
+		
+		ai_research_weights = {
+			aluminium = -2.0
+		}
+
+		show_effect_as_desc = yes		
+	}
+
+	aluminum_production_4 = {
+
+		on_research_complete = {
+			modify_building_resources = {
+				building = aluminum_mill
+				resource = aluminium
+				amount = 2
+			}
+		}
+		
+		path = {
+			research_cost_coeff = 1
+		}
+		
+		research_cost = 1.5
+		start_year = 1916
+		
+		folder = {
+			name = industry_folder
+			position = { x = 6 y = 8}
+		}
+			
+		categories = {
+			industry
+			
+		}
+		
+		ai_will_do = {
+			factor = 1
+			modifier = {
+				factor = 0
+				aluminum_mill < 1
+			}
+			modifier = {
+				factor = 5
+				aluminum_mill > 1
+			}	
+			modifier = {
+				factor = 20
+				aluminum_mill > 5
+			}			
+		}
+		
+		ai_research_weights = {
+			aluminium = -2.0
+		}
+
+		show_effect_as_desc = yes		
+	}
+
+
 	stainless_steel = {		
 		production_lack_of_resource_penalty_factor = -0.05
 		path = {
@@ -1633,7 +2031,7 @@ technologies = {
 		start_year = 1910
 		folder = {
 			name = industry_folder
-			position = { x = 4 y = 2 }
+			position = { x = 10 y = 2 }
 		}
 		path = {
 			leads_to_tech = oil_production2
@@ -1695,7 +2093,7 @@ technologies = {
 		start_year = 1914
 		folder = {
 			name = industry_folder
-			position = { x = 4 y = 4 }
+			position = { x = 8 y = 4 }
 		}
 		path = {
 			leads_to_tech = oil_production3
@@ -1753,7 +2151,7 @@ technologies = {
 		start_year = 1916
 		folder = {
 			name = industry_folder
-			position = { x = 4 y = 6 }
+			position = { x = 8 y = 6 }
 		}
 		path = {
 			leads_to_tech = synth_oil_experiments
@@ -1821,7 +2219,7 @@ technologies = {
 		start_year = 1918
 		folder = {
 			name = industry_folder
-			position = { x = 4 y = 8 }
+			position = { x = 8 y = 8 }
 		}	
 		categories = {
 			industry
@@ -1865,7 +2263,7 @@ technologies = {
 		research_cost = 1.5		
 		folder = {
 			name = industry_folder
-			position = { x = 4 y = 10 }
+			position = { x = 6 y = 10 }
 		}	
 		categories = {
 			industry
@@ -1906,7 +2304,7 @@ technologies = {
 		start_year = 1924		
 		folder = {
 			name = industry_folder
-			position = { x = 4 y = 12 }
+			position = { x = 6 y = 12 }
 		}	
 		categories = {
 			industry
@@ -1963,7 +2361,7 @@ technologies = {
 		start_year = 1920		
 		folder = {
 			name = industry_folder
-			position = { x = 6 y = 10 }
+			position = { x = 8 y = 10 }
 		}
 		categories = {
 			industry
@@ -2012,7 +2410,7 @@ technologies = {
 		start_year = 1924	
 		folder = {
 			name = industry_folder
-			position = { x = 6 y = 12 }
+			position = { x = 8 y = 12 }
 		}	
 		categories = {
 			industry
@@ -2059,7 +2457,7 @@ technologies = {
 		start_year = 1914
 		folder = {
 			name = industry_folder
-			position = { x = 8 y = 4 }
+			position = { x = 10 y = 4 }
 		}	
 		categories = {
 			industry
@@ -2136,7 +2534,7 @@ technologies = {
 		start_year = 1918
 		folder = {
 			name = industry_folder
-			position = { x = 8 y = 8 }
+			position = { x = 10 y = 8 }
 		}
 		path = {
 			leads_to_tech = fuel_refining2
@@ -2193,7 +2591,7 @@ technologies = {
 		start_year = 1924
 		folder = {
 			name = industry_folder
-			position = { x = 8 y = 12 }
+			position = { x = 10 y = 12 }
 		}
 		categories = {
 			industry

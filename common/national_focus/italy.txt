@@ -1657,7 +1657,7 @@ focus_tree = {
 				limit = {
 					OR = {
 						has_war_with = FRA
-						is_in_faction_with = AUH
+						is_in_faction_with = AUS
 			    	}					
 				}
 				has_full_control_of_state = 158
@@ -1673,7 +1673,7 @@ focus_tree = {
 				limit = {
 					OR = {
 						has_war_with = FRA
-						is_in_faction_with = AUH
+						is_in_faction_with = AUS
 			    	}
 				}
 				158 = {
@@ -4961,7 +4961,7 @@ focus_tree = {
 			focus = ITA_sostenere_aziende_e_fabbriche
 		}
 		completion_reward = { 
-			AUH = {
+			AUS = {
 				country_event = ww1_italy.23
 			}
 		}
@@ -5636,7 +5636,7 @@ focus_tree = {
 					active = no
 				}
 			}
-			AUH = {
+			AUS = {
 				add_opinion_modifier = {
 					target = ITA
 					modifier = medium_decrease
@@ -5648,7 +5648,7 @@ focus_tree = {
 				}
 			}
 			diplomatic_relation = {
-				country = AUH
+				country = AUS
 				relation = guarantee
 				active = no
 			}
@@ -5992,7 +5992,7 @@ focus_tree = {
 		}
 		completion_reward = { 
 			create_wargoal = {
-				target = AUH
+				target = AUS
 				type = take_claimed_state
 			}
 		}

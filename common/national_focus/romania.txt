@@ -360,7 +360,7 @@ focus_tree = {
 		y = 1
 		relative_position_id = ROM_take_our_land_back
 		completion_reward = {
-			AUH = {
+			AUS = {
 				country_event = ww1_romania.1
 			}
 		}
@@ -1575,7 +1575,7 @@ focus_tree = {
 				hidden_effect = {
 					add_ai_strategy = {
 						type = prepare_for_war
-						id = AUH
+						id = AUS
 						value = GER
 					}
 					add_ai_strategy = {
@@ -2040,7 +2040,7 @@ focus_tree = {
 
 		relative_position_id = ROM_Demand_Bessarabia
 		completion_reward = {
-			AUH = {
+			AUS = {
 				country_event = ww1_romania.10
 			}
 		}

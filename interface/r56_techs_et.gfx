@@ -1,0 +1,41 @@
+#####-----> Mod by Sig "GreatExperiment" Altre
+####-----> Reorganized by Pordy <><> <><> <><>
+spriteTypes = {
+###--->  Rescource production <><> <><> <><>
+#-> Steel production <><>
+	SpriteType = {
+		name = "GFX_steel_production_1_medium"
+		texturefile = "gfx/interface/technologies/et/rescource_production/r56_tech_steel_production_01.dds"
+	}
+	SpriteType = {
+		name = "GFX_steel_production_2_medium"
+		texturefile = "gfx/interface/technologies/et/rescource_production/r56_tech_steel_production_02.dds"
+	}
+	SpriteType = {
+		name = "GFX_steel_production_3_medium"
+		texturefile = "gfx/interface/technologies/et/rescource_production/r56_tech_steel_production_03.dds"
+	}
+	SpriteType = {
+		name = "GFX_steel_production_4_medium"
+		texturefile = "gfx/interface/technologies/et/rescource_production/r56_tech_steel_production_04.dds"
+	}
+
+#-> Aluminum production <><>
+	SpriteType = {
+		name = "GFX_aluminum_production_1_medium"
+		texturefile = "gfx/interface/technologies/et/rescource_production/r56_tech_aluminum_production_01.dds"
+	}
+	SpriteType = {
+		name = "GFX_aluminum_production_2_medium"
+		texturefile = "gfx/interface/technologies/et/rescource_production/r56_tech_aluminum_production_02.dds"
+	}
+	SpriteType = {
+		name = "GFX_aluminum_production_3_medium"
+		texturefile = "gfx/interface/technologies/et/rescource_production/r56_tech_aluminum_production_03.dds"
+	}
+	SpriteType = {
+		name = "GFX_aluminum_production_4_medium"
+		texturefile = "gfx/interface/technologies/et/rescource_production/r56_tech_aluminum_production_04.dds"
+	}
+
+}

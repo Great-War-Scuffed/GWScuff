@@ -2,7 +2,7 @@ ideas = {
 	hidden_ideas = {
 		AUH_unveiled_plans = {
 			allowed = {
-				always = no
+				original_tag = AUS
 			}
 			allowed_civil_war = { has_character = AUH_alfred_redl }
 			removal_cost = -1
@@ -22,10 +22,9 @@ ideas = {
 	naval_manufacturer = {
 		designer = yes
 		stabilimento_tecnico_triestino = {
-			name = AUS_stabilimento_tecnico_triestino
-			picture = AUS_stabilimento_tecnico_triestino
             allowed = {
 				OR = {
+					original_tag = AUS
 					original_tag = AUS
 					original_tag = ITA
 					original_tag = SLO
@@ -33,7 +32,7 @@ ideas = {
 				}	
             }
 			visible = {
-				owns_state = 1198
+				owns_state = 736
 			}	
             research_bonus = {
                 naval_equipment = 0.10
@@ -43,27 +42,9 @@ ideas = {
             }
         }
         AUH_ganz_danubius = {
-			name = HUN_ganz_danubius
-			picture = HUN_ganz_danubius
             allowed = {
-				OR = {
-					original_tag = AUS
-					original_tag = HUN
-				}        
+                original_tag = AUS
             }
-			visible = {
-				if = {
-					limit = {
-						original_tag = AUS
-					}
-					OR = {
-						any_owned_state = {
-							is_core_of = HUN
-						}
-						has_subject = HUN
-					}
-				}	
-			}
             research_bonus = {
                 naval_equipment = 0.10
             }
@@ -94,32 +75,8 @@ ideas = {
 		designer = yes
 		kuk_fliegerarsenal_fischamend = {
             allowed = {
-				OR = {
-					original_tag = AUS
-					original_tag = HUN
-					original_tag = BOS
-					original_tag = CZE
-					original_tag = GAL
-					original_tag = CRO
-				}
+                original_tag = AUS
             }
-			visible = {
-				NOT = {
-					has_country_flag = great_war_loser
-				}
-				if = {
-					limit = {
-						NOT = {
-							original_tag = AUS
-						}
-						OR = {
-							has_subject = AUS
-							is_subject_of = AUS
-							has_idea = AUH_ww1_House_Habsburg_Lorraine
-						}
-					}
-				}		
-			}
             research_bonus = {
                 air_equipment = 0.10
             }
@@ -143,7 +100,10 @@ ideas = {
         }
 		AUH_lohner_werke = {
             allowed = {
-                original_tag = AUS
+                OR = {
+					original_tag = AUS
+					original_tag = AUS
+				}
             }
             research_bonus = {
                 air_equipment = 0.10
@@ -153,8 +113,6 @@ ideas = {
             }
         }
 		AUH_phoenix = {
-			name = AUS_phonix_fleugzeugwerke
-			picture = AUS_phonix_fleugzeugwerke
             allowed = {
                 original_tag = AUS
             }
@@ -174,9 +132,9 @@ ideas = {
 	materiel_manufacturer = {
 		designer = yes
 		AUH_osterreichische_waffenfabriksgesellschaft = {
-			picture = AUS_steyr
             allowed = {
 				OR = {
+					original_tag = AUS
 					original_tag = AUS
 					original_tag = BUL
 				}	
@@ -184,13 +142,8 @@ ideas = {
 			available = {
 				if = {
 					limit = {
-						original_tag = AUS
-					}	
-					has_completed_focus = AUH_finance_steyr_arms
-				}	
-				if = {
-					limit = {
 						NOT = {
+							original_tag = AUS
 							original_tag = AUS
 						}						
 					}	
@@ -209,40 +162,58 @@ ideas = {
         }
 		kuk_munitionsfabrik_wollersdorf = {
             allowed = {
-                OR = {
-					original_tag = AUS
-					original_tag = HUN
-					original_tag = BOS
-					original_tag = CZE
-					original_tag = GAL
-					original_tag = CRO
-				}
+                original_tag = AUS
             }
-			visible = {
-				NOT = {
-					has_country_flag = great_war_loser
-				}
-				if = {
-					limit = {
-						NOT = {
-							original_tag = AUS
-						}
-						OR = {
-							has_subject = AUS
-							is_subject_of = AUS
-							has_idea = AUH_ww1_House_Habsburg_Lorraine
-						}
-					}
-				}		
-			}
             research_bonus = {
-                support_tech = 0.10
+                artillery = 0.10
             }
             traits = {
-                support_equipment_manufacturer
+                artillery_manufacturer
             }
             picture = generic_artillery_manufacturer_1
         }
+		hungarian_general_machine_factory = { 
+			picture = GFX_idea_hungarian_general_machine_factory
+			name = hungarian_general_machine_factory
+			allowed = {
+				OR = {
+					original_tag = AUS
+					original_tag = HUN
+				}
+			} 
+			available = {
+				if = {
+					limit = {
+						original_tag = AUS
+					}
+					OR = {
+						any_owned_state = {
+							is_core_of = HUN
+						}
+						HUN = {
+							OR = {
+								exists = no
+								is_subject_of = ROOT
+							}
+						}
+					}
+				}
+				
+			}
+			cost = 150
+			research_bonus = {
+				motorized_equipment = 0.1
+			}
+			equipment_bonus = {
+				motorized_equipment = {
+					build_cost_ic = -0.05 
+					instant = yes
+				}
+			}
+			traits = { 
+				motorized_equipment_manufacturer
+			} 
+		}
 		AUH_skoda_works = { 
 			picture = CZE_skoda_works_2
 			name = CZE_skoda_works
@@ -257,26 +228,22 @@ ideas = {
 					limit = {
 						original_tag = AUS
 					}
-					has_completed_focus = AUH_skoda_works	
-				}	
-			}
-
-			visible = {
-				if = {
-					limit = {
-						original_tag = AUS
-					}
 					OR = {
 						any_owned_state = {
 							is_core_of = CZE
 						}
-						has_subject = CZE
+						CZE = {
+							OR = {
+								exists = no
+								is_subject_of = ROOT
+							}
+						}
 					}
-				}	
+				}			
 			}
 			cost = 100
 			research_bonus = {
-				cat_artillery = 0.10
+				artillery = 0.10
 			}
 			modifier = {
 				industrial_capacity_factory = 0.1
@@ -288,49 +255,10 @@ ideas = {
 	}
 	tank_manufacturer = {
 		designer = yes
-		AUH_kuk_kraftfahrersatz_depot = {
-			picture = generic_tank_manufacturer_1
-            allowed = {
-                OR = {
-					original_tag = AUS
-					original_tag = HUN
-					original_tag = BOS
-					original_tag = CZE
-					original_tag = GAL
-					original_tag = CRO
-				}
-            }
-			available = {
-				AUS = {
-					has_completed_focus = AUH_armored_cars
-				}
-			}
-			visible = {
-				NOT = {
-					has_country_flag = great_war_loser
-				}
-				if = {
-					limit = {
-						NOT = {
-							original_tag = AUS
-						}
-						OR = {
-							has_subject = AUS
-							is_subject_of = AUS
-							has_idea = AUH_ww1_House_Habsburg_Lorraine
-						}
-					}
-				}
-			}
-            research_bonus = {
-				armor = 0.15
-			}
-			
-			traits = { tank_manufacturer }
-        }
 		AUH_austro_daimler = {
             allowed = {
                 OR = {
+					original_tag = AUS
 					original_tag = AUS
 					original_tag = BUL
 				}
@@ -339,6 +267,7 @@ ideas = {
 				if = {
 					limit = {
 						NOT = {
+							original_tag = AUS
 							original_tag = AUS
 						}
 					}
@@ -364,9 +293,19 @@ ideas = {
 				original_tag = AUS 
 			}  
 			available = {
-				has_completed_focus = AUH_develop_austrian_cisleithania
 				NOT = {
 					has_idea = auh_debt_council
+				}
+				OR = {
+					any_owned_state = {
+						is_core_of = AUS
+					}
+					AUS = {
+						OR = {
+							exists = no
+							is_subject_of = ROOT
+						}
+					}
 				}
 			}
 			cost = 100
@@ -376,6 +315,37 @@ ideas = {
 			} 
 			traits = { 
 				common_railway_company
+			} 
+		}
+		mavag = { 
+			picture = GFX_idea_mavag
+			name = mavag
+			allowed = {
+				original_tag = AUS 
+			}  
+			available = {
+				NOT = {
+					has_idea = auh_debt_council
+				}
+				OR = {
+					any_owned_state = {
+						is_core_of = HUN
+					}
+					HUN = {
+						OR = {
+							exists = no
+							is_subject_of = ROOT
+						}
+					}
+				}
+			}
+			cost = 150
+			research_bonus = {
+				industry = 0.10
+				train_tech = 0.10 
+			} 
+			traits = { 
+				armored_railway_company
 			} 
 		}
 		manfred_weiss_steel_and_metal_works = { 
@@ -389,20 +359,72 @@ ideas = {
 					has_idea = auh_debt_council
 				}
 			}
-			cost = 150
+			cost = 50
 			traits = { 
 				industrial_concern
 			} 
 			research_bonus = {
-				industry = 0.15
+				industry = 0.10
 			} 
 			modifier = {
 				production_speed_industrial_complex_factor = 0.1
 				production_speed_arms_factory_factor = 0.1
 			}
 		}
+
+		orion_electronics = { 
+			picture = generic_industrial_concern_2
+			name = orion_electronics
+			allowed = {
+				original_tag = AUS 
+			}  
+			available = {
+				NOT = {
+					has_idea = auh_debt_council
+				}
+			}
+			visible = {
+				NOT = { has_completed_focus = AUH_finance_orion_electronics }
+			}
+			cost = 50
+			research_bonus = {
+				electronics = 0.10
+			} 
+			modifier = {
+				consumer_goods_factor = -0.15
+			}
+			traits = { 
+				electronics_concern
+			} 
+		}
+		orion_electronics_2 = { 
+			picture = generic_industrial_concern_2
+			name = orion_electronics
+			allowed = {
+				original_tag = AUS 
+			}  
+			available = {
+				NOT = {
+					has_idea = auh_debt_council
+				}
+			}
+			visible = {
+				has_completed_focus = AUH_finance_orion_electronics
+			}
+			cost = 50
+			research_bonus = {
+				electronics = 0.15
+			} 
+			modifier = {
+				production_speed_buildings_factor = 0.10
+				consumer_goods_factor = -0.15
+			}
+			traits = { 
+				electronics_concern
+			} 
+		}
 		#OSB
-		auh_debt_council = {
+		auh_debt_council = { 
 			picture = tur_opda
 			allowed = {
 				original_tag = AUS 
@@ -428,14 +450,250 @@ ideas = {
 	}
 		
 	country = {
-		
-		AUH_ww1_House_Habsburg_Lorraine = {
-			picture = HUN_hungarian_monarchy_habsburg
+		AUH_national_development_plan = {
 			allowed = {
-				always = no
+				always = yes
+			}
+			picture = SOV_fourth_five_year_plan
+			removal_cost = -1
+			modifier = {
+				production_speed_buildings_factor = 0.15
+			}
+		}
+		AUH_german_air_pilot_advisors = {
+			allowed = {
+				always = yes
+			}
+			picture = german_advisors
+			removal_cost = -1
+			equipment_bonus = {
+				small_plane_airframe = {
+					instant = yes
+					air_attack = 0.05
+					air_defence = 0.05
+					air_agility = 0.05
+				}
+			}
+		}
+		AUH_imperial_airforces = {
+			allowed = {
+				always = yes
+			}
+			picture = generic_air_payment
+			removal_cost = -1
+			modifier = {
+				experience_gain_air = 0.30
+			}
+		}
+		AUH_modern_imperial_army = {
+			allowed = {
+				always = yes
+			}
+			picture = SWE_ga_pa_tactics
+			removal_cost = -1
+			modifier = {
+				army_core_attack_factor = 0.05
+				army_core_defence_factor = 0.05
+				army_speed_factor = 0.05
+			}
+		}
+		AUH_kaisermanover = {
+			allowed = {
+				always = yes
+			}
+			picture = received_attache
+			removal_cost = -1
+			modifier = {
+				army_leader_start_level = 1
+			}
+		}
+		AUH_expelled_officers = {
+			allowed = {
+				always = yes
+			}
+			picture = tfv_can_conscription_crisis
+			removal_cost = -1
+			modifier = {
+				experience_gain_army = 0.30
+				experience_gain_army_factor = 0.05
+				experience_gain_army_unit_factor = 0.05
+			}
+		}
+		AUH_modern_artilleries = {
+			allowed = {
+				always = yes
+			}
+			removal_cost = -1
+			picture = generic_artillery_regiments
+			modifier = {
+				army_artillery_attack_factor = 0.05
+			}
+		}
+		AUH_industrialization_boost = {
+			allowed = {
+				always = yes
+			}
+			picture = ARG_civilian_economy_boost
+			removal_cost = -1
+			modifier = {
+				production_speed_buildings_factor = 0.15
+				industrial_capacity_factory = 0.075
+				consumer_goods_factor = -0.075
+			}
+		}
+		AUH_increased_rifle_productions = {
+			allowed = {
+				always = yes
+			}
+			picture = ast_volunteer_defence_corps 
+			removal_cost = -1
+			equipment_bonus = {
+				infantry_equipment = {
+					instant = yes
+					build_cost_ic = -0.10
+				}
+			}
+		}
+		AUH_new_army_tactics = {
+			allowed = {
+				always = yes
+			}
+			picture = SOV_scientist_defect 
+			removal_cost = -1
+			modifier = {
+				attrition = -0.04
+				army_org_factor = 0.075
+				army_org_regain = 0.075
+				army_speed_factor = 0.05
+			}
+		}
+		AUH_new_artillery_developments = {
+			allowed = {
+				always = yes
+			}
+			picture = CZE_skoda_artillery
+			removal_cost = -1
+			modifier = {
+				army_artillery_attack_factor = 0.075
+				army_artillery_defence_factor = 0.075
+			}
+		}
+		AUH_new_military_recruitment_law = {
+			allowed = {
+				always = yes
+			}
+			picture = generic_manpower_bonus
+			removal_cost = -1
+			modifier = {
+				conscription = 0.05
+				conscription_factor = 0.05
+			}
+		}
+		AUH_new_uniforms = {
+			allowed = {
+				always = yes
+			}
+			picture = chi_army_corruption3
+			removal_cost = -1
+			modifier = {
+				army_morale_factor = 0.07
+				army_org_factor = 0.07
+				experience_gain_army = 0.25
+				experience_gain_army_unit_factor = 0.05
+			}
+		}
+		AUH_investments_from_overlord = {
+			allowed = {
+				always = yes
+			}
+			removal_cost = -1
+			picture = SOV_third_five_year_plan_civilian 
+
+			modifier = {
+				industrial_capacity_factory = 0.10
+				consumer_goods_factor = -0.15
+			}
+		}
+		AUH_investments_income = {
+			allowed = {
+				always = yes
+			}
+			removal_cost = -1
+			picture = generic_economic_increase
+
+			modifier = {
+				industrial_capacity_factory = 0.10
+				consumer_goods_factor = -0.15
+			}
+		}
+		AUH_funds_for_the_university_of_salzburg = {
+			allowed = {
+				always = yes
+			}
+			removal_cost = -1
+			picture = jap_duplicate_research 
+
+			modifier = {
+				research_speed_factor = 0.07
+			}
+		}
+		AUH_federal_constitution = {
+			allowed = {
+				always = yes
+			}
+			removal_cost = -1
+			picture = generic_constitutional_guarantees
+
+			modifier = {
+				political_power_gain = 0.05
+				political_advisor_cost_factor = -0.20
+				stability_factor = 0.05
+				conscription = 0.05
+			}
+		}
+		AUH_danubian_federation_war_commite = {
+			allowed = {
+				always = yes
+			}
+			removal_cost = -1
+			picture = generic_war_preparation
+
+			modifier = {
+				army_attack_factor = 0.05
+				army_defence_factor = 0.05
+			}
+		}
+		AUH_renewed_ethnic_order_law = {
+			picture = SOV_church_and_mosque
+			removal_cost = -1
+			allowed = {
+				original_tag = AUS
 			}
 			allowed_civil_war = {
-				NOT = { has_government = communism }
+				has_government = neutrality
+			}
+			modifier = {
+				conscription = 0.02
+				conscription_factor = 0.10
+				non_core_manpower = 0.10
+				consumer_goods_factor = -0.15
+				industrial_capacity_factory = 0.075
+			}
+		}
+		AUH_ww1_House_Habsburg_Lorraine4 = {
+			name = AUH_ww1_House_Habsburg_Lorraine
+			picture = HUN_hungarian_monarchy_habsburg
+			allowed = {
+				OR = {
+					original_tag = AUS
+					original_tag = AUS
+					original_tag = HUN
+					original_tag = TUS
+					original_tag = POL
+				}	
+			}
+			allowed_civil_war = {
+				has_government = neutrality
 			}
 			available = {
 				OR = {
@@ -445,16 +703,48 @@ ideas = {
 					}
 					AND = {
 						original_tag = POL
-						OR = {
-							has_country_leader = { character = AUH_karl_stephan  }
-							has_country_leader = { character = POL_karol_olbracht }
-						}
+						has_country_leader = { character = POL_karol_stefan_i }
+					}	
+					NOT = { has_government = communism }
+				}
+				NOT = {
+					has_country_leader = {
+						character = AUH_conrad_von_hotzendorf
+						ruling_only = yes
 					}
-					NOT = { 
-						has_government = communism 
-						has_cosmetic_tag = HUN_republic
-						has_country_flag = AUS_republic_flag
+				}
+			}
+			removal_cost = -1
+			modifier = {
+				political_advisor_cost_factor = -0.20 
+				drift_defence_factor = 0.5
+			}
+		}
+		AUH_ww1_House_Habsburg_Lorraine = {
+			picture = HUN_hungarian_monarchy_habsburg
+			allowed = {
+				OR = {
+					original_tag = AUS
+					original_tag = AUS
+					original_tag = HUN
+					original_tag = TUS
+					original_tag = POL
+				}	
+			}
+			allowed_civil_war = {
+				has_government = neutrality
+			}
+			available = {
+				OR = {
+					AND = {
+						original_tag = TUS
+						has_government = neutrality	
 					}
+					AND = {
+						original_tag = POL
+						has_country_leader = { character = POL_karol_stefan_i }
+					}	
+					NOT = { has_government = communism }
 				}
 				NOT = {
 					has_country_leader = {
@@ -474,30 +764,10 @@ ideas = {
 			name = AUH_ww1_House_Habsburg_Lorraine
 			picture = HUN_hungarian_monarchy_habsburg
 			allowed = {
-				always = no
+				original_tag = AUS
 			}
 			allowed_civil_war = {
-				NOT = { has_government = communism }
-			}
-			available = {
-				OR = {
-					AND = {
-						original_tag = TUS
-						has_government = neutrality	
-					}
-					AND = {
-						original_tag = POL
-						OR = {
-							has_country_leader = { character = AUH_karl_stephan  }
-							has_country_leader = { character = POL_karol_olbracht }
-						}
-					}	
-					NOT = { 
-						has_government = communism 
-						has_cosmetic_tag = HUN_republic
-						has_country_flag = AUS_republic_flag
-					}
-				}
+				always = yes
 			}
 			removal_cost = -1
 			modifier = {
@@ -505,12 +775,32 @@ ideas = {
 				drift_defence_factor = 0.5
 				political_power_gain = 0.15
 				war_support_factor = 0.1
+				stability_factor = 0.1
+			}
+		}
+
+		AUH_ww1_House_Habsburg_Lorraine3 = {
+			name = AUH_ww1_House_Habsburg_Lorraine
+			picture = HUN_hungarian_monarchy_habsburg
+			allowed = {
+				original_tag = AUS
+			}
+			allowed_civil_war = {
+				always = yes
+			}
+			removal_cost = -1
+			modifier = {
+				political_advisor_cost_factor = -0.1
+				drift_defence_factor = 0.5
+				political_power_gain = 0.15
+				war_support_factor = 0.15
+				stability_factor = 0.1
 			}
 		}
 		
 		Austrian_staff = {
 			allowed = {
-				always = no
+				original_tag = AUS
 			}
 			allowed_civil_war = { always = yes }
 			removal_cost = -1
@@ -524,7 +814,7 @@ ideas = {
 		}
 		Austrian_international_staff = {
 			allowed = {
-				always = no
+				original_tag = AUS
 			}
 			allowed_civil_war = { always = no }
 			removal_cost = -1
@@ -539,9 +829,9 @@ ideas = {
 		AUH_church_secularization = {
 			picture = YUG_orthodox_church_support
 			allowed = {
-				always = no
+				original_tag = AUS
 			}
-			allowed_civil_war = { always = yes }
+			allowed_civil_war = { always = no }
 			removal_cost = -1
 
 			modifier = {
@@ -551,7 +841,7 @@ ideas = {
 		
 		AUH_austrian_nationalism = {
 			allowed = {
-				always = no
+				original_tag = AUS
 			}
 			allowed_civil_war = { always = no }
 			removal_cost = -1
@@ -568,6 +858,10 @@ ideas = {
 		AUH_greater_germany = {
 			picture = ger_revive_the_kaiserreich
 			allowed = {
+				original_tag = AUS
+				always = no
+			}
+			allowed_civil_war = {
 				always = no
 			}
 			removal_cost = -1
@@ -581,6 +875,7 @@ ideas = {
 		AUH_conrads_fake_gaz_barrage_plan = {
 			picture = generic_artillery_regiments
 			allowed = {
+				original_tag = AUS
 				always = no
 			}
 			allowed_civil_war = {
@@ -598,6 +893,7 @@ ideas = {
 		AUH_supply_optimization = {
 			picture = man_five_year_plan_industry
 			allowed = {
+				original_tag = AUS
 				always = no
 			}
 			allowed_civil_war = {
@@ -612,6 +908,7 @@ ideas = {
 		AUH_corruption = {
 			picture = great_depression
 			allowed = {
+				original_tag = AUS
 				always = no
 			}
 			allowed_civil_war = {
@@ -626,6 +923,7 @@ ideas = {
 		AUH_debts = {
 			picture = great_depression
 			allowed = {
+				original_tag = AUS
 				always = no
 			}
 			allowed_civil_war = {
@@ -642,7 +940,7 @@ ideas = {
 		AUH_multi_ethnic_army = {
 			picture = GFX_idea_AUH_multi_ethnic_army
 			allowed = {
-				always = no
+				original_tag = AUS
 			}
 			available = {
 				NOT = {
@@ -653,7 +951,7 @@ ideas = {
 						has_idea = AUH_multi_ethnic_army5
 					}
 				}
-				NOT = { has_country_flag = AUS_republic_flag }
+				tag = AUS
 				OR = {
 					any_owned_state = {
 						is_core_of = CZE
@@ -691,7 +989,7 @@ ideas = {
 			name = AUH_multi_ethnic_army
 			picture = AUH_multi_ethnic_army
 			allowed = {
-				always = no
+				original_tag = AUS
 			}
 			available = {
 				NOT = {
@@ -702,7 +1000,7 @@ ideas = {
 						has_idea = AUH_multi_ethnic_army5
 					}
 				}
-				NOT = { has_country_flag = AUS_republic_flag }
+				tag = AUS
 				OR = {
 					any_owned_state = {
 						is_core_of = CZE
@@ -740,7 +1038,7 @@ ideas = {
 			name = AUH_multi_ethnic_army
 			picture = AUH_multi_ethnic_army
 			allowed = {
-				always = no
+				original_tag = AUS
 			}
 			available = {
 				NOT = {
@@ -751,7 +1049,7 @@ ideas = {
 						has_idea = AUH_multi_ethnic_army5
 					}
 				}
-				NOT = { has_country_flag = AUS_republic_flag }
+				tag = AUS
 				OR = {
 					any_owned_state = {
 						is_core_of = CZE
@@ -789,7 +1087,7 @@ ideas = {
 			name = AUH_multi_ethnic_army
 			picture = AUH_multi_ethnic_army
 			allowed = {
-				always = no
+				original_tag = AUS
 			}
 			available = {
 				NOT = {
@@ -800,7 +1098,7 @@ ideas = {
 						has_idea = AUH_multi_ethnic_army5
 					}
 				}
-				NOT = { has_country_flag = AUS_republic_flag }
+				tag = AUS
 				OR = {
 					any_owned_state = {
 						is_core_of = CZE
@@ -837,7 +1135,7 @@ ideas = {
 			name = AUH_multi_ethnic_army
 			picture = AUH_multi_ethnic_army
 			allowed = {
-				always = no
+				original_tag = AUS
 			}
 			available = {
 				NOT = {
@@ -848,7 +1146,7 @@ ideas = {
 						has_idea = AUH_multi_ethnic_army
 					}
 				}
-				NOT = { has_country_flag = AUS_republic_flag }
+				tag = AUS
 				OR = {
 					any_owned_state = {
 						is_core_of = CZE
@@ -883,10 +1181,13 @@ ideas = {
 		AUH_Staatspolizei = {
 			picture = generic_secret_police
 			allowed = {
-				always = no
+				original_tag = TUR
+			}
+			available = {
+				is_subject = no
 			}
 			allowed_civil_war = {
-				always = yes
+				has_government = neutrality
 			}
 			removal_cost = -1
 			modifier = {
@@ -897,27 +1198,16 @@ ideas = {
 		}
 		AUH_copy_of_Austrian_battleplan = {
 			picture = generic_spy_coup
-			allowed = {
-				always = no
-			}
 			removal_cost = -1
 			targeted_modifier = {
 				tag = AUS
-				defense_bonus_against = 0.30
-			}
-			targeted_modifier = {
-				tag = HUN
-				defense_bonus_against = 0.30
-			}
-			targeted_modifier = {
-				tag = BOS
 				defense_bonus_against = 0.30
 			}
 		}
 		AUH_czech_separatism = {
 			picture = AUH_czech_separatism
 			allowed = {
-				always = no
+				original_tag = AUS
 			}
 			available = {
 				any_owned_state = {
@@ -937,7 +1227,7 @@ ideas = {
 			name = AUH_czech_separatism
 			picture = AUH_czech_separatism
 			allowed = {
-				always = no
+				original_tag = AUS
 			}
 			available = {
 				any_owned_state = {
@@ -956,7 +1246,7 @@ ideas = {
 			name = AUH_czech_separatism
 			picture = AUH_czech_separatism
 			allowed = {
-				always = no
+				original_tag = AUS
 			}
 			available = {
 				any_owned_state = {
@@ -976,7 +1266,7 @@ ideas = {
 			name = AUH_czech_separatism
 			picture = AUH_czech_separatism
 			allowed = {
-				always = no
+				original_tag = AUS
 			}
 			available = {
 				any_owned_state = {
@@ -991,13 +1281,52 @@ ideas = {
 				consumer_goods_factor = 0.1
 			}
 		}
-		
+		AUH_croatian_separatism = {
+			picture = AUH_south_slavic_terrorism
+			allowed = {
+				original_tag = AUS
+			}
+			available = {
+				any_owned_state = {
+					is_core_of = CRO
+				}
+				NOT = { country_exists = CRO }
+			}
+			allowed_civil_war = { always = yes }
+			removal_cost = -1
+
+			modifier = {
+				stability_factor = -0.10
+				training_time_factor = 0.25
+				custom_modifier_tooltip = AUH_croatian_separatism_tt
+			}
+		}
+		AUH_croatian_separatism2 = {
+			picture = AUH_south_slavic_terrorism
+			allowed = {
+				original_tag = AUS
+			}
+			available = {
+				any_owned_state = {
+					is_core_of = CRO
+				}
+				NOT = { country_exists = CRO }
+			}
+			allowed_civil_war = { always = yes }
+			removal_cost = -1
+
+			modifier = {
+				stability_factor = -0.05
+				training_time_factor = 0.1
+				custom_modifier_tooltip = AUH_croatian_separatism_tt
+			}
+		}
 
 
 		AUH_investment_for_galicia = {
 			picture = generic_goods_red_bonus
 			allowed = {
-				always = no
+				original_tag = AUS
 			}
 			available = {
 				OR = {
@@ -1020,9 +1349,9 @@ ideas = {
 		}
 
 		AUH_russian_advisors = {
-			picture = advisors_russia
+			picture = SER_russian_advisors
 			allowed = {
-				always = no
+				original_tag = AUS
 			}
 			removal_cost = -1
 			modifier = {
@@ -1035,7 +1364,7 @@ ideas = {
 		AUH_polish_separatism = {
 			picture = AUH_galician_separatism
 			allowed = {
-				always = no
+				original_tag = AUS
 			}
 			available = {
 				any_owned_state = {
@@ -1044,10 +1373,7 @@ ideas = {
 						is_core_of = GAL
 					}
 				}
-				OR = {
-					original_tag = GAL
-					NOT = { country_exists = GAL }
-				}	
+				NOT = { country_exists = GAL }
 			}
 			allowed_civil_war = { always = yes }
 			removal_cost = -1
@@ -1061,7 +1387,7 @@ ideas = {
 			name = AUH_polish_separatism
 			picture = AUH_galician_separatism
 			allowed = {
-				always = no
+				original_tag = AUS
 			}
 			available = {
 				any_owned_state = {
@@ -1070,10 +1396,7 @@ ideas = {
 						is_core_of = GAL
 					}
 				}
-				OR = {
-					original_tag = GAL
-					NOT = { country_exists = GAL }
-				}
+				NOT = { country_exists = GAL }
 			}
 			allowed_civil_war = { always = yes }
 			removal_cost = -1
@@ -1086,7 +1409,7 @@ ideas = {
 			name = AUH_polish_separatism
 			picture = AUH_galician_separatism
 			allowed = {
-				always = no
+				original_tag = AUS
 			}
 			available = {
 				any_owned_state = {
@@ -1095,10 +1418,7 @@ ideas = {
 						is_core_of = GAL
 					}
 				}
-				OR = {
-					original_tag = GAL
-					NOT = { country_exists = GAL }
-				}
+				NOT = { country_exists = GAL }
 			}
 			allowed_civil_war = { always = yes }
 			removal_cost = -1
@@ -1112,7 +1432,7 @@ ideas = {
 			name = AUH_polish_separatism
 			picture = AUH_galician_separatism
 			allowed = {
-				always = no
+				original_tag = AUS
 			}
 			available = {
 				any_owned_state = {
@@ -1121,10 +1441,7 @@ ideas = {
 						is_core_of = GAL
 					}
 				}
-				OR = {
-					original_tag = GAL
-					NOT = { country_exists = GAL }
-				}
+				NOT = { country_exists = GAL }
 			}
 			allowed_civil_war = { always = yes }
 			removal_cost = -1
@@ -1139,7 +1456,7 @@ ideas = {
 		AUH_escort_production = {
 			picture = generic_sea_focused_navy
 			allowed = {
-				always = no
+				original_tag = AUS
 			}
 			allowed_civil_war = { always = yes }
 			removal_cost = -1
@@ -1157,6 +1474,8 @@ ideas = {
 			allowed = {
 				always = no
 			}
+			allowed_civil_war = {
+			}
 			available = {
 				has_war_with = GER
 				any_owned_state = {
@@ -1173,22 +1492,17 @@ ideas = {
 			allowed = {
 				always = no
 			}
+			allowed_civil_war = {
+			}
 			available = {
-				OR = {
-					any_owned_state = {
-						is_core_of = HUN
-					}
-					has_subject = HUN
-					is_subject_of = HUN
-					is_in_faction_with = HUN
-				}
+				tag = AUS
 			}
 			modifier = {
 				army_core_defence_factor = 0.1
 			}
 		}	
 		AUH_idea_german_cooperation = {		
-			allowed = { always = no }
+			allowed = { always = yes }
 			allowed_civil_war = { always = yes }
 			removal_cost = -1
 			picture = generic_army_war_college
@@ -1208,30 +1522,20 @@ ideas = {
 
 		AUH_pig_war = {
 			allowed = {
-				always = no
+				original_tag = AUS
 			}
 			available = { 
-				country_exists = SER
+				SER = { 
+					exists = yes 
+				} 
 				NOT = {
 					has_war_with = SER
 				}
-				if = {
-					limit = {
-						is_subject = yes
-					}
-					OVERLORD = {
-						has_idea = AUH_pig_war
-					}
-					else = {
-						original_tag = AUS
-					}	
-				}
 			}
-			removal_cost = -1	
+			removal_cost = -1
 
 			modifier = {
-				political_power_cost = 0.1
-				production_factory_efficiency_gain_factor = -0.1 
+				
 			}
 			targeted_modifier = {
 				tag = SER
@@ -1239,36 +1543,15 @@ ideas = {
 				trade_cost_for_target_factor = 1
 			}
 		}
-
-		AUH_franz_joseph_i = {
-			allowed = {
-				always = no
-			}
-			available = {
-				NOT = {
-					has_global_flag = AUH_franz_joseph_i_retired
-					has_government = communism
-					has_country_leader = {
-						character = AUH_franz_joseph_i
-					}
-					has_cosmetic_tag = AUR
-				}		
-				has_country_leader = {
-					character = AUH_franz_joseph_i
-					ruling_only = no
-				}		
-			}
-			removal_cost = -1
-
-			traits = {
-				oldschool_kaiser
-			}
-		}
-		
 		
 		AUH_karl_i = {
 			allowed = {
-				always = no			
+				OR = {
+					original_tag = AUS
+					original_tag = HUN
+					original_tag = AUS
+				}
+				
 			}
 			available = {
 				NOT = {
@@ -1276,30 +1559,27 @@ ideas = {
 					has_country_leader = {
 						character = AUH_karl_i
 					}
-					has_cosmetic_tag = AUR
 				}			
 			}
 			removal_cost = -1
 			traits = {
-				blessed
+				newschool_kaiser
 			}
 		}
 
-		AUH_franz_ferdinand = {
+		AUH_franz_ferdinand_i = {
 			allowed = {
-				always = no
+				original_tag = AUS
 			}
 			available = {
 				NOT = {
 					has_government = communism
 					has_country_leader = {
-						character = AUH_franz_ferdinand
+						character = AUH_franz_ferdinand_i
 					}
-					has_cosmetic_tag = AUR
-					has_idea = AUH_karl_i
 				}
 				has_country_leader = {
-					character = AUH_franz_ferdinand
+					character = AUH_franz_ferdinand_i
 					ruling_only = no
 				}				
 			}
@@ -1310,22 +1590,21 @@ ideas = {
 			}
 		}
 
-		AUH_franz_ferdinand_2 = {
-			name = AUH_franz_ferdinand
-			picture = AUH_franz_ferdinand
+		AUH_franz_ferdinand_i_2 = {
+			name = AUH_franz_ferdinand_i
+			picture = AUH_franz_ferdinand_i
 			allowed = {
-				always = no
+				original_tag = AUS
 			}
 			available = {
 				NOT = {
 					has_government = communism
 					has_country_leader = {
-						character = AUH_franz_ferdinand
+						character = AUH_franz_ferdinand_i
 					}
-					has_cosmetic_tag = AUR
 				}
 				has_country_leader = {
-					character = AUH_franz_ferdinand
+					character = AUH_franz_ferdinand_i
 					ruling_only = no
 				}				
 			}
@@ -1335,7 +1614,10 @@ ideas = {
 		AUH_reforming_the_army = {
 			picture = generic_oppression
 			allowed = {
-				always = no
+				original_tag = AUS
+			}
+			available = {
+				tag = AUS
 			}
 			allowed_civil_war = { always = yes }
 			removal_cost = -1
@@ -1351,7 +1633,10 @@ ideas = {
 		AUH_conards_great_army_reform = {
 			picture = triumphant_will
 			allowed = {
-				always = no
+				original_tag = AUS
+			}
+			available = {
+				tag = AUS
 			}
 			allowed_civil_war = { always = yes }
 			removal_cost = -1
@@ -1367,10 +1652,10 @@ ideas = {
 		AUH_helicopters_recon = {
 			picture = FRA_sncac
 			allowed = {
-				always = no
+				original_tag = AUS
 			}
 			available = {
-				NOT = { has_country_flag = AUS_republic_flag }
+				tag = AUS
 			}
 			allowed_civil_war = { always = yes }
 			removal_cost = -1
@@ -1382,6 +1667,7 @@ ideas = {
 
 		AUH_fascist_terror = {
 			allowed = {
+				original_tag = AUS
 				always = no
 			}
 			allowed_civil_war = {
@@ -1400,7 +1686,10 @@ ideas = {
 			name = AUH_men_mobilized_to_factories
 			picture = SPR_collectivized_society
 			allowed = {
-				always = no
+				original_tag = AUS
+			}
+			available = {
+				tag = AUS
 			}
 			allowed_civil_war = { always = yes }
 			removal_cost = -1
@@ -1417,7 +1706,10 @@ ideas = {
 		AUH_industrial_loans = {
 			picture = ETH_customs_barrier_ITA
 			allowed = {
-				always = no
+				original_tag = AUS
+			}
+			available = {
+				tag = AUS
 			}
 			allowed_civil_war = { always = yes }
 			removal_cost = -1
@@ -1431,7 +1723,7 @@ ideas = {
 			name = AUH_interests_in_bulgaria
 			picture = bul_nationalized_industry
 			allowed = {
-				always = no
+				original_tag = AUS
 			}
 			available = {
 				NOT = {
@@ -1446,7 +1738,7 @@ ideas = {
 			name = AUH_interests_in_bulgaria
 			picture = bul_nationalized_industry
 			allowed = {
-				always = no
+				original_tag = AUS
 			}
 			available = {
 				NOT = {
@@ -1464,7 +1756,7 @@ ideas = {
 			name = AUH_interests_in_bulgaria
 			picture = bul_nationalized_industry
 			allowed = {
-				always = no
+				original_tag = AUS
 			}
 			allowed_civil_war = { always = yes }
 			removal_cost = -1
@@ -1475,13 +1767,15 @@ ideas = {
 			}
 			modifier = {
 				political_power_gain = 0.20
+			}
+			modifier = {
 				consumer_goods_factor = -0.15
 			}
 		}
 		AUH_unveiled_plans_visible = {
 			name = AUH_unveiled_plans
 			allowed = {
-				always = no
+				original_tag = AUS
 			}
 			allowed_civil_war = { always = yes }
 			removal_cost = -1
@@ -1496,161 +1790,422 @@ ideas = {
 				enemy_operative_intel_extraction_rate = -0.50
 			}
 		}
-
-		AUH_famine_effect_early = {
-			name = GER_food_shortages
-			picture = raj_risk_of_famine
+		AUH_serbian_terrorism = {
 			allowed = {
-				always = no
+				original_tag = AUS
 			}
 			allowed_civil_war = {
 				always = yes
 			}
-			available = {
-				has_war = yes
-				NOT = {
-					has_global_flag = versailles_treaty
-					has_global_flag = frankfurt_treaty
-				}
-			}
 			removal_cost = -1
-			modifier = {
-				weekly_manpower = -300
-				stability_weekly = -0.0010
-				war_support_weekly = -0.0010
-			}
-		}
-
-		AUH_famine_effect = {
-			picture = ENG_the_war_to_end_all_wars
-			allowed = {
-				always = no
-			}
-			allowed_civil_war = {
-				always = yes
-			}
-			available = {
-				has_war = yes
-				NOT = {
-					has_global_flag = versailles_treaty
-					has_global_flag = frankfurt_treaty
-				}
-			}
-			removal_cost = -1
-			modifier = {
-				monthly_population = -0.75
-				weekly_manpower = -1000
-				stability_weekly = -0.0030
-				war_support_weekly = -0.0250
-				army_org_factor = -0.25
-				supply_consumption_factor = 0.25
-				army_attack_factor = -0.25
-			}
-		}
-
-		AUH_house_of_cards = {
-			picture = SWE_all_cards_on_deck
-			allowed = {
-				always = no
-			}
-			allowed_civil_war = {
-				always = yes
-			}
-			available = {
-				has_war = yes
-				NOT = {
-					has_global_flag = great_war_ends
-					has_global_flag = GER_capitulation
-					has_global_flag = ENT_capitulation
-				}
-			}
-			removal_cost = -1
-			modifier = {
-				stability_weekly = -0.004
-				war_support_weekly = -0.004
-				custom_modifier_tooltip = AUH_collapse_if_low_stability
-			}
-		}
-
-		AUH_inflation = {
-			picture = chi_hyper_inflation2
-			allowed = {
-				always = no
-			}
-			allowed_civil_war = {
-				always = yes
-			}
-			available = {
-				
-			}
-			removal_cost = -1
-			modifier = {
-				stability_factor = -0.20
-				consumer_goods_factor = 0.30
-				production_factory_efficiency_gain_factor = -0.9
-			}
-		}
-
-		AUH_financial_ties_broken = {
-			picture = can_patriation
-			allowed = { always = no }
-			allowed_civil_war = { always = yes }
-			available = {
-				is_subject = no
-				OR = {
-					AND = {
-						owns_state = 43
-						NOT = { country_exists = HUN }
-					}
-					has_subject = HUN
-				}
-				NOT = {
-					has_cosmetic_tag = AUS_USGA
-				}
-			}
-			on_add = {
-				HUN = {
-					add_ideas = HUN_financial_ties_broken
-				}
-			}
 			modifier = {
 				political_power_gain = -0.15
+				stability_factor = -0.10
+				industrial_capacity_factory = -0.05
+				required_garrison_factor = 0.25
+			}
+		}
+		AUH_serbian_terrorism_2 = {
+			name = AUH_serbian_terrorism
+			allowed = {
+				original_tag = AUS
+			}
+			allowed_civil_war = {
+				always = yes
+			}
+			removal_cost = -1
+			modifier = {
+				stability_factor = -0.05
+				industrial_capacity_factory = -0.05
+				required_garrison_factor = 0.15
+			}
+		}
+		AUH_croatian_opposition = {
+			allowed = {
+				original_tag = AUS
+			}
+			allowed_civil_war = {
+				always = yes
+			}
+			removal_cost = -1
+			modifier = {
+				stability_factor = -0.10
+				line_change_production_efficiency_factor = -0.10
+				industrial_capacity_dockyard = -0.10
+			}
+		}
+		AUH_croatian_opposition2 = {
+			allowed = {
+				original_tag = AUS
+			}
+			allowed_civil_war = {
+				always = yes
+			}
+			name = AUH_croatian_opposition
+			picture = AUH_croatian_opposition
+			removal_cost = -1
+			modifier = {
+				line_change_production_efficiency_factor = -0.10
+				industrial_capacity_dockyard = -0.10
+			}
+		}
+		AUH_galician_national_movement = {
+			picture = AUH_galician_separatism
+			allowed = {
+				original_tag = AUS
+			}
+			allowed_civil_war = {
+				always = yes
+			}
+			removal_cost = -1
+			modifier = {
+				stability_factor = -0.10
+				production_factory_efficiency_gain_factor = -0.15
+				required_garrison_factor = 0.15
+			}
+		}
+		AUH_galician_national_movement2 = {
+			picture = AUH_galician_separatism
+			allowed = {
+				original_tag = AUS
+			}
+			allowed_civil_war = {
+				always = yes
+			}
+			removal_cost = -1
+			name = AUH_galician_national_movement
+			modifier = {
+				production_factory_efficiency_gain_factor = -0.15
+			}
+		}
+		AUH_czech_parliament = {
+			allowed = {
+				original_tag = AUS
+			}
+			allowed_civil_war = {
+				always = yes
+			}
+			picture = AUH_czech_separatism
+			removal_cost = -1
+			modifier = {
+				stability_factor = -0.05
 				consumer_goods_factor = 0.15
+				industrial_capacity_factory = -0.10
 			}
 		}
-
-		AUH_vienna_circle = {
-			picture = generic_research_bonus
-			allowed = { always = no }
-			allowed_civil_war = { always = yes }
+		AUH_czech_parliament_2 = {
+			name = AUH_czech_parliament
+			picture = AUH_czech_separatism
+			allowed = {
+				original_tag = AUS
+			}
+			allowed_civil_war = {
+				always = yes
+			}
+			removal_cost = -1
 			modifier = {
-				research_speed_factor = 0.03
+				democratic_drift = 0.05
+				stability_factor = -0.05
+				industrial_capacity_factory = -0.05
 			}
 		}
-
-		AUH_seek_peace = {
-			picture = ETH_peacekeeping_forces
-			allowed = { always = no }
-			available = {
-				OR = {
-					has_government = democratic
-					has_country_leader = {
-						character = AUH_karl_i
-						ruling_only = yes
-					}
+		AUH_czech_parliament_3 = {
+			allowed = {
+				original_tag = AUS
+			}
+			allowed_civil_war = {
+				always = yes
+			}
+			name = AUH_czech_parliament
+			picture = AUH_czech_separatism
+			removal_cost = -1
+			modifier = {
+				stability_factor = -0.05
+				industrial_capacity_factory = -0.10
+			}
+		}
+		AUH_romanian_nationalism = {
+			allowed = {
+				original_tag = AUS
+			}
+			allowed_civil_war = {
+				always = yes
+			}
+			removal_cost = -1
+			modifier = {
+				political_power_gain = -0.10
+				production_factory_efficiency_gain_factor = -0.05
+			}
+		}
+		AUH_romanian_nationalism2 = {
+			allowed = {
+				original_tag = AUS
+			}
+			allowed_civil_war = {
+				always = yes
+			}
+			name = AUH_romanian_nationalism
+			picture = AUH_romanian_nationalism
+			removal_cost = -1
+			modifier = {
+				production_factory_efficiency_gain_factor = -0.05
+			}
+		}
+		AUH_hungarian_opposition_4 = {
+			allowed = {
+				original_tag = AUS
+			}
+			allowed_civil_war = {
+				always = yes
+			}
+			name = AUH_hungarian_opposition
+			picture = AUH_hungarian_opposition_type2
+			removal_cost = -1
+			modifier = {
+				stability_factor = -0.10
+				democratic_drift = 0.05
+			}
+		}
+		AUH_hungarian_opposition = {
+			allowed = {
+				original_tag = AUS
+			}
+			allowed_civil_war = {
+				always = yes
+			}
+			picture = AUH_hungarian_opposition_type2
+			removal_cost = -1
+			modifier = {
+				stability_factor = -0.10
+				political_power_gain = -0.30
+				surrender_limit = -0.25
+				democratic_drift = 0.05
+			}
+		}
+		AUH_hungarian_opposition_2 = {
+			name = AUH_hungarian_opposition
+			picture = AUH_hungarian_opposition
+			allowed = {
+				original_tag = AUS
+			}
+			allowed_civil_war = {
+				always = yes
+			}
+			removal_cost = -1
+			modifier = {
+				stability_factor = -0.05
+				political_power_gain = -0.15
+				surrender_limit = -0.25
+				democratic_drift = 0.05
+			}
+		}
+		AUH_hungarian_opposition_3 = {
+			name = AUH_hungarian_opposition
+			picture = AUH_hungarian_opposition
+			allowed = {
+				original_tag = AUS
+			}
+			allowed_civil_war = {
+				always = yes
+			}
+			removal_cost = -1
+			modifier = {
+				stability_factor = -0.05
+				political_power_gain = -0.15
+				surrender_limit = -0.15
+				neutrality_drift = 0.05
+			}
+		}
+		AUH_austrian_support = {
+			allowed = {
+				original_tag = AUS
+			}
+			allowed_civil_war = {
+				always = yes
+			}
+			removal_cost = -1
+			modifier = {
+				production_speed_buildings_factor = 0.05
+				consumer_goods_factor = -0.09
+				industrial_capacity_factory = 0.10
+			}
+		}
+		AUH_hungarian_support = {
+			picture = HUN_hungarian_monarchy
+			allowed = {
+				original_tag = AUS
+			}
+			allowed_civil_war = {
+				always = yes
+			}
+			removal_cost = -1
+			modifier = {
+				army_morale_factor = 0.10
+				conscription_factor = 0.10
+				conscription = 0.015
+			}
+		}
+		AUH_gameinseme_armee = {
+			picture = idea_tur_coordinated_balkan_armed_forces
+			allowed = {
+				original_tag = AUS
+			}
+			allowed_civil_war = {
+				always = yes
+			}
+			removal_cost = -1
+			modifier = {
+				supply_consumption_factor = -0.05
+				attrition = -0.05
+				army_org_factor = 0.10
+				army_core_attack_factor = 0.05
+				army_core_defence_factor = 0.05
+			}
+		}
+		AUH_gameinseme_armee_2 = {
+			name = AUH_gameinseme_armee
+			picture = idea_tur_coordinated_balkan_armed_forces
+			allowed = {
+				original_tag = AUS
+			}
+			allowed_civil_war = {
+				always = yes
+			}
+			removal_cost = -1
+			modifier = {
+				planning_speed = 0.10
+				max_planning_factor = 0.10
+				supply_consumption_factor = -0.05
+				attrition = -0.05
+				army_org_factor = 0.10
+				army_core_attack_factor = 0.05
+				army_core_defence_factor = 0.05
+			}
+		}
+		AUH_german_military_advisors = {
+			picture = SPR_disbanded_army
+			allowed = {
+				original_tag = AUS
+			}
+			allowed_civil_war = {
+				always = yes
+			}
+			removal_cost = -1
+			modifier = {
+				max_planning_factor = 0.05
+			}
+			equipment_bonus = {
+				artillery_equipment = {
+					soft_attack = 0.10
 				}
-				is_subject = no
-			}
-			modifier = {
-				war_support_factor = -0.15
-				political_power_factor = 0.10
-				stability_factor = 0.05
-				ai_focus_peaceful_factor = 0.30
-				ai_focus_aggressive_factor = -0.10
+				howitzer_equipment = {
+					soft_attack = 0.10
+				}
 			}
 		}
-
+		AUH_serbian_plan = {
+			picture = CZE_planning_bonus
+			allowed = {
+				original_tag = AUS
+			}
+			allowed_civil_war = {
+				always = yes
+			}
+			removal_cost = -1
+			equipment_bonus = {
+				howitzer_equipment = {
+					soft_attack = 0.10
+				}
+			}
+			modifier = {
+				supply_consumption_factor = -0.10
+			}
+			targeted_modifier = {
+				tag = SER
+				attack_bonus_against = 0.10
+				defense_bonus_against = 0.05
+			}
+			targeted_modifier = {
+				tag = RUS
+				defense_bonus_against = 0.10
+			}
+		}
+		AUH_recovering_the_economy = {
+			picture = SOV_organize_wreckers
+			allowed = {
+				original_tag = AUS
+			}
+			allowed_civil_war = {
+				always = yes
+			}
+			removal_cost = -1
+			modifier = {
+				consumer_goods_factor = -0.15
+				production_speed_buildings_factor = 0.10
+			}
+		}
+		AUH_recovering_the_economy_2 = {
+			name = AUH_recovering_the_economy
+			picture = SOV_organize_wreckers
+			allowed = {
+				original_tag = AUS
+			}
+			allowed_civil_war = {
+				always = yes
+			}
+			removal_cost = -1
+			modifier = {
+				consumer_goods_factor = -0.15
+				production_speed_buildings_factor = 0.10
+				production_speed_industrial_complex_factor = 0.10
+			}
+		}
+		AUH_recovering_the_economy_3 = {
+			name = AUH_recovering_the_economy
+			picture = SOV_organize_wreckers
+			allowed = {
+				original_tag = AUS
+			}
+			allowed_civil_war = {
+				always = yes
+			}
+			removal_cost = -1
+			modifier = {
+				consumer_goods_factor = -0.15
+				production_speed_buildings_factor = 0.10
+				production_speed_infrastructure_factor = 0.15
+				production_speed_rail_way_factor = 0.15
+				production_speed_industrial_complex_factor = 0.10
+			}
+		}
+		AUH_imperial_war_effort = {
+			picture = POL_ideology_drift_defence
+			allowed = {
+				original_tag = AUS
+			}
+			allowed_civil_war = {
+				always = yes
+			}
+			removal_cost = -1
+			modifier = {
+				production_speed_arms_factory_factor = 0.10
+				industrial_capacity_factory = 0.10
+				production_factory_efficiency_gain_factor = 0.10
+				production_factory_max_efficiency_factor = 0.10
+			}
+		}
+		AUH_open_new_grain_factories = {
+			picture = SOV_fourth_five_year_plan 
+			allowed = {
+				original_tag = AUS
+			}
+			allowed_civil_war = {
+				always = yes
+			}
+			removal_cost = -1
+			modifier = {
+				monthly_population = 1.0
+			}
+		}
 	}
-
-
 }

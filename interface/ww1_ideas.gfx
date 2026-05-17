@@ -18,6 +18,179 @@ spriteTypes = {
 		name = "GFX_idea_epidemic"
 		texturefile = "gfx/interface/ideas/idea_epidemic.png"
 	}
+	#AUSTRIAN IDEAS
+	spriteType = {
+		name = "GFX_idea_AUH_hungarian_opposition"
+		texturefile = "gfx/interface/ideas/AUH/idea_AUH_hungarian_opposition.png"
+	}
+	spriteType = {
+		name = "GFX_idea_AUH_hungarian_opposition_type2"
+		texturefile = "gfx/interface/ideas/AUH/idea_AUH_hungarian_opposition.png"
+	}
+	spriteType = {
+		name = "GFX_idea_AUH_hungarian_opposition_type3"
+		texturefile = "gfx/interface/ideas/AUH/idea_AUH_hungarian_opposition.png"
+	}
+	spriteType = {
+		name = "GFX_idea_AUH_galician_separatism"
+		texturefile = "gfx/interface/ideas/AUH/idea_AUH_galician_separatism.png"
+	}
+	spriteType = {
+		name = "GFX_idea_AUH_south_slavic_terrorism"
+		texturefile = "gfx/interface/ideas/AUH/idea_AUH_south_slavic_terrorism.png"
+	}
+	spriteType = {
+		name = "GFX_idea_AUH_czech_separatism"
+		texturefile = "gfx/interface/ideas/AUH/idea_AUH_czech_separatism.png"
+	}
+	spriteType = {
+		name = "GFX_idea_tur_disorganised_armed_forces"
+		texturefile = "gfx/interface/ideas/idea_tur_disorganised_armed_forces.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_AUH_maximilian_ronge"
+		texturefile = "gfx/interface/ideas/AUH/AUH_maximilian_ronge.png"
+	}
+	spriteType = {
+		name = "GFX_idea_AUH_emil_uzelac"
+		texturefile = "gfx/interface/ideas/AUH/AUH_emil_uzelac.png"
+	}
+	spriteType = {
+		name = "GFX_idea_AUH_franz_conrad_von_hotzendorf"
+		texturefile = "gfx/interface/ideas/AUH/AUH_franz_conrad_von_hotzendorf.png"
+	}
+	spriteType = {
+		name = "GFX_idea_AUH_artur_arz_von_straussenberg"
+		texturefile = "gfx/interface/ideas/AUH/AUH_artur_arz_von_straussenberg.png"
+	}
+	spriteType = {
+		name = "GFX_idea_AUH_blasius_schemua"
+		texturefile = "gfx/interface/ideas/AUH/AUH_blasius_schemua.png"
+	}
+	spriteType = {
+		name = "GFX_idea_AUH_friedrich_von_beck_rzikowsky"
+		texturefile = "gfx/interface/ideas/AUH/AUH_friedrich_von_beck_rzikowsky.png"
+	}
+	spriteType = {
+		name = "GFX_idea_AUH_rudolf_montecuccoli"
+		texturefile = "gfx/interface/ideas/AUH/AUH_rudolf_montecuccoli.png"
+	}
+	spriteType = {
+		name = "GFX_idea_AUH_anton_haus"
+		texturefile = "gfx/interface/ideas/AUH/AUH_anton_haus.png"
+	}
+	spriteType = {
+		name = "GFX_idea_AUH_franz_von_holub"
+		texturefile = "gfx/interface/ideas/AUH/AUH_franz_von_holub.png"
+	}
+	spriteType = {
+		name = "GFX_idea_AUH_karl_kailer_von_kagenfels"
+		texturefile = "gfx/interface/ideas/AUH/AUH_karl_kailer_von_kagenfels.png"
+	}
+	spriteType = {
+		name = "GFX_idea_AUH_alois_lexa_von_aehrenthal"
+		texturefile = "gfx/interface/ideas/AUH/AUH_alois_lexa_von_aehrenthal.png"
+	}
+	spriteType = {
+		name = "GFX_idea_AUH_gyula_andrassy"
+		texturefile = "gfx/interface/ideas/AUH/AUH_gyula_andrassy.png"
+	}
+	spriteType = {
+		name = "GFX_idea_AUH_ottokar_czernin"
+		texturefile = "gfx/interface/ideas/AUH/AUH_ottokar_czernin.png"
+	}
+	spriteType = {
+		name = "GFX_idea_AUH_agenor_goluchowski"
+		texturefile = "gfx/interface/ideas/AUH/AUH_agenor_goluchowski.png"
+	}
+	spriteType = {
+		name = "GFX_idea_AUH_eugen_hordliczka"
+		texturefile = "gfx/interface/ideas/AUH/AUH_eugen_hordliczka.png"
+	}
+	spriteType = {
+		name = "GFX_idea_AUH_august_urbanski"
+		texturefile = "gfx/interface/ideas/AUH/AUH_august_urbanski.png"
+	}
+	spriteType = {
+		name = "GFX_idea_AUH_maximilian_ronge"
+		texturefile = "gfx/interface/ideas/AUH/AUH_maximilian_ronge.png"
+	}
+	spriteType = {
+		name = "GFX_idea_AUH_leon_von_bilinski"
+		texturefile = "gfx/interface/ideas/AUH/AUH_leon_von_bilinski.png"
+	}
+	spriteType = {
+		name = "GFX_idea_AUH_gabor_ugron"
+		texturefile = "gfx/interface/ideas/AUH/AUH_gabor_ugron.png"
+	}
+	spriteType = {
+		name = "GFX_idea_steyr_daimler_puch"
+		texturefile = "gfx/interface/ideas/AUH/AUH_steyr_puch.png"
+	}
+	spriteType = {
+		name = "GFX_idea_AUH_ganz_krupp"
+		texturefile = "gfx/interface/ideas/AUH/idea_AUH_ganz_krupp.png"
+	}
+	spriteType = {
+		name = "GFX_idea_AUH_ganz_danubius"
+		texturefile = "gfx/interface/ideas/AUH/idea_AUH_ganz_danubius.png"
+	}
+	spriteType = {
+		name = "GFX_idea_AUH_lohner_werke"
+		texturefile = "gfx/interface/ideas/AUH/idea_AUH_lohner_werke.png"
+	}
+	spriteType = {
+		name = "GFX_idea_AUH_osterreichische_waffenfabriksgesellschaft"
+		texturefile = "gfx/interface/ideas/AUH/idea_AUH_osterreichische_waffenfabriksgesellschaft.png"
+	}
+	spriteType = {
+		name = "GFX_idea_AUH_austro_daimler"
+		texturefile = "gfx/interface/ideas/AUH/idea_AUH_austro_daimler.png"
+	}
+	spriteType = {
+		name = "GFX_idea_stabilimento_tecnico_triestino"
+		texturefile = "gfx/interface/ideas/AUH/AUH_stabilimento_tecnico_triestino.png"
+	}
+	spriteType = {
+		name = "GFX_idea_AUH_phoenix"
+		texturefile = "gfx/interface/ideas/AUH/AUH_phoenix.png"
+	}
+	spriteType = {
+		name = "GFX_idea_AUH_aviatik"
+		texturefile = "gfx/interface/ideas/AUH/AUH_aviatik.png"
+	}
+		spriteType = {
+		name = "GFX_idea_AUH_pig_war"
+		texturefile = "gfx/interface/ideas/AUH/idea_AUH_pig_war.png"
+	}
+	spriteType = {
+		name = "GFX_idea_AUH_franz_joesph_i"
+		texturefile = "gfx/interface/ideas/AUH/idea_AUH_Franz_Joesph_I.png"
+	}
+	spriteType = {
+		name = "GFX_idea_AUH_franz_ferdinand_i"
+		texturefile = "gfx/interface/ideas/AUH/idea_AUH_Franz_Ferdinand_I.png"
+	}
+	spriteType = {
+		name = "GFX_idea_AUH_karl_i"
+		texturefile = "gfx/interface/ideas/AUH/idea_AUH_Karl_I.png"
+	}
+	spriteType = {
+		name = "GFX_idea_AUH_austrian_support"
+		texturefile = "gfx/interface/ideas/AUH/AUH_austrian_support.png"
+	}
+	spriteType = {
+		name = "GFX_idea_AUH_serbian_terrorism"
+		texturefile = "gfx/interface/ideas/AUH/AUH_serbian_terrorism.png"
+	}
+	spriteType = {
+		name = "GFX_idea_AUH_croatian_opposition"
+		texturefile = "gfx/interface/ideas/AUH/AUH_croatian_opposition.png"
+	}
+	spriteType = {
+		name = "GFX_idea_AUH_romanian_nationalism"
+		texturefile = "gfx/interface/ideas/AUH/AUH_romanian_nationalism.png"
+	}
 	# Genenric ideas
 	spriteType = {
 		name = "GFX_idea_generic_capitalist"

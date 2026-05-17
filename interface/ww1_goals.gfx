@@ -400,6 +400,184 @@ spriteTypes = {
 		texturefile = "gfx/interface/goals/focus_GER_germania.png"
 	}
 	#Austria
+	#Austria
+	spriteType = {
+		name = "GFX_focus_AUH_found_the_transylvania_region"
+		texturefile = "gfx/interface/goals/AUH/AUH_found_the_transylvania_region.png"
+	}
+	spriteType = {
+		name = "GFX_focus_AUH_found_the_hungarian_region"
+		texturefile = "gfx/interface/goals/AUH/AUH_found_the_hungarian_region.png"
+	}
+	spriteType = {
+		name = "GFX_focus_AUH_found_the_bohemia_region"
+		texturefile = "gfx/interface/goals/AUH/AUH_found_the_bohemia_region.png"
+	}
+	spriteType = {
+		name = "GFX_focus_AUH_found_the_galicia-lodomeria_region"
+		texturefile = "gfx/interface/goals/AUH/AUH_found_the_galicia-lodomeria_region.png"
+	}
+	spriteType = {
+		name = "GFX_focus_AUH_found_the_illyria_region"
+		texturefile = "gfx/interface/goals/AUH/AUH_found_the_illyria_region.png"
+	}
+	spriteType = {
+		name = "GFX_focus_AUH_found_the_slovakia_region"
+		texturefile = "gfx/interface/goals/AUH/AUH_found_the_slovakia_region.png"
+	}
+
+	spriteType = {
+		name = "GFX_focus_AUH_take_a_tour_of_krakow"
+		texturefile = "gfx/interface/goals/AUH/AUH_take_a_tour_of_krakow.png"
+	}
+	SpriteType = {
+		name = "GFX_focus_auh_austrian_empire"
+		texturefile = "gfx/interface/goals/focus_auh_austrian_empire.png"
+	}
+	SpriteType = {
+		name = "GFX_focus_AUH_federalism"
+		texturefile = "gfx/interface/goals/focus_AUH_federalism.png"
+	}
+	spriteType = {
+		name = "GFX_focus_AUH_adopt_constitutional_monarchy"
+		textureFile = "gfx/interface/goals/AUH/AUH_adopt_constitutional_monarchy.png"
+	}
+	SpriteType = {
+		name = "GFX_focus_AUH_monarchy"
+		texturefile = "gfx/interface/goals/focus_AUH_monarchy.png"
+	}
+	SpriteType = {
+		name = "GFX_focus_AUH_strengthen_monarchy"
+		texturefile = "gfx/interface/goals/focus_AUH_strengthen_monarchy.png"
+	}
+	SpriteType = {
+		name = "GFX_focus_HUN_coat_of_arms"
+		texturefile = "gfx/interface/goals/focus_HUN_coat_of_arms.png"
+	}
+	SpriteType = {
+		name = "GFX_focus_AUH_support_hungary"
+		texturefile = "gfx/interface/goals/AUH/hungarian_support.png"
+	}
+	SpriteType = {
+		name = "GFX_focus_AUH_austria_focus"
+		texturefile = "gfx/interface/goals/AUH/austria_focus.png"
+	}
+	SpriteType = {
+		name = "GFX_focus_AUH_suppress_italians"
+		texturefile = "gfx/interface/goals/AUH/suppress_italy.png"
+	}
+	SpriteType = {
+		name = "GFX_focus_AUH_invalidate_croatian_constitution"
+		texturefile = "gfx/interface/goals/AUH/cro_flag.png"
+	}
+	SpriteType = {
+		name = "GFX_focus_AUH_first_cadre_company"
+		texturefile = "gfx/interface/goals/AUH/pol_legion.png"
+	}
+	SpriteType = {
+		name = "GFX_focus_AUH_great_hungary"
+		texturefile = "gfx/interface/goals/AUH/great_hungary.png"
+	}
+	SpriteType = {
+		name = "GFX_focus_AUH_pacify_bosnian_terrorism"
+		texturefile = "gfx/interface/goals/AUH/pacify_bosnian_terrorism.png"
+	}
+	SpriteType = {
+		name = "GFX_focus_AUH_integrate_slovakia"
+		texturefile = "gfx/interface/goals/AUH/integrate_slovakia.png"
+	}
+	SpriteType = {
+		name = "GFX_focus_AUH_erase_romanian_nationalism"
+		texturefile = "gfx/interface/goals/AUH/erase_romanian_nationalism.png"
+	}
+	SpriteType = {
+		name = "GFX_focus_AUH_the_army_question"
+		texturefile = "gfx/interface/goals/AUH/the_army_question.png"
+	}
+	SpriteType = {
+		name = "GFX_focus_AUH_common_army"
+		texturefile = "gfx/interface/goals/AUH/AUS_common_army.png"
+	}
+	SpriteType = {
+		name = "GFX_focus_AUH_demoratic_action"
+		texturefile = "gfx/interface/goals/AUH/AUH_democratic_action.png"
+	}
+	SpriteType = {
+		name = "GFX_focus_AUH_conrad"
+		texturefile = "gfx/interface/goals/focus_AUH_conrad.png"
+	}
+	SpriteType = {
+		name = "GFX_focus_europes_new_order"
+		texturefile = "gfx/interface/goals/AUH/europes_new_order.png"
+	}
+	SpriteType = {
+		name = "GFX_focus_Their_Land_Their_People_Their_Blood"
+		texturefile = "gfx/interface/goals/AUH/Their_Land_Their_People_Their_Blood.png"
+	}
+	SpriteType = {
+		name = "GFX_focus_AUH_suppress_slovaks"
+		texturefile = "gfx/interface/goals/AUH/suppress_slovaks.png"
+	}
+	SpriteType = {
+		name = "GFX_focus_CRO_AUH_coat_of_arms"
+		texturefile = "gfx/interface/goals/focus_CRO_AUH_coat_of_arms.png"
+	}
+	SpriteType = {
+		name = "GFX_focus_GAL_coat_of_arms"
+		texturefile = "gfx/interface/goals/focus_GAL_coat_of_arms.png"
+	}
+	SpriteType = {
+		name = "GFX_focus_CZE_AUH_coat_of_arms"
+		texturefile = "gfx/interface/goals/focus_CZE_AUH_coat_of_arms.png"
+	}
+	SpriteType = {
+		name = "GFX_focus_AUH_country"
+		texturefile = "gfx/interface/goals/focus_AUH_country.png"
+	}
+	SpriteType = {
+		name = "GFX_focus_AUH_collapse"
+		texturefile = "gfx/interface/goals/focus_AUH_collapse.png"
+	}
+	SpriteType = {
+		name = "GFX_focus_Austrian_Crown"
+		texturefile = "gfx/interface/goals/focus_Austrian_Crown.png"
+	}
+	SpriteType = {
+		name = "GFX_focus_reach_austria"
+		texturefile = "gfx/interface/goals/focus_reach_austria.png"
+	}
+	SpriteType = {
+		name = "GFX_focus_AUH_parliament"
+		texturefile = "gfx/interface/goals/focus_AUH_parliament.png"
+	}
+	SpriteType = {
+		name = "GFX_focus_AUH_Franz_Joseph"
+		texturefile = "gfx/interface/goals/focus_AUH_Franz_Joseph.png"
+	}
+	SpriteType = {
+		name = "GFX_focus_AUH_Franz_Ferdinand"
+		texturefile = "gfx/interface/goals/focus_AUH_Franz_Ferdinand.png"
+	}
+	SpriteType = {
+		name = "GFX_focus_AUH_Franz_Ferdinand_corrupt"
+		texturefile = "gfx/interface/goals/focus_AUH_Franz_Ferdinand_corrupt.png"
+	}
+	SpriteType = {
+		name = "GFX_goal_AUH_peoples_emperor"
+		texturefile = "gfx/interface/goals/AUH/karl_emperor.png"
+	}
+	SpriteType = {
+		name = "GFX_focus_AUH_Burstyn_Motorgeschutz"
+		texturefile = "gfx/interface/goals/focus_AUH_Burstyn_Motorgeschutz.png"
+	}
+	SpriteType = {
+		name = "GFX_focus_HUN_rise"
+		texturefile = "gfx/interface/goals/focus_HUN_rise.png"
+	}
+	SpriteType = {
+		name = "GFX_focus_UKR_Sich_Riflemen"
+		texturefile = "gfx/interface/goals/focus_UKR_Sich_Riflemen.png"
+	}
 	SpriteType = {
 		name = "GFX_focus_auh_austrian_empire"
 		texturefile = "gfx/interface/goals/focus_auh_austrian_empire.png"

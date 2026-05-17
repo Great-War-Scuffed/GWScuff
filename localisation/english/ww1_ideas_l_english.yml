@@ -13,6 +13,21 @@
  
  cant_change_from_civilian_economy:0 "Can't change from §Y$civilian_economy$§!."
 
+ AUH_serbian_terrorism:0 "Serbian Terrorism"
+ AUH_croatian_opposition:0 "Croatian Opposition"
+ AUH_galician_national_movement:0 "Galician National Movement"
+ AUH_czech_parliament:0 "Cezch Parliament"
+ AUH_romanian_nationalism:0 "Romanian Nationalism"
+ AUH_hungarian_opposition:0 "Hungarian Opposition"
+ AUH_austrian_support:0 "Austrian Support"
+ AUH_hungarian_support:0 "Hungarian Support"
+ AUH_gameinseme_armee:0 "Gameinseme Armee"
+ AUH_german_military_advisors:0 "German Military Advisors"
+ AUH_serbian_plan:0 "Serbian Plan"
+ AUH_recovering_the_economy:0 "Recovering the Economy"
+ AUH_open_new_grain_factories:0 "Open New Grain Factories"
+ AUH_imperial_war_effort:0 "Imperial War Effort"
+
 #Romania
  ROM_idea_communist_influence:0 "Romanian Communist Influence"
  ROM_unionist_zeal:0 "Unionist Zeal"

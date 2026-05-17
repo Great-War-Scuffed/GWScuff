@@ -7,9 +7,9 @@ state={
 	history={
 	    victory_points = { 3581 2 } #Prešov 16,323
 		victory_points = { 3550 1 }
-		owner=HUN
+		owner=AUS
 		add_core_of=SLO
-		add_core_of = HUN
+		add_core_of = AUS
 		buildings={
 			infrastructure = 2
 			}

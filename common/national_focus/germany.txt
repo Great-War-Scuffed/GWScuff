@@ -219,7 +219,7 @@ focus_tree = {
 		y = 10
 		available = {
 			is_faction_leader = yes
-			country_exists = AUH
+			country_exists = AUS
 			if = {
 				limit = {
 					if = {
@@ -232,11 +232,11 @@ focus_tree = {
 					has_global_flag = kis_war
 				}
 				}
-				NOT = { is_in_faction_with = AUH }
+				NOT = { is_in_faction_with = AUS }
 			}
 		}
 		bypass = {
-			AUH = {
+			AUS = {
 				exists = yes
 				NOT = {
 					is_in_faction_with = ROOT
@@ -256,7 +256,7 @@ focus_tree = {
 				id = ITA
 				value = 200
 			}
-			AUH = {
+			AUS = {
 				add_opinion_modifier = {
 					target = ROOT
 					modifier = GER_backstab
@@ -274,7 +274,7 @@ focus_tree = {
 				leave_faction = yes
 			}
 			add_opinion_modifier = {
-				target = AUH
+				target = AUS
 				modifier = GER_backstab
 			}
 			ITA = {
@@ -288,7 +288,7 @@ focus_tree = {
 					value = 200
 				}
 				diplomatic_relation = {
-					country = AUH
+					country = AUS
 					relation = guarantee
 					active = no
 				}
@@ -326,7 +326,7 @@ focus_tree = {
 			base = 1
 			modifier = {
 				factor = 0
-				AUH = {
+				AUS = {
 					is_ai = no
 				}
 			}
@@ -346,37 +346,37 @@ focus_tree = {
 			hidden_effect = {
 				add_ai_strategy = {
 					type = prepare_for_war
-					id = AUH
+					id = AUS
 					value = 100
 				}
 				add_ai_strategy = {
 					type = contain
-					id = AUH
+					id = AUS
 					value = 100
 				}
 				ITA = {
 					add_ai_strategy = {
 						type = prepare_for_war
-						id = AUH
+						id = AUS
 						value = 100
 					}
 					add_ai_strategy = {
 						type = contain
-						id = AUH
+						id = AUS
 						value = 100
 					}
 				}
 			}
-			AUH = {
+			AUS = {
 				hidden_effect = {
 					add_ai_strategy = {
 						type = prepare_for_war
-						id = AUH
+						id = AUS
 						value = 100
 					}
 					add_ai_strategy = {
 						type = contain
-						id = AUH
+						id = AUS
 						value = 100
 					}
 				}
@@ -544,14 +544,14 @@ focus_tree = {
 			is_faction_leader = yes
 		}
 		bypass = {
-			AUH = {
+			AUS = {
 				NOT = {
 					is_in_faction_with = ROOT
 				}
 			}
 		}
 		completion_reward = {
-			AUH = {
+			AUS = {
 				add_state_claim = 159
 				add_state_claim = 160
 			}
@@ -664,7 +664,7 @@ focus_tree = {
 		x = 0
 		y = 1
 		relative_position_id = GER_romanian_pact
-		will_lead_to_war_with = AUH
+		will_lead_to_war_with = AUS
 		available = {
 			is_subject = no
 			NOT = { 
@@ -673,10 +673,10 @@ focus_tree = {
 		}
 		bypass = {
 			OR = {
-				AUH = {
+				AUS = {
 					exists = no
 				}
-				has_war_with = AUH
+				has_war_with = AUS
 			}
 		}
 		available_if_capitulated = yes
@@ -714,7 +714,7 @@ focus_tree = {
 			}
 			create_wargoal = {
 				type = brothers_war
-				target = AUH
+				target = AUS
 			}
 		}
 		ai_will_do = {
@@ -735,7 +735,7 @@ focus_tree = {
 		will_lead_to_war_with = SWI
 		available = {
 			is_faction_leader = yes
-			AUH = {
+			AUS = {
 				exists = no
 			}
 			if = {
@@ -792,7 +792,7 @@ focus_tree = {
 		}
 		bypass = {
 			NOT = {
-				is_in_faction_with = AUH
+				is_in_faction_with = AUS
 			}
 		}
 		completion_reward = {
@@ -840,7 +840,7 @@ focus_tree = {
 				target = SER
 				modifier = embargo
 			}
-			AUH = {
+			AUS = {
 				if = {
 					limit = {
 						OR = {
@@ -2384,13 +2384,13 @@ focus_tree = {
 			}
 			if = {
 				limit = {
-					AUH = {
+					AUS = {
 						NOT = {
 							has_war_with = ROOT
 						}
 					}
 				}
-				AUH = {
+				AUS = {
 					add_ideas = GER_idea_central_powers_joint_staff
 				}
 				add_doctrine_cost_reduction = {
@@ -5658,11 +5658,11 @@ focus_tree = {
 			NOT = { 
 				has_idea = idea_armistice
 			}
-			NOT = { country_exists = AUH }
+			NOT = { country_exists = AUS }
 			country_exists = HUN
 		}
 		bypass = {
-			country_exists = AUH
+			country_exists = AUS
 			OR = {
 				has_war_with = HUN
 				NOT = { country_exists = HUN }
@@ -5695,7 +5695,7 @@ focus_tree = {
 	}
 	focus = {
 		id = GER_bohemia_integration
-		icon = GFX_focus_CZE_AUH_coat_of_arms
+		icon = GFX_focus_CZE_AUS_coat_of_arms
 		cost = 5
 		prerequisite = {
 			focus = GER_german_cisleithania
@@ -5709,9 +5709,9 @@ focus_tree = {
 				has_idea = idea_armistice
 			}
 			OR = {
-				NOT = { country_exists = AUH }
+				NOT = { country_exists = AUS }
 				AND = {
-					AUH = {
+					AUS = {
 						has_war_with = ROOT
 						is_in_faction_with = FRA
 					}
@@ -5801,12 +5801,12 @@ focus_tree = {
 		relative_position_id = GER_german_cisleithania
 		available_if_capitulated = yes
 		available = {
-			NOT = { country_exists = AUH }
+			NOT = { country_exists = AUS }
 			HUN = {
 				is_in_faction = no
 				NOT = {
 					has_war_with = ROOT
-					has_idea = AUH_ww1_House_Habsburg_Lorraine
+					has_idea = AUS_ww1_House_Habsburg_Lorraine
 					has_country_leader = {
 						character = HUN_franz_joseph_i
 					}
@@ -9627,22 +9627,22 @@ focus_tree = {
 			if = {
 				limit = {
 					NOT = {
-						has_war_with = AUH
-						is_in_faction_with = AUH
-						has_subject = AUH
+						has_war_with = AUS
+						is_in_faction_with = AUS
+						has_subject = AUS
 					}
 				}
 				diplomatic_relation = {
-					country = AUH
+					country = AUS
 					relation = non_aggression_pact
 				}
-				AUH = {
+				AUS = {
 					diplomatic_relation = {
 						country = ROOT
 						relation = non_aggression_pact
 					}
 				}
-				country_event = ww1_auh.41
+				country_event = ww1_AUS.41
 			}
 		}
 		ai_will_do = {
@@ -11670,7 +11670,7 @@ joint_focus = {
 		x = 29
 		y = 3
 		trigger = {
-			has_focus_tree = AUH_focus
+			has_focus_tree = AUS_focus
 		}
 	}
 	available = {
@@ -11684,7 +11684,7 @@ joint_focus = {
 	}
 	prerequisite = {
 		focus = GER_support_triple_alliance_armies
-		focus = AUH_armored_cars
+		focus = AUS_armored_cars
 	}
 	completion_reward = {
 		effect_tooltip = {

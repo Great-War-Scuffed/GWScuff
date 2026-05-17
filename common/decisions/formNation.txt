@@ -10493,7 +10493,6 @@ formable_nations_timurids = {
 					OR = {
 						AND = {
 							714 = { is_controlled_by = ROOT }
-							761 = { is_controlled_by = ROOT }
 							612 = { is_controlled_by = ROOT }
 							715 = { is_controlled_by = ROOT }
 							611 = { is_controlled_by = ROOT }
@@ -10526,7 +10525,6 @@ formable_nations_timurids = {
 					OR = {
 						AND = {
 							609 = { is_controlled_by = ROOT }
-							745 = { is_controlled_by = ROOT }
 							528 = { is_controlled_by = ROOT }
 							529 = { is_controlled_by = ROOT }
 							530 = { is_controlled_by = ROOT }
@@ -10573,7 +10571,7 @@ formable_nations_timurids = {
 
 			#JAPAN STARTING
 			state = 609
-			state = 745
+			#state = 745
 			state = 528
 			state = 529
 			state = 530
@@ -10647,6 +10645,27 @@ formable_nations_timurids = {
 			409 = { add_core_of = ROOT }
 			655 = { add_core_of = ROOT }
 			614 = { add_core_of = ROOT }
+			802 = { add_core_of = ROOT }
+			801 = { add_core_of = ROOT }
+			796 = { add_core_of = ROOT }
+			800 = { add_core_of = ROOT }
+			797 = { add_core_of = ROOT }
+			799 = { add_core_of = ROOT }
+			744 = { add_core_of = ROOT }
+			1045 = { add_core_of = ROOT }
+			908 = { add_core_of = ROOT }
+			910 = { add_core_of = ROOT }
+			909 = { add_core_of = ROOT }
+			1226 = { add_core_of = ROOT }
+			1228 = { add_core_of = ROOT }
+			983 = { add_core_of = ROOT }
+			1227 = { add_core_of = ROOT }
+			872 = { add_core_of = ROOT }
+			607 = { add_core_of = ROOT }
+			1016 = { add_core_of = ROOT }
+			598 = { add_core_of = ROOT }
+			613 = { add_core_of = ROOT }
+			
 		}
 	}
 }

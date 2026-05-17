@@ -813,6 +813,8 @@ technologies = {
 		}
 	}
 	construction0 = {	
+		production_speed_buildings_factor = 0.10
+		industry_repair_factor = 0.10
 		enable_building = {
 			building = supply_node
 			level = 1
@@ -879,6 +881,8 @@ technologies = {
 	}
 
 	basic_railways = {	
+		production_speed_supply_node_factor = 0.05
+		production_speed_rail_way_factor = 0.05
 		show_effect_as_desc = yes
 		on_research_complete = {
 			custom_effect_tooltip = UNLOCK_TRAINS

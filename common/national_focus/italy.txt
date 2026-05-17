@@ -16,7 +16,7 @@ focus_tree = {
 	focus = {
 		id = ITA_early_industrialization
 		icon = GFX_focus_generic_industry_1
-		cost = 5
+		cost = 10
 		x = 3
 		y = 0
 		available = {
@@ -166,7 +166,7 @@ focus_tree = {
 	focus = {
 		id = ITA_Ilva
 		icon = GFX_focus_industry_steel
-		cost = 5
+		cost = 10
 		prerequisite = {
 			focus = ITA_moderate_protectionism
 		}
@@ -311,7 +311,7 @@ focus_tree = {
 	focus = {
 		id = ITA_Ferrovie_dello_Stato
 		icon = GFX_goal_generic_production2
-		cost = 5
+		cost = 10
 		prerequisite = {
 			focus = ITA_early_industrialization
 		}
@@ -426,7 +426,7 @@ focus_tree = {
 	focus = {
 		id = ITA_Lancia
 		icon = GFX_goal_generic_army_motorized
-		cost = 5
+		cost = 10
 		prerequisite = {
 			focus = ITA_Breda
 		}
@@ -469,7 +469,7 @@ focus_tree = {
 	focus = {
 		id = ITA_railroad_modernisation
 		icon = GFX_focus_generic_railroad
-		cost = 5
+		cost = 10
 		prerequisite = {
 			focus = ITA_Ferrovie_dello_Stato
 		}
@@ -594,7 +594,7 @@ focus_tree = {
 	focus = {
 		id = ITA_Ansaldo
 		icon = GFX_focus_generic_industry_2
-		cost = 5
+		cost = 10
 		prerequisite = {
 			focus = ITA_railroad_modernisation
 		}

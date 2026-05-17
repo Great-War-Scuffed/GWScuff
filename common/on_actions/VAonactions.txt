@@ -284,5 +284,39 @@ on_actions = {
 			}
 		}
 	}
+	#on_startup = {
+	#	effect = {
+	#		every_country = {
+	#			limit = {
+	#				NOT = {
+	#					has_tech = construction0
+#
+	#				}
+	#				
+	#			}
+	#			set_technology = {
+	#				construction0 = 1
+	#				popup = no
+	#			}
+	#		}
+	#	}
+	#}
+	on_startup = {
+		effect = {
+			every_country = {
+				limit = {
+					NOT = {
+						has_tech = basic_railways
+
+					}
+					
+				}
+				set_technology = {
+					basic_railways = 1
+					popup = no
+				}
+			}
+		}
+	}
 
 }

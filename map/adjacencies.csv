@@ -72,73 +72,10 @@ From;To;Type;Through;start_x;start_y;stop_x;stop_y;adjacency_rule_name;Comment
 394;6235;land;2506;2962;1669;2961;1668;;Jernbanebroen over Limfjorden
 316;3206;land;2506;-1;-1;-1;-1;;Limfjorden
 
-1060;13295;land;1140;-1;-1;3166;1063;;Jaghbub-Kurfa
-10785;1057;land;10754;-1;-1;-1;-1;;Awjila-Kurfa
-10785;1127;land;13078;-1;-1;-1;-1;;Awjila-Cyrenaica
-10785;13296;land;1994;-1;-1;-1;-1;;Awjila-Murzuk
-12866;10037;land;1994;-1;-1;3028;1100;;Sokna-Murzuk
-12866;13296;land;1994;-1;-1;3055;1085;;Sokna-Murzuk
-13296;13298;land;1994;-1;-1;-1;-1;;Murzuk-Qatrun
-13296;12033;land;1994;-1;-1;-1;-1;;Murzuk-Gyatt
-10037;12033;land;1994;-1;-1;-1;-1;;Murzuk-Gyatt
-13298;12033;land;1994;-1;-1;-1;-1;;Qatrun-Gyatt
-13298;13299;land;1994;3051;1058;3140;954;;Qatrun-Ounianga
-13298;13297;land;1994;3044;1054;3060;995;;Qatrun-Toubou
-13298;13295;land;1994;-1;-1;-1;-1;;Qatrun-Kurfa
-13295;13299;land;10754;-1;-1;-1;-1;;Kurfa-Ounianga
-13299;13301;land;4191;-1;-1;-1;-1;;Ounianga-Ennedi
-13301;1473;land;4191;-1;-1;3156;900;;Ennedi-Abéché
-13300;1473;land;4191;-1;-1;3138;899;;Borkou-Abéché
-13300;13299;land;4191;-1;-1;-1;-1;;Borkou-Ounianga
-13300;13297;land;4191;-1;-1;-1;-1;;Borkou-Toubou
-3123;13297;land;1956;-1;-1;-1;-1;;Kanemrou-Toubou
-13299;13297;land;4191;-1;-1;3099;975;;Ounianga-Toubou
-13217;1874;land;7872;-1;-1;-1;-1;;Kazungula quadripoint
-1060;1143;land;12816;-1;-1;-1;-1;;Jaghbub-Siwa
-11967;1143;land;12816;-1;-1;-1;-1;;Marsa Matruh-Siwa
-1143;10127;land;12764;-1;-1;-1;-1;;Siwa-Bahariya
-7117;10127;land;12764;-1;-1;-1;-1;;Cairo-Bahariya
-10127;7148;land;12764;-1;-1;-1;-1;;Bahariya-Farafra
-7148;7216;land;12764;-1;-1;-1;-1;;Farafra-Dakhla
-7216;10869;land;12764;-1;-1;-1;-1;;Dakhla-Kharga
-10869;11974;land;12764;-1;-1;-1;-1;;Kharga-Asyut
-10869;13304;land;12091;-1;-1;-1;-1;;Kharga-Selima
-7216;13304;land;12091;-1;-1;-1;-1;;Dakhla-Selima
-13304;10739;land;12091;-1;-1;-1;-1;;Selima-Darfur
-13304;13299;land;12091;3252;999;3146;949;;Selima-Ounianga
-13304;4138;land;12091;-1;-1;-1;-1;;Selima-Sudan
-1757;4695;land;8088;-1;-1;-1;-1;;Saoura-Tuat
-4695;13310;land;8088;-1;-1;-1;-1;;Tuat-Tidikelt
-13310;7154;land;8088;-1;-1;-1;-1;;Tidikelt-Ghadames
-13310;11940;land;8088;-1;-1;-1;-1;;Tidikelt-Ouargla
-13310;13309;land;8088;-1;-1;-1;-1;;Tidikelt-Hoggar
-13309;12033;land;8088;-1;-1;-1;-1;;Hoggar-Gyatt
-13309;13308;land;1956;-1;-1;-1;-1;;Hoggar-Agadez
-13308;12033;land;1956;-1;-1;-1;-1;;Agadez-Gyatt
-13308;4068;land;1956;-1;-1;-1;-1;;Agadez-Niamey
-13308;13311;land;1956;-1;-1;-1;-1;;Agadez-Bilma
-13308;12889 ;land;1956;-1;-1;-1;-1;;Agadez-Zinder
-13311;13298;land;1956;-1;-1;-1;-1;;Bilma-Qatrun
-13311;13297;land;1956;-1;-1;-1;-1;;Bilma-Toubou
-13311;7156;land;1956;-1;-1;-1;-1;;Bilma-N'guigmi
-7154;11940;land;8088;-1;-1;-1;-1;;Ghadames-Ouargla
-7154;10037;land;4962;-1;-1;3018;1104;;Ghadames-Murzuk
-7154;4057;land;4962;-1;-1;-1;-1;;Ghadames-Tripolitania
-7154;12000;land;4992;2957;1148;-1;-1;;Ghadames-Tataouine
-7154;12033;land;12022;2959;1139;-1;-1;;Ghadames-Ghat
-12866;7154;land;4962;-1;-1;-1;-1;;Sokna-Ghadames
-12866;4047;land;4962;-1;-1;-1;-1;;Sokna-Sirte
-12866;10785;land;4962;-1;-1;3138;1135;;Sokna-Awjila
-1060;10785;land;13078;-1;-1;-1;-1;;Jaghbub-Awjila
-1060;7079;land;1140;-1;-1;-1;-1;;Jaghbub-Sallum
-1060;4136;land;1140;-1;-1;-1;-1;;Jaghbub-Tobruk
-2044;11951;land;1115;-1;-1;-1;-1;;Timbuktu-Taoudeni
-11951;4695;land;1115;-1;-1;-1;-1;;Taoudeni-Tuat
-11951;4200;land;1115;-1;-1;-1;-1;;Taoudeni-Adrar des Ifoghas
-10788;4200;land;1115;-1;-1;-1;-1;;Gao-Adrar des Ifoghas
-7063;13310;land;8088;-1;-1;-1;-1;;Adrar des Ifoghas-Tidikelt
-7063;13309;land;8088;-1;-1;-1;-1;;Adrar des Ifoghas-Hoggar
-12079;11951;land;10779;-1;-1;-1;-1;;Adrar-Taoudeni
+
+
+
+
 309;3326;land;2729;-1;-1;-1;-1;;Weser
 
 
@@ -346,14 +283,14 @@ From;To;Type;Through;start_x;start_y;stop_x;stop_y;adjacency_rule_name;Comment
 3899;3915;impassable;-1;-1;-1;-1;-1;;Pyrenees
 3898;6931;impassable;-1;-1;-1;-1;-1;;Pyrenees
 11570;9587;impassable;-1;-1;-1;-1;-1;;Alps
+6635;636;impassable;-1;-1;-1;-1;-1;;Alps
 6635;3641;impassable;-1;-1;-1;-1;-1;;Alps
 6635;9587;impassable;-1;-1;-1;-1;-1;;Alps
 6661;3662;impassable;-1;-1;-1;-1;-1;;Alps
 6661;658;impassable;-1;-1;-1;-1;-1;;Alps
 11587;3662;impassable;-1;-1;-1;-1;-1;;Alps
 11587;3660;impassable;-1;-1;-1;-1;-1;;Alps
-13487;671;impassable;-1;-1;-1;-1;-1;;Carnic Alps
-3657;671;impassable;-1;-1;-1;-1;-1;;Carnic Alps
+9630;11618;impassable;-1;-1;-1;-1;-1;;Alps`t`
 671;3675;impassable;-1;-1;-1;-1;-1;;austrian alps
 3674;3675;impassable;-1;-1;-1;-1;-1;;austrian alps
 6675;3660;impassable;-1;-1;-1;-1;-1;;austrian alps
@@ -365,9 +302,8 @@ From;To;Type;Through;start_x;start_y;stop_x;stop_y;adjacency_rule_name;Comment
 11592;6667;impassable;-1;-1;-1;-1;-1;;Carpathians
 11592;907;impassable;-1;-1;-1;-1;-1;;Carpathians
 9619;907;impassable;-1;-1;-1;-1;-1;;Carpathians
-3676;6695;impassable;-1;-1;-1;-1;-1;;Carpathians
-3676;10607;impassable;-1;-1;-1;-1;-1;;Carpathians
-3676;12643;impassable;-1;-1;-1;-1;-1;;Carpathians
+3665;907;impassable;-1;-1;-1;-1;-1;;Carpathians
+3665;11605;impassable;-1;-1;-1;-1;-1;;Carpathians
 3665;13065;impassable;-1;-1;-1;-1;-1;;Carpathians
 6679;13065;impassable;-1;-1;-1;-1;-1;;Carpathians
 6709;13065;impassable;-1;-1;-1;-1;-1;;Carpathians
@@ -394,12 +330,6 @@ From;To;Type;Through;start_x;start_y;stop_x;stop_y;adjacency_rule_name;Comment
 9988;9961;impassable;-1;-1;-1;-1;-1;;Annamese Mountains
 11909;9961;impassable;-1;-1;-1;-1;-1;;Annamese Mountains
 4269;7385;sea;8751;-1;-1;-1;-1;;Cebu-Samar
-10499;10363;impassable;-1;-1;-1;-1;-1;;Greater Khingan Range
-3978;10363;impassable;-1;-1;-1;-1;-1;;Greater Khingan Range
-10429;10363;impassable;-1;-1;-1;-1;-1;;Greater Khingan Range
-10429;7578;impassable;-1;-1;-1;-1;-1;;Greater Khingan Range
-12469;1811;impassable;-1;-1;-1;-1;-1;;Greater Khingan Range
-7812;1811;impassable;-1;-1;-1;-1;-1;;Greater Khingan Range
 10802;5042;impassable;-1;-1;-1;-1;-1;;Kunlun Mountains
 10802;7273;impassable;-1;-1;-1;-1;-1;;Kunlun Mountains
 12801;5042;impassable;-1;-1;-1;-1;-1;;Kunlun Mountains
@@ -412,6 +342,8 @@ From;To;Type;Through;start_x;start_y;stop_x;stop_y;adjacency_rule_name;Comment
 11664;6674;impassable;-1;-1;-1;-1;-1;;Caucasus
 9649;6674;impassable;-1;-1;-1;-1;-1;;Caucasus
 9632;6674;impassable;-1;-1;-1;-1;-1;;Caucasus
+11614;9626;impassable;-1;-1;-1;-1;-1;;Caucasus
+11614;1530;impassable;-1;-1;-1;-1;-1;;Caucasus
 685;9626;impassable;-1;-1;-1;-1;-1;;Caucasus
 9632;9626;impassable;-1;-1;-1;-1;-1;;Caucasus
 11614;11609;impassable;-1;-1;-1;-1;-1;;Caucasus
@@ -425,26 +357,11 @@ From;To;Type;Through;start_x;start_y;stop_x;stop_y;adjacency_rule_name;Comment
 7554;6763;impassable;-1;-1;-1;-1;-1;;Caucasus
 3711;6763;impassable;-1;-1;-1;-1;-1;;Caucasus
 1450;6763;impassable;-1;-1;-1;-1;-1;;Caucasus
+3711;1897;impassable;-1;-1;-1;-1;-1;;Caucasus
 1450;1897;impassable;-1;-1;-1;-1;-1;;Caucasus
 1450;11645;impassable;-1;-1;-1;-1;-1;;Caucasus
 4545;11645;impassable;-1;-1;-1;-1;-1;;Caucasus
 13190;13188;impassable;-1;-1;-1;-1;-1;;Colon Exclave
-5192;8253;impassable;-1;-1;-1;-1;-1;;Andes
-5192;8195;impassable;-1;-1;-1;-1;-1;;Andes
-5146;8195;impassable;-1;-1;-1;-1;-1;;Andes
-5169;8161;impassable;-1;-1;-1;-1;-1;;Andes
-5169;2199;impassable;-1;-1;-1;-1;-1;;Andes
-1659;12928;impassable;-1;-1;-1;-1;-1;;Andes
-1659;2179;impassable;-1;-1;-1;-1;-1;;Andes
-8198;12946;impassable;-1;-1;-1;-1;-1;;Andes
-8218;12946;impassable;-1;-1;-1;-1;-1;;Andes
-8218;5173;impassable;-1;-1;-1;-1;-1;;Andes
-10961;12946;impassable;-1;-1;-1;-1;-1;;Andes
-10961;2169;impassable;-1;-1;-1;-1;-1;;Andes
-2161;2169;impassable;-1;-1;-1;-1;-1;;Andes
-2161;8161;impassable;-1;-1;-1;-1;-1;;Andes
-8913;8161;impassable;-1;-1;-1;-1;-1;;Andes
-12574;2199;impassable;-1;-1;-1;-1;-1;;Andes
 4521;1432;impassable;-1;-1;-1;-1;-1;;Sierre Nevada
 1432;7667;impassable;-1;-1;-1;-1;-1;;Sierre Nevada
 4607;1432;impassable;-1;-1;-1;-1;-1;;Sierre Nevada
@@ -498,6 +415,10 @@ From;To;Type;Through;start_x;start_y;stop_x;stop_y;adjacency_rule_name;Comment
 4210;5009;impassable;-1;-1;-1;-1;-1;;Yunnan
 4210;10413;impassable;-1;-1;-1;-1;-1;;Yunnan
 7400;10413;impassable;-1;-1;-1;-1;-1;;Yunnan
+
+#Africa 
+10875;7992;impassable;-1;-1;-1;-1;-1;;Riodeoro
+10875;12079;impassable;-1;-1;-1;-1;-1;;Riodeoro
 
 # Amazonas
 5008;4980;impassable;-1;-1;-1;-1;-1;;Amazonas

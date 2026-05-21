@@ -2969,6 +2969,215 @@ ideas = {
 			}
 		}
 
+		FRA_idea_arsenal_de_la_nation = {
+			allowed = {
+				always = no
+			}
+			allowed_civil_war = {
+				always = yes
+			}
+			removal_cost = -1
+			picture = GFX_idea_generic_produce_more_weapons
+			modifier = {
+				production_speed_arms_factory_factor = 0.10
+				production_factory_start_efficiency_factor = 0.05
+				industrial_capacity_factory = 0.05
+			}
+		}
+
+		FRA_idea_industrie_nationale = {
+			allowed = {
+				always = no
+			}
+			allowed_civil_war = {
+				always = yes
+			}
+			removal_cost = -1
+			picture = GFX_idea_generic_build_more_industry
+			modifier = {
+				production_speed_industrial_complex_factor = 0.125
+				production_factory_max_efficiency_factor = 0.05
+				production_factory_efficiency_gain_factor = -0.05
+			}
+		}
+
+		FRA_idea_grande_armee = {
+			allowed = {
+				always = no
+			}
+			allowed_civil_war = {
+				always = yes
+			}
+			removal_cost = -1
+			picture = GFX_idea_generic_army_war_college
+			modifier = {
+				army_morale_factor = 0.05
+				army_attack_factor = 0.05
+				planning_speed = 0.10
+				max_planning = 0.05
+			}
+		}
+
+		FRA_idea_aeronautique_militaire = {
+			allowed = {
+				always = no
+			}
+			allowed_civil_war = {
+				always = yes
+			}
+			removal_cost = -1
+			picture = GFX_idea_generic_air_bonus
+			modifier = {
+				air_ace_generation_chance_factor = 0.10
+				air_agility_factor = 0.05
+				air_attack_factor = 0.05
+			}
+		}
+
+		FRA_idea_flotte_de_haute_mer = {
+			allowed = {
+				always = no
+			}
+			allowed_civil_war = {
+				always = yes
+			}
+			removal_cost = -1
+			picture = GFX_idea_generic_navy_bonus
+			modifier = {
+				navy_max_range_factor = 0.10
+				submarine_attack_factor = 0.05
+				navy_submarine_detection_factor = 0.10
+			}
+		}
+
+		# --- DEMOCRACY PATH ---
+		FRA_dem_programme_social_idea = {
+			allowed = { always = no }
+			allowed_civil_war = { always = yes }
+			removal_cost = -1
+			picture = GFX_idea_generic_build_more_industry
+			modifier = {
+				stability_factor = 0.05
+				consumer_goods_factor = -0.10
+			}
+		}
+
+		FRA_dem_investissement_public_idea = {
+			allowed = { always = no }
+			allowed_civil_war = { always = yes }
+			removal_cost = -1
+			picture = GFX_idea_generic_build_more_industry
+			modifier = {
+				production_speed_buildings_factor = 0.10
+			}
+		}
+
+		FRA_dem_republique_prospere_idea = {
+			allowed = { always = no }
+			allowed_civil_war = { always = yes }
+			removal_cost = -1
+			picture = GFX_idea_generic_build_more_industry
+			modifier = {
+				global_building_slots_factor = 0.10
+			}
+		}
+
+		# --- MONARCHY PATH ---
+		FRA_mon_discipline_royale_idea = {
+			allowed = { always = no }
+			allowed_civil_war = { always = yes }
+			removal_cost = -1
+			picture = GFX_idea_generic_army_war_college
+			modifier = {
+				army_org_factor = 0.10
+			}
+		}
+
+		FRA_mon_corps_sante_idea = {
+			allowed = { always = no }
+			allowed_civil_war = { always = yes }
+			removal_cost = -1
+			picture = GFX_idea_generic_army_war_college
+			modifier = {
+				army_strength_factor = 0.05
+			}
+		}
+
+		FRA_mon_noblesse_du_peuple_idea = {
+			allowed = { always = no }
+			allowed_civil_war = { always = yes }
+			removal_cost = -1
+			picture = GFX_idea_generic_produce_more_weapons
+			modifier = {
+				conscription = 0.05
+			}
+		}
+
+		# --- COMMUNIST PATH ---
+		FRA_com_production_collective_idea = {
+			allowed = { always = no }
+			allowed_civil_war = { always = yes }
+			removal_cost = -1
+			picture = GFX_idea_generic_build_more_industry
+			modifier = {
+				industrial_capacity_factory = 0.05
+			}
+		}
+
+		FRA_com_stakhanovisme_idea = {
+			allowed = { always = no }
+			allowed_civil_war = { always = yes }
+			removal_cost = -1
+			picture = GFX_idea_generic_produce_more_weapons
+			modifier = {
+				production_factory_max_efficiency_factor = 0.05
+			}
+		}
+
+		FRA_com_industrie_du_peuple_idea = {
+			allowed = { always = no }
+			allowed_civil_war = { always = yes }
+			removal_cost = -1
+			picture = GFX_idea_generic_build_more_industry
+			modifier = {
+				production_factory_efficiency_gain_factor = 0.075
+				production_factory_start_efficiency_factor = 0.075
+				line_change_production_efficiency_factor = 0.075
+			}
+		}
+
+		# --- FASCIST/MILITARY PATH ---
+		FRA_mil_assaut_decisif_idea = {
+			allowed = { always = no }
+			allowed_civil_war = { always = yes }
+			removal_cost = -1
+			picture = GFX_idea_generic_army_war_college
+			modifier = {
+				breakthrough_factor = 0.075
+			}
+		}
+
+		FRA_mil_doctrine_terrain_idea = {
+			allowed = { always = no }
+			allowed_civil_war = { always = yes }
+			removal_cost = -1
+			picture = GFX_idea_generic_army_war_college
+			modifier = {
+				experience_gain_army_factor = 0.10
+				terrain_trait_xp_gain_factor = 0.10
+			}
+		}
+
+		FRA_mil_victoire_totale_idea = {
+			allowed = { always = no }
+			allowed_civil_war = { always = yes }
+			removal_cost = -1
+			picture = GFX_idea_generic_army_war_college
+			modifier = {
+				army_attack_factor = 0.05
+			}
+		}
+
 		FRA_idea_reformed_income_tax = {
 			allowed = {
 				always = no

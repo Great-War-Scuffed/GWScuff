@@ -1,0 +1,340 @@
+﻿l_english:
+ # =====================================================
+ # France Reworked Focus Tree — GWScuff
+ # =====================================================
+
+ # --- ARMY BRANCH ---
+ FRA_new_plan_xvii:0 "Plan XVII"
+ FRA_new_plan_xvii_desc:0 "Our military planners have devised an aggressive strategy of offensive operations against Germany. We must invest in training and doctrine to turn this plan into reality."
+
+ FRA_new_loi_trois_ans:0 "Loi des Trois Ans"
+ FRA_new_loi_trois_ans_desc:0 "France's population disadvantage against Germany demands a larger standing army. The Three-Year Service Law extends conscription and fills our ranks."
+
+ FRA_new_officer_ecoles:0 "École de Guerre"
+ FRA_new_officer_ecoles_desc:0 "Saint-Cyr and the War College must produce a new generation of professional officers capable of commanding modern industrial warfare."
+
+ FRA_new_chars_dassaut:0 "Chars d'Assaut"
+ FRA_new_chars_dassaut_desc:0 "The trench warfare of the Marne has shown us that a breakthrough weapon is needed. The Schneider and Saint-Chamond factories are put to work designing armoured fighting vehicles."
+
+ FRA_new_aviation_militaire:0 "Aviation Militaire"
+ FRA_new_aviation_militaire_desc:0 "The skies above the Western Front are contested. France invests in the Nieuport and Spad designs that will define aerial combat in this new age of warfare."
+
+ FRA_new_armored_doctrine:0 "Guerre de Mouvement"
+ FRA_new_armored_doctrine_desc:0 "Combining our new tanks and aircraft, French planners develop combined-arms doctrines to break the stalemate and restore a war of manoeuvre."
+
+ # --- ECONOMIC BRANCH ---
+ FRA_new_belle_epoque:0 "La Belle Époque"
+ FRA_new_belle_epoque_desc:0 "France enters the new century at the height of its cultural and industrial prestige. We should channel this prosperity into a foundation for the trials ahead."
+
+ # War Production branch
+ FRA_econ_mobilisation_industrielle:0 "Mobilisation Industrielle"
+ FRA_econ_mobilisation_industrielle_desc:0 "French factories are converted and expanded to meet the demands of modern total war. Shell production, rifles, and artillery take priority. We must be ready to fight now — not in five years."
+
+ FRA_econ_requisitions_de_guerre:0 "Réquisitions de Guerre"
+ FRA_econ_requisitions_de_guerre_desc:0 "The state requisitions private metalworks and workshops for war production. Every available press and lathe is turned to rifles and shells. The front cannot wait."
+
+ FRA_econ_programme_armement:0 "Programme d'Armement"
+ FRA_econ_programme_armement_desc:0 "A structured armament programme channels government contracts to the most capable manufacturers. Schneider, Hotchkiss, and Citroën are given their orders. Officers rotate through the factories to ensure what is built is what is needed."
+
+ FRA_econ_arsenal_de_la_nation:0 "Arsenal de la Nation"
+ FRA_econ_arsenal_de_la_nation_desc:0 "France has become its own arsenal. The full weight of the national economy is placed behind war production — faster construction of arms factories, and a higher ceiling on production efficiency ensure the army never lacks for materiel."
+
+ # Civilian Scaling branch
+ FRA_econ_expansion_civile:0 "Expansion Industrielle"
+ FRA_econ_expansion_civile_desc:0 "Rather than redirect every factory to immediate war needs, France invests in expanding its industrial base. The bet is on a longer war — one France must be able to outlast."
+
+ FRA_econ_credit_national:0 "Crédit National"
+ FRA_econ_credit_national_desc:0 "A national credit institution finances long-term industrial investment through government bonds and subsidised lending. Political capital is invested alongside capital francs."
+
+ FRA_econ_grands_travaux:0 "Grands Travaux"
+ FRA_econ_grands_travaux_desc:0 "Public works on a grand scale — new factories, expanded rail links, upgraded power networks. The investment is enormous, but so are the returns. By 1918 France will have an industrial base twice what it had in 1914."
+
+ FRA_econ_industrie_nationale:0 "Industrie Nationale"
+ FRA_econ_industrie_nationale_desc:0 "France's civilian industrial apparatus is the envy of Europe — a vast, interlocking system of factories, workshops, and infrastructure. Construction rises faster, the production efficiency ceiling climbs higher, and civilian output scales beyond what wartime conversion could ever achieve. The trade-off: retooling for war production takes longer, and the efficiency ramp-up is slower than a pure war economy."
+
+ # --- ECONOMIC CONVERGENCE ---
+ FRA_econ_infra_nord:0 "Routes du Nord"
+ FRA_econ_infra_nord_desc:0 "The northern departments — the industrial heartland of France — require modern roads, rail links, and supply depots to support both the front and the factories behind it. Investment in northern infrastructure is the first step toward a fully integrated war economy."
+
+ FRA_econ_infra_sud:0 "Réseau du Midi"
+ FRA_econ_infra_sud_desc:0 "Southern France — from the vineyards of Languedoc to the ports of Provence and the passes of the Pyrenees — is an underdeveloped reservoir of labour, raw materials, and strategic depth. Connecting these regions to the national economy multiplies their value."
+
+ FRA_econ_usines_militaires_I:0 "Usines de Guerre du Nord"
+ FRA_econ_usines_militaires_I_desc:0 "The great industrial basin of northern France — Lille, Valenciennes, the Pas-de-Calais — is expanded with new arms factories. Steel, artillery shells, and small arms pour from these facilities to equip the armies of the Republic."
+
+ FRA_econ_manufactures_civiles_I:0 "Manufactures du Nord"
+ FRA_econ_manufactures_civiles_I_desc:0 "Northern civilian industry is expanded around Paris and the Seine basin. New factories and workshops are built to sustain France's long-term productive capacity — a foundation that outlasts any single campaign."
+
+ FRA_econ_manufactures_civiles_II:0 "Manufactures du Midi"
+ FRA_econ_manufactures_civiles_II_desc:0 "The south rises to meet the demands of the nation. New civilian factories in Toulouse, Bordeaux, and Lyon expand France's industrial base beyond the vulnerable northern departments, ensuring production continues even if the front shifts."
+
+ FRA_econ_usines_militaires_II:0 "Usines de Guerre du Midi"
+ FRA_econ_usines_militaires_II_desc:0 "Arms production is expanded into southern France, reducing the concentration of vital industry near the front line. Marseille, Lyon, and Saint-Étienne become centres of munitions production. Distance from the front is no longer a disadvantage — it is security."
+
+ # --- ECONOMIC BRANCH IDEAS ---
+ FRA_idea_arsenal_de_la_nation:0 "Arsenal de la Nation"
+ FRA_idea_arsenal_de_la_nation_desc:0 "France's war industries have been brought fully under state direction. Arms factories rise faster and operate at a higher efficiency ceiling, ensuring the army is continuously resupplied."
+
+ FRA_idea_industrie_nationale:0 "Industrie Nationale"
+ FRA_idea_industrie_nationale_desc:0 "France has built an industrial base for the long war — civilian factories expand rapidly and reach a high efficiency ceiling. However, the economic structure is optimised for volume, not speed: production efficiency grows more slowly as output is spread across a broader production mix."
+
+ # --- ARMY BRANCH (EXTENDED) ---
+ FRA_army_grande_ecole:0 "Grande École de la Guerre"
+ FRA_army_grande_ecole_desc:0 "Saint-Cyr and the War College must produce not merely soldiers, but commanders. With conscription swelling the ranks and the officer schools reformed, France builds a corps of professional officers capable of handling industrial-scale warfare."
+
+ FRA_army_feu_superieur:0 "Supériorité de Feu"
+ FRA_army_feu_superieur_desc:0 "French doctrine places its faith in artillery. The soixante-quinze is the backbone of the army, but the generals demand more — heavier guns, greater range, a wall of steel and flame that no enemy can cross. We will bury them under shells before they reach our wire."
+
+ FRA_army_infanterie_de_ligne:0 "Infanterie de Ligne"
+ FRA_army_infanterie_de_ligne_desc:0 "The infantry remains the queen of battle. France invests in the weapons and support equipment that transform conscripts into soldiers — rifles, machine guns, mortars, and the communications that bind them to their officers."
+
+ FRA_army_chars_de_combat:0 "Chars de Combat"
+ FRA_army_chars_de_combat_desc:0 "The tank is no longer an experiment. France's armoured vehicle programme is accelerated — Renault and Schneider produce new designs that can break through barbed wire and trench lines that stop infantry cold. The armoured fist of France will strike where artillery alone cannot follow."
+
+ FRA_army_soixante_quinze:0 "La Reine de la Bataille"
+ FRA_army_soixante_quinze_desc:0 "The 75mm field gun is the finest artillery piece in the world. Its crews have mastered the technique of indirect fire and rolling barrages that keep enemy heads down while the infantry advances. Now we develop the heavier pieces needed to crack fortifications and silence enemy batteries."
+
+ FRA_army_troupes_assaut:0 "Troupes d'Assaut"
+ FRA_army_troupes_assaut_desc:0 "Armoured warfare demands new tactics. Storm troops trained in tank-infantry cooperation practise the art of the breakthrough — exploiting gaps before the enemy can react, driving deep into his rear. The tank is not a battering ram but a key."
+
+ FRA_army_le_poilu_eternel:0 "Le Poilu Éternel"
+ FRA_army_le_poilu_eternel_desc:0 "The French soldier — le poilu — has endured conditions that would break lesser men. Through mud, gas, and machine-gun fire, he holds the line. The nation draws on its reserves of men and spirit. France will not break."
+
+ FRA_army_etat_major:0 "L'État-Major"
+ FRA_army_etat_major_desc:0 "The General Staff has forged artillery expertise, armoured doctrine, and the endurance of the French soldier into a single coherent war machine. France fields a Grande Armée worthy of the name — an army capable of victory against any power in Europe."
+
+ # --- AIR BRANCH ---
+ FRA_air_escadrilles_lafayette:0 "Les Escadrilles"
+ FRA_air_escadrilles_lafayette_desc:0 "The skies above the Western Front are contested. France invests in the volunteer squadrons and industrial capacity needed to dominate the air — the Escadrille Lafayette and its successors will write the doctrine of aerial warfare."
+
+ FRA_air_avions_de_chasse:0 "Avions de Chasse"
+ FRA_air_avions_de_chasse_desc:0 "Air superiority demands dedicated fighters. The Nieuport and SPAD designs are refined and put into mass production. French aces — Guynemer, Fonck, Nungesser — teach the rest of the air force how to fight and win above the clouds."
+
+ FRA_air_avions_observ:0 "Aviation de Réglage"
+ FRA_air_avions_observ_desc:0 "The most valuable aircraft over the battlefield are those guiding the artillery. Observation planes equipped with wireless transmitters relay shell-fall to the batteries below. The combined-arms team of eye and gun reshapes modern warfare."
+
+ FRA_air_avions_bombardement:0 "Avions de Bombardement"
+ FRA_air_avions_bombardement_desc:0 "Long-range bombers can strike the factories and rail yards that feed the enemy's front line. France develops tactical and strategic bombing doctrine — the aircraft as a weapon not merely over the front, but deep behind it."
+
+ FRA_air_doctrine_aerienne:0 "Doctrine Aérienne"
+ FRA_air_doctrine_aerienne_desc:0 "Fighter aces and observation crews and bomber pilots have each developed their own hard-won wisdom. The Air Service synthesises these lessons into a unified doctrine of air power — how to seize air superiority, support the ground battle, and strike the enemy's rear simultaneously."
+
+ FRA_air_escadrille_de_chasse:0 "Escadrille de Chasse"
+ FRA_air_escadrille_de_chasse_desc:0 "A dedicated pursuit squadron is established to defend French air space and escort ground-attack missions. The finest pilots in the Air Service are selected and equipped with the fastest machines France can produce."
+
+ FRA_air_aeronautique_militaire:0 "Aéronautique Militaire"
+ FRA_air_aeronautique_militaire_desc:0 "From the primitive reconnaissance balloons of 1914 to a mature air force capable of contesting the skies over all of France and its borders, the Aéronautique Militaire has come of age. French pilots are the finest in Europe."
+
+ # --- NAVY BRANCH ---
+ FRA_navy_cuirasses:0 "Cuirassés de Ligne"
+ FRA_navy_cuirasses_desc:0 "The capital ship remains the measure of naval power. France's battleship programme is accelerated — the Dreadnought race demands investment in the finest armour, the heaviest guns, and the shipyards to build them. The Marine Nationale will not yield the Mediterranean to any rival."
+
+ FRA_navy_brest_toulon:0 "Arsenal de Brest et Toulon"
+ FRA_navy_brest_toulon_desc:0 "France's two great naval arsenals — Brest on the Atlantic and Toulon on the Mediterranean — are expanded and modernised. New drydocks, expanded repair facilities, and improved naval bases ensure the fleet can operate continuously in both theatres."
+
+ FRA_navy_sous_marins:0 "Flotte Sous-Marine"
+ FRA_navy_sous_marins_desc:0 "The submarine has rewritten the rules of naval warfare. Germany's U-boats nearly starved Britain into submission. France invests in its own submarine force — capable of interdicting German supply lines, raiding enemy harbours, and projecting power beneath the waves."
+
+ FRA_navy_doctrine_navale:0 "Doctrine Navale"
+ FRA_navy_doctrine_navale_desc:0 "The officers of the Marine Nationale study the lessons of Jutland and the Atlantic. Whether France has chosen the gun-line of capital ships or the silent threat of the submarine, a coherent doctrine now binds the fleet into a single instrument of war."
+
+ FRA_navy_torpilleurs:0 "Torpilleurs et Contre-Torpilleurs"
+ FRA_navy_torpilleurs_desc:0 "Destroyers and torpedo boats — the fast, nimble blade of the fleet. France expands its light surface forces to screen capital ships, hunt submarines, and deliver torpedo attacks against enemy heavies. Speed and aggression define the Contre-Torpilleur."
+
+ FRA_navy_flotte_de_haute_mer:0 "Flotte de Haute Mer"
+ FRA_navy_flotte_de_haute_mer_desc:0 "The Marine Nationale stands complete — battleships or submarines, supported by a screen of torpedo craft and operating from fortified bases at Brest and Toulon. France is a true naval power, capable of contesting any sea from the Channel to the Levant."
+
+ # --- IDEA LOCALISATION ---
+ FRA_idea_grande_armee:0 "La Grande Armée"
+ FRA_idea_grande_armee_desc:0 "France has forged its soldiers, its officers, and its doctrine into a unified war machine worthy of the name the Emperor gave it. French armies plan faster, strike harder, and endure longer than any comparable force."
+
+ FRA_idea_aeronautique_militaire:0 "Aéronautique Militaire"
+ FRA_idea_aeronautique_militaire_desc:0 "The French air service has produced the finest pilots in Europe. Raised on a doctrine of aggression and equipped with the best machines French industry can provide, French aviators outclass their opponents in skill and audacity."
+
+ FRA_idea_flotte_de_haute_mer:0 "Flotte de Haute Mer"
+ FRA_idea_flotte_de_haute_mer_desc:0 "France has built a blue-water navy capable of projecting power across the Mediterranean and Atlantic. Fortified bases at Brest and Toulon anchor a fleet that can range across two oceans — a true fleet of the high seas."
+
+ # --- COLONIAL BRANCH ---
+ FRA_new_agadir_crisis:0 "Crise d'Agadir"
+ FRA_new_agadir_crisis_desc:0 "Germany has sent a gunboat to Agadir, challenging French dominance in Morocco. This brazen act of intimidation must be answered firmly — Morocco belongs in the French sphere."
+
+ FRA_new_moroccan_annexation:0 "Protectorat du Maroc"
+ FRA_new_moroccan_annexation_desc:0 "Following the Agadir confrontation, France presses its advantage. The Sultan is compelled to accept a French protectorate, and Morocco is absorbed into the Empire."
+
+ FRA_new_troupes_coloniales:0 "Troupes Coloniales"
+ FRA_new_troupes_coloniales_desc:0 "Morocco, Algeria, Senegal — the Empire offers manpower that the métropole cannot. Colonial troops answer the call to defend France on the Western Front."
+
+ FRA_new_empire_investments:0 "Investissements Coloniaux"
+ FRA_new_empire_investments_desc:0 "The Empire is not merely a source of soldiers. Investment in colonial infrastructure yields raw materials and taxes that strengthen the mother country."
+
+ FRA_col_developpement_algerie:0 "Développement de l'Algérie"
+ FRA_col_developpement_algerie_desc:0 "Algeria is the jewel of the French Empire — three departments on African soil, bound to France by law and by blood. Investment in Algerian infrastructure and industry deepens that bond and extracts the territory's full economic potential."
+
+ FRA_col_developpement_tunisie:0 "Développement de la Tunisie"
+ FRA_col_developpement_tunisie_desc:0 "The Tunisian protectorate has been under French guidance since 1881. Now France invests in earnest — new factories, expanded rail links, and modern administration transform Tunisia from a protectorate into a productive partner of the Empire."
+
+ FRA_col_developpement_maroc:0 "Mise en Valeur du Maroc"
+ FRA_col_developpement_maroc_desc:0 "Morocco's mineral wealth and agricultural potential have barely been touched. French engineers and administrators set to work — roads, depots, and arms workshops spread across the Moroccan interior. The protectorate pays for itself."
+
+ FRA_col_empire_africain:0 "L'Empire Africain"
+ FRA_col_empire_africain_desc:0 "Morocco, Tunisia, Algeria — the three pillars of French North Africa have been developed, garrisoned, and bound to the mother country. France declares them not merely territories but integral parts of the Republic. Their peoples are French. Their lands are French. The tricolore flies from Tangier to Tunis."
+
+ # --- NAVY BRANCH ---
+ FRA_new_marine_nationale:0 "La Marine Nationale"
+ FRA_new_marine_nationale_desc:0 "France's navy is a force of prestige and genuine power. We must modernise the fleet and expand our capacity to project force across the Mediterranean and Atlantic."
+
+ FRA_new_brest_base:0 "Arsenal de Brest"
+ FRA_new_brest_base_desc:0 "The great naval arsenal at Brest is expanded to receive and repair capital ships, securing France's Atlantic position against both Germany and any other rival."
+
+ FRA_new_naval_program:0 "Programme Naval"
+ FRA_new_naval_program_desc:0 "Investment in new ship designs, naval engineering, and submarine technology keeps the Marine Nationale on the cutting edge of modern naval warfare."
+
+ FRA_new_naval_superiority:0 "Maîtresse des Mers"
+ FRA_new_naval_superiority_desc:0 "With a modern fleet and a fortified home base, France asserts naval dominance over its home waters. The Entente's sea-lanes are secure."
+
+ # --- POLITICAL TRUNK ---
+ FRA_new_dreyfus_legacy:0 "L'Héritage Dreyfus"
+ FRA_new_dreyfus_legacy_desc:0 "The Dreyfus Affair divided France to its core. Now that the scandal has passed, France must decide what it learned: is the Republic truly capable of justice, or must the nation look elsewhere for its salvation?"
+
+ FRA_new_the_future_of_france:0 "L'Avenir de la France"
+ FRA_new_the_future_of_france_desc:0 "War has tested every institution of the Republic. Politicians, generals, workers and monarchists all have a vision for what France must become. The moment of decision has arrived."
+
+ # --- PATH 1: DEMOCRACY ---
+ FRA_new_vive_la_republique:0 "Vive la République!"
+ FRA_new_vive_la_republique_desc:0 "Despite every strain, the Third Republic endures. France reaffirms its faith in democratic government and parliamentary institutions. Liberty, Equality, Fraternity."
+
+ FRA_new_union_sacree:0 "L'Union Sacrée"
+ FRA_new_union_sacree_desc:0 "In the face of national peril, all political quarrels are set aside. Socialists, radicals and conservatives unite behind the tricolore. France speaks with one voice."
+
+ FRA_new_social_reform:0 "Réformes Sociales"
+ FRA_new_social_reform_desc:0 "The sacrifice of the working class and the common soldier demands recognition. Labour reforms, pensions and housing programmes bind the people to the Republic."
+
+ FRA_new_entente_cordiale:0 "Entente Cordiale Renouvelée"
+ FRA_new_entente_cordiale_desc:0 "Britain and Russia are France's natural partners. The Entente is renewed and deepened, ensuring that no power can threaten France without facing the combined weight of the alliance."
+
+ FRA_new_la_france_eternelle:0 "La France Éternelle"
+ FRA_new_la_france_eternelle_desc:0 "Through revolution, empire and republic, France has always endured. The democratic tradition stands proven. France enters the future confident in its institutions and its people."
+
+ # --- PATH 2: MONARCHY ---
+ FRA_new_restauration:0 "La Restauration Monarchique"
+ FRA_new_restauration_desc:0 "The Republic has failed the nation. Royalist officers and conservative clergy seize the moment. A prince of the blood is invited to restore the throne. France returns to its ancient traditions."
+
+ FRA_new_conseil_du_roi:0 "Le Conseil du Roi"
+ FRA_new_conseil_du_roi_desc:0 "A royal council replaces the fractious parliament. Men of ability chosen by the Crown now govern with efficiency and purpose, free from the compromises of electoral politics."
+
+ FRA_new_royal_army:0 "L'Armée Royale"
+ FRA_new_royal_army_desc:0 "The officer corps is purged of republicans and refilled with loyal royalist soldiers. The army swears its oath to the Crown, not the Constitution."
+
+ FRA_new_royalist_diplomacy:0 "Diplomatie Royaliste"
+ FRA_new_royalist_diplomacy_desc:0 "Monarchies of Europe look more favourably on a restored French throne. The dynastic ties of the old order are revived, opening diplomatic avenues closed to the Republic."
+
+ FRA_new_gloire_royale:0 "La Gloire Royale"
+ FRA_new_gloire_royale_desc:0 "Under the fleur-de-lis, France rediscovers its martial heritage. The Crown dedicates the nation to military excellence and the restoration of French prestige across Europe."
+
+ # --- PATH 3: COMMUNISM ---
+ FRA_new_rouge_france:0 "La France Rouge"
+ FRA_new_rouge_france_desc:0 "The workers of France have bled and died for a Republic that serves the bourgeoisie. The revolutionary moment has come. The red flag rises over Paris."
+
+ FRA_new_greve_generale:0 "Grève Générale"
+ FRA_new_greve_generale_desc:0 "The CGT calls a general strike. Factories stop, railways go quiet, the old order is paralysed. From this strike, the workers' government draws its mandate."
+
+ FRA_new_conseils_ouvriers:0 "Conseils Ouvriers"
+ FRA_new_conseils_ouvriers_desc:0 "Workers' councils are established in every factory and commune. Production is reorganised under collective management. The state serves the proletariat."
+
+ FRA_new_nationalisation:0 "Nationalisation"
+ FRA_new_nationalisation_desc:0 "Banks, railways and heavy industry are seized by the workers' state. Private profit is abolished. The commanding heights of the economy are now in the hands of the people."
+
+ FRA_new_armee_du_peuple:0 "Armée du Peuple"
+ FRA_new_armee_du_peuple_desc:0 "A revolutionary army takes shape, animated by class consciousness and the defence of the workers' republic. Every soldier is a citizen-soldier fighting for something beyond duty."
+
+ # --- PATH 4: MILITARY DICTATORSHIP ---
+ FRA_new_coup_des_generaux:0 "Coup des Généraux"
+ FRA_new_coup_des_generaux_desc:0 "The politicians have lost the right to govern. The army, bloodied and victorious, refuses to surrender the nation to cowardly pacifists and socialists. The General Staff takes power."
+
+ FRA_new_loi_martiale:0 "Loi Martiale"
+ FRA_new_loi_martiale_desc:0 "Martial law is declared. The press is censored, strikes banned, and dissidents jailed. The nation submits to iron discipline. Only thus can France survive and prevail."
+
+ FRA_new_mobilisation_nationale:0 "Mobilisation Nationale"
+ FRA_new_mobilisation_nationale_desc:0 "The entire nation is placed on a war footing. Every able-bodied man is conscripted, every factory directed by military commissars. France becomes a garrison state."
+
+ FRA_new_industrie_de_guerre:0 "Industrie de Guerre"
+ FRA_new_industrie_de_guerre_desc:0 "Private enterprise is subordinated to military necessity. Arms production is maximised at all costs. Profit and welfare are secondary to the needs of the army."
+
+ FRA_new_la_france_conquete:0 "La France en Conquête"
+ FRA_new_la_france_conquete_desc:0 "The Military Council has forged France into a weapon. With a disciplined army, a war economy, and iron will, France is ready to impose its terms upon Europe."
+
+ # --- DEMOCRACY PATH EXTENSIONS ---
+ FRA_dem_programme_social:0 "Programme Social"
+ FRA_dem_programme_social_desc:0 "The Republic rewards the sacrifices of its citizens. New social programmes — housing subsidies, labour protections, pensions for the wounded — bind the working class to the democratic state and free economic resources for productive investment."
+
+ FRA_dem_investissement_public:0 "Investissement Public"
+ FRA_dem_investissement_public_desc:0 "The state directs capital toward infrastructure and industry. Public investment drives a construction boom that private capital could never sustain alone. France builds for the future."
+
+ FRA_dem_republique_prospere:0 "La République Prospère"
+ FRA_dem_republique_prospere_desc:0 "The Third Republic has proven its worth. Political stability and sustained investment have made France the most productive industrial democracy in Europe. The Republic endures — and it is rich."
+
+ FRA_dem_programme_social_idea:0 "Programme Social"
+ FRA_dem_programme_social_idea_desc:0 "Social programmes have stabilised the home front and reduced the burden of consumer goods on the war economy. The people believe in the Republic."
+
+ FRA_dem_investissement_public_idea:0 "Investissement Public"
+ FRA_dem_investissement_public_idea_desc:0 "State-directed investment has dramatically accelerated the pace of construction across France."
+
+ FRA_dem_republique_prospere_idea:0 "La République Prospère"
+ FRA_dem_republique_prospere_idea_desc:0 "The Republic has built an industrial base to match its ideals. Sustained public investment drives a 10% construction speed bonus across all of France."
+
+ # --- MONARCHY PATH EXTENSIONS ---
+ FRA_mon_discipline_royale:0 "Discipline Royale"
+ FRA_mon_discipline_royale_desc:0 "The Crown demands military excellence. Officers trained under royal patronage instil a standard of discipline and unit cohesion that the Republic's conscript officers never achieved. French divisions hold the line longer and recover faster."
+
+ FRA_mon_corps_sante:0 "Corps de Santé"
+ FRA_mon_corps_sante_desc:0 "The Royal Army invests in medical services and field hospitals that keep wounded men in the fight. Divisions that would have been shattered return to the line. France's army is harder to destroy than any opponent expects."
+
+ FRA_mon_noblesse_du_peuple:0 "Noblesse du Peuple"
+ FRA_mon_noblesse_du_peuple_desc:0 "The Crown calls upon all Frenchmen to serve. The traditions of the old regime — duty, honour, service — are revived and extended to every class. France's recruitable population swells as the nation answers the call."
+
+ FRA_mon_discipline_royale_idea:0 "Discipline Royale"
+ FRA_mon_discipline_royale_idea_desc:0 "The Royal Army's emphasis on discipline raises the organisation of every French division."
+
+ FRA_mon_corps_sante_idea:0 "Corps de Santé Royal"
+ FRA_mon_corps_sante_idea_desc:0 "Expanded field medicine means French divisions can absorb punishment that would break a lesser army."
+
+ FRA_mon_noblesse_du_peuple_idea:0 "Noblesse du Peuple"
+ FRA_mon_noblesse_du_peuple_idea_desc:0 "The Crown's call to service has expanded the pool of men available for military duty beyond what the population statistics suggest."
+
+ # --- COMMUNIST PATH EXTENSIONS ---
+ FRA_com_production_collective:0 "Production Collective"
+ FRA_com_production_collective_desc:0 "Under collective management, the workers of France direct production toward the common good. Waste is eliminated, incentives aligned with output, and every factory runs at maximum capacity. The revolution is productive."
+
+ FRA_com_stakhanovisme:0 "Stakhanovisme"
+ FRA_com_stakhanovisme_desc:0 "Inspired by the Soviet model, the workers' state launches a Stakhanovite campaign. Shock workers set records and production techniques are refined until the efficiency ceiling rises above anything a capitalist factory could achieve."
+
+ FRA_com_industrie_du_peuple:0 "Industrie du Peuple"
+ FRA_com_industrie_du_peuple_desc:0 "The workers' industrial apparatus has reached its full potential. Collective management, Stakhanovite techniques, and full nationalisation have produced a factory system that outproduces any rival."
+
+ FRA_com_production_collective_idea:0 "Production Collective"
+ FRA_com_production_collective_idea_desc:0 "Collective management has raised overall factory output. The workers produce more because they own what they produce."
+
+ FRA_com_stakhanovisme_idea:0 "Stakhanovisme"
+ FRA_com_stakhanovisme_idea_desc:0 "Stakhanovite production techniques have raised the ceiling on what French factories can achieve."
+
+ FRA_com_industrie_du_peuple_idea:0 "Industrie du Peuple"
+ FRA_com_industrie_du_peuple_idea_desc:0 "The workers' industry has mastered the art of production. Efficiency ramps up faster from the start and grows more quickly over time — France reaches peak output before any rival."
+
+ # --- MILITARY DICTATORSHIP PATH EXTENSIONS ---
+ FRA_mil_assaut_decisif:0 "L'Assaut Décisif"
+ FRA_mil_assaut_decisif_desc:0 "The Military Council strips away defensive doctrine and demands decisive offensive action. Every division is trained to attack — to break through, encircle, and annihilate. France does not hold; France destroys."
+
+ FRA_mil_doctrine_terrain:0 "Doctrine du Terrain"
+ FRA_mil_doctrine_terrain_desc:0 "Years of combat have produced generals who can read terrain instinctively. The Military Council systematises this hard-won knowledge. Officers study the ground before they march — and they learn from every battle faster than their opponents."
+
+ FRA_mil_victoire_totale:0 "Victoire Totale"
+ FRA_mil_victoire_totale_desc:0 "The Military Council has forged the perfect instrument of war. French divisions attack with unmatched aggression, and the generals leading them accumulate experience at a rate the enemy cannot match."
+
+ FRA_mil_assaut_decisif_idea:0 "L'Assaut Décisif"
+ FRA_mil_assaut_decisif_idea_desc:0 "The Military Council's offensive doctrine increases the attack of all French divisions on home and core territory."
+
+ FRA_mil_doctrine_terrain_idea:0 "Doctrine du Terrain"
+ FRA_mil_doctrine_terrain_idea_desc:0 "The systematised study of terrain and battle has accelerated the rate at which French officers and generals gain combat experience."
+
+ FRA_mil_victoire_totale_idea:0 "Victoire Totale"
+ FRA_mil_victoire_totale_idea_desc:0 "Total war doctrine combines offensive aggression with accelerated general experience — French commanders grow deadlier with every battle."

@@ -112,9 +112,6 @@
 					proto_fascist
 					fascist_sympathies				
 				}
-				available = {
-					#has_completed_focus = FRA_ww1_support_far_right
-				}
 				ai_will_do  = {
 					factor  = 0
 				}
@@ -144,13 +141,6 @@
 			cost = 75
 			traits  = {
 				colonial_governor
-			}
-			available = {
-				is_country_leader = no
-				custom_trigger_tooltip = {
-					tooltip = character_not_dead
-					date < 1921.10.27
-				}
 			}
 			visible = { is_country_leader = no }
 			ai_will_do  = {
@@ -188,13 +178,6 @@
 				NOT = {
 					has_government = neutrality
 				}
-				NOT = {
-					has_country_flag = FRA_reformists_purged
-				}
-				custom_trigger_tooltip = {
-					tooltip = character_not_dead
-					date < 1922.09.05
-				}
 			}
 			visible = { is_country_leader = no }
 			ai_will_do  = {
@@ -216,12 +199,6 @@
 			idea_token = FRA_rene_viviani
 			allowed  = {
 				original_tag  = FRA
-			}
-			available = {
-				custom_trigger_tooltip = {
-					tooltip = character_not_dead
-					date < 1925.09.07
-				}
 			}
 			traits  = {
 				democratic_reformer 
@@ -252,12 +229,6 @@
 			}
 			traits  = {
 				retired_minister_of_war 
-			}
-			available = {
-				custom_trigger_tooltip = {
-					tooltip = character_not_dead
-					date < 1929.11.24
-				}
 			}
 			ai_will_do  = {
 				factor  = 1
@@ -315,17 +286,8 @@
 			traits  = {
 				economic_reformer
 			}
-			available = {
-				has_completed_focus = FRA_ww1_political_coherence
-			}
 			ai_will_do  = {
 				factor  = 1.000
-				modifier = {
-					OR = {
-						has_completed_focus = FRA_ww1_political_coherence
-					}
-					factor = 100
-				}
 			}
 		}	
 	}
@@ -409,21 +371,8 @@
 				traits  = {
 					socialist_giant
 				}
-				available = {
-					has_completed_focus = FRA_ww1_memories_of_the_commune
-					NOT = {
-						has_global_flag = kis_jauresassassination
-					}
-					is_country_leader = no	
-				}
 				ai_will_do  = {
 					factor  = 1.000
-					modifier = {
-						OR = {
-							has_completed_focus = FRA_ww1_memories_of_the_commune
-						}
-						factor = 100
-					}
 				}
 		}
 		country_leader={
@@ -535,16 +484,6 @@
 			slot = political_advisor
 			idea_token = FRA_jean_allemane
 			cost = 100
-			available = {
-				has_country_flag = FRA_ww1_attract_moderate_support
-				NOT = {
-					has_country_flag = FRA_reformists_purged
-				}
-				custom_trigger_tooltip = {
-					tooltip = character_not_dead
-					date < 1935.06.06
-				}
-			}
 			allowed  = {
 					original_tag  = FRA
 				}
@@ -568,9 +507,6 @@
 			slot = political_advisor
 			idea_token = FRA_fernand_loriot
 			cost = 100
-			available = {
-				has_country_flag = FRC_moderate_five_year_plan
-			}
 			allowed = {
 				original_tag  = FRA
 			}
@@ -595,13 +531,6 @@
 			slot = political_advisor
 			idea_token = FRA_jean_charles_fortune_henry
 			cost = 100
-			available = {
-				has_country_flag = FRA_reformists_purged
-				custom_trigger_tooltip = {
-					tooltip = character_not_dead
-					date < 1931.11.21
-				}
-			}
 			allowed  = {
 					original_tag  = FRA
 				}
@@ -625,9 +554,6 @@
 			slot = political_advisor
 			idea_token = FRA_amedee_dunois
 			cost = 100
-			available = {
-				has_country_flag = FRA_reformists_purged
-			}
 			allowed  = {
 					original_tag  = FRA
 				}
@@ -651,13 +577,6 @@
 			slot = political_advisor
 			idea_token = FRA_louis_dubreuilh
 			cost = 100
-			available = {
-				has_country_flag = FRA_ww1_attract_moderate_support
-				custom_trigger_tooltip = {
-					tooltip = character_not_dead
-					date < 1924.07.24
-				}
-			}
 			allowed  = {
 					original_tag  = FRA
 				}
@@ -709,19 +628,6 @@
 			slot = political_advisor
 			idea_token = FRA_alexandre_ribot
 			cost = 100
-			available = {
-				has_country_flag = FRA_ww1_ribot_piou_alliance
-				custom_trigger_tooltip = {
-					tooltip = character_not_dead
-					date < 1923.01.13
-				}
-				NOT = {
-					has_country_leader = {
-						character = FRA_alexandre_ribot
-						ruling_only = yes
-					}
-				}
-			}
 			allowed  = {
 					original_tag  = FRA
 				}
@@ -752,20 +658,6 @@
 			cost = 150
 			removal_cost = -1
 			can_be_fired = no
-			available = {
-				has_country_flag = FRA_ww1_rally_the_piou_piou
-				custom_trigger_tooltip = {
-					tooltip = cant_be_replaced
-					always = yes
-				}
-				custom_trigger_tooltip = {
-					tooltip = character_not_dead
-					date < 1932.05.12
-				}
-				NOT = {
-					has_country_flag = FRA_ww1_daudet_takeover
-				}
-			}
 			allowed = {
 				original_tag  = FRA
 			}
@@ -805,16 +697,6 @@
 			cost = 150
 			removal_cost = -1
 			can_be_fired = no
-			available = {
-				OR = {
-					has_country_flag = FRA_ww1_daudet_takeover
-					has_country_flag = FRA_national_defence_government
-				}
-				custom_trigger_tooltip = {
-					tooltip = cant_be_replaced
-					always = yes
-				}
-			}
 			allowed  = {
 					original_tag  = FRA
 				}
@@ -841,16 +723,6 @@
 			idea_token = FRA_antoine_schwerer
 			cost = 100
 			removal_cost = -1
-			available = {
-				OR = {
-					has_country_flag = FRA_national_defence_government
-					has_country_flag = FRA_ww1_support_monarchist_elements
-				}
-				custom_trigger_tooltip = {
-					tooltip = character_not_dead
-					date < 1936.11.3
-				}
-			}
 			allowed  = {
 					original_tag  = FRA
 				}
@@ -875,16 +747,6 @@
 			idea_token = FRA_maurice_barres
 			cost = 100
 			removal_cost = -1
-			available = {
-				OR = {
-					has_country_flag = FRA_national_defence_government
-					has_country_flag = FRA_ww1_support_monarchist_elements
-				}
-				custom_trigger_tooltip = {
-					tooltip = character_not_dead
-					date < 1923.12.4
-				}
-			}
 			allowed  = {
 					original_tag  = FRA
 				}
@@ -911,9 +773,6 @@
 			idea_token = FRA_francois_de_la_rocque
 			cost = 100
 			removal_cost = -1
-			available = {
-				has_country_flag = FRA_governement_support_to_cross_of_fire
-			}
 			visible = {
 				has_global_flag = interbellum
 			}
@@ -942,9 +801,6 @@
 			idea_token = FRA_pierre_taittinger
 			cost = 100
 			removal_cost = -1
-			available = {
-				has_country_flag = FRA_governement_support_to_cross_of_fire
-			}
 			allowed  = {
 					original_tag  = FRA
 				}
@@ -971,9 +827,6 @@
 			idea_token = FRA_jacques_arthuys
 			cost = 100
 			removal_cost = -1
-			available = {
-				has_country_flag = FRA_governement_support_to_le_faisceau
-			}
 			allowed  = {
 					original_tag  = FRA
 				}
@@ -999,9 +852,6 @@
 			idea_token = FRA_marc_sangnier
 			cost = 100
 			removal_cost = -1
-			available = {
-				has_country_flag = FRA_ww1_educational_reform
-			}
 			allowed  = {
 					original_tag  = FRA
 				}
@@ -1058,10 +908,6 @@
 		advisor={
 			slot = theorist
 			idea_token = FRA_nicolas_saclois
-			available = {
-				has_country_flag = FRA_exiled_serbian_forces
-				has_war_together_with = SER
-			}
 			allowed  = {
 					original_tag  = FRA
 				}
@@ -1150,16 +996,8 @@
 				consensual_figure
 			}
 			available = {
-				is_country_leader = no
-				OR = {
-					has_country_flag = FRA_ww1_1911_congres_of_paris
-					has_country_flag = FRA_from_guesdes_to_combes
-				}
 				NOT = {
 					has_government = neutrality
-				}
-				NOT = {
-					has_country_flag = FRA_reformists_purged
 				}
 			}
 			visible = { is_country_leader = no }
@@ -1186,10 +1024,6 @@
 				revolutionary_syndicalist
 			}
 			available = {
-				OR = {
-					has_country_flag = FRA_ww1_1911_congres_of_paris
-					has_country_flag = FRA_from_guesdes_to_combes
-				}
 				has_government = communism
 			}
 			visible = { is_country_leader = no }
@@ -1218,10 +1052,6 @@
 			}
 			available = {
 				has_government = communism
-				custom_trigger_tooltip = {
-					tooltip = character_not_dead
-					date < 1931.07.21
-				}
 			}
 			visible = { is_country_leader = no }
 			ai_will_do  = {
@@ -1248,9 +1078,6 @@
 				original_tag  = FRA
 			}
 			can_be_fired = no
-			available  = {
-				has_country_flag = FRA_valois_governement
-			}
 			cost = 100
 			traits  = {
 				fascist_demagogue 
@@ -1286,12 +1113,6 @@
 			allowed  = {
 				original_tag  = FRA
 			}
-			available  = {
-				OR = {
-					has_country_flag = FRA_valois_governement
-					has_country_flag = FRC_syndical_federalism
-				}
-			}
 			traits  = {
 				war_industrialist 
 			}
@@ -1316,9 +1137,6 @@
 			allowed  = {
 				original_tag  = FRA
 			}
-			available  = {
-				has_country_flag = FRA_billion_francs_man
-			}
 			traits  = {
 				industrial_magnate 
 			}
@@ -1342,9 +1160,6 @@
 			cost = 100
 			allowed  = {
 				original_tag  = FRA
-			}
-			available  = {
-				has_country_flag = FRA_assert_total_media_control
 			}
 			traits  = {
 				propagandist_journalist 
@@ -1371,14 +1186,6 @@
 			}
 			traits  = {
 				nationalist_syndicalist
-			}
-			available = {
-				is_country_leader = no
-				OR = {
-					has_completed_focus = FRA_ww1_form_the_proudhon_circle
-					has_country_flag = FRA_valois_governement
-					has_country_flag = FRC_syndical_federalism
-				}
 			}
 			visible = { is_country_leader = no }
 			ai_will_do  = {
@@ -1428,9 +1235,6 @@
 			traits  = {
 				businessman
 			}
-			available = {
-				has_country_flag = FRA_paul_doumer_integration
-			}
 			ai_will_do  = {
 				factor  = 50.000
 			}
@@ -1473,14 +1277,6 @@
 			cost = 100
 			traits  = {
 				minister_of_national_defense
-			}
-			available = {
-				is_country_leader = no
-				has_country_flag = FRA_ministery_of_national_defense
-				custom_trigger_tooltip = {
-					tooltip = character_not_dead
-					date < 1932.10.14
-				}
 			}
 			visible = { is_country_leader = no }
 			ai_will_do  = {
@@ -1720,9 +1516,6 @@
 			traits  = {
 				army_entrenchment_2 army_regrouping_1
 			}
-			available = {
-				has_country_flag = FRA_ww1_trust_michel
-			}
 			cost = 100
 			visible = {
 				NOT = {
@@ -1829,8 +1622,7 @@
 			available = {
 				NOT = {
 					has_idea = FRA_ferdinand_foch_army_chief
-				}	
-				has_country_flag = FRA_ww1_trust_joffre
+				}
 			}
 			visible = {
 				NOT = {
@@ -2773,9 +2565,6 @@
 		advisor={
 			slot = air_chief
 			idea_token = FRA_marie_charles_duval
-			available = {
-				has_country_flag = FRA_dae_factories
-			}
 			allowed  = {
 				original_tag = FRA
 			}
@@ -2797,9 +2586,6 @@
 		advisor={
 			slot = air_chief
 			idea_token = FRA_adolphe_girot
-			available = {
-				has_country_flag = FRA_fund_pilot_schools
-			}
 			allowed  = {
 				original_tag = FRA
 			}
@@ -2851,9 +2637,6 @@
 					truth_seeker				
 				}
 				cost = 100
-				available = {
-					
-				}
 				ai_will_do  = {
 					factor  = 500
 				}
@@ -2876,10 +2659,6 @@
 			cost = 100
 			traits  = {
 				staunch_monarchist2
-			}
-			available = {
-				is_country_leader = no
-				has_completed_focus = FRA_ww1_form_the_proudhon_circle
 			}
 			visible = { is_country_leader = no }
 			ai_will_do  = {
@@ -2921,10 +2700,6 @@
 					has_country_leader_ideology = national_syndicalism
 					has_country_leader_ideology = vanguardism
 				}
-				custom_trigger_tooltip = {
-					tooltip = character_not_dead
-					date < 1922.8.29
-				}			
 			}
 			visible = {
 				date < 1922.8.29
@@ -2955,10 +2730,6 @@
 				original_tag  = FRA
 			}
 			available = {
-				custom_trigger_tooltip = {
-					tooltip = character_not_dead
-					date < 1916.04.11
-				}
 				NOT = {
 					has_government = communism
 				}

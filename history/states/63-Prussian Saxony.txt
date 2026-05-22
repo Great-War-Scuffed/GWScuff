@@ -5,9 +5,9 @@ state={
 	state_category=large_city
 	provinces={ 425 538 3522 3561 6441 6582 9238 9375 9456 11359 11468 11545 13328 13334 }
 	resources={
-		steel=12
-		chromium = 3
-		tungsten = 3
+		steel=24
+		chromium = 6
+		tungsten = 6
 	}
 	history={
 		victory_points = { 3522 10 } #Magdeburg 279.629

@@ -3,8 +3,9 @@ state={
 	id=46
 	name="STATE_46"
 	resources={
-		oil=6.000
-		steel = 6.000
+		oil = 64 # was: 70
+		coal = 25
+		steel = 16
 	}
 	history={
 		victory_points = { 9617 15 } #Bucharest 282,000

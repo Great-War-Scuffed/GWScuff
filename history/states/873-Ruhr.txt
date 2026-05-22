@@ -3,8 +3,8 @@ state={
 	id=873
 	name="STATE_873"
 	resources={
-		steel=6
-		coal=30
+		steel=16
+		coal=36
 	}
 	history={
 		victory_points = { 10884 10 } #Dortmund 214,226	

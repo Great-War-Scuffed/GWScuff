@@ -5,9 +5,9 @@ state = {
 	state_category = large_city
 	provinces = { 1688 2171 2213 5106 5217 10400 10566 }
 	resources = {
-		chromium = 12
-		steel = 4
-		coal = 5
+		chromium = 14
+		steel = 14
+		coal = 15
 	}
 	history = {
 		victory_points = { 10400 10 }

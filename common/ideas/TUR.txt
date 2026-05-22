@@ -1873,7 +1873,7 @@ ideas = {
 				annex_cost_factor = -0.1
 			}
 			rule = {
-				can_join_factions = no 
+				#can_join_factions = no 
 				can_create_factions = yes
 			}
 		}
@@ -1893,7 +1893,7 @@ ideas = {
 				guarantee_tension = -1
 			}
 			rule = {
-				can_join_factions = no
+				#can_join_factions = no
 			}
 		}
 		TUR_internationalist_foreign_policy2 = {
@@ -5972,9 +5972,9 @@ ideas = {
 				has_global_flag = great_war
 			}
 			removal_cost = -1
-			rule = {
-				can_join_factions = no 
-			}
+			#rule = {
+			#	can_join_factions = no 
+			#}
 		}
 		TUR_anti_infidel_diplomacy = {
 			picture = TUR_anti_infidel_diplomacy
@@ -5987,7 +5987,7 @@ ideas = {
 				war_support_weekly = 0.005
 			}
 			rule = {
-				can_join_factions = no 
+			#	can_join_factions = no 
 				can_create_factions = yes
 			}
 		}

@@ -105,7 +105,7 @@ focus_tree = {
 	focus = {
 		id = TUR_call_for_the_balkan_war
 		icon = GFX_TUR_balkan_war_experience
-		cost = 2
+		cost = 5
 		prerequisite = {
 			focus = TUR_picardie_maneuvers
 		}
@@ -113,13 +113,13 @@ focus_tree = {
 			FOCUS_FILTER_HISTORICAL
 		}
 		available = {
-			OR = {
-				has_global_flag = kis_firstbalkan_war
-				has_war_with = SER
-				has_war_with = BUL
-				has_war_with = GRE
-				has_war_with = MNT
-			}
+			#OR = {
+			#	has_global_flag = kis_firstbalkan_war
+			#	has_war_with = SER
+			#	has_war_with = BUL
+			#	has_war_with = GRE
+			#	has_war_with = MNT
+			#}
 		}
 		x = -2
 		y = 1
@@ -131,6 +131,13 @@ focus_tree = {
 			}
 		}
 		completion_reward = {
+			create_wargoal = { type = annex_everything target = BUL }
+			create_wargoal = { type = annex_everything target = GRE }
+			create_wargoal = { type = annex_everything target = SER }
+			create_wargoal = { type = annex_everything target = MNT }
+			#country_event = {
+			#		id = ww1_firstbalkan.2
+			#	}
 			custom_effect_tooltip = immediate_effect_upon_focus_start_tt
 			unlock_decision_category_tooltip = TUR_balkanwar_decision
 			effect_tooltip = {
@@ -4431,7 +4438,7 @@ focus_tree = {
 				tooltip = TUR_intervene_in_the_elections_80_tt
 				check_variable = {
 					var = TUR_yildiz_teskilati_faction_power
-					value = 0.8
+					value = 0.30
 					compare = greater_than_or_equals
 				}
 			}
@@ -11710,13 +11717,13 @@ focus_tree = {
 		}
 		relative_position_id = TUR_yenikoy_accord
 		available = {
-			NOT = {
-				custom_trigger_tooltip = {
-					tooltip = TUR_france_refused_us_into_faction_tt
-					has_country_flag = TUR_france_refused_us_into_faction
-				}
-				has_war_with = FRA
-			}
+			#NOT = {
+			#	custom_trigger_tooltip = {
+			#		tooltip = TUR_france_refused_us_into_faction_tt
+			#		has_country_flag = TUR_france_refused_us_into_faction
+			#	}
+			#	has_war_with = FRA
+			#}
 			FRA = {
 				is_faction_leader = yes
 			}
@@ -11733,12 +11740,12 @@ focus_tree = {
 					is_faction_leader = yes
 				}
 			}
-			OR = {
-				has_war_with = GER
-				NOT = {
-					has_idea = TUR_sick_man
-				}
-			}
+			#OR = {
+			#	has_war_with = GER
+			#	NOT = {
+			#		has_idea = TUR_sick_man
+			#	}
+			#}
 		}
 		completion_reward = {
 			FRA = {
@@ -13264,23 +13271,23 @@ focus_tree = {
 		y = 4
 		relative_position_id = TUR_continue_german_cooperation
 		available = {
-			NOT = {
-				custom_trigger_tooltip = {
-					tooltip = TUR_german_refused_us_into_faction_tt
-					has_country_flag = TUR_german_refused_us_into_faction
-				}
-				has_war_with = GER
-			}
+			#NOT = {
+			#	custom_trigger_tooltip = {
+			#		tooltip = TUR_german_refused_us_into_faction_tt
+			#		has_country_flag = TUR_german_refused_us_into_faction
+			#	}
+			#	has_war_with = GER
+			#}
 			GER = {
 				is_faction_leader = yes
 			}
 			has_war = no #you already fighting somewhere
-			OR = {
-				has_war_with = FRA
-				NOT = {
-					has_idea = TUR_sick_man
-				}
-			}
+			#OR = {
+			#	has_war_with = FRA
+			#	NOT = {
+			#		has_idea = TUR_sick_man
+			#	}
+			#}
 		}
 		completion_reward = {
 			GER = {
@@ -37567,12 +37574,12 @@ joint_focus = {
 				has_completed_focus = TUR_our_traditional_allies
 			}
 		}
-		GER = {
-			is_GER_a_monarchy = yes
-			NOT = {
-				has_war_with = TUR
-			}	
-		}
+		#GER = {
+		#	is_GER_a_monarchy = yes
+		#	NOT = {
+		#		has_war_with = TUR
+		#	}	
+		#}
 	}
 	bypass = {
 		if = {

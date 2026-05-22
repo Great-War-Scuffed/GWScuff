@@ -2,7 +2,7 @@ state={
 	id=170
 	name="STATE_170"
 	resources={
-		tungsten=4
+		tungsten=40
 	}
 	history={
 		victory_points = { 6902 2 } #Badajoz 33,344

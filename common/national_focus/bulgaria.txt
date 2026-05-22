@@ -232,7 +232,7 @@
 			factor = 100
 		}
 		available = {
-			is_in_faction_with = SER
+			#is_in_faction_with = SER
 		}
 		completion_reward = {
 			custom_effect_tooltip = balkan_league_negotiations_start_tt
@@ -266,7 +266,7 @@
 		y = 1
 		available = {
 			is_subject = no
-			has_global_flag = balkan_league_fail
+			#has_global_flag = balkan_league_fail
 			NOT = {
 				is_in_faction_with = SER
 			}
@@ -588,14 +588,14 @@
 		}
 		relative_position_id = BUL_thieving_allies
 		available = {
-			has_global_flag = balkan_league_fail
-			OR = {
-				has_country_flag = BW1_winner
-				has_global_flag = lone_liberator_victorious
-			}	
-			owns_state = 203
-			owns_state = 106
-			owns_state = 1213
+			#has_global_flag = balkan_league_fail
+			#OR = {
+			#	has_country_flag = BW1_winner
+			#	has_global_flag = lone_liberator_victorious
+			#}	
+			#owns_state = 203
+			#owns_state = 106
+			#owns_state = 1213
 			has_war = no
 			NOT = {
 				has_idea = idea_armistice
@@ -648,11 +648,12 @@
 		icon = GFX_TUR_vatan_icin
 		cost = 5
 		available = {
-			OR = {
-				has_global_flag = kis_firstbalkanwar_lose
-				is_puppet = yes
-			}
+			#OR = {
+			#	has_global_flag = kis_firstbalkanwar_lose
+			#	is_puppet = yes
+			#}
 			has_war = no
+			is_puppet = yes
 		}
 		relative_position_id = BUL_thieving_allies
 		mutually_exclusive = {
@@ -829,6 +830,7 @@
 		prerequisite = {
 			focus = BUL_first_national_catastrophe
 			focus = BUL_our_darkest_hours
+			focus = BUL_lone_victor
 		}
 		mutually_exclusive = {
 			focus = BUL_ferdinands_rule
@@ -1042,6 +1044,7 @@
 			focus = BUL_victory_in_second_balkan_war
 			focus = BUL_relative_hegemony
 			focus = BUL_lone_victor
+			focus = BUL_our_darkest_hours
 		}
 		mutually_exclusive = {
 			focus = BUL_ferdinands_abdication

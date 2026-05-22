@@ -1,6 +1,10 @@
 state={
 	id=450
 	name="STATE_450"
+	resources={
+		steel=8
+		coal=8
+	}
 	manpower = 154879
 	state_category=rural
 	provinces={ 1130 1204 4120 11954 12094 }

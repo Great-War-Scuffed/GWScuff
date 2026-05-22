@@ -1,6 +1,10 @@
 state={
 	id=553
 	name="STATE_553" # Lebanon
+	resources={
+		tungsten=4
+		coal=10
+	}
 	history={
 		victory_points={ 792 5 }
 		owner=TUR

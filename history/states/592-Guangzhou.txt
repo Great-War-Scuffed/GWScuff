@@ -5,7 +5,7 @@ state={
 	state_category=city
 	provinces={ 1047 7108 7152 }
 	resources={
-		steel=4
+		steel=18
 	}
 	history={
 		victory_points={ 1047 20 }

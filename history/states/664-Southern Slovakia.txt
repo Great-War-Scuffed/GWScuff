@@ -5,7 +5,7 @@ state={
 	state_category=town
 	provinces={ 555 3565 3716 6561 6573 9537 11679 }
 	resources={
-		steel = 8
+		steel = 18
 	}
 	history={
 		victory_points={ 6573 3 } #Košice 44,200

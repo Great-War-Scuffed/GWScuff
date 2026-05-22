@@ -5,7 +5,12 @@ state={
 	state_category=city
 	provinces={ 2031 8017 12865 }
 	resources={
-		chromium=1
+		chromium=6
+		steel=6
+		tungsten=6
+		coal=6
+		aluminium=6
+		rubber=6
 	}
 	history={
 		victory_points={ 12865 3 }

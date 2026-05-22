@@ -5,7 +5,7 @@ state={
 	state_category = pastoral
 	provinces= { 2198 5131 8217 10960 }
 	resources={
-		steel=3
+		steel=13
 	}
 	history={
 		owner=CHL

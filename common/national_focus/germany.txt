@@ -7404,9 +7404,9 @@ focus_tree = {
 		mutually_exclusive = {
 			focus = GER_hindenburg_is_the_solution
 		}
-		available = {
-			fascism > 0.50
-		}
+		#available = {
+		#	fascism > 0.50
+		#}
 		completion_reward = { 
 			GER_erich_ludendorff = {
 				promote_character = stratocracy
@@ -7994,9 +7994,9 @@ focus_tree = {
 		allow_branch = {
 			always = yes
 		}
-		available = {
-			fascism > 0.50
-		}
+		#available = {
+		#	fascism > 0.50
+		#}
 		completion_reward = { 
 			GER_paul_von_hindenburg = {
 				promote_character = stratocracy

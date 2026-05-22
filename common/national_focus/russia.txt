@@ -5547,15 +5547,15 @@ focus_tree = {
 		y = 1
 		available = {
 			is_subject = no
-			any_enemy_country = {
-				OR = {
-					original_tag = SOV
-					original_tag = RUS
-				}
-			}
-			NOT = {
-			    has_government = communism
-			}			
+			#any_enemy_country = {
+			#	OR = {
+			#		original_tag = SOV
+			#		original_tag = RUS
+			#	}
+			#}
+			#NOT = {
+			#    has_government = communism
+			#}			
 		}
 		bypass = {
 			has_government = fascism
@@ -5755,9 +5755,9 @@ focus_tree = {
 		available = {
 			is_subject = no
 			has_war = no
-			SOV = {
-				exists = no
-			}
+			#SOV = {
+			#	exists = no
+			#}
 			has_government = democratic
 		}
 		bypass = {

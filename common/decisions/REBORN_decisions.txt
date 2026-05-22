@@ -1372,7 +1372,7 @@ REBORN_strategic_preparations_category = {
 				name = infantry_artillery_bonus
 				bonus = 0.5
 				category = infantry_weapons
-				category = artillery
+				category = cat_artillery
 			}
 
 			hidden_effect = {
@@ -1846,14 +1846,14 @@ REBORN_path_to_freedom_category = {
 				}
 				33 = {
 					add_equipment_to_stockpile = {
-				    	type = artillery_equipment
+				    	type = field_gun_equipment
 				    	amount = 250
 				    	producer = OVERLORD
 					}
 					hidden_effect = {
 						OVERLORD = {
 							add_equipment_to_stockpile = {
-						    	type = artillery_equipment
+						    	type = field_gun_equipment
 						    	amount = -250
 						    	producer = OVERLORD
 							}

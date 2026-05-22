@@ -1337,7 +1337,7 @@ focus_tree = {
 			}
 			add_tech_bonus = {
 				name = JAP_Modernize_the_national_japanese_army
-				category = artillery
+				category = cat_artillery
 				uses = 1
 				bonus = 0.75
 			}

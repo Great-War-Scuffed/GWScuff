@@ -1189,7 +1189,7 @@ focus_tree = {
 	# 		add_tech_bonus = {
 	# 			name = GER_focus_on_artillery
 	# 			bonus = 1
-	# 			category = artillery
+	# 			category = cat_artillery
 	# 			uses = 1
 	# 		}
 	# 		custom_effect_tooltip = available_designer
@@ -7812,14 +7812,14 @@ focus_tree = {
 		}
 		completion_reward = { 
 			add_equipment_to_stockpile = {
-				type = artillery_equipment
+				type = field_gun_equipment
 				amount = 7000
 			}
 			add_tech_bonus = {
 				name = GER_Advanced_German_artillery_units
 				bonus = 1.0
 				uses = 2
-				category = artillery
+				category = cat_artillery
 			}
 		}
 	}
@@ -11160,7 +11160,7 @@ focus_tree = {
 				name = GER_invest_in_krupp
 				bonus = 1
 				uses = 1
-				category = artillery
+				category = cat_artillery
 			}
 			add_tech_bonus = {
 				name = GER_invest_in_krupp

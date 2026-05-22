@@ -1163,7 +1163,7 @@ focus_tree = {
 		}
         completion_reward = {
             add_equipment_to_stockpile = {
-                type = artillery_equipment
+                type = field_gun_equipment
                 amount = 3000
             }
             add_equipment_to_stockpile = {
@@ -1254,7 +1254,7 @@ focus_tree = {
             remove_ideas = SPR_artilleros_en_huelga
             add_tech_bonus = {
                 name = SPR_Quitar_la_artilleria_del_ejercito
-                category = artillery
+                category = cat_artillery
                 uses = 2
                 bonus = 0.75
             }

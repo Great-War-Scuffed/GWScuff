@@ -3108,7 +3108,7 @@ focus_tree = {
 				name = SOV_artillery_god_of_war
 				bonus = 1.0
 				uses = 1
-				category = artillery
+				category = cat_artillery
 			}
 		}
 		search_filters = {
@@ -5306,7 +5306,7 @@ focus_tree = {
 				name = RUS_doctrine_of_field_artillery
 				bonus = 1
 				uses = 2
-				category = artillery
+				category = cat_artillery
 			}
 		}
 	}
@@ -8027,7 +8027,7 @@ focus_tree = {
 				producer = RUS
 			}
 			add_equipment_to_stockpile = {
-				type = artillery_equipment
+				type = field_gun_equipment
 				amount = 2000
 				producer = RUS
 			}

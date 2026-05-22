@@ -225,7 +225,7 @@ script_enum_equipment_bonus_type = {
 	destroyer
 	infantry_equipment
 	machine_gun_equipment
-	# artillery_equipment
+	# field_gun_equipment
 	anti_tank_equipment
 	# amphibious_mechanized_equipment
 	# amphibious_mechanized_equipment_1

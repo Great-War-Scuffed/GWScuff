@@ -2109,7 +2109,7 @@ GER_decison_colonial_exploitation = {
 				producer = CMR
 			}
 			add_equipment_to_stockpile = {
-				type = artillery_equipment
+				type = field_gun_equipment
 				amount = 250
 				producer = CMR
 			}
@@ -2160,7 +2160,7 @@ GER_decison_colonial_exploitation = {
 				producer = TZN
 			}
 			add_equipment_to_stockpile = {
-				type = artillery_equipment
+				type = field_gun_equipment
 				amount = 250
 				producer = TZN
 			}
@@ -2211,7 +2211,7 @@ GER_decison_colonial_exploitation = {
 				producer = NMB
 			}
 			add_equipment_to_stockpile = {
-				type = artillery_equipment
+				type = field_gun_equipment
 				amount = 250
 				producer = NMB
 			}
@@ -2263,7 +2263,7 @@ GER_decison_colonial_exploitation = {
 				producer = TOG
 			}
 			add_equipment_to_stockpile = {
-				type = artillery_equipment
+				type = field_gun_equipment
 				amount = 250
 				producer = TOG
 			}
@@ -2314,7 +2314,7 @@ GER_decison_colonial_exploitation = {
 				producer = PNG
 			}
 			add_equipment_to_stockpile = {
-				type = artillery_equipment
+				type = field_gun_equipment
 				amount = 250
 				producer = PNG
 			}

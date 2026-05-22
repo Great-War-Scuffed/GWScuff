@@ -1847,7 +1847,7 @@ country_event = {
 						producer = ENG
 					}
 					add_equipment_to_stockpile = {
-						type = artillery_equipment
+						type = field_gun_equipment
 						amount = 50
 						producer = ENG
 					}
@@ -1890,7 +1890,7 @@ country_event = {
 						producer = ENG
 					}
 					add_equipment_to_stockpile = {
-						type = artillery_equipment
+						type = field_gun_equipment
 						amount = 50
 						producer = ENG
 					}
@@ -1932,7 +1932,7 @@ country_event = {
 						producer = ENG
 					}
 					add_equipment_to_stockpile = {
-						type = artillery_equipment
+						type = field_gun_equipment
 						amount = 50
 						producer = ENG
 					}

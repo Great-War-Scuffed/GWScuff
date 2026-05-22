@@ -1210,7 +1210,7 @@ focus = {
 			amount = 1000
 		}
 		add_equipment_to_stockpile = {
-			type = artillery_equipment
+			type = field_gun_equipment
 			amount = 500
 		}
 		add_equipment_to_stockpile = {
@@ -2142,7 +2142,7 @@ focus = {
 		# 2x artillery, artillery attack 5, 
 		add_tech_bonus = {
 			name = AUH_Build_modern_artillery_units
-			category = artillery
+			category = cat_artillery
 			uses = 2
 			bonus = 1.0
 			ahead_reduction = 1.0
@@ -2408,7 +2408,7 @@ focus = {
 	completion_reward = {
 		add_tech_bonus = {
 			name = AUH_Follow_new_artillery_technology_developments
-			category = artillery
+			category = cat_artillery
 			uses = 2
 			bonus = 1.0
 			ahead_reduction = 1.0
@@ -2961,7 +2961,7 @@ focus = {
 				producer = root
 			}
 			add_equipment_to_stockpile = {
-				type = artillery_equipment
+				type = field_gun_equipment
 				amount = 2000
 				producer = root
 			}
@@ -2980,7 +2980,7 @@ focus = {
 			amount = 3000
 		}
 		add_equipment_to_stockpile = {
-			type = artillery_equipment
+			type = field_gun_equipment
 			amount = 2000
 		}
 		add_equipment_to_stockpile = {

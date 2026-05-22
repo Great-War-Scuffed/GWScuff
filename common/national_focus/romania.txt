@@ -1625,7 +1625,7 @@ focus_tree = {
 				amount = 700
 			}
 			add_equipment_to_stockpile = {
-				type = artillery_equipment
+				type = field_gun_equipment
 				amount = 350
 			}
 			add_equipment_to_stockpile = {

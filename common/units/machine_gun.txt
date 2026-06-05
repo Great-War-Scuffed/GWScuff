@@ -38,8 +38,13 @@ sub_units = {
 		supply_consumption = 0.08
 
 		# Support nerfs to combat abilities
-		defense = -0.5
-		soft_attack = -0.5
+		#defense = -0.5
+		#soft_attack = -0.5
+		battalion_mult = {
+			category = category_light_infantry
+			soft_attack = 0.05
+			defense = 0.05
+		}
 
 
 		can_be_parachuted = yes

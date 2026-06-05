@@ -42,7 +42,7 @@ methodical_fire = {
         preliminary_bombardment = {
         #2
             category_line_artillery = {
-                soft_attack = 0.15
+                soft_attack = 0.05
             }
         }
         standing_barrage = {
@@ -54,7 +54,7 @@ methodical_fire = {
         rolling_barrage = {
         #4
             category_line_artillery = {
-                soft_attack = 0.1
+                soft_attack = 0.05
             }
             field_gun = {
                 battalion_mult = {
@@ -108,7 +108,7 @@ integrated_firepower = {
         preliminary_bombardment = {
         #1
             category_line_artillery = {
-                soft_attack = 0.1
+                soft_attack = 0.05
             }
         }
         sos_barrage = {
@@ -139,7 +139,7 @@ integrated_firepower = {
         predicted_fire = {
         #4
             category_line_artillery = {
-                soft_attack = 0.15
+                soft_attack = 0.10
             }
         }
         box_barrage = {
@@ -187,7 +187,7 @@ hurricane_bombardment = {
         #1
             planning_speed = 0.1
             category_artillery = {
-                breakthrough = 0.1
+                breakthrough = 0.05
             }
         }
         counter_battery_fire = {
@@ -211,14 +211,14 @@ hurricane_bombardment = {
         #4
             coordination_bonus = 0.05
             category_line_artillery = {
-                soft_attack = 0.1
+                soft_attack = 0.05
             }
             enable_tactic = tactic_barrage
         }
         box_barrage = {
         #5
             category_artillery = {
-                breakthrough = 0.15
+                breakthrough = 0.10
             }
         }
     }

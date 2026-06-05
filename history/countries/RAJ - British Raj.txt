@@ -65,14 +65,14 @@ recruit_character = RAJ_bhaskar_soman
 		}	
 	}
 
-	if = {
-		limit = {
-			has_dlc = "Graveyard of Empires"
-		}
-		set_technology = {
-			elephantry = 1
-		}
-	}
+	#if = {
+	#	limit = {
+	#		has_dlc = "Graveyard of Empires"
+	#	}
+	#	set_technology = {
+	#		elephantry = 1
+	#	}
+	#}
 	
 
 	set_politics = {

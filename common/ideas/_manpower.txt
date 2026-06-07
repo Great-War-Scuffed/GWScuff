@@ -96,13 +96,6 @@ ideas = {
 			available = {
 				#has_manpower_for_recruit_change_to =  { value = 0.025 group = mobilization_laws }
 				has_war_support > 0.1
-				if = {
-					limit = {
-						original_tag = HON
-						has_completed_focus = HON_free_our_markets
-					}
-					NOT = { has_idea = r56_idea_capitalism_anarchist_society  }
-				}
 				# if = {
 				# 	limit = {
 				# 		original_tag = SWE
@@ -118,116 +111,11 @@ ideas = {
 					}
 					NOT = { has_idea = undisturbed_isolation }
 				}
-				if = {
-					limit = {
-						original_tag = SAU
-					}
-				NOT = { has_idea = isolation }
-				}
-				if = {
-					limit = {
-						original_tag = AST
-						has_dlc = "Together for Victory"
-						has_global_flag = ast_tfv_focus_tree
-					}
-					has_completed_focus = AST_citizen_military_forces
-				}
-				if = {
-					limit = {
-						original_tag = AST
-						NOT = { has_global_flag = ast_tfv_focus_tree }
-					}
-					OR = {
-						has_completed_focus = AST_R56_empower_govenor_general
-						has_completed_focus = AST_R56_national_security_act
-						has_completed_focus = AST_R56_australian_internationalism
-						has_completed_focus = AST_R56_socalist_paridice
-						has_completed_focus = AST_R56_young_australian_league
-					}
-					
-				}
-				if = {
-					limit = {
-						original_tag = CAN
-						has_dlc = "Together for Victory"
-						has_global_flag = can_tfv_focus_tree
-					}
-				}
-				if = { 
-					limit = {
-					 	original_tag = CAN
-						NOT = { has_global_flag = can_tfv_focus_tree }
-					 }
-					has_completed_focus = r56_CAN_conscription_crisis
-				}
-				if = {
-					limit = {
-						original_tag = RAJ
-					}
-					OR = {
-						is_subject = no
-						has_autonomy_state = autonomy_dominion
-						AND = {
-							has_war_support > 0.8
-							num_of_factories > 75
-						}
-					}
-					custom_trigger_tooltip = {
-						tooltip = raj_not_in_famine
-						NOT = {
-							has_idea = RAJ_agrarian_economy_famine
-							has_idea = RAJ_agrarian_economy_recovery
-						}
-					}
-				}
+	
+			
 				
-				if = {
-					limit = {
-						original_tag = HUN
-						has_dlc = "Death or Dishonor"
-					}
-					NOT = { has_idea = HUN_treaty_of_triannon }
-				}
-				if = {
-					limit = {
-						original_tag = ENG
-						has_dlc = "Man the Guns"
-						has_completed_focus = ENG_concessions_to_the_trade_unions
-					}
-					NOT = { has_country_flag = ENG_cannot_increase_conscription_law }
-				}
-				if = {
-					limit = {
-						original_tag = SPR
-						has_dlc = "La Resistance"
-					}
-					NOT = { has_completed_focus = SPR_all_must_bear_the_torch }
-				}
-				if = {
-					limit = {
-						original_tag = BUL
-						has_global_flag = bul_bftb_focus_tree
-					}
-					NOT = { has_idea = BUL_army_restrictions }
-				}
-				if = {
-					limit = {
-						original_tag = MON
-					}
-					NOT = { has_completed_focus = MON_changes_within }
-				}
 			}
 
-			on_add = {
-				if = {
-					limit = {
-						tag = DEN
-					}
-					set_variable = {
-						den_conscription_focus_cost = 5
-					}
-				}
-			}	
 
 			modifier = {
 				conscription = 0.025
@@ -258,17 +146,6 @@ ideas = {
 				OR = {
 					has_government = fascism
 					has_government = communism
-					SWE_rapid_mob_manpower_law_trigger = yes 
-					if = {
-						limit = {
-							original_tag = DEN
-							has_dlc = "Arms Against Tyranny"
-						}
-						has_country_leader = {
-							ruling_only = yes
-							character = DEN_christian_x
-						}
-					}
 					else = {
 						hidden_trigger = { always = no } #NEED TO HAVE AN ALWAYS AS AN END STATEMENT IF URE USING AN IF ELSE IN AN OR STATEMENT OTHERWISE THE EVALUATION BREAKS!!
 					}
@@ -283,11 +160,11 @@ ideas = {
 						#}
 					}	
 					if = {
-						limit = {
-							has_dlc = "Arms Against Tyranny"
-							has_autonomy_state = autonomy_aat_defense_council_member
-							is_subject_of = SWE
-						}
+						#limit = {
+						#	has_dlc = "Arms Against Tyranny"
+						#	has_autonomy_state = autonomy_aat_defense_council_member
+						#	is_subject_of = SWE
+						#}
 					}		
 					else = {
 						hidden_trigger = { always = no }  #NEED TO HAVE AN ALWAYS AS AN END STATEMENT IF URE USING AN IF ELSE IN AN OR STATEMENT OTHERWISE THE EVALUATION BREAKS!!
@@ -295,120 +172,6 @@ ideas = {
 				}
 				has_war_support > 0.2
 				#Special rules AST in TFV
-				if = {
-					limit = {
-						original_tag = AST
-						has_dlc = "Together for Victory"
-						has_global_flag = ast_tfv_focus_tree
-					}
-					has_completed_focus = AST_citizen_military_forces
-					has_completed_focus = AST_fight_work_or_perish
-				}
-				if = {
-					limit = {
-						original_tag = HON
-						has_completed_focus = HON_free_our_markets
-					}
-					NOT = { has_idea = r56_idea_capitalism_anarchist_society  }
-				}
-				if = {
-					limit = {
-						original_tag = AST
-						NOT = { has_global_flag = ast_tfv_focus_tree }
-					}
-					OR = {
-						has_completed_focus = AST_R56_empower_govenor_general
-						has_completed_focus = AST_R56_advisory_war_council
-						has_completed_focus = AST_R56_australian_internationalism
-						has_completed_focus = AST_R56_socalist_paridice
-						has_completed_focus = AST_R56_young_australian_league
-					}
-				}
-				if = {
-					limit = {
-						original_tag = CAN
-						has_global_flag = can_tfv_focus_tree
-					}
-				}
-				else_if = { 
-					limit = {
-					 	original_tag = CAN
-						NOT = { has_global_flag = can_tfv_focus_tree }
-					 }
-					has_completed_focus = r56_CAN_conscription_crisis
-				}
-				if = {
-					limit = {
-						original_tag = RAJ
-					}
-					OR = {
-						is_subject = no
-						has_autonomy_state = autonomy_dominion
-					}
-					custom_trigger_tooltip = {
-						tooltip = raj_not_in_famine
-						NOT = {
-							has_idea = RAJ_agrarian_economy_famine
-							has_idea = RAJ_agrarian_economy_recovery
-						}
-					}
-				}
-				if = {
-					limit = {
-						original_tag = HUN
-						has_dlc = "Death or Dishonor"
-					}
-					NOT = { has_idea = HUN_treaty_of_triannon }
-				}
-				# if = {
-				# 	limit = {
-				# 		original_tag = SWE
-				# 	}
-				# 	NOT = { 
-				# 		has_idea = SWE_swedish_disarmament_idea 
-				# 		has_idea = SWE_swedish_disarmament_1_idea
-				# 	} 
-				# }				
-				if = {
-					limit = {
-						original_tag = USA
-					}
-					NOT = { has_idea = undisturbed_isolation }
-				}
-				if = {
-					limit = {
-						original_tag = SAU
-					}
-				NOT = { has_idea = isolation }
-				}
-				if = {
-					limit = {
-						original_tag = ENG
-						has_dlc = "Man the Guns"
-						has_completed_focus = ENG_concessions_to_the_trade_unions
-					}
-					NOT = { has_country_flag = ENG_cannot_increase_conscription_law }
-				}
-				if = {
-					limit = {
-						original_tag = SPR
-						has_dlc = "La Resistance"
-					}
-					NOT = { has_completed_focus = SPR_all_must_bear_the_torch }
-				}
-				if = {
-					limit = {
-						original_tag = BUL
-						has_global_flag = bul_bftb_focus_tree
-					}
-					NOT = { has_idea = BUL_army_restrictions }
-				}
-				if = {
-					limit = {
-						original_tag = MON
-					}
-					NOT = { has_completed_focus = MON_changes_within }
-				}
 			}
 
 			ai_will_do = {
@@ -467,127 +230,7 @@ ideas = {
 					has_war_support > 0.6
 					surrender_progress > 0
 				}
-				if = {
-					limit = {
-						original_tag = HON
-						has_completed_focus = HON_free_our_markets
-					}
-					NOT = { has_idea = r56_idea_capitalism_anarchist_society  }
-				}
-				if = {
-					limit = {
-						original_tag = AST
-						has_dlc = "Together for Victory"
-						has_global_flag = ast_tfv_focus_tree
-					}
-					has_completed_focus = AST_citizen_military_forces
-					has_completed_focus = AST_fight_work_or_perish
-				}
-				if = {
-					limit = {
-						original_tag = AST
-						NOT = { has_global_flag = ast_tfv_focus_tree }
-					}
-					OR = {
-						has_completed_focus = AST_R56_empower_govenor_general
-						has_completed_focus = AST_R56_advisory_war_council
-						has_completed_focus = AST_R56_australian_internationalism
-						has_completed_focus = AST_R56_socalist_paridice
-						has_completed_focus = AST_R56_young_australian_league
-					}
-				}
-				if = {
-					limit = {
-						original_tag = CAN
-						has_dlc = "Together for Victory"
-						has_global_flag = can_tfv_focus_tree
-					}
-					OR = {
-					}
-				}
-				if = { 
-					limit = {
-					 	original_tag = CAN
-						NOT = { has_global_flag = can_tfv_focus_tree }
-					 }
-					has_completed_focus = r56_CAN_conscription_crisis
-				}
-				if = {
-					limit = {
-						original_tag = RAJ
-					}
-					OR = {
-						is_subject = no
-						has_autonomy_state = autonomy_dominion
-					}
-					has_war_support > 0.9
-					num_of_factories > 120	#Pretty Difficult / Late game
-					custom_trigger_tooltip = {
-						tooltip = raj_not_in_famine
-						NOT = {
-							has_idea = RAJ_agrarian_economy_famine
-							has_idea = RAJ_agrarian_economy_recovery
 						}
-					}
-				}
-
-				if = {
-					limit = {
-						original_tag = HUN
-						has_dlc = "Death or Dishonor"
-					}
-					NOT = { has_idea = HUN_treaty_of_triannon }
-				}
-				if = {
-					limit = {
-						original_tag = ENG
-						has_dlc = "Man the Guns"
-						has_completed_focus = ENG_concessions_to_the_trade_unions
-					}
-					NOT = { has_country_flag = ENG_cannot_increase_conscription_law }
-				}
-				if = {
-					limit = {
-						original_tag = SPR
-						has_dlc = "La Resistance"
-					}
-					NOT = { has_completed_focus = SPR_all_must_bear_the_torch }
-				}
-				# if = {
-				# 	limit = {
-				# 		original_tag = SWE
-				# 	}
-				# 	NOT = { 
-				# 		has_idea = SWE_swedish_disarmament_idea 
-				# 		has_idea = SWE_swedish_disarmament_1_idea
-				# 	}
-				# }				
-				if = {
-					limit = {
-						original_tag = USA
-					}
-					NOT = { has_idea = undisturbed_isolation }
-				}
-				if = {
-					limit = {
-						original_tag = SAU
-					}
-					NOT = { has_idea = isolation }
-				}
-				if = {
-					limit = {
-						original_tag = BUL
-						has_global_flag = bul_bftb_focus_tree
-					}
-					NOT = { has_idea = BUL_army_restrictions }
-				}
-				if = {
-					limit = {
-						original_tag = MON
-					}
-					NOT = { has_completed_focus = MON_changes_within }
-				}
-			}
 
 			ai_will_do = {
    				factor = 1
@@ -663,129 +306,7 @@ ideas = {
 				#	}
 				#}
 
-				if = {
-					limit = {
-						original_tag = AST
-						has_dlc = "Together for Victory"
-						has_global_flag = ast_tfv_focus_tree
-					}
-					has_completed_focus = AST_citizen_military_forces
-					has_completed_focus = AST_fight_work_or_perish
-				}
-				if = {
-					limit = {
-						original_tag = HON
-						has_completed_focus = HON_free_our_markets
-					}
-					NOT = { has_idea = r56_idea_capitalism_anarchist_society  }
-				}
-				if = {
-					limit = {
-						original_tag = AST
-						NOT = { has_global_flag = ast_tfv_focus_tree }
-					}
-					OR = {
-						AND = {
-							has_completed_focus = AST_R56_advisory_war_council
-							has_completed_focus = AST_R56_fight_work_or_perish
-						}
-						has_completed_focus = AST_R56_empower_govenor_general
-						has_completed_focus = AST_R56_australian_internationalism
-						has_completed_focus = AST_R56_socalist_paridice
-						has_completed_focus = AST_R56_young_australian_league
-					}
-				}
-
-				if = {
-					limit = {
-						original_tag = CAN
-						has_dlc = "Together for Victory"
-						has_global_flag = can_tfv_focus_tree
-					}
-					OR = {
-					}					
-				}
-				if = { 
-					limit = {
-					 	original_tag = CAN
-						NOT = { has_global_flag = can_tfv_focus_tree }
-					 }
-					has_completed_focus = r56_CAN_conscription_crisis
-				}
-				if = {
-					limit = {
-						original_tag = RAJ
-					}
-					OR = {
-						is_subject = no
-						has_autonomy_state = autonomy_dominion
-					}
-					has_war_support > 0.99
-					num_of_factories > 200	#Basically impossible
-					custom_trigger_tooltip = {
-						tooltip = raj_not_in_famine
-						NOT = {
-							has_idea = RAJ_agrarian_economy_famine
-							has_idea = RAJ_agrarian_economy_recovery
-						}
-					}
-				}
-				if = {
-					limit = {
-						original_tag = HUN
-						has_dlc = "Death or Dishonor"
-					}
-					NOT = { has_idea = HUN_treaty_of_triannon }
-				}
-				# if = {
-				# 	limit = {
-				# 		original_tag = SWE
-				# 	}
-				# 	NOT = { 
-				# 		has_idea = SWE_swedish_disarmament_idea 
-				# 		has_idea = SWE_swedish_disarmament_1_idea
-				# 	} 
-				# }				
-				if = {
-					limit = {
-						original_tag = USA
-					}
-					NOT = { has_idea = undisturbed_isolation }
-				}
-				if = {
-					limit = {
-						original_tag = ENG
-						has_dlc = "Man the Guns"
-						has_completed_focus = ENG_concessions_to_the_trade_unions
-					}
-					NOT = { has_country_flag = ENG_cannot_increase_conscription_law }
-				}
-				if = {
-					limit = {
-						original_tag = SPR
-						has_dlc = "La Resistance"
-					}
-					NOT = { has_completed_focus = SPR_all_must_bear_the_torch }
-				}
-				if = {
-					limit = {
-						original_tag = SAU
-					}
-					NOT = { has_idea = isolation }
-				}
-				if = {
-					limit = {
-						original_tag = BUL
-						has_global_flag = bul_bftb_focus_tree
-					}
-					NOT = { has_idea = BUL_army_restrictions }
-				}
-				if = {
-					limit = {
-						original_tag = MON
-					}
-					NOT = { has_completed_focus = MON_changes_within }
-				}
+			
 			}
 
 			ai_will_do = {
@@ -856,117 +377,7 @@ ideas = {
 				#		ratio > 1
 				#	}
 				#}
-				if = {
-					limit = {
-						original_tag = AST
-						has_dlc = "Together for Victory"
-						has_global_flag = ast_tfv_focus_tree
-					}
-					has_completed_focus = AST_citizen_military_forces
-					has_completed_focus = AST_fight_work_or_perish
-				}
-				if = {
-					limit = {
-						original_tag = HON
-						has_completed_focus = HON_free_our_markets
-					}
-					NOT = { has_idea = r56_idea_capitalism_anarchist_society  }
-				}
-				if = {
-					limit = {
-						original_tag = AST
-						NOT = { has_global_flag = ast_tfv_focus_tree }
-					}
-					OR = {
-						AND = {
-							has_completed_focus = AST_R56_advisory_war_council
-							has_completed_focus = AST_R56_fight_work_or_perish
-						}
-						has_completed_focus = AST_R56_empower_govenor_general
-						has_completed_focus = AST_R56_australian_internationalism
-						has_completed_focus = AST_R56_socalist_paridice
-						has_completed_focus = AST_R56_young_australian_league
-					}
-				}
-
-				if = {
-					limit = {
-						original_tag = CAN
-						has_global_flag = can_tfv_focus_tree
-					}
-					OR = {
-					}
-				}
-				else_if = { 
-					limit = {
-					 	original_tag = CAN
-						NOT = { has_global_flag = can_tfv_focus_tree }
-					 }
-					has_completed_focus = r56_CAN_conscription_crisis
-				}
-				if = {
-					limit = {
-						original_tag = RAJ
-					}
-					always = no
-				}
-
-				if = {
-					limit = {
-						original_tag = HUN
-						has_dlc = "Death or Dishonor"
-					}
-					NOT = { has_idea = HUN_treaty_of_triannon }
-				}
-				# if = {
-				# 	limit = {
-				# 		original_tag = SWE
-				# 	}
-				# 	NOT = { 
-				# 		has_idea = SWE_swedish_disarmament_idea 
-				# 		has_idea = SWE_swedish_disarmament_1_idea
-				# 	} 
-				# }				
-				if = {
-					limit = {
-						original_tag = USA
-					}
-					NOT = { has_idea = undisturbed_isolation }
-				}
-				if = {
-					limit = {
-						original_tag = SAU
-					}
-					NOT = { has_idea = isolation }
-				}
-				if = {
-					limit = {
-						original_tag = ENG
-						has_dlc = "Man the Guns"
-						has_completed_focus = ENG_concessions_to_the_trade_unions
-					}
-					NOT = { has_country_flag = ENG_cannot_increase_conscription_law }
-				}
-				if = {
-					limit = {
-						original_tag = SPR
-						has_dlc = "La Resistance"
-					}
-					NOT = { has_completed_focus = SPR_all_must_bear_the_torch }
-				}
-				if = {
-					limit = {
-						original_tag = BUL
-						has_global_flag = bul_bftb_focus_tree
-					}
-					NOT = { has_idea = BUL_army_restrictions }
-				}
-				if = {
-					limit = {
-						original_tag = MON
-					}
-					NOT = { has_completed_focus = MON_changes_within }
-				}
+				
 			}
 
 			ai_will_do = {

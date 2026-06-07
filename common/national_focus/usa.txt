@@ -1659,8 +1659,8 @@ focus_tree = {
 		x = 17
 		y = 2
 		available = {
-			NOT = { has_completed_focus = USA_radicalism_era }
-			NOT = { has_completed_focus = USA_american_reactionism }
+			#NOT = { has_completed_focus = USA_radicalism_era }
+			#NOT = { has_completed_focus = USA_american_reactionism }
 		}
 		completion_reward = { 
 			if = {

@@ -15,6 +15,7 @@ state={
 		add_core_of=TUR
 		buildings={
 			infrastructure = 1
+			industrial_complex=2
 		}
 	}
 	provinces={

@@ -7633,7 +7633,7 @@ japan_focus:0 "Japanese Focus Tree"
  TUR_imperial_scholarship_desc:0 "To catch the Western powers in terms of science and research, we have to educate our new generations. Yet the state has too few resources to fund public education. Instead, we'll pick the best students among the rest, and give them scholarships."
  TUR_demand_batum:0 "Demand Batum"
 
- FRA_ww1_dreyfus_exoneration:0 "Dreyfus Exoneration Aftermath"
+FRA_ww1_dreyfus_exoneration:0 "Exonerate Dreyfus"
  FRA_ww1_dreyfus_exoneration_desc:0 "Exempt since 1906, Alfred Dreyfus is still at the heart of the political debate. It is time to close this painful parenthesis of the 3rd Republic."
 
  FRA_ww1_save_the_republic:0 "Save the Republic"
@@ -7654,48 +7654,6 @@ japan_focus:0 "Japanese Focus Tree"
  FRA_ww1_the_social_democrat_compromise:0 "The Social Democrat Compromise"
  FRA_ww1_the_social_democrat_compromise_desc:0 "French politics are too tense and our economy too weak to stand up against the central powers on a lasting basis. It is time to initiate a fundamental reform of the government and to transform our economy through the construction of railroads."
 
- FRA_billion_francs_man:0 "The Billion Francs Man"
- FRA_billion_francs_man_desc:0 "François Coty is a powerful multimillionaire with an exciting career. This major investor will make France one of the largest economies in Europe."
-
- FRA_there_is_another:0 "\"There is Another\""
- FRA_there_is_another_desc:0 "Finally, after the accumulation of an incredible number of events, George Valois, 15 years ago a figure completely unknown to the general public, was appointed Prime Minister. Thus the way is opened towards an unprecedented economic reformism: national syndicalism."
- FRA_valois_governement:0 "Nationalist Government Formed"
-
- FRA_assert_total_media_control:0 "Assert Total Media Control"
- FRA_assert_total_media_control_desc:0 "The new government has substantial secret funds intended to take control of a large part of the daily independent newspapers. The goal of [FRA.getLeader] is to use the media as propaganda to spread the government's nationalist ideology."
-
- FRA_moscow_accounts_issue:0 "Moscow Accounts Issue"
- FRA_moscow_accounts_issue_desc:0 "The civil war in Russia caused the collapse of French industries in Russia, previously very present. This shortfall is added to the seizure of factories, banks and company reserves following the actions of the Bolsheviks. The new government should confront the Russian authorities in order to obtain reparations."
-
- FRA_autarky:0 "French Autarky"
- FRA_autarky_desc:0 "France must have the means to be autonomous in its supply of resources, but also in the management of its industry and its assets."
-
- FRA_franciste_rethoric:0 "Franciste Rethoric"
- FRA_franciste_rethoric_desc:0 "It is obvious that the new government is ambitious and that its reforms cannot only be economic. France must maintain its aura, and to do so, it must unite around strong values aimed at projecting an inevitable influence on the other nations of Europe."
-
- FRA_undermine_the_old_guard:0 "Undermine the Old Guard"
- FRA_undermine_the_old_guard_desc:0 "France is evolving towards a new social and economic doctrine which is no longer compatible with the exaggerated republicanism of certain representatives of the united right. The latter must be removed outright or by force from positions of responsibility, then isolated from the political scene."
-
- FRA_death_to_plutocracy:0 "Death to Plutocracy"
- FRA_death_to_plutocracy_desc:0 "The aristocracy takes advantage of national wealth and accumulates it without reinjecting it into the state coffers, impoverishing the nation. They are, along with the socialists, natural enemies and must be fought."
-
- FRA_milice_socialiste_nationale:0 "Milice Socialiste Nationale"
- FRA_milice_socialiste_nationale_desc:0 "Our supporters are openly engaged in the fight against socialism, banditry and the defense of the nation. Thus, young popular guards called "blue shirts" gradually gathered in the main cities of France."
-
- FRA_date_fascist_consitution:0 "[GetYear] Executive Constitution"
- FRA_date_fascist_consitution_desc:0 "With the Emperor relative political absence, we get an ideal opportunity to consolidate our position in power by drafting a new constitution offering more power to the prime minister. This great political revolution will allow us to make Napoleon a popular consultative figure who will not hinder executive work"
-
- FRA_monarchist_syndicalism:0 "Monarchist-Syndicalism"
- FRA_monarchist_syndicalism_desc:0 "The ideas of Georges Valois, Georges Sorel and Pierre-Joseph Proudhon cannot be distorted by an exacerbated nationalism, latent anti-Semitism and a forgetting of the struggle of the working classes. A factionalism has established itself within the imperialist group, it is imperative to clarify the party line."
-
- FRA_national_socialism:0 "National-Socialism"
- FRA_national_socialism_desc:0 "A movement is starting in Europe, first in Italy, then here in France. The association of nationalism, royalism and class struggle has always been the objective of the Proudhon circle from which Georges Valois seems inexorably moving away. He no longer has his place in the party."
-
- FRA_la_main_bleue:0 "La Main Bleue"
- FRA_la_main_bleue_desc:0 "The Blue Hand is the secret service of the Francoist party, responsible for protecting its members and monitoring the political activities of its competitors. It's action can be linked to that of the government to facilitate the expansion of fascism in France."
-
- FRA_strengthen_ties_with_italy:0 "Strengthen Ties with Italy"
- FRA_strengthen_ties_with_italy_desc:0 "The strong regime of [ITA.getLeader] commands respect and constitutes the first organized fascist state in the world. We must follow the example of our neighbor and strengthen our mutual partnership, particularly in the area of infrastructure and military technologies."
 
  FRA_ww1_form_the_proudhon_circle:0 "Form the Proudhon Circle"
  FRA_ww1_form_the_proudhon_circle_desc:0 "The last 40 years have proven that the French Republic is weak. The best years of France were under the reigns of Kings and Emperors. Despite the defeat of Napoleon III, the people can, will, and will still believe in it."
@@ -7712,49 +7670,14 @@ japan_focus:0 "Japanese Focus Tree"
  FRA_ww1_ally_the_republican_alliance:0 "Ally the Republicans"
  FRA_ww1_ally_the_republican_alliance_desc:0 "The SFIO and the few independents who have joined us are too limited an opposition force. We must accept the conditions of alliance of the republican alliance and form a popular union of the left."
 
- FRA_ww1_socialist_mentality:0 "Consolidate the Cartel des Gauches"
+ FRA_ww1_socialist_mentality:0 "Socialist Mentality"
  FRA_ww1_socialist_mentality_desc:0 "Our common formation with the democratic alliance is a godsend, it allows us to manipulate its voters through political maneuvers. By showing charisma and authority for the cause, we could gain the upper hand over the Democratic leaders and force the merger of the left bloc within the SFIO."
-
- FRA_ww1_worker_cooperatives:0 "Sponsor Workers Cooperatives"
- FRA_ww1_worker_cooperatives_desc:0 "The industrialization of France took place around large family groups and companies owned by rich investors. To assist in wealth calibration, the government can establish state-sponsored enterprise status. “Coopératives Ouvrières” are a type of business where income is shared equitably among workers."
-
- FRA_ww1_1911_congres_of_paris:0 "[GetYear] Congres of Paris"
- FRA_ww1_1911_congres_of_paris_desc:0 "The congress is the highest body of the French Section of the Workers' International. The role of the congress is to set the political line of the party and to elect its leadership, which has a margin of maneuver increased by recent events and the openness of the government of [FRA.getLeader] to reforms."
-
- FRA_ww1_extended_income_tax:0 "Socialist Income Tax"
- FRA_ww1_extended_income_tax_desc:0 "Income tax is a socialist idea about to be adopted by parliament. Our popularity allows us to modify the text in passing to tax largely the holders of great fortunes."
-
- FRA_ww1_ban_far_right_leagues:0 "Ban Far Right Leagues"
- FRA_ww1_ban_far_right_leagues_desc:0 "Militarist nationalist groups threaten the stability of our institutions by supporting a decadent and dehumanized aristocracy. In addition to advocating unacceptable violence, these groups offer no future to the Republic and therefore do not deserve to be authorized in parliament."
-
- FRA_fascism_banned:0 "Fascism is Banned"
-
- FRA_ww1_attract_moderate_support:0 "Attract Moderate Support"
- FRA_ww1_attract_moderate_support_desc:0 "The democratic socialist alliance that we are forming must reach every deputy and senator imbued with ideals of equality and justice. The workers' struggle is a unifying struggle allowing the accumulation of sufficient popular sympathy to be considered an acceptable extreme."
-
- FRA_ww1_armee_nouvelle:0 "Armée Nouvelle"
- FRA_ww1_armee_nouvelle_desc:0 "The SFIO and the socialists have always been opposed to the professional army. Deeply opposed to offensive and modern warfare, they recommend a reform of our military apparatus. Their proposal to limit the professional army in favor of a militia force similar to the Swiss model."
-
- FRA_ww1_kick_caillaux:0 "Jaurès Parliamentary Commission of Inquiry"
- FRA_ww1_kick_caillaux_desc:0 "Strong suspicions are expressed as to the rigor of Minister Joseph Caillaux. Journalists have put forward evidence revealing the misappropriation of confidential documents, political insincerity and fraud. A special commission was established in 1911 by Jean Jaurès to elucidate this affair; extended funding would put an end to this matter."
 
  FRA_ww1_support_for_universities:0 "Support for Universities"
  FRA_ww1_support_for_universities_desc:0 "The basis of a socialist movement and to promote evolution, youth and progress. We must invest in the expansion of universities in Paris, Nantes, Bordeaux and Marseille!"
 
  FRA_ww1_mention_de_censure:0 "Motion de censure"
  FRA_ww1_mention_de_censure_desc:0 "Our popularity is indisputable and the Democratic government can no longer rally its people as it did two years ago. It is time to bring our parties together and propose a motion de censure - a democratic act allowing the dissolution of the government. Given our majority presence in the parliament as well as our backing by the working people, we are bound to be successful."
-
- FRA_fete_du_travail:0 "Guesde Worktime Law"
- FRA_fete_du_travail_desc:0 "In 1890, the deputy Jules Guesdes proposed the establishment of a working day on May 1, dedicated to the struggle between social classes. This major celebration could be institutionalized and be the perfect anchor point for a reduction in working hours to 8 hours, much requested by workers."
-
- FRA_nationalization_of_heavy_industries:0 "Nationalize Heavy Industries"
- FRA_nationalization_of_heavy_industries_desc:0 "The large French industrial groups are mainly made up of rich families and transferred by inheritance. This situation gives unfailing economic and political power to its aristocrats. The nationalization of large industries will allow the calibration of opportunities and give full industrial potential to the state."
-
- FRA_anarchists_dominant:0 "Guesdists Dominants"
- FRA_anarchists_dominant_desc:0 "The radical wing of the party managed to gain the upper hand over the entire French left. A real transformation of the state will be possible, intended to destroy everything that remains of the old regime."
-
- FRA_reformists_dominant:0 "Reformists Dominants"
- FRA_reformists_dominant_desc:0 "The philosophical heirs of Jaurès managed to maintain total control over the party. Moderates and reforms are the only ones capable of guaranteeing the stability of the state over the long term."
 
  FRA_ww1_socialist_reality:0 "Socialist Reality"
  FRA_ww1_socialist_reality_desc:0 "The formation of the new socialist government will make it possible to reconsider French internal policy by chasing away the conflictuality which resided within the democratic government."
@@ -7786,10 +7709,10 @@ japan_focus:0 "Japanese Focus Tree"
  FRA_ww1_ministerial_reform:0 "Ministerial Changes"
  FRA_ww1_ministerial_reform_desc:0 "Part of the French leadership problem is based on the inconsistency of its political bloc. Unions mixing right and left, the impotence of the president and various other factors make the leadership of the Republic difficult. We should start with a series of laws relaxing ministerial powers for the benefit of other ministers."
 
- FRA_ww1_government_reform:0 "Concession to Liberals"
- FRA_ww1_government_reform_desc:0 "In order to obtain a grand alliance on the left, we must make concessions within government and include centrist and socialist figures in some semblance of cohesion. This period of transition constitutes the basis for a new political beginning."
+ FRA_ww1_government_reform:0 "Government Reform"
+ FRA_ww1_government_reform_desc:0 "Something telling me we're getting a little ahead? It does not matter, let's reform the gournemental system in depth by increasing the size of the ministerial mandates to come, by unveiling an anti-corruption law and various projects of inclusion for the working classes."
 
- FRA_ww1_political_coherence:0 "\"All-Left\" Radical Program"
+ FRA_ww1_political_coherence:0 "Political Coherence"
  FRA_ww1_political_coherence_desc:0 "The reduction of the French political weight requires an optimization of the management of our economy. Minister Aristide Briand has demonstrated over the course of several terms his involvement in the management of French industrial expansion. Let us offer him a place of choice within the new administration."
 
  FRA_ww1_improve_the_railways:0 "Improve Railways"
@@ -7803,20 +7726,7 @@ japan_focus:0 "Japanese Focus Tree"
 
 
  FRA_ww1_social_democrat_bloc_united:0 "Social Democrat Bloc United"
- FRA_ww1_social_democrat_bloc_united_desc:0 "The reform of the government to include moderate socialists is complete, it has allowed the establishment of a stable coalition capable of operating in the long term. Some private arrangements must still be made so that parliamentarians do not come into conflict, particularly over the sharing of constituencies where they are running."
- FRA_paul_doumer_integration:0 "Paul Doumer Integration in AD"
-
- FRA_from_guesdes_to_combes:0 "From Guesdes to Combes"
- FRA_from_guesdes_to_combes_desc:0 "The union of the left must include its entire spectrum, including the unionist, communist and anarchist extreme left. This effort will allow us to reform a true left-wing cartel, an incompressible popular union."
-
- FRA_ww1_establish_france_equatoriale:0 "Form the \"France Equatoriale\""
- FRA_ww1_establish_france_equatoriale_desc:0 "Equatorial Africa was created in January 1910. Despite everything, the concrete establishment of this new administration is still in its infancy and requires government investment for the construction of official buildings, administrators' residences and roads."
-
- FRA_ww1_press_abolition_of_slavery_in_africa:0 "Press Abolition of Slavery in Africa"
- FRA_ww1_press_abolition_of_slavery_in_africa_desc:0 "Despite a 1905 law prohibiting slavery in colonial Africa, the tribal practice of slavery is still widespread. The government must quickly enforce the law within the refractory territories at the risk of agitating the socialist opposition."
-
- FRA_ww1_ecole_normale_william_ponty:0 "Ecole Normale William-Ponty"
- FRA_ww1_ecole_normale_william_ponty_desc:0 "A lack of public service officials severely limits the administration of the territory, making it impossible to take a census, conscript or mobilize residents. The construction of a higher education school in Africa would make it possible to train a greater number of public service administrators. An ideal location was found in Senegal on the island of Gorée."
+ FRA_ww1_social_democrat_bloc_united_desc:0 "The reforms are finished, after so much effort, France is no longer affected by the unstable bureaucracy of the 3rd Republic!"
 
  FRA_ww1_research_budget:0 "Research Budget"
  FRA_ww1_research_budget_desc:0 "We can allocate part of our funds to investment in new projects by the benefits of our industrial policy."
@@ -7835,32 +7745,15 @@ japan_focus:0 "Japanese Focus Tree"
 
  FRA_ww1_toward_algerian_self_managment:0 "Toward Maghrebian Self Managment"
  FRA_ww1_toward_algerian_self_managment_desc:0 "Algeria is a strong nation which should be offered increased autonomy. With the help of strong investments, we would be able to make this colony a sister country capable of supporting us in our international initiatives. We should also release Morroco and Tunisia to liberate whole maghreb."
- FRA_you_already_disbanded_algerian_army:0 "You already deleted the §Y\"Division Nord-Africaine\"§!, so you will have to pay to form a new Algerian army."
- FRA_you_already_disbanded_african_army:0 "You already deleted the §Y\"Regiment de Tirailleurs\"§!, so you will have to pay to form a new African army."
-
- FRA_continue_fransication_program:0 "Continue the Francisation Program"
- FRA_continue_fransication_program_desc:0 "Algeria is a settlement colony; our manifest destiny is to make it an inalienable part of French territory. To do this, we must intensify our efforts in the region through massive investment."
 
  FRA_ww1_take_advantage_of_colonial_resources:0 "Take Advantage of Colonial Ressources"
  FRA_ww1_take_advantage_of_colonial_resources_desc:0 "We have an indisputable stranglehold in Africa that we absolutely must exploit. By funding local authorities, we could get better returns."
 
- FRA_ww1_union_sacree:0 "L'Union Sacrée"
- FRA_ww1_union_sacree_desc:0 "War does not allow opposition within parliament. The government must be able to present and pass emergency laws. The French parties must unite in a providential alliance intended to defeat the enemy."
-
  FRA_ww1_end_champagne_riots:0 "End Champagne Riots"
- FRA_ww1_end_champagne_riots_desc:0 "French farmers are suffering from very poor wine harvests and are asking for help from the state. This precarious situation has triggered a series of unacceptable demonstrations and acts of resistance that the government must put down at all costs, even if it is necessary to send in the army."
+  FRA_ww1_end_champagne_riots_desc:0 "French farmers are suffering from very poor wine harvests and are asking for help from the state. We must provide our support to local economies by developing vines on new land while controlling the appellation of Champagne wine."
 
  FRA_ww1_rebuild_vineyard_production:0 "Rebuild Vineyard Production"
  FRA_ww1_rebuild_vineyard_production_desc:0 "In accordance with our commitments, we can build new agricultural areas in order to permanently ease tensions in the east."
-
- FRA_ww1_support_the_bourse_du_travail:0 "Support the \"Bourse du Travail\""
- FRA_ww1_support_the_bourse_du_travail_desc:0 "The labor exchange is an establishment in which different unions united in the popular struggle come together. Several buildings exist in some large cities such as Paris or Bordeaux, but others can be built. The spread of socialist ideology is the key to victory!"
-
- FRA_ww1_briand_law:0 "Briand Law"
- FRA_ww1_briand_law_desc:0 "Prime Minister during the peak of the champagne farmers' crisis, Artistide Briand is a moderate socialist perfectly in tune with the demands of winegrowers. With the help of a consensus from the left-wing cartel, a law supporting protected designation products can be passed, releasing funds for regions affected by phylloxera."
-
- FRA_ww1_briand_law_center_right:0 "Briand Law"
- FRA_ww1_briand_law_center_right_desc:0 "Prime Minister during the peak of the champagne farmers' crisis, Aristide Briand is a moderate socialist perfectly in tune with the demands of winegrowers. With the help of a consensus from the left-wing cartel, a law supporting protected designation products can be passed, releasing funds for regions affected by phylloxera."
 
  FRA_ww1_market_dynamism:0 "Market Dynamism"
  FRA_ww1_market_dynamism_desc:0 "The revival of the wine-growing economy is an open door to broader investments in the development of our industry. We are able to improve the productivity of our tools with the same means."
@@ -7875,69 +7768,39 @@ japan_focus:0 "Japanese Focus Tree"
  FRA_ww1_develop_germanophobia:0 "Develop Germanophobia"
  FRA_ww1_develop_germanophobia_desc:0 "In order to fuel the war effort to come, the French people must be recruited against the Germans. By comparing the Kaiser's Empire to a hungry ogre, we will convince every inhabitant to fight."
 
- FRA_ww1_union_des_interest_economiques:0 "Union des intérêts Economiques"
- FRA_ww1_union_des_interest_economiques_desc:0 "The Union of Economic Interests is a liberal employers' organization supporting the demands of small and medium-sized businesses. This union allows the fight for monopolies and assistance in the creation of new competitive businesses."
+FRA_ww1_union_des_interest_economiques:0 "Union des intérêts Economiques"
+FRA_ww1_union_des_interest_economiques_desc:0 "The Union of Economic Interests is a liberal employers' organization supporting the demands of small and medium-sized businesses. This union union allows the fight for monopolies and assistance in the creation of new competitive businesses."
 
- FRA_ww1_ils_ne_passeront_pas:0 "Ils ne passeront pas!"
+  FRA_ww1_ils_ne_passeront_pas:0 "Ils ne passeront pas!"
  FRA_ww1_ils_ne_passeront_pas_desc:0 "Do the Germans think they have a chance? The disaster of 1870 will not happen again! Never !"
 
- FRA_ww1_gold_campaign:0 "Gold Campaign"
- FRA_ww1_gold_campaign_desc:0 "French citizens still own many gold coins, tools and trinkets. These valuable resources can be used to boost our economy when we need it most. In exchange for their gold items, volunteers will receive a large sum of money in the form of treasury bonds."
+FRA_ww1_gold_campaign:0 "Gold Campaign"
+FRA_ww1_gold_campaign_desc:0 "French citizens still own many gold coins, tools and kisses. These valuable resources can be used to boost our economy when we need it most. In exchange for their gold items, volunteers will receive a large sum of money in the form of treasury bonds."
 
  FRA_ww1_franco_italian_ties:0 "Franco-Italian Ties"
  FRA_ww1_franco_italian_ties_desc:0 "Our relations with Italy have been excellent since the beginning of the last century under the aegis of the great Napoleon. The emperor reunified Italy and allowed it to become a regional power. Since then, France has always supported Rome in its struggle for liberation, especially against the Austrians. Let us fight together!"
 
- FRA_form_regiment_alpins:0 "Deploy §Y3 Divisions§! composed by §Y12 Mountaineers Battalions§! in §YProvence§!."
- FRA_form_2_9_widh_divisions:0 "Deploy §Y2 Divisions§! composed by §Y9 Infantry Battalions§!."
- FRA_form_5_6_widh_divisions:0 "Deploy §Y5 Divisions§! composed by §Y6 Camel Battalions§! in northern Africa."
+FRA_form_regiment_alpins:0 "Deploy §Y3 Divisions§! composed by §Y12 Mountaineers Battalions§! in §YProvence§!."
+FRA_form_2_9_widh_divisions:0 "Deploy §Y2 Divisions§! composed by §Y9 Infantry Battalions§!."
+FRA_form_5_6_widh_divisions:0 "Deploy §Y5 Divisions§! composed by §Y6 Camel Battalions§! in northern Africa."
 
- FRA_ww1_groussier_insurance_law:0 "Groussier Insurance Law"
- FRA_ww1_groussier_insurance_law_desc:0 "Arthur Groussier's law institutionalizes worker safety and the labor code within the constitution of the 3rd republic, this step towards the socialists should ensure the stability of extremist movements."
+FRA_ww1_groussier_insurance_law:0 "Groussier Insurance Law"
+FRA_ww1_groussier_insurance_law_desc:0 "Arthur Groussier's law institutionalizes worker safety and the labor code within the constitution of the 3rd republic, this step towards the socialists should ensure the stability of extremist movements."
  
- FRA_ww1_reform_the_impot_sur_le_revenu:0 "Income Tax Reform"
- FRA_ww1_reform_the_impot_sur_le_revenu_desc:0 "State revenues do not allow for full economic and military preparation against our neighbors. Tensions in Europe force us to reform and fully implement the income tax discussed for almost ten years in parliament."
-
- FRA_ww1_loi_trois_ans:0 "Loi Trois Ans"
- FRA_ww1_loi_trois_ans_desc:0 "The military tensions in Europe caused by the central powers impose on us a pre-war mobilization of our youth in the form of a minimum three-year conscription within the army."
-
- FRA_doumer_integration_in_AD:0 "Doumer Integration in ARD"
- FRA_doumer_integration_in_AD_desc:0 "After his defeat in the 1906 presidential elections, former deputy Paul Doumer initiated a journey through the political desert. During this long period, he moved into finance and became a talented industrial investor. We could welcome him into the democratic republican alliance, he could assist us in the country's liberal reforms."
-
- FRA_comite_de_guerre:0 "Comité de Guerre"
- FRA_comite_de_guerre_desc:0 "Taking inspiration from the British War Cabinet, we can create our own war committee. It deals with army personnel, armaments, health services and commissariat. Taking inspiration from the British War Cabinet, we can create our own war committee. It deals with army personnel, armaments, health services and stewardship. It's members are the ministers of war, finance, health and the president."
-
- FRA_bonus_if_doumer_is_here:0 "If §YPaul Doumer§! is appointed, give the following bonus:\n"
- FRA_bonus_if_poincare_is_president:0 "If §YRaymond Poincaré§! is president or prime minister, give the following bonus:\n"
-
- FRA_ww1_first_moroccan_campaign:0 "First Moroccan Campaign"
- FRA_ww1_first_moroccan_campaign_desc:0 "The protectorate installed in Morocco is still fragile, strong resistance is established in the countryside and the Moroccan forces must be formed in divisions under the control of the resident general."
-
- FRA_ww1_setup_the_railway_network:0 "Setup the Railway Network"
- FRA_ww1_setup_the_railway_network_desc:0 "The establishment of the protectorate of Morocco allows us to begin major work to connect the railways between Algeria and Morocco. [MOR.getName] will be happy to learn that France cares about the well-being of these client-states."
-
- FRA_ww1_reproduce_the_tunisian_model:0 "Reproduce the Tunisian Model"
- FRA_ww1_reproduce_the_tunisian_model_desc:0 "Morocco will not be a settlement colony like Algeria, but can constitute an important source of troops for our army. By establishing the most limited autonomy possible within the Moroccan elites, we will have a comfortable grip which will allow us to control all current affairs."
-
- FRA_ww1_cooperation_with_sharif:0 "Cooperation with the Sharif"
- FRA_ww1_cooperation_with_sharif_desc:0 "Morocco has always been an independent country, very attached to its national values. We cannot bring about a complete trusteeship of the country. However, we are able to leave much of his powers and authority to the Sultan [MOR.getLeader] while still intervening in areas at risk."
-
- FRA_ww1_african_campaign:0 "African Campaign"
- FRA_ww1_african_campaign_desc:0 "The battles in Africa continue and require additional investment from the French army. Although new units have been formed, they require equipment adapted to the harsh desert climate. This investment will save a large amount of material lost through front allocation."
+FRA_ww1_loi_trois_ans:0 "Loi Trois Ans"
+FRA_ww1_loi_trois_ans_desc:0 "The military tensions in Europe caused by the central powers impose on us a pre-war mobilization of our youth in the form of a minimum three-year conscription within the army."
 
  FRA_ww1_form_the_regiments_alpins:0 "Form the \"Régiments Alpin\""
  FRA_ww1_form_the_regiments_alpins_desc:0 "In order to secure the southern front, we must form units specially prepared for combat in the mountains. These elite troops will be the first to be able to intervene in Italy if, unfortunately, it turns out to be necessary."
 
- FRA_ww1_distribute_the_105mm_1909:0 "Distribute the 105mm 1909"
- FRA_ww1_distribute_the_105mm_1909_desc:0 "Artillery pieces are difficult to transport in steep terrain. Schneider Industries was, however, able to design a cannon that could easily be transported on the back of a mule or horse, or even towed by several motivated men. This new model must be approved and distributed to our infantry divisions."
+FRA_ww1_russian_bail:0 "Support Russian Industrialization"
+FRA_ww1_russian_bail_desc:0 "Russia is asking for funds to build infrastructure and new railways in the west of the country. We are able to provide them with a large sum of 500 million francs to support them in their industrialization."
 
- FRA_ww1_russian_bail:0 "Support Russian Industrialization"
- FRA_ww1_russian_bail_desc:0 "Russia is asking for funds to build infrastructure and new railways in the west of the country. We are able to provide them with a large sum of 500 million francs to support them in their industrialization."
+FRA_extended_reserve_service:0 "Expanded Reserve Service"
+FRA_extended_reserve_service_desc:0 "The Barthou law was modified during its vote in order to allow the mobilization of certain reserves for 7 years instead of the 3 previously voted for."
 
- FRA_extended_reserve_service:0 "Expanded Reserve Service"
- FRA_extended_reserve_service_desc:0 "The Barthou law was modified during its vote in order to allow the mobilization of certain reserves for 7 years instead of the 3 previously voted for."
-
- FRA_ww1_reform_the_reserve_territoriale:0 "Reform the Reserve Territoriale"
- FRA_ww1_reform_the_reserve_territoriale_desc:0 "The Barthou law can be amended to increase military service in the territorial reserves to 7 years. This will have the effect of constituting a new source of men in the event of conflict."
+FRA_ww1_reform_the_reserve_territoriale:0 "Reform the Reserve Territoriale"
+FRA_ww1_reform_the_reserve_territoriale_desc:0 "The Barthou law can be amended to increase military service in the territorial reserves to 7 years. This will have the effect of constituting a new source of men in the event of conflict."
 
  FRA_ww1_help_italy:0 "Send Soldiers to the Italian Front"
  FRA_ww1_help_italy_desc:0 "The tactics and equipment specific to the mountaineers are ready. Let's train our first divisions and organize a major deployment operation in the Alps against the Austro-Hungarian forces!"
@@ -7958,8 +7821,8 @@ japan_focus:0 "Japanese Focus Tree"
  FRA_ww1_fund_berthier:0 "Fund Berthier Rifles"
  FRA_ww1_fund_berthier_desc:0 "The French army has been using Berthiers rifles since 1890. This family of Lebel caliber weapons represents the spearhead of our land force. In order to maintain the credibility of our army, we must maintain strong investments in order to invent the next generations of rank rifles."
 
- FRA_ww1_fund_schneider:0 "Fund Schneider"
- FRA_ww1_fund_schneider_desc:0 "Schneider's artillery guns have equipped many entities of our armies, from our mortars to our most modern battleships. The extension of gun range makes the need to invest in Schneider more and more pressing. The slightest relaxation will grant the Germans a fatal advance."
+ FRA_ww1_fund_schneider:0 "Fund Schneider-Creusot"
+ FRA_ww1_fund_schneider_desc:0 "Schneider's artillery guns have equipped many entities of our armies, from our mortars to our most modern battleships. The extension of gun range makes the need to invest in Schneider-Creusot more and more pressing. The slightest relaxation will grant the Germans a fatal advance."
 
  FRA_ww1_motorization:0 "Motorize the Army"
  FRA_ww1_motorization_desc:0 "The advances in the automobile are dazzling, they make it possible to track heavy loads over hundreds of kilometres. We could take a significant lead over our competitors by selecting a national company committed to the design of infantry transport vehicles."
@@ -7973,22 +7836,17 @@ japan_focus:0 "Japanese Focus Tree"
  FRA_ww1_fund_peugeot:0 "Fund Peugeot"
  FRA_ww1_fund_peugeot_desc:0 "The Peugeot company is a jewel of our industry, its automobile production chain allows us to glimpse military uses through the construction of armored cars."
 
- FRA_jump_in_interwar_tree:0 "§YUnlock the interwar socialist tree immediatly.§!"
- FRA_focus_on_constitutional_reforms:0 "Focus on Constitutional Reforms"
- FRA_focus_on_constitutional_reforms_desc:0 "France cannot worry about the fate of the entire world while it is going through the most important phase in its history. The old regime is dead, and a new, fairer, more equal and more humane entity will take its place. The new republic will be that entity that becomes a beacon for all other nations seeking socialism."
- FRA_cancel_all_alliances:0 "§RLeave the current faction§! and §Ycancel all guarantees and military access§! we gave to other nations."
-
- FRA_ww1_fuhrer_innovation:0 "Berliet CBA"
+ FRA_ww1_fuhrer_innovation:0 "More Innovation"
  FRA_ww1_fuhrer_innovation_desc:0 "Our early armored cars lack armor, aren't fast enough, and have visible weak points. Based on the Rolls-Royce of the British army, we will certainly improve our own machines."
 
- FRA_ww1_long_excepted_war:0 "The Long Expected War"
- FRA_ww1_long_excepted_war_desc:0 "The war finally broke out. The French people must be mobilized urgently to face the threat that awaits us. The general mobilization order is ready to be launched and exceptional measures proposed to parliament will soon be voted on."
+ FRA_ww1_world_breakout:0 "World Breakout"
+ FRA_ww1_world_breakout_desc:0 "The war finally broke out. The French people must be mobilized urgently to face the threat that awaits us. The general mobilization order is ready to be launched and exceptional measures proposed to parliament will soon be voted on."
 
- FRA_ww1_taxis_de_la_marne:0 "Taxis de la Marne"
- FRA_ww1_taxis_de_la_marne_desc:0 "The war imposes on us a radical change of our economy. Production must be redirected to the arms industry in order to equip our men. Gasoline must be rationed, like anything our army might need."
+ FRA_ww1_war_economy:0 "War Economy"
+ FRA_ww1_war_economy_desc:0 "The war imposes on us a radical change of our economy. Production must be redirected to the arms industry in order to equip our men. Gasoline must be rationed, like anything our army might need."
 
- FRA_voie_sacree:0 "Voie Sacrée"
- FRA_voie_sacree_desc:0 "The war we are waging demands more resources than any other in the past. We must innovate in the maintenance and construction of new roads leading to the front, whether for horses, cars, or trains"
+ FRA_ww1_emergency_measures:0 "Emergency Measures"
+ FRA_ww1_emergency_measures_desc:0 "The development of the Great War caused a slowdown in direct infantry combat, which often boiled down to long phases of bombing. We must put in place a more efficient research and innovation system by financing our independents in the military sector."
 
  FRA_ww1_anti_air_positions:0 "Anti-Air Positions"
  FRA_ww1_anti_air_positions_desc:0 "The central powers have developed an aviation capable of competing with ours, we cannot let the Germans dominate the skies of France. With the help of high caliber machine guns, it is possible to destroy enemy aircraft at more than a kilometer away. Let's equip our forts and our divisions with guns of this kind!"
@@ -7996,33 +7854,11 @@ japan_focus:0 "Japanese Focus Tree"
  FRA_ww1_mechanized_effort:0 "Mechanized Effort"
  FRA_ww1_mechanized_effort_desc:0 "Trench warfare marks the golden age of machine guns and artillery. Our soldiers are vulnerable to such weapons and our current means do not allow us to stem this evil. With the help of a sufficiently armored vehicle with long tracks, it might be possible to cross the fortifications without fear of infantry fire."
 
- FRA_ww1_fund_apx:0 "Fund APX"
- FRA_ww1_fund_apx_desc:0 "The “Atelier de Construction de Puteaux” are able to design cannons transportable by infantry and small vehicles intended to combat enemy armored vehicles and cars. We need their support to implement a counter-anti-tank combat strategy."
-
  FRA_ww1_the_french_miracle:0 "The French Miracle"
- FRA_ww1_the_french_miracle_desc:0 "There is one thing the Boches will never have, the French ingeniosity. Our people are capable of incredible feats, from Charlemagne to Napoleon. Let's put all our efforts into a single tank model, fast, with a rotative turret and a short fast-reloading gun, put the engine in the rear, raise the tracks and make it a legend."
+ FRA_ww1_the_french_miracle_desc:0 "There is one thing the Boches will never have, the french ingeniosity. Our people are capable of incredible feats, from Charlemagne to Napoleon. Let's put all our efforts into a single tank model, fast, with a rotative turret and a short fast-reloading gun, put the engine in the rear, raise the tracks and make it a legend."
 
- FRA_ww1_favor_peugeot_tank:0 "Favor the Peugeot Tank"
- FRA_ww1_favor_peugeot_tank_desc:0 "The first experiments on the FT tanks demonstrated the weaknesses induced by their weak armour and the very relative usefulness of their turret. The Peugeot project proposes a tank that is more resistant and better adapted to trench warfare, in particular thanks to its thick cast armour."
-
- FRA_ww1_CA1_early_production:0 "CA1 Early Production"
- FRA_ww1_CA1_early_production_desc:0 "Our tracked vehicle project is completed, it is now time to produce the first models. The Schneider CA 1 is our most advanced prototype, capable of crossing large trenches and resisting heavy fire from machine gun nests."
- FRA_ca1_80_percent_done:0 ""
-
- FRA_ww1_plan_xvii:0 "Plan XVII"
- FRA_ww1_plan_xvii_desc:0 "Following the defeat against Prussia, France carried out several mobilization plans intended to prepare the country in the event of conflict with Germany. If plans XIV to XVI (i.e. until 1909) were defensive, we now have the means to launch major offensives in the event of war via plan XVII."
-
- FRA_ww1_meuse_plan:0 "Meuse Plan"
- FRA_ww1_meuse_plan_desc:0 "Generalissimo Michel proposes in his action plan the mobilization of additional units across the entire Belgian border. It is necessary to increase the presence of territorial reserves in these key sectors to obtain additional garrisons. These new groups will be able to intervene in Belgium, if the local government is cooperative..."
-
- FRA_ww1_to_rhineland:0 "To Rhineland"
- FRA_ww1_to_rhineland_desc:0 "Our alliance with Russia and the thinly veiled neutrality of Italy allow us to plan offensives from the first weeks of the conflict by mobilizing a large part of our forces in Champagne-Ardenne. This modification of Plan XVII, called "variant No. 2" orders a massive attack towards Mulhouse in Metz in order to advance towards Strabourg and retake the region of Alsace Lorraine."
-
- FRA_ww1_trust_michel:0 "Trust Michel"
- FRA_ww1_trust_michel_desc:0 "New Generalissimo, General Victor Michel proposed to anticipate German war maneuvers by placing the majority of the armed forces at the level of Belgium. The overall plan would thus be to secure this potential flank as a priority, while placing a third of the army only on the Franco-German border."
-
- FRA_ww1_trust_joffre:0 "Trust Joffre" 
- FRA_ww1_trust_joffre_desc:0 "Generalissimo Victor Michel's plan is not to the taste of the government, nor even of the rest of the general staff who find it unrealistic. The French army must maneuver offensively and directly retake Alsace-Lorraine without worrying about the defense of a neutral neighbor. General Joffre, second chief of staff replacing Michel."
+ FRA_ww1_beyond_fear:0 "Beyond Fear"
+ FRA_ww1_beyond_fear_desc:0 "Don't let the defeats of the past bring us down! The French people have known difficult times but have always known how to come back to the charge! Let's carry out an awareness campaign for the national work in order to direct popular opinion in our direction!"
 
  FRA_ww1_revanchist_propaganda:0 "Revanchist Propaganda"
  FRA_ww1_revanchist_propaganda_desc:0 "The war effort of a global conflict would be colossal, the French people must be ready for such an effort. By inflaming nationalist sentiment, we can secure unprecedented popular support."
@@ -8042,17 +7878,9 @@ japan_focus:0 "Japanese Focus Tree"
  FRA_ww1_defensive_stratagems:0 "Defensive Strategies"
  FRA_ww1_defensive_stratagems_desc:0 "Protected in the trenches, the soldiers only have to wait for the adversary while plundering it with a deadly fire which will dissuade them from entering France."
 
- FRA_ww1_french_air_force:0 "First Conference on Air Navigation"
+ FRA_ww1_french_air_force:0 "French Air Force"
+ FRA_ww1_french_air_force:1 "First Conference on Air Navigation"
  FRA_ww1_french_air_force_desc:0 "France is a pioneer in aviation, we already have a few functional reconnaissance prototypes and a handful of zeppelins. Nevertheless, these flying devices seem to have great potential that should be exploited."
-
- FRA_aeronotique_militaire:0 "Aéronautique Militaire"
- FRA_aeronotique_militaire_desc:0 "The competitions at the Reims airfield allowed us to evaluate which were the best aircraft to equip our army with reconnaissance vehicles. We can use this experience to acquire our first squadrons."
-
- FRA_aerial_bombardment_experiments:0 "Aerial Bombardment Experiments"
- FRA_aerial_bombardment_experiments_desc:0 "The military conducted its first tests of using aircraft to drop explosive payloads from the air. These experiments, carried out with planes like the Blériot XI, aimed to assess the precision and effectiveness of this new offensive approach."
-
- FRA_fund_pilot_schools:0 "Fund Pilot Schools"
- FRA_fund_pilot_schools_desc:0 "The training of new pilots is an essential step in building a real air component. Schools can be opened on the grounds of Chartres and Avord to begin their apprenticeship."
 
  FRA_ww1_old_school:0 "Old School"
  FRA_ww1_old_school_desc:0 "By following the German model, ie a large army of airships, we ensure certain comforts. It is enough to reproduce the plans of the enemy and to improve certain concepts to obtain the best performance."
@@ -8063,9 +7891,6 @@ japan_focus:0 "Japanese Focus Tree"
  FRA_ww1_air_fortress:0 "Air Fortresses"
  FRA_ww1_air_fortress_desc:0 "The competition for the most powerful juggernaut is underway against the Boches, let's build ever bigger airships! To achieve such masterpieces, a large amount of ammunition will have to be transported, as well as an imposing frame."
 
- FRA_SPAD_mass_production:0 "SPAD Mass Production"
- FRA_SPAD_mass_production_desc:0 "In order to compete with German industry, France must mass produce inexpensive and reliable aircraft on a standardized line. We do not have the resources to carry out a zeppelin campaign, emphasizing our efforts on a light and numerous air force."
-
  FRA_ww1_zeppelin_focus:0 "Spiess Airships"
  FRA_ww1_zeppelin_focus_desc:0 "Optimizing Spiess Rigid Airship steering gear is a good step towards genre perfection. There are other points of interest, the increase in the size of the cabins or the reliability of the device. Working on these elements seems essential to obtaining technological superiority in the field."
 
@@ -8075,17 +7900,8 @@ japan_focus:0 "Japanese Focus Tree"
  FRA_ww1_close_air_support:0 "Close Air Support Focus"
  FRA_ww1_close_air_support_desc:0 "As biplane engines increased in power, it became possible to carry heavier loads. This flexibility allows the storage of several bombs, even high caliber machine guns for ground troops."
 
- FRA_ww1_fund_nieuport:0 "Support Nieuport Company"
+ FRA_ww1_fund_nieuport:0 "Fund Nieuport Air Company"
  FRA_ww1_fund_nieuport_desc:0 "The Nieuport company is a pioneer in the French aeronautical industry. Funding the company will also fund the air war against Germany."
-
- FRA_support_astra_torres:0 "Sponsor Astra-Torres"
- FRA_support_astra_torres_desc:0 "the funds allocated to the construction of new airships are too low to compete with Germany. We need to increase funding to design new zeppelin-inspired airships."
-
- FRA_dae_factories:0 "Daé Factories"
- FRA_dae_factories_desc:0 "In order to form the first \"Daé\" air division, we must mobilize civilian aviation factories to the war effort and mass produce models of modern fighters and bombers."
-
- FRA_combined_arms_grouping:0 "Combined Arms Grouping"
- FRA_combined_arms_grouping_desc:0 "The experiments carried out on the Farman and Blériot aircraft demonstrated the capital importance that aviation could have for all branches of the army. Contrary to what the old school polytechnicians thought, planes promise to revolutionize the entire battlefield, and not just artillery."
 
  FRA_ww1_protector_of_the_weakests:0 "Protector of the Weakest"
  FRA_ww1_protector_of_the_weakests_desc:0 "France is the country of revolutionary democracy, freedom, and justice. It is the just duty of our nation to protect the weak and to ensure that the fires of justice and democracy do not get washed away by the rising tides of autocracy."
@@ -8096,7 +7912,7 @@ japan_focus:0 "Japanese Focus Tree"
  FRA_ww1_support_far_right:0 "Support Far-Right Leagues"
  FRA_ww1_support_far_right_desc:0 "Republican inaction and Communist support are teeming threats to the stability of our nation. France has unrivaled war potential through the bravery of its people and the quality of its industry. With a strong leader, the nation could regain its thirst for glory and build an ambition of conquest worthy of its greatest golden ages."
 
- FRA_far_right_alliance:0 "§YRight and far right parties§! will merge, allowing us to combine §gPopular Liberal Action§!, §LNationalists§!, §CIndependent republicans§! and §2Conservatives§! seats."
+ FRA_far_right_alliance:0 "§YRight and far right parties§! will merge, allowing us to combine §gPopular Liberal Action§!, §LNationalists§!, §CIndependent republicans§! and §BConservatives§! seats.\n\n§YWe gonna get more seats for next elections !§!"
 
  FRA_ww1_revive_national_spirit:0 "Revive National Spirit"
  FRA_ww1_revive_national_spirit_desc:0 "The burning flame of nationalism was almost extinguished after our humiliating death by the hands of the Prussians. No more will this apathy and defeatism continue! It is time to launch a large-scale campaign based on the exploits of past France and its conquests. Never again will we remain a humiliated country isolated from international issues!"
@@ -8107,165 +7923,38 @@ japan_focus:0 "Japanese Focus Tree"
  FRA_ww1_prepare_the_next_elections:0 "Prepare for the next elections"
  FRA_ww1_prepare_the_next_elections_desc:0 "Royalist or nationalist parties alone are not enough to obtain a majority in parliament, or even come close to it. We must await the next elections by proposing future alliances with the parties of the traditional right."
 
- FRA_join_socialists:0 "\nSelecting §Ythis focus§! will place us in the role of the £parliament_party_icon|[?v] [GetParliamentPartyName]. \n\n§ROur alliance will combine socialists seats!§!"
- FRA_join_democrats_socialists:0 "\nSelecting §Ythis focus§! will place us in the role of the £parliament_party_icon|[?v] [GetParliamentPartyName]. \n\n§ROur alliance will combine moderate socialists and radicals seats!§!"
+ FRA_join_socialists:0 "\nSelecting §Ythis focus§! will place us in the role of §Rthe SFIO§!. \n\n§ROur alliance will combine socialists seats!§!"
+ FRA_join_democrats_socialists:0 "\nSelecting §Ythis focus§! will place us in the role of §Ythe Democratic Republican Alliance§!. \n\n§ROur alliance will combine moderate socialists and radicals seats!§!"
  FRA_get_democrats_socialists_seats:0 "Socialists-Democrats represent [?democrat_socialist_alliance|Y0] seats."
 
- FRA_join_popular_liberal_action:0 "\nSelecting §Ythis focus§! will place us in the role of £parliament_party_icon|[?v] [GetParliamentPartyName]."
+ FRA_join_popular_liberal_action:0 "\nSelecting §Ythis focus§! will place us in the role of §gthe Popular Liberal Action§!."
  FRA_get_popular_liberal_action_seats:0 "Monarchists represent [?popular_liberal_action|Y0] seats."
 
- FRA_join_republicain_federation:0 "\nSelecting §Ythis focus§! will place us in the role of £parliament_party_icon|[?v] [GetParliamentPartyName] which represent [?republicain_federation|Y0] seats."
- FRA_get_republicain_federation_seats:0 "£parliament_party_icon|[?v] [GetParliamentPartyName] represent [?republicain_federation|Y0] seats."
+ FRA_get_socialists_seats:0 "Socialists represents [?socialist_alliance|Y0] seats."
+ FRA_ally_democratic_republican_alliance:0 "The §Ydemocratic republican alliance§! will join our §Ysocialist alliance§!, allowing us to gain [?democratic_republican_alliance|Y0]§Y seats.§!"
 
- FRA_get_socialists_seats:0 "£parliament_party_icon|[?v] [GetParliamentPartyName] represents [?SFIO|Y0] seats."
- FRA_ally_radicals:0 "The £parliament_party_icon|[?v] [GetParliamentPartyName] will join our §YSocialist Alliance§!, allowing us to gain [?radical_party|Y0]§Y seats.§!"
- FRA_ally_democratic_republican_alliance:0 "The £parliament_party_icon|[?v] [GetParliamentPartyName] will join our §YSocialist Alliance§!, allowing us to gain [?democratic_republican_alliance|Y0]§Y seats.§!"
+ FRA_join_democrats_socialists_2:0 "\nSelecting §Ythis focus§! will place us in the role of §Cthe Radical Party§!. \n\n§ROur alliance will combine moderate socialists and radicals seats!§!"
 
- FRA_anticipated_elections_tt:0 "§YNew legislative elections§! will be organized in §Y2 weeks§!. They will allow us to more faithfully transcribe the popularity of our party."
-
- FRA_no_more_parliament_tt:0 "§RNext elections will be suspended until a new constitution is drafted.§!"
-
- FRA_join_democrats_socialists_2:0 "\nSelecting §Ythis focus§! will place us in the role of the £parliament_party_icon|[?v] [GetParliamentPartyName]. \n\n§ROur alliance will combine moderate socialists and radicals seats!§!"
-
- FRA_ww1_meline_agricultural_reforms:0 "Méline Agricultural Reforms"
- FRA_ww1_meline_agricultural_reforms_desc:0 "The Republican deputy Jules Méline proposed a series of agricultural reforms intended to support farmers by postponing the payment of their debts, by offering them low-rate loans or by promoting the creation of shared social funds."
-
- FRA_ww1_amend_waldeck_rousseau_law:0 "Amend Waldeck Rousseau Law"
- FRA_ww1_amend_waldeck_rousseau_law_desc:0 "The Waldeck Rousseau law constitutes a historic advance in the rights of workers to be represented by a union. However, this law is incomplete and should better cover peasant factions, in particular by allowing the financing of common funds, whether at the level of private groups or by the state."
-
- FRA_ww1_state_socialism:0 "State Social Reforms"
- FRA_ww1_state_socialism_desc:0 "The concept of state socialism defines state control over key industries and the direction of the economy. This is an advanced form of protectionism, sometimes mixed with controlled external liberalism. Reforms promoting national industrial autonomy and autarky can be supported by the current government, flattering both the right and the left."
-
- FRA_ww1_cercles_catholiques_ouvriers:0 "Cercles Catholiques Ouvriers"
- FRA_ww1_cercles_catholiques_ouvriers_desc:0 "Catholic Worker Circles are institutions similar to socialist labor exchanges, but aimed at Catholic right-wing workers. Especially present after the fall of Napoleon III, they could be revitalized and participate in our group's effort to accumulate greater popular support among the working classes."
-
- FRA_ww1_support_the_UCIDS:0 "Support the UCIDS"
- FRA_ww1_support_the_UCIDS_desc:0 "The Union of Commerce and Industry for Social Defense is a national association of Christian and nationalist industrialists. The support of the new right-wing bloc for the defense policy of this organization is the guarantee of obtaining appreciable support for future armed conflicts."
-
- FRA_ally_popular_liberal_action:0 "The £parliament_party_icon|[?v] [GetParliamentPartyName] will join our §YConservative Alliance§!, allowing us to gain [?popular_liberal_action|Y0]§Y seats.§!"
- FRA_ally_conservative:0 "£parliament_party_icon|[?v] [GetParliamentPartyName] will join our §YConservative Alliance§!, allowing us to gain [?conservatives|Y0]§Y seats.§!"
- FRA_ally_independent_radicals:0 "£parliament_party_icon|[?v] [GetParliamentPartyName] will join our §YConservative Alliance§!, allowing us to gain [?independent_radicals|Y0]§Y seats.§!"
-
- FRA_AF_revitalization:0 "The monarchist parties £parliament_party_icon|[?v] §g"Action Française"§! and £parliament_party_icon|[?v] [GetParliamentPartyName] will unite under the blessing of §YPope Pius X§!.\n\nThe new party will be more popular and will win §Ymore seats in the next elections§!."
-
- FRA_conservatives_and_republican_federation_merge:0 "£parliament_party_icon|[?v] [GetParliamentPartyName] and £parliament_party_icon|6 §2Republicain Federation§! will merge into a new party called £parliament_party_icon|6 §2\"Republican Rally\"§!."
-
- FRA_undermine_socialists:0 "£parliament_party_icon|[?v] [GetParliamentPartyName] will be the target of §Ymedia attacks§! orchestrated by wealthy figures from the conservative right. §GIt will probably have fewer seats in the next elections.§!"
-
- FRA_ww1_second_case_of_cards:0 "Second Case of Cards"
- FRA_ww1_second_case_of_cards_desc:0 "The 1906 index card affair revealed the existence of a system of index cards tracing the political and religious opinions of French army officers. Fueled by socialist, Freemason and Jewish networks, they made it possible to withdraw numerous Christian or nationalist officers from the army, while blocking the progress of others. And although this system is supposed to be abolished, it is still active."
-
- FRA_reveleation_of_second_case_of_cards:0 "This §YFocus§! will reveal a discriminatory promotion system in the army, favoring §Rsocialist§! and anti-Christian officers before §Lnationalist§! elements.\n\n§RIt could be a deadly blow to the left.§!"
-
- FRA_ww1_center_right_domination:0 "Center-Right Domination"
- FRA_ww1_center_right_domination_desc:0 "The alliance of rights represents all conservative movements, largely rallied by Jacques Piou and his close collaborators. The royalist and nationalist movements secretly attempted to neutralize Piou's leadership in order to take control of the coalition. It will be necessary to lead an internal political campaign intended to put an end to this anti-Republican quarrel."
-
- FRA_ww1_educational_reform:0 "Educational Reform"
- FRA_ww1_educational_reform_desc:0 "The stabilization of the new right-wing cartel has made it possible to offer great support to businesses and the working classes, thus leaving us with great room for maneuver to reform the education system."
-
- FRA_ww1_lorraine_defense_plan:0 "Grand Couronné Defense Line"
- FRA_ww1_lorraine_defense_plan_desc:0 "The deputy Louis Marin proposed the construction of a broad line of defense covering a large part of Lorraine and Champagne intended to thwart a German breakthrough in the event of war. This bold plan could be financed by the government."
- FRA_build_forts_in_lorraine:0 "Build §Ylevel 2 Forts§! on each provinces of §YNancy§! State (§Y17§!)."
-
- FRA_ww1_daudet_takeover:0 "Daudet Takeover"
- FRA_ww1_daudet_takeover_desc:0 "The Christian coalition drew its sources from the fight of the republican monarchists of popular action then French action and nationalists. The national project must be oriented around the restoration of more traditional and nationalist values as part of our national influence and our unity as a people."
-
- FRA_ww1_additional_state_reforms:0 "[GetYear] Reforms"
- FRA_ww1_additional_state_reforms_desc:0 "The first series of reforms from the early 1910s were successful but can be pushed further. The strong nationalist and conservative orientation of the new government allows us to vote for more important laws relating to the control of the socialist leagues and the SFIO, but also in the investment in structures preserving culture and national interests."
-
- FRA_ww1_support_monarchist_elements:0 "Support Monarchist Elements"
- FRA_ww1_support_monarchist_elements_desc:0 "The government is now more open about the support it can accept, particularly from convinced restorationists."
-
- FRA_ww1_support_arenberg_mines:0 "Support Arenberg Mines"
- FRA_ww1_support_arenberg_mines_desc:0 "Auguste Louis Albéric d'Arenberg is close to Jacques Piou, a friend since the formation of the "Ralliement des catholiques de France" owning the Compagnie des mines d'Anzin in the north of France. A large regional industry, it can receive additional funding to increase coal mining."
-
- FRA_SFIO_and_radicals_will_oppose_this:0 "\n£parliament_party_icon|[?v] [GetParliamentPartyName] and £parliament_party_icon|2 §OIndependant Socialists§! will Strongly Oppose the passage of this law. Even if they do not have a majority in the §Yparliament§! and the §Ysenate§!, they risk provoking an §RInsurrectional Situation!§!"
-
- FRA_ww1_revise_1905_law:0 "Revise 1905 Law"
- FRA_ww1_revise_1905_law_desc:0 "The law of 1905 separated the church from the state and constituted France as a secular nation. This law was an error, it deprived the people of a common culture and moral values which made the prestige of our civilization. In addition to the many supports we now have within parliament, we know that a large part of the French population is religious and will be with us in this vital reform."
-
- FRA_ww1_ban_sfio:0 "Ban SFIO"
- FRA_ww1_ban_sfio_desc:0 "The numerous security laws have highlighted the danger represented by revolutionary syndicalism, anarchism and all currents of thought opposed to the state. These laws having passed, it is possible to ban political parties promoting these nauseating ideologies. It is very likely that socialists will join less extreme left-wing parties."
-
- FRA_ww1_rapeal_the_law_of_exile_conservative:0 "Rapeal the Law of Exile"
- FRA_ww1_rapeal_the_law_of_exile_conservative_desc:0 "The law of exile was an error, it deprived France of charismatic figures making it possible to promote national unity. The withdrawal of this harmful law will allow the return of the Bourbon, Orleans and Bonaparte houses."
-
- FRA_ww1_fund_science_po:0 "Fund ELSP"
- FRA_ww1_fund_science_po_desc:0 "The Free School of Political Sciences (ELSP), colloquially known as “Sciences Po”, is a private French higher education establishment created in 1871 by Émile Boutmy. It trains some of the republic's senior executives, as well as certain major industrialists and politicians. Funding and expanding the activities of this school will enable technological, societal and cultural innovation."
-
- FRA_ww1_antagonize_sfio:0 "Antagonize SFIO"
- FRA_ww1_antagonize_sfio_desc:0 "The popularity of radical left-wing movements has greatly increased over the past 15 years. the SFIO promises an emancipation of workers which will only lead to the destruction of the state. Their anti-army, anti-state and anti-capitalist program must be exposed."
-
- FRA_ww1_sponsor_pla_af_fusion:0 "Sponsor PLA-AF Fusion"
- FRA_ww1_sponsor_pla_af_fusion_desc:0 "The two main monarchist parties are opposed on questions relating to the functioning of a state. Due to the Pope's disapproval of the Action Liberale Populaire, a merger should take place with Action Francaise, in order to unite the supporters within a more powerful party."
-
- FRA_ww1_cartel_des_droites:0 "The Cartel des Droites"
- FRA_ww1_cartel_des_droites_desc:0 "The union of the French right is a reality which allows us to be more ambitious when it comes to the influence we can have on national politics. Working closely, conservative groups and the Republican federation could unite to become the largest group in the national assembly."
-
- FRA_fuze_the_fronts:0 "£parliament_party_icon|2 §OIndependents Socialists§! will join the £parliament_party_icon|1 §RSFIO§!."
- FRA_mention_de_censure:0 "§YThe French government§! will be removed from office by the §Yassembly§!."
- FRA_mention_de_censure_socialist:0 "\n§OA Radical-Socialist§! government will be formed."
+ FRA_fuze_the_fronts:0 "The §Ydemocratic republican alliance§! and §Yindependents socialists§! will join §Rthe SFIO§!."
+ FRA_mention_de_censure:0 "§YThe French government§! will be removed from office by the §Yassembly§!. To do this, we need at least §Y150 seats.§!"
+ FRA_mention_de_censure_socialist:0 "\n§RA Radical-Socialist§! government will be formed."
  FRA_150_seats:0 "Control 150 seats"
  FRA_200_seats:0 "Control 200 seats"
  FRA_250_seats:0 "Control 250 seats"
  FRA_300_seats:0 "Control 300 seats"
  FRA_350_seats:0 "Control 350 seats"
 
- FRA_300_seats_no_union:0 "Control 300 seats\n§R(This law directly attack the §OParliamentary Left§!, so even with §YUnion Sacrée§!, we still need the requested seats to pass the law)§!"
-
- FRA_150_seats_n:0 "Control less than 150 seats"
- FRA_200_seats_n:0 "Control less than 200 seats"
- FRA_250_seats_n:0 "Control less than 250 seats"
- FRA_300_seats_n:0 "Control less than 300 seats"
- FRA_350_seats_n:0 "Control less than 350 seats"
-
- FRA_150_seats_tt:0 "We need §Y150 seats§! to pass this law."
- FRA_200_seats_tt:0 "We need §Y200 seats§! to pass this law."
- FRA_250_seats_tt:0 "We need §Y250 seats§! to pass this law."
- FRA_300_seats_tt:0 "We need §Y300 seats§! to pass this law."
- FRA_350_seats_tt:0 "We need §Y350 seats§! to pass this law."
-
-
-
  FRA_150_seats_with_flag:0 "[FRA.GetFlag]§YFrance:§! Control 150 seats"
- FRA_200_seats_with_flag:0 "[FRA.GetFlag]§YFrance:§! Control 200 seats"
  FRA_250_seats_with_flag:0 "[FRA.GetFlag]§YFrance:§! Control 250 seats"
  FRA_300_seats_with_flag:0 "[FRA.GetFlag]§YFrance:§! Control 300 seats"
  FRA_350_seats_with_flag:0 "[FRA.GetFlag]§YFrance:§! Control 350 seats"
  line:0 "--------------------------------------------------"
  nothing_happend:0 "§RNothing will happen§!"
- nothing_happend_good:0 "§gNothing will happen§!"
 
- in_europe:0 "Produces this effect in §YEurope§!:"
+ in_europe:0 "Produces this effect in §YEurope§! :"
  FRA_national_assembly_dissolved:0 "§YThe national assembly will be dissolved. Allowing us to rule with §Rno opposition.§!§!"
  FRA_ww1_form_peasant_council:0 "Form the Peasant Council"
  FRA_ww1_form_peasant_council_desc:0 "The national assembly is made up of bureaucrats who are detached from the realities that our population faces. The president [FRA.getLeader] must be able to elect a legitimate representation of the French people by selecting worker and peasant representations from the communist party."
-
- FRA_kick_moderates:0 "Undermine Moderates"
- FRA_kick_moderates_desc:0 "The less radical elements of the party must be isolated and thanked. France's position cannot be that of a state without an army, without a position and without room for maneuver."
- FRA_reformists_purged:0 "Reformists Ousted"
-
- FRA_national_defense_funds:0 "National Defense Funds"
- FRA_national_defense_funds_desc:0 "Socialism is surrounded by deadly imperialist enemies who are just waiting for an opportunity to declare war on us. We must maintain and improve our defensive capabilities by expanding the French arsenal."
-
- FRA_create_the_CSR:0 "Create the CSR"
- FRA_create_the_CSR_desc:0 "The Revolutionary Syndicalist Committees is a new group mixing the most radical anarchists and socialists in the form of a group located on the left wing of the SFIO. This movement is made up of anti-interventionist activists, Marxists and revolutionaries."
-
- FRA_the_pcf:0 "The French Communist Party"
- FRA_the_pcf_desc:0 "Since its accession to power, the SFIO's vision of France has changed thanks to the domination of strong politicians and revolutionary figures. With the exclusion of the less radical elements, the party can evolve and take its final form: That of the communist party."
-
- FRA_anticipated_elections:0 "Anticipated Elections"
- FRA_anticipated_elections_desc:0 "The parliament does not really represent the French population. The last few years have been a real turning point for workers and supporters who have become massively politicized and unionized. Organizing new legislative elections will allow the SFIO to obtain total supremacy within parliament, even without a coalition."
-
- FRA_support_the_effort_the_guerre:0 "Support War Effort"
- FRA_support_the_effort_the_guerre_desc:0 "Although we have many pacifists in our ranks, the war remains current and forces us to put in place special measures intended to motivate our troops to fight, while reassuring the population about the outcome of this dark conflict. .."
-
- FRA_national_cereals_board:0 "National Cereals Board"
- FRA_national_cereals_board_desc:0 "Supporting the industrialization of our agriculture is essential to the development of the nation. Cereal regulatory offices must be set up, as well as a floor price for the purchase of crops intended to prevent unfair competition." 
-
- FRA_nationalize_renault:0 "Nationalize Renault"
- FRA_nationalize_renault_desc:0 "Designer Louis Renault proposed plans for revolutionary armored weapons. His group, like SOMUA or Berliet must all be nationalized so that the state can fully exploit the potential of these industries."
-
 
  FRA_ww1_support_monarchists:0 "Orléanist Ascension"
  FRA_ww1_support_monarchists_desc:0 "Action Française is the most important Catholic party in France, represented by the charismatic Maurice Pujo. Unfortunately, the visibility of the party is low and must be reinforced by funding from which we bury the source. In reality, it is a secret support of Spain, Austria and several minor monarchies on the continent."
@@ -8336,37 +8025,16 @@ japan_focus:0 "Japanese Focus Tree"
  FRA_ww1_support_napoleon_V_desc:0 "France experienced its greatest hour of glory during the reign of Emperor Napoleon I. This era took us to Germany, Italy and even Russia. We must find this kind of strong leader by supporting the Bonaparte house."
 
  FRA_law_of_exile_retired:0 "Repeal the Law of Exile"
- FRA_law_of_exile_retired_desc:0 "§LThe Law of Exile prevents foreign monarchs from returning to France. This is a law that seeks to only ruin France and deprive the nation of its former glory. This cannot do and the law must be revoked in its entirety.\n\nThis will enable the houses of §YBonaparte§!, §YBourbon§! and §YOrléans§! to return to the French territory and participate to politics.§!"
+ FRA_law_of_exile_retired_desc:0 "The Law of Exile prevents foreign monarchs from returning to France. This is a law that seeks to only ruin France and deprive the nation of its former glory. This cannot do and the law must be revoked in its entirety. This will enable the houses of §YBonaparte§! and §YOrléans§! to rightfully rule once again."
 
- FRA_ww1_naval_estimates:0 "Naval Estimates"
- FRA_ww1_naval_estimates_desc:0 "The race for the Dreagnought demonstrated the weak French production capacities, particularly in the design of heavy ships. We must increase our budget to finance the modernization of our navy."
-
- FRA_4_coubet_class_25_percent:0 "Design and add §Y4 Courbet Class Battleships§! on the §YProduction Line§!. Theses Ships are §Y25% completed§!."
- FRA_ww1_launch_the_courbet_class:0 "Launch the Courbet Class"
- FRA_ww1_launch_the_courbet_class_desc:0 "In order to compete with the large German and British battleships, we must launch the production of several warships equipped with guns of at least 300mm. The 305mm/45 Model 1910 guns are modern and will make up for our shortcomings in terms of firepower."
-
- FRA_super_lyon_project:0 "Design and add a §YSuper-Battleship§! on the §YProduction Line§!. This ship is §Y25% completed§!."
- FRA_ww1_super_lyon_class:0 "Project Super-Lyon"
- FRA_ww1_super_lyon_class_desc:0 "The General Staff (EMG) of the French Navy has proposed the construction of a 40,000-ton battleship equipped with 12 heavy 450mm cannons. This project would make it possible to definitively catch up with the caliber of the French Navy, and even get a little ahead."
-
- FRA_ww1_modernisation_of_the_battlefleet:0 "Modernization of the Battlefleet"
- FRA_ww1_modernisation_of_the_battlefleet_desc:0 "Many navy ships are obsolete and need to be scrapped, but it is possible to renovate most of them by investing in a few shipyards."
-
- FRA_ww1_naval_experience:0 "Legacy of the \"Jeune Ecole\""
+ FRA_ww1_naval_experience:0 "Naval Experience"
  FRA_ww1_naval_experience_desc:0 "French naval history is one of the richest in the world and one of the most advanced. Our heavy ships are superior in quality to most of their opponents, if we take out the mighty royal navy. We must take advantage of our past experience in order to develop modern doctrines."
 
- FRA_ww1_doctrine_effort:0 "Anglo-French Naval Agreement"
- FRA_ww1_doctrine_effort_desc:0 "As allies, the British and the French must cooperate in the defense of the English Channel and the Mediterranean. Mastery of the sea facing the Empire of Austria-Hungary, including the new threats posed by the “aero-submarine” struggle, are essential."
+ FRA_ww1_doctrine_effort:0 "Doctrines Effort"
+ FRA_ww1_doctrine_effort_desc:0 "We must concentrate our efforts on preparing new battle plans integrating our submarines and our latest models of battleships."
 
- FRA_ww1_prepare_dardanelles_front:0 "Prepare Dardanelles Front"
- FRA_ww1_prepare_dardanelles_front_desc:0 "The Dardanelles constitute a strategic position connecting the Mediterranean and the Black Sea. Taking control of this region would give us access to the Bosphorus, then access to the Crimea. Unfortunately, the position is held by the [347.OWNER.GetAdjective]s. To force passage, we must train troops capable of landing in enemy territory."
-
- FRA_ww1_submarines_experiments:0 "Brumaire Class"
+ FRA_ww1_submarines_experiments:0 "Submarines Experiments"
  FRA_ww1_submarines_experiments_desc:0 "Submarines represent the future of naval combat. These devices are discreet, inexpensive and can travel long distances to deliver strategic strikes. The perfection of our current models and the key to our domination of the trade routes."
- FRA_16_brumaire_submarines:0 "Design and add §Y16 Brumaire Class Submarines§! on the §YProduction Line§!. 4 are §Y25% completed§!."
-
- FRA_ww1_conseil_de_guerre_naval:0 "Conseil de Guerre Naval"
- FRA_ww1_conseil_de_guerre_naval_desc:0 "The naval war council is a naval war headquarters intended for the protection of the French coasts and the command of operations in the Mediterranean Sea, although it was set up from the start of the war, we must assign it specific missions."
 
  FRA_ww1_heavy_submarine_project:0 "Heavy Submarine Project"
  FRA_ww1_heavy_submarine_project_desc:0 "We have the resources to experiment with a new type of mixed vehicle. It would be a large submarine on which would be placed 203 mm guns."
@@ -8399,7 +8067,7 @@ japan_focus:0 "Japanese Focus Tree"
  FRA_ww1_battleship_competition:0 "Battleships Competition"
  FRA_ww1_battleship_competition_desc:0 "Since the beginning of the century, ships have experienced an unprecedented increase in tonnage. In addition to daunting armor, the battleships have electronic systems, super-heavy guns and doctrines of maneuverability improved by the experience gained in previous conflicts. This competition pushes France to invest more in the military maritime sector."
 
- FRA_ww1_industrial_innovation:0 "[getYear] Finance Law"
+ FRA_ww1_industrial_innovation:0 "Industrial Innovation"
  FRA_ww1_industrial_innovation_desc:0 "Like all European countries, France is industrializing and has significant advances in various civil fields. Industrialisation will allow our nation to pursue its goals mnore effectively, and we must continue this line of work as much as possible "
 
  FRA_ww1_metropolitan_investments:0 "Metropolitan Investments"
@@ -8439,19 +8107,12 @@ japan_focus:0 "Japanese Focus Tree"
  FRA_ww1_form_the_armored_spearhead:0 "Form the Armored Spearhead"
  FRA_ww1_form_the_armored_spearhead_desc:0 "The famous Renault FT tanks are ready. We don't know what impact they will have in combat, but according to our experts, this is a likely revolution in the way of approaching a ground war."
 
- FRA_form_renault_tank_brigades:0 "These §YFrench§! armored units will spawn with §Y60% equipment fullfilement§!."
- FRA_form_schneider_tank_brigade:0 "This §YFrench§! armored unit will spawn with §Y80% equipment fullfilement§!."
+ FRA_form_renault_tank_brigades:0 "These §YFrench§! armored units will spawn with 60% of their equipment."
  FRA_entente_dissolved_during_civil_war:0 "\nOur faction, §Y[FRA.getFactionName]§!, will be dissolved during civil war!"
  FRA_ban_socialism:0 "Socialism will be banned §YEvery SFIO seat will be taken by our political faction.§!"
- FRA_ban_fascism:0 "Proto-Fascists will be banned. §YEvery Nationalists seats will join§! £parliament_party_icon|[?v] [GetParliamentPartyName]"
-
- FRA_ban_socialism_parties:0 "§YSocialism will be banned.§! £parliament_party_icon|[?v] [GetParliamentPartyName] and £parliament_party_icon|2 §OIndependent Socialists§! parties will be dissolved."
-
- FRA_socialists_join_radical_party:0 "§RMost of socialists will join the £parliament_party_icon|4 §CRadical-Socialist Party§!.§!"
-
 
  FRA_ww1_ban_socialism:0 "Ban "German" Socialism"
- FRA_ww1_ban_socialism_desc:0 "Since 1870 German social democracy in Germany smothered the international socialism under its hegemony. Our homeland shall not suffer from it's influence!"
+ FRA_ww1_ban_socialism_desc:0 "Since 1870 German Social democracy in Germany smothered the international socialism under its hegemony. Our homeland shall not suffer from it's influence!"
 
  FRA_ww1_authoritarian_coup:0 "Conservative Revolution"
  FRA_ww1_authoritarian_coup_desc:0 "George Valois' control over France is now absolute, no one will dare to contest a coup d'etat orchestrated for the salvation of France. The army is ready to act as it has already won over to the nationalist cause due to its sympathetic attitude towards the strengthening of France. All that is missing now is an official and formal declaration, a masterful seizure of power."
@@ -8489,71 +8150,11 @@ japan_focus:0 "Japanese Focus Tree"
  FRA_ww1_char2c:0 "The Char 2C"
  FRA_ww1_char2c_desc:0 "To counter the newly developed German tanks and to increase the efficiency of fortress demolition, the French high command has proposed the development of a special super heavy tank program. It would be a very heavy version of the Renault FT. The vehicle would have a 75mm gun, more than 30mm armor and two turrets, one of which was machine guns."
 
- FRA_ww1_char_b:0 "The Char B"
- FRA_ww1_char_b_desc:0 "General Jean Estienne proposed the development of a 22-ton medium tank armed with a 47 mm cannon in casemate and two machine guns in a turret. This new design refers to the experience accumulated during the early part of the war, particularly with the Schneider and Peugeot tank models, which were vulnerable due to their lack of a turret."
-
  FRA_ww1_develop_morocco:0 "Develop Morocco"
  FRA_ww1_develop_morocco_desc:0 "Morocco is a territory left underdeveloped by our colonial administration. By ending the protectorate, we can jump-start the local economy and achieve profitable revenue in just the span of two years."
 
  FRA_ww1_invest_in_congo:0 "Invest in Central Africa"
  FRA_ww1_invest_in_congo_desc:0 "French Central Africa is a colonial region that is currently harder to govern that what it's worth. We must invest into Equatorial Africa in order to stabilise the region and generate profit."
-
- FRA_ww1_the_belle_epoque:0 "The Belle Epoque"
- FRA_ww1_the_belle_epoque_desc:0 "The second industrial revolution was coupled with numerous social and cultural innovations creating crazy growth in French heritage. Beyond its powerful army, the nation can count on a large industrial base which is only waiting to expand."
-
- FRA_ww1_HLM_project:0 "HBM Project"
- FRA_ww1_HLM_project_desc:0 "MP Laurent Bonnevay proposed an innovative law regulating the cheap housing market. In addition to defining a minimum size for the home, it must also meet hygenic and access standards. This law will allow the development of our main working towns."
-
- FRA_ww1_support_movie_industry:0 "Support Movie Industry"
- FRA_ww1_support_movie_industry_desc:0 "Since the beginning of the century, the rapid development of cinema has offered new economic and cultural opportunities to France. The production of new films like “Fantomas” or “The Journey of the Bourrichon Family” demonstrates French genius."
-
- FRA_ww1_continue_the_centralism_program:0 "Continue the Centralist Program" 
- FRA_ww1_continue_the_centralism_program_desc:0 "Since the beginning of the 19th century, the direction of industry has always been to centralize production within a few large urban centers, abandoning the countryside and lesser areas. This concentrated industrialization has proven itself by offering us exponential growth and must therefore be continued."
-
- FRA_ww1_decentralist_program:0 "Promote the Decentralist Agenda"
- FRA_ww1_decentralist_program_desc:0 "The centralist program ruined the balance of traditional regions and forced mass migration to the Paris area. This quagmire impoverishes rural areas and causes glaring inequalities. Promoting a decentralist program will make it possible to harmonize the attractiveness of our departments."
-
- FRA_ww1_expansion_of_regional_capitals:0 "Expansion of Regional Towns"
- FRA_ww1_expansion_of_regional_capitals_desc:0 "In order to relieve congestion in the capital, the state must invest massively in rural regions where regional capitals are located. These new industries should bring about a harmonious rebalancing of the territory's wealth. This about-face in the industrialization program risks not pleasing the Parisian economy."
-
- FRA_ww1_growing_automobile_market:0 "Growing Automobile Market"
- FRA_ww1_growing_automobile_market_desc:0 "Innovative companies like Panhard or Berliet produce numerous models of increasingly efficient, affordable civilian vehicles. The closure of the last hypomobile set in 1913 is further proof of the strong craze for the automobile."
-
- FRA_ww1_batignolles_chatillon_works:0 "Batignolles-Chatillon Works"
- FRA_ww1_batignolles_chatillon_works_desc:0 "The construction of new locomotives is necessary to improve access to popular transport. Better connection between cities and suburbs is a government priority. The Batignolles-Chatillon company from Nantes appears to be a perfect candidate to launch these new productions."
-
- FRA_ww1_fund_csf:0 "Fund CSF"
- FRA_ww1_fund_csf_desc:0 "The General Wireless Telegraph Company is an innovative company promising several major research projects in cutting-edge electronic technology."
-
- FRA_ww1_1910_finance_law:0 "[getYear] Finance Law"
- FRA_ww1_1910_finance_law_desc:0 "The new finance law must contribute to the establishment of reforms in the labor sector, allowing among other things the establishment of new pensions for workers in the industrial sector, but also the creation of new safety standards. Additionally, a large portion of the budget will be dedicated to supporting existing large businesses."
-
- FRA_ww1_worktime_timing:0 "Worktime Timing"
- FRA_ww1_worktime_timing_desc:0 "Despite the protests of the working classes, working time clocking remains a considerable development in the quest for productivity at the national level. The generalization of this process will allow better supervision of future projects."
-
- FRA_ww1_lorraine_industrial_area:0 "Lorraine Industrial Area"
- FRA_ww1_lorraine_industrial_area_desc:0 "Following the loss of Alsace Lorraine in 1870, a large part of our heavy industry disappeared. Fortunately, Lorraine is also a large mining area in which we can invest massively."
-
- FRA_ww1_miners_pension_fund:0 "Miners Pension Fund"
- FRA_ww1_miners_pension_fund_desc:0 "The situation of miners in France is very precarious, accidents are frequent and salaries do not always justify this risk-taking. The establishment of a social fund dedicated to making the profession of miner more attractive."
-
- FRA_ww1_create_the_caf:0 "Set up the Family Allowance Service"
- FRA_ww1_create_the_caf_desc:0 "The family allowance fund is a set of social aid intended to reward large families and thus facilitate the comfort of mothers. This popular and expected device promises to strengthen the population's support for the government."
-
- FRA_ww1_taylorist_rethoric:0 "Taylorist Rethoric"
- FRA_ww1_taylorist_rethoric_desc:0 "France's industrialization is not complete and still lags behind its neighbors. The main problem lies in obsolete artisanal processes which slow down the productivity of factories. The implementation of American management methods is a first step towards regaining competitiveness."
-
- FRA_ww1_rearmement_program:0 "Rearmement Program"
- FRA_ww1_rearmement_program_desc:0 "The alliance with Russia allows France to adopt a more offensive attitude. To support this political and military will, we must strengthen our heavy industry, particularly in the field of armaments. Many disused or underutilized arsenals are available for state funding."
-
- FRA_ww1_munitionnettes:0 "Munitionnettes"
- FRA_ww1_munitionnettes_desc:0 "The men at the front can no longer serve in the factories. It is necessary to adapt production processes so that women can be mobilized. This effort must be accompanied by massive funding from the state to modernize equipment dedicated to the production of shells, ammunition and uniforms."
-
- FRA_ww1_seine_citroen_shell_production:0 "Citröen National Contribution"
- FRA_ww1_seine_citroen_shell_production_desc:0 "The Citröen company is able to considerably increase our production of shells with the help of the Quai de Seine workshops, located in Paris. This emergency conversion will allow the economy to confront the enemy. Obviously, this transformation is not permanent, in times of peace, automobile activity will resume."
-
- FRA_gcpf:0 "CGPF"
- FRA_gcpf_desc:0 "The "General Confederation of French Production" is an employers' organization designed by the Minister of Economy and Industry with the aim of uniting the management of large companies and agreeing on national agreements with public and private companies."
 
  france_democratic_defeated_focus:0 "Falling democratic France focus tree"
  france_democratic_victorious_focus:0 "Victorious democratic France focus tree"
@@ -8582,7 +8183,7 @@ japan_focus:0 "Japanese Focus Tree"
  FRA_ww1_The_wheat_of_the_victors_tt:0 "§R[GER.GetNameWithFlag] must agree with to take effect.§!\n"
  FRA_ww1_The_wheat_of_the_victors_tt_negative:0 "\n§RIf [GER.GetNameWithFlag] disagree with below negative effect will be taken.§!\n"
  FRA_ww1_privatise_banks:0 "Privatize Banks"
- FRA_ww1_negotiate_anti_communist_force:0 "Negotiate Anti-Communist Forces"
+ FRA_ww1_negociate_anti_communist_force:0 "Negociation Anti-Communist Forces"
  FRA_ww1_maintain_the_regime:0 "Maintain the Regime"
  FRA_ww1_repress_socialists:0 "Repress Socialists" 
  FRA_ww1_fight_the_communards:0 "Fight the Communards"
@@ -8597,7 +8198,6 @@ japan_focus:0 "Japanese Focus Tree"
  FRA_ww1_communard_sentiment:0 "Communard Sentiment"
  FRA_ww1_focus_on_reparation:0 "Focus on Reparations"
  FRA_interwar_syrian_mandate:0 "Mandate of Syria"
- FRA_interwar_syrian_mandate_desc:0 "As previously agreed, Syria and Lebanon will be reorganised as a League of Nations mandate under our protection, until it can be granted independence. In reality the region will become the newest addition to our colonial empire."
  FRA_interwar_spa_conference:0 "Spa Conference"
  FRA_interwar_spa_conference_desc:0 "The Spa conference followed the Treaty of Versailles of 1919 “to discuss the practical application of the chapter of reparations” at the end of the Great War. In other words, Germany will have to start paying off the long debt it owes to our nation."
  FRA_ww1_brigades_blindees:0 "Brigades Blindées"
@@ -8605,7 +8205,6 @@ japan_focus:0 "Japanese Focus Tree"
  FRA_ww1_allied_mission_in_poland:0 "Allied Mission in Poland"
  FRA_ww1_allied_mission_in_poland_desc:0 "Poland faces a powerful opponent and must be supported. Its independence may be dependent on our political courage to provide them with our experience."
  FRA_interwar_polish_alliance:0 "Polish Alliance"
- FRA_interwar_polish_alliance_desc:0 "With the collapse of the Russian Empire, new allies are needed to in case Germany becomes a threat again. who better than our longtime Polish allies?"
  FRA_interwar_washington_treaty:0 "Sign the Washington Treaty"
  FRA_interwar_washington_treaty_desc:0 "In order to limit the naval arms race, the United States proposed a conference to establish a treaty limiting the tonnage of battleships, cruisers and aircraft carriers."
  FRA_interwar_hydroelectric_energy:0 "Hydroelectrical Energy"
@@ -8615,7 +8214,7 @@ japan_focus:0 "Japanese Focus Tree"
  FRA_interwar_paris_conference:0 "Paris Conference"
  FRA_interwar_paris_conference_desc:0 "We must continue our discussions with Britain on the [GER.getName]'s payment agenda. Faster payment could support our economy in the short term."
  FRA_interwar_tangier:0 "International Tangier"
- FRA_interwar_tangier_desc:0 "Tangier is a strategic city in Morocco which the French, Spanish, and British want to have control. It would be better to set up the international zone for the sake of peace."
+ FRA_interwar_tangier_desc:0 "Tangier is the strategic city in Morocco which the French, Spanish, and British wants to have control. It would be better to set up the international zone for the sake of peace."
 
  FRA_interwar_fortress_tangier:0 "Fortress Tangier"
  FRA_interwar_fortress_tangier_desc:0 "The town of Tangier is a strategic position similar to that of Gilbaltar or Ceuta. We cannot renounce this providential basis. With the help of special funds, we could make it a real fortified position capable of preparing possible invasion forces."
@@ -8626,15 +8225,11 @@ japan_focus:0 "Japanese Focus Tree"
  FRA_ww1_the_world_is_saved:0 "The World is Saved"
  FRA_ww1_decision_on_losers:0 "Decisions on the Losers"
  FRA_ww1_continental_affairs:0 "Continental Affairs"
- FRA_ww1_continental_affairs_desc:0 "Now that we have won the war, we must secure the peace. The new Europe we helped create is fragile, and must be protected."
  FRA_ww1_san_remo_oil_agreement:0 "San Remo Oil Agreement"
  FRA_ww1_support_yugoslavia:0 "Support [SER.GetName]"
- FRA_ww1_support_yugoslavia_desc:0 "The Serbs were given generous amounts of land with the defeat of the Central Powers, yet these gains will never be recognised by the Bulgarians and Magyrs. We must guarantee their security."
  FRA_ww1_support_romania:0 "Support [ROM.GetName]"
  FRA_ww1_protect_czechoslovakia:0 "Support [CZE.GetName]"
- FRA_ww1_protect_czechoslovakia_desc:0 "The young Czechoslovak state, much like its neighbours, is fragile. They would make for a suitable counterweight to future German revanchism. It's imperative we grant them our protection."
  FRA_ww1_little_entente:0 "Little Entente"
- FRA_ww1_little_entente_desc:0 "Attempts by the Hungarians to either restore the Habsburgs, or any moves to retake lands lost to their neighbours would surely cause a war. A military pact between Prague, Bucharest and Belgrade is the only way to prevent this."
  FRA_ww1_rhineland_fate:0 "Withdraw from Rhineland?"
  FRA_interwar_ruhr_occupation:0 "Ruhr Occupation"
  FRA_interwar_ruhr_occupation_desc:0 "Without British support and the insidious complicity of the Weimar government, we are forced to take steps to obtain the reparations we are entitled to receive. By occupying the highly industrialized area of the Ruhr, we will gain control of a large part of Germany's production capacities."
@@ -8649,101 +8244,9 @@ japan_focus:0 "Japanese Focus Tree"
  FRA_interwar_ENG_rupture:0 "Rupture"
  FRA_interwar_ENG_rupture_desc:0 "We cannot trust Great Britain and her Dominions. We must cease all cooperation with our old rival, now that Germany is neutralized."
 
- FRA_congratulate_the_king:0 "[FRA_congratulate_the_king]"
- FRA_congratulate_the_king_jean_iii:0 "Congratulate Jean III"
- FRA_congratulate_the_king_napoleon_v:0 "Congratulate Napoléon V"
- FRA_congratulate_the_king_jacques_i:0 "Congratulate Jacques I"
-
- FRA_congratulate_the_king_desc:0 "The help of the noblest house of Europe was essential in the unification of all French people, poor or rich, intellectual or proletarian. Our victory in the Great War must motivate us to consider the question of a form of restorationism, for the good of the unity of the French around a strong and national figure."
-
- FRA_prime_minister_napoleon:0 "Prime Minister Napoléon"
- FRA_prime_minister_napoleon_desc:0 "The help of the noblest house of Europe was essential in the unification of all French people, poor or rich, intellectual or proletarian. Our victory in the Great War must motivate us to consider the question of a form of restorationism, for the good of the unity of the French around a strong and national figure."
-
- FRA_rebuild_the_appel_du_peuple:0 "Rebuild the Appel du Peuple"
- FRA_rebuild_the_appel_du_peuple_desc:0 "The People's Appeal was the main Bonapartist party at the end of the 19th century. Ousted because of the clashes caused by the succession conflicts generated by Jérome Bonaparte and by the entrenchment of the third republic in France, it is today only a small structure without political support."
-
- FRA_date_military_reform:0 "[GetYear] Military Reforms"
- FRA_date_military_reform_desc:0 "Minister Napoleon proposed an army reform intended to essentialize the professional army to retain only the best elements. Conscription will be maintained, but the reserves will be mobilized in tasks far from the front."
-
- FRA_reconnect_bonaparts_and_imperialists:0 "Unite Bonapartistes and Impérialistes"
- FRA_reconnect_bonaparts_and_imperialists_desc:0 "Due to Prince Louis Bonaparte's renunciation of all political ambition, Victor is undoubtedly the only viable heir to the imperial throne. As a result, the pro-Victor imperialists and the pro-Louis Bonapartists no longer have any reason to oppose each other in their common struggle. More generally, all the restorationist parties will be able to unite under the same banner."
-
- FRA_anticipated_elections_bonaparte:0 "Anticipated Elections"
- FRA_anticipated_elections_bonaparte_desc:0 "Our victory in the Great War and the accession of the very popular Minister Napoleon are clear signs that France is transforming into a more powerful entity than it has ever been. The glory promised by the continuation of imperialist reforms pushes us to organize special legislative elections now."
-
- FRA_bonaparte_social_reforms:0 "New Social Reforms"
- FRA_bonaparte_social_reforms_desc:0 "The Bonapartist social program is an extension of that of Napoleon III, namely occasional but historic popular social advances."
-
- FRA_regional_refondation:0 "Regional Refondation"
- FRA_regional_refondation_desc:0 "Territorial reform is a necessary evil to allow the modernization of the territory and the better management of rural provinces."
-
- FRA_parliamentary_reform:0 "Parliamentary Reform"
- FRA_parliamentary_reform_desc:0 "A reform of the power of parliament and the regulation of the economy is necessary to improve the stability of the state in the event of a crisis."
-
- FRA_bonaparte_senat:0 "The §YSenate§! will be recomposed. §GAll Senators will be designated by §YPrime Minister Napoléon§!.§!"
-
- FRA_instrumentalize_the_senate:0 "Instrumentalize the Senate"
- FRA_instrumentalize_the_senate_desc:0 "The Senate is not suited to a modern administration like that desired by the new government. Rather than serving as an upper chamber, the senate should be reformed into a constitutional chamber, so members would be appointed by the head of state, Napoleon."
-
- FRA_bonapartiste_referundum:0 "Restoration Referundum"
- FRA_bonapartiste_referundum_desc:0 "The will of the people, of parliament and of the government goes in the same direction: The restoration of the French empire. Now that all legal apparatuses are under our control, we can launch a referendum won in advance to justify our action."
-
- FRA_ministery_of_national_defense:0 "Ministery of National Defense"
- FRA_ministery_of_national_defense_desc:0 "Emperor Napoleon wanted to create a ministry of national defense managed by his brother, Louis Joseph Bonaparte. The role of this ministry would be to replace the Ministry of Defense by giving it a military component and no longer just a political one."
-
- FRA_legacy_of_the_garde:0 "Legacy of the Garde"
- FRA_legacy_of_the_garde_desc:0 "By reconnecting with its glorious past, the army follows in the footsteps of the first and second empire towards glory. The soldiers are invigorated and the imperialist officers are placed in the front ranks."
-
- FRA_maintain_war_industry:0 "Maintain War Industry"
- FRA_maintain_war_industry_desc:0 "Maintaining a large army will only be possible by having a corresponding production of equipment. The share of the budget allocated by the government will therefore be increased to around 6% of the national budget."
-
- FRA_maintain_war_industry2:0 "Maintain War Industry"
- FRA_maintain_war_industry2_desc:0 "Maintaining a large army will only be possible by having a corresponding production of equipment. The share of the budget allocated by the government will therefore be increased to around 6% of the national budget."
-
- FRA_moderate_protectionism:0 "Moderate Protectionism"
- FRA_moderate_protectionism_desc:0 "The Bonapartist government has always maintained a cautious position regarding European liberalism. Far from rejecting the idea of a free market, [FRA.getLeader] instead proposes the establishment of national priority rules intended to find a happy medium between the internal competitiveness of French companies and openness to the market economy."
-
- FRA_sympathize_with_league_des_patriotes:0 "Sympathize With the League des Patriotes"
- FRA_sympathize_with_league_des_patriotes_desc:0 "The organization chaired by Maurice Barrès protects the rights of the French and the supremacy of the nation. The support of this organization, as of all nationalist groups, is an important stone in the building of national glorification."
-
- FRA_join_act_with_nationalists:0 "Joint Act With Smaller Nationalist Groups"
- FRA_join_act_with_nationalists_desc:0 "Several nationalist political organizations are emerging, inspired by the so-called “fascist” movements of Italy, Spain and Germany. The collective, socialist and militarist representation of these movements constitutes excellent support for the maintenance of our military industry and in the political rallying around the emperor."
-
- FRA_three_plan_battle:0 "Three Plan Battle"
- FRA_three_plan_battle_desc:0 "The air component was essential to the French victory. Research and production efforts must be maintained in order to design an indestructible fleet."
-
- FRA_militarize_bon_du_tresor:0 "Militarise the Bons du Trésor"
- FRA_militarize_bon_du_tresor_desc:0 "In order to maintain good production capacity, the state can go into debt by generating treasury bonds sent to French companies. This voucher is a guarantee of payment over time which allows us to consolidate our expenses in the short term."
-
- FRA_modernize_armored_corps:0 "Modernize Armored Corps"
- FRA_modernize_armored_corps_desc:0 "Armored forces played an essential role in France's victory. It is important to maintain a large mechanized and motorized force capable of destroying any adversary fortification while achieving superior mobility."
-
- FRA_challenge_albion:0 "Challenge Albion"
- FRA_challenge_albion_desc:0 "Although the French navy is one of the most powerful in the world, it remains weaker than the Royal Navy. The state must provide additional funds to the navy intended to strengthen its capabilities and enable its expansion."
-
- FRA_napoleon_class:0 "Napoléon Class"
- FRA_napoleon_class_desc:0 "The combination of sea and air forces will provide a unique advantage to France in future wars. A huge aircraft carrier bearing the image of the emperor will increase our projection capabilities."
- FRA_jeanne_darc_ship:0 "§L(Jeanne D'Arc)§!"
- FRA_paul_deroulede_ship:0 "§L(Paul Deroulède)§!"
- ship_40_percent:0 "The ship will be §Y40%§! completed."
- ship_60_percent:0 "The ship will be §Y60%§! completed."
-
- FRA_jeanne_darc_class:0 "Lay Down Jeanne d'Arc Class"
- FRA_jeanne_darc_class_desc:0 "Innovations in the construction of battleships allow the development of new, faster and more efficient models."
-
- FRA_annexation_of_sarre:0 "Annexation of the Sarre"
- FRA_annexation_of_sarre_desc:0 "Germany will never be able to pay the repairs requested by France and persists in delaying any payment deadline, going so far as to sabotage the organization of its own national production to slow us down. This unacceptable situation pushes us to look for alternative solutions to compensate for the immense German debts."
-
- FRA_dismantle_the_rhine:0 "Dismantle the Rhine"
- FRA_dismantle_the_rhine_desc:0 "To further weaken Germany and keep the valuable industry of the Rhine in our hands, the Rhineland shall be reorganised into an independent republic under our influence."
-
- FRA_interwar_latin_alliance:0 "Latin Alliance"
- FRA_interwar_latin_alliance_desc:0 "The fall of the Russian Empire and the obvious hostility of the British Empire forces us to adapt our foreign policy and find new allies. If it seems unconscionable to align ourselves with the Germans, we can always ally ourselves with our Latin partners, notably Spain and Italy."
-
  FRA_interwar_rural_investments:0 "Rural Investments"
  FRA_interwar_rural_investments_desc:0 "The budget surplus caused by the payment of German reparations makes it possible to revitalize our rural economy and revive our heavy industry."
  FRA_ww1_memel_occupation:0 "Withdraw from Memelland?"
- FRA_ww1_memel_occupation_desc:0 "There is much uncertainty on on which country the city of Memel will join. Our occupation will end eventually, and so it's time to decide the city's fate."
  FRA_ww1_redirect_industry_to_agriculture:0 "Redirect Industry to Agriculture"
  FRA_remove_factories_sup_0:0 "Remove §R2§! §YCivilian Factories§! on §Yeach Metropolitan State§!."
  FRA_ww1_invest_in_citroen:0 "Invest in Citroën"
@@ -8752,10 +8255,7 @@ japan_focus:0 "Japanese Focus Tree"
  FRA_interwar_invest_in_senegal:0 "Invest in Senegal"
  FRA_interwar_invest_in_senegal_desc:0 "Some of our regions in Africa lack funds for their development. We regularly tried strikes, particularly of railway workers, in Senegal. We could invest resources in revitalizing the region."
  FRA_interwar_cornudet_law:0 "Cornudet Urbanisation Law"
- FRA_interwar_cornudet_law_desc:0 "Minister Cornudet proposed the establishment of a law requiring the largest cities in France to adopt a plan for the development, beautification and extension of their urban area. This ambitious project will enable urban planning."
  FRA_autonomous_region:0 "Autonomous Region"
- FRA_UPR_activism:0 "Union populaire républicaine nationale d'Alsace Activism"
- FRA_UPR_activism_desc:0 "The UPR, also called the "Republican Popular Union" is an Alsatian Christian-democratic movement. Supporting autonomist groups and Alsatian, sometimes Lorraine, nationalism, it constitutes a new thorn in the side of French Democracy."
  FRA_interwar_locarno_agreements:0 "Locarno Agreements"
  FRA_interwar_locarno_agreements_desc:0 "The Locarno Agreement is a European initiative to secure Germany's western borders. This treaty, sometimes also called the Réhan treaty, is an essential step in calming relations in Europe."
  FRA_interwar_industrialize_morroco:0 "Industrialize Morroco"
@@ -8764,9 +8264,7 @@ japan_focus:0 "Japanese Focus Tree"
  FRA_ww1_automobiles:0 "Automobiles"
  FRA_ww1_fortification_studies:0 "Fortification Studies"
  FRA_ww1_radio_improvement:0 "Radio Improvement"
- FRA_ww1_radio_improvement_desc:0 "The development of radio is a boon for the communication of our armies and the organization of civilian life in general. The British have accumulated a great lead in the field, we cannot stay behind."
  FRA_ww1_fund_radiola:0 "Fund Radiola"
- FRA_ww1_fund_radiola_desc:0 "Radio is gradually becoming a tool within the reach of average French people. Broadcast sets are sold on the market by several innovative companies, including Radiola. We could finance this enterprise using national funds to help with research and make military use of this company."
  radiola:0 "Radiola"
  FRA_ww1_char_2c_propagandist_production:0 "Char 2C Propagandist Production"
  FRA_unlock_super_heavy_tank_and_a_variant:0 "Unlock the §YSuper Heavy Tank§! technology and deploy a Super Heavy Tank Section in §YParis§!."
@@ -8774,7 +8272,6 @@ japan_focus:0 "Japanese Focus Tree"
  FRA_ww1_d1_development:0 "D1 Development"
  FRA_ww1_b1_project:0 "B1 Project"
  FRA_focus_on_armored_production:0 "Focus on Armored Production"
- FRA_focus_renault_war_effort:0 "Renault War Effort"
 
  FRA_ww1_support_british_socialists:0 "Support [ENG.getAdjective] Socialists"
  FRA_ww1_support_british_socialists_desc:0 "The world revolution has touched Britain, our duty is to help our communist brothers around the world, including England."
@@ -8785,13 +8282,13 @@ japan_focus:0 "Japanese Focus Tree"
  FRA_interwar_US_morgan_loan:0 "Morgan Bank Loan"
  FRA_interwar_US_morgan_loan_desc:0 "In order to fight inflation, Raymond Poincaré proposed taking out a massive loan from the American bank Morgan. This gain in liquidity will allow France to counterbalance inflation and avoid a period of recession."
 
- FRA_interwar_clap_down_essen_riots:0 "Clap Down On The Essen Riots"
+ FRA_interwar_clap_down_essen_riots:0 "Clap Down Essen Riots"
  FRA_interwar_clap_down_essen_riots_desc:0 "The situation in the occupied northern territories is worrying, we must put an end to the resistance orchestrated by the Weimar Republic with the help of our army."
 
  FRA_interwar_arrest_communist_figures:0 "Arrest Communist Figures"
  FRA_interwar_arrest_communist_figures_desc:0 "As too often, radical socialists demonstrate their opposition to government policies. We should simply lock up the leading figures of the far left."
 
- FRA_interwar_raises_taxes:0 "Raise Taxes"
+ FRA_interwar_raises_taxes:0 "Raises Taxes"
  FRA_interwar_raises_taxes_desc:0 "In order to sustainably eliminate the risk of a resumption of inflation, we must increase state revenues and stabilize our currency. Even if this measure is very unpopular, we must have the courage to take strong measures."
 
  FRA_interwar_arrest_monarchist_figures:0 "Arrest Monarchist Figures"
@@ -8803,7 +8300,7 @@ japan_focus:0 "Japanese Focus Tree"
  FRA_interwar_jaures_au_pantheon:0 "Jaurès au Panthéon"
  FRA_interwar_jaures_au_pantheon_desc:0 "Jean Jaurès was assassinated on the eve of the Great War, but his spirit and philosophy undeniably left their mark on the Republic. This historical socialist figure must be transferred to the pantheon, where the ashes of the greatest heroes of the republic rest."
 
- FRA_interwar_recognize_soviet_union:0 "Recognize The Soviet Union"
+ FRA_interwar_recognize_soviet_union:0 "Recognize Soviet Union"
  FRA_interwar_recognize_soviet_union_desc:0 "[SOV.getLeader] undeniably won his war against White Russia, and a new page is turning on the ruins of this vast empire. France must absolutely maintain diplomatic ties with this regional power."
 
  FRA_interwar_support_italian_claims:0 "Support Italian Claims"
@@ -8823,13 +8320,7 @@ japan_focus:0 "Japanese Focus Tree"
 
  FRA_paris_to_amiens:0 " (§YParis§! to §YAmiens§!)"
  FRA_paris_to_nancy:0 " (§YParis§! to §YNancy§!)"
- FRA_focus_alliance:0 "\nThey will be §Ymore inclined§! to become our §Cally§!."
-
- FRA_ww1_electrify_railways:0 "Electrify Railways"
- FRA_ww1_electrify_railways_desc:0 "The railway electrification program is an initial request from the army. Germany has electrified its trains with alternating current, so we can electrify ours with direct current to make the two networks incompatible. In fact, they will not be able to use our network."
-
- FRA_ww1_invest_in_paris:0 "Invest in Paris"
- FRA_ww1_invest_in_paris_desc:0 "The centralist program favors the development of large industrial centers. The capital is obviously the main factory of the nation. Paris must receive new budgets to extend its metro, electrify its suburbs and connect old housing to the sewer network."
+ FRA_focus_alliance:0 "\nThey will be §Ymore inclined§! to be our §Yallies§! !"
 
  FRA_ww1_invest_in_sncf:0 "Create the SNCF"
  FRA_ww1_invest_in_sncf_desc:0 "The French railway network is not yet unified, leading to separate management of several main lines. In order to optimize the management of our rail fleet, we must aggregate all rail management entities into one."
@@ -8852,7 +8343,7 @@ japan_focus:0 "Japanese Focus Tree"
  NFA_son_altesse_impriale_desc:0 "L'empire, c'est la paix."
  NFA_petains_government:0 "Petain's Government"
  NFA_petains_government_desc:0 "Maréchal, nous voilà !"
- NFA_the_legitimate_heir:0 "The Legitimate Heir"
+ NFA_the_legitimate_heir:0 "The Regitimate Heir"
  NFA_the_legitimate_heir_desc:0 ""
  NFA_revise_the_constitution:0 "Revise the Constitution"
  NFA_revise_the_constitution_desc:0 "All these political fights led us doomed. It caused by democracy, no, ochlocracy."
@@ -8860,7 +8351,7 @@ japan_focus:0 "Japanese Focus Tree"
  NFA_repeal_the_law_of_exile_desc:0 "It is our way to regain the glory of the past."
  NFA_defend_the_constitution:0 "Defend the Constitution"
  NFA_defend_the_constitution_desc:0 "Democracy has won!"
- NFA_seize_the_power:0 "Seize Power"
+ NFA_seize_the_power:0 "Seize the Power"
  NFA_seize_the_power_desc:0 "We must always be ready. We can't leave politics to children's mischief any more."
  NFA_the_war_for_france:0 "The War for France"
  NFA_the_war_for_france_desc:0 "France is in a civil war! After the disgraceful defeat of the Great War, the socialists revolted in a chaotic situation. But we will not stand back and will fight back!"
@@ -8874,30 +8365,12 @@ japan_focus:0 "Japanese Focus Tree"
  NFA_partisan_suppression_desc:0 "Some of us are red! They are trying to break us down from within. All traitors must be confirmed and eliminated."
  NFA_above_all_the_losses:0 "Above All the Losses"
  NFA_above_all_the_losses_desc:0 "The civil war is over. For now."
-
- NFA_dissolve_the_parliament:0 "Dissolve the Parliament"
- NFA_dissolve_the_parliament_desc:0 "In the context of an all-out war against the socialist enemy, we cannot afford to wait for the deliberations of parliament. The latter must be brought into line and reduced to the role of a consultative assembly."
-
- NFA_government_of_national_defence:0 "Government of National Defence"
- NFA_government_of_national_defence_desc:0 "In order to maintain "relative" stability in France, we must welcome into the government the main conservative right-wing movements, historically factors of sustainability in the face of panic and chaos on the left."
-
- NFA_support_paramilitary_nationalists:0 "Support Paramilitary Nationalists"
- NFA_support_paramilitary_nationalists_desc:0 "Several veteran groups can assist the government and the general staff in managing national reconstruction. Their national and conservative ideals are popular and promising."
-
- NFA_structured_high_quarter:0 "Structured High Quarter"
- NFA_structured_high_quarter_desc:0 "The trio of heroic marshals: Pétain, Foch, and Joffre, must impose an iron discipline within the military hierarchy. Structured and reliable doctrines must be required to outmaneuver the enemy."
-
- NFA_trio_des_generaux:0 "Trio des Généraux"
- NFA_trio_des_generaux_desc:0 "With the Republic suspended and the Parliament dissolved, the military junta has moved swiftly to consolidate its grip on the French state. A triumvirate of generals now leads the nation: Marshal Ferdinand Foch, Marshal Joseph Joffre, and Marshal Philippe Pétain."
-
- NFA_continue_the_military_junta:0 "Continue the Military Junta"
- NFA_continue_the_military_junta_desc:0 "Amid growing political uncertainty and military dominance, one figure has emerged as the sole beacon of stability: Marshal Philippe Pétain."
-
- NFA_rally_conservatives:0 "Rally Conservatives"
- NFA_rally_conservatives_desc:0 "The French state is, and must remain, a democracy; we cannot afford to fall into an eternal junta. The government must appoint civilian politicians to key positions to reassure democrats of all stripes."
-
+ NFA_restoration_of_the_continental_system:0 "Restoration of the Continental System"
+ NFA_restoration_of_the_continental_system_desc:0 ""
  NFA_the_monarchy_restored:0 "The Monarchy Restored"
- NFA_the_monarchy_restored_desc:0 "The Republic failed to protect France in its darkest hour. It's time we look to the Bourbons to save the eldest daughter of the Church. "
+ NFA_the_monarchy_restored_desc:0 ""
+ NFA_our_natural_borders:0 "Our Natural Borders"
+ NFA_our_natural_borders_desc:0 ""
  NFA_a_true_democracy:0 "A True Democracy"
  NFA_a_true_democracy_desc:0 ""
  NFA_the_great_exile:0 "The Great Exile"
@@ -8918,10 +8391,6 @@ japan_focus:0 "Japanese Focus Tree"
  NFA_expand_the_citizenship_desc:0 ""
  NFA_rescue_the_french:0 "Rescue the French"
  NFA_rescue_the_french_desc:0 "The French are suffering from the oppression of the false regime of socialists. We must rescue them and take them to cradle of [ROOT.GetNameDef]."
- NFA_france_undividable:0 "France Undividable"
- NFA_france_undividable_desc:0 ""
- NFA_restore_loyalist_parliament:0 "Restore the Parliament"
- NFA_restore_loyalist_parliament_desc:0 ""
 
  france_socialist_focus:0 "Socialist France Focus Tree"
  FRC_the_workers:0 "The Workers"
@@ -8938,8 +8407,8 @@ japan_focus:0 "Japanese Focus Tree"
  FRC_for_the_total_liberation_of_the_french_desc:0 ""
  FRC_constitutional_convention:0 "Constitutional Convention"
  FRC_constitutional_convention_desc:0 "A fundamental shift in the nature of our republic can not be done overnight, and it can not be done without negotiating a new constitution."
- FRC_destroy_the_counterrevolution:0 "Destroy the Counter-Revolution"
- FRC_destroy_the_counterrevolution_desc:0 "Even now, some people in France prepare to stab the dagger into the back of their own people when they show even a second of weakness. We will not let them, and will strike first."
+ FRC_destory_the_counterrevolution:0 "Destory the Counter-Revolution"
+ FRC_destory_the_counterrevolution_desc:0 "Even now, some people in France prepare to stab the dagger into the back of their own people when they show even a second of weakness. We will not let them, and will strike first."
  FRC_revolution_to_the_utmost:0 "Revolution To the Utmost"
  FRC_revolution_to_the_utmost_desc:0 "A revolution left half-finished is not a revolution at all. We must not stop until the deed is done and the new political system is safe. Whatever the cost."
  FRC_reconciliation:0 "Reconciliation"
@@ -8977,124 +8446,16 @@ japan_focus:0 "Japanese Focus Tree"
  FRA_interwar_french_settlement_in_algeria:0 "Settlement in Algeria"
  FRA_interwar_french_settlement_in_algeria_desc:0 "We are all that remains of the true France, its institutions and its history. Democracy must survive, even if we have to make Algeria our new home."
 
- FRA_interwar_end_interim_governement:0 "End The Interim Government"
+ FRA_interwar_end_interim_governement:0 "End The Interim Governement"
  FRA_interwar_end_interim_governement_desc:0 "We must rethink the foundations of our state, now that we are exiled from our motherland."
 
- FRC_socialist_provisional_government:0 "Socialist Provisional Government"
- FRC_socialist_provisional_government_desc:0 "The new Paris government must be formed quickly to unite the socialist movements against the French liberals who have established their stronghold in the south of the country."
-
- FRC_question_of_north_africa:0 "Question of North Africa"
- FRC_question_of_north_africa_desc:0 "French nationalists have retreated across the Mediterranean in the hope of establishing a second government. While this is unacceptable, we must consider the deplorable state of France. Is this the right time to continue the war?"
-
- FRC_marine_de_liberation_du_peuple:0 "Marine de libération du peuple"
- FRC_marine_de_liberation_du_peuple_desc:0 "The People's Liberation Navy is the new name for the French Navy. Severely weakened by the war, then the civil war, it must be reconstituted. The question of its funding must be addressed, especially in the event of an intervention in Algeria."
-
- FRC_pas_de_calais_occupation_pladoyer:0 "Pas-de-Calais Pladoyer"
- FRC_pas_de_calais_occupation_pladoyer_desc:0 "A large part of northern France has been torn away and transferred to [29.OWNER.getName]. This situation is shameful and deprives France of its industrial base. While German claims to Alsace-Lorraine are now indisputable, those to the rest of the territory must be fought!"
-
- FRC_follow_the_swiss_system:0 "Follow the Swiss System"
- FRC_follow_the_swiss_system_desc:0 "Swiss militias are an excellent compromise between a professional and a popular army. The militiamen are committed citizens trained in the essentials, capable of defending themselves and mobilizing en masse. Modernizing the Swiss conscription system could be a solution for the future here in France."
-
- FRC_confiscate_aristocratic_assets:0 "Confiscate Aristocrats Assets"
- FRC_confiscate_aristocratic_assets_desc:0 "The popular uprisings drove many workers to invade the mansions, villas, and castles belonging to wealthy landowners in order to seize their valuable assets. The state must recover a large portion of this windfall to finance the reform of the socialist state."
-
- FRC_moderate_revolutionnary_courts:0 "Moderate Revolutionnary Courts"
- FRC_moderate_revolutionnary_courts_desc:0 "Numerous wild tribunals have sprung up across the country, arbitrarily trying citizens accused of being linked to capitalist forces. These citizen initiatives are causing unacceptable excesses that the state must moderate."
-
- FRC_great_war_experience:0 "Great War Experience"
- FRC_great_war_experience_desc:0 "France is a great industrialized nation, and it would be regrettable to fall into a disorganized guerrilla war against an adversary who is not superior to us. Instead, we should tighten the control of the socialist general staff over our forces and include the militias in the regular forces."
-
- FRC_limit_jacobins_influence:0 "Limit Guesdists Influence"
- FRC_limit_jacobins_influence_desc:0 "Several movements on the far left of our socialist union desire a total and permanent revolution, calling for the destruction of any notion of statehood, the declaration of war on Germany, and the purging of French people hostile to our cause. We cannot give such people any influence or importance."
-
- FRC_dissolve_the_partliament:0 "Dissolve the Parliament"
- FRC_dissolve_the_partliament_desc:0 "Parliament is a tool of the bourgeoisie that offers only an illusion of progress in the service of the aristocracy. In order to regain control over the decision-making process, the provisional government must dissolve parliament, destroy it, and build a new legislative instrument."
-
- FRC_jacobin_favored:0 "Jacobins Favored"
-
- FRC_syndical_federalism:0 "Syndical Federalism"
- FRC_syndical_federalism_desc:0 "The supreme authority must be owned by the workers and the government must have a limited legislative power. The objective of the next government is to form syndicalist comittee in the countryside in other to manage the local law, industry and security in semi-autonomy."
-
- FRC_centralist_dictatorship:0 "Jacobin Centralist Dictatorship"
- FRC_centralist_dictatorship_desc:0 "To successfully carry out the proletarian revolution, we must establish a strong state apparatus, inspired by the Soviet revolutions. The Jacobins, Leninists, and Guedists represent the greatest visionaries with the project of a united and centralized nation."
-
- FRC_charte_federale_du_travail:0 "Charte Fédérale du Travail"
- FRC_charte_federale_du_travail_desc:0 "The Federal Labor Charter established a system of workers' councils within all companies in the country. These councils also extended to regional administrations, but also to the national level within trade union confederations."
-
- FRC_workers_owned_factories:0 "Workers-Owned Factories"
- FRC_workers_owned_factories_desc:0 "A large-scale nationalization effort must be undertaken within the state, with the aim of decentralizing and rationalizing the management of production tools. To maintain workers' control, industries must belong to them and be nationalized by union committees, which will have full control over them."
-
- FRC_first_five_year_plan:0 "First Five Year Plan"
- FRC_first_five_year_plan_desc:0 "The Great War and then the Civil War devastated the French economy. A large-scale industrialization plan, inspired by the Soviet Union, was to be implemented."
-
- FRC_regional_production_program:0 "Regional Production Program"
- FRC_regional_production_program_desc:0 "Local councils have a perfect knowledge of their territory and are best placed to define which projects can serve their region."
-
- FRC_syndicalist_council_initiatives:0 "For next §YFive Years§!, regional syndicalist councils will launch §YIndustrialization Projects§! on their own initiative. §RWe will have no control over their projects.§!"
-
- FRC_multiparty_state:0 "Multiparty State"
- FRC_multiparty_state_desc:0 "In order to preserve the authenticity of the proletarian revolution, the different schools of thought must be preserved and respected. The government's job is to maintain unity within the socialist movements and prevent the emergence of a single central party."
-
- FRC_wealth_reforms:0 "Wealth Reforms"
- FRC_wealth_reforms_desc:0 "The new government is preparing long-awaited social reforms. The goal is to relieve workers of their hard labor, all financed by assets seized from Parisian aristocrats."
-
- FRC_popular_labour_investment_law:0 "Popular Labour Investment Laws"
- FRC_popular_labour_investment_law_desc:0 "To boost the development of businesses and workers' initiatives, we must reform the labor code and create and improve national investment, advisory and training institutions."
-
- FRC_dissolve_workers_council_autonomy:0 "Dissolve Workers Council Autonomy"
- FRC_dissolve_workers_council_autonomy_desc:0 "Civil war and widespread chaos have led to the emergence of unofficial councils independent of the government across much of rural France. To strengthen the party's authority, we must take control of these peasant initiatives and centralize and control decision-making in Paris."
-
- FRC_proletarian_patriotism_act:0 "Proletarian Patriotism Act"
- FRC_proletarian_patriotism_act_desc:0 "To ensure engaged communist youth, we must create a culture and environment in which they feel engaged and proud. Establishing public holidays, laws against religion, and promoting socialist art will help us achieve this."
-
- FRC_socialist_education_decree:0 "Socialist Education Decree"
- FRC_socialist_education_decree_desc:0 "The state must undertake a thorough reform of the education system so that French youth discover the true values of socialism, and not the distorted version taught by big capital and the colonialists."
-
- FRC_comite_national_de_surveillance:0 "Comité National de Surveillance"
- FRC_comite_national_de_surveillance_desc:0 "In order to maintain control over state reform and the preservation of the revolution, we are forced to establish a party police."
-
- FRC_parti_revolutionnaire_desc:0 "With the anarchist elements eliminated and the moderates controlled and absorbed, we are in a position to build a single party, like the SFIO, but better controlled and directed. The single line of the party will be that of the Jacobin-Leninists inspired by the Soviet proletarian revolution."
-
- FRC_war_effort_donations:0 "War Effort Donations"
- FRC_war_effort_donations_desc:0 "We produced a large number of aircraft during the Great War, thousands of aircraft, many of which remained grounded, shot down, secretly repaired, and kept in private homes. There are also cases of models stolen or purchased in civilian versions. Combined with the many volunteer itinerant pilots, we can form additional squadrons from simple donations."
-
- FRC_spawn_behind_enemy_lines:0 "§YUnlock Decisions§! spawning partisans deep in enemy lines."
-
- FRC_war_in_france:0 "War in France"
- FRC_war_in_france_desc:0 "The revolution in France will not be complete until we have taken control of the entire metropolis, including Algiers. We must march south and prepare our supporters throughout France to carry out guerrilla attacks on enemy lines."
-
- FRC_all_french_campaign:0 "All-French Campaign"
- FRC_all_french_campaign_desc:0 "In this great conflict between the French, we must work to preserve the war effort, but also the cohesion of the territory, we must win and maintain a large federation of communes united within a single state."
-
- FRC_negotiate_separatist_support:0 "Negotiate Separatists Support"
- FRC_negotiate_separatist_support_desc:0 "Many nations exist in France, and some only require official recognition from a humanist state like ours. We are not colonialists; we can agree to return their de jure territory to these citizens."
-
- FRC_popular_recruitement_comittes:0 "Popular Recruitment Committees"
- FRC_popular_recruitement_comittes_desc:0 "The formation of recruitment brigades in towns and villages is a crucial step in the expansion of the socialist army. We must find those who refuse to be drafted, but also mobilize potential young volunteers, whom we can motivate using various methods."
-
- FRC_call_for_foreign_support:0 "Call for Foreign Support"
- FRC_call_for_foreign_support_desc:0 "Other nations in Europe have freed themselves from Market Capitalism. We should seek their support in the civil war."
-
- FRC_CGT_support:0 "CGT Support"
- FRC_CGT_support_desc:0 "The CGT and various other trade union organizations support the workers' cause, which is intrinsically linked to the socialist government's struggle against imperialist and capitalist forces. These powerful movements are able to improve the performance of supporters, motivate industries, and support state propaganda."
-
- FRC_emergency_mobilization:0 "Emergency Mobilization"
- FRC_emergency_mobilization_desc:0 "To support the cause, we must mobilize all our engineers, commissars, and politicians to accelerate the provision of arms factories to protect the French Revolution from any aggression by the southern imperialists."
-
- FRC_call_country_to_help:0 "Ask [FROM.getAdjective] Assistance"
-
- FRC_crackdown_military_reserves:0 "Crackdown Military Reserves"
- FRC_crackdown_military_reserves_desc:0 "After the Great War, the French army hid stockpiles in the northern French countryside, near Paris. These secret reserves could be used to our advantage."
-
- FRC_exclusion_of_anarchist_elements:0 "Exclusion of Anarchist Elements"
- FRC_exclusion_of_anarchist_elements_desc:0 "The most extreme elements, such as the Sorelians and anarchists, reject the construction of an authoritarian, centralized state, which limits our ambitions. In addition to undermining their influence by suppressing savage revolutionary movements, we must also isolate them politically, hunt them down, and eliminate them."
 
  FRA_interwar_great_patriotic_victory:0 "The Great Social Patriotic Victory"
  FRA_interwar_great_patriotic_victory_desc:0 "Victory in the great war against the German enemy confirmed the superiority of our values and our socialist system. Now we must focus on rebuilding French civil industry and establishing a new republic, combined with an innovative socialist economic system."
 
  FRA_african_union:0 "The African Union"
  FRA_african_union_desc:0 "The colonies of the Third Republic must be reformed and liberated as socialist republics. We must organize the liberation of these territories and how we will guide them towards a prosperous future."
- FRA_african_union_council:0 "African Union Councils"
+
 
  FRA_reform_the_republic:0 "The Red Constitution"
  FRA_reform_the_republic_desc:0 "The constitution of the third French republic has not been modified, the fault of the world conflict having hindered the formation of a constitutional council. With victory, we have a free hand to fundamentally reform the state."
@@ -9111,24 +8472,9 @@ japan_focus:0 "Japanese Focus Tree"
  FRA_inspect_the_army:0 "Inspect the Armée de Terre"
  FRA_inspect_the_army_desc:0 "A part of the armed forces still maintains great distrust towards the socialist authority of the general staff. Rebel elements must be identified and arrested to stem this phenomenon of resistance as much as possible."
 
- FRA_disband_large_part_of_army_socialist:0 "§RDisband large parts of the French Army§!, but replace theses loses with §Y48 partisans brigades§!.\n"
+ FRA_disband_large_part_of_army_socialist:0 "§RDisband a large parts of the French Army§!, but replace theses loses with §Y48 partisans brigades§!.\n"
  FRA_form_the_popular_army:0 "Form the Popular Army"
  FRA_form_the_popular_army_desc:0 "Army factionalism is a deep problem. The simplest solution is to disband the army in its current form and replace it with a militia loyal to the party. This method of conscription will make it easy to raise a large self-defense force."
- 
- FRA_second_modernization_phase:0 "Second Modernization Phase"
- FRA_second_modernization_phase_desc:0 "Although the Great War was over, the naval staff remained aware of France's delay in designing capital ships. Although the navy's budget is now very low, there are still some means to replace the oldest battleships."
-
- FRA_lay_down_normandie_class:0 "Lay Down the Normandie Class"
- FRA_lay_down_normandie_class_desc:0 "The Normandy class was canceled because of the Great War. With hostilities over, we can resume construction of these ambitious battleships."
- FRA_4_normandie_class_50_percent:0 "Design and add §Y4 Normandie Class Battleships§! on the §YProduction Line§!. Theses Ships are §Y50% completed§!."
-
- FRA_1_bearn_class_75_percent:0 "Design and add §Y1 Bearn Class Carrier§! on the §YProduction Line§!. This Ship is §Y75% completed§!."
- FRA_bearn_conversion:0 "Bean Conversion"
- FRA_bearn_conversion_desc:0 "Dreadnought-type battleships are obsolete and are destined to disappear. Rather than struggling to build new ones, we could convert a battleship hull into an aircraft carrier, which is much more promising."
-
- FRA_init_in_deep_reforms:0 "Init In-Deep Reforms"
- FRA_init_in_deep_reforms_desc:0 "The French army must remain an organized structure and ready for combat. Reforms of the latter must be gradual, even if they must take several years. The first step is to ensure the proper functioning of the military administration, but also its loyalty to the state."
-
  select_effect:0 "Reward on Selection:\n"
 
  japan_focus:0 "Japanese Focus Tree"

@@ -239,13 +239,13 @@ focus_tree = {
 			}
 		}
 		completion_reward = {		
-			ENG = {
-				set_autonomy = {
-					target = SAF
-					autonomous_state = autonomy_dominion
-					freedom_level = 0.55
-				}
-			}
+			#ENG = {
+			#	set_autonomy = {
+			#		target = SAF
+			#		autonomous_state = autonomy_dominion
+			#		freedom_level = 0.55
+			#	}
+			#}
 			SAF = {
 				set_country_flag = SAF_ENG
 				set_cosmetic_tag = SAF_ENG

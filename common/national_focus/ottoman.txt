@@ -8228,46 +8228,47 @@ focus_tree = {
 			}
 		}
 		available = {
-			if = {
-				limit = {
-					NOT = { has_country_flag = TUR_savior_officer_coup }
-				}
-				custom_trigger_tooltip = {
-					tooltip = TUR_elections_of_1912_tt
-					has_country_flag = TUR_elections_1912
-				}
-			}
+		#	if = {
+		#		limit = {
+		#			NOT = { has_country_flag = TUR_savior_officer_coup }
+		#		}
+		#		custom_trigger_tooltip = {
+		#			tooltip = TUR_elections_of_1912_tt
+		#			has_country_flag = TUR_elections_1912
+		#		}
+		#	}
 		}
 		relative_position_id = TUR_reaffirm_loyalty_of_the_army
 		completion_reward = {
-			if = {
-				limit = { NOT = { has_country_flag = TUR_savior_officer_coup } }
-				effect_tooltip = { country_event = ottoman.42 }
-			}
-			if = {
-				limit = { has_country_flag = TUR_savior_officer_coup }
-				effect_tooltip = {
-					add_popularity = {
-						ideology = democratic
-						popularity = 0.1
-					}
-					set_party_name = {
-						ideology = neutrality
-						long_name = TUR_saviour_officer
-						name = TUR_saviour_officer
-					}
-					TUR_ahmed_muhtar = {
-						add_country_leader_role = {
-							promote_leader = yes
-								country_leader = {
-								ideology = authoritarian_democracy
-								traits = { grand_vizier muhtar }
-							}
-						}
-					}
-					country_event = ww1_ottoman.24
-				}
-			}
+		#	if = {
+		#		limit = { NOT = { has_country_flag = TUR_savior_officer_coup } }
+		#		effect_tooltip = { country_event = ottoman.42 }
+		#	}
+		#	if = {
+		#		limit = { has_country_flag = TUR_savior_officer_coup }
+		#		effect_tooltip = {
+		#			add_popularity = {
+		#				ideology = democratic
+		#				popularity = 0.1
+		#			}
+		#			set_party_name = {
+		#				ideology = neutrality
+		#				long_name = TUR_saviour_officer
+		#				name = TUR_saviour_officer
+		#			}
+		#			TUR_ahmed_muhtar = {
+		#				add_country_leader_role = {
+		#					promote_leader = yes
+		#						country_leader = {
+		#						ideology = authoritarian_democracy
+		#						traits = { grand_vizier muhtar }
+		#					}
+		#				}
+		#			}
+		#			country_event = ww1_ottoman.24
+		#		}
+		#	}
+		add_political_power = 120
 			mark_focus_tree_layout_dirty = yes
 		}
 		ai_will_do = {
@@ -8297,24 +8298,24 @@ focus_tree = {
 			focus = TUR_ittihat_ve_terakki_victory
 		}
 		available = {
-			if = {
-				limit = {
-					NOT = { has_country_flag = muhtar_pasa_resigns }
-				}
-				custom_trigger_tooltip = {
-					tooltip = TUR_hurriyet_ve_itilaf_victory_tt
-					has_country_flag = liberal_victory
-				}
-			}
-			if = {
-				limit = {
-					has_country_flag = muhtar_pasa_resigns	
-				}
-				custom_trigger_tooltip = {
-					tooltip = TUR_avert_the_ittihadist_coup_tt
-					has_country_flag = TUR_avert_the_ittihadist_coup
-				}
-			}
+		#	if = {
+		#		limit = {
+		#			NOT = { has_country_flag = muhtar_pasa_resigns }
+		#		}
+		#		custom_trigger_tooltip = {
+		#			tooltip = TUR_hurriyet_ve_itilaf_victory_tt
+		#			has_country_flag = liberal_victory
+		#		}
+		#	}
+		#	if = {
+		#		limit = {
+		#			has_country_flag = muhtar_pasa_resigns	
+		#		}
+		#		custom_trigger_tooltip = {
+		#			tooltip = TUR_avert_the_ittihadist_coup_tt
+		#			has_country_flag = TUR_avert_the_ittihadist_coup
+		#		}
+		#	}
 		}
 		bypass = {
 			hidden_trigger = { has_country_flag = liberal_victory }
@@ -8386,24 +8387,24 @@ focus_tree = {
 			hidden_trigger = { has_country_flag = ittihadist_victory }
 		}
 		available = {
-			if = {
-				limit = {
-					NOT = { has_country_flag = muhtar_pasa_resigns }
-				}
-				custom_trigger_tooltip = {
-					tooltip = TUR_ittihat_ve_terakki_victory_tt
-					has_country_flag = ittihadist_victory
-				}
-			}
-			if = {
-				limit = {
-					has_country_flag = muhtar_pasa_resigns	
-				}
-				custom_trigger_tooltip = {
-					tooltip = TUR_raid_on_sublime_porte_tt
-					has_country_flag = TUR_raid_on_sublime_porte
-				}
-			}
+	#		if = {
+	#			limit = {
+	#				NOT = { has_country_flag = muhtar_pasa_resigns }
+	#			}
+	#			custom_trigger_tooltip = {
+	#				tooltip = TUR_ittihat_ve_terakki_victory_tt
+	#				has_country_flag = ittihadist_victory
+	#			}
+	#		}
+	#		if = {
+	#			limit = {
+	#				has_country_flag = muhtar_pasa_resigns	
+	#			}
+	#			custom_trigger_tooltip = {
+	#				tooltip = TUR_raid_on_sublime_porte_tt
+	#				has_country_flag = TUR_raid_on_sublime_porte
+	#			}
+	#		}
 		}
 		x = 3
 		y = 2

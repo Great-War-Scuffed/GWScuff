@@ -2394,29 +2394,48 @@ focus_tree = {
 				NOT = { has_country_flag = great_war_loser }
 			}
 		}
-		bypass = {
-			OR = {
-				is_in_faction_with = TUR
-				is_in_faction_with = LBA
-				has_war_with = TUR
-				has_war_with = LBA
-				NOT = {
-					any_state = {
-						is_core_of = LBA
-						is_owned_by = TUR
-					}
-				}
-			}
-		}
+		#bypass = {
+		#	OR = {
+		#		is_in_faction_with = TUR
+		#		is_in_faction_with = LBA
+		#		has_war_with = TUR
+		#		has_war_with = LBA
+		#		NOT = {
+		#			any_state = {
+		#				is_core_of = LBA
+		#				is_owned_by = TUR
+		#			}
+		#		}
+		#	}
+		#}
 		completion_reward = {
-			country_event = {
-				id = ww1_italianturkish.1
-			}
-			add_popularity = {
-				ideology = communism
-				popularity = 0.05
-			}
-			add_stability = -0.05
+			#country_event = {
+			#	id = ww1_italianturkish.1
+			#}
+			#add_popularity = {
+			#	ideology = communism
+			#	popularity = 0.05
+			#}
+			#add_stability = -0.05
+			annex_country = { target = LBA }
+			ITA = {
+				 set_state_owner = 1060
+				 set_state_owner = 448
+				 set_state_owner = 1157
+				 set_state_owner = 1061
+				 set_state_owner = 450
+				 set_state_owner = 663
+				 set_state_owner = 1156
+				 set_state_owner = 661
+				 set_state_owner = 1154
+				 set_state_owner = 1155
+				 set_state_owner = 273
+				 set_state_owner = 1122
+				 set_state_owner = 1128
+				 set_state_owner = 1124
+				 set_state_owner = 567
+				 set_state_owner = 1123
+				 }
 		}
 		ai_will_do = {
 			factor = 1

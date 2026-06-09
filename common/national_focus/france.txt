@@ -5324,7 +5324,7 @@ focus_tree = {
 			add_tech_bonus = {
 				name = FRA_ww1_fund_berthier
 				bonus = 1
-				category = artillery
+				category = cat_artillery
 				uses = 1
 			}
 			add_tech_bonus = {
@@ -5390,8 +5390,7 @@ focus_tree = {
 			add_tech_bonus = {
 				name = FRA_ww1_howitzer_development
 				bonus = 1
-				technology = howitzer3
-				technology = howitzer2
+				category = cat_artillery
 				uses = 1
 			}
 
@@ -5669,7 +5668,7 @@ focus_tree = {
 				bonus = 1
 				category = infantry_weapons
 				category = support_tech
-				category = artillery
+				category = cat_artillery
 				uses = 3
 			}
 		}
@@ -5701,10 +5700,7 @@ focus_tree = {
 		completion_reward = {
 			add_tech_bonus = {
 				name = FRA_ww1_anti_air_positions
-				technology = interwar_antiair
-				technology = antiair1
-				technology = antiair2
-				technology = antiair3
+				category = cat_anti_air
 				uses = 2
 				bonus = 1
 			}
@@ -7341,7 +7337,7 @@ focus_tree = {
 		search_filters = {
 			FOCUS_FILTER_INDUSTRY
 		}
-		cost = 5
+		cost = 10
 		x = 0
 		y = 15
 	}
@@ -7876,7 +7872,7 @@ focus_tree = {
 		search_filters = {
 			FOCUS_FILTER_INDUSTRY
 		}
-		cost = 5
+		cost = 10
 		x = -2
 		y = 1
 	}
@@ -9859,10 +9855,10 @@ focus_tree = {
 					is_core_of = FRA
 					is_on_continent = europe
 				}
-				add_extra_state_shared_building_slots = 1
+				add_extra_state_shared_building_slots = 2
 				add_building_construction = {
 					type = industrial_complex
-					level = 1
+					level = 2
 					instant_build = yes
 				}
 			}
@@ -9915,10 +9911,10 @@ focus_tree = {
 					is_core_of = FRA
 					is_on_continent = europe
 				}
-				add_extra_state_shared_building_slots = 1
+				add_extra_state_shared_building_slots = 2
 				add_building_construction = {
 					type = industrial_complex
-					level = 1
+					level = 2
 					instant_build = yes
 				}
 			}
@@ -10880,7 +10876,7 @@ focus_tree = {
 				amount = 5000
 			}
 			add_equipment_to_stockpile = {
-				type = artillery_equipment
+				type = field_gun_equipment
 				amount = 500
 			}
 		}

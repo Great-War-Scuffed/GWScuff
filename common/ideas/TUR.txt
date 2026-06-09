@@ -1976,9 +1976,9 @@ ideas = {
 			}
 			removal_cost = -1
 			modifier = {
-				army_attack_against_major_factor = 0.15
-				army_defence_against_major_factor = 0.25
-				army_breakthrough_against_major_factor = 0.1
+				army_attack_against_major_factor = 0.05
+				army_defence_against_major_factor = 0.075
+				army_breakthrough_against_major_factor = 0.05
 			}
 		}
 		TUR_joint_military_training = {

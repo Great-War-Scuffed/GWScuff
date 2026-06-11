@@ -768,6 +768,8 @@
  LIE_johann_ii_idea:0 "Johann II"
 
  #TURKEY
+ TUR_anti_balkan:0 "Jihad Against the Balkans"
+ TUR_anti_balkan_desc:0 "This is here to assist the Ottoman player remaining relevant in the game against the hyper stats of balkans"
  TUR_economic_etatism:0 "Etatism"
  TUR_economic_etatism_desc:0 "It seems that foreign investments and liberal open market economy has only increased our foreign dependency. From now on, our empire needs to introduce strict means to control its economy."
  TUR_islamic_economics_idea:0 "Halal Economics"

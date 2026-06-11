@@ -131,6 +131,10 @@ focus_tree = {
 			}
 		}
 		completion_reward = {
+			add_timed_idea = {
+				idea = TUR_anti_balkan
+				days = 365
+			}
 			create_wargoal = { type = annex_everything target = BUL }
 			create_wargoal = { type = annex_everything target = GRE }
 			create_wargoal = { type = annex_everything target = SER }

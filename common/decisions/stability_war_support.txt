@@ -491,13 +491,54 @@ demobilization = {
 			has_unsupported_economic_law = yes
 		}
 		complete_effect = {
-			decrease_mobilisation = yes
+			if = {
+				limit = {
+					has_war_support < 0.15
+				}
+				add_ideas = civilian_economy
+			}
+			else_if = {
+				limit = {
+					has_war_support < 0.25
+				}
+				add_ideas = low_economic_mobilisation
+			}
+			else_if = {
+				limit = {
+					has_war_support < 0.5
+				}
+				add_ideas = partial_economic_mobilisation
+			}
+			else_if = {
+				limit = {
+					has_war_support < 0.8
+				}
+				add_ideas = war_economy
+			}
+			if = {
+				limit = {
+					has_idea = strikes_1
+				}
+				remove_ideas = strikes_1
+			}
+			if = {
+				limit = {
+					has_idea = strikes_2
+				}
+				remove_ideas = strikes_2
+			}
+			if = {
+				limit = {
+					has_idea = strikes_3
+				}
+				remove_ideas = strikes_3
+			}
 		}
 		ai_will_do = {
 			factor = 500 #should really get on this
 		}
+		
 	}
-	
 	demob_economic_mission = {
 		available = {
 			OR = {
@@ -509,6 +550,10 @@ demobilization = {
 		activation = {
 			has_unsupported_economic_law = yes
 			has_war = no
+			#NOT = {
+			#	original_tag = SWE
+			#	SWE = { has_completed_focus = SWE_totalforsvar }
+			#}
 		}
 		icon = revolt
 		is_good = no
@@ -543,8 +588,9 @@ demobilization = {
 						has_government = communism
 					}
 				}
-				add_popularity = { ideology = communism popularity = 0.1}
-				add_stability = -0.1
+				start_civil_war = {
+					ideology = communism
+				}
 			}
 			if = {
 				limit = {
@@ -553,8 +599,9 @@ demobilization = {
 					has_government = communism
 					
 				}
-				add_popularity = { ideology = democratic popularity = 0.1}
-				add_stability = -0.1
+				start_civil_war = {
+					ideology = democratic
+				}
 			}
 			if = {
 				limit = {
@@ -602,10 +649,12 @@ demobilization = {
 			}
 			if = {
 				limit = { 
-					NOT = {
-						has_idea = strikes_1
-						has_idea = strikes_2
-						has_idea = strikes_3
+					NOT = { 
+						OR = {
+							has_idea = strikes_1
+							has_idea = strikes_2
+							has_idea = strikes_3
+						}
 					}
 				}
 				add_ideas = strikes_1
@@ -628,7 +677,7 @@ demobilization = {
 			always = yes
 		}
 
-		cost = 0
+		cost = 50
 		ai_will_do = {
 			factor = 500
 		}
@@ -637,45 +686,41 @@ demobilization = {
 		visible = {
 			has_unsupported_manpower_law = yes
 			has_war = no
+			#if = {
+			#	limit = { original_tag = GRE }
+			#	NOT = {
+			#		has_completed_focus = GRE_request_communist_support
+			#	}
+			#}
+
 		}
 		complete_effect = {
 			if = {
 				limit = {
-					has_idea = limited_conscription
+					has_war_support < 0.1
 				}
 				add_ideas = volunteer_only
 			}
 			else_if = {
 				limit = {
-					has_idea = extensive_conscription
+					has_war_support < 0.2
 				}
 				add_ideas = limited_conscription
 			}
 			else_if = {
 				limit = {
-					has_idea = service_by_requirement
+					has_war_support < 0.6
 				}
 				add_ideas = extensive_conscription
 			}
-			else_if = {
-				limit = {
-					has_idea = all_adults_serve
-				}
+			else = {
 				add_ideas = service_by_requirement
 			}
-			else_if = {
-				limit = {
-					has_idea = scraping_the_barrel
-				}
-				add_ideas = all_adults_serve
-			}
-			else = {
-				add_ideas = limited_conscription
-			}
 		}
+
+		
+
 	}
-
-
 	demob_manpower_mission = {
 
 		icon = revolt
@@ -690,6 +735,24 @@ demobilization = {
 		activation = {
 			has_unsupported_manpower_law = yes
 			has_war = no
+			#if = {
+			#	limit = {
+			#		original_tag = GRE
+			#	}
+			#	NOT = {
+			#		has_completed_focus = GRE_request_communist_support
+			#	}
+			#}
+		}
+		visible = {
+			#if = {
+			#	limit = {
+			#		original_tag = GRE
+			#	}
+			#	NOT = {
+			#		has_completed_focus = GRE_request_communist_support #put here in lieu of a cancel trigger
+			#	}
+			#}		
 		}
 		cancel_if_not_visible = yes
 		timeout_effect = {
@@ -698,16 +761,18 @@ demobilization = {
 					has_government = communism
 					has_stability < 0.2
 				}
-				add_popularity = { ideology = democratic popularity = 0.1}
-				add_stability = -0.1
+				start_civil_war = {
+					ideology = democratic
+				}
 			}
 			if = {
 				limit = {
 					NOT = { has_government = communism }
 					has_stability < 0.3
 				}
-				add_popularity = { ideology = communism popularity = 0.1}
-				add_stability = -0.1
+				start_civil_war = {
+					ideology = communism
+				}
 			}
 			if = {
 				limit = {
@@ -720,6 +785,12 @@ demobilization = {
 					has_government = communism
 				}
 				add_popularity = { ideology = democratic popularity = 0.1 }
+			}
+			if = {
+				limit = {
+					NOT = { has_government = communism }
+				}
+				add_popularity = { ideology = communism popularity = 0.1 }
 			}
 		}
 	}

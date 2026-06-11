@@ -4428,24 +4428,24 @@ focus_tree = {
 		prerequisite = {
 			focus = TUR_work_within_the_shadows
 		}
-		mutually_exclusive = {
-			focus = TUR_formulate_a_coup
-		}
-		x = 1
+		#mutually_exclusive = {
+		#	focus = TUR_formulate_a_coup
+		#}
+		x = 0
 		y = 1
 		relative_position_id = TUR_work_within_the_shadows
 		search_filters = {
 			FOCUS_FILTER_INTERNAL_AFFAIRS
 		}
 		available = {
-			custom_trigger_tooltip = {
-				tooltip = TUR_intervene_in_the_elections_80_tt
-				check_variable = {
-					var = TUR_yildiz_teskilati_faction_power
-					value = 0.30
-					compare = greater_than_or_equals
-				}
-			}
+			#custom_trigger_tooltip = {
+			#	tooltip = TUR_intervene_in_the_elections_80_tt
+			#	check_variable = {
+			#		var = TUR_yildiz_teskilati_faction_power
+			#		value = 0.30
+			#		compare = greater_than_or_equals
+			#	}
+			#}
 		}
 		completion_reward = {
 			set_country_flag = TUR_yildiz_teskilati_election
@@ -4472,83 +4472,83 @@ focus_tree = {
 			base = 35
 		}
 	}
-	focus = {
-		id = TUR_formulate_a_coup
-		icon = GFX_goal_generic_political_pressure
-		cost = 5
-		prerequisite = {
-			focus = TUR_work_within_the_shadows
-		}
-		mutually_exclusive = {
-			focus = TUR_intervene_in_the_elections
-		}
-		x = -1
-		y = 1
-		relative_position_id = TUR_work_within_the_shadows
-		search_filters = {
-			FOCUS_FILTER_INTERNAL_AFFAIRS
-		}
-		completion_reward = {
-			set_temp_variable = {
-				TUR_yildiz_teskilati_faction_power_cw = TUR_yildiz_teskilati_faction_power
-			}
-			multiply_variable = {
-				TUR_yildiz_teskilati_faction_power_cw = 100
-			}
-			set_temp_variable = {
-				TUR_yildiz_teskilati_ittihadist_power_cw = TUR_yildiz_teskilati_ittihadist_power
-			}
-			multiply_variable = {
-				TUR_yildiz_teskilati_ittihadist_power_cw = 100
-			}
-			if = {
-				limit = {
-					NOT = {
-						has_variable = TUR_yildiz_teskilati_faction_power
-					}
-				}
-				random_list = {
-					0 = {
-						country_event = {
-							id = ottoman.3
-						}
-					}
-					100 = {
-						country_event = {
-							id = ottoman.4
-						}
-					}
-				}
-			}
-			else = {
-				random_list = {
-					TUR_yildiz_teskilati_faction_power_cw = {
-						country_event = {
-							id = ottoman.3
-						}
-					}
-					TUR_yildiz_teskilati_ittihadist_power_cw = {
-						country_event = {
-							id = ottoman.4
-						}
-					}
-				}
-			}
-			custom_effect_tooltip = TUR_formulate_a_coup_tt
-		}
-		ai_will_do = {
-			base = 35
-		}
-	}
+	#focus = {
+	#	id = TUR_formulate_a_coup
+	#	icon = GFX_goal_generic_political_pressure
+	#	cost = 5
+	#	prerequisite = {
+	#		focus = TUR_work_within_the_shadows
+	#	}
+	#	mutually_exclusive = {
+	#		focus = TUR_intervene_in_the_elections
+	#	}
+	#	x = -1
+	#	y = 1
+	#	relative_position_id = TUR_work_within_the_shadows
+	#	search_filters = {
+	#		FOCUS_FILTER_INTERNAL_AFFAIRS
+	#	}
+	#	completion_reward = {
+	#		set_temp_variable = {
+	#			TUR_yildiz_teskilati_faction_power_cw = TUR_yildiz_teskilati_faction_power
+	#		}
+	#		multiply_variable = {
+	#			TUR_yildiz_teskilati_faction_power_cw = 100
+	#		}
+	#		set_temp_variable = {
+	#			TUR_yildiz_teskilati_ittihadist_power_cw = TUR_yildiz_teskilati_ittihadist_power
+	#		}
+	#		multiply_variable = {
+	#			TUR_yildiz_teskilati_ittihadist_power_cw = 100
+	#		}
+	#		if = {
+	#			limit = {
+	#				NOT = {
+	#					has_variable = TUR_yildiz_teskilati_faction_power
+	#				}
+	#			}
+	#			random_list = {
+	#				0 = {
+	#					country_event = {
+	#						id = ottoman.3
+	#					}
+	#				}
+	#				100 = {
+	#					country_event = {
+	#						id = ottoman.4
+	#					}
+	#				}
+	#			}
+	#		}
+	#		else = {
+	#			random_list = {
+	#				TUR_yildiz_teskilati_faction_power_cw = {
+	#					country_event = {
+	#						id = ottoman.3
+	#					}
+	#				}
+	#				TUR_yildiz_teskilati_ittihadist_power_cw = {
+	#					country_event = {
+	#						id = ottoman.4
+	#					}
+	#				}
+	#			}
+	#		}
+	#		custom_effect_tooltip = TUR_formulate_a_coup_tt
+	#	}
+	#	ai_will_do = {
+	#		base = 35
+	#	}
+	#}
 	focus = {
 		id = TUR_depoliticize_the_army
 		icon = GFX_focus_army_is_ready
 		cost = 5
 		prerequisite = {
 			focus = TUR_intervene_in_the_elections
-			focus = TUR_formulate_a_coup
+			#focus = TUR_formulate_a_coup
 		}
-		x = -2
+		x = -1
 		y = 1
 		available = {
 			if = {
@@ -4598,9 +4598,9 @@ focus_tree = {
 		cost = 10
 		prerequisite = {
 			focus = TUR_intervene_in_the_elections
-			focus = TUR_formulate_a_coup
+			#focus = TUR_formulate_a_coup
 		}
-		x = 0
+		x = 1
 		y = 1
 		available = {
 			if = {

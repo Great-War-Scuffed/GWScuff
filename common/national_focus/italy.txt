@@ -2209,17 +2209,17 @@ focus_tree = {
 		}
 		completion_reward = {
 			add_war_support = 0.1
-			if = {
-				limit = {
-					has_subject = GLD
-				}
-				GLD = {
-					country_event = {
-						id = ww1_somalia.4
-						hours = 3
-					}
-				}
-			}
+			#if = {
+			#	limit = {
+			#		has_subject = GLD
+			#	}
+			#	GLD = {
+			#		country_event = {
+			#			id = ww1_somalia.4
+			#			hours = 3
+			#		}
+			#	}
+			#}
 		}
 		ai_will_do = {
 			factor = 100

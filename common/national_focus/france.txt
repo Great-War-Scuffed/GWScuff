@@ -1853,7 +1853,7 @@ focus_tree = {
 	}
 	focus = {
 		id = FRA_ww1_protect_european_minorities
-		icon = GFX_focus_stabilize_democracy
+		icon = GFX_focus_BEL_interpreters
 		relative_position_id = FRA_ww1_the_social_democrat_compromise
 		prerequisite = {
 			focus = FRA_ww1_the_social_democrat_compromise
@@ -6366,7 +6366,7 @@ focus_tree = {
 	}
 	focus = {
 		id = FRA_ww1_static_warfare_focus
-		icon = GFX_focus_marmara_artillery
+		icon = GFX_focus_PRC_anti_air_effort
 		relative_position_id = FRA_ww1_revision_de_larmee_de_terre
 		prerequisite = {
 			focus = FRA_ww1_revision_de_larmee_de_terre

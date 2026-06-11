@@ -100,8 +100,8 @@ focus_tree = {
 		completion_reward = {
 			add_tech_bonus = {
 				name = industrial_bonus
-				bonus = 1.0
-				uses = 1
+				bonus = 0.75
+				uses = 2
 				category = industry
 			}
 		}
@@ -314,7 +314,7 @@ focus_tree = {
 	focus = {
 		id = BRA_attract_foreign_investors
 		icon = GFX_goal_generic_improve_relations
-		cost = 5
+		cost = 10
 		prerequisite = {
 			focus = BRA_industrial_outbreak
 		}
@@ -326,7 +326,7 @@ focus_tree = {
 		completion_reward = {
 			add_offsite_building = {
 				type = industrial_complex
-				level = 2
+				level = 4
 			}
 		}
 		search_filters = { FOCUS_FILTER_INDUSTRY }
@@ -337,7 +337,7 @@ focus_tree = {
 	focus = {
 		id = BRA_amadeo_rossi
 		icon = GFX_goal_generic_production
-		cost = 5
+		cost = 10
 		prerequisite = {
 			focus = BRA_attract_foreign_investors
 		}
@@ -348,10 +348,10 @@ focus_tree = {
 		}
 		completion_reward = {
 			502 = {
-				add_extra_state_shared_building_slots = 2
+				add_extra_state_shared_building_slots = 4
 				add_building_construction = {
 					type = arms_factory
-					level = 2
+					level = 4
 					instant_build = yes
 				}
 			}
@@ -387,7 +387,7 @@ focus_tree = {
 					}
 				}
 				prioritize = { 501 }
-				add_extra_state_shared_building_slots = 1
+				add_extra_state_shared_building_slots = 3
 				add_building_construction = {
 					type = infrastructure
 					level = 1
@@ -402,7 +402,7 @@ focus_tree = {
 					}
 				}
 				prioritize = { 504 }
-				add_extra_state_shared_building_slots = 1
+				add_extra_state_shared_building_slots = 3
 				add_building_construction = {
 					type = infrastructure
 					level = 1
@@ -417,7 +417,7 @@ focus_tree = {
 					}
 				}
 				prioritize = { 503 }
-				add_extra_state_shared_building_slots = 1
+				add_extra_state_shared_building_slots = 3
 				add_building_construction = {
 					type = infrastructure
 					level = 1
@@ -432,7 +432,7 @@ focus_tree = {
 					}
 				}
 				prioritize = { 502 }
-				add_extra_state_shared_building_slots = 1
+				add_extra_state_shared_building_slots = 3
 				add_building_construction = {
 					type = infrastructure
 					level = 1
@@ -447,7 +447,7 @@ focus_tree = {
 					}
 				}
 				prioritize = { 1079 }
-				add_extra_state_shared_building_slots = 1
+				add_extra_state_shared_building_slots = 3
 				add_building_construction = {
 					type = infrastructure
 					level = 1
@@ -462,7 +462,7 @@ focus_tree = {
 					}
 				}
 				prioritize = { 1073 }
-				add_extra_state_shared_building_slots = 1
+				add_extra_state_shared_building_slots = 3
 				add_building_construction = {
 					type = infrastructure
 					level = 1
@@ -477,7 +477,7 @@ focus_tree = {
 					}
 				}
 				prioritize = { 499 }
-				add_extra_state_shared_building_slots = 1
+				add_extra_state_shared_building_slots = 3
 				add_building_construction = {
 					type = infrastructure
 					level = 1
@@ -492,7 +492,7 @@ focus_tree = {
 					}
 				}
 				prioritize = { 1074 }
-				add_extra_state_shared_building_slots = 1
+				add_extra_state_shared_building_slots = 3
 				add_building_construction = {
 					type = infrastructure
 					level = 1
@@ -507,7 +507,7 @@ focus_tree = {
 					}
 				}
 				prioritize = { 497 }
-				add_extra_state_shared_building_slots = 1
+				add_extra_state_shared_building_slots = 3
 				add_building_construction = {
 					type = infrastructure
 					level = 1
@@ -522,7 +522,7 @@ focus_tree = {
 					}
 				}
 				prioritize = { 496 }
-				add_extra_state_shared_building_slots = 1
+				add_extra_state_shared_building_slots = 3
 				add_building_construction = {
 					type = infrastructure
 					level = 1
@@ -553,7 +553,7 @@ focus_tree = {
 			811 = {
 				add_resource = {
 					type = steel
-					amount = 10
+					amount = 20
 				}
 			}
 		}
@@ -678,7 +678,7 @@ focus_tree = {
 	focus = {
 		id = BRA_loan_from_us
 		icon = GFX_focus_chi_mission_to_the_us
-		cost = 5
+		cost = 10
 		prerequisite = {
 			focus = BRA_federal_center_for_technological_education
 		}
@@ -699,7 +699,7 @@ focus_tree = {
 		completion_reward = {
 			add_offsite_building = {
 				type = industrial_complex
-				level = 2
+				level = 4
 			}
 		}
 		search_filters = { FOCUS_FILTER_INDUSTRY }
@@ -734,6 +734,7 @@ focus_tree = {
 						}
 					}
 					prioritize = { 500 }
+					add_extra_state_shared_building_slots = 1
 					add_building_construction = {
 						type = infrastructure
 						level = 1
@@ -748,6 +749,7 @@ focus_tree = {
 						}
 					}
 					prioritize = { 811 }
+					add_extra_state_shared_building_slots = 1
 					add_building_construction = {
 						type = infrastructure
 						level = 1
@@ -762,6 +764,7 @@ focus_tree = {
 						}
 					}
 					prioritize = { 501 }
+					add_extra_state_shared_building_slots = 1
 					add_building_construction = {
 						type = infrastructure
 						level = 1

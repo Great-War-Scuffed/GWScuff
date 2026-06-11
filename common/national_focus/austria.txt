@@ -2731,7 +2731,7 @@ focus = {
 	completion_reward = {
 		release_autonomy = {
 			target = GAL
-			autonomy_state = autonomy_tgwr_crownland
+			autonomy_state = autonomy_wtt_imperial_subject
 			freedom_level = 0.8
 			release_non_owned_controlled = yes
 		}
@@ -2753,7 +2753,7 @@ focus = {
 		remove_ideas = AUH_romanian_nationalism
 		release_autonomy = {
 			target = TRA
-			autonomy_state = autonomy_tgwr_crownland
+			autonomy_state = autonomy_wtt_imperial_subject
 			freedom_level = 0.5
 			release_non_owned_controlled = yes
 		}
@@ -2773,7 +2773,7 @@ focus = {
 	completion_reward = {
 		release_autonomy = {
 			target = CZE
-			autonomy_state = autonomy_tgwr_crownland
+			autonomy_state = autonomy_wtt_imperial_subject
 			freedom_level = 0.6
 			release_non_owned_controlled = yes
 		}
@@ -2848,7 +2848,7 @@ focus = {
 	completion_reward = {
 		release_autonomy = {
 			target = CRO
-			autonomy_state = autonomy_tgwr_crownland
+			autonomy_state = autonomy_wtt_imperial_subject
 			freedom_level = 0.8
 			release_non_owned_controlled = yes
 		}
@@ -2894,7 +2894,7 @@ focus = {
 	completion_reward = {
 		release_autonomy = {
 			target = SLO
-			autonomy_state = autonomy_tgwr_crownland
+			autonomy_state = autonomy_wtt_imperial_subject
 			freedom_level = 0.5
 			release_non_owned_controlled = yes
 		}

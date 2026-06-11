@@ -163,11 +163,11 @@ focus_tree = {
 		id = USA_reorganize_army_corps
 		icon = GFX_goal_generic_small_arms
 		available = {
-			OR = {
-				has_war = yes
-				threat > 0.4
-				has_global_flag = great_war
-			}
+		#	OR = {
+		#		has_war = yes
+		#		threat > 0.4
+		#		has_global_flag = great_war
+		#	}
 		}
 		cost = 5
 		x = 43
@@ -2946,7 +2946,7 @@ focus_tree = {
 	focus = {
 		id = USA_doctrine_of_armored_raids
 		icon = GFX_focus_early_tank
-		cost = 10
+		cost = 5
 		prerequisite = {
 			focus = USA_maneuver_divison
 		}
@@ -3005,7 +3005,7 @@ focus_tree = {
 	focus = {
 		id = USA_prepare_for_trench_warfare
 		icon = GFX_goal_generic_military_sphere
-		cost = 10
+		cost = 5
 		prerequisite = {
 			focus = USA_shotgun
 		}
@@ -3076,7 +3076,7 @@ focus_tree = {
 		search_filters = {FOCUS_FILTER_MANPOWER}
 		bypass = { }
 		available = { 
-			has_war_with_major = yes
+			#has_war_with_major = yes
 			has_completed_focus = USA_volunteer_act 
 			if = {
 				limit = {

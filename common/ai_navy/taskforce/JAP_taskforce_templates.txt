@@ -5,6 +5,7 @@ JAP_KidoButai_1 = {
 	ai_will_do = {
 		factor = 1
 	}	
+	keep_updated = yes
 	mission = { naval_strike }
 	min_composition = {
 		battleship = {

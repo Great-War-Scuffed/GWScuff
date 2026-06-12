@@ -1020,12 +1020,12 @@ leader_traits = {
 	cavalry_leader = { 
 		type = corps_commander
 		gain_xp = {
-			set_temp_variable = { temp = num_units }
-			multiply_temp_variable = { temp = 0.4 }
-			set_temp_variable = { cmm = num_cavalry }
-			add_to_temp_variable = { cmm = num_motorized }
-			#add_to_temp_variable = { cmm = num_mechanized }
-			check_variable = { cmm > temp }
+			check_expr = {
+				value = num_cavalry
+				add = num_motorized
+				add = num_mechanized
+				greater_than = { value = num_units  multiply = 0.4 }
+			}
 		}
 		custom_gain_xp_trigger_tooltip = cavalary_ratio_over_40
 		
@@ -1051,9 +1051,10 @@ leader_traits = {
 	infantry_leader = { 
 		type = corps_commander
 		gain_xp = {
-			set_temp_variable = { temp = num_units }
-			multiply_temp_variable = { temp = 0.8 }
-			check_variable = { num_infantry > temp }
+			check_expr = {
+				value = num_infantry
+				greater_than = { value = num_units  multiply = 0.8 }
+			}
 		}
 		custom_gain_xp_trigger_tooltip = infantry_ratio_over_80
 		
@@ -1235,9 +1236,10 @@ leader_traits = {
 	panzer_leader = {
  		type = corps_commander
 		gain_xp = {
-			set_temp_variable = { temp = num_units }
-			multiply_temp_variable = { temp = 0.4 }
-			check_variable = { num_armored > temp }
+			check_expr = {
+				value = num_armored
+				greater_than = { value = num_units  multiply = 0.4 }
+			}
 		}
 		custom_gain_xp_trigger_tooltip = armored_ratio_over_40
 		cost = 700

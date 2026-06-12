@@ -1,6 +1,7 @@
 characters = {
 	XKC_peng_risheng = { # 彭日升
 		name = CHI_peng_risheng
+		can_be_captured = no
 		portraits = {
 			civilian = {
 				large = "gfx/leaders/Asia/portrait_asia_generic_land_14.dds"

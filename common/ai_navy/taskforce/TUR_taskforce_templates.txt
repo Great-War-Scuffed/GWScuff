@@ -1,0 +1,115 @@
+TUR_canakkale_filosu = {
+	allowed = {
+		tag = TUR
+	}
+	ai_will_do = {
+		factor = 1
+	}	
+	keep_updated = yes
+	mission = { naval_strike }
+	min_composition = {
+		battleship = {
+			amount = 2
+		}
+	}
+	
+	optimal_composition = {
+		battleship = {
+			amount = 4
+		}
+		protected_cruiser = {
+			amount = 1
+		}
+		destroyer = {
+			amount = 18
+		}
+	}
+}
+
+TUR_goeben_and_breslasu = {
+	allowed = {
+		tag = TUR
+	}
+	ai_will_do = {
+		factor = 5
+	}
+	mission = { naval_patrol }
+	min_composition = {
+		light_cruiser = {
+			amount = 1
+		}
+		battle_cruiser = {
+			amount = 1
+		}
+	}	
+}
+
+TUR_konstantiniyye_filosu = {
+	allowed = {
+		tag = TUR
+	}
+	ai_will_do = {
+		factor = 5
+	}	
+	mission = { naval_patrol }
+	min_composition = {
+		protected_cruiser = {
+			amount = 1
+		}
+	}
+
+	optimal_composition = {
+		protected_cruiser = {
+			amount = 1
+		}
+		unprotected_cruiser = {
+			amount = 2
+		}
+		destroyer = {
+			amount = 12
+		}
+	}
+}
+
+TUR_torpedo_boats = {
+	allowed = {
+		tag = TUR
+	}
+	ai_will_do = {
+		factor = 5
+	}	
+	mission = { naval_patrol }
+	min_composition = {
+		destroyer = {
+			amount = 2
+		}
+	}
+	optimal_composition = {
+		destroyer = {
+			amount = 4
+		}		
+	}
+}
+
+TUR_MineLaying = {
+	allowed = {
+		tag = TUR
+	}
+	ai_will_do = {
+		factor = 1
+	}
+	mission = { mines_planting }
+	min_composition = {
+		destroyer = {
+			amount = 1
+			role = 4
+		}
+	}
+	
+	optimal_composition = {
+		destroyer = {
+			amount = 4
+			role = 4
+		}
+	}
+}

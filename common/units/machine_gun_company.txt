@@ -7,20 +7,25 @@ sub_units = {
 		priority = 1198
 		ai_priority = 100
 		active = no
+		affects_speed = no
+		is_artillery_brigade = no
 		
 		type = {
 			infantry
+			support
 		}
 
-		group = infantry
+		group = support
+		allowed_battalion_groups = { infantry mobile }
 		
 		categories = {
-			category_front_line
+			category_regimental_support_battalions
 			category_army
 			category_machine_gun
 		}
 
-		combat_width = 1
+		divisional = no
+		combat_width = 0
 
 		manpower = 180
 		need = {

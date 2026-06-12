@@ -12,6 +12,7 @@ characters={
 	}
 	AMU_ivan_gamov = {
 		name = AMU_ivan_gamov
+		can_be_captured = no
 		portraits = {
 			civilian = {
 				large = "gfx/leaders/AMU/AMU_Ivan_Gamov.png"

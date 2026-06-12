@@ -1,6 +1,7 @@
 characters={
 	KEN_hugh_cholmondeley={
 		name=KEN_hugh_cholmondeley
+		can_be_captured = no
 		portraits={
 			civilian={
 				large="gfx/leaders/KEN/KEN_Hugh_Cholmondeley.png"

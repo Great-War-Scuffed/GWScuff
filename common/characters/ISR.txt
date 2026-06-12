@@ -43,6 +43,7 @@ characters={
 	}
 	ISR_zeev_jabotinsky={
 		name=ISR_zeev_jabotinsky
+		can_be_captured = no
 		portraits={
 			civilian={
 				large="gfx/leaders/ISR/ISR_zeev_jabotinsky.png"

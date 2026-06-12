@@ -1,6 +1,7 @@
 characters = {
 	FNG_zhang_zuolin = { # 張作霖
 		name = "CHI_zhang_zuolin"
+		can_be_captured = no
 		portraits = {
 			civilian = {
 				large = "gfx/leaders/CHI/CHI_zhang_zuolin.png"
@@ -25,6 +26,7 @@ characters = {
 	}
 	FNG_zhang_xueliang = { # 張學良
 		name = "CHI_zhang_xueliang"
+		can_be_captured = no
 		portraits = {
 			civilian = {
 				large = "gfx/leaders/CHI/CHI_Zhang_Xueliang.png"
@@ -490,6 +492,7 @@ characters = {
 		portraits = {
 			army = {
 				large = "gfx/leaders/CHI/CHI_wan_fulin.png"
+				small = GFX_idea_CHI_wan_fulin
 			}
 		}
 		corps_commander = {

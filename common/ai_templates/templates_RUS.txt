@@ -67,6 +67,8 @@ infantry_RUS = {
 			regiments = {
 				infantry = 16
 				field_gun_brigade = 2
+			}
+			regimental_support = {
 				machine_gun_company = 1
 			}
 		}

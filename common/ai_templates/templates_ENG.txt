@@ -39,10 +39,7 @@ armor_ENG = {
 			
 			regiments = {
 				infantry = 10
-				field_gun_brigade = 1
-				field_gun_brigade = 1
-				howitzer_brigade = 0
-				machine_gun_company = 0
+				field_gun_brigade = 2
 				heavy_armor = 1
 			}
 		}
@@ -125,6 +122,8 @@ infantry_ENG = {
 				infantry = 12
 				field_gun_brigade = 2
 				howitzer_brigade = 1
+			}
+			regimental_support = {
 				machine_gun_company = 1
 			}
 		}
@@ -155,6 +154,8 @@ infantry_ENG = {
 				infantry = 12
 				field_gun_brigade = 2
 				howitzer_brigade = 1
+			}
+			regimental_support = {
 				machine_gun_company = 1
 			}
 		}
@@ -184,6 +185,8 @@ infantry_ENG = {
 				infantry = 10
 				field_gun_brigade = 2
 				howitzer_brigade = 0
+			}
+			regimental_support = {
 				machine_gun_company = 1
 			}
 		}
@@ -219,6 +222,8 @@ infantry_ENG = {
 				infantry = 10
 				field_gun_brigade = 2
 				howitzer_brigade = 0
+			}
+			regimental_support = {
 				machine_gun_company = 1
 			}
 		}

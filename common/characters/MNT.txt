@@ -1,6 +1,7 @@
 characters = {
 	MNT_nikola_i = {
-		name = "MNT_nikola_i"
+		can_be_captured = no
+		name = MNT_nikola
 		portraits = {
 			civilian = {
 				large = "gfx/leaders/MNT/MNT_nikola_i.png"
@@ -27,6 +28,7 @@ characters = {
 	}
 	MNT_danilo_petrovic_njegos = {
 		name = "MNT_danilo_petrovic_njegos"
+		can_be_captured = no
 		portraits = {
 			army = {
 				large = "gfx/leaders/MNT/MNT_Danilo_Petrovic_Njegos.png"
@@ -77,6 +79,7 @@ characters = {
 	}
 	MNT_mitar_martinovic = {
 		name = "MNT_mitar_martinovic"
+		can_be_captured = no
 		portraits = {
 			army = {
 				large = "gfx/leaders/MNT/MNT_Mitar_Martinovic.png"
@@ -127,6 +130,7 @@ characters = {
 	}
 	MNT_janko_vukotic = {
 		name = "MNT_janko_vukotic"
+		can_be_captured = no
 		portraits = {
 			army = {
 				large = "gfx/leaders/MNT/MNT_janko_vukotic.png"
@@ -164,7 +168,7 @@ characters = {
 			}
 		}
 		field_marshal = {
-			traits = { politically_connected trait_royal }
+			traits = { politically_connected trait_royalist }
 			skill = 3
 			attack_skill = 3
 			defense_skill = 2
@@ -211,6 +215,7 @@ characters = {
 	#Christmas Uprising
 	MNT_krsto_popovic = {
 		name = "MNT_krsto_popovic"
+		can_be_captured = no
 		portraits = {
 			army = {
 				large = "gfx/leaders/MNT/MNT_Krsto_Popovic.png"

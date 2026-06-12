@@ -1,6 +1,7 @@
 characters={ # 陈光远
 	JXC_chen_guangyuan={
 		name=CHI_chen_guangyuan
+		can_be_captured = no
 		portraits={
 			civilian={
 				large="gfx/leaders/CHI/CHI_chen_guangyuan.png"

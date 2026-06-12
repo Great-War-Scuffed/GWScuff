@@ -1,0 +1,10 @@
+{
+  "permissions": {
+    "allow": [
+      "Skill(update-config)",
+      "Skill(update-config:*)",
+      "Bash(curl -s \"https://raw.githubusercontent.com/diosaurreal/tgwr-mod/master/common/abilities/JAP_abilities.txt\")",
+      "Bash(curl -s \"https://raw.githubusercontent.com/diosaurreal/tgwr-mod/master/common/abilities/generic_leader_abilities.txt\")"
+    ]
+  }
+}

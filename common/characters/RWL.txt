@@ -1,5 +1,6 @@
 characters={
 	RWL_nuri_bin_hazaa_al_shalaan = {
+		can_be_captured = no
 		portraits = {
 			civilian = {
 				large = "gfx/leaders/RWL/RWL_Nuri_bin_Hazaa_al_Shalaan.png"
@@ -28,6 +29,7 @@ characters={
 		}
 	}
 	RWL_nawwaf_bin_nuri_al_shaalan = {
+		can_be_captured = no
 		portraits = {
 			civilian = {
 				large = "gfx/leaders/RWL/RWL_Nawwaf_bin_Nuri_Al_Shaalan.png"

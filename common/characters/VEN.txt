@@ -1,6 +1,7 @@
 characters={
 	VEN_juan_vicente_gomez={
 		name=VEN_juan_vicente_gomez
+		can_be_captured = no
 		portraits={
 			civilian={
 				large="gfx/leaders/VEN/VEN_juan_vicente_gomez.png"
@@ -31,6 +32,17 @@ characters={
 					has_government = communism
 				}
 			}
+		}
+	}
+	VEN_victorino_marquez_bustillos={
+		portraits={
+			civilian={
+				large="gfx/leaders/VEN/VEN_Victorino_Marquez_Bustillos.png"
+			}
+		}
+
+		country_leader={
+			ideology= authoritarian_democracy
 		}
 	}
 	VEN_ignacio_andrade={

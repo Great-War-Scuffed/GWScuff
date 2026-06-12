@@ -1,6 +1,7 @@
 characters={
 	SOM_mohammed_abdullah_hassan={
 		name=SOM_mohammed_abdullah_hassan
+		can_be_captured = no
 		portraits={
 			civilian={
 				large="gfx/leaders/SOM/SOM_mohammed_abdullah_hassan.png"
@@ -40,6 +41,7 @@ characters={
 	}
 	SOM_maxamuud_cali_shiire = {
 		name = SOM_maxamuud_cali_shiire
+		can_be_captured = no
 		portraits = {
 			civilian = {
 				large = "gfx/leaders/SOM/SOM_maxamuud_cali_shiire.png"

@@ -1,5 +1,6 @@
 characters={
 	KUT_muhammad_al_sanussi={
+		can_be_captured = no
 		portraits={
 			civilian={
 				large="gfx/leaders/KUT/KUT_muhammad_al_sanussi.png"
@@ -24,6 +25,7 @@ characters={
 		}
 	}
 	KUT_kamun_al_sanussi={
+		can_be_captured = no
 		portraits={
 			army={
 				# large="gfx/leaders/KUT/KUT_kamun_al_sanussi.png"

@@ -1,6 +1,7 @@
 characters={
 	FIN_carl_gustaf_mannerheim={
 		name=RUS_gustav_karlovich
+		can_be_captured = no
 		portraits={
 			civilian={
 				small="gfx/interface/ideas/FIN/idea_FIN_carl_mannerheim_civil.png"
@@ -218,6 +219,7 @@ characters={
 	}
 	FIN_kullervo_manner={
 		name="FIN_kullervo_manner"
+		can_be_captured = no
 		portraits={
 			civilian={
 				large="gfx/leaders/FIN/FIN_kullervo_manner.png"
@@ -511,6 +513,7 @@ characters={
 	}
 	FIN_nikolai_mexmontan = {
 		name = FIN_nikolai_mexmontan
+		can_be_captured = no
 		portraits = {
 			civilian = {
 				large = "gfx/leaders/FIN/FIN_Nikolai_Mexmontan.png"

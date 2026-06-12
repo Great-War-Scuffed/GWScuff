@@ -1,6 +1,7 @@
 characters={
 	AFG_habibullah_khan={
 		name="AFG_habibullah_khan"
+		can_be_captured = no
 		portraits={
 			civilian={
 				large="gfx/leaders/AFG/AFG_habibullah.png"
@@ -25,6 +26,7 @@ characters={
 	}
 	AFG_amanullah_khan={
 		name="AFG_amunullah_khan"
+		can_be_captured = no
 		advisor={
 			slot = political_advisor
 			idea_token = AFG_amanullah_khan
@@ -61,6 +63,7 @@ characters={
 	}
 	AFG_mohammed_nadir_shah={
 		name="AFG_mohammed_nadir_shah"
+		can_be_captured = no
 		portraits={
 			civilian={
 				large="gfx/leaders/AFG/AFG_nadir_khan.png"
@@ -308,11 +311,24 @@ characters={
 		}
 	}
 	AFG_habibullah_kalakani = {
-		name = AFG_habibullah_kalakani
+		can_be_captured = no
 		portraits = {
 			army = {
-				large = "GFX_portrait_arabia_generic_land_7"
+				large = "gfx/leaders/AFG/AFG_habibullah_kalakani.png"
 				small = "GFX_idea_arabia_generic_land_7"
+			}
+		}
+		field_marshal={
+			traits = {
+				trait_reckless inspirational_leader harsh_leader trickster
+			}
+			skill=2
+			attack_skill=2
+			defense_skill=3
+			planning_skill=2
+			logistics_skill=2
+			visible = {
+				is_country_leader = yes
 			}
 		}
 	}

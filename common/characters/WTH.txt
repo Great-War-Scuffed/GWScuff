@@ -15,6 +15,7 @@ characters = {
 	}
 	WTH_suleyman_askeri_bey = {
 		name = TUR_suleyman_askeri_bey
+		can_be_captured = no
 		portraits = {
 			civilian = {
 				small = "gfx/interface/ideas/TUR/idea_TUR_Suleyman_Askeri_Bey.png"

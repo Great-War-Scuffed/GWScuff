@@ -37,6 +37,7 @@ characters={
 	}
 	BOL_bautista_saavedra={
 		name="BOL_bautista_saavedra"
+		can_be_captured = no
 		portraits={
 			civilian={
 				large="gfx/leaders/BOL/BOL_bautista_saavedra.png"

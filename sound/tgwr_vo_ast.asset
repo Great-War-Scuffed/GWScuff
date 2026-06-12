@@ -1,0 +1,184 @@
+
+category = 
+{
+ name = "Voices"
+ soundeffects = {
+	NZL_infantry_idle
+	NZL_infantry_retreat
+	NZL_infantry_neutral_combat
+	NZL_infantry_positive_combat
+	NZL_infantry_move_out
+ }
+ compressor =
+ {
+	enabled = yes
+	pregain = 0.0
+	postgain = 2.0
+	ratio = 10.0
+	threshold = -10.0
+	attacktime = 0.030
+	releasetime = 1.2
+ } 
+}
+
+############# SOUNDEFFECTS
+
+##########
+# NZL 
+##########
+
+soundeffect = {
+    name = "NZL_infantry_idle"
+    sounds = {
+        sound = "ast_idle_001"
+        sound = "ast_idle_002"
+        sound = "ast_idle_003"
+        sound = "ast_idle_004"
+        sound = "ast_idle_005"
+        sound = "ast_idle_006"
+        sound = "ast_idle_007"
+        sound = "ast_idle_008"
+        sound = "ast_idle_009"
+        sound = "ast_idle_010"
+        sound = "ast_idle_011"
+        sound = "ast_idle_012"
+        sound = "ast_idle_013"
+        sound = "ast_idle_014"
+        sound = "ast_idle_015"
+        sound = "ast_idle_016"
+        sound = "ast_idle_017"
+        sound = "ast_idle_018"
+        sound = "ast_idle_019"
+        sound = "ast_idle_020"
+        sound = "ast_idle_021"
+        sound = "ast_idle_022"
+        sound = "ast_idle_023"
+        sound = "ast_idle_024"
+        sound = "ast_idle_025"
+        sound = "ast_idle_026"
+        sound = "ast_idle_027"
+    }
+	max_audible = 1
+	max_audible_behaviour = fail
+	volume = 0.50
+	volume_random_offset = { 0.0 -0.15 }
+	playbackrate_random_offset = { 0.0 -0.15 }
+}
+
+soundeffect = {
+    name = "NZL_infantry_retreat"
+    sounds = {
+        sound = "ast_retreat_001"
+        sound = "ast_retreat_002"
+        sound = "ast_retreat_003"
+        sound = "ast_retreat_004"
+        sound = "ast_retreat_005"
+        sound = "ast_retreat_006"
+        sound = "ast_retreat_007"
+        sound = "ast_retreat_008"
+        sound = "ast_retreat_009"
+        sound = "ast_retreat_010"
+        sound = "ast_retreat_011"
+        sound = "ast_retreat_012"
+        sound = "ast_retreat_013"
+        sound = "ast_retreat_014"
+        sound = "ast_retreat_015"
+        sound = "ast_retreat_016"
+        sound = "ast_retreat_017"
+        sound = "ast_retreat_018"
+        sound = "ast_retreat_016_alt"
+        sound = "ast_retreat_017_alt"
+        sound = "ast_retreat_018_alt"
+    }
+	max_audible = 1
+	max_audible_behaviour = fail
+	volume = 0.50
+	volume_random_offset = { 0.0 -0.15 }
+	playbackrate_random_offset = { 0.0 -0.15 }
+}
+
+soundeffect = {
+    name = "NZL_infantry_neutral_combat"
+    sounds = {
+        sound = "ast_neutral_001"
+        sound = "ast_neutral_002"
+        sound = "ast_neutral_003"
+        sound = "ast_neutral_004"
+        sound = "ast_neutral_005"
+        sound = "ast_neutral_006"
+        sound = "ast_neutral_007"
+        sound = "ast_neutral_008"
+        sound = "ast_neutral_009"
+        sound = "ast_neutral_010"
+        sound = "ast_neutral_011"
+        sound = "ast_neutral_012"
+        sound = "ast_neutral_013"
+        sound = "ast_neutral_014"
+        sound = "ast_neutral_015"
+        sound = "ast_neutral_016"
+        sound = "ast_neutral_017"
+        sound = "ast_neutral_018"
+        sound = "ast_neutral_019"
+        sound = "ast_neutral_020"
+        sound = "ast_neutral_021"
+        sound = "ast_neutral_019_alt"
+        sound = "ast_neutral_020_alt"
+        sound = "ast_neutral_021_alt"
+    }
+	max_audible = 1
+	max_audible_behaviour = fail
+	volume = 0.50
+	volume_random_offset = { 0.0 -0.15 }
+	playbackrate_random_offset = { 0.0 -0.15 }
+}
+
+soundeffect = {
+    name = "NZL_infantry_positive_combat"
+    sounds = {
+        sound = "ast_positive_001"
+        sound = "ast_positive_002"
+        sound = "ast_positive_003"
+        sound = "ast_positive_004"
+        sound = "ast_positive_005"
+        sound = "ast_positive_006"
+        sound = "ast_positive_007"
+        sound = "ast_positive_008"
+        sound = "ast_positive_009"
+        sound = "ast_positive_010"
+        sound = "ast_positive_011"
+        sound = "ast_positive_012"
+        sound = "ast_positive_013"
+        sound = "ast_positive_014"
+        sound = "ast_positive_015"
+        sound = "ast_positive_016"
+        sound = "ast_positive_017"
+        sound = "ast_positive_018"
+        sound = "ast_positive_019"
+        sound = "ast_positive_020"
+        sound = "ast_positive_021"
+        sound = "ast_positive_022"
+        sound = "ast_positive_023"
+        sound = "ast_positive_024"
+    }
+	max_audible = 1
+	max_audible_behaviour = fail
+	volume = 0.50
+	volume_random_offset = { 0.0 -0.15 }
+	playbackrate_random_offset = { 0.0 -0.15 }
+}
+
+soundeffect = 
+{
+    name = "NZL_infantry_move_out"
+    sounds = {
+        sound = ast_positive_010
+        sound = ast_positive_011
+        sound = ast_positive_012
+
+    }
+	max_audible = 1
+	max_audible_behaviour = fail
+	volume = 0.50
+	volume_random_offset = { 0.0 -0.15 }
+	playbackrate_random_offset = { 0.0 -0.15}
+}

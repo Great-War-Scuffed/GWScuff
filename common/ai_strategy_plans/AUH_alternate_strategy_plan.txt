@@ -79,7 +79,7 @@ AUH_alternate_hungarian_revolution_plan = {
 	}
 }
 
-AUH_alternate_kaiserreich = {
+AUH_alternate_karl_corrupted = {
 	name = "Karl Corruption"
 	desc = ""
 

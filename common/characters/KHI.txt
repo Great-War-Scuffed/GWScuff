@@ -1,5 +1,6 @@
 characters={
 	KHI_muhammad_rahim_khan_ii ={
+		can_be_captured = no
 		portraits={
 			civilian={
 				large="gfx/leaders/KHI/KHI_muhammad_rahim_khan_ii.png"
@@ -27,6 +28,7 @@ characters={
 		}
 	}
 	KHI_isfandiyar_khan={
+		can_be_captured = no
 		portraits={
 			civilian={
 				large="gfx/leaders/KHI/KHI_isfandiyar_khan.png"
@@ -67,6 +69,7 @@ characters={
 		}
 	}
 	KHI_junaid_khan={
+		can_be_captured = no
 		portraits={
 			civilian={
 				large="gfx/leaders/KHI/KHI_junaid_khan.png"

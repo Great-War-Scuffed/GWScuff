@@ -79,6 +79,7 @@ characters={
 	}
 	SWI_ulrich_wille={
 		name=SWI_ulrich_wille
+		can_be_captured = no
 		portraits={
 			civilian={
 				large="gfx/leaders/SWI/SWI_wille.png"

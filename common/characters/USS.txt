@@ -1,6 +1,7 @@
 characters={
 	USS_ivan_kalmykov={
 		name=USS_ivan_kalmykov
+		can_be_captured = no
 		portraits={
 			army={
 				large="gfx/leaders/USS/USS_Ivan_Kalmykov.png"

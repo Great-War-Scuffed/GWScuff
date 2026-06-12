@@ -90,7 +90,7 @@ entity = {
 	clone = "HOL_infantry_2_entity"
 	name = "HOL_infantry_3_entity"
 }
-entity = { 
-	clone = "HOL_infantry_entity"
-	name = "INS_infantry_entity"
-}
+# entity = { 
+# 	clone = "HOL_infantry_entity"
+# 	name = "INS_infantry_entity"
+# }

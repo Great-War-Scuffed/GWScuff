@@ -1,6 +1,7 @@
 characters={
 	INS_a_w_frederik_idenburg={
 		name="INS_a_w_frederik_idenburg"
+		can_be_captured = no
 		portraits={
 			civilian={
 				large="gfx/leaders/INS/INS_frederik_idenburg.png"

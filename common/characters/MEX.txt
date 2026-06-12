@@ -1,6 +1,7 @@
 characters = {
 	MEX_emiliano_zapata = {
 		name = MEX_emiliano_zapata
+		can_be_captured = no
 		portraits = {
 			civilian = {
 				large = "gfx/leaders/MEX/MEX_emiliano_zapata.png"
@@ -46,6 +47,7 @@ characters = {
 	}
 	MEX_porfirio_diaz={
 		name = MEX_porfirio_diaz
+		can_be_captured = no
 		portraits={
 			civilian={
 				large="gfx/leaders/MEX/MEX_porfirio_diaz.png"
@@ -103,6 +105,7 @@ characters = {
 	}
 	MEX_victoriano_huerta={
 		name = MEX_victoriano_huerta
+		can_be_captured = no
 		portraits={
 			civilian={
 				large="gfx/leaders/MEX/MEX_victoriano_huerta.png"
@@ -132,6 +135,7 @@ characters = {
 	}
 	MEX_venustiano_carranza={
 		name = MEX_venustiano_carranza
+		can_be_captured = no
 		portraits={
 			civilian={
 				large="gfx/leaders/MEX/MEX_venustiano_carranza.png"
@@ -153,6 +157,7 @@ characters = {
 	}
 	MEX_alvaro_obregon={ #Carranza - Obregon
 		name = MEX_alvaro_obregon
+		can_be_captured = no
 		portraits={
 			civilian={
 				large="gfx/leaders/MEX/MEX_alvaro_obregon.png"
@@ -240,9 +245,9 @@ characters = {
 	MEX_salinas_camina = {
 		name = MEX_salinas_camina
 		portraits = {
-			navy = {
-				small = "gfx/interface/ideas/idea_south_america_generic_navy_19.dds"
-				large = "gfx/leaders/South America/portrait_south_america_generic_navy_19.dds"
+			navy = {			
+				large = "GFX_portrait_south_america_generic_navy_19"
+				small = "GFX_portrait_south_america_generic_navy_19_small"
 			}
 		}
 		advisor={
@@ -933,7 +938,7 @@ characters = {
 			logistics_skill=1
 			#legacy_id=123463
 			visible = {
-				date < 	1914.11.13
+				date <  1914.11.13
 				NOT = {
 					has_government = communism
 					has_country_flag = MXC
@@ -996,8 +1001,8 @@ characters = {
 		name=MEX_jose_azueta
 		portraits={
 			navy={
-				large="gfx/leaders/South America/Portrait_South_America_Generic_navy_1.dds"
-				small="gfx/interface/ideas/idea_south_america_generic_navy_1.dds"
+				large="GFX_Portrait_South_America_Generic_navy_1"
+				small="GFX_Portrait_South_America_Generic_navy_1_small"
 			}
 		}
 		advisor={
@@ -1061,8 +1066,8 @@ characters = {
 		name=MEX_othon_blanco
 		portraits={
 			navy={
-				large="gfx/leaders/MEX/MEX_Othon_P_Blanco.png"
-				small="GFX_idea_MEX_othon_blanco"
+				large=GFX_portrait_MEX_othon_blanco
+				small=GFX_idea_MEX_othon_blanco
 			}
 		}
 		navy_leader={
@@ -1078,8 +1083,8 @@ characters = {
 		name=MEX_hilario_rodriguez_malpica_segovia
 		portraits={
 			navy={
-				large="gfx/leaders/South America/Portrait_South_America_Generic_navy_3.dds"
-				small="gfx/interface/ideas/idea_south_america_generic_navy_3.dds"
+				large="GFX_Portrait_South_America_Generic_navy_3"
+				small="GFX_Portrait_South_America_Generic_navy_3_small"
 			}
 		}
 		advisor={
@@ -1157,6 +1162,7 @@ characters = {
 	}
 	MEX_pancho_villa={
 		name=MEX_pancho_villa
+		can_be_captured = no
 		portraits={
 			army={
 				large="gfx/leaders/MEX/MEX_pancho_villa.png"
@@ -1403,6 +1409,7 @@ characters = {
 	}
 	MEX_felix_uresti_gomez={ #Carranza revolutionary forces
 		name=MEX_felix_uresti_gomez
+		can_be_captured = no #should die instead
 		portraits={
 			army={
 				large="gfx/leaders/MEX/MEX_Felix_Uresti_Gomez.png"

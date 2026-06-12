@@ -15,13 +15,14 @@ characters = {
 	}
 	GXC_li_zongren = { # 李宗仁
 		name = GXC_li_zongren
+		can_be_captured = no
 		portraits = {
 			civilian = {
-				large = GFX_portrait_GXC_li_zongren
+				large = "gfx/leaders/CHI/CHI_li_zongren.png"
 			}
 			army = {
 				small = GFX_portrait_GXC_li_zongren_small
-				large = "GFX_portrait_li_zongren"
+				large = "gfx/leaders/CHI/CHI_li_zongren.png"
 			}
 		}
 		advisor = {
@@ -236,6 +237,7 @@ characters = {
 	}
 	GXC_mo_rongxin = { # 莫荣新
 		name = "CHI_mo_rongxin"
+		can_be_captured = no
 		portraits = {
 			army = {
 				large = "gfx/leaders/CHI/CHI_mo_rongxin.png"

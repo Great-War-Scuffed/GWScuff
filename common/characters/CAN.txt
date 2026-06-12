@@ -52,6 +52,7 @@ characters={
 
 	CAN_samuel_hughes={
 		name="CAN_samuel_hughes"
+		can_be_captured = no
 		advisor={
 			slot = theorist
 			cost = 100
@@ -220,6 +221,7 @@ characters={
 	}
 	CAN_louis_lipsett={
 		name="CAN_louis_lipsett"
+		can_be_captured = no #should die instead
 		portraits={
 			army={
 				large="gfx/leaders/CAN/CAN_louis_lipsett.png"
@@ -287,6 +289,7 @@ characters={
 	}
 	CAN_malcolm_mercer={
 		name="CAN_malcolm_mercer"
+		can_be_captured = no #should die instead
 		portraits={
 			army={
 				large="gfx/leaders/CAN/CAN_malcom_mercer.png"
@@ -331,20 +334,21 @@ characters={
 			slot = army_chief
 			idea_token = CAN_colin_mackenzie
 			allowed  = {
-					original_tag  = CAN
-				}
-				traits  = {
-					army_chief_defensive_2 
-				}
-				cost = 100
-				ai_will_do  = {
-					factor  = 1.000
-				}
+				original_tag  = CAN
+			}
+			traits  = {
+				army_chief_defensive_2 
+			}
+			cost = 100
+			ai_will_do  = {
+				factor  = 1.000
+			}
 		}
 		name="CAN_colin_mackenzie"
 		portraits={
 			army={
-				small="GFX_idea_generic_army_europe_2"
+				large="gfx/leaders/CAN/CAN_colin_mackenzie.png"
+				small="gfx/interface/ideas/CAN/idea_CAN_colin_mackenzie.png"			
 			}
 		}
 	}
@@ -375,21 +379,30 @@ characters={
 			slot = navy_chief
 			idea_token = CAN_charles_kingsmill
 			allowed  = {
-					original_tag  = CAN
-				}
-				traits  = {
-					navy_chief_decisive_battle_2 
-				}
-				cost = 100
-				ai_will_do  = {
-					factor  = 1.000
-				}
+				original_tag  = CAN
+			}
+			traits  = {
+				navy_chief_decisive_battle_2 
+			}
+			cost = 100
+			ai_will_do  = {
+				factor  = 1.000
+			}
 		}
 		name="CAN_charles_kingsmill"
 		portraits={
-			army={
-				small="GFX_idea_generic_navy_europe_3"
+			navy={
+				large="gfx/leaders/CAN/CAN_charles_kingsmill.png"
+				small="gfx/interface/ideas/CAN/idea_CAN_charles_kingsmill.png"
 			}
+		}
+		navy_leader={
+			traits={ old_guard_navy caustic_personality cuts_corners }
+			skill=2
+			attack_skill=2
+			defense_skill=2
+			maneuvering_skill=1
+			coordination_skill=1
 		}
 	}
 	CAN_george_halsey_perley={
@@ -434,20 +447,21 @@ characters={
 			slot = army_chief
 			idea_token = CAN_willoughby_gwatkin
 			allowed  = {
-					original_tag  = CAN
-				}
-				traits  = {
-					army_chief_offensive_2 
-				}
-				cost = 100
-				ai_will_do  = {
-					factor  = 1.000
-				}
+				original_tag  = CAN
+			}
+			traits  = {
+				army_chief_offensive_2 
+			}
+			cost = 100
+			ai_will_do  = {
+				factor  = 1.000
+			}
 		}
 		name="CAN_willoughby_gwatkin"
 		portraits={
 			army={
-				small="GFX_idea_generic_army_europe_5"
+				large="gfx/leaders/CAN/CAN_willoughby_gwatkin.png"
+				small="gfx/interface/ideas/CAN/idea_CAN_willoughby_gwatkin.png"
 			}
 		}
 	}

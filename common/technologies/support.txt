@@ -89,7 +89,11 @@ technologies = {
 		enable_subunits = {
 			engineer
 		}
-		
+		enable_subunits = {
+			limit = { has_dlc = "Thunder at Our Gates"}
+			hq_engineer
+		}
+
 		path = {
 			leads_to_tech = tech_engineers2
 			research_cost_coeff = 1
@@ -406,7 +410,11 @@ technologies = {
 		enable_subunits = {
 			recon		
 		}
-		
+		enable_subunits = {
+			limit = { has_dlc = "Thunder at Our Gates"}
+			hq_recon
+		}
+
 		path = {
 			leads_to_tech = tech_recon2
 			research_cost_coeff = 1
@@ -710,7 +718,11 @@ technologies = {
 		enable_subunits = {
 			military_police
 		}
-		
+		enable_subunits = {
+			limit = { has_dlc = "Thunder at Our Gates"}
+			hq_military_police
+		}
+
 		path = {
 			leads_to_tech = tech_military_police2
 			research_cost_coeff = 1
@@ -849,7 +861,11 @@ technologies = {
 		enable_subunits = {
 			maintenance_company
 		}
-		
+		enable_subunits = {
+			limit = { has_dlc = "Thunder at Our Gates"}
+			hq_maintenance
+		}
+
 		path = {
 			leads_to_tech = tech_maintenance_company2
 			research_cost_coeff = 1
@@ -1026,6 +1042,12 @@ technologies = {
 		enable_subunits = {
 			field_hospital
 		}
+		enable_subunits = {
+			limit = { has_dlc = "Thunder at Our Gates"}
+			hq_field_hospital
+		}
+
+
 		on_research_complete_limit = {
 			NOT = {
 				has_tech = tech_trucks
@@ -1231,6 +1253,11 @@ technologies = {
 		enable_subunits = {
 			logistics_company
 		}
+		enable_subunits = {
+			limit = { has_dlc = "Thunder at Our Gates"}
+			hq_logistics
+		}
+
 		on_research_complete_limit = {
 			NOT = {
 				has_tech = tech_trucks
@@ -1447,7 +1474,19 @@ technologies = {
 		enable_subunits = {
 			signal_company
 		}
-		
+		enable_subunits = {
+			limit = { has_dlc = "Thunder at Our Gates"}
+			hq_signal
+		}
+		enable_subunits = {
+			limit = { has_dlc = "Thunder at Our Gates"}
+			hq_air_liaison
+		}
+		enable_subunits = {
+			limit = { has_dlc = "Thunder at Our Gates"}
+			hq_naval_liaison
+		}
+				
 		path = {
 			leads_to_tech = tech_signal_company2
 			research_cost_coeff = 1

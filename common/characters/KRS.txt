@@ -1,6 +1,7 @@
 characters={
 	KRS_cihangirzade_ibrahim_bey = {
 		name = KRS_cihangirzade_ibrahim_bey
+		can_be_captured = no
 		portraits = {
 			civilian = {
 				large = "gfx/leaders/KRS/KRS_Cihangirzade_Ibrahim_Bey.png"

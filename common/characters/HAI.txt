@@ -12,6 +12,7 @@ characters={
 	}
 	HAI_cincinnatus_leconte={
 		name=HAI_cincinnatus_leconte
+		can_be_captured = no
 		portraits={
 			civilian={
 				large="gfx/leaders/HAI/HAI_Leconte.png"

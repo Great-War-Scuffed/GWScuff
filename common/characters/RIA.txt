@@ -1,6 +1,7 @@
 characters={
 	RIA_abdul_rahman_ii = {
 		name = INS_abdul_rahman_ii
+		can_be_captured = no
 		portraits = {
 			civilian = {
 				large = "gfx/leaders/INS/INS_abdul_rahman_ii.png"

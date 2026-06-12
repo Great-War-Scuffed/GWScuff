@@ -1,6 +1,7 @@
 characters={
 	MCO_albert_i={
 		name="MCO_albert_i"
+		can_be_captured = no
 		portraits={
 			civilian={
 				large="gfx/leaders/MCO/MCO_Albert_I.png"
@@ -27,6 +28,7 @@ characters={
 	}
 	MCO_louis_ii={
 		name="MCO_louis_grimaldi"
+		can_be_captured = no
 		portraits={
 			civilian={
 				large="gfx/leaders/MCO/MCO_Louis_II.png"

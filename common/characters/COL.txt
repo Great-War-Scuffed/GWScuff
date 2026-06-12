@@ -1,6 +1,7 @@
 characters={
 	COL_ramon_gonzalez_valencia={
 		name=COL_ramon_gonzalez_valencia
+		can_be_captured = no
 		portraits={
 			civilian={
 				large="gfx/leaders/COL/COL_ramon_gonzalez_valencia.png"

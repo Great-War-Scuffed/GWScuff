@@ -24,11 +24,9 @@ characters = {
 			}
 		}
 		portraits = {
-			army = {
-				small = "GFX_idea_TUR_prens_sabahattin_advisor"
-			}
 			civilian = {
-				large = "gfx/leaders/TUR/TUR_prens_sabahaddin.png"
+				large = "gfx/leaders/TUR/TUR_Prens_Sabahaddin.png"
+				small = "GFX_idea_TUR_prens_sabahattin_advisor"
 			}
 		}
 		country_leader = {
@@ -38,6 +36,7 @@ characters = {
 	}
 	TUR_ismail_enver = {
 		name = "TUR_ismail_enver"
+		can_be_captured = no
 		advisor = {
 			slot = political_advisor
 			idea_token = TUR_ismail_enver
@@ -308,6 +307,7 @@ characters = {
 	}
 	TUR_ahmet_izzet = {
 		name = "TUR_ahmet_izzet"
+		can_be_captured = no
 		portraits = {
 			civilian = {
 				large = "gfx/leaders/TUR/TUR_ahmet_izzet.png"
@@ -591,6 +591,7 @@ characters = {
 	}
 	TUR_yusuf_izzeddin = {
 		name = "TUR_yusuf_izzeddin"
+		can_be_captured = no
 		portraits = {
 			civilian = {
 				large = "gfx/leaders/TUR/TUR_yusuf_izzedidin_efendi.png"
@@ -645,6 +646,7 @@ characters = {
 	}
 	TUR_osman_iv = {
 		name = "TUR_osman_fuad"
+		can_be_captured = no
 		portraits = {
 			civilian = {
 				large = "gfx/leaders/TUR/TUR_osman_fuad.png"
@@ -759,6 +761,7 @@ characters = {
 	}
 	TUR_mahmud_sevket = {
 		name = "TUR_mahmud_sevket"
+		can_be_captured = no
 		advisor = {
 			slot = political_advisor
 			idea_token = TUR_mahmud_sevket
@@ -876,6 +879,7 @@ characters = {
 	}
 	TUR_mustafa_kemal = {
 		name = "TUR_mustafa_kemal"
+		can_be_captured = no
 		advisor = {
 			slot = political_advisor
 			idea_token = TUR_mustafa_kemal_advisor
@@ -1020,6 +1024,7 @@ characters = {
 	}
 	TUR_ahmed_cemal = {
 		name = TUR_ahmed_cemal
+		can_be_captured = no
 		advisor = {
 			slot = political_advisor
 			idea_token = TUR_ahmed_cemal
@@ -1273,9 +1278,12 @@ characters = {
 			cost = 150
 			slot = theorist
 			idea_token = TUR_fahrettin_altay
-			ledger = air
+			ledger = army
 			allowed = {
 				original_tag = TUR
+			}
+			available = {
+				has_completed_industrial_warfare_doctrine = yes
 			}
 			traits = {
 				mobile_warfare_expert
@@ -1632,36 +1640,34 @@ characters = {
 			slot = political_advisor
 			idea_token = TUR_tevfik_fikret
 			allowed = {
-					original_tag = TUR
-				}
-				traits = {
-					freedom_poet 
-				}
-				available = {
-					custom_trigger_tooltip = {
-						tooltip = character_not_dead
-						date < 1922.8.19
-					}
-				}
-				visible = {
+				original_tag = TUR
+			}
+			traits = {
+				freedom_poet 
+			}
+			available = {
+				custom_trigger_tooltip = {
+					tooltip = character_not_dead
 					date < 1922.8.19
 				}
-				available = {
-					NOT = {
-						has_government = fascism
-						has_country_leader = {
-							character = TUR_abdulhamid_ii
-							ruling_only = yes 
-						}
+				NOT = {
+					has_government = fascism
+					has_country_leader = {
+						character = TUR_abdulhamid_ii
+						ruling_only = yes 
 					}
 				}
-				ai_will_do = {
-					base = 0.000
-					modifier = {
-						add = 1.000
-						has_government = democratic 
-					}
+			}
+			visible = {
+				date < 1922.8.19
+			}
+			ai_will_do = {
+				base = 0.000
+				modifier = {
+					add = 1.000
+					has_government = democratic 
 				}
+			}
 		}
 		name = TUR_tevfik_fikret
 		portraits = {

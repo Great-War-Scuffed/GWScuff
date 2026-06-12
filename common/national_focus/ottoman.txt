@@ -139,6 +139,9 @@ focus_tree = {
 			create_wargoal = { type = annex_everything target = GRE }
 			create_wargoal = { type = annex_everything target = SER }
 			create_wargoal = { type = annex_everything target = MNT }
+			hidden_effect = {
+				annex_country = { target = CRE }
+			}
 			#country_event = {
 			#		id = ww1_firstbalkan.2
 			#	}

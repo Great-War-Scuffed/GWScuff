@@ -653,7 +653,7 @@ focus = {
 focus = {
 	id = AUH_cisleithania_policy
 	icon = GFX_focus_AUH_austria_focus
-	cost = 5
+	cost = 10
 	x = 0
 	y = 1
 	relative_position_id = AUH_focus_on_minorities
@@ -670,10 +670,10 @@ focus = {
 					size > 2
 				}
 			}
-			add_extra_state_shared_building_slots = 3
+			add_extra_state_shared_building_slots = 4
 			add_building_construction = {
 				type = industrial_complex
-				level = 3
+				level = 4
 				instant_build = yes
 			}
 		}
@@ -769,22 +769,22 @@ focus = {
 		focus = AUH_appoint_the_hungarian_prime
 	}
 	completion_reward = { 
-		#70 = {
-		#	add_extra_state_shared_building_slots = 1
-		#	add_building_construction = {
-		#		type = industrial_complex
-		#		level = 1
-		#		instant_build = yes
-		#	}
-		#}
-		#43 = {
-		#	add_extra_state_shared_building_slots = 2
-		#	add_building_construction = {
-		#		type = industrial_complex
-		#		level = 2
-		#		instant_build = yes
-		#	}
-		#}
+		70 = {
+			add_extra_state_shared_building_slots = 1
+			add_building_construction = {
+				type = industrial_complex
+				level = 1
+				instant_build = yes
+			}
+		}
+		43 = {
+			add_extra_state_shared_building_slots = 2
+			add_building_construction = {
+				type = industrial_complex
+				level = 2
+				instant_build = yes
+			}
+		}
 		43 = {
 			add_extra_state_shared_building_slots = 1
 			add_building_construction = {
@@ -840,7 +840,7 @@ focus = {
 focus = {
 	id = AUH_new_austrian_railways
 	icon = GFX_focus_generic_supply_line
-	cost = 5
+	cost = 10
 	x = 0
 	y = 1
 	relative_position_id = AUH_cisleithania_policy
@@ -855,30 +855,40 @@ focus = {
 	}
 	completion_reward = { 
 		4 = {
+			add_extra_state_shared_building_slots = 2
 			add_building_construction = {
 				type = infrastructure
-				level = 10
+				level = 2
+				instant_build = yes
+			}
+			add_building_construction = {
+				type = industrial_complex
+				level = 2
 				instant_build = yes
 			}
 		}
-		#4 = {
-		#	add_extra_state_shared_building_slots = 2
-		#	add_building_construction = {
-		#		type = industrial_complex
-		#		level = 2
-		#		instant_build = yes
-		#	}
-		#}
 		152 = {
+			add_extra_state_shared_building_slots = 2
 			add_building_construction = {
 				type = infrastructure
-				level = 10
+				level = 2
+				instant_build = yes
+			}
+			add_building_construction = {
+				type = industrial_complex
+				level = 2
 				instant_build = yes
 			}
 		}
 		69 = {
+			add_extra_state_shared_building_slots = 2
 			add_building_construction = {
 				type = infrastructure
+				level = 2
+				instant_build = yes
+			}
+			add_building_construction = {
+				type = industrial_complex
 				level = 2
 				instant_build = yes
 			}
@@ -1123,11 +1133,7 @@ focus = {
 			name = AUH_study_german_artillerys
 			uses = 2
 			bonus = 0.75
-			technology = artillery1
-			technology = artillery2
-			technology = artillery3
-			technology = artillery4
-			technology = artillery5
+			category = cat_artillery
 		}
 	}
 }
@@ -1146,11 +1152,7 @@ focus = {
 			name = AUH_study_german_howitzer
 			uses = 2
 			bonus = 0.75
-			technology = howitzer1
-			technology = howitzer2
-			technology = howitzer3
-			technology = howitzer4
-			technology = howitzer5
+			category = cat_artillery
 		}
 	}
 }

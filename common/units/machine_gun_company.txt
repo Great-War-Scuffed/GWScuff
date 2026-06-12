@@ -10,7 +10,6 @@ sub_units = {
 		
 		type = {
 			infantry
-			support
 		}
 
 		group = infantry
@@ -19,7 +18,6 @@ sub_units = {
 			category_front_line
 			category_army
 			category_machine_gun
-			category_regimental_support_battalions
 		}
 
 		combat_width = 1

@@ -18,6 +18,7 @@ sub_units = {
 			category_front_line
 			category_army
 			category_all_armor
+			category_mobile_and_mobile_combat_sup
 		}
 
 

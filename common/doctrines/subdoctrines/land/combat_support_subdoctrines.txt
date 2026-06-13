@@ -983,11 +983,7 @@ field_engineering = {
 				soft_attack = 0.1
 				defense = 0.1
 			}
-            machine_gun = {				
-				soft_attack = 0.1
-				defense = 0.1
-			}
-            machine_gun_company = {				
+            category_machine_gun = {				
 				soft_attack = 0.1
 				defense = 0.1
 			}
@@ -1015,7 +1011,7 @@ field_engineering = {
             maintenance_company = {
                 max_organisation = 5
             }
-			machine_gun_company = {
+			category_machine_gun = {
                 max_organisation = 5
 				breakthrough = 0.1				
 			}

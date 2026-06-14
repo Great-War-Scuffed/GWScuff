@@ -98,7 +98,7 @@ HOL_alternate_syndicalist = {
 		HOL_eradicate_neutralism
 	}
 }
-HOL_alternate_syndicalist = {
+HOL_alternate_monarchist = {
 	name = "Monarchist plan"
 	desc = ""
 

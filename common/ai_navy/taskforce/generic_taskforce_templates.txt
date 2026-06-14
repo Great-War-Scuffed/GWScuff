@@ -9,11 +9,13 @@ StrikeForce_1 = {
 			original_tag = GER
 			original_tag = FRA
 			original_tag = GRE
+			original_tag = TUR
 		}		
 	}
 	ai_will_do = {
 		factor = 1
 	}	
+	keep_updated = yes
 	mission = { naval_strike }
 	min_composition = {
 		destroyer = {
@@ -48,6 +50,7 @@ PatrolReconForce_1 = {
 			original_tag = GER
 			original_tag = FRA
 			original_tag = GRE
+			original_tag = TUR
 		}		
 	}
 	ai_will_do = {
@@ -77,6 +80,7 @@ PatrolDominanceForce_CA_1 = {
 			original_tag = GER
 			original_tag = FRA
 			original_tag = GRE
+			original_tag = TUR
 		}		
 	}
 	ai_will_do = {
@@ -110,6 +114,7 @@ PatrolDominanceForce_BC_1 = {
 			original_tag = GER
 			original_tag = FRA
 			original_tag = GRE
+			original_tag = TUR
 		}		
 	}
 	ai_will_do = {
@@ -143,6 +148,7 @@ ConvoyRaiding_1 = {
 			original_tag = GER
 			original_tag = FRA
 			original_tag = GRE
+			original_tag = TUR
 		}		
 	}
 	ai_will_do = {
@@ -173,6 +179,7 @@ ConvoySurfaceRaiding_1 = {
 			original_tag = GER
 			original_tag = FRA
 			original_tag = GRE
+			original_tag = TUR
 		}		
 	}
 	ai_will_do = {
@@ -203,6 +210,7 @@ ConvoyEscort_1 = {
 			original_tag = GER
 			original_tag = FRA
 			original_tag = GRE
+			original_tag = TUR
 		}		
 	}
 	ai_will_do = {
@@ -233,6 +241,7 @@ MineLaying_1 = {
 			original_tag = GER
 			original_tag = FRA
 			original_tag = GRE
+			original_tag = TUR
 		}		
 	}
 	ai_will_do = {

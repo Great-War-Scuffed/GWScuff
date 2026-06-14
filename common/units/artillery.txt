@@ -26,6 +26,7 @@ sub_units = {
 		}
 
 
+		regimental = no
 		combat_width = 0
 
 		need = {
@@ -76,6 +77,7 @@ sub_units = {
 		}
 
 
+		regimental = no
 		combat_width = 0
 
 		need = {
@@ -124,6 +126,7 @@ sub_units = {
 		}
 
 
+		regimental = no
 		combat_width = 0
 		
 		essential = {
@@ -172,6 +175,7 @@ sub_units = {
 			category_rocket_artillery
 		}		
 
+		regimental = no
 		combat_width = 0
 
 		need = {

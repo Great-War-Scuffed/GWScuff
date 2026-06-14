@@ -1,6 +1,7 @@
 characters={
 	TER_mikhail_karaulov = {
 		name = TER_mikhail_karaulov
+		can_be_captured = no
 		portraits = {
 			civilian = {
 				large = "gfx/leaders/TER/TER_Mikhail_Karaulov.png"

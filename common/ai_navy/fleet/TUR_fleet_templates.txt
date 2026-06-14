@@ -1,0 +1,25 @@
+TUR_main_fleet = {
+	required_taskforces = {
+		TUR_canakkale_filosu = 1
+		TUR_konstantiniyye_filosu = 1
+	}	
+	optional_taskforces = {
+		TUR_torpedo_boats = 2
+		TUR_goeben_and_breslasu = 1
+	}
+}
+
+TUR_escort_fleet = {
+	required_taskforces = {
+		TUR_torpedo_boats = 1
+	}
+	optional_taskforces = {
+		TUR_torpedo_boats = 3
+	}
+}
+
+TUR_minelaying_fleet = {
+	required_taskforces = {
+		TUR_MineLaying = 1
+	}
+}

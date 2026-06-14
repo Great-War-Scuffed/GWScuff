@@ -21,6 +21,7 @@ characters = {
 	}
 	BNT_albert_bartha = {
 		name = BNT_albert_bartha
+		can_be_captured = no
 		portraits = {
 			army = {
 				large = GFX_Portrait_AUH_generic_land_4

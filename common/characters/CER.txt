@@ -1,6 +1,7 @@
 characters={
 	CER_dmitry_horvat = {
 		name = CER_dmitry_horvat 
+		can_be_captured = no
 		portraits = {
 			civilian = {
 				large="gfx/leaders/RUS/RUS_dmitry_horvat.png"

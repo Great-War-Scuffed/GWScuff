@@ -5,8 +5,8 @@ ITA_naval_invasion_support = {
         ITA
     }
 
-    min_priority = 1
-    max_priority = 10
+    min_priority = 4
+    max_priority = 15
 }
 
 ITA_mine_sweeping = {
@@ -16,8 +16,8 @@ ITA_mine_sweeping = {
         ITA
     }
 
-    min_priority = 0
-    max_priority = 0
+    min_priority = 1
+    max_priority = 1
 }
 
 ITA_invasion_defense = {
@@ -27,7 +27,7 @@ ITA_invasion_defense = {
         ITA
     }
 
-    min_priority = 5
+    min_priority = 1
     max_priority = 7
 }
 
@@ -82,8 +82,8 @@ ITA_mine_laying = {
         ITA
     }
 
-    min_priority = 0
-    max_priority = 0
+    min_priority = 1
+    max_priority = 1
 }
 
 ITA_training = {

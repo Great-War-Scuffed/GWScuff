@@ -1,6 +1,7 @@
 characters={
 	BID_ali_bin_adballah ={
 		name=BID_ali_bin_adballah
+		can_be_captured = no
 		portraits={
 			civilian={
 				large="gfx/leaders/BID/BID_ali_bin_adballah.png"
@@ -25,6 +26,7 @@ characters={
 	}
 	BID_abdallah_bin_alawi_bin_husein = {
 		name=BID_abdallah_bin_alawi_bin_husein
+		can_be_captured = no
 		portraits={
 			civilian={
 				large="gfx/leaders/BID/BID_abdallah_bin_alawi_bin_husein.png"

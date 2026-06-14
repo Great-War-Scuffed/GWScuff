@@ -148,7 +148,16 @@ country_event = {
 			IRE = {
 				add_ideas = standing_alone
 				add_ideas = IRE_idea_IRA
-				promote_character = IRE_eamon_de_valera
+				promote_character = IRE_cathal_brugha
+				country_event = { #eamon returns, 2nd ministry formed, eamon becomes leader
+					id = orange.21
+					days = 10
+				}
+				set_party_name = {
+					ideology = democratic
+					long_name = IRE_democratic_sinn_fein_party
+					name = IRE_democratic_sinn_fein_party
+				}
 				add_state_core = 113
 				add_state_core = 134
 				add_state_core = 135
@@ -214,7 +223,7 @@ country_event = {
 					create_unit = {
 						division = "name = \"2nd Southern Division\" division_template = \"IRA Division\" start_experience_factor = 0.4"
 						owner = IRE
-						prioritize_location = 6289 #limerick
+						prioritize_location = 13379 #limerick
 					}
 					create_unit = {
 						division = "name = \"3rd Southern Division\" division_template = \"IRA Division\" start_experience_factor = 0.4"
@@ -275,6 +284,7 @@ country_event = {
 				set_province_controller = 11287
 				set_province_controller = 3396
 				set_province_controller = 369
+				set_province_controller = 6289
 				remove_state_core = 113
 				remove_state_core = 134
 				remove_state_core = 135
@@ -334,6 +344,230 @@ country_event = {
 			news_event = {
 				id = interwar_news.11
 				days = 1
+			}
+		}
+		declare_war_on = {
+			type = annex_everything
+			target = IRE
+		}
+		activate_mission = IRE_irish_independence_war_timer
+		IRE = { activate_mission = IRE_irish_independence_war_timer }
+	}
+	option = {
+		name = ww1_england.4.b
+		every_owned_state = {
+			limit = {
+				OR = {
+					state = 113
+					state = 134
+					state = 135
+				}	
+			}	
+			transfer_state_to = IRE
+		}
+		hidden_effect = {
+			IRE = {
+				add_ideas = standing_alone
+				add_ideas = IRE_idea_IRA
+				promote_character = IRE_cathal_brugha
+				country_event = { #eamon returns, 2nd ministry formed, eamon becomes leader
+					id = orange.21
+					days = 10
+				}
+				set_party_name = {
+					ideology = democratic
+					long_name = IRE_democratic_sinn_fein_party
+					name = IRE_democratic_sinn_fein_party
+				}
+				add_state_core = 113
+				add_state_core = 134
+				add_state_core = 135
+				add_state_core = 119
+				set_province_controller = 3242
+				division_template = {
+					name = "IRA Division"
+					regiments = {
+						militia = { x = 0 y = 0 }
+						militia = { x = 0 y = 1 }
+						militia = { x = 0 y = 2 }
+						militia = { x = 1 y = 0 }
+						militia = { x = 1 y = 1 }
+						militia = { x = 1 y = 2 }
+						militia = { x = 2 y = 0 }
+						militia = { x = 2 y = 1 }
+					}
+					support = {
+						engineer = { x = 0 y = 0  }
+						field_gun = { x = 0 y = 1 }
+					}
+				}
+				134 = { #connacht
+					create_unit = {
+						division = "name = \"1st Northern Division\" division_template = \"IRA Division\" start_experience_factor = 0.4"
+						owner = IRE
+						prioritize_location = 337 #donegal
+					}
+					create_unit = {
+						division = "name = \"1st Western Division\" division_template = \"IRA Division\" start_experience_factor = 0.4"
+						owner = IRE
+						prioritize_location = 9303 #galway
+					}
+					create_unit = {
+						division = "name = \"2nd Western Division\" division_template = \"IRA Division\" start_experience_factor = 0.4"
+						owner = IRE
+						prioritize_location = 11371 #sligo
+					}
+					create_unit = {
+						division = "name = \"3rd Western Division\" division_template = \"IRA Division\" start_experience_factor = 0.4"
+						owner = IRE
+						prioritize_location = 11371 #roscommon
+					}
+					create_unit = {
+						division = "name = \"4th Western Division\" division_template = \"IRA Division\" start_experience_factor = 0.4"
+						owner = IRE
+						prioritize_location = 9369 #west galway
+					}
+				}
+				119 = { #ulster
+					create_unit = {
+						division = "name = \"3rd Northern Division\" division_template = \"IRA Division\" start_experience_factor = 0.4"
+						owner = IRE
+						prioritize_location = 3242 #down
+					}
+				}
+				135 = { #munster
+					create_unit = {
+						division = "name = \"1st Southern Division\" division_template = \"IRA Division\" start_experience_factor = 0.4"
+						owner = IRE
+						prioritize_location = 7394 #cork
+					}
+					create_unit = {
+						division = "name = \"2nd Southern Division\" division_template = \"IRA Division\" start_experience_factor = 0.4"
+						owner = IRE
+						prioritize_location = 13379 #limerick
+					}
+					create_unit = {
+						division = "name = \"3rd Southern Division\" division_template = \"IRA Division\" start_experience_factor = 0.4"
+						owner = IRE
+						prioritize_location = 6313 #tipperary
+					}
+				}
+				113 = { #leinster
+					create_unit = {
+						division = "name = \"1st Eastern Division\" division_template = \"IRA Division\" start_experience_factor = 0.4"
+						owner = IRE
+						prioritize_location = 3342 #meath
+					}
+					create_unit = {
+						division = "name = \"2nd Eastern Division\" division_template = \"IRA Division\" start_experience_factor = 0.4"
+						owner = IRE
+						prioritize_location = 11293 #dublin
+					}
+					create_unit = {
+						division = "name = \"3rd Eastern Division\" division_template = \"IRA Division\" start_experience_factor = 0.4"
+						owner = IRE
+						prioritize_location = 285 #wexford
+					}
+					create_unit = {
+						division = "name = \"1st Midlands Division\" division_template = \"IRA Division\" start_experience_factor = 0.4"
+						owner = IRE
+						prioritize_location = 303 #offaly
+					}
+					create_unit = {
+						division = "name = \"2nd Northern Division\" division_template = \"IRA Division\" start_experience_factor = 0.4"
+						owner = IRE
+						prioritize_location = 11303 #fermanagh
+					}
+					create_unit = {
+						division = "name = \"4th Northern Division\" division_template = \"IRA Division\" start_experience_factor = 0.4"
+						owner = IRE
+						prioritize_location = 3359 #louth
+					}
+					create_unit = {
+						division = "name = \"4th Northern Division\" division_template = \"IRA Division\" start_experience_factor = 0.4"
+						owner = IRE
+						prioritize_location = 11303 #cavan
+					}
+				}
+			}
+			ENG = {
+				set_province_controller = 11334
+				set_province_controller = 10291
+				set_province_controller = 9310
+				set_province_controller = 11237
+				set_province_controller = 6405
+				set_province_controller = 9284
+				set_province_controller = 11267
+				set_province_controller = 9405
+				set_province_controller = 9321
+				set_province_controller = 9255
+				set_province_controller = 11238
+				set_province_controller = 11287
+				set_province_controller = 3396
+				set_province_controller = 369
+				set_province_controller = 6289
+				remove_state_core = 113
+				remove_state_core = 134
+				remove_state_core = 135
+				division_template = {
+					name = "RIC Auxiliaries"
+					regiments = {
+						infantry = {
+							x = 0
+							y = 0
+						}
+						infantry = {
+							x = 0
+							y = 1
+						}
+						infantry = {
+							x = 0
+							y = 2
+						}
+						infantry = {
+							x = 1
+							y = 0
+						}
+					}
+					support = {
+						military_police = {
+							x = 0
+							y = 0
+						}
+					}
+				}
+				119 = {
+					create_unit = {
+						division = "name = \"Depot Company\" division_template = \"RIC Auxiliaries\" start_experience_factor = 0.5"
+						owner = ENG
+						prioritize_location = 3379
+					}
+					create_unit = {
+						division = "name = \"A Company\" division_template = \"RIC Auxiliaries\" start_experience_factor = 0.5"
+						owner = ENG
+						prioritize_location = 385
+					}
+					create_unit = {
+						division = "name = \"B Company\" division_template = \"RIC Auxiliaries\" start_experience_factor = 0.5"
+						owner = ENG
+						prioritize_location = 11257
+					}
+					create_unit = {
+						division = "name = \"C Company\" division_template = \"RIC Auxiliaries\" start_experience_factor = 0.5"
+						owner = ENG
+						prioritize_location = 276
+					}
+				}
+			}
+			ENG_frank_crozier = {
+				remove_unit_leader_trait = trait_royalist
+			}
+			news_event = {
+				id = interwar_news.11
+				days = 1
+			}
+			IRE = {
+				change_tag_from = ROOT
 			}
 		}
 		declare_war_on = {
@@ -443,6 +677,9 @@ country_event = {
 		set_cosmetic_tag = ENG_nr
 		white_peace = IRE
 		transfer_state = 119
+		IRE = {
+			set_country_flag = colony
+		}
 		set_autonomy = {
 			target = IRE
 			autonomous_state = autonomy_dominion
@@ -685,6 +922,15 @@ country_event = {
 		add_opinion_modifier = {
 			target = GER
 			modifier = zimmermann_telegram_opinion
+		}
+		if = {
+			limit = { 
+				has_completed_focus = USA_old_neutrality_act
+				NOT = {
+					has_completed_focus = USA_do_not_stand_aside
+				}
+			}
+			complete_national_focus = USA_do_not_stand_aside
 		}
 		news_event = ww1_england.11
 		ai_chance = {
@@ -1450,7 +1696,8 @@ country_event = {
 			base = 1
 		}
 		ENG = {
-			create_faction = Allies
+			create_faction_from_template = faction_template_entente
+			set_faction_name = Allies
 			add_to_faction = POR
 		}
 	}
@@ -1865,10 +2112,7 @@ country_event = {
 			# }
 			if = {
 				limit = {
-					OR = {
-						has_subject = AST
-						is_in_faction_with = AST
-					}
+					is_ally_with = AST
 				}
 				AST = {
 					country_event = {
@@ -1988,7 +2232,7 @@ country_event = {
 				}
 				set_popularities = {
 					communism = 48
-					fascism = 26
+					fascism = 24
 					democratic = 22
 					neutrality = 6
 				}
@@ -4907,11 +5151,12 @@ country_event = {
 								}
 							}
 							ZIM = {
+								set_country_flag = colony
 								get_current_government_type = yes
 								PREV = {
 									set_autonomy = {
 										target = PREV
-										autonomy_state = autonomy_colony
+										autonomy_state = autonomy_tgwr_self_governing_colony
 										freedom_level = 0.1
 										end_wars = yes
 									}
@@ -5102,7 +5347,7 @@ country_event = {
 		ENG = {
 			set_autonomy = {
 				target = ROOT
-				autonomous_state = autonomy_dominion
+				autonomous_state = autonomy_satellite
 				freedom_level = 0.7
 			}
 		}
@@ -5224,12 +5469,12 @@ country_event = {
 # 		}
 # 		set_autonomy = {
 # 			target = ISR
-# 			autonomous_state = autonomy_dominion
+# 			autonomous_state = autonomy_satellite
 # 			freedom_level = 0.2
 # 		}
 # 		# set_autonomy = {
 # 		# 	target = PAL
-# 		# 	autonomous_state = autonomy_dominion
+# 		# 	autonomous_state = autonomy_satellite
 # 		# 	freedom_level = 0.2
 # 		# }
 # 		hidden_effect = {
@@ -5302,7 +5547,7 @@ country_event = {
 # 		}
 # 		set_autonomy = {
 # 			target = ISR
-# 			autonomous_state = autonomy_dominion
+# 			autonomous_state = autonomy_satellite
 # 			freedom_level = 0.2
 # 		}
 # 		# if = {
@@ -5311,7 +5556,7 @@ country_event = {
 # 		# 	}
 # 		# 	set_autonomy = {
 # 		# 		target = PAL
-# 		# 		autonomous_state = autonomy_dominion
+# 		# 		autonomous_state = autonomy_satellite
 # 		# 		freedom_level = 0.2
 # 		# 	}
 # 		# }
@@ -5402,6 +5647,7 @@ country_event = {
 			}
 			ISR = {
 				get_current_government_type = yes
+				set_country_flag = colony
 			}
 		}
 		set_autonomy = {
@@ -5446,6 +5692,7 @@ country_event = {
 			}
 			ISR = {
 				get_current_government_type = yes
+				set_country_flag = colony
 			}
 		}
 		set_autonomy = {
@@ -5863,6 +6110,9 @@ country_event = {
 			}
 		}
 		add_war_support = -0.01
+		KEN	= {
+			set_country_flag = colony
+		}
 		ENG = {
 			set_autonomy = {
 				target = KEN
@@ -6272,7 +6522,8 @@ country_event = {
 			}
 			set_faction_name = second_entente
 			else = {
-				create_faction = second_entente
+				create_faction_from_template = faction_template_entente
+				set_faction_name = second_entente
 			}
 		}
 		every_other_country = {
@@ -6285,8 +6536,7 @@ country_event = {
 				}
 				NOT = {
 					has_war_with = PREV
-					is_subject_of = PREV
-					is_in_faction_with = PREV
+					is_ally_with = PREV
 				}
 			}
 			country_event = generic.5
@@ -7191,14 +7441,30 @@ country_event = {
 				set_country_flag = protectorate
 				get_current_government_type = yes
 			}
-			ROOT = {
-				set_autonomy = {
-					target = PREV
-					autonomous_state = autonomy_tgwr_protectorate
-					freedom_level = 0.5
-					end_wars = yes
+			if = {
+				limit = { 
+					has_subject = RAJ
 				}
+				RAJ = {
+					set_autonomy = {
+						target = PREV
+						autonomous_state = autonomy_tgwr_protectorate
+						freedom_level = 0.5
+						end_wars = yes
+					}
+				}
+				give_military_access = ROOT		
 			}
+			else = {
+				ROOT = {
+					set_autonomy = {
+						target = PREV
+						autonomous_state = autonomy_tgwr_protectorate
+						freedom_level = 0.5
+						end_wars = yes
+					}
+				}
+			}		
 			hidden_effect = {
 				restore_previous_government_type = yes
 				separate_peace_all_wars = yes
@@ -7645,10 +7911,7 @@ country_event = {
 		white_peace = POR
 		every_other_country = {
 			limit = {
-				OR = {
-					is_subject_of = ROOT
-					is_in_faction_with = ROOT
-				}
+				is_ally_with = ROOT
 				has_war_with = POR
 			}
 			white_peace = POR
@@ -12163,8 +12426,7 @@ country_event = {
 		name = ww1_england.232.a
 		trigger = {
 			NOT = {
-				is_in_faction_with = DEN
-				has_subject = DEN
+				is_ally_with = DEN
 			}
 		}
 		create_wargoal = {
@@ -12181,8 +12443,7 @@ country_event = {
 		if = {
 			limit = {
 				NOT = {
-					is_in_faction_with = DEN
-					has_subject = DEN
+					is_ally_with = DEN
 				}
 			}
 			DEN = { country_event = generic.5 }
@@ -12192,8 +12453,7 @@ country_event = {
 			modifier = {
 				add = 30
 				OR = {
-					is_in_faction_with = DEN
-					has_subject = DEN
+					is_ally_with = DEN
 				}
 			}
 			modifier = {
@@ -12210,8 +12470,7 @@ country_event = {
 		name = ww1_england.232.c
 		trigger = {
 			NOT = {
-				is_in_faction_with = DEN
-				has_subject = DEN
+				is_ally_with = DEN
 			}
 		}
 		add_political_power = -45
@@ -13146,7 +13405,7 @@ country_event = {
 		add_stability = 0.10
 		set_autonomy = {
 			target = ENG
-			autonomy_state = autonomy_dominion
+			autonomy_state = autonomy_satellite
 			end_wars = no
 			end_civil_wars = no
 		}
@@ -13815,14 +14074,7 @@ country_event = {
 						}
 					}
 					restore_previous_government_type = yes
-					every_enemy_country = {
-						limit = {
-							NOT = {
-								original_tag = PER
-							}
-						}
-						ARB = { white_peace = PREV }
-					}
+					separate_peace_all_wars = yes
 				}
 			}
 		}
@@ -13899,12 +14151,13 @@ country_event = {
 			division_template = {
 				name = "Fao Landing Force"
 				division_names_group = ENG_INF_02
+				template_counter = 110
 				regiments = {
 					infantry = { x = 0 y = 0 }
 					infantry = { x = 0 y = 1 }
 					infantry = { x = 1 y = 0 }
 					infantry = { x = 1 y = 1 }
-					field_gun_brigade = { x = 2 y = 1 }
+					field_gun_brigade = { x = 2 y = 0 }
 				}
 				support = { 
 					field_gun = { x = 0 y = 0 }
@@ -14102,7 +14355,7 @@ country_event = {
 			ROOT = { get_current_government_type = yes }
 			set_autonomy = {
 				target = ROOT
-				autonomy_state = autonomy_dominion
+				autonomy_state = autonomy_satellite
 				freedom_level = 0.8
 			}
 			ROOT = { restore_previous_government_type = yes }
@@ -14147,9 +14400,7 @@ country_event = {
 		tag = ENG
 		is_great_war_ongoing = yes
 		has_war_with = GER
-		GER = {
-			enemies_naval_strength_ratio < 1.3
-		}
+		naval_dominance_enemy_north_sea = yes
 		NOT = {
 			has_active_mission = ENG_wavering_naval_supremacy
 			has_idea = ENG_naval_supremacy_lost

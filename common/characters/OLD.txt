@@ -1,6 +1,7 @@
 characters={
 	OLD_friedrich_august_von_oldenburg={
 		name=GER_friedrich_august_von_oldenburg
+		can_be_captured = no
 		portraits={
 			civilian={
 				large="gfx/leaders/OLD/OLD_Friedrich_August_von_Oldenburg.png"

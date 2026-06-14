@@ -15,6 +15,7 @@ characters={
 	}
 	ALT_aleksandr_kaygorodov = {
 		name = ALT_aleksandr_kaygorodov
+		can_be_captured = no
 		portraits = {
 			army = {
 				large="gfx/leaders/ALT/ALT_Aleksandr_Kaygorodov.png"

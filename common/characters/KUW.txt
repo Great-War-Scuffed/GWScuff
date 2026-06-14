@@ -34,6 +34,7 @@ characters={
 	}
 	KUW_ahmed_alsabah={
 		name="KUW_ahmad_al_sabah"
+		can_be_captured = no
 		portraits={
 			civilian={
 				large="gfx/leaders/KUW/KUW_Ahmed_al_Sabah.png"

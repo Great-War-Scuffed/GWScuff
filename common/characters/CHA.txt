@@ -1,6 +1,7 @@
 characters={
 	CHA_muhammad_salih_bin_yusuf={
 		name="CHA_muhammad_salih_bin_yusuf"
+		can_be_captured = no
 		portraits={
 			civilian={
 				large="gfx/leaders/CHA/CHA_dud_murra.png"
@@ -30,6 +31,7 @@ characters={
 	}
 	CHA_adam_asil={
 		name="CHA_adam_asil"
+		can_be_captured = no
 		portraits={
 			civilian={
 				large="gfx/leaders/CHA/CHA_Adam_Asil.png"

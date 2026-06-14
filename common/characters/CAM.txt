@@ -12,6 +12,7 @@ characters={
 	}
 	CAM_sisowath_monivong={
 		name="CAM_sisowath_monivong"
+		can_be_captured = no
 		portraits={
 			civilian={
 				large="gfx/leaders/CAM/CAM_sisowath_monivong.png"

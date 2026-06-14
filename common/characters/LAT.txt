@@ -48,6 +48,7 @@ characters={
 	}
 	LAT_oskars_kalpaks={
 		name="LAT_oskars_kalpaks"
+		can_be_captured = no #should die instead
 		portraits={
 			army={
 				large = "gfx/leaders/LAT/LAT_Oskars_Kalpaks.png"

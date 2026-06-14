@@ -1,6 +1,7 @@
 characters={
 	ECU_leonidas_plaza={
 		name=ECU_leonidas_plaza
+		can_be_captured = no
 		portraits={
 			civilian={
 				large="gfx/leaders/ECU/ECU_leonidas_plaza_gutierrez.png"
@@ -23,6 +24,7 @@ characters={
 	}
 	ECU_eloy_alfaro={
 		name=ECU_eloy_alfaro
+		can_be_captured = no
 		portraits={
 			civilian={
 				large="gfx/leaders/ECU/ECU_eloy_alfaro.png"
@@ -46,6 +48,7 @@ characters={
 	}
 	ECU_flavio_alfaro={
 		name=ECU_flavio_alfaro
+		can_be_captured = no
 		portraits={
 			civilian={
 				large="gfx/leaders/ECU/ECU_flavio_alfaro.png"
@@ -110,9 +113,6 @@ characters={
 	ECU_pedro_jacinto_montero={
 		name=ECU_pedro_jacinto_montero
 		portraits={
-			army={
-				small="GFX_idea_generic_army_chief_off"
-			}
 			army={
 				large="gfx/leaders/ECU/ECU_pedro_jacinto_montero.png"
 			}

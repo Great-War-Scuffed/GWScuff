@@ -71,5 +71,5 @@ tags={
 version="1.0"
 picture="thumbnail.png"
 name="The Great War Scuffed - DEV"
-supported_version="1.18.*"
+supported_version="1.19.*"
 remote_file_id="3560593695"

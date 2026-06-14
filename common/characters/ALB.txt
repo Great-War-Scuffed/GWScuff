@@ -1,6 +1,7 @@
 characters = {
 	ALB_essad_pasha_toptani = {
 		name = "ALB_essad_pasha_toptani"
+		can_be_captured = no
 		portraits = {
 			civilian = {
 				large = "gfx/leaders/ALB/ALB_esat_toptani.png"
@@ -144,6 +145,7 @@ characters = {
 	}
 	ALB_isa_boletini = {
 		name = "ALB_isa_boletini"
+		can_be_captured = no #should die instead
 		portraits = {
 			army = {
 				large = "gfx/leaders/ALB/ALB_Isa_Boletini.png"
@@ -162,7 +164,7 @@ characters = {
 			logistics_skill = 3
 			visible = {
 				NOT = {
-					is_in_faction_with = SER
+					is_ally_with = SER
 					has_country_leader = {
 						character = ALB_essad_pasha_toptani
 					}

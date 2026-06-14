@@ -44,6 +44,7 @@ characters={
 	}
 	RSO_georgiy_chaplin = {
 		name=RSO_georgiy_chaplin
+		can_be_captured = no
 		portraits={
 			army={
 				large="gfx/leaders/RSO/RSO_Georgiy_Chaplin.png"
@@ -210,7 +211,7 @@ characters={
 				original_tag = RUS
 			}
 			traits  = {
-				army_cavalru_1 
+				army_cavalry_1 
 			}
 		}
 	}

@@ -27,6 +27,7 @@ characters={
 	}
 	CZE_radola_gajda = {
 		name = CZE_radola_gajda
+		can_be_captured = no
 		portraits = {
 			army = {
 				large = "gfx/leaders/CZE/CZE_Radola_Gajda.png"

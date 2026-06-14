@@ -1,6 +1,7 @@
 characters = {
 	HNC_zhang_jingyao = { # 张敬尧
 		name = "CHI_zhang_jingyao"
+		can_be_captured = no
 		portraits = {
 			civilian = {
 				small = "GFX_idea_generic_army_asia_3"
@@ -166,6 +167,7 @@ characters = {
 	}
 	HNC_he_jian = { # 何键
 		name = "CHI_he_jian"
+		can_be_captured = no
 		portraits = {
 			army = {
 				large = "gfx/leaders/CHI/CHI_he_jian.png"
@@ -181,11 +183,9 @@ characters = {
 		}
 		country_leader = {
 			ideology = authoritarian_democracy
-			traits = { kmt_allegiance }
 		}
 		country_leader = {
 			ideology = stratocracy
-			traits = { kmt_allegiance }
 		}
 	}
 	HNC_he_yaozu = { # 賀耀組
@@ -267,6 +267,7 @@ characters = {
 	}
 	HNC_cheng_qian = { # 程潜
 		name = "CHI_cheng_qian"
+		can_be_captured = no
 		portraits = {
 			army = {
 				large = "gfx/leaders/CHI/CHI_cheng_qian.png"
@@ -291,6 +292,7 @@ characters = {
 	}
 	HNC_gong_xian = { # 龔憲
 		name = "CHI_gong_xian"
+		can_be_captured = no #should die instead
 		portraits = {
 			civilian = {
 				large = "gfx/leaders/CHI/CHI_gong_xian.png"
@@ -359,6 +361,7 @@ characters = {
 	}
 	HNC_tang_xiangming = { # 汤芗铭
 		name = "CHI_tang_xiangming"
+		can_be_captured = no
 		portraits = {
 			civilian = {
 				large = "gfx/leaders/CHI/CHI_tang_xiangming.png"
@@ -378,11 +381,9 @@ characters = {
 		}
 		country_leader = {
 			ideology = warlordism
-			traits = { zhili_allegiance }
 		}
 		country_leader = {
 			ideology = stratocracy
-			traits = { zhili_allegiance }
 		}
 	}
 	HNC_chen_quzhen = { # 陈渠珍

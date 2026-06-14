@@ -10,6 +10,9 @@ recruit_character = IRE_eamon_de_valera
 recruit_character = IRE_l_t_mac_cosgair
 recruit_character = IRE_patrick_pearse
 recruit_character = IRE_michael_collins
+IRE_michael_collins = {
+	set_unit_leader_flag = unit_leader_can_be_KIA
+}
 recruit_character = IRE_owen_duffy
 recruit_character = IRE_liam_lynch
 recruit_character = IRE_arthur_kenlis_maxwell
@@ -21,6 +24,7 @@ recruit_character = IRE_john_redmond
 		#infantry
 		infantry_weapons = 1
 		infantry_weapons1 = 1
+		machine_guns = 1
 		support_weapons = 1
 		
 		#support

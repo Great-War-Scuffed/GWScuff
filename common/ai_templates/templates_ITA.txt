@@ -395,6 +395,8 @@ infantry_ITA = {
 			regiments = {
 				infantry = 12
 				field_gun_brigade = 1
+			}
+			regimental_support = {
 				machine_gun_company = 1
 			}
 		}
@@ -423,6 +425,8 @@ infantry_ITA = {
 			regiments = {
 				infantry = 10
 				field_gun_brigade = 2
+			}
+			regimental_support = {
 				machine_gun_company = 1
 			}
 		}
@@ -458,6 +462,8 @@ infantry_ITA = {
 			regiments = {
 				infantry = 10
 				field_gun_brigade = 2
+			}
+			regimental_support = {
 				machine_gun_company = 1
 			}
 		}
@@ -484,6 +490,8 @@ infantry_ITA = {
 			
 			regiments = {
 				infantry = 6
+			}
+			regimental_support = {
 				machine_gun_company = 1
 			}
 		}

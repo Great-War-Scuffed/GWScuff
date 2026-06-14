@@ -1,6 +1,7 @@
 characters={
 	SIA_chulalongkorn={
 		name="SIA_chulalongkorn"
+		can_be_captured = no
 		portraits={
 			civilian={
 				large="gfx/leaders/SIA/SIA_rama_v.png"
@@ -57,6 +58,336 @@ characters={
 			}
 		}
 	}
+	SIA_chirapravati_voradej={
+		portraits={
+			army={
+				large="gfx/leaders/SIA/SIA_chirapravati_voradej.png"
+				small="gfx/interface/ideas/SIA/idea_SIA_chirapravati_voradej.png"
+			}
+		}
+		advisor={
+			slot = army_chief
+			idea_token = SIA_chirapravati_voradej
+			allowed  = {
+				original_tag  = SIA
+			}
+			available = {
+				has_government = neutrality
+			}
+			traits  = {
+				army_chief_drill_1
+			}
+			cost = 50
+			ai_will_do  = {
+				factor  = 1
+			}
+		}
+		field_marshal = {
+			traits = {
+				trait_royal old_guard
+			}
+			skill=2
+			attack_skill=2
+			defense_skill=2
+			planning_skill=1
+			logistics_skill=1			
+		}
+	}
+	SIA_chaophraya_bodindechanuchit={
+		portraits={
+			army={
+				large="gfx/leaders/Asia/portrait_asia_generic_land_7.dds"
+				small="gfx/interface/ideas/idea_asia_generic_land_7.dds"
+			}
+		}
+		advisor={
+			slot = army_chief
+			idea_token = SIA_chaophraya_bodindechanuchit
+			allowed  = {
+				original_tag  = SIA
+			}
+			available = {
+				has_government = neutrality
+			}
+			traits  = {
+				army_chief_morale_1
+			}
+			cost = 50
+			ai_will_do  = {
+				factor  = 1
+			}
+		}
+		field_marshal = {
+			traits = {
+				trait_royal old_guard
+			}
+			skill=2
+			attack_skill=1
+			defense_skill=1
+			planning_skill=2
+			logistics_skill=2			
+		}
+	}
+	SIA_amoradhat_kritakara={ #หม่อมเจ้าอมรทัต กฤดากร
+		portraits={
+			army={
+				large="gfx/leaders/Asia/Portrait_Asia_Generic_land_2.dds"
+				small="gfx/interface/ideas/idea_asia_generic_land_2.dds"
+			}
+		}
+		advisor={
+			slot = high_command
+			ledger = army
+			idea_token = SIA_khun_thuayhanpitak
+			allowed  = {
+				original_tag  = SIA
+			}
+			available = {
+				has_government = neutrality
+			}
+			traits  = {
+				army_logistics_1
+			}
+			cost = 50
+			ai_will_do  = {
+				factor  = 1
+			}
+		}
+		corps_commander = {
+			traits={ politically_connected trait_royal }
+			skill=2
+			attack_skill=2
+			defense_skill=2
+			planning_skill=1
+			logistics_skill=2		
+		}
+	}
+	SIA_chakrabongse_bhuvanart={
+		portraits={
+			army={
+				large="gfx/leaders/Asia/Portrait_Asia_Generic_land_3.dds"
+				small="gfx/interface/ideas/idea_asia_generic_land_3.dds"
+			}
+		}
+		advisor={
+			slot = air_chief
+			idea_token = SIA_chakrabongse_bhuvanart
+			allowed  = {
+				original_tag  = SIA
+			}
+			available = {
+				has_government = neutrality
+			}
+			traits  = {
+				air_chief_reform_1
+			}
+			cost = 50
+			ai_will_do  = {
+				factor  = 1
+			}
+		}
+		field_marshal={
+			traits={ politically_connected trait_royal }
+			skill=1
+			attack_skill=1
+			defense_skill=1
+			planning_skill=1
+			logistics_skill=1			
+		}
+	}
+	SIA_damrong_rajanubhab={
+		portraits={
+			army={
+				large="gfx/leaders/Asia/Portrait_Asia_Generic_land_4.dds"
+				small="gfx/interface/ideas/idea_asia_generic_land_4.dds"
+			}
+		}
+		advisor={
+			slot = political_advisor
+			idea_token = SIA_damrong_rajanubhab
+			allowed  = {
+				original_tag  = SIA
+			}
+			available = {
+				has_government = neutrality
+			}
+			traits  = {
+				education_reformer
+			}
+			ai_will_do  = {
+				factor  = 1
+			}
+		}
+		corps_commander={
+			traits={ harsh_leader trait_royal old_guard }
+			skill=2
+			attack_skill=2
+			defense_skill=1
+			planning_skill=3
+			logistics_skill=1		
+		}
+	}
+	SIA_bhanurangsi_savangwongse={
+		portraits={
+			army={
+				large="gfx/leaders/SIA/SIA_bhanurangsi_savangwongse.png"
+				small="gfx/interface/ideas/SIA/idea_SIA_bhanurangsi_savangwongse.png"
+			}
+		}
+		advisor={
+			slot = navy_chief
+			idea_token = SIA_bhanurangsi_savangwongse
+			allowed  = {
+				original_tag  = SIA
+			}
+			available = {
+				has_government = neutrality
+			}
+			traits  = {
+				navy_chief_shore_bombardement_1
+			}
+			cost = 50
+			ai_will_do  = {
+				factor  = 1
+			}
+		}
+		navy_leader = {
+			traits = { trait_royal caustic_personality }
+			skill = 1
+			attack_skill = 2
+			defense_skill = 2
+			maneuvering_skill = 1
+			coordination_skill = 1
+		}
+	}
+	SIA_paribatra_sukhumbandhu={
+		portraits={
+			navy={
+				large="gfx/leaders/Asia/Portrait_Asia_Generic_land_5.dds"
+				small="gfx/interface/ideas/idea_asia_generic_land_5.dds"
+			}
+		}
+		advisor={
+			slot = navy_chief
+			idea_token = SIA_paribatra_sukhumbandhu
+			allowed  = {
+				original_tag  = SIA
+			}
+			available = {
+				has_government = neutrality
+			}
+			traits  = {
+				navy_chief_reform_1
+			}
+			cost = 50
+			ai_will_do  = {
+				factor  = 1
+			}
+		}
+		navy_leader = {
+			traits = {
+				trait_royal
+			}
+			skill = 1
+			attack_skill = 1
+			defense_skill = 1
+			maneuvering_skill = 2
+			coordination_skill = 2
+		}
+	}
+	SIA_purachatra_jayakara={
+		portraits={
+			civilian = {
+				large="gfx/leaders/Asia/portrait_asia_generic_land_7.dds"
+				small="gfx/interface/ideas/idea_asia_generic_land_7.dds"
+			}
+		}
+		advisor={
+			slot = political_advisor
+			idea_token = SIA_purachatra_jayakara
+			allowed  = {
+				original_tag  = SIA
+			}
+			available = {
+				has_government = neutrality
+			}
+			traits  = {
+				railroad_enthusiast
+			}
+			ai_will_do  = {
+				factor  = 1
+			}
+		}
+	}
+	SIA_khun_thuayhanpitak={
+		portraits={
+			army={
+				large="gfx/leaders/SIA/SIA_khun_thuayhanpitak.png"
+				small="gfx/interface/ideas/SIA/idea_SIA_khun_thuayhanpitak.png"
+			}
+			civilian = {
+				small="gfx/interface/ideas/SIA/idea_SIA_khun_thuayhanpitak_civil.png"
+			}
+		}
+		advisor={
+			slot = high_command
+			ledger = army
+			idea_token = SIA_khun_thuayhanpitak
+			allowed  = {
+				original_tag  = SIA
+			}
+			traits  = {
+				army_infantry_1
+			}
+			cost = 50
+			ai_will_do  = {
+				factor  = 1
+			}
+		}
+		corps_commander = {
+			traits={ hidden_sympathies organizer infantry_officer }
+			skill=1
+			attack_skill=1
+			defense_skill=1
+			planning_skill=1
+			logistics_skill=1		
+		}
+		country_leader={
+			ideology=classical_liberalism
+		}
+	}
+	SIA_thianwan_wannapho={
+		portraits={
+			civilian = {
+				large="gfx/leaders/SIA/SIA_thianwan_wannapho.png"
+				small="gfx/interface/ideas/SIA/idea_SIA_thianwan_wannapho.png"
+			}
+		}
+		advisor={
+			slot = political_advisor
+			idea_token = SIA_purachatra_jayakara
+			allowed  = {
+				original_tag  = SIA
+			}
+			available = {
+				has_government = democratic
+				custom_trigger_tooltip = {
+					tooltip = character_not_dead
+					date < 1915.1.1
+				}
+			}
+			visible = {
+				date < 1915.1.1
+			}
+			traits  = {
+				social_reformer
+			}
+			ai_will_do  = {
+				factor  = 1
+			}
+		}
+	}
+
 	SIA_phraya_phahon = {
 		name = SIA_phraya_phahon
 		portraits = {
@@ -107,123 +438,6 @@ characters={
 			civilian = {
 				large = "gfx/leaders/SIA/SIA_Pridi_Panomyong.png"
 			}
-		}
-	}
-	SIA_prince_amoradhat={
-		name="SIA_prince_amoradhat"
-		portraits={
-			army={
-				small="gfx/interface/ideas/idea_asia_generic_land_2.dds"
-			}
-			army={
-				large="gfx/leaders/Asia/Portrait_Asia_Generic_land_2.dds"
-			}
-		}
-		field_marshal={
-			traits={ politically_connected }
-			skill=2
-			attack_skill=2
-			defense_skill=2
-			planning_skill=1
-			logistics_skill=2
-			
-		}
-	}
-	SIA_chakrabongse_bhuvanart={
-		name="SIA_chakrabongse_bhuvanart"
-		portraits={
-			army={
-				small="gfx/interface/ideas/idea_asia_generic_land_3.dds"
-			}
-			army={
-				large="gfx/leaders/Asia/Portrait_Asia_Generic_land_3.dds"
-			}
-		}
-		field_marshal={
-			traits={ politically_connected }
-			skill=2
-			attack_skill=1
-			defense_skill=2
-			planning_skill=1
-			logistics_skill=2
-			
-		}
-	}
-	SIA_damrong_rajanubhab={
-		name="SIA_damrong_rajanubhab"
-		portraits={
-			army={
-				small="gfx/interface/ideas/idea_asia_generic_land_4.dds"
-			}
-			army={
-				large="gfx/leaders/Asia/Portrait_Asia_Generic_land_4.dds"
-			}
-		}
-		corps_commander={
-			traits={ harsh_leader }
-			skill=2
-			attack_skill=2
-			defense_skill=1
-			planning_skill=3
-			logistics_skill=1
-			
-		}
-	}
-	SIA_nakhon_sawan_worapinit={
-		name="SIA_nakhon_sawan_worapinit"
-		portraits={
-			army={
-				small="gfx/interface/ideas/idea_asia_generic_land_5.dds"
-			}
-			army={
-				large="gfx/leaders/Asia/Portrait_Asia_Generic_land_5.dds"
-			}
-		}
-		corps_commander={
-			skill=1
-			attack_skill=1
-			defense_skill=1
-			planning_skill=2
-			logistics_skill=2
-			
-		}
-	}
-	SIA_nakhonchaisri_suradej={
-		name="SIA_nakhonchaisri_suradej"
-		portraits={
-			army={
-				small="gfx/interface/ideas/idea_asia_generic_land_6.dds"
-			}
-			army={
-				large="gfx/leaders/Asia/portrait_asia_generic_land_6.dds"
-			}
-		}
-		corps_commander={
-			skill=1
-			attack_skill=2
-			defense_skill=2
-			planning_skill=1
-			logistics_skill=1
-			
-		}
-	}
-	SIA_purachatra_jayakara={
-		name="SIA_purachatra_jayakara"
-		portraits={
-			army={
-				small="gfx/interface/ideas/idea_asia_generic_land_7.dds"
-			}
-			army={
-				large="gfx/leaders/Asia/portrait_asia_generic_land_7.dds"
-			}
-		}
-		corps_commander={
-			skill=1
-			attack_skill=2
-			defense_skill=1
-			planning_skill=1
-			logistics_skill=2
-			
 		}
 	}
 }

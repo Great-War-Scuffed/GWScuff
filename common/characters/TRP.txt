@@ -28,6 +28,7 @@ characters = {
 	}
 	TRP_ramadan_al_suwayhili = {
 		name = "TRP_ramadan_al_suwayhili"
+		can_be_captured = no
 		portraits = {
 			army = {
 				large = "gfx/leaders/TRP/TRP_ramadan_al_suwayhili.png"			

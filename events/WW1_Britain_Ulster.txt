@@ -952,6 +952,7 @@ country_event = {
 			states = { 135 }
 			keep_all_characters = yes
 			hidden_effect = {
+				add_ideas = IRE_anti_treaty_insurgency
 				set_party_name = {
 					ideology = democratic
 					long_name = IRE_democratic_society_of_republic_party
@@ -1029,9 +1030,15 @@ country_event = {
 						name = IRE_democratic_gaels_party
 						elections_allowed = yes
 					}
+					country_event = { #Michael collins is killed
+						id = orange.22
+						days = 30
+					}
 					add_ideas = standing_alone
+					set_country_flag = colony
+					get_current_government_type = yes
 					random_other_country = {
-						limit = { has_country_flag = irish_overlord }
+						limit = { has_country_flag = irish_overlord }				
 						set_autonomy = {
 							target = PREV
 							autonomy_state = autonomy_dominion
@@ -1044,6 +1051,7 @@ country_event = {
 							enemy = PREV.PREV
 						}
 					}
+					restore_previous_government_type = yes
 				}
 			}
 		}
@@ -1081,6 +1089,10 @@ country_event = {
 					name = IRE_democratic_gaels_party
 					elections_allowed = yes
 				}
+				country_event = { #Michael collins is killed
+					id = orange.22
+					days = 30
+				}
 				set_popularities = {
 					democratic = 72
 					neutrality = 24
@@ -1090,6 +1102,8 @@ country_event = {
 				set_cosmetic_tag = IRE_UK
 				promote_character = IRE_l_t_mac_cosgair
 				add_ideas = standing_alone
+				set_country_flag = colony
+				get_current_government_type = yes
 				PREV = {
 					set_cosmetic_tag = IRE_IRA
 					set_party_name = {
@@ -1108,7 +1122,7 @@ country_event = {
 						name = IRE_republican_army
 					}
 					set_popularities = {
-						democratic = 52
+						democratic = 53
 						neutrality = 34
 						fascism = 10
 						communism = 3
@@ -1137,6 +1151,7 @@ country_event = {
 						}
 					}
 					add_ideas = standing_alone
+					add_ideas = IRE_anti_treaty_insurgency
 					random_other_country = {
 						limit = { has_country_flag = irish_overlord }
 						set_autonomy = {
@@ -1152,6 +1167,7 @@ country_event = {
 						}
 					}
 				}
+				restore_previous_government_type = yes
 			}
 		}
 	}
@@ -1236,6 +1252,31 @@ country_event = {
 		ai_chance = { base = 50 }
 		add_war_support = -0.10
 		add_political_power = -25
+	}
+}
+
+country_event = {
+	id = orange.21
+	title = orange.21.t
+	desc = orange.21.d
+	picture = GFX_report_event_generic_conference
+	is_triggered_only = yes
+	option = {
+		name = orange.21.a
+		promote_character = IRE_eamon_de_valera
+	}
+}
+
+#Michael Collins ambushed
+country_event = {
+	id = orange.22
+	title = orange.22.t
+	desc = orange.22.d
+	picture = GFX_report_event_FIN_armistice_of_moscow_negotiations
+	is_triggered_only = yes
+	option = {
+		name = orange.22.a
+		retire_character = IRE_michael_collins
 	}
 }
 

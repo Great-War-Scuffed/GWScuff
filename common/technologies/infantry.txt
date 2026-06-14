@@ -1161,6 +1161,10 @@ technologies = {
 			motorized
 			mot_recon		
 		}
+		enable_subunits = {
+			limit = { has_dlc = "Thunder at Our Gates"}
+			hq_motorized
+		}
 		on_research_complete_limit = {
 			NOT = {
 				has_template_containing_unit = motorized
@@ -1722,13 +1726,6 @@ technologies = {
 				has_global_flag = great_war
 				factor = 2
 			}
-		}
-	}
-
-	militia_tech = {
- 		allow = { always = no }
-		enable_subunits = {
-			militia
 		}
 	}
 

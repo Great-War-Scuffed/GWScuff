@@ -152,6 +152,7 @@ characters={
 	}
 	UKR_symon_petliura={
 		name="UKR_symon_petliura"
+		can_be_captured = no
 		portraits={
 			army={
 				large="gfx/leaders/UKR/UKR_simon_petlyura.png"		
@@ -216,6 +217,7 @@ characters={
 			planning_skill=2
 			logistics_skill=4
 			visible = {
+				original_tag  = UKR
 				OR = {
 					is_country_leader = yes
 					has_government  = democratic 
@@ -340,7 +342,6 @@ characters={
 		}
 	}
 	UKR_nikifor_grigoriev={
-		name="UKR_nikifor_grigoriev"
 		portraits={
 			army={
 				large="gfx/leaders/UKR/UKR_Nikifor_Grigoriev.png"
@@ -348,13 +349,12 @@ characters={
 			}
 		}
 		corps_commander={
-			traits={ trickster }
+			traits={ trickster irregulars_officer }
 			skill=1
 			attack_skill=1
 			defense_skill=1
 			planning_skill=1
 			logistics_skill=1
-			#legacy_id=91030
 		}
 	}
 	UKR_vasyl_tyutyunnyk={
@@ -435,6 +435,7 @@ characters={
 	}
 	UKR_vasyl_i={
 		name="UKR_vasyl_vyshyvanyi"
+		can_be_captured = no
 		portraits={
 			civilian={
 				large="gfx/leaders/UKR/UKR_vasyl_habsburg.png"
@@ -447,6 +448,7 @@ characters={
 			planning_skill=2
 			logistics_skill=1
 			visible = {
+				original_tag  = UKR
 				date > 1918.1.1
 				NOT = {
 					has_government = communism
@@ -472,6 +474,8 @@ characters={
 			planning_skill=1
 			logistics_skill=1
 			visible = {
+				original_tag  = UKR
+				NOT = { tag = RUC }
 				has_government = democratic
 			}	
 		}
@@ -1027,6 +1031,7 @@ characters={
 			idea_token = UKR_volodymyr_zatonskij
 			allowed  = {
 				original_tag  = UKR
+				NOT = { tag = RUC }
 			}
 			available  = {
 				is_country_leader = no
@@ -1062,6 +1067,8 @@ characters={
 			planning_skill = 1 
 			logistics_skill = 1
 			visible = {
+				original_tag  = UKR
+				NOT = { tag = RUC }
 				has_government  = communism 
 			}
 		}
@@ -1081,6 +1088,7 @@ characters={
 			idea_token = UKR_fyodor_sergeyev
 			allowed  = {
 				original_tag  = UKR
+				NOT = { tag = RUC }
 			}
 			available  = {
 				is_country_leader = no
@@ -1099,6 +1107,7 @@ characters={
 			idea_token = UKR_fyodor_sergeyev_high_command
 			allowed  = {
 				original_tag  = UKR
+				NOT = { tag = RUC }
 			}
 			ledger = army
 			available  = {
@@ -1114,6 +1123,9 @@ characters={
 		}
 		country_leader = {
 			ideology = vanguardism
+			traits = {
+				comrade_artyom
+			}
 		}
 		corps_commander={
 			traits = {
@@ -1125,6 +1137,8 @@ characters={
 			planning_skill = 1 
 			logistics_skill = 1
 			visible = {
+				original_tag  = UKR
+				NOT = { tag = RUC }
 				has_government  = communism 
 			}
 		}

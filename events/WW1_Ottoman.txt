@@ -495,7 +495,7 @@ country_event = {
 		effect_tooltip = {
 			set_autonomy = {
 				target = EGY
-				autonomy_state = autonomy_dominion
+				autonomy_state = autonomy_satellite
 			}
 		}
 		hidden_effect = {
@@ -581,7 +581,7 @@ country_event = {
 				}
 				set_autonomy = {
 					target = EGY
-					autonomous_state = autonomy_dominion
+					autonomous_state = autonomy_satellite
 					freedom_level = 0.8
 				}
 				# For the Ottoman socialist path
@@ -607,7 +607,7 @@ country_event = {
 							}
 							set_popularities = {
 								democratic = 34
-								neutrality = 65
+								neutrality = 66
 							}
 						}
 					}
@@ -849,6 +849,7 @@ country_event = {
 					352
 					758
 					803
+					1225
 					106
 					760
 					761
@@ -2057,7 +2058,6 @@ news_event = {
 	picture = GFX_news_event_042
 	major = yes
 	is_triggered_only = yes
-	fire_only_once = yes
 	option = {
 		name = ww1_ottoman.42.a
 		ai_chance = {
@@ -2158,7 +2158,33 @@ country_event = {
 		days = 7
 	}
 	option = {
+		name = ww1_ottoman.46.b		#Ignor Faisal
+		custom_effect_tooltip = historical_tt
+		every_state = {
+			limit = {
+				is_core_of = TUR
+				is_core_of = SYR
+				NOT = {
+					OR = {
+						state = 829
+						has_dynamic_modifier = { modifier = TUR_arab_minority }
+					}
+				}
+			}
+			remove_core_of = TUR
+		}
+		ai_chance = {
+			base = 25
+		}
+	}
+	option = {
 		name = ww1_ottoman.46.a		#Independence for Syria
+		trigger = {
+			NOT = {
+				has_global_flag = sykes_picot_lawrence
+				has_global_flag = sykes_picot_mcmahon
+			}
+		}
 		every_owned_state = {
 			limit = {
 				OR = {
@@ -2194,6 +2220,7 @@ country_event = {
 				}
 			}
 		}
+		set_up_syrian_monarchs = yes
 		HJZ = {
 			clear_all_relations = yes
 			give_military_access = SYR
@@ -2218,25 +2245,6 @@ country_event = {
 				factor = 0
 				is_historical_focus_on = yes
 			}
-		}
-	}
-	option = {
-		name = ww1_ottoman.46.b		#Ignor Faisal
-		every_state = {
-			limit = {
-				is_core_of = TUR
-				is_core_of = SYR
-				NOT = {
-					OR = {
-						state = 829
-						has_dynamic_modifier = { modifier = TUR_arab_minority }
-					}
-				}
-			}
-			remove_core_of = TUR
-		}
-		ai_chance = {
-			base = 25
 		}
 	}
 }
@@ -3061,58 +3069,29 @@ country_event = {
 					target = TUR
 				}
 			}
-			if = {
-				limit = { has_dlc = "Man the Guns" }
-				create_ship = {
-					type = ship_hull_light_0
-					equipment_variant = "S138 Class"
-					creator = GER
-					name = "Gayret-i Vataniyye"
-				}
-				create_ship = {
-					type = ship_hull_light_0
-					equipment_variant = "S138 Class"
-					creator = GER
-					name = "Muavenet-i Milliye"
-				}
-				create_ship = {
-					type = ship_hull_light_0
-					equipment_variant = "S138 Class"
-					creator = GER
-					name = "Yadigar-ı Millet"
-				}
-				create_ship = {
-					type = ship_hull_light_0
-					equipment_variant = "S138 Class"
-					creator = GER
-					name = "Nümune-i Hamiyet"
-				}
+			create_ship = {
+				type = ship_hull_light_1
+				equipment_variant = "S138 Class"
+				creator = GER
+				name = "Gayret-i Vataniyye"
 			}
-			else = {
-				create_ship = {
-					type = destroyer_1
-					equipment_variant = "S138 Class"
-					creator = GER
-					name = "Gayret-i Vataniyye"
-				}
-				create_ship = {
-					type = destroyer_1
-					equipment_variant = "S138 Class"
-					creator = GER
-					name = "Muavenet-i Milliye"
-				}
-				create_ship = {
-					type = destroyer_1
-					equipment_variant = "S138 Class"
-					creator = GER
-					name = "Yadigar-ı Millet"
-				}
-				create_ship = {
-					type = destroyer_1
-					equipment_variant = "S138 Class"
-					creator = GER
-					name = "Nümune-i Hamiyet"
-				}
+			create_ship = {
+				type = ship_hull_light_1
+				equipment_variant = "S138 Class"
+				creator = GER
+				name = "Muavenet-i Milliye"
+			}
+			create_ship = {
+				type = ship_hull_light_1
+				equipment_variant = "S138 Class"
+				creator = GER
+				name = "Yadigar-ı Millet"
+			}
+			create_ship = {
+				type = ship_hull_light_1
+				equipment_variant = "S138 Class"
+				creator = GER
+				name = "Nümune-i Hamiyet"
 			}
 		}
 		GER = {
@@ -3160,58 +3139,29 @@ country_event = {
 				target = TUR
 			}
 			TUR = {
-				if = {
-					limit = { has_dlc = "Man the Guns" }
-					create_ship = {
-						type = ship_hull_light_0
-						equipment_variant = "S138 Class"
-						creator = GER
-						name = "Gayret-i Vataniyye"
-					}
-					create_ship = {
-						type = ship_hull_light_0
-						equipment_variant = "S138 Class"
-						creator = GER
-						name = "Muavenet-i Milliye"
-					}
-					create_ship = {
-						type = ship_hull_light_0
-						equipment_variant = "S138 Class"
-						creator = GER
-						name = "Yadigar-ı Millet"
-					}
-					create_ship = {
-						type = ship_hull_light_0
-						equipment_variant = "S138 Class"
-						creator = GER
-						name = "Nümune-i Hamiyet"
-					}
+				create_ship = {
+					type = ship_hull_light_1
+					equipment_variant = "S138 Class"
+					creator = GER
+					name = "Gayret-i Vataniyye"
 				}
-				else = {
-					create_ship = {
-						type = destroyer_1
-						equipment_variant = "S138 Class"
-						creator = GER
-						name = "Gayret-i Vataniyye"
-					}
-					create_ship = {
-						type = destroyer_1
-						equipment_variant = "S138 Class"
-						creator = GER
-						name = "Muavenet-i Milliye"
-					}
-					create_ship = {
-						type = destroyer_1
-						equipment_variant = "S138 Class"
-						creator = GER
-						name = "Yadigar-ı Millet"
-					}
-					create_ship = {
-						type = destroyer_1
-						equipment_variant = "S138 Class"
-						creator = GER
-						name = "Nümune-i Hamiyet"
-					}
+				create_ship = {
+					type = ship_hull_light_1
+					equipment_variant = "S138 Class"
+					creator = GER
+					name = "Muavenet-i Milliye"
+				}
+				create_ship = {
+					type = ship_hull_light_1
+					equipment_variant = "S138 Class"
+					creator = GER
+					name = "Yadigar-ı Millet"
+				}
+				create_ship = {
+					type = ship_hull_light_1
+					equipment_variant = "S138 Class"
+					creator = GER
+					name = "Nümune-i Hamiyet"
 				}
 			}
 		}
@@ -3279,58 +3229,29 @@ country_event = {
 				target = TUR
 			}
 		}
-		if = {
-			limit = { has_dlc = "Man the Guns" }
-			create_ship = {
-				type = ship_hull_light_0
-				equipment_variant = "S138 Class"
-				creator = GER
-				name = "Gayret-i Vataniyye"
-			}
-			create_ship = {
-				type = ship_hull_light_0
-				equipment_variant = "S138 Class"
-				creator = GER
-				name = "Muavenet-i Milliye"
-			}
-			create_ship = {
-				type = ship_hull_light_0
-				equipment_variant = "S138 Class"
-				creator = GER
-				name = "Yadigar-ı Millet"
-			}
-			create_ship = {
-				type = ship_hull_light_0
-				equipment_variant = "S138 Class"
-				creator = GER
-				name = "Nümune-i Hamiyet"
-			}
+		create_ship = {
+			type = ship_hull_light_1
+			equipment_variant = "S138 Class"
+			creator = GER
+			name = "Gayret-i Vataniyye"
 		}
-		else = {
-			create_ship = {
-				type = destroyer_1
-				equipment_variant = "S138 Class"
-				creator = GER
-				name = "Gayret-i Vataniyye"
-			}
-			create_ship = {
-				type = destroyer_1
-				equipment_variant = "S138 Class"
-				creator = GER
-				name = "Muavenet-i Milliye"
-			}
-			create_ship = {
-				type = destroyer_1
-				equipment_variant = "S138 Class"
-				creator = GER
-				name = "Yadigar-ı Millet"
-			}
-			create_ship = {
-				type = destroyer_1
-				equipment_variant = "S138 Class"
-				creator = GER
-				name = "Nümune-i Hamiyet"
-			}
+		create_ship = {
+			type = ship_hull_light_1
+			equipment_variant = "S138 Class"
+			creator = GER
+			name = "Muavenet-i Milliye"
+		}
+		create_ship = {
+			type = ship_hull_light_1
+			equipment_variant = "S138 Class"
+			creator = GER
+			name = "Yadigar-ı Millet"
+		}
+		create_ship = {
+			type = ship_hull_light_1
+			equipment_variant = "S138 Class"
+			creator = GER
+			name = "Nümune-i Hamiyet"
 		}
 	}
 }
@@ -4136,7 +4057,7 @@ country_event = {
 			TUR = {
 				set_autonomy = {
 					target = EGY
-					autonomous_state = autonomy_colony
+					autonomous_state = autonomy_tgwr_ottoman_emirate
 					freedom_level = 0.8
 				}
 			}
@@ -4150,7 +4071,7 @@ country_event = {
 					}
 					set_popularities = {
 						democratic = 34
-						neutrality = 65
+						neutrality = 66
 					}
 				}	
 			}
@@ -4214,11 +4135,12 @@ country_event = {
 		TUR = {
 			set_autonomy = {
 				target = EGY
-				autonomous_state = autonomy_colony
+				autonomous_state = autonomy_tgwr_ottoman_emirate
 				freedom_level = 0.8
 			}
 		}
 		EGY = {
+			clr_country_flag = protectorate
 			promote_character = EGY_abbas_ii_helmy
 			drop_cosmetic_tag = yes
 			hidden_effect = {
@@ -4228,7 +4150,7 @@ country_event = {
 				}
 				set_popularities = {
 					democratic = 34
-					neutrality = 65
+					neutrality = 66
 				}
 			}
 		}
@@ -4468,7 +4390,7 @@ country_event = {
 	immediate = {
 		hidden_effect = {
 			set_division_force_allow_recruiting = {
-    			division_template = "Hamidiye Alayı"
+    			division_template = "Aşiret Süvari Tümeni"
 			}
 			start_civil_war = {
 				ideology = fascism
@@ -4525,38 +4447,38 @@ country_event = {
 				set_variable = { TUR_harbiyeli_officer_power = 4 }
 				random_owned_state = {
 					create_unit = {
-						division = "name = \"Van Hamidiye Alayı\" division_template = \"Hamidiye Alayı\" start_experience_factor = 0.3 start_equipment_factor = 0.94" owner = PREV
+						division = "name = \"Van Hamidiye Alayı\" division_template = \"Aşiret Süvari Tümeni\" start_experience_factor = 0.3 start_equipment_factor = 0.94" owner = PREV
 					}
 					create_unit = {
-						division = "name = \"Erzurum Hamidiye Alayı\" division_template = \"Hamidiye Alayı\" start_experience_factor = 0.3 start_equipment_factor = 0.94" owner = PREV
+						division = "name = \"Erzurum Hamidiye Alayı\" division_template = \"Aşiret Süvari Tümeni\" start_experience_factor = 0.3 start_equipment_factor = 0.94" owner = PREV
 					}
 					create_unit = {
-						division = "name = \"Bitlis Hamidiye Alayı\" division_template = \"Hamidiye Alayı\" start_experience_factor = 0.3 start_equipment_factor = 0.94" owner = PREV
+						division = "name = \"Bitlis Hamidiye Alayı\" division_template = \"Aşiret Süvari Tümeni\" start_experience_factor = 0.3 start_equipment_factor = 0.94" owner = PREV
 					}
 					create_unit = {
-						division = "name = \"Muş Hamidiye Alayı\" division_template = \"Hamidiye Alayı\" start_experience_factor = 0.3 start_equipment_factor = 0.94" owner = PREV
+						division = "name = \"Muş Hamidiye Alayı\" division_template = \"Aşiret Süvari Tümeni\" start_experience_factor = 0.3 start_equipment_factor = 0.94" owner = PREV
 					}
 					create_unit = {
-						division = "name = \"Bingöl Hamidiye Alayı\" division_template = \"Hamidiye Alayı\" start_experience_factor = 0.3 start_equipment_factor = 0.94" owner = PREV
+						division = "name = \"Bingöl Hamidiye Alayı\" division_template = \"Aşiret Süvari Tümeni\" start_experience_factor = 0.3 start_equipment_factor = 0.94" owner = PREV
 					}
 					create_unit = {
-						division = "name = \"Sivas Hamidiye Alayı\" division_template = \"Hamidiye Alayı\" start_experience_factor = 0.3 start_equipment_factor = 0.94" owner = PREV
+						division = "name = \"Sivas Hamidiye Alayı\" division_template = \"Aşiret Süvari Tümeni\" start_experience_factor = 0.3 start_equipment_factor = 0.94" owner = PREV
 					}
 					create_unit = {
-						division = "name = \"Mardin Hamidiye Alayı\" division_template = \"Hamidiye Alayı\" start_experience_factor = 0.3 start_equipment_factor = 0.94" owner = PREV
+						division = "name = \"Mardin Hamidiye Alayı\" division_template = \"Aşiret Süvari Tümeni\" start_experience_factor = 0.3 start_equipment_factor = 0.94" owner = PREV
 					}
 					create_unit = {
-						division = "name = \"Urfa Hamidiye Alayı\" division_template = \"Hamidiye Alayı\" start_experience_factor = 0.3 start_equipment_factor = 0.94" owner = PREV
+						division = "name = \"Urfa Hamidiye Alayı\" division_template = \"Aşiret Süvari Tümeni\" start_experience_factor = 0.3 start_equipment_factor = 0.94" owner = PREV
 					}
 					create_unit = {
-						division = "name = \"Hakkari Hamidiye Alayı\" division_template = \"Hamidiye Alayı\" start_experience_factor = 0.3 start_equipment_factor = 0.94" owner = PREV
+						division = "name = \"Hakkari Hamidiye Alayı\" division_template = \"Aşiret Süvari Tümeni\" start_experience_factor = 0.3 start_equipment_factor = 0.94" owner = PREV
 					}
 				}
 				add_ideas = standing_alone	
 			}
 			TUR = {
 				delete_unit_template_and_units = {
-					division_template = "Hamidiye Alayı"
+					division_template = "Aşiret Süvari Tümeni"
 					disband = no
 				}
 			}
@@ -6434,7 +6356,7 @@ country_event = {
 }
 
 
-###ottomans ask french to join them
+###ottomans ask ENT to join them
 country_event = {
 	id = ottoman.47
 	title = ottoman.47.t
@@ -6569,11 +6491,7 @@ country_event = {
 	is_triggered_only = yes
 	option = {
 		name = ottoman.471.a
-		random_country = {
-			limit = {
-				is_in_faction_with = RUS
-				is_faction_leader = yes
-			}
+		ENT = {
 			add_to_faction = TUR
 			hidden_effect = { TUR = { country_event = { id = ottoman.48 hours = 8 } } }
 		}
@@ -6622,7 +6540,7 @@ country_event = {
 	option = {
 		name = ottoman.471.b
 		TUR = {
-			country_event = { id = ottoman.493 hours = 8 }
+			country_event = { id = ottoman.472 hours = 8 }
 			custom_effect_tooltip = TUR_our_traditional_allies_tt
 			effect_tooltip = {
 				diplomatic_relation = {
@@ -6645,7 +6563,7 @@ country_event = {
 	option = {
 		name = ottoman.471.c
 		TUR = {
-			country_event = { id = ottoman.493 hours = 8 }
+			country_event = { id = ottoman.473 hours = 8 }
 			custom_effect_tooltip = TUR_our_traditional_allies_tt
 			effect_tooltip = {
 				remove_ideas = TUR_diplomatic_isolation_1
@@ -6654,7 +6572,7 @@ country_event = {
 		effect_tooltip = {
 			set_autonomy = {
 				target = TUR
-				autonomy_state = autonomy_dominion
+				autonomy_state = autonomy_satellite
 				end_wars = yes
 				end_civil_wars = no
 			}
@@ -6679,11 +6597,7 @@ country_event = {
 	is_triggered_only = yes
 	option = {
 		name = ottoman.472.a
-		random_country = {
-			limit = {
-				is_in_faction_with = RUS
-				is_faction_leader = yes
-			}
+		ENT = {
 			add_to_faction = TUR
 		}
 		remove_ideas = TUR_diplomatic_isolation_1
@@ -6698,16 +6612,7 @@ country_event = {
 			set_global_flag = TUR_allowed_russian_passage
 		}
 		hidden_effect = {
-			random_country = {
-				limit = {
-					OR = {
-						AND = {
-							is_in_faction_with = RUS
-							is_faction_leader = yes
-						}
-						tag = RUS
-					}
-				}
+			ENT = {
 				country_event = { id = ottoman.474 hours = 8 }
 			}
 		}
@@ -6717,16 +6622,7 @@ country_event = {
 	}
 	option = {
 		name = ottoman.472.b
-		random_country = {
-			limit = {
-				OR = {
-					AND = {
-						is_in_faction_with = RUS
-						is_faction_leader = yes
-					}
-					tag = RUS
-				}
-			}
+		ENT = {
 			country_event = { id = ottoman.475 hours = 8 }
 		}
 		ai_chance = {
@@ -6742,11 +6638,7 @@ country_event = {
 	is_triggered_only = yes
 	option = {
 		name = ottoman.473.a
-		random_country = {
-			limit = {
-				is_in_faction_with = RUS
-				is_faction_leader = yes
-			}
+		ENT = {
 			add_to_faction = TUR
 		}
 		remove_ideas = TUR_diplomatic_isolation_1
@@ -6801,7 +6693,7 @@ country_event = {
 		RUS = {
 			set_autonomy = {
 				target = TUR
-				autonomy_state = autonomy_dominion
+				autonomy_state = autonomy_satellite
 				end_wars = yes
 				end_civil_wars = no
 			}
@@ -6874,16 +6766,7 @@ country_event = {
 			}
 		}
 		hidden_effect = {
-			random_country = {
-				limit = {
-					OR = {
-						AND = {
-							is_in_faction_with = RUS
-							is_faction_leader = yes
-						}
-						tag = RUS
-					}
-				}
+			ENT = {
 				country_event = { id = ottoman.474 hours = 8 }
 			}
 		}
@@ -6894,16 +6777,7 @@ country_event = {
 	option = {
 		name = ottoman.473.b
 		hidden_effect = {
-			random_country = {
-				limit = {
-					OR = {
-						AND = {
-							is_in_faction_with = RUS
-							is_faction_leader = yes
-						}
-						tag = RUS
-					}
-				}
+			ENT = {
 				country_event = { id = ottoman.475 hours = 8 }
 			}
 		}
@@ -6931,6 +6805,7 @@ country_event = {
 	is_triggered_only = yes
 	option = {
 		name = ottoman.475.a
+		hidden_effect = { TUR = { country_event = { id = ottoman.49 hours = 8 } } }
 	}
 }
 
@@ -6951,7 +6826,7 @@ country_event = {
 	}
 }
 
-#french agree
+#ENT agree
 country_event = {
 	id = ottoman.48
 	title = ottoman.48.t
@@ -6960,7 +6835,7 @@ country_event = {
 	option = {
 		name = ottoman.48.a
 		effect_tooltip = {
-			FRA = {
+			ENT = {
 				add_to_faction = TUR
 			}
 		}
@@ -6971,7 +6846,7 @@ country_event = {
 	}
 }
 
-#french refuse
+#ENT refuse
 country_event = {
 	id = ottoman.49
 	title = ottoman.49.t
@@ -7296,7 +7171,7 @@ country_event = {
 		effect_tooltip = {
 			set_autonomy = {
 				target = TUR
-				autonomy_state = autonomy_dominion
+				autonomy_state = autonomy_satellite
 				end_wars = yes
 				end_civil_wars = no
 			}
@@ -9132,17 +9007,6 @@ country_event = { #liberal party elections
 	picture = GFX_report_event_liberal_party_elections
 	trigger = {
 		has_completed_focus = TUR_hurriyet_ve_itilaf_victory
-		if = {
-			limit = {
-				has_power_balance = {
-					id = TUR_conservative_liberal
-				}
-			}
-			is_power_balance_in_range = {
-				id = TUR_conservative_liberal
-				range > TUR_conservative_liberal_conservative_balanced
-			}
-		}
 		NOT = {
 			has_country_flag = TUR_conservatives_in_charge
 			has_country_flag = TUR_al_qahtaniya_empowered
@@ -9249,13 +9113,6 @@ country_event = { #socialist party elections
 		add_country_leader_trait = TUR_ittihadist_socialist
 		ai_chance = {
 			base = 15
-			modifier = {
-				factor = 0
-				is_power_balance_side_active = {
-					id = TUR_leftist_coalition
-					side = TUR_leftist_coalition_internationalist
-				}
-			}
 		}
 	}
 	option = {
@@ -9278,13 +9135,6 @@ country_event = { #socialist party elections
 		}
 		ai_chance = {
 			base = 15
-			modifier = {
-				factor = 0
-				is_power_balance_side_active = {
-					id = TUR_leftist_coalition
-					side = TUR_leftist_coalition_ittihadist
-				}
-			}
 		}
 	}
 	option = {
@@ -9302,13 +9152,6 @@ country_event = { #socialist party elections
 		add_country_leader_trait = TUR_ittihadist_socialist
 		ai_chance = {
 			base = 15
-			modifier = {
-				factor = 0
-				is_power_balance_side_active = {
-					id = TUR_leftist_coalition
-					side = TUR_leftist_coalition_ittihadist
-				}
-			}
 		}
 	}
 	option = {
@@ -9337,13 +9180,6 @@ country_event = { #socialist party elections
 		}
 		ai_chance = {
 			base = 15
-			modifier = {
-				factor = 0
-				is_power_balance_side_active = {
-					id = TUR_leftist_coalition
-					side = TUR_leftist_coalition_ittihadist
-				}
-			}
 		}
 	}
 }
@@ -10113,10 +9949,6 @@ country_event = { #islamist victory in elections
 	is_triggered_only = yes
 	trigger = {
 		has_completed_focus = TUR_pardon_conservatives
-		is_power_balance_in_range = {
-			id = TUR_conservative_liberal
-			range < TUR_conservative_liberal_conservative_balanced
-		}
 		NOT = {
 			has_country_flag = TUR_conservatives_in_charge
 			has_country_flag = TUR_al_qahtaniya_empowered
@@ -10245,10 +10077,6 @@ country_event = { #liberal victory in elections
 	is_triggered_only = yes
 	trigger = {
 		has_completed_focus = TUR_pardon_conservatives
-		is_power_balance_in_range = {
-			id = TUR_conservative_liberal
-			range > TUR_conservative_liberal_conservative_balanced
-		}
 		has_country_flag = TUR_said_i_nursi_path
 		NOT = {
 			has_country_flag = TUR_liberals_in_charge
@@ -10392,10 +10220,6 @@ country_event = { #sects mobilize
 	is_triggered_only = yes
 	trigger = {
 		has_completed_focus = TUR_pardon_conservatives
-		is_power_balance_in_range = {
-			id = TUR_conservative_liberal
-			range > TUR_conservative_liberal_conservative_balanced
-		}
 		has_country_flag = TUR_said_i_nursi_path
 	}
 	option = {
@@ -10418,10 +10242,6 @@ country_event = { #sects mobilize
 	is_triggered_only = yes
 	trigger = {
 		has_completed_focus = TUR_pardon_conservatives
-		is_power_balance_in_range = {
-			id = TUR_conservative_liberal
-			range > TUR_conservative_liberal_conservative_balanced
-		}
 		has_country_flag = TUR_said_i_nursi_path
 	}
 	option = {
@@ -12677,16 +12497,6 @@ country_event = { #elections non-partisan
 	picture = GFX_report_event_iww_demonstration
 	trigger = {
 		has_completed_focus = TUR_handling_inner_party_factionalism
-		NOT = {
-			is_power_balance_in_range = {
-				id = TUR_inner_party_factionalism
-				range = TUR_inner_party_factionalism_hizb_i_terakki_absolute_control
-			}
-			is_power_balance_in_range = {
-				id = TUR_inner_party_factionalism
-				range = TUR_inner_party_factionalism_hizb_i_cedid_absolute_control
-			}
-		}
 	}
 	option = {
 		name = ottoman.151.a
@@ -12758,10 +12568,6 @@ country_event = { #elections hizb-i cedid
 	picture = GFX_report_event_iww_demonstration
 	trigger = {
 		has_completed_focus = TUR_handling_inner_party_factionalism
-		is_power_balance_in_range = {
-			id = TUR_inner_party_factionalism
-			range = TUR_inner_party_factionalism_hizb_i_cedid_absolute_control
-		}
 	}
 	option = {
 		name = ottoman.152.a
@@ -12787,10 +12593,6 @@ country_event = { #elections hizb-i terakki
 	picture = GFX_report_event_iww_demonstration
 	trigger = {
 		has_completed_focus = TUR_handling_inner_party_factionalism
-		is_power_balance_in_range = {
-			id = TUR_inner_party_factionalism
-			range = TUR_inner_party_factionalism_hizb_i_terakki_absolute_control
-		}
 	}
 	option = {
 		name = ottoman.153.a
@@ -13332,7 +13134,11 @@ country_event = { #arab demonstrations in levant
 				add_to_variable = {
 					TUR_ottoman_attrition = 0.05
 				}
-				add_dynamic_modifier = { modifier = TUR_local_cooperation_with_the_enemy days = 1095 }
+				add_dynamic_modifier = { 
+					modifier = TUR_local_cooperation_with_the_enemy 
+					days = 1095
+					scope = TUR 
+				}
 				if = {
 					limit = {
 						NOT = {
@@ -13368,7 +13174,11 @@ country_event = { #arab demonstrations in levant
 					}
 				}
 				custom_effect_tooltip = TUR_ottoman_arab_minority_modify_attrition_5_recruitable_population_5
-				add_dynamic_modifier = { modifier = TUR_local_cooperation_with_the_enemy days = 1095 }
+				add_dynamic_modifier = { 
+					modifier = TUR_local_cooperation_with_the_enemy 
+					days = 1095
+					scope = TUR 
+				}
 				if = {
 					limit = {
 						NOT = {
@@ -13419,7 +13229,11 @@ country_event = { #arab demonstrations in mesapotamia
 				add_to_variable = {
 					TUR_ottoman_attrition = 0.05
 				}
-				add_dynamic_modifier = { modifier = TUR_local_cooperation_with_the_enemy days = 1095 }
+				add_dynamic_modifier = { 
+					modifier = TUR_local_cooperation_with_the_enemy 
+					days = 1095
+					scope = TUR 
+				}
 				if = {
 					limit = {
 						NOT = {
@@ -13449,7 +13263,11 @@ country_event = { #arab demonstrations in mesapotamia
 					}
 				}
 				custom_effect_tooltip = TUR_ottoman_arab_minority_modify_attrition_5_recruitable_population_5
-				add_dynamic_modifier = { modifier = TUR_local_cooperation_with_the_enemy days = 1095 }
+				add_dynamic_modifier = { 
+					modifier = TUR_local_cooperation_with_the_enemy 
+					days = 1095
+					scope = TUR 
+				}
 				if = {
 					limit = {
 						NOT = {
@@ -13529,10 +13347,6 @@ country_event = { #conservative party elections
 	is_triggered_only = yes
 	picture = GFX_report_event_conservative_party_elections
 	trigger = {
-		is_power_balance_in_range = {
-			id = TUR_conservative_liberal
-			range < TUR_conservative_liberal_conservative_balanced
-		}
 		has_country_flag = TUR_conservatives_in_charge
 		NOT = {
 			has_country_flag = TUR_al_qahtaniya_empowered
@@ -13632,6 +13446,7 @@ country_event = { #yemen declares autonomy
 	}
 	option = {
 		name = ottoman.167.a
+		custom_effect_tooltip = historical_tt
 		set_country_flag = TUR_treaty_of_daan_autonomy
 		effect_tooltip = {
 			293 = {
@@ -14395,17 +14210,6 @@ country_event = { #death of Mehmed said
 			remove_ideas = TUR_mehmed_said
 			add_ideas = TUR_said_halim
 		}
-		if = {
-			limit = {
-				has_power_balance = {
-					id = TUR_parliament_sultan
-				}
-			}
-			set_power_balance = {
-				id = TUR_parliament_sultan
-				left_side = TUR_parliament_sultan_said_halim
-			}
-		}
 		hidden_effect = {
 			retire_character = TUR_mehmed_said
 		}
@@ -14438,28 +14242,6 @@ country_event = { #said halim retires
 					large="gfx/leaders/TUR/TUR_mehmed_talat_pasa_empowered.png"
 				}
 			}				
-		}
-		if = {
-			limit = {
-				has_power_balance = {
-					id = TUR_army_civilian_struggle
-				}
-			}
-			add_power_balance_value = {
-				id = TUR_army_civilian_struggle
-				value = 0.5
-			}
-		}
-		if = {
-			limit = {
-				has_power_balance = {
-					id = TUR_anti_imperialist_revanchist_struggle
-				}
-			}
-			add_power_balance_value = {
-				id = TUR_anti_imperialist_revanchist_struggle
-				value = 0.2
-			}
 		}
 		ai_chance = {
 			base = 5
@@ -14766,7 +14548,7 @@ country_event = { #turks revolt
 	immediate = {
 		hidden_effect = {
 			set_division_force_allow_recruiting = {
-    			division_template = "Hamidiye Alayı"
+    			division_template = "Aşiret Süvari Tümeni"
 			}
 			start_civil_war = {
 				ideology = democratic
@@ -14849,37 +14631,37 @@ country_event = { #turks revolt
 				set_country_flag = TUR_revolter_flag
 				random_owned_state = {
 					create_unit = {
-						division = "name = \"Van Hamidiye Alayı\" division_template = \"Hamidiye Alayı\" start_experience_factor = 0.3 start_equipment_factor = 0.94" owner = PREV
+						division = "name = \"Van Hamidiye Alayı\" division_template = \"Aşiret Süvari Tümeni\" start_experience_factor = 0.3 start_equipment_factor = 0.94" owner = PREV
 					}
 					create_unit = {
-						division = "name = \"Erzurum Hamidiye Alayı\" division_template = \"Hamidiye Alayı\" start_experience_factor = 0.3 start_equipment_factor = 0.94" owner = PREV
+						division = "name = \"Erzurum Hamidiye Alayı\" division_template = \"Aşiret Süvari Tümeni\" start_experience_factor = 0.3 start_equipment_factor = 0.94" owner = PREV
 					}
 					create_unit = {
-						division = "name = \"Bitlis Hamidiye Alayı\" division_template = \"Hamidiye Alayı\" start_experience_factor = 0.3 start_equipment_factor = 0.94" owner = PREV
+						division = "name = \"Bitlis Hamidiye Alayı\" division_template = \"Aşiret Süvari Tümeni\" start_experience_factor = 0.3 start_equipment_factor = 0.94" owner = PREV
 					}
 					create_unit = {
-						division = "name = \"Muş Hamidiye Alayı\" division_template = \"Hamidiye Alayı\" start_experience_factor = 0.3 start_equipment_factor = 0.94" owner = PREV
+						division = "name = \"Muş Hamidiye Alayı\" division_template = \"Aşiret Süvari Tümeni\" start_experience_factor = 0.3 start_equipment_factor = 0.94" owner = PREV
 					}
 					create_unit = {
-						division = "name = \"Bingöl Hamidiye Alayı\" division_template = \"Hamidiye Alayı\" start_experience_factor = 0.3 start_equipment_factor = 0.94" owner = PREV
+						division = "name = \"Bingöl Hamidiye Alayı\" division_template = \"Aşiret Süvari Tümeni\" start_experience_factor = 0.3 start_equipment_factor = 0.94" owner = PREV
 					}
 					create_unit = {
-						division = "name = \"Sivas Hamidiye Alayı\" division_template = \"Hamidiye Alayı\" start_experience_factor = 0.3 start_equipment_factor = 0.94" owner = PREV
+						division = "name = \"Sivas Hamidiye Alayı\" division_template = \"Aşiret Süvari Tümeni\" start_experience_factor = 0.3 start_equipment_factor = 0.94" owner = PREV
 					}
 					create_unit = {
-						division = "name = \"Mardin Hamidiye Alayı\" division_template = \"Hamidiye Alayı\" start_experience_factor = 0.3 start_equipment_factor = 0.94" owner = PREV
+						division = "name = \"Mardin Hamidiye Alayı\" division_template = \"Aşiret Süvari Tümeni\" start_experience_factor = 0.3 start_equipment_factor = 0.94" owner = PREV
 					}
 					create_unit = {
-						division = "name = \"Urfa Hamidiye Alayı\" division_template = \"Hamidiye Alayı\" start_experience_factor = 0.3 start_equipment_factor = 0.94" owner = PREV
+						division = "name = \"Urfa Hamidiye Alayı\" division_template = \"Aşiret Süvari Tümeni\" start_experience_factor = 0.3 start_equipment_factor = 0.94" owner = PREV
 					}
 					create_unit = {
-						division = "name = \"Hakkari Hamidiye Alayı\" division_template = \"Hamidiye Alayı\" start_experience_factor = 0.3 start_equipment_factor = 0.94" owner = PREV
+						division = "name = \"Hakkari Hamidiye Alayı\" division_template = \"Aşiret Süvari Tümeni\" start_experience_factor = 0.3 start_equipment_factor = 0.94" owner = PREV
 					}
 				}
 			}
 			TUR = {
 				delete_unit_template_and_units = {
-					division_template = "Hamidiye Alayı"
+					division_template = "Aşiret Süvari Tümeni"
 					disband = no
 				}
 				every_owned_state = {
@@ -15230,7 +15012,8 @@ country_event = { #internationalist faction
 				add_to_faction = TUR
 			}
 			else = {
-				create_faction = TUR_international_faction
+				create_faction_from_template = faction_template_third_international
+				set_faction_name = TUR_international_faction
 				add_to_faction = TUR
 			}
 		}
@@ -15321,7 +15104,8 @@ country_event = { #they accept
 				add_to_faction = TUR
 			}
 			else = {
-				create_faction = TUR_international_faction
+				create_faction_from_template = faction_template_third_international
+				set_faction_name = TUR_international_faction
 				add_to_faction = TUR
 			}
 		}
@@ -15345,7 +15129,8 @@ country_event = { #they refuse
 			remove_idea = TUR_internationalist_foreign_policy3
 			add_idea = TUR_internationalist_foreign_policy2
 		}
-		create_faction = TUR_internationalist_faction
+		create_faction_from_template = faction_template_third_international
+		set_faction_name = TUR_internationalist_faction
 		ai_chance = {
 			base = 5
 		}
@@ -16424,18 +16209,19 @@ country_event = {
 				}
 				set_demilitarized_zone = yes
 			}
-			MOU = {
-				if = {
+			if = {
+				limit = {
+					owns_state = 877
+					PER = { owns_state = 1117 }
+				}
+				every_owned_state = {
 					limit = {
-						is_in_faction = no
-						is_subject = no
-						NOT = { has_war_with = ROOT }
 						OR = {
-							has_government = ROOT
-							NOT = { has_government = communism }
+							state = 877
+							state = 420
 						}
 					}
-					ROOT = { give_guarantee = PREV }
+					transfer_state_to = PER
 				}
 			}
 		}
@@ -17727,7 +17513,10 @@ country_event = {
 	is_triggered_only = yes
 	trigger = {
 		has_war_with = ITA
-		NOT = { has_global_flag = libyan_crisis_resolved }
+		NOT = { 
+			has_global_flag = libyan_crisis_resolved
+			has_global_flag = no_more_libya_for_you
+		}
 	}
 	option = {
 		name = ww1_ottoman.137.a
@@ -17830,20 +17619,7 @@ country_event = {
 		}
 		custom_effect_tooltip = tur_british_ships_1914
 		effect_tooltip = {
-			if = {
-				limit = {
-					NOT = {
-						has_dlc = "Man the Guns"
-					}
-				}
-				hidden_effect = { load_oob = TUR_seized_naval_legacy }
-			}
-			if = {
-				limit = {
-					has_dlc = "Man the Guns"
-				}
-				hidden_effect = { load_oob = TUR_seized_naval_mtg }
-			}
+			hidden_effect = { load_oob = TUR_seized_naval_mtg }
 		}
 		ENG = { country_event = { id = ww1_ottoman.147 hours = 8 } }
 	}
@@ -17889,20 +17665,7 @@ country_event = {
 		name = ww1_ottoman.147.b
 		trigger = { has_war_with = GER }
 		custom_effect_tooltip = eng_british_ships_1914
-		if = {
-			limit = {
-				NOT = {
-					has_dlc = "Man the Guns"
-				}
-			}
-			hidden_effect = { load_oob = ENG_seized_naval_legacy }
-		}
-		if = {
-			limit = {
-				has_dlc = "Man the Guns"
-			}
-			hidden_effect = { load_oob = ENG_seized_naval_mtg }
-		}
+		hidden_effect = { load_oob = ENG_seized_naval_mtg }
 		TUR = { country_event = { id = ww1_ottoman.149 hours = 8 } }
 		ai_chance = {
 			base = 0
@@ -17943,20 +17706,7 @@ country_event = {
 	option = {
 		name = ww1_ottoman.148.a
 		custom_effect_tooltip = tur_british_ships_1914
-		if = {
-			limit = {
-				NOT = {
-					has_dlc = "Man the Guns"
-				}
-			}
-			hidden_effect = { load_oob = TUR_seized_naval_legacy }
-		}
-		if = {
-			limit = {
-				has_dlc = "Man the Guns"
-			}
-			hidden_effect = { load_oob = TUR_seized_naval_mtg }
-		}
+		hidden_effect = { load_oob = TUR_seized_naval_mtg }
 		ai_chance = {
 			factor = 100
 		}
@@ -17994,20 +17744,7 @@ country_event = {
 	option = {
 		name = ww1_ottoman.150.a
 		custom_effect_tooltip = eng_british_ships_1914
-		if = {
-			limit = {
-				NOT = {
-					has_dlc = "Man the Guns"
-				}
-			}
-			hidden_effect = { load_oob = ENG_seized_naval_legacy }
-		}
-		if = {
-			limit = {
-				has_dlc = "Man the Guns"
-			}
-			hidden_effect = { load_oob = ENG_seized_naval_mtg }
-		}
+		hidden_effect = { load_oob = ENG_seized_naval_mtg }
 		ai_chance = {
 			factor = 100
 		}
@@ -18334,14 +18071,7 @@ country_event = {
 		hidden_effect = {
 			FROM = {
 				# Army
-				every_state = {
-					PREV = {
-						delete_unit = {
-							state = PREV
-							disband = yes
-						}
-					}
-				}
+				delete_unit = { disband = yes }
 				every_other_country = {
 					limit = { is_in_faction_with = PREV }
 					every_state = {
@@ -18419,18 +18149,21 @@ country_event = {
 					}
 				}
 				## France
-				every_state = {
-					limit = {
-						is_owned_or_subject_FROM_trigger = yes
-						region = 228
-						is_coastal = yes
-						NOT = {
-							state = 455
-							state = 859
+				if = {
+					limit = { has_war_with = FRA }
+					every_state = {
+						limit = {
+							is_owned_or_subject_FROM_trigger = yes
+							region = 228
+							is_coastal = yes
+							NOT = {
+								state = 455
+								state = 859
+							}
 						}
+						transfer_state_to = FRA
 					}
-					transfer_state_to = FRA
-				}
+				}	
 				## Syria
 				every_state = {
 					limit = {
@@ -18448,6 +18181,7 @@ country_event = {
 							state = 1029
 						}
 					}
+					set_up_syrian_monarchs = yes
 					transfer_state_to = SYR
 				}
 				if = {
@@ -18734,12 +18468,13 @@ country_event = {
 						OR = {
 							state = 184
 							state = 185
-							state = 200
+							#state = 200
 							state = 345
 							state = 731
-							state = 757
+							#state = 757
 							state = 758
 							state = 803
+							state = 1225
 							state = 826
 						}
 					}
@@ -18761,14 +18496,14 @@ country_event = {
 						is_owned_or_subject_FROM_trigger = yes
 						OR = {
 							state = 184
-							state = 200
+							#state = 200
 							state = 225
-							state = 451
-							state = 756
-							state = 757
+							#state = 451
+							#state = 756
+							#state = 757
 							state = 759
 							state = 788
-							state = 849
+							#state = 849
 							state = 1141
 						}
 					}
@@ -18820,38 +18555,24 @@ country_event = {
 				}
 
 				# Clear relations
-				leave_faction = yes
-				every_other_country = {
+				white_peace = ENT
+				clear_all_relations = yes
+				every_country = {
 					limit = {
-						PREV = { has_wargoal_against = PREV }
+						OR = {
+							tag = ENT
+							AND = {
+								is_ally_with = ENT
+								has_war_together_with = ENT
+							}
+						}						
 					}
-					PREV = {
-						remove_wargoal = {
-							type = all
-							target = PREV
-						}
-					}
-				}
-				every_enemy_country = {
-					limit = {
-						is_faction_leader = yes
-					}
-					white_peace = PREV
 					PREV = { give_military_access = PREV }
-				}
-				every_enemy_country = {
-					white_peace = PREV
-					PREV = { give_military_access = PREV }
-				}
-				every_subject_country = {
-					limit = {
-						has_autonomy_state = autonomy_tgwr_ottoman_emirate
-					}
-					clear_all_relations = yes
 				}
 				set_country_flag = great_war_loser
 				set_country_flag = member_of_central_powers
 				add_ideas = idea_armistice
+				TUR_army_restrictions = yes
 
 				#entente divisions to cosntantinople
 				every_other_country = {
@@ -18935,7 +18656,7 @@ country_event = {
 	option = {
 		name = ww1_ottoman.163.a
 		effect_tooltip = {
-			white_peace = FRA
+			white_peace = ENT
 			add_ideas = idea_armistice
 			add_ideas = idea_army_restrictions
 		}
@@ -18951,7 +18672,7 @@ country_event = {
 			}
 		}
 		else = {
-			FRA = {
+			ENT = {
 				country_event = {
 					id = ww1_ottoman.161
 					hours = 3

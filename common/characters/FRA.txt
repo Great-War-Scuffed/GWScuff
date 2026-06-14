@@ -777,6 +777,7 @@
 	}
 	FRA_philippe_petain={
 		name="FRA_philippe_petain"
+		can_be_captured = no
 		portraits={
 			army={
 				large="gfx/leaders/FRA/FRA_philippe_petain.png"

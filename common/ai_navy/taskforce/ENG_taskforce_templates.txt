@@ -5,6 +5,7 @@ ENG_StrikeForce_1 = {
 	ai_will_do = {
 		factor = 1
 	}	
+	keep_updated = yes
 	mission = { naval_strike }
 	min_composition = {
 		battleship = {
@@ -20,10 +21,10 @@ ENG_StrikeForce_1 = {
 			amount = 4
 		}
 		light_cruiser = {
-			amount = 5
+			amount = 6
 		}
 		protected_cruiser = {
-			amount = 5
+			amount = 6
 		}
 		destroyer = {
 			amount = 40
@@ -90,7 +91,6 @@ ENG_PatrolDominanceForce_CA_1 = {
 		}
 		destroyer = {
 			amount = 12
-
 		}
 	}
 }
@@ -114,7 +114,6 @@ ENG_PatrolDominanceForce_BC_1 = {
 		}
 		destroyer = {
 			amount = 12
-
 		}
 	}
 }
@@ -135,7 +134,7 @@ ENG_ConvoyRaiding_1 = {
 
 	optimal_composition = {
 		submarine = {
-			amount = 12
+			amount = 8
 		}
 	}
 }
@@ -155,14 +154,8 @@ ENG_ConvoyEscort_1 = {
 	}
 	
 	optimal_composition = {
-		light_cruiser = {
-			amount = 3
-		}
-		protected_cruiser = {
-			amount = 2
-		}
 		destroyer = {
-			amount = 10
+			amount = 12
 		}
 	}
 }

@@ -1,6 +1,7 @@
 characters={
 	AMR_fahd_bin_abdul_mohsen_al_hathal = {
 		name = AMR_fahd_bin_abdul_mohsen_al_hathal
+		can_be_captured = no
 		portraits = {
 			civilian = {
 				large = "gfx/leaders/AMR/AMR_Fahd_bin_Abdul_Mohsen_al_Hathal.png"

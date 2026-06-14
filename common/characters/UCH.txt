@@ -12,6 +12,7 @@ characters={
 	}
 	UCH_matvey_martynov={
 		name=UCH_matvey_martynov
+		can_be_captured = no
 		portraits={
 			army={
 				large="gfx/leaders/UCH/UCH_Matvey_Martynov.png"

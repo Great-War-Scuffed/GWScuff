@@ -451,6 +451,7 @@ characters = {
 		portraits = {
 			civilian = {
 				small = "GFX_idea_KOR_kim_gyu_sik"
+				large = "gfx/leaders/KOR/KOR_kim_gyu_sik.png"
 			}
 		}
 		advisor = {
@@ -781,6 +782,7 @@ characters = {
 	}
 	KOR_yi_kang = {
 		name = "KOR_yi_kang"
+		can_be_captured = no
 		portraits = {
 			army = {
 				large = "gfx/leaders/KOR/KOR_yi_kang.png"
@@ -1036,6 +1038,7 @@ characters = {
 	}
 	KOR_terauchi_masatake = {
 		name = "JAP_terauchi_masatake"
+		can_be_captured = no
 		portraits = {
 			army = {
 				large = "gfx/leaders/JAP/JAP_terauchi_masatake.png"

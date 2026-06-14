@@ -460,32 +460,28 @@ CENTRAL_POWERS_prepare_front_RUS = {
 	}
 }
 
-GER_go_schliefen = {
+GER_prepare_schlieffen = {
 	allowed = {
 		original_tag = GER
 	}
 	enable = {
 		OR = {
+			has_completed_focus = GER_quantitative_plan
+			has_completed_focus = GER_traditional_plan
+		}
+		OR = {
 			AND = {
-				has_war_with = FRA
-				OR = {
-					has_completed_focus = GER_quantitative_plan
-					has_completed_focus = GER_traditional_plan
+				NOT = {
+					has_war_with = BEL
 				}
+				is_great_war_ongoing = yes
 			}
-			has_war_with = BEL
 			has_active_mission = european_crisis_mission
 			has_global_flag = crisis_in_progress
-			GER_schlieffen_plan_is_ongoing = yes
-		}
-		NOT = {
-			BEL = {
-				has_capitulated = yes
-			}
-			has_global_flag = great_war_ends
 		}
 	}
 	abort_when_not_enabled = yes
+
 	ai_strategy = {
 		type = prepare_for_war
 		id = BEL
@@ -501,14 +497,40 @@ GER_go_schliefen = {
 		id = 5
 		value = 1000
 	}
+}
+
+GER_go_schliefen = {
+	allowed = {
+		original_tag = GER
+	}
+	enable = {
+		GER_schlieffen_plan_is_ongoing = yes
+		OR = {
+			has_war_with = FRA
+			has_war_with = BEL
+		}
+		NOT = {
+			BEL = {
+				has_capitulated = yes
+			}
+			has_global_flag = great_war_ends
+		}
+	}
+	abort_when_not_enabled = yes
 	ai_strategy = {
 		type = front_control
 		tag = BEL
 		priority = 1000
+		ratio = 0
 		ordertype = front
 		execution_type = rush
 		execute_order = yes
 		manual_attack = yes
+	}
+	ai_strategy = {
+		type = front_unit_request
+		tag = BEL
+		value = 10
 	}
 }
 
@@ -519,7 +541,7 @@ GER_schliefen_is_kinda_working = {
 	enable = {
 		has_war_with = FRA
 		BEL = {
-			is_in_faction_with = FRA
+			has_war_together_with = FRA
 			has_capitulated = yes
 		}
 		GER_schlieffen_plan_is_ongoing = yes
@@ -528,11 +550,16 @@ GER_schliefen_is_kinda_working = {
 	ai_strategy = {
 		type = front_control
 		tag = FRA
-		ratio = 0.2
+		ratio = 0
 		ordertype = front
 		execution_type = rush
 		execute_order = yes
 		manual_attack = yes
+	}
+	ai_strategy = {
+		type = front_unit_request
+		tag = FRA
+		value = 10
 	}
 }
 
@@ -576,15 +603,14 @@ GER_beat_france = {
 	ai_strategy = {
 		type = front_control
 		tag = FRA
-		ratio = 0.4
+		ratio = 0
 		ordertype = front
-		execution_type = balanced
 		execute_order = yes
 	}
 	ai_strategy = {
 		type = front_unit_request
 		tag = FRA
-		value = 5
+		value = 7
 	}
 }
 
@@ -670,24 +696,64 @@ GER_beat_RUS = {
 					}
 				}
 			}
-		}
-		NOT = {
 			has_idea = GER_focus_on_russian_front
 		}
 	}
 	abort_when_not_enabled = yes
 	ai_strategy = {
 		type = front_control
-		tag = RUS
-		ratio = 0.3
+		country_trigger = {
+			original_tag = RUS
+		}
+		ratio = 0
 		ordertype = front
-		execution_type = balanced
 		execute_order = yes
 	}
 	ai_strategy = {
 		type = front_unit_request
-		tag = RUS
-		value = 5
+		country_trigger = {
+			original_tag = RUS
+		}
+		value = 10
+	}
+}
+
+GER_firstly_poland = {
+	allowed = {
+		tag = GER
+	}
+	enable = {
+		OR = {
+			has_war_with = RUS
+			has_global_flag = crisis_in_progress
+		}
+		10 = {
+			is_controlled_by_ROOT_or_ally = no
+		}
+	}
+	abort_when_not_enabled = yes
+	ai_strategy = {
+		type = force_concentration_target_weight
+		state = 1202 # Lodz
+		state = 10 # Warsaw
+		state = 92 # Lublin
+		state = 766 # Kholm
+
+		value = 150
+	}
+
+	ai_strategy = {
+		type = force_concentration_target_weight
+		state = 12 # Riga
+		state = 190 # Mitava
+		state = 189 # Kovno
+		state = 951 # Libava
+		state = 946 # Polangen
+		state = 206 # Minsk
+		state = 950 # Valk
+
+
+		value = -150
 	}
 }
 
@@ -785,7 +851,7 @@ GER_totalen_kaiserschlacht = {
 	ai_strategy = {
 		type = front_control
 		tag = FRA
-		ratio = 0.2
+		ratio = 0
 		ordertype = front
 		execution_type = rush
 		execute_order = yes
@@ -814,148 +880,6 @@ GER_less_prio_on_SOV = {
 		type = front_unit_request
 		tag = UKR
 		value = -20
-	}
-}
-
-GER_build_hindenburg_line = {
-	allowed = {
-		original_tag = GER
-	}
-	enable = {
-		is_great_war_ongoing = yes
-		has_war_with = USA
-	}
-	abort_when_not_enabled = yes
-	ai_strategy = {
-		type = build_building
-		id = bunker
-		target = 13081
-		value = 20000
-	}
-	ai_strategy = {
-		type = build_building
-		id = bunker
-		target = 2900
-		value = 20000
-	}
-	ai_strategy = {
-		type = build_building
-		id = bunker
-		target = 9536
-		value = 20000
-	}
-	ai_strategy = {
-		type = build_building
-		id = bunker
-		target = 3576
-		value = 20000
-	}
-	ai_strategy = {
-		type = build_building
-		id = bunker
-		target = 6446
-		value = 20000
-	}
-	ai_strategy = {
-		type = build_building
-		id = bunker
-		target = 6560
-		value = 20000
-	}
-	ai_strategy = {
-		type = build_building
-		id = bunker
-		target = 11606
-		value = 20000
-	}
-	ai_strategy = {
-		type = build_building
-		id = bunker
-		target = 11483
-		value = 20000
-	}
-	ai_strategy = {
-		type = build_building
-		id = bunker
-		target = 575
-		value = 20000
-	}
-	ai_strategy = {
-		type = build_building
-		id = bunker
-		target = 2900
-		value = 20000
-	}
-	ai_strategy = {
-		type = build_building
-		id = bunker
-		target = 3447
-		value = 20000
-	}
-	ai_strategy = {
-		type = build_building
-		id = bunker
-		target = 6504
-		value = 20000
-	}
-	ai_strategy = {
-		type = build_building
-		id = bunker
-		target = 3536
-		value = 20000
-	}
-	ai_strategy = {
-		type = build_building
-		id = bunker
-		target = 11548
-		value = 20000
-	}
-	ai_strategy = {
-		type = build_building
-		id = bunker
-		target = 9472
-		value = 20000
-	}
-	ai_strategy = {
-		type = build_building
-		id = bunker
-		target = 3476
-		value = 20000
-	}
-	ai_strategy = {
-		type = build_building
-		id = bunker
-		target = 3516
-		value = 20000
-	}
-	ai_strategy = {
-		type = build_building
-		id = bunker
-		target = 516
-		value = 20000
-	}
-	ai_strategy = {
-		type = build_building
-		id = bunker
-		target = 6598
-		value = 20000
-	}
-}
-
-#################
-# below non frontline rules
-#######
-GER_ignore_turnip_winter_effect = {
-	allowed = {
-		original_tag = GER
-	}
-	enable = {
-		has_idea = GER_famine
-	}
-	abort_when_not_enabled = yes
-	ai_strategy = {
-		type = ignore_army_incompetence
-		value = 50
 	}
 }
 
@@ -1029,7 +953,7 @@ GER_russian_civil_war_ignore = {
 		original_tag = GER
 	}
 	enable = {
-		has_global_flag = russian_revolution
+		has_global_flag = october_revolution
 		NOT = {
 			has_global_flag = great_war_ends
 		}
@@ -1100,7 +1024,12 @@ GER_unit_production = {
 	ai_strategy = {
 		type = unit_ratio
 		id = fighter
-		value = 75
+		value = 70
+	}
+	ai_strategy = {
+		type = unit_ratio
+		id = tactical_bomber
+		value = 15
 	}
 	ai_strategy = {
 		type = unit_ratio
@@ -1117,7 +1046,12 @@ GER_unit_production = {
 	ai_strategy = {
 		type = equipment_production_factor
 		id = fighter
-		value = 140
+		value = 90
+	}
+	ai_strategy = {
+		type = equipment_production_factor
+		id = tactical_bomber
+		value = 50
 	}
 	ai_strategy = {
 		type = equipment_production_factor
@@ -1138,26 +1072,6 @@ GER_unit_production = {
 		#added to railway gun define (set to 0 by default, increased in default strategies)
 		type = railway_gun_divisions_ratio
 		value = 1
-	}
-	ai_strategy = {
-		type = equipment_production_factor
-		id = anti_tank
-		value = -50
-	}
-	ai_strategy = {
-		type = equipment_production_factor
-		id = cas
-		value = -65
-	}
-	ai_strategy = {
-		type = equipment_production_factor
-		id = tactical_bomber
-		value = -80
-	}
-	ai_strategy = {
-		type = equipment_production_factor
-		id = naval_bomber
-		value = -120
 	}
 	#german zeppelin forces
 	ai_strategy = {
@@ -1738,9 +1652,15 @@ GER_build_mils = {
 	}
 	ai_strategy = {
 		type = build_building
-		id = bunker
-		target = 678
-		value = 150
+		id = air_base
+		target = 5
+		value = 200
+	}
+	ai_strategy = {
+		type = build_building
+		id = air_base
+		target = 763
+		value = 200
 	}
 	ai_strategy = {
 		type = build_building
@@ -1752,6 +1672,18 @@ GER_build_mils = {
 		type = build_building
 		id = air_base
 		target = 33 # in case we capture french air base
+		value = 300
+	}
+	ai_strategy = {
+		type = build_building
+		id = air_base
+		target = 1107
+		value = 300
+	}
+	ai_strategy = {
+		type = build_building
+		id = air_base
+		target = 6
 		value = 300
 	}
 }
@@ -1833,7 +1765,10 @@ CENTRALPOWERS_help_UKR_in_civil_war = {
 		NOT = {
 			has_war_with = RUS
 		}
-		is_in_faction_with = GER
+		OR = {
+			tag = GER
+			is_in_faction_with = GER
+		}
 		is_in_faction_with = UKR
 	}
 	abort_when_not_enabled = yes

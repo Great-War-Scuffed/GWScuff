@@ -150,6 +150,7 @@ characters = {
 	}
 	ZHC_wang_zhanyuan = { # 王占元
 		name = "CHI_wang_zhanyuan"
+		can_be_captured = no
 		portraits = {
 			army = {
 				large = "gfx/leaders/CHI/CHI_wang_zhanyuan.png"
@@ -165,11 +166,9 @@ characters = {
 		}
 		country_leader = {
 			ideology = warlordism
-			traits = { zhili_allegiance }
 		}
 		country_leader = {
 			ideology = stratocracy
-			traits = { zhili_allegiance }
 		}
 	}
 	ZHC_feng_yuhsiang = { # 馮玉祥
@@ -285,6 +284,7 @@ characters = {
 	}
 	ZHC_yan_xiangwen = { # 阎相文
 		name = "CHI_yan_xiangwen"
+		can_be_captured = no
 		portraits = {
 			army = {
 				large = "gfx/leaders/CHI/CHI_yan_xiangwen.png"
@@ -300,11 +300,9 @@ characters = {
 		}
 		country_leader = {
 			ideology = warlordism
-			traits = { zhili_allegiance }
 		}
 		country_leader = {
 			ideology = stratocracy
-			traits = { zhili_allegiance }
 		}
 	}
 	ZHC_liu_xun = { # 刘询
@@ -715,6 +713,7 @@ characters = {
 	}
 	ZHC_xie_hongxun = { # 谢鸿勋
 		name = "CHI_xie_hongxun"
+		can_be_captured = no #should die instead
 		portraits = {
 			army = {
 				large = "gfx/leaders/CHI/CHI_xie_hongxun.png"

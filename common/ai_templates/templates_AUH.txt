@@ -235,6 +235,8 @@ colonial_infantry_HUN = {
 			regiments = {
 				infantry = 16
 				field_gun_brigade = 1
+			}
+			regimental_support = {
 				machine_gun_company = 1
 			}
 		}
@@ -276,6 +278,8 @@ infantry_AUH = {
 			regiments = {
 				infantry = 16
 				field_gun_brigade = 1
+			}
+			regimental_support = {
 				machine_gun_company = 1
 			}
 		}
@@ -307,6 +311,8 @@ infantry_AUH = {
 			regiments = {
 				infantry = 16
 				field_gun_brigade = 1
+			}
+			regimental_support = {
 				machine_gun_company = 1
 			}
 		}
@@ -338,6 +344,8 @@ infantry_AUH = {
 			regiments = {
 				infantry = 16
 				field_gun_brigade = 1
+			}
+			regimental_support = {
 				machine_gun_company = 1
 			}
 		}

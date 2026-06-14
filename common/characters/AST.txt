@@ -80,7 +80,7 @@ characters={
 		name="AST_michael_considine"
 		portraits={
 			civilian={
-				large="gfx/leaders/Europe/portrait_europe_generic_4.dds"
+				large="gfx/leaders/AST/AST_michael_considine.png"
 			}
 		}
 		country_leader={
@@ -90,6 +90,7 @@ characters={
 	
 	AST_john_monash={
 		name="AST_john_monash"
+		can_be_captured = no
 		portraits={
 			army={
 				large="gfx/leaders/AST/AST_John_Monash.png"
@@ -130,7 +131,7 @@ characters={
 		portraits={
 			army={
 				large="gfx/leaders/AST/AST_Harry_Chauvel.png"
-				small="gfx/interface/ideas/AST/idea_AST_Harry_Chauvel.png"
+				small="gfx/interface/ideas/AST/idea_AST_harry_chauvel.png"
 			}
 		}
 		field_marshal={
@@ -196,6 +197,7 @@ characters={
 	}
 	AST_william_bridges={
 		name="AST_william_bridges"
+		can_be_captured = no #should die instead
 		portraits={
 			army={
 				large="gfx/leaders/AST/AST_William_Bridges.png"
@@ -243,7 +245,7 @@ characters={
 		name="AST_charles_cox"
 		portraits={
 			army={
-				large="gfx/leaders/ENG/Portrait_Britain_Generic_land_1.dds"
+				large="gfx/leaders/AST/AST_charles_cox.png"
 				small="gfx/interface/ideas/idea_ENG_generic_land_1.dds"
 			}
 		}
@@ -260,7 +262,7 @@ characters={
 		name="AST_charles_rosenthal"
 		portraits={
 			army={
-				large="gfx/leaders/ENG/Portrait_Britain_Generic_land_2.png"
+				large="gfx/leaders/AST/AST_charles_rosenthal.png"
 				small="gfx/interface/ideas/idea_ENG_generic_land_2.dds"
 			}
 		}
@@ -277,7 +279,7 @@ characters={
 		name="AST_william_holmes"
 		portraits={
 			army={
-				large="gfx/leaders/ENG/Portrait_Britain_Generic_land_3.dds"
+				large="gfx/leaders/AST/AST_william_holmes.png"
 				small="gfx/interface/ideas/idea_ENG_generic_land_3.dds"
 			}
 		}
@@ -294,7 +296,7 @@ characters={
 		name="AST_charles_brand"
 		portraits={
 			army={
-				large="gfx/leaders/ENG/Portrait_Britain_Generic_land_4.png"
+				large="gfx/leaders/ENG/Portrait_Britain_Generic_land_4.dds"
 				small="gfx/interface/ideas/idea_ENG_generic_land_4.dds"
 			}
 		}
@@ -303,18 +305,15 @@ characters={
 			attack_skill=2
 			defense_skill=1
 			planning_skill=2
-			logistics_skill=2
-			
+			logistics_skill=2		
 		}
 	}
 	AST_george_hyde={
 		name="AST_george_hyde"
 		portraits={
 			army={
+				large="gfx/leaders/AST/AST_george_hyde.png"
 				small="gfx/interface/ideas/idea_ENG_generic_navy_1.dds"
-			}
-			army={
-				large="gfx/leaders/ENG/Portrait_Britain_Generic_navy_1.dds"
 			}
 		}
 		navy_leader={
@@ -323,8 +322,7 @@ characters={
 			attack_skill=2
 			defense_skill=2
 			maneuvering_skill=1
-			coordination_skill=1
-			
+			coordination_skill=1		
 		}
 	}
 	AST_henry_petre={

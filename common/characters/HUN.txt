@@ -11,7 +11,6 @@ characters={
 			ideology=authoritarian_democracy
 			traits = {
 				HUN_stiff_leader
-				HUN_railway_enthusiast
 			}
 		}
 	}
@@ -440,6 +439,7 @@ characters={
 	}
 	HUN_gyula_gombos={
 		name="HUN_gyula_gombos"
+		can_be_captured = no
 		portraits={
 			civilian={
 				large="gfx/leaders/HUN/HUN_gyula_gombos.png"
@@ -584,13 +584,10 @@ characters={
 		}
 	} 
 	HUN_sandor_szurmay={
-		name="HUN_sandor_szurmay"
 		portraits={
 			army={
-				large=GFX_Portrait_AUH_generic_land_2
-				small=GFX_Portrait_AUH_generic_land_2_small
-				#large="gfx/leaders/HUN/HUN_Sandor_Szurmay.png"
-				#small="gfx/interface/ideas/HUN/idea_HUN_Sandor_Szurmay.png"
+				large="gfx/leaders/HUN/HUN_sandor_szurmay.png"
+				small="gfx/interface/ideas/HUN/idea_HUN_sandor_szurmay.png"
 			}
 		}
 		advisor={
@@ -1049,6 +1046,14 @@ characters={
 			visible = {
 				has_global_flag = hungarian_revolution
 				has_government = communism
+			}
+		}
+	}
+
+	HUN_franz_joseph_i={ #for country selection secren, not to be used in code
+		portraits={
+			civilian={
+				large="gfx/leaders/AUH/AUH_franz_joseph_i.png"
 			}
 		}
 	}

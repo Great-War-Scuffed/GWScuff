@@ -177,6 +177,7 @@ characters={
 	}
 	EST_julius_kuperjanov={
 		name=EST_julius_kuperjanov
+		can_be_captured = no #should die instead
 		portraits={
 			army={
 				large = "gfx/leaders/EST/EST_Julius_Kuperjanov.png"

@@ -12,6 +12,7 @@ characters={
 	}
 	ZHE_lu_yongxiang={ # 盧永祥
 		name= CHI_lu_yongxiang
+		can_be_captured = no
 		portraits={
 			civilian={
 				large="gfx/leaders/CHI/CHI_lu_yongxiang.png"

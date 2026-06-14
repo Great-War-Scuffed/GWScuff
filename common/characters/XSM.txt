@@ -18,9 +18,25 @@ characters = {
 	}
 	XSM_ma_hongbin = { # 马鸿宾
 		name = "CHI_ma_hongbin"
+		can_be_captured = no
 		portraits = {
 			civilian = {
 				large = "gfx/leaders/CHI/CHI_ma_hongbin.png"
+				small = GFX_idea_CHI_ma_hongbin
+			}
+		}
+		advisor={
+			slot = army_chief
+			idea_token = XSM_ma_hongbin
+			allowed = {
+				is_china_or_warlord_no_tt = yes
+			}
+			traits = {
+				army_chief_defensive_2
+			}
+			cost = 100
+			ai_will_do = {
+				base = 1.000
 			}
 		}
 		country_leader = {
@@ -46,6 +62,7 @@ characters = {
 	}
 	XSM_ma_zhongying = { # 馬仲英
 		name = "CHI_ma_zhongying"
+		can_be_captured = no
 		portraits = {
 			civilian = {
 				large = "gfx/leaders/CHI/CHI_ma_zhongying.png"
@@ -82,6 +99,7 @@ characters = {
 	}
 	XSM_ma_hushan = { # 馬虎山
 		name = "CHI_ma_hushan"
+		can_be_captured = no
 		portraits = {
 			civilian = {
 				large = "gfx/leaders/CHI/CHI_ma_hushan.png"
@@ -114,9 +132,11 @@ characters = {
 	} 
 	XSM_ma_hongkui = { # 馬鴻逵
 		name = "CHI_ma_hongkui"
+		can_be_captured = no
 		portraits = {
 			army = {
 				large = "gfx/leaders/CHI/CHI_ma_hongkui.png"
+				small = GFX_idea_CHI_ma_hongkui
 			}
 		}
 		country_leader = {

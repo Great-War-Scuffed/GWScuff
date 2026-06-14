@@ -17,7 +17,7 @@ ENG_mine_sweeping = {
     }
 
     min_priority = 2
-    max_priority = 8
+    max_priority = 6
 }
 
 ENG_invasion_defense = {
@@ -27,8 +27,8 @@ ENG_invasion_defense = {
         ENG
     }
 
-    min_priority = 15
-    max_priority = 50
+    min_priority = 12
+    max_priority = 40
 }
 
 ENG_coast_defense = {
@@ -49,8 +49,8 @@ ENG_convoy_protection = {
         ENG
     }
 
-    min_priority = 1
-    max_priority = 5
+    min_priority = 3
+    max_priority = 20
 }
 
 ENG_convoy_raiding = {
@@ -83,7 +83,7 @@ ENG_mine_laying = {
     }
 
     min_priority = 2
-    max_priority = 8
+    max_priority = 6
 }
 
 ENG_training = {

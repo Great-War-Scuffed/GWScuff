@@ -43,6 +43,7 @@ characters={
 	}
 	PER_nezam_us_saltaneh={
 		name="PER_nezam_us_saltaneh"
+		can_be_captured = no
 		portraits={
 			army={
 				large="gfx/leaders/PER/PER_Nezam_us_Saltaneh.png"
@@ -62,6 +63,7 @@ characters={
 	}
 	PER_reza_khan={
 		name="PER_reza_khan"
+		can_be_captured = no
 		portraits={
 			army={
 				large="gfx/leaders/PER/PER_Reza_Khan.png"

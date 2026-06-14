@@ -748,7 +748,7 @@ FRA_wadai_low_prio = {
 	ai_strategy = {
 		type = front_unit_request
 		tag = CHA
-		value = -80
+		value = -40
 	}
 	ai_strategy = {
 		type = front_control
@@ -756,7 +756,6 @@ FRA_wadai_low_prio = {
 		ratio = 0.5
 		priority = 100
 		ordertype = front
-		execution_type = balanced
 		execute_order = yes
 		manual_attack = yes
 	}

@@ -53,31 +53,13 @@ shared_focus = {
 shared_focus = {
 	id =  GULF_army_focus
 	icon = {
-		trigger = { original_tag = BHR }
-		value = GFX_focus_army_focus_bahrain
-	}
-	icon = {
-		trigger = { original_tag = QAT }
-		value = GFX_army_focus_qatar
-	}
-	icon = {
-		trigger = { original_tag = MSC }
-		value = GFX_focus_OMA_Army
-	}
-	icon = {
-		trigger = { original_tag = KUW }
-		value = GFX_army_focus_kuwait
-	}
-	icon = {
-		trigger = { original_tag = OMA }
-		value = GFX_army_focus_oman
-	}
-	icon = {
-		trigger = { original_tag = UAE }
-		value = GFX_army_focus_uae
-	}
-	icon = {
-		value = GFX_goal_generic_small_arms
+		GFX_focus_army_focus_bahrain = { original_tag = BHR }
+		GFX_army_focus_qatar = { original_tag = QAT }
+		GFX_focus_OMA_Army = { original_tag = MSC }
+		GFX_army_focus_kuwait = { original_tag = KUW }
+		GFX_army_focus_oman = { original_tag = OMA }
+		GFX_army_focus_uae = { original_tag = UAE }
+		GFX_goal_generic_small_arms = yes
 	}
 	search_filters = {
 		FOCUS_FILTER_HISTORICAL
@@ -116,8 +98,14 @@ shared_focus = {
 		factor = 1
 	}
 	available = {
-		ENG={
-			has_subject = ROOT
+		OR = {
+			is_subject_of = ENG
+			AND = {
+				is_subject_of = RAJ
+				RAJ = {
+					is_subject_of = ENG
+				}
+			}
 		}
 		has_war = yes
 	}
@@ -135,13 +123,10 @@ shared_focus = {
 shared_focus = {
 	id =  GULF_our_ships
 	icon = {
-		trigger = {
+		GFX_focus_OMA_Navy = {
 			original_tag = MSC  
 		}
-		value = GFX_focus_OMA_Navy
-	}
-	icon = {
-		value = GFX_goal_generic_navy_battleship
+		GFX_goal_generic_navy_battleship = yes
 	}
 	cost = 10
 	relative_position_id =  GULF_establish_control_over_the_economy
@@ -219,37 +204,37 @@ shared_focus = {
 	available = {
 		any_owned_state = { is_coastal = yes }
 		OR = {
-			is_subject_of = ENG
-			is_in_faction_with = ENG
+			is_ally_with = ENG
+			AND = {
+				is_subject_of = RAJ
+				RAJ = {
+					is_subject_of = ENG
+				}
+			}
 		}
 	}
 	completion_reward = {
 		if = {
 			limit = {
-				is_subject_of = ENG
-			 }
-			 add_autonomy_score = {
+				OR = {
+					is_subject_of = ENG
+					AND = {
+						is_subject_of = RAJ
+						RAJ = {
+							is_subject_of = ENG
+						}
+					}
+				}
+			}
+			add_autonomy_score = {
 				value = -100
 			}
 		}
-		if = {
-			limit = { 
-				has_dlc = "Man the Guns" 
-			}
-			create_ship = {
-				type = ship_hull_light_1
-				equipment_variant = "TB 81 Class"
-				creator = ENG
-				name = "TB 81 Class"
-			}
-		}
-		else = {
-			create_ship = {
-				type = destroyer_1
-				equipment_variant = "TB 81 Class"
-				name = "TB 81 Class"
-				creator = ENG
-			}
+		create_ship = {
+			type = ship_hull_light_1
+			equipment_variant = "TB 81 Class"
+			creator = ENG
+			name = "TB 81 Class"
 		}
 	}
 }
@@ -365,12 +350,41 @@ shared_focus = {
 	available = {
 		TUR = {
 			has_country_flag = TUR_jihad_declared
+			has_war_with = ENG
 		}
 		has_war_support > 0.6
+		OR = {
+			is_subject = no
+			is_subject_of = ENG
+			is_subject_of = TUR
+			AND = {
+				is_subject_of = RAJ
+				RAJ = {
+					is_subject_of = ENG
+				}
+			}
+		}
+	}
+	bypass = {
+		has_war_with = ENG
 	}
 	completion_reward = {
-		ENG = {
-			end_puppet = ROOT
+		if = {
+			limit = { 
+				OR = {
+					is_subject = no
+					is_subject_of = ENG
+					AND = {
+						is_subject_of = RAJ
+						RAJ = {
+							is_subject_of = ENG
+						}
+					}
+				}	
+			}
+			OVERLORD = {
+				end_puppet = ROOT
+			}
 		}
 		if = {
 			limit = {
@@ -656,12 +670,8 @@ shared_focus = {
 		FOCUS_FILTER_INTERNAL_AFFAIRS
 	}
 	icon = {
-		trigger = { NOT = { any_owned_state = { is_coastal = yes } } }
-		value = GFX_focus_generic_farmland
-	}
-	icon = {
-		trigger = { any_owned_state = { is_coastal = yes } }
-		value = GFX_focus_SWE_state_paid_vacation
+		GFX_focus_generic_farmland = yes
+		GFX_focus_SWE_state_paid_vacation = { any_owned_state = { is_coastal = yes } }
 	}
 	cost = 10
 	prerequisite = {

@@ -1,6 +1,7 @@
 characters = {
 	IKR_ioannis_malachias = {
 		name = GRE_ioannis_malachias
+		can_be_captured = no
 		portraits = {
 			civilian = {
 				large = "gfx/leaders/IKR/IKR_Ioannis_Malachias.png"

@@ -1,6 +1,7 @@
 characters={
 	JOH_ibrahim_of_johor = {
 		name = JOH_ibrahim_of_johor
+		can_be_captured = no
 		portraits = {
 			civilian = {
 				large = "gfx/leaders/JOH/JOH_Ibrahim_of_Johor.png"

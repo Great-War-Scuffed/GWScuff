@@ -3027,29 +3027,30 @@ ideas = {
 			picture = PER_islamic_traditions_ns
 
 			modifier = {
-				planning_speed = 0.20
-				terrain_trait_xp_gain_factor = 0.2
-				attrition = -0.1
+				planning_speed = 0.25
+				terrain_trait_xp_gain_factor = 0.25
+				attrition = -0.25
+				supply_consumption_factor = -0.25
 			}
 			targeted_modifier = {
 				tag = SER
-				attack_bonus_against = 0.15
-				defense_bonus_against = 0.3
+				attack_bonus_against = 0.25
+				defense_bonus_against = 0.25
 			}
 			targeted_modifier = {
 				tag = BUL
-				attack_bonus_against = 0.15
-				defense_bonus_against = 0.3
+				attack_bonus_against = 0.25
+				defense_bonus_against = 0.25
 			}
 			targeted_modifier = {
 				tag = GRE
-				attack_bonus_against = 0.15
-				defense_bonus_against = 0.3
+				attack_bonus_against = 0.25
+				defense_bonus_against = 0.25
 			}
 			targeted_modifier = {
 				tag = MNT
-				attack_bonus_against = 0.15
-				defense_bonus_against = 0.3
+				attack_bonus_against = 0.25
+				defense_bonus_against = 0.25
 			}
 		}
 

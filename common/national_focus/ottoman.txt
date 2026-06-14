@@ -2243,7 +2243,7 @@ focus_tree = {
 	focus = {
 		id = TUR_strengthen_the_national_economy
 		icon = GFX_TUR_strengthen_the_national_economy
-		cost = 10
+		cost = 5
 		x = 29
 		y = 0
 		search_filters = {
@@ -2268,6 +2268,10 @@ focus_tree = {
 			if = {
 				limit = { NOT = { has_idea = limited_exports } }
 				add_ideas = limited_exports
+			}
+			add_offsite_building = {
+				type = industrial_complex
+				level = 2
 			}
 		}
 		ai_will_do = {
@@ -3283,7 +3287,7 @@ focus_tree = {
 			add_ideas = free_trade
 			add_offsite_building = {
 				type = industrial_complex
-				level = 1
+				level = 4
 			}
 		}
 		ai_will_do = {

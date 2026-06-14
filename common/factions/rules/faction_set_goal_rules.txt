@@ -1,8 +1,5 @@
 goals_only_faction_leader = {
 	type = member_rules
-	visible = {
-		always = no
-	}
 	trigger = {
 		is_faction_leader = yes	
 	}

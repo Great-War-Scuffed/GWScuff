@@ -97,6 +97,7 @@ focus_tree = {
 				uses = 1
 				category = land_doctrine
 			}
+			TUR_modernize_army_effect = yes
 		}
 		ai_will_do = {
 			base = 50
@@ -711,6 +712,7 @@ focus_tree = {
 				uses = 2
 				category = land_doctrine
 			}
+			TUR_modernize_army_effect = yes
 		}
 	}
 	focus = {
@@ -4318,6 +4320,7 @@ focus_tree = {
 				}
 			}
 			mark_focus_tree_layout_dirty = yes
+			TUR_modernize_army_effect = yes
 		}
 		ai_will_do = {
 			base = 35
@@ -4904,10 +4907,10 @@ focus_tree = {
 		x = 6
 		y = 1
 		available = {
-			has_country_leader = {
-				character = TUR_abdulhamid_ii
-				ruling_only = yes
-			}
+			#has_country_leader = {
+			#	character = TUR_abdulhamid_ii
+			#	ruling_only = yes
+			#}
 		}
 		offset = {
 			x = 3
@@ -8154,6 +8157,7 @@ focus_tree = {
 			add_command_power = 30
 			add_stability = 0.05
 			mark_focus_tree_layout_dirty = yes
+			TUR_modernize_army_effect = yes
 		}
 		ai_will_do = {
 			base = 50

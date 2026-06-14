@@ -1170,8 +1170,12 @@ focus = {
 		focus = AUH_study_german_howitzer
 	}
 	completion_reward = { 
-		set_technology = {
-			basic_armored_car = 1
+		add_tech_bonus = {
+			name = AUH_Build_modern_artillery_units
+			category = infantry_weapons
+			uses = 2
+			bonus = 1.0
+			ahead_reduction = 1.0
 		}
 	}
 }
@@ -1202,6 +1206,7 @@ focus = {
 		focus = AUH_expand_the_empire
 	}
 	completion_reward = { 
+		add_ideas = deterrence
 		add_manpower = 100000
 		add_equipment_to_stockpile = {
 			type = infantry_equipment

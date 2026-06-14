@@ -2060,6 +2060,8 @@ ideas = {
 				army_org_factor = 0.10
 				army_core_attack_factor = 0.05
 				army_core_defence_factor = 0.05
+				conscription = 0.03
+				conscription_factor = 0.10
 			}
 		}
 		AUH_gameinseme_armee_2 = {
@@ -2113,7 +2115,7 @@ ideas = {
 			}
 			removal_cost = -1
 			equipment_bonus = {
-				howitzer_equipment = {
+				infantry_equipment = {
 					soft_attack = 0.10
 				}
 			}

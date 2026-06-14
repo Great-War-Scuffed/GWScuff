@@ -282,12 +282,18 @@ From;To;Type;Through;start_x;start_y;stop_x;stop_y;adjacency_rule_name;Comment
 3898;3915;impassable;-1;-1;-1;-1;-1;;Pyrenees
 3899;3915;impassable;-1;-1;-1;-1;-1;;Pyrenees
 3898;6931;impassable;-1;-1;-1;-1;-1;;Pyrenees
-11570;9587;impassable;-1;-1;-1;-1;-1;;Alps
-6635;636;impassable;-1;-1;-1;-1;-1;;Alps
-6635;3641;impassable;-1;-1;-1;-1;-1;;Alps
-6635;9587;impassable;-1;-1;-1;-1;-1;;Alps
+
+
+
+
 6661;3662;impassable;-1;-1;-1;-1;-1;;Alps
 6661;658;impassable;-1;-1;-1;-1;-1;;Alps
+9600;6661;impassable;-1;-1;-1;-1;-1;;Alps
+9600;9584;impassable;-1;-1;-1;-1;-1;;Alps
+9600;607;impassable;-1;-1;-1;-1;-1;;Alps
+3641;607;impassable;-1;-1;-1;-1;-1;;Alps
+
+
 11587;3662;impassable;-1;-1;-1;-1;-1;;Alps
 11587;3660;impassable;-1;-1;-1;-1;-1;;Alps
 9630;11618;impassable;-1;-1;-1;-1;-1;;Alps`t`
@@ -299,36 +305,27 @@ From;To;Type;Through;start_x;start_y;stop_x;stop_y;adjacency_rule_name;Comment
 11615;11618;impassable;-1;-1;-1;-1;-1;;austrian alps
 11615;11634;impassable;-1;-1;-1;-1;-1;;austrian alps
 671;11634;impassable;-1;-1;-1;-1;-1;;austrian alps
-11592;6667;impassable;-1;-1;-1;-1;-1;;Carpathians
-11592;907;impassable;-1;-1;-1;-1;-1;;Carpathians
-9619;907;impassable;-1;-1;-1;-1;-1;;Carpathians
-3665;907;impassable;-1;-1;-1;-1;-1;;Carpathians
-3665;11605;impassable;-1;-1;-1;-1;-1;;Carpathians
-3665;13065;impassable;-1;-1;-1;-1;-1;;Carpathians
-6679;13065;impassable;-1;-1;-1;-1;-1;;Carpathians
-6709;13065;impassable;-1;-1;-1;-1;-1;;Carpathians
-4363;1577;impassable;-1;-1;-1;-1;-1;;Annamese Mountains
-1248;1577;impassable;-1;-1;-1;-1;-1;;Annamese Mountains
-1248;4554;impassable;-1;-1;-1;-1;-1;;Annamese Mountains
-7229;4554;impassable;-1;-1;-1;-1;-1;;Annamese Mountains
-7229;7426;impassable;-1;-1;-1;-1;-1;;Annamese Mountains
-10309;7426;impassable;-1;-1;-1;-1;-1;;Annamese Mountains
-4379;7426;impassable;-1;-1;-1;-1;-1;;Annamese Mountains
-4379;12210;impassable;-1;-1;-1;-1;-1;;Annamese Mountains
-1302;12210;impassable;-1;-1;-1;-1;-1;;Annamese Mountains
-1302;10238;impassable;-1;-1;-1;-1;-1;;Annamese Mountains
-1302;10195;impassable;-1;-1;-1;-1;-1;;Annamese Mountains
-7280;10195;impassable;-1;-1;-1;-1;-1;;Annamese Mountains
-7280;4260;impassable;-1;-1;-1;-1;-1;;Annamese Mountains
-12297;4260;impassable;-1;-1;-1;-1;-1;;Annamese Mountains
-12297;10326;impassable;-1;-1;-1;-1;-1;;Annamese Mountains
-4397;10326;impassable;-1;-1;-1;-1;-1;;Annamese Mountains
-4397;1362;impassable;-1;-1;-1;-1;-1;;Annamese Mountains
-9988;1362;impassable;-1;-1;-1;-1;-1;;Annamese Mountains
-9988;12332;impassable;-1;-1;-1;-1;-1;;Annamese Mountains
-9988;4339;impassable;-1;-1;-1;-1;-1;;Annamese Mountains
-9988;9961;impassable;-1;-1;-1;-1;-1;;Annamese Mountains
-11909;9961;impassable;-1;-1;-1;-1;-1;;Annamese Mountains
+
+
+2084;5087;impassable;-1;-1;-1;-1;-1;;raj afg china
+7519;5087;impassable;-1;-1;-1;-1;-1;;raj afg china
+
+12884;10802;impassable;-1;-1;-1;-1;-1;;raj china
+12884;1961;impassable;-1;-1;-1;-1;-1;;raj china
+12892;12807;impassable;-1;-1;-1;-1;-1;;raj china
+12892;4900;impassable;-1;-1;-1;-1;-1;;raj china
+4435;4900;impassable;-1;-1;-1;-1;-1;;raj china
+4435;2014;impassable;-1;-1;-1;-1;-1;;raj china
+8010;2014;impassable;-1;-1;-1;-1;-1;;raj china
+12860;2014;impassable;-1;-1;-1;-1;-1;;raj china
+12860;2098;impassable;-1;-1;-1;-1;-1;;raj china
+12730;2098;impassable;-1;-1;-1;-1;-1;;raj china
+12898;4996;impassable;-1;-1;-1;-1;-1;;raj china
+12898;10863;impassable;-1;-1;-1;-1;-1;;raj china
+10863;7976;impassable;-1;-1;-1;-1;-1;;raj china
+4210;7976;impassable;-1;-1;-1;-1;-1;;raj china
+
+
 4269;7385;sea;8751;-1;-1;-1;-1;;Cebu-Samar
 10802;5042;impassable;-1;-1;-1;-1;-1;;Kunlun Mountains
 10802;7273;impassable;-1;-1;-1;-1;-1;;Kunlun Mountains
@@ -384,19 +381,7 @@ From;To;Type;Through;start_x;start_y;stop_x;stop_y;adjacency_rule_name;Comment
 10602;6742;impassable;-1;-1;-1;-1;-1;;Rocky Mountains
 10602;3781;impassable;-1;-1;-1;-1;-1;;Rocky Mountains
 7845;3781;impassable;-1;-1;-1;-1;-1;;Rocky Mountains
-10090;4454;impassable;-1;-1;-1;-1;-1;;Arakan Mountains
-10090;3999;impassable;-1;-1;-1;-1;-1;;Arakan Mountains
-4454;1581;impassable;-1;-1;-1;-1;-1;;Arakan Mountains
-4087;1581;impassable;-1;-1;-1;-1;-1;;Arakan Mountains
-997;3999;impassable;-1;-1;-1;-1;-1;;Arakan Mountains
-997;11966;impassable;-1;-1;-1;-1;-1;;Arakan Mountains
-4087;1553;impassable;-1;-1;-1;-1;-1;;Arakan Mountains
-4087;1525;impassable;-1;-1;-1;-1;-1;;Arakan Mountains
-4087;12322;impassable;-1;-1;-1;-1;-1;;Arakan Mountains
-7122;11966;impassable;-1;-1;-1;-1;-1;;Arakan Mountains
-7122;10033;impassable;-1;-1;-1;-1;-1;;Arakan Mountains
-4147;10033;impassable;-1;-1;-1;-1;-1;;Arakan Mountains
-7190;4147;impassable;-1;-1;-1;-1;-1;;Arakan Mountains
+
 5087;10821;impassable;-1;-1;-1;-1;-1;;Karakoram
 5042;10821;impassable;-1;-1;-1;-1;-1;;Karakoram
 5042;7273;impassable;-1;-1;-1;-1;-1;;Karakoram

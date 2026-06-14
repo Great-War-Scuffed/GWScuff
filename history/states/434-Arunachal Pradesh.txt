@@ -11,8 +11,8 @@ state={
 		victory_points = {
 			12730 1
 		}
-		owner = QIN
-		add_core_of = TIB
+		owner = RAJ
+		add_core_of = RAJ
 		add_claim_by = QIN
 		buildings = {
 			infrastructure = 1

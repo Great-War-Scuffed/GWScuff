@@ -1158,7 +1158,7 @@ focus = {
 }
 focus = {
 	id = AUH_our_own_vehicles
-	icon = GFX_focus_SWE_lynx_armored_car
+	icon = GFX_focus_GER_support_the_proletarian_uprising
 	cost = 5
 	x = 0
 	y = 2

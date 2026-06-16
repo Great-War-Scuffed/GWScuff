@@ -2,7 +2,7 @@ scripted_diplomatic_actions = {
 	cw_embargo = {
 		icon = 25
 		allowed = {		#The country making the diplomatic request
-			always = yes
+			is_ai = NO
 		}
 		visible = {		#The target country
 			NOT = { has_dlc = "By Blood Alone" }
@@ -97,7 +97,7 @@ scripted_diplomatic_actions = {
 	cw_cancel_embargo = {
 		icon = 25
 		allowed = {		#The country making the diplomatic request
-			always = yes
+			is_ai = NO
 		}
 		visible = {		#The target country
 			is_in_array = {

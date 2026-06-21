@@ -82,9 +82,6 @@ recruit_character = BUL_kiril_preslavski
 		early_artillery = 1
 		basic_field_gun = 1
 		
-		#doctrine
-		ww1_landdoctrine = 1
-		
 		#navy
 		transport = 1
 		
@@ -190,8 +187,6 @@ if = {
 		transport = 1
 	}
 
-	set_naval_oob = "BUL_1910_naval_legacy"
-
 	# Torpedo Gunboats #
 	create_equipment_variant = {
 		name = "Nadezhda Class"
@@ -213,10 +208,9 @@ if = {
 
 	set_technology = {
 		basic_naval_mines = 1
-		early_ship_hull_light = 1
-        victorian_ship_hull_light = 1
 		early_ship_hull_cruiser = 1
-        protected_ship_hull_cruiser = 1
+        victorian_ship_hull_cruiser = 1
+		early_ship_hull_heavy = 1
 		basic_battery = 1
 		basic_light_battery = 1
 		basic_torpedo = 1

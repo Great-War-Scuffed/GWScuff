@@ -716,13 +716,13 @@ ideas = {
 			picture = generic_air_bonus
 
 			equipment_bonus = {
-				small_plane_airframe = {
+				fighter_equipment = {
 					build_cost_ic = -0.1 instant = yes
 				}
-				medium_plane_airframe = {
+				CAS_equipment = {
 					build_cost_ic = -0.05 instant = yes
 				}
-				large_plane_airframe = {
+				tac_bomber_equipment = {
 					build_cost_ic = -0.05 instant = yes
 				}
 			}
@@ -748,10 +748,7 @@ ideas = {
 			picture = generic_navy_bonus
 
 			equipment_bonus = {
-				small_plane_naval_bomber_airframe = {
-					build_cost_ic = -0.05 instant = yes
-				}
-				cv_small_plane_naval_bomber_airframe = {
+				nav_bomber_equipment = {
 					build_cost_ic = -0.05 instant = yes
 				}
 			}
@@ -3116,53 +3113,6 @@ ideas = {
 
 			modifier = {
 				fascism_drift = -0.05
-			}
-		}
-
-		race_for_the_bomb = {
-			
-			
-			allowed = {
-				always = no
-			}
-
-			allowed_civil_war = {
-				always = yes
-			}
-			
-			removal_cost = -1
-
-			picture = generic_research_bonus
-	
-			modifier = {
-				production_speed_nuclear_reactor_factor = 0.2
-			}
-			research_bonus = {
-				nuclear = 0.15
-			}
-		}
-
-		race_for_the_bomb_outclassed = {
-			
-			
-			allowed = {
-				always = no
-			}
-
-			allowed_civil_war = {
-				always = yes
-			}
-			
-			removal_cost = -1
-
-			picture = generic_research_bonus
-	
-			modifier = {
-				production_speed_nuclear_reactor_factor = 0.25
-				political_power_factor = -0.5
-			}
-			research_bonus = {
-				nuclear = 0.15
 			}
 		}
 		

@@ -182,6 +182,23 @@ on_actions = {
 			}
 		}
 	}
+	on_startup = {
+		effect = {
+			every_country = {
+				limit = {
+					NOT = {
+						has_tech = rangers_tech
+
+					}
+					
+				}
+				set_technology = {
+					rangers_tech = 1
+					popup = no
+				}
+			}
+		}
+	}
 	#on_startup = {
 	#	effect = {
 	#		every_country = {

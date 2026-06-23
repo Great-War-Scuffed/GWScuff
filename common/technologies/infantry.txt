@@ -1321,6 +1321,7 @@ technologies = {
 	tech_mountaineers = {
 		enable_subunits = {
 			mountaineers
+			ranger_battalion
 		}
 		on_research_complete_limit = {
 			NOT = {

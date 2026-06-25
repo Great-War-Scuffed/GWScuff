@@ -213,19 +213,6 @@ ideas = {
 				consumer_goods_factor = 0.3
 			}
 		}
-		idea_spanish_flu = {
-			picture = epidemic
-			removal_cost = -1
-			
-			modifier = {
-				stability_weekly = -0.002
-				war_support_weekly = -0.002
-				monthly_population = -0.9
-				conscription_factor = -0.20
-				attrition = 0.35
-				supply_consumption_factor = 0.35
-			}
-		}
 		idea_epidemic = {
 			picture = epidemic
 			removal_cost = -1

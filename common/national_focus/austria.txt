@@ -2164,6 +2164,9 @@ focus = {
 	x = 33
 	y = 0
 	completion_reward = { }
+	available = {
+		always = NO
+	}
 	mutually_exclusive = {
 		focus = AUH_wahle_deinen_kaiser
 	}

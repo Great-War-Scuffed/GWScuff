@@ -60,16 +60,12 @@ if = {
 	}
 	set_technology = {
 		basic_naval_mines = 1	
+        torpedo_boat_ship_hull_light = 1
+		gunboat_ship_hull_light = 1
 		early_ship_hull_light = 1
-        victorian_ship_hull_light = 1
-		basic_ship_hull_light = 1
-		early_ship_hull_submarine = 1
-		basic_ship_hull_submarine = 1
 		early_ship_hull_cruiser = 1
-        protected_ship_hull_cruiser = 1
-		basic_ship_hull_cruiser = 1
+        victorian_ship_hull_cruiser = 1
 		early_ship_hull_heavy = 1
-		basic_ship_hull_heavy = 1
 		basic_battery = 1
 		basic_light_battery = 1
 		basic_medium_battery = 1
@@ -81,7 +77,8 @@ if = {
 		basic_cruiser_armor_scheme = 1
 		basic_heavy_armor_scheme = 1
 		mtg_transport = 1
-		pre_dreadnoughts = 1
+		pre_dreadnought_ship_hull_heavy = 1
+		ironclad_ship_hull_heavy = 1
 	}
 	else = {
 		set_technology = {
@@ -91,7 +88,6 @@ if = {
 			basic_destroyer = 1
 			early_light_cruiser = 1
 			early_heavy_cruiser = 1
-			obsolete_battleship = 1
 			early_battleship = 1
 			basic_battleship = 1
 			early_battlecruiser = 1
@@ -115,7 +111,6 @@ set_popularities = {
 }
 
 add_ideas = {
-	GER_customs_union
 	BRE_eight_class_franchise
 }
 

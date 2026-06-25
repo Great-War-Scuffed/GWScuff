@@ -34,7 +34,6 @@ technologies = {
 			
 			modifier = {
 				factor = 4
-				is_naval_power = yes
 			}
 		}
 		
@@ -75,7 +74,6 @@ technologies = {
 			
 			modifier = {
 				factor = 4
-				is_naval_power = yes
 			}
 		}
 		
@@ -120,7 +118,6 @@ technologies = {
 			
 			modifier = {
 				factor = 4
-				is_naval_power = yes
 			}
 		}
 		
@@ -165,7 +162,6 @@ technologies = {
 			
 			modifier = {
 				factor = 4
-				is_naval_power = yes
 			}
 
 			modifier = {
@@ -208,7 +204,6 @@ technologies = {
 			factor = 1
 			modifier = {
 				factor = 4
-				is_naval_power = yes
 			}
 			modifier = {
 				factor = 0
@@ -245,7 +240,6 @@ technologies = {
 			factor = 1
 			modifier = {
 				factor = 4
-				is_naval_power = yes
 			}
 		}
 		
@@ -277,7 +271,6 @@ technologies = {
 
 			modifier = {
 				factor = 2
-				is_naval_power = yes
 			}
 		}
 		
@@ -457,7 +450,6 @@ technologies = {
 			
 			modifier = {
 				factor = 4
-				is_naval_power = yes
 			}
 		}
 		
@@ -511,7 +503,6 @@ technologies = {
 			
 			modifier = {
 				factor = 4
-				is_naval_power = yes
 			}
 		}
 		
@@ -553,7 +544,6 @@ technologies = {
 			
 			modifier = {
 				factor = 4
-				is_naval_power = yes
 			}
 		}
 		
@@ -601,7 +591,6 @@ technologies = {
 			
 			modifier = {
 				factor = 4
-				is_naval_power = yes
 			}
 		}
 		
@@ -642,7 +631,6 @@ technologies = {
 			
 			modifier = {
 				factor = 2
-				is_naval_power = yes
 			}
 		}
 		
@@ -677,7 +665,6 @@ technologies = {
 			
 			modifier = {
 				factor = 2
-				is_naval_power = yes
 			}
 		}
 		
@@ -715,7 +702,6 @@ technologies = {
 			base = 1
 			modifier = {
 				factor = 4
-				is_naval_power = yes
 			}
 			modifier = {
 				is_major = no
@@ -764,7 +750,6 @@ technologies = {
 			base = 1
 			modifier = {
 				factor = 4
-				is_naval_power = yes
 			}
 			modifier = {
 				is_major = no
@@ -808,7 +793,6 @@ technologies = {
 			base = 1
 			modifier = {
 				factor = 4
-				is_naval_power = yes
 			}
 			modifier = {
 				is_major = no
@@ -862,7 +846,6 @@ technologies = {
 			base = 1
 			modifier = {
 				factor = 4
-				is_naval_power = yes
 			}
 		}
 		
@@ -912,7 +895,6 @@ technologies = {
 			
 			modifier = {
 				factor = 4
-				is_naval_power = yes
 			}
 
 			modifier = {
@@ -961,7 +943,6 @@ technologies = {
 			
 			modifier = {
 				factor = 4
-				is_naval_power = yes
 			}
 
 			modifier = {
@@ -1018,7 +999,6 @@ technologies = {
 			
 			modifier = {
 				factor = 4
-				is_naval_power = yes
 			}
 			modifier = {
 				is_major = yes
@@ -1068,7 +1048,6 @@ technologies = {
 			
 			modifier = {
 				factor = 4
-				is_naval_power = yes
 			}
 			modifier = {
 				is_major = yes
@@ -1126,7 +1105,6 @@ technologies = {
 			
 			modifier = {
 				factor = 4
-				is_naval_power = yes
 			}
 			modifier = {
 				is_major = yes
@@ -1176,7 +1154,6 @@ technologies = {
 			
 			modifier = {
 				factor = 4
-				is_naval_power = yes
 			}
 			modifier = {
 				is_major = yes
@@ -1252,7 +1229,6 @@ technologies = {
 
 			modifier = {
 				factor = 4
-				is_naval_power = yes
 			}
 			modifier = {
 				factor = 2
@@ -1294,7 +1270,6 @@ technologies = {
 			
 			modifier = {
 				factor = 4
-				is_naval_power = yes
 			}
 			modifier = {
 				is_major = yes
@@ -1349,7 +1324,6 @@ technologies = {
 			
 			modifier = {
 				factor = 2
-				is_naval_power = yes
 			}
 			modifier = {
 				is_major = no
@@ -1396,7 +1370,6 @@ technologies = {
 			
 			modifier = {
 				factor = 4
-				is_naval_power = yes
 			}
 			modifier = {
 				has_tech = improved_ship_hull_heavy 
@@ -1509,7 +1482,6 @@ technologies = {
 			
 			modifier = {
 				factor = 4
-				is_naval_power = yes
 			}
 		}
 		
@@ -1553,7 +1525,6 @@ technologies = {
 			
 			modifier = {
 				factor = 4
-				is_naval_power = yes
 			}
 		}
 		

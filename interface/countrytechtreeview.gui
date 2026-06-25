@@ -312,14 +312,21 @@ guiTypes = {
 
 			gridboxtype = {
 				name = "marines_tree"
-				position = { x = 140 y = 620 }
+				position = { x = 140 y = 590 }
 				slotsize = { width = 70 height = 70 }
 				format = "LEFT"
 			}
 
 			gridboxtype = {
 				name = "tech_mountaineers_tree"
-				position = { x = 140 y = 620 }
+				position = { x = 140 y = 540 }
+				slotsize = { width = 70 height = 70 }
+				format = "LEFT"
+			}
+
+			gridboxtype = {
+				name = "rangers_tech_tree"
+				position = { x = 140 y = 350 }
 				slotsize = { width = 70 height = 70 }
 				format = "LEFT"
 			}

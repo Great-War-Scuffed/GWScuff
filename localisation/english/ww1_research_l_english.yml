@@ -52,7 +52,6 @@
  cat_field_gun: "Field Gun"
  cat_howitzer: "Howitzer"
  early_artillery: "Early Artillery"
- early_artillery_desc: "$artillery_equipment_desc$"
  prewar_field_gun:0 "Prewar Field Gun"
  prewar_field_gun_desc:0 ""
  improved_field_gun:0 "Improved Field Gun"

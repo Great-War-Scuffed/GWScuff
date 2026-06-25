@@ -1049,9 +1049,6 @@ dispersed_operations = {
             anti_air = {
                 air_attack = 0.20
             }
-            category_self_propelled_anti_air_regimental_support = {
-                air_attack = 0.20
-            }
         }
 		
         scattered_formations = {

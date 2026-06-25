@@ -234,10 +234,6 @@ mobile_infantry = {
                 max_organisation = 10
                 maximum_speed = 0.2
             }
-			mot_fire_support = {
-                max_organisation = 5				
-				soft_attack = 0.1
-			}
         }
 
     }
@@ -432,20 +428,23 @@ assault_infantry = {
     # EFFECTS
 
     #OTHER BASE REWARDS
-    artillery = {   
+    howitzer = {   
+        soft_attack = 0.1
+    }
+    field_gun = {   
         soft_attack = 0.1
     }
 
     rewards = {
         low_echelon_fire_support = {
         #1
-            artillery = {
+            howitzer = {
                 battalion_mult = {
                     category = category_light_infantry
                     soft_attack = 0.2
                 }
             }
-            field_guns = {
+            field_gun = {
 				soft_attack = 0.2
             }
         }
@@ -630,7 +629,10 @@ mounted_infantry = {
             }
         }
         limbered_combat_support = {
-            artillery_brigade = {
+            field_gun = {
+                maximum_speed = 0.5
+            }
+            howitzer = {
                 maximum_speed = 0.5
             }
             anti_tank_brigade = {
@@ -776,7 +778,7 @@ commandos = {
 			field_gun_brigade = {
                 breakthrough = 0.15
 			}
-			mot_fire_support = {
+			howitzer = {
                 breakthrough = 0.15
 			}
 
@@ -896,15 +898,6 @@ peoples_war = {
             }
             has_government = communism
         }
-        else = {
-            OR = {
-                has_government = communism
-                AND = {
-                    original_tag = INS
-                    has_completed_focus = INS_underground_revolution
-                }
-            }
-        }
     }
     visible = {
         has_dlc = "No Compromise, No Surrender"
@@ -955,7 +948,7 @@ peoples_war = {
             militia = {
                 equipment_capture_factor = 0.01
             }
-			field_guns = {
+			field_gun = {
 				soft_attack = 0.15				
 			}
         }
@@ -1037,7 +1030,7 @@ great_war_infantry = {
             }
         }
         centralized_artillery_control = {
-            artillery = {
+            howitzer = {
                 soft_attack = 0.1
                 battalion_mult = {
                     category = category_light_infantry

@@ -4,7 +4,7 @@ generic_bonus_1 = {
 	category = air_equipment category = industry 
 	category = cat_artillery category = naval_equipment	
 	category = motorized_equipment   category =	armor 
-	category = electronics	category = nuclear 
+	category = electronics
 	category = land_doctrine category = infantry_weapons 
 	category = air_doctrine category = naval_doctrine   
 	category = tp_tech   category = support_tech 
@@ -17,7 +17,7 @@ generic_bonus_3 = {
 	category = air_equipment category = industry 
 	category = cat_artillery category = naval_equipment	
 	category = motorized_equipment   category =	armor 
-	category = electronics	category = nuclear 
+	category = electronics
 	category = land_doctrine category = infantry_weapons 
 	category = air_doctrine category = naval_doctrine   
 	category = tp_tech   category = support_tech 
@@ -29,7 +29,7 @@ generic_bonus_2y = {
 	category = air_equipment category = industry 
 	category = cat_artillery category = naval_equipment	
 	category = motorized_equipment   category =	armor 
-	category = electronics	category = nuclear 
+	category = electronics
 	category = land_doctrine category = infantry_weapons 
 	category = air_doctrine category = naval_doctrine   
 	category = tp_tech   category = support_tech 
@@ -42,7 +42,7 @@ generic_bonus_999 = {
 	category = air_equipment category = industry 
 	category = cat_artillery category = naval_equipment	
 	category = motorized_equipment   category =	armor 
-	category = electronics	category = nuclear 
+	category = electronics
 	category = land_doctrine category = infantry_weapons 
 	category = air_doctrine category = naval_doctrine   
 	category = tp_tech   category = support_tech 

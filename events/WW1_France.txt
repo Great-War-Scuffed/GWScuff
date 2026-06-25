@@ -6637,19 +6637,6 @@ country_event = {
 				}
 				if = {
 					limit = {
-						PREV = {
-							has_country_flag = spanish_flu_spreads
-							has_idea = idea_spanish_flu
-						}
-					}
-					set_country_flag = spanish_flu_spreads
-					add_timed_idea = {
-						idea = idea_spanish_flu
-						days = 720
-					}
-				}
-				if = {
-					limit = {
 						PREV = { has_idea = FRA_privatized_banks }
 					}
 					add_ideas = FRA_privatized_banks

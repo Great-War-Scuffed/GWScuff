@@ -1246,10 +1246,6 @@ sp_naval_aip_engine = {
 		enable_equipment_modules = {
 			ship_engine_sub_aip_1
 		}
-
-		enable_subunits = { 
-			
-		}
 	}
 
 	generic_prototype_rewards = {

@@ -19,8 +19,6 @@
  HUNGARY_UNITED_RULE_TOOLTIP: "§Y[HUN.GetName]§! не может освободить свои §Yконституционные земли§!!"
  COLONIESED_RULE_TOOLTIP: "Государство §Y[Root.GetName]§! колонизировало §Y[FROM.GetAdjective]ую нацию§! и не может освобождать колонии."
  Scramble_for_Africa: "Борьба за Африку"
- idea_spanish_flu_censor: "Пандемия гриппа"
- idea_spanish_flu: "Пандемия гриппа"
  idea_epidemic: "Эпидемия"
  idea_epidemic_desc: "Тяжелая антисанитария спровоцировала эпидемию в армии."
  idea_famine: "Голод"

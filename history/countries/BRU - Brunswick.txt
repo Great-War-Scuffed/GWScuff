@@ -99,10 +99,6 @@ set_popularities = {
 	neutrality = 40
 }
 
-add_ideas = {
-	GER_customs_union
-}
-
 add_opinion_modifier = {
 	target = GER
 	modifier = customs_union

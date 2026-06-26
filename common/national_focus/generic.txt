@@ -162,14 +162,6 @@ focus_tree = {
 		}
 		modifier = {
 			add = 10
-			tag = FIN
-		}
-		modifier = {
-			add = 10
-			tag = DEN
-		}
-		modifier = {
-			add = 10
 			tag = CRE
 		}
 		modifier = {
@@ -186,7 +178,27 @@ focus_tree = {
 		}
 		modifier = {
 			add = 10
-			tag = SIA
+			tag = MAF 
+		}
+		modifier = {
+			add = 10
+			tag = TOG 
+		}
+		modifier = {
+			add = 10
+			tag = CMR 
+		}
+		modifier = {
+			add = 10
+			tag = TZN 
+		}
+		modifier = {
+			add = 10
+			tag = NMB 
+		}
+		modifier = {
+			add = 10
+			tag = OST 
 		}
 	}
 	default = no

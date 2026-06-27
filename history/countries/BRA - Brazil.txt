@@ -192,14 +192,11 @@ recruit_character = BRA_getulio_vargas
 	}
 }
 
-add_ideas = {	
-	BRA_idea_coronelism
-	BRA_idea_coffee_with_milk
-	BRA_idea_state_armies
-	BRA_idea_outdated_army
-	BRA_idea_amazon_rubber_boom
-	BRA_idea_high_immigration
-	CHL_Southamerican_dreadnought_race 
+add_ideas = { 
+	bra_antropofagia
+	bra_bandeirantes
+	bra_1930 
+	bra_rural_elite
 }
 
 if = {

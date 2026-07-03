@@ -133,7 +133,6 @@ mountaineers_2 = {
 	effect = {
 		unlock_subunit = rangers_support
 	}
-	mountaineers_special_forces_contribution_factor = -0.25
 	rangers_support = {
 		mountain = {
 			attack = 0.10
@@ -293,7 +292,7 @@ marines_1 = {
 			
 			pioneer_support = {
 				battalion_mult = {
-					category = category_amphibious_tanks
+					category = category_marines
 					armor = 0.15
 					breakthrough = 0.15
 				}
@@ -361,7 +360,6 @@ marines_2 = {
 			naval_invasion_prep_days = -5
 			naval_invasion_division_cap = 2
 			naval_invasion_plan_cap = 1
-			marines_special_forces_contribution_factor = -0.25
 		}
 		reward_2 = {
 			mastery = 60

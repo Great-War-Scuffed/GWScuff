@@ -17,6 +17,7 @@ faction_template_entente = {
 	default_rules = {
 		change_leader_rule_never
 		government_in_exile_allowed
+		joining_rule_all_the_world
 	}
 	
 	icon = GFX_faction_logo_entente

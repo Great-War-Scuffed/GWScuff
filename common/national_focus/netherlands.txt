@@ -80,10 +80,7 @@ focus_tree = {
 		x = 27
 		y = 0
 		completion_reward = {
-			random_owned_state = {
-				limit = {
-					is_core_of = ROOT
-				}
+			7 = {
 				add_extra_state_shared_building_slots = 1
 				add_building_construction = {
 					type = industrial_complex
@@ -96,10 +93,7 @@ focus_tree = {
 					instant_build = yes
 				}
 			}
-			random_owned_state = {
-				limit = {
-					is_core_of = ROOT
-				}
+			36 = {
 				add_extra_state_shared_building_slots = 2
 				add_building_construction = {
 					type = industrial_complex
@@ -1223,9 +1217,9 @@ focus_tree = {
 		}
 		x = 25
 		y = 1
-		available = {
-			has_war_support > 0.15
-		}
+		#available = {
+		#	has_war_support > 0.15
+		#}
 		completion_reward = {
 			random_owned_state = {
 				limit = {

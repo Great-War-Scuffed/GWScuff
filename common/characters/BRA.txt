@@ -1,4 +1,30 @@
 characters={
+	BRA_getulio_vargas={
+		name="BRA_getulio_vargas"
+		portraits={
+			civilian={
+				large=GFX_portrait_BRA_getulio_vargas
+			}
+		}
+		country_leader={
+			ideology=personalistic_dictatorship
+			expire="1965.1.1"
+			id=-1
+			traits = {
+				vfb_trait_vargas_1
+				vfb_trait_vargas_2
+				r56_trait_opposed_to_communism
+			}
+		}
+	}
+		BRA_dom_pedro_iii={
+		name="BRA_dom_pedro_iii"
+		portraits={
+			civilian={
+				large="gfx/leaders/BRA/BRA_pedro_hernique_de_orleans_e_braganza.png"
+			}
+		}
+	}
 	BRA_ruy_barbosa={
 		name="BRA_ruy_barbosa"
 		advisor={
@@ -429,27 +455,11 @@ characters={
 			ideology=classical_liberalism
 		}
 	}
-	BRA_getulio_vargas={
-		name="BRA_getulio_vargas"
-		portraits={
-			civilian={
-				large=GFX_portrait_BRA_getulio_vargas
-			}
-		}
-	}
 	BRA_plinio_salgado={
 		name="BRA_plinio_salgado"
 		portraits={
 			civilian={
 				large=GFX_portrait_BRA_plinio_salgado
-			}
-		}
-	}
-	BRA_dom_pedro_iii={
-		name="BRA_dom_pedro_iii"
-		portraits={
-			civilian={
-				large="gfx/leaders/BRA/BRA_pedro_hernique_de_orleans_e_braganza.png"
 			}
 		}
 	}
@@ -459,6 +469,9 @@ characters={
 			civilian={
 				large="gfx/leaders/BRA/BRA_luis.png"
 			}
+		}
+		country_leader={
+			ideology=semi_constitutional_monarchy
 		}
 	}
 	BRA_dom_luis_i={

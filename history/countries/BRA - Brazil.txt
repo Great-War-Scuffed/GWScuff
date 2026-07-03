@@ -3,8 +3,10 @@ oob = "BRA_1910"
 
 set_research_slots = 3
 set_stability = 0.51
-set_war_support = 0.19
+set_war_support = 0.30
 set_convoys = 42
+
+recruit_character = BRA_getulio_vargas
 
 recruit_character = BRA_nilo_pecanha
 recruit_character = BRA_jose_oiticica
@@ -55,10 +57,7 @@ recruit_character = BRA_malvina_tavares
 
 recruit_character = BRA_prince_luis
 recruit_character = BRA_dom_luis_i
-recruit_character = BRA_dom_pedro_iii
-
-recruit_character = BRA_getulio_vargas
-
+recruit_character = BRA_dom
 
 1910.1.1 = {
 	set_technology = {
@@ -95,10 +94,10 @@ recruit_character = BRA_getulio_vargas
 		elections_allowed = yes 
 	}	
 	set_popularities = {
-		fascism = 3
+		fascism = 5
 		communism = 5
-		democratic = 61
-		neutrality = 31
+		democratic = 60
+		neutrality = 30
 	}
 	if = {
 		limit = { has_start_date < 1914.1.1 }
@@ -109,13 +108,11 @@ recruit_character = BRA_getulio_vargas
 1914.1.1 = {
 
 	set_politics = {
-		ruling_party = democratic
-		last_election = "1910.11.15" 
-		election_frequency = 48 
-		elections_allowed = yes 
-		long_name = BRA_conservative_republican_party_long
-		name = BRA_conservative_republican_party
-	}	
+	ruling_party = neutrality
+	last_election = "1910.11.15"
+	election_frequency = 48
+	elections_allowed = no
+}
 
 	retire_character = BRA_jose_maria_da_silva_paranhos_junior
 	promote_character = {

@@ -117,7 +117,7 @@ focus_tree = {
 		mutually_exclusive = { focus = bra_populism }
 		mutually_exclusive = { focus = bra_federalism }
 		available = {
-			has_government = neutrality
+			#has_government = neutrality
 			has_idea = bra_instabilidade
 		}
 		x = 0
@@ -140,9 +140,16 @@ focus_tree = {
 		completion_reward = {
 			add_named_threat = { threat = 1 name = bra_monarquia_focus_t }
 			remove_ideas = bra_instabilidade
-			hidden_effect = {
-				country_event = { days = 1 id = bra.5 }
-			}
+			#hidden_effect = {
+			#	country_event = { days = 1 id = bra.5 }
+			#}
+		hidden_effect = { set_province_name = { id = 5151 name = "Porto Imperial"} }
+		set_politics = { ruling_party = neutrality elections_allowed = no }
+		promote_character = {
+			character = BRA_prince_luis
+			Ideology = semi_constitutional_monarchy
+		}
+
 			custom_effect_tooltip = bra_monarquia_tooltip
 		}
 	}

@@ -15,6 +15,7 @@ faction_template_central_powers = {
 
 	default_rules = {
 		change_leader_rule_never
+		joining_rule_all_the_world
 	}
 	
 	icon = GFX_faction_logo_central_powers

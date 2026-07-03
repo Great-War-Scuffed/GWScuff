@@ -704,9 +704,9 @@ characters={
 			allowed  = {
 				original_tag  = ROM
 			}
-			ledger  = navy 
+			ledger  = army
 			traits  = {
-				navy_anti_submarine_1 
+				army_cavalry_2 
 			}
 			ai_will_do  = {
 				factor  = 1.000

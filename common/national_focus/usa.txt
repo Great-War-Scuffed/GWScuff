@@ -861,10 +861,17 @@ focus_tree = {
 		completion_reward = { 
 			add_ideas = civilian_economy 
 			custom_effect_tooltip = escape_line
-			swap_ideas = {
-				add_idea = USA_idea_neglected_military_budget2
-				remove_idea = USA_idea_neglected_military_budget
-			}
+			if = {
+				limit = {
+					OR = {
+						has_idea = USA_idea_neglected_military_budget
+					}
+				}
+				swap_ideas = {
+					add_idea = USA_idea_neglected_military_budget2
+					remove_idea = USA_idea_neglected_military_budget
+				}
+		    }
 			country_lock_all_division_template = no
 			
 		}

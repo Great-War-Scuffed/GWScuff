@@ -4041,10 +4041,10 @@ focus_tree = {
 		available = {
 			is_subject = no
 			has_war = no
-			has_country_leader = {
-				character = RUS_nikolai_ii
-				ruling_only = yes
-			}
+			#has_country_leader = {
+			#	character = RUS_nikolai_ii
+			#	ruling_only = yes
+			#}
 		}
 		bypass = {
 			ENG = {
@@ -4132,10 +4132,10 @@ focus_tree = {
 		relative_position_id = RUS_the_only_empire_in_the_black_sea
 		available = {
 			is_subject = no
-			has_country_leader = {
-				character = RUS_nikolai_ii
-				ruling_only = yes
-			}
+			#has_country_leader = {
+			#	character = RUS_nikolai_ii
+			#	ruling_only = yes
+			#}
 			NOT = {
 				#has_country_flag = great_war_loser
 			}
@@ -7335,10 +7335,10 @@ focus_tree = {
 		relative_position_id = RUS_orthodoxy_autocracy_nationality
 		available = {
 			is_subject = no
-			has_country_leader = {
-				character = RUS_nikolai_ii
-				ruling_only = yes
-			}
+			#has_country_leader = {
+			#	character = RUS_nikolai_ii
+			#	ruling_only = yes
+			#}
 			NOT = {
 				has_idea = idea_armistice
 				has_idea = idea_army_restrictions

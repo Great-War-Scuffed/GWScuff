@@ -1735,7 +1735,7 @@ focus_tree = {
 	focus = {
 		id = ENG_No_Province_Left_Behind
 		icon = GFX_focus_ENG_british_railways
-		cost = 15
+		cost = 10
 		prerequisite = {
 			focus = ENG_The_Best
 		}

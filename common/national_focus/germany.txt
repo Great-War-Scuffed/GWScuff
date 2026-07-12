@@ -2837,10 +2837,11 @@ focus_tree = {
 		cost = 10
 		prerequisite = {
 			focus = GER_moroccan_crisis
-			focus = GER_focus_on_airships
+			focus = GER_turn_to_asia
 		}
-		x = 16
-		y = 4
+		x = 1
+		y = 1
+		relative_position_id = GER_moroccan_crisis
 		completion_reward = {
 			add_tech_bonus = {
 				name = ENG_RAC
@@ -2869,7 +2870,6 @@ focus_tree = {
 						technology = basic_light_tank
 					}
 				}
-			} 
 			add_breakthrough_progress = {
 				specialization = specialization_land
 				value = 1

@@ -30,7 +30,6 @@ country_event = {
 							state = 749
 							state = 618
 							state = 894
-							state = 1067
 						}	
 					}
 					transfer_state_to = PREV
@@ -42,20 +41,15 @@ country_event = {
 				}
 			}
 			SCC = {
-				add_state_core = 605
-				add_state_core = 1064
-				add_state_core = 1066
 				every_state = {
 					limit = {
 						is_owned_by = QIN
 						OR = {
 							state = 605
-							state = 1064
-							state = 1065
-							state = 1066
 						}
 					}
 					transfer_state_to = PREV
+					add_core_of = PREV
 				}
 				if = {
 					limit = {
@@ -67,7 +61,7 @@ country_event = {
 							infantry = { x = 0 y = 0 }
 							infantry = { x = 0 y = 1 }
 							infantry = { x = 0 y = 2 }
-							field_gun_brigade = { x = 0 y = 3 }
+							artillery_brigade = { x = 0 y = 3 }
 							cavalry = { x = 1 y = 0 }
 							cavalry = { x = 1 y = 1 }
 						}
@@ -94,7 +88,7 @@ country_event = {
 							infantry = { x = 0 y = 0 }
 							infantry = { x = 0 y = 1 }
 							infantry = { x = 0 y = 2 }
-							field_gun_brigade = { x = 0 y = 3 }
+							artillery_brigade = { x = 0 y = 3 }
 							cavalry = { x = 1 y = 0 }
 							cavalry = { x = 1 y = 1 }
 						}
@@ -133,7 +127,7 @@ country_event = {
 							infantry = { x = 0 y = 0 }
 							infantry = { x = 0 y = 1 }
 							infantry = { x = 0 y = 2 }
-							field_gun_brigade = { x = 0 y = 3 }
+							artillery_brigade = { x = 0 y = 3 }
 							cavalry = { x = 1 y = 0 }
 							cavalry = { x = 1 y = 1 }
 						}
@@ -176,7 +170,7 @@ country_event = {
 							infantry = { x = 0 y = 0 }
 							infantry = { x = 0 y = 1 }
 							infantry = { x = 0 y = 2 }
-							field_gun_brigade = { x = 0 y = 3 }
+							artillery_brigade = { x = 0 y = 3 }
 							cavalry = { x = 1 y = 0 }
 							cavalry = { x = 1 y = 1 }
 						}
@@ -195,9 +189,6 @@ country_event = {
 							state = 606
 							state = 595
 							state = 596
-							state = 1046
-							state = 1062
-							state = 1016
 						}
 					}
 					transfer_state_to = PREV
@@ -205,8 +196,6 @@ country_event = {
 				}
 				QIN = { puppet = PREV }
 				abandon_puppet_tag = yes
-				set_province_controller = 7014
-				set_province_controller = 12076
 				load_oob = PRC_1911_uprising2_shanghai
 				# set_cosmetic_tag = QIN_provinces_JNC
 				every_character = {
@@ -225,7 +214,7 @@ country_event = {
 							infantry = { x = 0 y = 0 }
 							infantry = { x = 0 y = 1 }
 							infantry = { x = 0 y = 2 }
-							field_gun_brigade = { x = 0 y = 3 }
+							artillery_brigade = { x = 0 y = 3 }
 							cavalry = { x = 1 y = 0 }
 							cavalry = { x = 1 y = 1 }
 						}
@@ -298,7 +287,6 @@ country_event = {
 							state = 617
 							state = 715
 							state = 610
-							state = 1045
 						}
 					}
 					transfer_state_to = PREV
@@ -375,23 +363,18 @@ country_event = {
 				}
 			}
 			SCC = {
-				add_state_core = 605
-				add_state_core = 1064
-				add_state_core = 1066
 				every_state = {
 					limit = {
 						is_owned_by = QIN
 						OR = {
+							state = 605
 							state = 322
 							state = 434
 							state = 985
-							state = 605
-							state = 1064
-							state = 1065
-							state = 1066
 						}
 					}
 					transfer_state_to = PREV
+					add_core_of = PREV
 				}
 				if = {
 					limit = {
@@ -403,7 +386,7 @@ country_event = {
 							infantry = { x = 0 y = 0 }
 							infantry = { x = 0 y = 1 }
 							infantry = { x = 0 y = 2 }
-							field_gun_brigade = { x = 0 y = 3 }
+							artillery_brigade = { x = 0 y = 3 }
 							cavalry = { x = 1 y = 0 }
 							cavalry = { x = 1 y = 1 }
 						}
@@ -445,7 +428,7 @@ country_event = {
 							infantry = { x = 0 y = 0 }
 							infantry = { x = 0 y = 1 }
 							infantry = { x = 0 y = 2 }
-							field_gun_brigade = { x = 0 y = 3 }
+							artillery_brigade = { x = 0 y = 3 }
 							cavalry = { x = 1 y = 0 }
 							cavalry = { x = 1 y = 1 }
 						}
@@ -481,7 +464,7 @@ country_event = {
 							infantry = { x = 0 y = 0 }
 							infantry = { x = 0 y = 1 }
 							infantry = { x = 0 y = 2 }
-							field_gun_brigade = { x = 0 y = 3 }
+							artillery_brigade = { x = 0 y = 3 }
 							cavalry = { x = 1 y = 0 }
 							cavalry = { x = 1 y = 1 }
 						}
@@ -517,7 +500,7 @@ country_event = {
 							infantry = { x = 0 y = 0 }
 							infantry = { x = 0 y = 1 }
 							infantry = { x = 0 y = 2 }
-							field_gun_brigade = { x = 0 y = 3 }
+							artillery_brigade = { x = 0 y = 3 }
 							cavalry = { x = 1 y = 0 }
 							cavalry = { x = 1 y = 1 }
 						}
@@ -559,7 +542,7 @@ country_event = {
 							infantry = { x = 0 y = 0 }
 							infantry = { x = 0 y = 1 }
 							infantry = { x = 0 y = 2 }
-							field_gun_brigade = { x = 0 y = 3 }
+							artillery_brigade = { x = 0 y = 3 }
 							cavalry = { x = 1 y = 0 }
 							cavalry = { x = 1 y = 1 }
 						}
@@ -574,7 +557,6 @@ country_event = {
 						OR = {
 							state = 595
 							state = 596
-							state = 1062
 						}
 					}
 					transfer_state_to = PREV
@@ -599,7 +581,7 @@ country_event = {
 							infantry = { x = 0 y = 0 }
 							infantry = { x = 0 y = 1 }
 							infantry = { x = 0 y = 2 }
-							field_gun_brigade = { x = 0 y = 3 }
+							artillery_brigade = { x = 0 y = 3 }
 							cavalry = { x = 1 y = 0 }
 							cavalry = { x = 1 y = 1 }
 						}
@@ -614,7 +596,6 @@ country_event = {
 						OR = {
 							state = 598
 							state = 613
-							state = 1016
 						}
 					}
 					transfer_state_to = PREV
@@ -622,8 +603,6 @@ country_event = {
 				}
 				QIN = { puppet = PREV }
 				abandon_puppet_tag = yes
-				set_province_controller = 7014
-				set_province_controller = 12076
 				load_oob = PRC_1911_uprising2_shanghai
 				# set_cosmetic_tag = QIN_provinces_JNC
 				every_character = {
@@ -641,7 +620,7 @@ country_event = {
 							infantry = { x = 0 y = 0 }
 							infantry = { x = 0 y = 1 }
 							infantry = { x = 0 y = 2 }
-							field_gun_brigade = { x = 0 y = 3 }
+							artillery_brigade = { x = 0 y = 3 }
 							cavalry = { x = 1 y = 0 }
 							cavalry = { x = 1 y = 1 }
 						}
@@ -655,7 +634,7 @@ country_event = {
 						is_owned_by = QIN
 						OR = {
 							state = 600
-							state = 1046
+
 						}
 					}
 					transfer_state_to = PREV
@@ -663,8 +642,6 @@ country_event = {
 				}
 				QIN = { puppet = PREV }
 				abandon_puppet_tag = yes
-				set_province_controller = 1083
-				set_province_controller = 7222
 				load_oob = PRC_1911_uprising2_nanchang
 				# set_cosmetic_tag = QIN_provinces_JXC
 				every_character = {
@@ -698,7 +675,7 @@ country_event = {
 							infantry = { x = 0 y = 0 }
 							infantry = { x = 0 y = 1 }
 							infantry = { x = 0 y = 2 }
-							field_gun_brigade = { x = 0 y = 3 }
+							artillery_brigade = { x = 0 y = 3 }
 							cavalry = { x = 1 y = 0 }
 							cavalry = { x = 1 y = 1 }
 						}
@@ -735,7 +712,7 @@ country_event = {
 							infantry = { x = 0 y = 0 }
 							infantry = { x = 0 y = 1 }
 							infantry = { x = 0 y = 2 }
-							field_gun_brigade = { x = 0 y = 3 }
+							artillery_brigade = { x = 0 y = 3 }
 							cavalry = { x = 1 y = 0 }
 							cavalry = { x = 1 y = 1 }
 						}
@@ -759,7 +736,6 @@ country_event = {
 					add_core_of = PREV
 				}
 				QIN = { puppet = PREV }
-				set_province_controller = 4256
 				load_oob = PRC_1911_uprising2_shaanxi
 				# set_cosmetic_tag = QIN_provinces_SHN
 				every_character = {
@@ -794,7 +770,6 @@ country_event = {
 							state = 717
 							state = 328
 							state = 714
-							state = 1045
 						}
 					}
 					transfer_state_to = PREV
@@ -981,28 +956,50 @@ country_event = {
 		}
 	}
 }
-
 #Pianma Incident
 country_event = {
-	id = ww1_qing.382
 	title = ww1_qing.382.t
 	desc = ww1_qing.382.d
+	id = ww1_qing.382
 	picture = GFX_report_event_chinese_soldiers
+
 	fire_only_once = yes
-	is_triggered_only = yes
+	
 	trigger = {
-		owns_state = 601
+		tag = QIN
+		date > 1910.12.1
+		date < 1912.2.1
+		325 = {
+			is_controlled_by = ROOT
+		}
+		601 = {
+			controller = {
+				OR = {
+					tag = ENG
+					is_subject_of = ENG
+				}
+			}
+		}
+	}
+	mean_time_to_happen = {
+		days = 13
+	}
+	option = {
+		name = ww1_qing.382.b
+		ai_chance = { base = 10 }
+		custom_effect_tooltip = historical_tt
+		add_political_power = -25
+		add_equipment_to_stockpile = {
+			type = infantry_equipment_1
+			amount = -572
+		}
+		add_war_support = 0.01
 	}
 	option = {
 		name = ww1_qing.382.a
-		add_political_power = -25
-		FROM = {
-			add_state_core = 601
-			transfer_state = 601
-		}
+		ai_chance = { base = 0 }
 	}
 }
-
 #Songshou Suicide
 country_event = {
 	title = ww1_qing.378.t
@@ -1038,7 +1035,6 @@ country_event = {
 				NOT = { is_owned_and_controlled_by = QIN }
 			}
 			date > 1914.2.14
-			has_start_date < 1914.6.14
 		}
 	}
 	
@@ -1085,7 +1081,7 @@ country_event = {
 	trigger = {
 		tag = QIN
 		date > 1911.3.28
-		has_start_date < 1914.1.1
+		date < 1914.1.1
 		NOT = {
 			has_global_flag = manchu_restoration
 		}
@@ -1119,7 +1115,7 @@ country_event = {
 	
 	trigger = {
 		date > 1911.4.1
-		has_start_date < 1914.1.1	
+		date < 1914.1.1
 		tag = QIN
 		NOT = {
 			has_global_flag = manchu_restoration
@@ -1169,7 +1165,6 @@ country_event = {
 	trigger = {
 		tag = QIN
 		date > 1910.12.1
-		has_start_date < 1914.1.1
 	}
 	option = {
 		name = ww1_qing.353.a
@@ -1366,7 +1361,6 @@ country_event = {
 			is_owned_and_controlled_by = ROOT
 		}
 		date > 1910.7.25
-		has_start_date < 1914.1.1
 	}
 	
 	option = {
@@ -1433,7 +1427,7 @@ country_event = {
 		}
 		has_country_flag = great_war_loser
 		OR = {
-			has_global_flag = versailles_treaty
+			has_global_flag = versallies_treaty
 			has_global_flag = frankfurt_treaty
 		}
 		has_war = no
@@ -1557,7 +1551,6 @@ country_event = {
 					OR = {
 						state = 716
 						state = 328
-						state = 1045
 					}
 				}
 				744 = {
@@ -1577,7 +1570,6 @@ country_event = {
 					OR = {
 						state = 716
 						state = 328
-						state = 1045
 					}
 					owner = {
 						is_china_or_warlord = yes
@@ -1638,33 +1630,32 @@ country_event = {
 				transfer_state_to = TIB
 			}
 			# Concessions
-			#if = {
-			#	limit = {
-			#		OR = {
-			#			state = 326
-			#			state = 613
-			#			state = 728
-			#			state = 729
-			#			state = 744
-			#			state = 745
-			#			state = 746
-			#		}
-			#		country_exists = LGC
-			#	}
-			#	add_core_of = LGC
-			#	transfer_state_to = LGC
-			#}
+			if = {
+				limit = {
+					OR = {
+						state = 326
+						state = 613
+						state = 728
+						state = 729
+						state = 744
+						state = 745
+						state = 746
+					}
+					country_exists = LGC
+				}
+				add_core_of = LGC
+				transfer_state_to = LGC
+			}
 		}
 	}
 }
-
-#Feng Guozhang's Army
 country_event = {
 	title = ww1_qing.296.t
 	desc = ww1_qing.296.d
 	id = ww1_qing.296
-	picture = GFX_report_event_chinese_officers
+
 	fire_only_once = yes
+	
 	trigger = {
 		tag = QIN
 		
@@ -1675,23 +1666,19 @@ country_event = {
 		NOT = { has_global_flag = xinhai_revolution_ends }
 		CHI = { NOT = { has_country_flag = xinhai_victory } }
 	}
-	option = {
-		name = ww1_qing.296.b
-		custom_effect_tooltip = historical_tt
-	}
+	
 	option = {
 		name = ww1_qing.296.a
-		ai_chance = { base = 0 }
-		add_popularity = {
-			ideology = fascism
-			popularity = 0.10
-		}
-		hidden_effect = {
-			load_oob = QIN_feng
-		}
+		ai_chance = { factor = 0 }
+		add_political_power = -200
+		load_oob = QIN_feng
+		
+	}
+	option = {
+		name = ww1_qing.296.b
+		ai_chance = { factor = 100 }
 	}
 }
-
 #Puyi Abusing Eunuchs
 country_event = {
 	title = ww1_qing.292.t
@@ -1707,7 +1694,7 @@ country_event = {
 		tag = QIN
 		is_qing_monarchy = yes
 		date > 1913.11.30
-		has_start_date < 1914.1.1
+		date < 1914.5.1
 	}
 	
 	option = {
@@ -1735,7 +1722,6 @@ country_event = { #Aftermath of the Assassination attempt
 	trigger = {
 		tag = QIN
 		date > 1910.6.30
-		has_start_date < 1914.1.1
 		CHI = { 
 			NOT = { has_country_flag = xinhai_victory } 
 			exists = no
@@ -1773,7 +1759,7 @@ country_event = {
 		is_qing_monarchy = yes
 		OR = {
 			AND = {
-				has_global_flag = xinhai_revolution
+				has_global_flag = QIN_flag_first_xinhai
 				date > 1913.2.22
 			}
 			date > 1914.6.30
@@ -1800,7 +1786,7 @@ country_event = {
 	trigger = {
 		original_tag = QIN
 		date > 1911.4.26
-		has_start_date < 1914.1.1	
+		date < 1914.1.1
 		608 = { is_owned_and_controlled_by = QIN }
 	}
 	picture = GFX_report_event_generic_research_lab
@@ -1834,7 +1820,6 @@ country_event = {
 	trigger = {
 		original_tag = QIN
 		date > 1910.12.20
-		has_start_date < 1914.1.1
 	}
 	
 	option = {
@@ -2180,7 +2165,7 @@ country_event = {
 	trigger = {
 		tag = QIN
 		QIN = { has_country_flag = qing_austrian_concession }
-		AUS = {
+		AUH = {
 			OR = {
 				has_war_with = QIN
 				is_subject_of = QIN
@@ -2339,7 +2324,6 @@ country_event = {
 	trigger = {
 		tag = QIN
 		date > 1910.8.10 #1910.8.10
-		has_start_date < 1914.1.1
 		330 = {
 			owns_or_subject_of = yes
 			is_core_of = ROOT
@@ -2359,11 +2343,6 @@ country_event = {
 			remove_core_of = ROOT
 			add_claim_by = ROOT
 			start_resistance = yes
-			if = {
-				limit = { has_resistance = yes }
-				add_resistance = 80
-				add_compliance = -80
-			}
 		}
 		TAN = { set_occupation_law = foreign_civilian_oversight }
 		MON = { set_occupation_law = foreign_civilian_oversight }
@@ -2549,7 +2528,7 @@ country_event = {
 	}
 }
 
-# Request Concessions
+# Request Hong Kong
 country_event = {
 	id = ww1_qing.4
 	title = ww1_qing.4.t
@@ -2581,7 +2560,6 @@ country_event = {
 			}
 			FROM = { transfer_state = PREV }
 		}
-		add_political_power = 75
 		ai_chance = {
 			base = 1
 			modifier = {
@@ -2622,15 +2600,6 @@ country_event = {
 	option = {
 		name = ww1_qing.4.b
 		QIN = { country_event = ww1_qing.5 }
-		custom_effect_tooltip = disagree_effect_tooltip
-		effect_tooltip = {
-			FROM = {
-				declare_war_on = {
-					target = ROOT
-					type = take_core_state
-				}
-			}
-		}
 		ai_chance = {
 			base = 10
 			modifier = {
@@ -2674,12 +2643,10 @@ country_event = {
 				has_idea = idea_army_restrictions
 			}
 		}
-		declare_war_on = {
+		create_wargoal = {
 			target = FROM
 			type = take_core_state
 		}
-		set_country_flag = concessions_war
-		FROM = { set_country_flag = concessions_war }
 		ai_chance = {
 			base = 0
 			modifier = {
@@ -2815,28 +2782,28 @@ country_event = {
 	title = ww1_qing.7.t
 	desc = ww1_qing.7.d
 	picture = GFX_report_event_chi_yuan_cabinet
-	is_triggered_only = yes
+	trigger = {
+		tag = QIN
+		has_government = neutrality
+		has_war_with = CHI
+		has_global_flag = xinhai_revolution
+		NOT = {
+			has_global_flag = xinhai_revolution_ends
+		}
+	}
+	fire_only_once = yes
+	mean_time_to_happen = {
+		days = 30
+	}
 	option = {
 		name = ww1_qing.7.a
-		if = {
-			limit = { has_idea = QIN_yikuang }
-			deactivate_advisor = QIN_yikuang
-		}
+		deactivate_advisor = QIN_yikuang
 		CHI_yuan_shikai = {
-			if = {
-				limit = {
-					has_ideology = semi_constitutional_monarchy
-				}
-				promote_character = semi_constitutional_monarchy
-			}
-			else = {
-				add_country_leader_role = {
-					promote_leader = yes
-					country_leader = {
-						ideology = semi_constitutional_monarchy
-						traits = { schemer_yuan }
-						desc = CHI_yuan_shikai_desc
-					}
+			add_country_leader_role = {
+				promote_leader = yes
+				country_leader = {
+					ideology = autocracy
+					traits = { schemer_yuan }
 				}
 			}
 		}
@@ -2845,27 +2812,6 @@ country_event = {
 			elections_allowed = no
 			long_name = CHI_fascism_party
 			name = CHI_fascism_party
-		}
-		custom_effect_tooltip = ww1_qing.7.tt
-		hidden_effect = {
-			country_event = { #Huang Xing's Telegram
-				id = ww1_xinhai.3
-				days = 6
-			}
-			country_event = { #North-South Conference
-				id = ww1_qing.17
-				days = 30
-			}
-			CHI = {
-				country_event = { #Huang Xing's Telegram
-					id = ww1_xinhai.3
-					days = 6
-				}
-				country_event = { #North-South Conference
-					id = ww1_qing.17
-					days = 30
-				}
-			}
 		}
 	}
 }
@@ -2879,21 +2825,14 @@ country_event = {
 	is_triggered_only = yes
 	option = {
 		name = ww1_qing.8.a
-		add_timed_idea = {
-			idea = QIN_idea_no_money_for_reform
-			days = 500
+		hidden_effect = {
+			country_event = {
+				id = ww1_qing.9
+				days = 20
+			}
 		}
 		add_stability = 0.05
 		add_political_power = 100
-		if = {
-			limit = {
-				has_active_mission = CHI_xinhai_revolution_mission
-			}
-			add_days_mission_timeout = {
-				mission = CHI_xinhai_revolution_mission
-				days = -100
-			}
-		}
 	}
 }
 
@@ -2920,15 +2859,6 @@ country_event = {
 	option = {
 		name = ww1_qing.10.a
 		add_ideas = QIN_railway_protection_movement
-		if = {
-			limit = {
-				has_active_mission = CHI_xinhai_revolution_mission
-			}
-			add_days_mission_timeout = {
-				mission = CHI_xinhai_revolution_mission
-				days = -100
-			}
-		}
 		hidden_effect = {
 			country_event = {
 				id = ww1_qing.11
@@ -2948,15 +2878,6 @@ country_event = {
 	option = {
 		name = ww1_qing.11.a
 		add_manpower = -30000
-		if = {
-			limit = {
-				has_active_mission = CHI_xinhai_revolution_mission
-			}
-			add_days_mission_timeout = {
-				mission = CHI_xinhai_revolution_mission
-				days = -100
-			}
-		}
 	}
 }
 
@@ -2995,6 +2916,7 @@ country_event = {
 		add_stability = -0.10
 	}
 }
+
 
 # Change puyi portrait
 country_event = {
@@ -3042,516 +2964,5 @@ country_event = {
 				}
 			}
 		}
-	}
-}
-
-# North-South Conference Failed
-country_event = {
-	id = ww1_qing.15
-	title = ww1_qing.15.t
-	desc = ww1_qing.15.d
-	picture = GFX_report_event_china_map
-	is_triggered_only = yes
-	trigger = {
-		NOT = { has_country_flag = xinhai_compromise_fail }
-	}
-	immediate = {
-		hidden_effect = {
-			set_country_flag = xinhai_compromise_fail
-		}
-	}
-	option = {
-		name = ww1_qing.15.a
-		trigger = { tag = QIN }
-	}
-	option = {
-		name = ww1_qing.15.b
-		trigger = {
-			NOT = { tag = QIN } 
-		}
-	}
-}
-
-# Yuan Shikai Demands His Provisional Presidency to Sun Yatsen
-country_event = {
-	id = ww1_qing.16
-	title = ww1_qing.16.t
-	desc = ww1_qing.16.d
-	picture = GFX_report_event_chi_yuan_cabinet
-	fire_only_once = yes
-	is_triggered_only = yes
-	option = {
-		name = ww1_qing.16.a
-		custom_effect_tooltip = historical_tt
-		custom_effect_tooltip = ww1_qing.16.a.tt
-	}
-	option = {
-		name = ww1_qing.16.b
-		custom_effect_tooltip = xinhai_compromise_fail_tt
-		set_global_flag = xinhai_compromise_fail
-		clr_country_flag = xinhai_yuan_presidency_suggest
-		ai_chance = {
-			base = 0
-		}
-	}
-}
-
-# North-South Conference
-country_event = {
-	id = ww1_qing.17
-	title = ww1_qing.17.t
-	desc = ww1_qing.17.desc
-	picture = GFX_report_event_chi_yuan_cabinet
-	is_triggered_only = yes
-	option = { #Qing Submits
-		name = ww1_qing.17.a
-		trigger = { tag = QIN }
-		custom_effect_tooltip = historical_tt
-		hidden_effect = {
-			country_event = { #Donghuamen Incident
-				id = ww1_qing.18
-				days = 25
-			}
-			CHI = {
-				country_event = { #Donghuamen Incident
-					id = ww1_qing.18
-					days = 25
-				}
-			}
-			country_event = { #Abdication
-				id = ww1_xinhai.4
-				days = 30
-			}
-		}
-	}
-	option = { #Qing Rejects
-		name = ww1_qing.17.b
-		trigger = { tag = QIN }
-		custom_effect_tooltip = xinhai_compromise_fail_tt
-		hidden_effect = {
-			country_event = {
-				id = ww1_qing.15
-				hours = 10
-			}
-			CHI = {
-				country_event = {
-					id = ww1_qing.15
-					hours = 10
-				}
-			}
-		}
-		set_country_flag = xinhai_compromise_rejection
-		set_global_flag = xinhai_compromise_fail
-		ai_chance = {
-			base = 0
-		}
-	}
-	option = { #Republic Accepts
-		name = ww1_qing.17.c
-		trigger = {
-			NOT = { tag = QIN }
-		}
-		custom_effect_tooltip = historical_tt
-		set_country_flag = xinhai_yuan_presidency_suggest
-		ai_chance = {
-			factor = 100
-			modifier = {
-				factor = 0
-				has_game_rule = {
-					rule = CHI_ai_behavior
-					option = DEMOCRATIC
-				}
-			}
-		}
-	}
-	option = { #Republic Rejects
-		name = ww1_qing.17.d
-		trigger = {
-			NOT = { tag = QIN }
-		}
-		custom_effect_tooltip = xinhai_compromise_fail_tt
-		hidden_effect = {
-			country_event = {
-				id = ww1_qing.15
-				hours = 10
-			}
-			QIN = {
-				country_event = {
-					id = ww1_qing.15
-					hours = 10
-				}
-			}
-		}
-		set_country_flag = xinhai_compromise_rejection
-		set_global_flag = xinhai_compromise_fail
-		ai_chance = { 
-			base = 0
-			modifier = {
-				add = 5
-				is_historical_focus_on = no
-			}
-			modifier = {
-				add = 100
-				has_game_rule = {
-					rule = CHI_ai_behavior
-					option = DEMOCRATIC
-				}
-			}
-		}
-	}
-}
-
-# Donghuamen Incident
-country_event = {
-	id = ww1_qing.18
-	title = ww1_qing.18.t
-	desc = ww1_qing.18.d
-	picture = GFX_report_event_qing_forbidden_city
-	is_triggered_only = yes
-	trigger = {
-		QIN = {
-			has_country_leader = {
-				character = CHI_yuan_shikai
-				ruling_only = yes
-			}
-			has_idea = QIN_idea_xuantong_young
-		}
-	}
-	option = {
-		name = ww1_qing.18.a
-		add_political_power = -25
-	}
-}
-
-# Yuan Shikai Coups the Government
-country_event = {
-	id = ww1_qing.19
-	title = ww1_qing.19.t
-	desc = ww1_qing.19.d
-	picture = GFX_report_event_chi_yuan_cabinet
-	trigger = {
-		tag = QIN
-		has_country_leader_with_trait = schemer_yuan
-		has_global_flag = xinhai_compromise_fail
-		CHI = {
-			OR = {
-				has_country_flag = xinhai_compromise_rejection
-				NOT = { has_country_flag = xinhai_yuan_presidency_suggest }
-			}
-		}
-	}
-	fire_only_once = yes
-	option = {
-		name = ww1_qing.19.a
-		custom_effect_tooltip = end_tt
-		remove_country_leader_trait = schemer_yuan
-		add_country_leader_trait = crusher_yuan
-		set_politics = {
-			ruling_party = fascism
-			elections_allowed = no
-		}
-		remove_ideas = QIN_idea_xuantong_young
-	}
-}
-
-# Concessions War - China Sues for Peace
-country_event = {
-	id = ww1_qing.20
-	title = ww1_qing.20.t
-	desc = ww1_qing.20.d
-	picture = GFX_report_event_chinese_soldiers
-	is_triggered_only = yes
-	option = {
-		name = ww1_qing.20.a
-		white_peace = FROM
-		random_owned_state = {
-			limit = {
-				impassable = no
-			}
-			add_building_construction = {
-				type = industrial_complex
-				level = 1
-				instant_build = yes
-			}
-		}
-		hidden_effect = {
-			random_state = {
-				limit = {
-					is_owned_by = FROM
-					industrial_complex > 0
-				}
-				remove_building = {
-					type = industrial_complex
-					level = 1
-				}
-			}
-			every_country = {
-				limit = {
-					has_war_with = FROM
-					OR = {
-						tag = ROOT
-						is_in_faction_with = ROOT
-						is_subject_of = ROOT
-					}
-				}
-				clr_country_flag = concessions_war
-				every_other_country = {
-					limit = {
-						has_war_with = PREV
-						OR = {
-							tag = FROM
-							is_in_faction_with = FROM
-							is_subject_of = FROM
-						}
-					}
-					white_peace = PREV
-				}
-			}
-			if = {
-				limit = {
-					NOT = {
-						any_other_country = {
-							has_war_with = FROM
-							has_country_flag = concessions_war
-						}
-					}
-				}
-				FROM = {
-					clr_country_flag = concessions_war
-				}
-			}
-		}
-	}
-	option = {
-		name = ww1_qing.20.b
-		ai_chance = { factor = 0 }
-		add_named_threat = {
-			threat = 1
-			name = concessions_war_peace_rejected
-		}
-		custom_effect_tooltip = concessions_war_no_peace_tt
-		hidden_effect = {
-			every_country = {
-				limit = {
-					has_country_flag = concessions_war
-				}
-				clr_country_flag = concessions_war
-			}
-		}
-	}
-}
-
-# Tibet Situation
-country_event = {
-	id = ww1_qing.21
-	title = ww1_qing.21.t
-	desc = ww1_qing.21.d
-	picture = GFX_report_event_japan_army_mountainside
-	fire_only_once = yes
-	trigger = {
-		tag = QIN
-		has_start_date < 1914.1.1
-		owns_state = 322
-	}
-	mean_time_to_happen = {
-		days = 40
-	}
-	option = {
-		name = ww1_qing.21.a
-		every_state = {
-			limit = {
-				is_core_of = TIB
-				has_resistance = yes
-			}
-			add_resistance = 60
-			add_compliance = -80
-		}
-		TIB = { set_occupation_law = military_governor_occupation }
-	}
-}
-
-# The New Policies
-country_event = {
-	id = ww1_qing.22
-	title = ww1_qing.22.t
-	desc = ww1_qing.22.d
-	picture = QIN_qing_advisory_council_image
-	is_triggered_only = yes
-	option = {
-		name = ww1_qing.22.a
-		add_ideas = QIN_idea_new_policies
-	}
-}
-
-# The National Assembly Deadline Revised
-country_event = {
-	id = ww1_qing.23
-	title = ww1_qing.23.t
-	desc = ww1_qing.23.d
-	picture = QIN_qing_court_members_image
-	is_triggered_only = yes
-	option = {
-		name = ww1_qing.23.a
-		add_stability = -0.10
-		remove_ideas = QIN_idea_constitutional_movement
-		if = {
-			limit = {
-				has_active_mission = CHI_xinhai_revolution_mission
-			}
-			add_days_mission_timeout = {
-				mission = CHI_xinhai_revolution_mission
-				days = -100
-			}
-		}
-	}
-}
-
-# Advisory Council
-country_event = {
-	id = ww1_qing.27
-	title = ww1_qing.27.t
-	desc = ww1_qing.27.d
-	picture = QIN_qing_advisory_council_image
-	fire_only_once = yes
-	trigger = {
-		has_start_date < 1914.1.1
-		tag = QIN
-		date > 1910.9.1
-		has_elections = no
-		has_government = neutrality
-		has_war = no
-		NOT = {
-			has_global_flag = xinhai_revolution
-		}
-	}
-	mean_time_to_happen = {
-		days = 0
-	}
-	option = {
-		name = ww1_qing.27.a
-		allow_elections = yes
-		add_political_power = 40
-	}
-}
-
-# Second Petition
-country_event = {
-	id = ww1_qing.28
-	title = ww1_qing.28.t
-	desc = ww1_qing.28.d
-	picture = GFX_report_event_qing_forbidden_city
-	is_triggered_only = yes
-	trigger = {
-		has_start_date < 1914.1.1
-		tag = QIN
-		has_government = neutrality
-		NOT = {
-			has_completed_focus = QIN_revise_national_assembly_deadline
-		}
-	}
-	option = {
-		name = ww1_qing.28.a
-		add_political_power = -25
-	}
-}
-
-# National Currency Regulations
-country_event = {
-	id = ww1_qing.29
-	title = ww1_qing.29.t
-	desc = ww1_qing.29.d
-	picture = QIN_qing_court_members_image
-	is_triggered_only = yes
-	option = {
-		name = ww1_qing.29.a
-		add_political_power = 50
-	}
-}
-
-# Seperation of All Laws
-country_event = {
-	id = ww1_qing.30
-	title = ww1_qing.30.t
-	desc = ww1_qing.30.d
-	picture = GFX_report_event_qing_forbidden_city
-	is_triggered_only = yes
-	option = {
-		name = ww1_qing.30.a
-		add_stability = 0.05
-	}
-}
-
-# New Qing Code
-country_event = {
-	id = ww1_qing.31
-	title = ww1_qing.31.t
-	desc = ww1_qing.31.d
-	picture = GFX_report_event_generic_sign_treaty1
-	is_triggered_only = yes
-	option = {
-		name = ww1_qing.31.a
-		add_stability = 0.05
-	}
-}
-
-# Administrative Affairs Office
-country_event = {
-	id = ww1_qing.32
-	title = ww1_qing.32.t
-	desc = ww1_qing.32.d
-	picture = GFX_report_event_generic_sign_treaty2
-	is_triggered_only = yes
-	option = {
-		name = ww1_qing.32.a
-		add_political_power = 50
-	}
-}
-
-# Creating the National Budget
-country_event = {
-	id = ww1_qing.33
-	title = ww1_qing.33.t
-	desc = ww1_qing.33.d
-	picture = GFX_report_event_generic_construction_site
-	is_triggered_only = yes
-	option = {
-		name = ww1_qing.33.a
-		add_political_power = 50
-	}
-}
-
-# Privy Council
-country_event = {
-	id = ww1_qing.34
-	title = ww1_qing.34.t
-	desc = ww1_qing.34.d
-	picture = GFX_report_event_qing_forbidden_city
-	is_triggered_only = yes
-	option = {
-		name = ww1_qing.34.a
-		add_political_power = 50
-	}
-}
-
-# Autumn Exercise / 永平秋操
-country_event = {
-	id = ww1_qing.35
-	title = ww1_qing.35.t
-	desc = ww1_qing.35.d
-	picture = GFX_report_event_chinese_army_training
-	fire_only_once = yes
-	trigger = {
-		tag = QIN
-		has_start_date < 1914.1.1
-		owns_state = 609
-		has_war = no
-	}
-	mean_time_to_happen = {
-		days = 150
-	}
-	option = {
-		name = ww1_qing.35.a
-		army_experience = 50
-		add_command_power = 25
 	}
 }

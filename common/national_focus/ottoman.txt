@@ -121,6 +121,7 @@ focus_tree = {
 			#	has_war_with = GRE
 			#	has_war_with = MNT
 			#}
+			date > 1911.6.1
 		}
 		x = -2
 		y = 1

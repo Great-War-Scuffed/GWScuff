@@ -1535,7 +1535,6 @@ focus_tree = {
 				}		
 			}
 		}
-	}
 	focus = {
 		id = ENG_Project_Tank
 		icon = GFX_focus_generic_mark_IV_tank

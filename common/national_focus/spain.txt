@@ -1570,7 +1570,7 @@ focus_tree = {
     focus = {
         id = SPR_Fortalecer_la_infraestructura
         icon = GFX_focus_generic_communist_industry
-        cost = 5
+        cost = 10
         x = 3
         y = 1
         relative_position_id = SPR_reformas_agrarias
@@ -1578,16 +1578,14 @@ focus_tree = {
 			focus = SPR_reformas_agrarias
 		}
         completion_reward = {
-            add_3x_civilian = yes
-            add_3x_civilian = yes
-            add_3x_military = yes
+            add_2x_civilian = yes
             add_2x_military = yes
         }
     }
     focus = {
         id = SPR_Fortalecer_la_industria_nacional
         icon = GFX_focus_CHL_enlarge_the_textile_industries
-        cost = 5
+        cost = 10
         x = -1
         y = 1
         relative_position_id = SPR_Fortalecer_la_infraestructura
@@ -1595,16 +1593,16 @@ focus_tree = {
 			focus = SPR_Fortalecer_la_infraestructura
 		}
         completion_reward = {
-            add_3x_civilian = yes
-            add_2x_civilian = yes
-            add_2x_military = yes
-            add_2x_military = yes
+            add_1x_civilian = yes
+            add_1x_civilian = yes
+            add_1x_military = yes
+            add_1x_military = yes
         }
     }
     focus = {
         id = SPR_Expropiacion_de_lugares_de_trabajo_y_empresas
         icon = GFX_focus_spr_class_war
-        cost = 5
+        cost = 10
         x = 1
         y = 1
         relative_position_id = SPR_Fortalecer_la_infraestructura
@@ -1612,9 +1610,9 @@ focus_tree = {
 			focus = SPR_Fortalecer_la_infraestructura
 		}
         completion_reward = {
-            add_3x_civilian = yes
+            add_1x_civilian = yes
             add_2x_military = yes
-            add_2x_military = yes
+            add_1x_military = yes
         }
     }
     focus = {
@@ -1695,7 +1693,7 @@ focus_tree = {
     focus = {
         id = SPR_economia_basada_en_la_agricultura
         icon = GFX_focus_generic_workers_and_farmers_rise
-        cost = 5
+        cost = 10
         x = 0
         y = 2
         relative_position_id = SPR_Fortalecer_la_industria_nacional

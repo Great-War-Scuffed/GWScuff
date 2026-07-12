@@ -799,7 +799,6 @@ formable_nations_mod_category = {
 				original_tag = SIK
 				original_tag = PRC
 				original_tag = MAN
-				original_tag = QIN
 			}
 		}
 		

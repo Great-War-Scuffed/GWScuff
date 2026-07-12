@@ -811,6 +811,75 @@ country_event = {
 
 # ARMY EPIDEMIC
 ##################
+country_event = {
+	immediate = {
+		hidden_effect = {
+			set_country_flag = {
+				flag = random_army_event
+				days = 300
+				value = 1
+			}
+			random_list = {
+				50 = {
+					set_country_flag = fever_event
+				}
+				40 = {
+					set_country_flag = influenza_event
+				}
+				10 = {
+					set_country_flag = tetanus_event
+				}
+			}
+		}
+	}
+	title = ww1_generic.24.t
+	desc = {
+		text = ww1_generic.24.influenza
+		trigger = {
+			has_country_flag = influenza_event
+		}
+	}
+	desc = {
+		text = ww1_generic.24.fever
+		trigger = {
+			has_country_flag = fever_event
+		}
+	}
+	desc = {
+		text = ww1_generic.24.tetanus
+		trigger = {
+			has_country_flag = tetanus_event
+		}
+	}
+	id = ww1_generic.24
+	picture = GFX_report_event_spanish_flu
+	trigger = {
+		casualties > 100000
+		has_global_flag = great_war
+		NOT = {
+			has_country_flag = random_army_event
+		}
+		NOT = {
+			has_idea = idea_epidemic
+		}
+	}
+	mean_time_to_happen = {
+		days = 270
+	}
+	option = {
+		name = ww1_generic.24.a
+		clr_country_flag = influenza_event
+		clr_country_flag = fever_event
+		clr_country_flag = tetanus_event
+		add_timed_idea = {
+			idea = idea_epidemic
+			days = 90
+		}
+		ai_chance = {
+			factor = 10
+		}
+	}
+}
 
 # DESERTION
 ##################

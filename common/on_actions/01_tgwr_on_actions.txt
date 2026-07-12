@@ -810,15 +810,15 @@
 				}
 				add_ideas = extensive_conscription
 			}
-			if = {
-				limit = {
-					OR = {				
-						has_idea = war_economy
-						has_idea = tot_economic_mobilisation
-					}
-				}
-				add_ideas = partial_economic_mobilisation
-			}
+			#if = {
+			#	limit = {
+			#		OR = {				
+			#			has_idea = war_economy
+			#			has_idea = tot_economic_mobilisation
+			#		}
+			#	}
+			#	add_ideas = partial_economic_mobilisation
+			#}
 			#Demobilization check for the AI
 			if = {
 				limit = {

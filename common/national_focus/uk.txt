@@ -1518,7 +1518,6 @@ focus_tree = {
 						technology = basic_light_tank
 					}
 				}
-			} 
 			add_breakthrough_progress = {
 				specialization = specialization_land
 				value = 1
@@ -1535,6 +1534,8 @@ focus_tree = {
 				}		
 			}
 		}
+	}
+
 	focus = {
 		id = ENG_Project_Tank
 		icon = GFX_focus_generic_mark_IV_tank

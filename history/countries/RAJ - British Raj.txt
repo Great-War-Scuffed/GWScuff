@@ -37,6 +37,18 @@ recruit_character = RAJ_sir_william_duke
 recruit_character = RAJ_alexander_cobbe
 recruit_character = RAJ_bhaskar_soman
 
+recruit_character = RAJ_ramesh_kumar_varma
+recruit_character = RAJ_suresh_chandra_malhotra
+recruit_character = RAJ_narayan_das_gupta
+recruit_character = RAJ_bhupendra_singh
+recruit_character = RAJ_govind_rao_deshmukh
+recruit_character = RAJ_ashok_kumar_bhatt
+recruit_character = RAJ_prakash_chandra_menon
+recruit_character = RAJ_devendra_nath_sarkar
+recruit_character = RAJ_vijay_singh_rathore
+recruit_character = RAJ_krishnan_pillai
+recruit_character = RAJ_anand_prakash_joshi
+
 1910.1.1 = {
 	set_technology = {
 		#infantry

@@ -512,7 +512,7 @@ characters={
 					original_tag  = RAJ
 				}
 				traits  = {
-					navy_chief_decisive_battle_2 
+					navy_chief_decisive_battle_2
 				}
 				cost = 100
 				ai_will_do  = {
@@ -523,6 +523,237 @@ characters={
 		portraits={
 			army={
 				small="GFX_idea_generic_navy_arab_3"
+			}
+		}
+	}
+	RAJ_ramesh_kumar_varma={
+		name="RAJ_ramesh_kumar_varma"
+		advisor={
+			slot = political_advisor
+			idea_token = RAJ_ramesh_kumar_varma
+			allowed  = {
+				original_tag  = RAJ
+			}
+			traits  = {
+				war_industrialist
+			}
+			ai_will_do  = {
+				factor  = 1.000
+			}
+		}
+		portraits={
+			army={
+				small="GFX_idea_generic_political_advisor_asia_1"
+			}
+		}
+	}
+	RAJ_suresh_chandra_malhotra={
+		name="RAJ_suresh_chandra_malhotra"
+		advisor={
+			slot = political_advisor
+			idea_token = RAJ_suresh_chandra_malhotra
+			allowed  = {
+				original_tag  = RAJ
+			}
+			traits  = {
+				captain_of_industry
+			}
+			ai_will_do  = {
+				factor  = 1.000
+			}
+		}
+		portraits={
+			army={
+				small="GFX_idea_generic_political_advisor_asia_2"
+			}
+		}
+	}
+	RAJ_narayan_das_gupta={
+		name="RAJ_narayan_das_gupta"
+		advisor={
+			slot = political_advisor
+			idea_token = RAJ_narayan_das_gupta
+			allowed  = {
+				original_tag  = RAJ
+			}
+			traits  = {
+				financial_expert
+			}
+			ai_will_do  = {
+				factor  = 1.000
+			}
+		}
+		portraits={
+			army={
+				small="GFX_idea_generic_political_advisor_asia_3"
+			}
+		}
+	}
+	RAJ_bhupendra_singh={
+		name="RAJ_bhupendra_singh"
+		advisor={
+			slot = political_advisor
+			idea_token = RAJ_bhupendra_singh
+			allowed  = {
+				original_tag  = RAJ
+			}
+			traits  = {
+				staunch_monarchist
+			}
+			ai_will_do  = {
+				factor  = 1.000
+			}
+		}
+		portraits={
+			army={
+				small="GFX_idea_generic_political_advisor_arab_1"
+			}
+		}
+	}
+	RAJ_govind_rao_deshmukh={
+		name="RAJ_govind_rao_deshmukh"
+		advisor={
+			slot = political_advisor
+			idea_token = RAJ_govind_rao_deshmukh
+			allowed  = {
+				original_tag  = RAJ
+			}
+			traits  = {
+				democratic_reformer
+			}
+			ai_will_do  = {
+				factor  = 1.000
+			}
+		}
+		portraits={
+			army={
+				small="GFX_idea_generic_political_advisor_arab_2"
+			}
+		}
+	}
+	RAJ_ashok_kumar_bhatt={
+		name="RAJ_ashok_kumar_bhatt"
+		advisor={
+			slot = political_advisor
+			idea_token = RAJ_ashok_kumar_bhatt
+			allowed  = {
+				original_tag  = RAJ
+			}
+			traits  = {
+				great_architect
+			}
+			ai_will_do  = {
+				factor  = 1.000
+			}
+		}
+		portraits={
+			army={
+				small="GFX_idea_generic_political_advisor_arab_3"
+			}
+		}
+	}
+	RAJ_prakash_chandra_menon={
+		name="RAJ_prakash_chandra_menon"
+		advisor={
+			slot = political_advisor
+			idea_token = RAJ_prakash_chandra_menon
+			allowed  = {
+				original_tag  = RAJ
+			}
+			traits  = {
+				editor
+			}
+			ai_will_do  = {
+				factor  = 1.000
+			}
+		}
+		portraits={
+			army={
+				small="GFX_idea_generic_political_advisor_asia_1"
+			}
+		}
+	}
+	RAJ_devendra_nath_sarkar={
+		name="RAJ_devendra_nath_sarkar"
+		advisor={
+			slot = political_advisor
+			idea_token = RAJ_devendra_nath_sarkar
+			allowed  = {
+				original_tag  = RAJ
+			}
+			traits  = {
+				communist_revolutionary
+			}
+			ai_will_do  = {
+				factor  = 1.000
+			}
+		}
+		portraits={
+			army={
+				small="GFX_idea_generic_political_advisor_asia_2"
+			}
+		}
+	}
+	RAJ_vijay_singh_rathore={
+		name="RAJ_vijay_singh_rathore"
+		advisor={
+			slot = political_advisor
+			idea_token = RAJ_vijay_singh_rathore
+			allowed  = {
+				original_tag  = RAJ
+			}
+			traits  = {
+				fascist_demagogue
+			}
+			ai_will_do  = {
+				factor  = 1.000
+			}
+		}
+		portraits={
+			army={
+				small="GFX_idea_generic_political_advisor_asia_3"
+			}
+		}
+	}
+	RAJ_krishnan_pillai={
+		name="RAJ_krishnan_pillai"
+		advisor={
+			slot = political_advisor
+			idea_token = RAJ_krishnan_pillai
+			allowed  = {
+				original_tag  = RAJ
+			}
+			traits  = {
+				economic_reformer
+			}
+			ai_will_do  = {
+				factor  = 1.000
+			}
+		}
+		portraits={
+			army={
+				small="GFX_idea_generic_political_advisor_arab_1"
+			}
+		}
+	}
+	RAJ_anand_prakash_joshi={
+		name="RAJ_anand_prakash_joshi"
+		advisor={
+			slot = political_advisor
+			idea_token = RAJ_anand_prakash_joshi
+			allowed  = {
+				original_tag  = RAJ
+			}
+			traits  = {
+				progressive_reformer
+			}
+			ai_will_do  = {
+				factor  = 1.000
+			}
+		}
+		portraits={
+			army={
+				small="GFX_idea_generic_political_advisor_arab_2"
 			}
 		}
 	}

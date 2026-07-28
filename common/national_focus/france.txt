@@ -10035,7 +10035,7 @@ focus_tree = {
 				name = FRA_ww1_radio_improvement
 				bonus = 1
 				uses = 1
-				category = radar_tech
+				category = electronics
 			}
 		}
 		ai_will_do = {

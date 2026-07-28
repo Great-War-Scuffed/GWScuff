@@ -30,8 +30,13 @@ if = {
 		target = IND
 		autonomous_state = autonomy_integrated_puppet
 	}
+	set_autonomy = {
+		target = TUN
+		autonomous_state = autonomy_integrated_puppet
+	}
 	else = {
 		puppet = IND
+		puppet = TUN
 	}
 }
 

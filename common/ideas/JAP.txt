@@ -790,11 +790,11 @@ ideas = {
 			removal_cost = -1
 			modifier = {
 				conscription = 0.04
-				army_infantry_attack_factor = 0.15
-				army_infantry_defence_factor = 0.15
+				army_infantry_attack_factor = 0.10
+				army_infantry_defence_factor = 0.125
 				army_org_factor = 0.10
 
-				production_speed_arms_factory_factor = 0.10
+				production_speed_arms_factory_factor = 0.05
 			}
 		}
 		JAP_invite_investors_to_japan = {

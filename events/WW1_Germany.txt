@@ -5138,6 +5138,7 @@ country_event = {
 	desc = ww1_germany.90.d
 	picture = GFX_report_event_generic_soldiers_surrendering
 	trigger = {
+		always = no # disabled: scripted early separate peace, mod policy is to only end via natural capitulation
 		tag = GER
 		is_ai = no
 		has_global_flag = kis_war

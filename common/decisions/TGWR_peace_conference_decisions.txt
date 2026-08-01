@@ -4,6 +4,7 @@ GER_great_war = {
 	FRA_armistice = {
 		icon = GFX_decision_eng_trade_unions_support
 		available = {
+			always = no # disabled: scripted early separate peace, mod policy is to only end via natural capitulation
 			has_civil_war = no
 			has_global_flag = great_war
 			OR = {
@@ -145,6 +146,7 @@ GER_great_war = {
 			has_war_with = GER
 		}
 		available = {
+			always = no # disabled: scripted early separate peace, mod policy is to only end via natural capitulation
 			NOT = {
 				has_active_mission = RUS_mission_tsar_abdication
 				has_active_mission = RUS_threat_of_bolshevik_revolution
@@ -215,6 +217,7 @@ GER_great_war = {
 			}
 		}
 		available = {
+			always = no # disabled: scripted early separate peace, mod policy is to only end via natural capitulation
 			has_global_flag = great_war
 			NOT = {
 				has_global_flag = GER_capitulation
@@ -697,6 +700,7 @@ GER_great_war = {
 	GER_armistice = {
 		icon = GFX_decision_eng_trade_unions_support
 		available = {
+			always = no # disabled: scripted early separate peace, mod policy is to only end via natural capitulation
 			has_global_flag = great_war
 			GER = {
 				has_war_with = ENT

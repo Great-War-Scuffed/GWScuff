@@ -926,6 +926,7 @@ country_event = {
 		}
 	}
 	trigger = {
+		always = no # disabled by request: keep the Ottoman focus tree permanently, never swap to the nationalist/Kostantiniye trees
 		tag = TUR
 		has_country_flag = prepare_milli_mucadele
 	}

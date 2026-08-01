@@ -166,7 +166,7 @@ focus_tree = {
 	focus = {
 		id = ITA_Ilva
 		icon = GFX_focus_industry_steel
-		cost = 10
+		cost = 5
 		prerequisite = {
 			focus = ITA_moderate_protectionism
 		}
@@ -190,8 +190,8 @@ focus_tree = {
 				amount = 40
 				state = 158
 			}
-			add_2x_civilian = yes
-			add_2x_civilian = yes
+			add_1x_civilian = yes
+			add_1x_civilian = yes
 		}
 		ai_will_do = {
 			factor = 1
@@ -321,10 +321,11 @@ focus_tree = {
 			controls_state = 2
 		}
 		completion_reward = {
-			add_2x_civilian = yes
-			add_2x_civilian = yes
+			add_1x_civilian = yes
+			add_1x_civilian = yes
 
 			2 = {
+				add_extra_state_shared_building_slots = 2
 				add_building_construction = {
 					type = infrastructure
 					level = 2
@@ -332,6 +333,7 @@ focus_tree = {
 				}
 			}
 			117 = {
+				add_extra_state_shared_building_slots = 1
 				add_building_construction = {
 					type = infrastructure
 					level = 1
@@ -339,6 +341,7 @@ focus_tree = {
 				}
 			}
 			156 = {
+				add_extra_state_shared_building_slots = 1
 				add_building_construction = {
 					type = infrastructure
 					level = 1
@@ -346,6 +349,7 @@ focus_tree = {
 				}
 			}
 			115 = {
+				add_extra_state_shared_building_slots = 1
 				add_building_construction = {
 					type = infrastructure
 					level = 1
@@ -353,6 +357,7 @@ focus_tree = {
 				}
 			}
 			157 = {
+				add_extra_state_shared_building_slots = 1
 				add_building_construction = {
 					type = infrastructure
 					level = 1
@@ -360,6 +365,7 @@ focus_tree = {
 				}
 			}
 			162 = {
+				add_extra_state_shared_building_slots = 1
 				add_building_construction = {
 					type = infrastructure
 					level = 1
@@ -367,6 +373,7 @@ focus_tree = {
 				}
 			}
 			161 = {
+				add_extra_state_shared_building_slots = 1
 				add_building_construction = {
 					type = infrastructure
 					level = 1
@@ -515,6 +522,7 @@ focus_tree = {
 						state = 158
 					}
 				}
+				add_extra_state_shared_building_slots = 1
 				add_building_construction = {
 					type = infrastructure
 					level = 1
@@ -594,7 +602,7 @@ focus_tree = {
 	focus = {
 		id = ITA_Ansaldo
 		icon = GFX_focus_generic_industry_2
-		cost = 10
+		cost = 5
 		prerequisite = {
 			focus = ITA_railroad_modernisation
 		}
@@ -607,8 +615,8 @@ focus_tree = {
 			}
 		}
 		completion_reward = {
-			add_2x_civilian = yes
-			add_2x_civilian = yes
+			add_1x_civilian = yes
+			add_1x_civilian = yes
 			IF = {
 				limit = {
 					has_dlc = "Arms Against Tyranny"
@@ -3934,7 +3942,7 @@ focus_tree = {
 	focus = {
 		id = ITA_nuove_fabbriche
 		icon = GFX_focus_SOV_the_comecon
-		cost = 5
+		cost = 10
 		x = -1
 		y = 1
 		relative_position_id = ITA_riforme_statali_socialiste
@@ -4141,7 +4149,7 @@ focus_tree = {
 	focus = {
 		id = ITA_impiegare_il_pubblico
 		icon = GFX_goal_generic_soviet_construction
-		cost = 5
+		cost = 10
 		x = -2
 		y = 2
 		relative_position_id = ITA_riforme_statali_socialiste
@@ -4328,7 +4336,7 @@ focus_tree = {
 	focus = {
 		id = ITA_installazioni_cooperative_di_villaggio
 		icon = GFX_focus_SOV_the_supreme_soviet
-		cost = 5
+		cost = 10
 		x = 2
 		y = 2
 		relative_position_id = ITA_riforme_statali_socialiste
@@ -4650,7 +4658,7 @@ focus_tree = {
 	focus = {
 		id = ITA_sviluppare_litalia
 		icon = GFX_focus_ITA_sviluppare_litalia
-		cost = 5
+		cost = 10
 		x = 4
 		y = 1
 		relative_position_id = ITA_uomo_danni
@@ -4908,7 +4916,7 @@ focus_tree = {
 	focus = {
 		id = ITA_sostenere_aziende_e_fabbriche
 		icon = GFX_goal_generic_construct_civ_factory
-		cost = 5
+		cost = 10
 		x = 0
 		y = 1
 		relative_position_id = ITA_alleanza_di_ricerca_con_i_democratici
@@ -4954,10 +4962,10 @@ focus_tree = {
 						size > 2
 					}
 				}
-				add_extra_state_shared_building_slots = 3
+				add_extra_state_shared_building_slots = 1
 				add_building_construction = {
 					type = arms_factory
-					level = 3
+					level = 1
 					instant_build = yes
 				}
 			}
@@ -4988,7 +4996,7 @@ focus_tree = {
 	focus = {
 		id = ITA_piano_di_sviluppo_giovanni_giolitti
 		icon = GFX_focus_ITA_piano_di_sviluppo_giovanni_giolitti
-		cost = 5
+		cost = 10
 		x = 1
 		y = 2
 		relative_position_id = ITA_accordo_con_francia_e_gran_bretagna
@@ -5830,7 +5838,7 @@ focus_tree = {
 	focus = {
 		id = ITA_siviluppare_il_nord_ovest_italia
 		icon = GFX_focus_ITA_northern_industry
-		cost = 5
+		cost = 10
 		x = 2
 		y = 1
 		relative_position_id = ITA_to_live_as_a_lion
@@ -5855,10 +5863,10 @@ focus_tree = {
 				}
 			}
 			159 = {
-				add_extra_state_shared_building_slots = 3
+				add_extra_state_shared_building_slots = 2
 				add_building_construction = {
 					type = arms_factory
-					level = 3
+					level = 2
 					instant_build = yes
 				}
 			}
@@ -5881,7 +5889,7 @@ focus_tree = {
 	focus = {
 		id = ITA_colonie_in_via_di_sviluppo
 		icon = GFX_focus_generic_develop_libya
-		cost = 5
+		cost = 10
 		x = 0
 		y = 1
 		relative_position_id = ITA_impiegare_le_persone
@@ -5932,7 +5940,7 @@ focus_tree = {
 	focus = {
 		id = ITA_sviluppare_il_sud_est_italia
 		icon = GFX_focus_ITA_southern_industry
-		cost = 5
+		cost = 10
 		x = 0
 		y = 2
 		relative_position_id = ITA_siviluppare_il_nord_ovest_italia

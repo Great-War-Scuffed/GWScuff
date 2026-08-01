@@ -2082,6 +2082,8 @@ ideas = {
 				army_org_factor = 0.10
 				army_core_attack_factor = 0.05
 				army_core_defence_factor = 0.05
+				conscription = 0.03
+				conscription_factor = 0.10
 			}
 		}
 		AUH_german_military_advisors = {

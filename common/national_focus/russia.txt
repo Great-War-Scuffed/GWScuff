@@ -7855,9 +7855,9 @@ focus_tree = {
 		y = 1
 		relative_position_id = RUS_improve_worker_rights
 		completion_reward = { 
-			add_3x_military = yes
+			add_1x_military = yes
 			add_2x_military = yes
-			add_3x_civilian = yes
+			add_2x_civilian = yes
 		}
 	}
 	focus = {

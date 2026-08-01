@@ -2461,6 +2461,42 @@ focus_tree = {
 		y = 1
 	}
 	focus = {
+		id = ITA_war_with_ethiopia
+		icon = GFX_focus_ETH_compensation
+		cost = 5
+		x = -1
+		y = 1
+		relative_position_id = ITA_war_with_ottoman
+		prerequisite = {
+			focus = ITA_war_with_ottoman
+		}
+		will_lead_to_war_with = ETH
+		completion_reward = {
+			create_wargoal = {
+				target = ETH
+				type = annex_everything
+			}
+		}
+	}
+	focus = {
+		id = ITA_war_with_switzerland
+		icon = GFX_focus_ITA_alpine_division
+		cost = 5
+		x = 1
+		y = 1
+		relative_position_id = ITA_war_with_ottoman
+		prerequisite = {
+			focus = ITA_war_with_ottoman
+		}
+		will_lead_to_war_with = SWI
+		completion_reward = {
+			create_wargoal = {
+				target = SWI
+				type = annex_everything
+			}
+		}
+	}
+	focus = {
 		id = ITA_fascismo_movimento_old
 		icon = GFX_goal_support_fascism
 		cost = 5

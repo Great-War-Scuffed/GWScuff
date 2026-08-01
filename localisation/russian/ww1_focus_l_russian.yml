@@ -3862,6 +3862,8 @@
  ITA_apennine_airbase: "Апеннинские аэродромы"
  ITA_colonial_airbase: "Колониальные аэродромы"
  ITA_war_with_ottoman: "Война с Османской Империей"
+ ITA_war_with_ethiopia: "Война с Эфиопией"
+ ITA_war_with_switzerland: "Война со Швейцарией"
  ITA_claim_on_lybia: "Претензии к Ливии"
  ITA_claim_on_lybia_desc:0 "As we seek to expand our colonial target, there is a target just to our south, Libya. We should press claims on the territory to prepare for a war with the dying sick man for the land."
  ITA_claim_on_savoy: "Освободим дом Гарибальди!"

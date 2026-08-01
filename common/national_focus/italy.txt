@@ -2427,22 +2427,23 @@ focus_tree = {
 			#add_stability = -0.05
 			annex_country = { target = LBA }
 			ITA = {
-				 set_state_owner = 1060
-				 set_state_owner = 448
-				 set_state_owner = 1157
-				 set_state_owner = 1061
-				 set_state_owner = 450
-				 set_state_owner = 663
-				 set_state_owner = 1156
-				 set_state_owner = 661
-				 set_state_owner = 1154
-				 set_state_owner = 1155
-				 set_state_owner = 273
-				 set_state_owner = 1122
-				 set_state_owner = 1128
-				 set_state_owner = 1124
-				 set_state_owner = 567
-				 set_state_owner = 1123
+				 transfer_state = 1060
+				 transfer_state = 448
+				 transfer_state = 1157
+				 transfer_state = 1061
+				 transfer_state = 450
+				 transfer_state = 663
+				 transfer_state = 1156
+				 transfer_state = 661
+				 transfer_state = 1154
+				 transfer_state = 1155
+				 transfer_state = 273
+				 transfer_state = 1122
+				 transfer_state = 1128
+				 transfer_state = 1124
+				 transfer_state = 567
+				 transfer_state = 1123
+				 transfer_state = 812
 				 }
 		}
 		ai_will_do = {
@@ -2474,6 +2475,10 @@ focus_tree = {
 		completion_reward = {
 			create_wargoal = {
 				target = ETH
+				type = annex_everything
+			}
+			create_wargoal = {
+				target = AFA
 				type = annex_everything
 			}
 		}

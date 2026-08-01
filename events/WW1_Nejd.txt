@@ -532,6 +532,7 @@ country_event = {
 	desc = ww1_nejd.11.d
 	picture = GFX_report_event_tur_turkish_soldiers
 	trigger = {
+		always = no # disabled by request: Saudi Arabia should not randomly break free of Ottoman overlordship
 		tag = SAU
 		TUR = {
 			has_subject = ROOT

@@ -443,7 +443,7 @@ ideas = {
 			}
 		}
 	
-		paramilitarism_focus = {
+		paramilitarism_focus_generico = {
 			
 			
 			allowed = {
@@ -463,6 +463,8 @@ ideas = {
 	
 			modifier = {
 				army_attack_factor = 0.05
+				army_org = 10
+				army_morale_factor = 0.1
 			}
 		}
 	
@@ -843,6 +845,7 @@ ideas = {
 			modifier = {
 				experience_loss_factor = -0.10
 				terrain_trait_xp_gain_factor = 0.10
+				river_crossing_factor = -0.10
 			}
 		}
 

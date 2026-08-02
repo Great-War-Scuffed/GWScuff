@@ -287,7 +287,7 @@ focus_tree = {
 		continue_if_invalid = no
 		
 		completion_reward = {
-			add_ideas = paramilitarism_focus
+			add_ideas = paramilitarism_focus_generico
 		}
 
 		ai_will_do = {

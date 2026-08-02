@@ -95,6 +95,7 @@
  GEN_noninterference:0 "Stance of Noninterference"
  GEN_political_commissars:0 "Political Commissars"
  GEN_paramilitarism:0 "Paramilitarism"
+ paramilitarism_focus_generico:0 "Paramilitarism"
  GEN_five_year_plan:0 "Our Own Five Year Plan"
  GEN_build_a_red_army:0 "Build a Red Army"
  GEN_societal_corporatism:0 "Societal Corporatism"

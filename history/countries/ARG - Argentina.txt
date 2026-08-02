@@ -2,8 +2,8 @@
 oob = "ARG_1910"
 
 set_research_slots = 3
-set_stability = 0.43
-set_war_support = 0.1
+set_stability = 0.63
+set_war_support = 0.26
 set_convoys = 68
 
 recruit_character = ARG_hipolito_yrigoyen

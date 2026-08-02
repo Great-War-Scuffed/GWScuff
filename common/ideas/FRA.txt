@@ -823,6 +823,38 @@ ideas = {
 			research_bonus = { industry = 0.05 }
 		}
 
+		FRA_ww1_civilian_production_focus_idea = {
+			allowed = {
+				original_tag = FRA
+				always = no
+			}
+			allowed_civil_war = {
+				always = yes
+			}
+			removal_cost = -1
+			picture = generic_production_bonus
+			modifier = {
+				production_speed_industrial_complex_factor = 0.10
+				consumer_goods_factor = -0.15
+			}
+		}
+
+		FRA_ww1_military_production_focus_idea = {
+			allowed = {
+				original_tag = FRA
+				always = no
+			}
+			allowed_civil_war = {
+				always = yes
+			}
+			removal_cost = -1
+			picture = generic_production_bonus
+			modifier = {
+				production_speed_arms_factory_factor = 0.05
+				industrial_capacity_factory = 0.05
+			}
+		}
+
 		FRA_ww1_forced_conscription_in_colonies = {
 			picture = generic_manpower_bonus
 			allowed = {

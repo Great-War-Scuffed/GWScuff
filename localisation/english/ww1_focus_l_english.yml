@@ -8077,6 +8077,18 @@ FRA_ww1_reform_the_reserve_territoriale_desc:0 "The Barthou law can be amended t
  FRA_ww1_metropolitan_investments:0 "Metropolitan Investments"
  FRA_ww1_metropolitan_investments_desc:0 "Investing in the correct sectors of industry in our metropolitan areas will lead to profit, the economy is doing very well and the new production methods allow the expansion of industrialization."
 
+ FRA_ww1_civilian_production_focus:0 "Focus on Civilian Production"
+ FRA_ww1_civilian_production_focus_desc:0 "Our industrial base can be geared towards the needs of the population and the wider economy, expanding our civilian factories and infrastructure at the expense of military output."
+
+ FRA_ww1_military_production_focus:0 "Focus on Military Production"
+ FRA_ww1_military_production_focus_desc:0 "Our industrial base can instead be geared towards rearmament, expanding our arms factories in preparation for the conflicts to come at the expense of civilian output."
+
+ FRA_ww1_civilian_production_expansion:0 "Civilian Industrial Expansion"
+ FRA_ww1_civilian_production_expansion_desc:0 "With our civilian sector already favoured, the government can fund the construction of new civilian factories across the country to further grow our economic strength."
+
+ FRA_ww1_military_production_expansion:0 "Military Industrial Expansion"
+ FRA_ww1_military_production_expansion_desc:0 "With rearmament already underway, the government can fund the construction of new arms factories across the country to further grow our military strength."
+
  FRA_ww1_britany_industrialization:0 "Brittany Industrialization"
  FRA_ww1_britany_industrialization_desc:0 "Brittany is a strategic coastal zone that does not receive enough funding despite its practical use. By financing the Saint Nazaire power stations and developing the port of Lorient, we could make the region very attractive."
 

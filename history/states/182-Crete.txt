@@ -11,7 +11,7 @@ state = {
 		victory_points = {
 			12058 10
 		}
-		owner = CRE
+		owner = GRE
 		add_core_of = GRE
 		add_core_of = CRE
 		add_claim_by = TUR

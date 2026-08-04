@@ -6235,39 +6235,39 @@ focus_tree = {
 			focus = FRA_ww1_revanchist_propaganda
 		}
 		available = {
-			NOT = {
-				has_idea = FRA_propaganda
-				if = {
-					limit = {
-						has_game_rule = {
-							rule = agw_greatwar_options
-							option = enabled
-						}
-					}
-					has_country_flag = great_war_winner
-				}
-				if = {
-						limit = {
-							has_game_rule = {
-								rule = agw_greatwar_options
-								option = enabled
-							}
-						}
-						has_country_flag = great_war_loser
-					}
-				has_idea = idea_armistice
-				has_idea = idea_army_restrictions
-				has_idea = FRA_land_army_restrictions
-				has_idea = FRA_naval_army_restrictions
-				has_country_flag = FRA_surrender_alone
-				has_global_flag = FRA_surrender_alone
-			}
+			#NOT = {
+			#	has_idea = FRA_propaganda
+			#	if = {
+			#		limit = {
+			#			has_game_rule = {
+			#				rule = agw_greatwar_options
+			#				option = enabled
+			#			}
+			#		}
+			#		has_country_flag = great_war_winner
+			#	}
+			#	if = {
+			#			limit = {
+			#				has_game_rule = {
+			#					rule = agw_greatwar_options
+			#					option = enabled
+			#				}
+			#			}
+			#			has_country_flag = great_war_loser
+			#		}
+			#	has_idea = idea_armistice
+			#	has_idea = idea_army_restrictions
+			#	has_idea = FRA_land_army_restrictions
+			#	has_idea = FRA_naval_army_restrictions
+			#	has_country_flag = FRA_surrender_alone
+			#	has_global_flag = FRA_surrender_alone
+			#}
 			has_army_manpower = { size > 1000000 }
-			NOT = {
-				any_enemy_country = {
-					is_major = yes
-				}
-			}
+			#NOT = {
+			#	any_enemy_country = {
+			#		is_major = yes
+			#	}
+			#}
 		}
 		completion_reward = {
 			add_ideas = FRA_ww1_Revanchism

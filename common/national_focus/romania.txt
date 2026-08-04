@@ -95,6 +95,9 @@ focus_tree = {
 		prerequisite = {
 			focus = ROM_continue_with_national_founder_carol
 		}
+		available = {
+			is_ai = NO
+		}
 		x = 2
 		y = 1
 		relative_position_id = ROM_continue_with_national_founder_carol

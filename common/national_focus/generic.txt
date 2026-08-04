@@ -200,6 +200,14 @@ focus_tree = {
 			add = 10
 			tag = OST 
 		}
+		modifier = {
+			add = 10
+			tag = LIB 
+		}
+		modifier = {
+			add = 10
+			tag = CUB 
+		}
 	}
 	default = no
 	reset_on_civilwar = no

@@ -152,6 +152,10 @@ recruit_character = PER_Bagher_khan
 		mechanical_engineering = 1
 		construction0 = 1
 	}
+		set_autonomy = {
+		target = ARB
+		autonomous_state = autonomy_integrated_puppet
+	}
 }
 1914.1.1 = {
 

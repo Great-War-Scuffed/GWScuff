@@ -99,7 +99,7 @@
 		FOCUS_FILTER_INDUSTRY
 		#FOCUS_FILTER_STABILITY
 	}
-	cost = 10
+	cost = 5
 	x = 0
 	y = 0
 	}
@@ -149,7 +149,7 @@
 		FOCUS_FILTER_INDUSTRY
 		#FOCUS_FILTER_STABILITY
 	}
-	cost = 10
+	cost = 5
 	x = 3
 	y = 2
 	}
@@ -190,7 +190,7 @@
 	ai_will_do = { 
 		factor = 15
 	}
-	cost = 10
+	cost = 5
 	x = -1
 	y = 2
 	}
@@ -213,7 +213,7 @@
 		}
 		add_tech_bonus = {
 			name = new_canons
-			category = artillery
+			category = cat_artillery
 			uses = 2
 			bonus = 0.5
 		}
@@ -225,7 +225,7 @@
 		FOCUS_FILTER_INDUSTRY
 		#FOCUS_FILTER_STABILITY
 	}
-	cost = 10
+	cost = 5
 	x = -1
 	y = 1
 	}
@@ -256,10 +256,10 @@
 			}
 			add_building_construction = {
 				type = arms_factory
-				level = 1
+				level = 2
 				instant_build = yes
 			}
-			add_extra_state_shared_building_slots = 1
+			add_extra_state_shared_building_slots = 2
 		}
 	}
 	ai_will_do = { 
@@ -269,7 +269,7 @@
 		FOCUS_FILTER_INDUSTRY
 		#FOCUS_FILTER_STABILITY
 	}
-	cost = 10
+	cost = 5
 	x = 1
 	y = 1
 	}
@@ -1290,7 +1290,7 @@
 	ai_will_do = { 
 		factor = 15
 	}
-	cost = 10
+	cost = 5
 	x = -4
 	y = 2
 	}
@@ -1312,7 +1312,7 @@
 	ai_will_do = { 
 		factor = 15
 	}
-	cost = 10
+	cost = 5
 	x = -2
 	y = 1
 }
@@ -2479,1013 +2479,6 @@
 	x = -1
 	y = 1
 	}
-
-	focus = {
-	id = PER_War_with_AZR
-	icon = GFX_PER_attack_AZR
-	#relative_position_id = PER_Political
-	#prerequisite = {
-	#	focus = PER_Political
-	#}
-	available = {
-		has_global_flag = russian_revolution
-		is_puppet = no
-		NOT = { 
-			has_global_flag = persian_gendarmerie_revolt
-			has_country_flag = great_war_loser
-		}
-		AZR = {
-			exists = yes
-		}
-	}
-	#prerequisite = {
-	#	focus = new_canons
-	#}
-	completion_reward = {
-		#OVERLORD = {
-		#	end_puppet = AZR
-		#}
-		#AZR = {
-		#	leave_faction = yes
-		#}
-		every_country = {
-			remove_from_faction = AZR
-			end_puppet = AZR
-			diplomatic_relation = {
-				country = AZR
-				relation = guarantee
-				active = no
-			}
-		}
-		declare_war_on = {
-            target = AZR
-            type = annex_everything
-        }
-		add_state_core = 229
-		add_state_core = 823
-		add_state_core = 830
-		add_state_core = 818
-		add_state_core = 938
-		add_state_core = 939
-	}
-	search_filters = {
-		FOCUS_FILTER_POLITICAL
-		FOCUS_FILTER_STABILITY  
-	}
-		ai_will_do = { 
-			factor = 4000
-			modifier = {
-				AZR = {
-					is_puppet = yes
-				}
-				factor = 0
-			}
-			modifier = {
-				has_war = yes
-				factor = 0
-			}
-		}
-		cost = 5
-		x = 30
-		y = 5
-	}
-	
-	focus = {
-	id = PER_War_with_ARM
-	icon = GFX_PER_attack_ARM
-	relative_position_id = PER_War_with_AZR
-	prerequisite = {
-		focus = PER_War_with_AZR
-	}
-	available = {
-		has_global_flag = russian_revolution
-		is_puppet = no
-		NOT = { 
-			has_global_flag = persian_gendarmerie_revolt
-			has_country_flag = great_war_loser
-		}
-		ARM = {
-			exists = yes
-		}
-	}
-	#prerequisite = {
-	#	focus = new_canons
-	#}
-	completion_reward = {
-		every_country = {
-			remove_from_faction = ARM
-			end_puppet = ARM
-			diplomatic_relation = {
-				country = ARM
-				relation = guarantee
-				active = no
-			}
-		}
-		declare_war_on = {
-            target = ARM
-            type = annex_everything
-        }
-		add_state_core = 818
-		add_state_core = 938
-		add_state_core = 939
-		add_state_core = 230
-		add_state_core = 787
-	}
-	search_filters = {
-		FOCUS_FILTER_POLITICAL
-		FOCUS_FILTER_STABILITY  
-	}
-		ai_will_do = { 
-			factor = 4000
-			modifier = {
-				ARM = {
-					is_puppet = yes
-				}
-				factor = 0
-			}
-			modifier = {
-				has_war = yes
-				factor = 0
-			}
-		}
-		cost = 5
-		x = 1
-		y = 1
-	}
-	
-	focus = {
-	id = PER_War_with_GEO
-	icon = GFX_PER_attack_GEO
-	relative_position_id = PER_War_with_AZR
-	prerequisite = {
-		focus = PER_War_with_AZR
-	}
-	available = {
-		has_global_flag = russian_revolution
-		is_puppet = no
-		NOT = { 
-			has_global_flag = persian_gendarmerie_revolt
-			has_country_flag = great_war_loser
-		}
-		GEO = {
-			exists = yes
-		}
-	}
-	#prerequisite = {
-	#	focus = new_canons
-	#}
-	completion_reward = {
-		every_country = {
-			remove_from_faction = GEO
-			end_puppet = GEO
-			diplomatic_relation = {
-				country = GEO
-				relation = guarantee
-				active = no
-			}
-		}
-		declare_war_on = {
-            target = GEO
-            type = annex_everything
-        }
-		add_state_core = 231
-		add_state_core = 748
-	}
-	search_filters = {
-		FOCUS_FILTER_POLITICAL
-		FOCUS_FILTER_STABILITY  
-	}
-		ai_will_do = { 
-			factor = 4000
-			modifier = {
-				GEO = {
-					is_puppet = yes
-				}
-				factor = 0
-			}
-			modifier = {
-				has_war = yes
-				factor = 0
-			}
-		}
-		cost = 5
-		x = -1
-		y = 1
-	}
-	
-	focus = {
-	id = PER_War_with_MOU
-	icon = GFX_PER_attack_MOU
-	relative_position_id = PER_War_with_AZR
-	prerequisite = {
-		focus = PER_War_with_AZR
-	}
-	available = {
-		has_global_flag = russian_revolution
-		is_puppet = no
-		NOT = { 
-			has_global_flag = persian_gendarmerie_revolt
-			has_country_flag = great_war_loser
-		}
-		MOU = {
-			exists = yes
-		}
-	}
-	#prerequisite = {
-	#	focus = new_canons
-	#}
-	completion_reward = {
-		every_country = {
-			remove_from_faction = MOU
-			end_puppet = MOU
-			diplomatic_relation = {
-				country = MOU
-				relation = guarantee
-				active = no
-			}
-		}
-		declare_war_on = {
-            target = MOU
-            type = annex_everything
-        }
-		add_state_core = 565
-	}
-	search_filters = {
-		FOCUS_FILTER_POLITICAL
-		FOCUS_FILTER_STABILITY  
-	}
-		ai_will_do = { 
-			factor = 4000
-			modifier = {
-				MOU = {
-					is_puppet = yes
-				}
-				factor = 0
-			}
-			modifier = {
-				has_war = yes
-				factor = 0
-			}
-		}
-		cost = 5
-		x = 0
-		y = 2
-	}
-	
-	focus = {
-	id = PER_annex_Ashgabat
-	icon = GFX_PER_annnex_turkamanistan
-	relative_position_id = PER_War_with_AZR
-	prerequisite = {
-		focus = PER_War_with_AZR
-	}
-	available = {
-		has_global_flag = russian_revolution
-		is_puppet = no
-		NOT = { 
-			has_global_flag = persian_gendarmerie_revolt
-			has_country_flag = great_war_loser
-		}
-		if = {
-			limit = {
-				RUS = {
-					#exists = yes
-					controls_state = 584
-				}
-			}
-			RUS = {
-				has_war = yes
-			}
-		}
-	}
-	#prerequisite = {
-	#	focus = new_canons
-	#}
-	completion_reward = {
-		PER = {
-			transfer_state = 584
-		}
-		add_state_core = 584
-	}
-	search_filters = {
-		FOCUS_FILTER_POLITICAL
-		FOCUS_FILTER_STABILITY  
-	}
-		ai_will_do = { 
-			factor = 4000
-			#modifier = {
-			#	has_war = yes
-			#	factor = 0
-			#}
-		}
-		cost = 5
-		x = 3
-		y = 1
-	}
-	
-	focus = {
-	id = PER_war_on_Punjab
-	icon = GFX_PER_Iranian_german_allicence
-	available = {
-		has_completed_focus = PER_Iranain_east_north_lost_lands
-	}
-	#prerequisite = {
-	#	focus = new_canons
-	#}
-	completion_reward = {
-		add_war_support = 0.1
-		#444 = {
-		#	add_dynamic_modifier = { modifier = PER_against_Kalat_war }
-		#}
-	}
-	search_filters = {
-		#FOCUS_FILTER_POLITICAL
-		#FOCUS_FILTER_STABILITY  
-	}
-		ai_will_do = { 
-			factor = 15
-			#modifier = {
-			#	has_war = yes
-			#	factor = 0
-			#}
-		}
-		cost = 1
-		x = 22
-		y = 4
-	}
-	
-	focus = {
-	id = PER_war_on_Punjab_1
-	icon = GFX_focus_PER_foothold_in_indus
-	relative_position_id = PER_war_on_Punjab
-	prerequisite = {
-		focus = PER_war_on_Punjab
-	}
-	available = {
-	}
-	#prerequisite = {
-	#	focus = new_canons
-	#}
-	completion_reward = {
-		every_state = {
-			limit = {
-				OR = {
-					state = 440
-					state = 443
-					state = 441
-					state = 433
-					state = 431
-					state = 430
-					state = 444
-					state = 445
-					state = 442
-				}
-			}
-			add_dynamic_modifier = { modifier = PER_war_on_India }
-		}
-		#transfer_units_fraction= {
-		#	target = KLT
-		#	size = 0.2
-		#}
-	}
-	search_filters = {
-		#FOCUS_FILTER_POLITICAL
-		#FOCUS_FILTER_STABILITY  
-	}
-		ai_will_do = { 
-			factor = 15
-			#modifier = {
-			#	has_war = yes
-			#	factor = 0
-			#}
-		}
-		cost = 4
-		x = 0
-		y = 1
-	}
-	
-	focus = {
-	id = PER_war_on_Punjab_2
-	icon = GFX_focus_RAJ_the_pakistan_movement
-	relative_position_id = PER_war_on_Punjab_1
-	prerequisite = {
-		focus = PER_war_on_Punjab_1
-	}
-	available = {
-	}
-	#prerequisite = {
-	#	focus = new_canons
-	#}
-	completion_reward = {
-		unlock_decision_tooltip = PER_Coordination_between_organizations_units
-	}
-	search_filters = {
-		#FOCUS_FILTER_POLITICAL
-		#FOCUS_FILTER_STABILITY  
-	}
-		ai_will_do = { 
-			factor = 15
-			#modifier = {
-			#	has_war = yes
-			#	factor = 0
-			#}
-		}
-		cost = 4
-		x = 1
-		y = 1
-	}
-	
-	focus = {
-	id = PER_war_on_Punjab_3
-	icon = GFX_focus_RAJ_provincial_autonomy
-	relative_position_id = PER_war_on_Punjab_1
-	prerequisite = {
-		focus = PER_war_on_Punjab_1
-	}
-	available = {
-	}
-	#prerequisite = {
-	#	focus = new_canons
-	#}
-	completion_reward = {
-		unlock_decision_tooltip = PER_TOTL
-	}
-	search_filters = {
-		#FOCUS_FILTER_POLITICAL
-		#FOCUS_FILTER_STABILITY  
-	}
-		ai_will_do = { 
-			factor = 15
-			#modifier = {
-			#	has_war = yes
-			#	factor = 0
-			#}
-		}
-		cost = 4
-		x = -1
-		y = 1
-	}
-	
-	focus = {
-	id = PER_war_on_Punjab_4
-	icon = GFX_focus_RAJ_pruna_swaraj
-	relative_position_id = PER_war_on_Punjab_2
-	prerequisite = {
-		focus = PER_war_on_Punjab_2
-	}
-	available = {
-	}
-	#prerequisite = {
-	#	focus = new_canons
-	#}
-	completion_reward = {
-		unlock_decision_tooltip = PER_IIRA
-	}
-	search_filters = {
-		#FOCUS_FILTER_POLITICAL
-		#FOCUS_FILTER_STABILITY  
-	}
-		ai_will_do = { 
-			factor = 15
-			#modifier = {
-			#	has_war = yes
-			#	factor = 0
-			#}
-		}
-		cost = 4
-		x = 0
-		y = 1
-	}
-	
-	focus = {
-	id = PER_war_on_Punjab_5
-	icon = GFX_focus_RAJ_a_private_military
-	relative_position_id = PER_war_on_Punjab_3
-	prerequisite = {
-		focus = PER_war_on_Punjab_3
-	}
-	available = {
-	}
-	#prerequisite = {
-	#	focus = new_canons
-	#}
-	completion_reward = {
-		unlock_decision_tooltip = PER_ATN
-	}
-	search_filters = {
-		#FOCUS_FILTER_POLITICAL
-		#FOCUS_FILTER_STABILITY  
-	}
-		ai_will_do = { 
-			factor = 15
-			#modifier = {
-			#	has_war = yes
-			#	factor = 0
-			#}
-		}
-		cost = 4
-		x = 0
-		y = 1
-	}
-	
-	focus = {
-	id = PER_war_on_Punjab_6
-	icon = GFX_focus_RAJ_the_other_solution
-	relative_position_id = PER_war_on_Punjab_4
-	prerequisite = {
-		focus = PER_war_on_Punjab_4
-	}
-	prerequisite = {
-		focus = PER_war_on_Punjab_5
-	}
-	available = {
-		if = {
-			OR = {
-				NOT = {
-					431 = {
-						has_dynamic_modifier = {
-							modifier = PER_war_on_India
-						}
-					}
-				}
-				431 = {
-					check_variable = { 
-						Punjab_PER_AFC > 0.44 
-						tooltip = tool_PER_focus_War_on_punjab
-					}
-				}
-			}
-		}
-		if = {
-			OR = {
-				NOT = {
-					440 = {
-						has_dynamic_modifier = {
-							modifier = PER_war_on_India
-						}
-					}
-				}
-				440 = {
-					check_variable = { 
-						Punjab_PER_AFC > 0.44 
-						tooltip = tool_PER_focus_War_on_punjab
-					}
-				}
-			}
-		}
-		if = {
-			OR = {
-				NOT = {
-					443 = {
-						has_dynamic_modifier = {
-							modifier = PER_war_on_India
-						}
-					}
-				}
-				443 = {
-					check_variable = { 
-						Punjab_PER_AFC > 0.44 
-						tooltip = tool_PER_focus_War_on_punjab
-					}
-				}
-			}
-		}
-		if = {
-			OR = {
-				NOT = {
-					441 = {
-						has_dynamic_modifier = {
-							modifier = PER_war_on_India
-						}
-					}
-				}
-				441 = {
-					check_variable = { 
-						Punjab_PER_AFC > 0.44 
-						tooltip = tool_PER_focus_War_on_punjab
-					}
-				}
-			}
-		}
-		if = {
-			OR = {
-				NOT = {
-					433 = {
-						has_dynamic_modifier = {
-							modifier = PER_war_on_India
-						}
-					}
-				}
-				433 = {
-					check_variable = { 
-						Punjab_PER_AFC > 0.44 
-						tooltip = tool_PER_focus_War_on_punjab
-					}
-				}
-			}
-		}
-		if = {
-			OR = {
-				NOT = {
-					430 = {
-						has_dynamic_modifier = {
-							modifier = PER_war_on_India
-						}
-					}
-				}
-				430 = {
-					check_variable = { 
-						Punjab_PER_AFC > 0.44 
-						tooltip = tool_PER_focus_War_on_punjab
-					}
-				}
-			}
-		}
-		if = {
-			OR = {
-				NOT = {
-					444 = {
-						has_dynamic_modifier = {
-							modifier = PER_war_on_India
-						}
-					}
-				}
-				444 = {
-					check_variable = { 
-						Punjab_PER_AFC > 0.44 
-						tooltip = tool_PER_focus_War_on_punjab
-					}
-				}
-			}
-		}
-		if = {
-			OR = {
-				NOT = {
-					445 = {
-						has_dynamic_modifier = {
-							modifier = PER_war_on_India
-						}
-					}
-				}
-				445 = {
-					check_variable = { 
-						Punjab_PER_AFC > 0.44 
-						tooltip = tool_PER_focus_War_on_punjab
-					}
-				}
-			}
-		}
-		if = {
-			OR = {
-				NOT = {
-					442 = {
-						has_dynamic_modifier = {
-							modifier = PER_war_on_India
-						}
-					}
-				}
-				442 = {
-					check_variable = { 
-						Punjab_PER_AFC > 0.44 
-						tooltip = tool_PER_focus_War_on_punjab
-					}
-				}
-			}
-		}
-		415 = {
-			is_controlled_by = PER
-		}
-		444 = {
-			is_controlled_by = PER
-		}
-		445 = {
-			is_controlled_by = PER
-		}
-	}
-	#prerequisite = {
-	#	focus = new_canons
-	#}
-	completion_reward = {
-		unlock_decision_tooltip = PER_exit_from_war
-		every_state = {
-			limit = {
-				OR = {
-					state = 440
-					state = 443
-					state = 441
-					state = 433
-					state = 431
-					state = 430
-					state = 444
-					state = 445
-					state = 442
-				}
-			}
-			remove_dynamic_modifier = { modifier = PER_war_on_India }
-			add_dynamic_modifier = { modifier = PER_Indian_uprusing }
-		}
-		ENG = {
-			end_puppet = RAJ
-		}
-		RAJ = {
-			start_civil_war = {
-				ideology = democratic
-				size = 0.8
-				capital = 440
-				states = {
-					440 443 441 433 431 430
-				}
-				GER = { add_to_faction = PREV }
-				#keep_unit_leaders = {
-				#	750 751 752
-				#}
-				#keep_political_leader = yes
-				#keep_political_party_members = yes
-			}
-		}
-		ENG = {
-			#puppet = {
-			#	target = RAJ
-			#	end_wars = no
-			#	end_civil_wars = no
-			#}
-			set_autonomy = {
-				target = RAJ
-				autonomous_state = autonomy_dominion
-				end_wars = no
-				end_civil_wars = no
-			}
-		}
-		transfer_state = 444
-		transfer_state = 445
-		if = {
-			limit = {
-				AFG = {
-					is_puppet_of = PER
-				}
-			}
-			AFG = {
-				transfer_state = 442
-			}
-		}
-		if = {
-			limit = {
-				NOT = {
-					AFG = {
-						is_puppet_of = PER
-					}
-				}
-			}
-			PER = {
-				transfer_state = 442
-			}
-		}
-	}
-	search_filters = {
-		#FOCUS_FILTER_POLITICAL
-		#FOCUS_FILTER_STABILITY  
-	}
-		ai_will_do = { 
-			factor = 15
-			#modifier = {
-			#	has_war = yes
-			#	factor = 0
-			#}
-		}
-		cost = 4
-		x = -1
-		y = 1
-	}
-	
-	focus = {
-	id = PER_war_on_Punjab_7
-	icon = GFX_focus_PER_usurp_afghanistan
-	relative_position_id = PER_war_on_Punjab
-	prerequisite = {
-		focus = PER_war_on_Punjab
-	}
-	available = {
-	}
-	#prerequisite = {
-	#	focus = new_canons
-	#}
-	completion_reward = {
-		AFG = { add_ideas = PER_idea_Take_back_Bahrain }
-	}
-	search_filters = {
-		#FOCUS_FILTER_POLITICAL
-		#FOCUS_FILTER_STABILITY  
-	}
-		ai_will_do = { 
-			factor = 15
-			#modifier = {
-			#	has_war = yes
-			#	factor = 0
-			#}
-		}
-		cost = 4
-		x = 3
-		y = 1
-	}
-	
-	focus = {
-	id = PER_war_on_Punjab_8
-	icon = GFX_focus_AFG_against_kabul
-	relative_position_id = PER_war_on_Punjab_7
-	prerequisite = {
-		focus = PER_war_on_Punjab_7
-	}
-	available = {
-	}
-	#prerequisite = {
-	#	focus = new_canons
-	#}
-	completion_reward = {
-		unlock_decision_tooltip = PER_Disision_Arming_Afghanistan
-	}
-	search_filters = {
-		#FOCUS_FILTER_POLITICAL
-		#FOCUS_FILTER_STABILITY  
-	}
-		ai_will_do = { 
-			factor = 15
-			#modifier = {
-			#	has_war = yes
-			#	factor = 0
-			#}
-		}
-		cost = 4
-		x = 0
-		y = 1
-	}
-	
-	focus = {
-	id = PER_war_on_Punjab_9
-	icon = GFX_focus_PER_communist_afghanistan_intervention
-	relative_position_id = PER_war_on_Punjab_8
-	prerequisite = {
-		focus = PER_war_on_Punjab_8
-	}
-	available = {
-		AFG = {
-			has_stability < 0.25
-		}
-		has_equipment = {
-			infantry_equipment > 999
-		}
-	}
-	#prerequisite = {
-	#	focus = new_canons
-	#}
-	completion_reward = {
-		transfer_state = 415
-		PER = {
-			puppet = AFG
-			#set_autonomy = {
-			#	target = AFG
-			#	autonomous_state = autonomy_dominion
-			#	end_wars = yes
-			#	end_civil_wars = yes
-			#}
-			AFG = {
-				create_country_leader = {
-					name = "Solat-o-Saltaneh Hezare"
-					picture = "gfx/leaders/PER/PER_Solat-o-Saltaneh_Hezare.png"					
-					ideology = semi_constitutional_monarchy
-				}
-			}
-		}
-	}
-	search_filters = {
-		#FOCUS_FILTER_POLITICAL
-		#FOCUS_FILTER_STABILITY  
-	}
-		ai_will_do = { 
-			factor = 15
-			#modifier = {
-			#	has_war = yes
-			#	factor = 0
-			#}
-		}
-		cost = 4
-		x = 0
-		y = 1
-	}
-	
-	focus = {
-	id = PER_war_on_Punjab_10
-	icon = GFX_focus_PER_rally_ancient_history
-	relative_position_id = PER_war_on_Punjab
-	prerequisite = {
-		focus = PER_war_on_Punjab
-	}
-	available = {
-	}
-	#prerequisite = {
-	#	focus = new_canons
-	#}
-	completion_reward = {
-		BHR = { add_ideas = PER_idea_Take_back_Bahrain }
-	}
-	search_filters = {
-		#FOCUS_FILTER_POLITICAL
-		#FOCUS_FILTER_STABILITY  
-	}
-		ai_will_do = { 
-			factor = 15
-			#modifier = {
-			#	has_war = yes
-			#	factor = 0
-			#}
-		}
-		cost = 4
-		x = -3
-		y = 1
-	}
-	
-	focus = {
-	id = PER_war_on_Punjab_11
-	icon = GFX_focus_ETH_freedom_at_gunpoint
-	relative_position_id = PER_war_on_Punjab_10
-	prerequisite = {
-		focus = PER_war_on_Punjab_10
-	}
-	available = {
-	}
-	#prerequisite = {
-	#	focus = new_canons
-	#}
-	completion_reward = {
-		unlock_decision_tooltip = PER_Disision_Arming_Bahrain
-	}
-	search_filters = {
-		#FOCUS_FILTER_POLITICAL
-		#FOCUS_FILTER_STABILITY  
-	}
-		ai_will_do = { 
-			factor = 15
-			#modifier = {
-			#	has_war = yes
-			#	factor = 0
-			#}
-		}
-		cost = 4
-		x = 0
-		y = 1
-	}
-	
-	focus = {
-	id = PER_war_on_Punjab_12
-	icon = GFX_focus_PER_Flag_Bahrain
-	relative_position_id = PER_war_on_Punjab_11
-	prerequisite = {
-		focus = PER_war_on_Punjab_11
-	}
-	available = {
-		BHR = {
-			has_stability < 0.25
-		}
-		has_equipment = {
-			infantry_equipment > 499
-		}
-	}
-	#prerequisite = {
-	#	focus = new_canons
-	#}
-	completion_reward = {
-		transfer_state = 886
-		division_template = {
-			name = "Dastebandi Sarbaze Piyade"
-			regiments = {
-				infantry = { x = 0 y = 0 }
-				infantry = { x = 0 y = 1 }
-				infantry = { x = 1 y = 0 }
-				infantry = { x = 1 y = 1 }
-			}
-		}
-		886 = {
-			create_unit = {
-				division = "name = \"Bahraini revolutionaries\" division_template = \"Dastebandi Sarbaze Piyade\" start_manpower_factor = 1.0 start_experience_factor =  1.0"
-				owner = PER
-				count = 1
-			}
-		}
-	}
-	search_filters = {
-		#FOCUS_FILTER_POLITICAL
-		#FOCUS_FILTER_STABILITY  
-	}
-		ai_will_do = { 
-			factor = 15
-			#modifier = {
-			#	has_war = yes
-			#	factor = 0
-			#}
-		}
-		cost = 4
-		x = 0
-		y = 1
-	}
 	
 	focus = {
 		id = PER_National_Resources
@@ -3507,22 +2500,22 @@
 			}
 		}
 		completion_reward = {
-			#266 = {
-			#	add_resource = {
-			#	type = steel
-			#	amount = 1 #5
-			#	}
-			#}
-			#418 = {
-			#	add_resource = {
-			#	type = steel
-			#	amount = 1 #2
-			#	}
-			#}
+			266 = {
+				add_resource = {
+				type = steel
+				amount = 5
+				}
+			}
+			418 = {
+				add_resource = {
+				type = steel
+				amount = 2
+				}
+			}
 			416 = {
 				add_resource = {
 				type = steel
-				amount = 1 #4
+				amount = 4
 				}
 			}
 			add_tech_bonus = {
@@ -3584,7 +2577,7 @@
 			ai_will_do = { 
 				factor = 15
 			}
-			cost = 10
+			cost = 5
 			x = 1
 			y = 1
 	}
@@ -3622,7 +2615,7 @@
 		412 = {
 			add_resource = {
 			type = oil
-			amount = 2
+			amount = 6
 			}
 		}
 		add_tech_bonus = {
@@ -3638,7 +2631,7 @@
 		ai_will_do = { 
 			factor = 15
 		}
-		cost = 10
+		cost = 5
 		x = 0
 		y = 1
 	}
@@ -3811,7 +2804,7 @@
 	ai_will_do = { 
 		factor = 15
 	}
-	cost = 10
+	cost = 5
 	x = -1
 	y = 1
 	}
@@ -3838,7 +2831,7 @@
 	ai_will_do = { 
 		factor = 15
 	}
-	cost = 10
+	cost = 5
 	x = -1
 	y = 1
 	}
@@ -3863,7 +2856,7 @@
 				level = 1
 				instant_build = yes
 			}
-			add_extra_state_shared_building_slots = 2
+			add_extra_state_shared_building_slots = 4
 		}
 		411 = {
 			limit = {
@@ -3874,7 +2867,7 @@
 				level = 1
 				instant_build = yes
 			}
-			add_extra_state_shared_building_slots = 2
+			add_extra_state_shared_building_slots = 4
 		}
 		417 = {
 			limit = {
@@ -3885,7 +2878,7 @@
 				level = 1
 				instant_build = yes
 			}
-			add_extra_state_shared_building_slots = 2
+			add_extra_state_shared_building_slots = 4
 		}
 		266 = {
 			limit = {
@@ -3896,7 +2889,7 @@
 				level = 1
 				instant_build = yes
 			}
-			add_extra_state_shared_building_slots = 2
+			add_extra_state_shared_building_slots = 4
 		}
 		subtract_from_variable = {
 			var = PER.PER_cgf
@@ -3990,7 +2983,7 @@
 			}
 			add_building_construction = {
 				type = industrial_complex
-				level = 1
+				level = 2
 				instant_build = yes
 			}
 			add_building_construction = {
@@ -3998,7 +2991,7 @@
 				level = 1
 				instant_build = yes
 			}
-			add_extra_state_shared_building_slots = 1
+			add_extra_state_shared_building_slots = 2
 		}
 		every_owned_state = {
 			limit = {
@@ -4024,7 +3017,7 @@
 	ai_will_do = { 
 		factor = 15
 	}
-	cost = 10
+	cost = 5
 	x = 0
 	y = 1
 	}
@@ -4054,7 +3047,7 @@
 	ai_will_do = { 
 		factor = 15
 	}
-	cost = 10
+	cost = 5
 	x = -1
 	y = 1
 	}
@@ -7863,8 +6856,8 @@ focus = {
 			factor = 4000
 		}
 		cost = 10
-		x = 10
-		y = 11
+		x = 12
+		y = 7
 	}
 	
 	focus = {
@@ -11408,7 +10401,7 @@ focus = {
 	ai_will_do = { 
 		factor = 15
 	}
-	cost = 10
+	cost = 5
 	x = 1
 	y = 1
 }

@@ -142,10 +142,6 @@ focus_tree = {
 		}
 		modifier = {
 			add = 10
-			tag = PER
-		}
-		modifier = {
-			add = 10
 			tag = SAU
 		}
 		modifier = {

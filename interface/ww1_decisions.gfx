@@ -1742,4 +1742,9 @@ spriteTypes = {
 		name = "GFX_decision_ITA_tiring_destra_support"
 		texturefile = "gfx/interface/decisions/decision_ITA_tiring_destra_support.png"
 	}
+	spriteType = {
+		name = "GFX_decision_PER_market_background"
+		texturefile = "gfx/interface/decisions/PER_market_background.png"
+		transparencecheck = yes
+	}
 }

@@ -216,7 +216,17 @@ defined_text = { #SUPER EVENT TITLE
 		}
 		localization_key = SE_arab_revolt_T
 	}
-	text = { 
+	text = {
+		trigger = {
+			OR = {
+				#has_country_flag = persian_gendarmerie_revolt
+				has_country_flag = SE_PER_gendarmerie_flag
+				#event ww1_persia.21
+			}
+		}
+		localization_key = SE_Iran_Front_T
+	}
+	text = {
 		trigger = {
 			has_country_flag = se_test
 		}
@@ -445,7 +455,17 @@ defined_text = { #SUPER EVENT QUOTE
 		}
 		localization_key = SE_arab_revolt_D
 	}
-	text = { 
+	text = {
+		trigger = {
+			OR = {
+				#has_country_flag = persian_gendarmerie_revolt
+				has_country_flag = SE_PER_gendarmerie_flag
+				#event ww1_persia.21
+			}
+		}
+		localization_key = SE_Iran_Front_D
+	}
+	text = {
 		trigger = {
 			has_country_flag = se_test
 		}
@@ -669,7 +689,17 @@ defined_text = { #SUPER EVENT OPTION
 		}
 		localization_key = SE_arab_revolt_A
 	}
-	text = { 
+	text = {
+		trigger = {
+			OR = {
+				#has_country_flag = persian_gendarmerie_revolt
+				has_country_flag = SE_PER_gendarmerie_flag
+				#event ww1_persia.21
+			}
+		}
+		localization_key = SE_Iran_Front_A
+	}
+	text = {
 		trigger = {
 			has_country_flag = se_test
 		}
